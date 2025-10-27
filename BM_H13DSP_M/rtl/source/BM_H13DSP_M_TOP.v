@@ -1,11 +1,11 @@
-//=================================================================================================
+/* =============================================================================================================
 // Copyright(c) 
 // Filename   : BM_H13DSP_M_TOP
 // Project    : BM_H13DSP_M
 // Author     : 
 // Date       : 2025-01-07
-//Simulator   : Lattice Diamond 3.12
-//FPGA        : LCMXO3LF_6900C_5BG400C
+// Simulator   : Lattice Diamond 3.12
+// FPGA        : LCMXO3LF_6900C_5BG400C
 // Email      : cloudnineinfo.com
 // Company    : 
 // Description: BM_H13DSP_M Top Code
@@ -19,204 +19,94 @@
 //-- CPLD     BM_H13DSP_M      
 
 //-------------------------------------------------------------------------------
-//=================================================================================================
+
+模块功能：
+主板CPLD顶层模块，负责电源管理、复位控制、故障处理、MCIO通信、板卡检测以及与外部设备（如 BMC、BIOS）的交互。
+===============================================================================================================*/
 `include "BM_H13DSP_M_VA_PORT.v"
 // `include "BM_H13DSP_define.vh" 
 `include "pwrseq_define.vh" 
-//---------------------------------------------------------
-// define parameter
-//--------------------------------------------------------
-//Device Number 
-`define NUM_CPU 2'h02		
-`define NUM_PSU 3'h04
 
-`define PRODUCT_ID                     8'h33
-`define VENDER_ID                       8'h08
+// CPU/PSU 信息
+`define NUM_CPU                        2'h02  // CPU的数量2
+`define NUM_PSU                        3'h04  // 电源模块数量4
 
-`define Year                                   8'h25
-`define Month                                 8'h03
-`define Day                                      8'h13
-`define CPLD_VERSION                 8'h01
-`define DEBUG_VERSION               8'h00
+// CPLD 信息
+`define PRODUCT_ID                     8'h33  // 产品ID，标识具体的产品型号
+`define VENDER_ID                      8'h08  // 供应商ID，标识供应商信息
 
-`define PRODUCT_LINE_C2	       8'h48
-`define PRODUCT_GEN_ID_C3      8'h06
-`define SERVER_ID_C5                  8'h41  //G7466
-`define BOARD_ID_C6                    8'h01  
+`define Year                           8'h25  // 产品年份，2025年
+`define Month                          8'h03  // 产品月份，3月
+`define Day                            8'h13  // 产品日期，13日
+`define CPLD_VERSION                   8'h01  // CPLD固件版本号
+`define DEBUG_VERSION                  8'h00  // 调试版本号
 
-// `define PRODUCT_LINE_C2	       8'h48
-// `define PRODUCT_GEN_ID_C3      8'h06
-// `define SERVER_ID_C5                  8'h60  //G7666
-// `define BOARD_ID_C6                    8'h01  
+// 服务器 信息
+`define PRODUCT_LINE_C2                8'h48  // 产品线标识，C2产品线
+`define PRODUCT_GEN_ID_C3              8'h06  // 产品代数标识，C3代产品
+`define SERVER_ID_C5                   8'h41  // 服务器ID，标识服务器型号为G7466
+`define BOARD_ID_C6                    8'h01  // 板卡ID，标识具体的板卡型号
 
-// `define PRODUCT_LINE_C2	         8'h40
-// `define PRODUCT_GEN_ID_C3        8'h06
-// `define SERVER_ID_C5                  8'h41  //G7466
-// `define BOARD_ID_C6                    8'h01  
-  
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//For pll_inst
+// 例化二级模块pll相关信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire clk_50m ;
-wire clk_25m ;
-// wire clk_2p5m ;
-wire pll_lock;
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//For timer_gen_inst
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-wire t40ns_tick		;
-wire t1us_tick		;
-wire t2us_tick		; 
-wire t16us_tick		;
-wire t32us_tick		;
-wire t128us_tick	;
-wire t512us_tick	;
-wire t1ms_tick		;
-wire t2ms_tick		;
-wire t16ms_tick		;
-wire t32ms_tick		;
-wire t64ms_tick		;
-wire t128ms_tick	;
-wire t256ms_tick	;
-wire t512ms_tick	;
-wire t1s_tick		;
-wire t1hz_clk		;
-wire t2p5hz_clk		;
-wire t4hz_clk		;
-wire t16khz_clk		;
-wire t6m25_clk		;
-wire t16m6_clk		;
+wire                    clk_50m ;         // 50 MHz时钟信号，由PLL模块生成
+wire                    clk_25m ;         // 25 MHz时钟信号，由PLL模块生成
+// wire                   clk_2p5m ;      // 2.5 MHz时钟信号（未使用）
+wire                    pll_lock;         // PLL锁定信号，高电平表示PLL已锁定到输入时钟
+
 //-------------------------------------------------------------------------------------------------
-//For clk tree
+// 例化二级模块time_gen相关信号
 //-------------------------------------------------------------------------------------------------
-wire       w1uSCE                                             ;
-wire       w10uSCE                                            ;
-wire       w50uSCE                                            ;
-wire       w500uSCE                                           ;
-wire       w1mSCE                                             ;
-wire       w250mSCE                                           ;
-wire       w10mSCE                                            ;
-wire       w20mSCE                                            ;
-wire       w1SCE                                              ;
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//For pon_reset_inst
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-wire pon_reset_n			; 
-wire pon_reset_db_n			;      
-wire pgd_aux_system			; 
-wire pgd_aux_system_sasd	; 
-wire pgd_aux_bmc			;		//From CMU 
-wire done_booting_delayed = 1'b1;	//input; define constant 1
+wire                    t40ns_tick;       // 40纳秒定时脉冲
+wire                    t1us_tick;        // 1微秒定时脉冲
+wire                    t2us_tick;        // 2微秒定时脉冲
+wire                    t16us_tick;       // 16微秒定时脉冲
+wire                    t32us_tick;       // 32微秒定时脉冲
+wire                    t128us_tick;      // 128微秒定时脉冲
+wire                    t512us_tick;      // 512微秒定时脉冲
+wire                    t1ms_tick;        // 1毫秒定时脉冲
+wire                    t2ms_tick;        // 2毫秒定时脉冲
+wire                    t16ms_tick;       // 16毫秒定时脉冲
+wire                    t32ms_tick;       // 32毫秒定时脉冲
+wire                    t64ms_tick;       // 64毫秒定时脉冲
+wire                    t128ms_tick;      // 128毫秒定时脉冲
+wire                    t256ms_tick;      // 256毫秒定时脉冲
+wire                    t512ms_tick;      // 512毫秒定时脉冲
+wire                    t1s_tick;         // 1秒定时脉冲
+wire                    t1hz_clk;         // 1 Hz时钟信号
+wire                    t2p5hz_clk;       // 2.5 Hz时钟信号
+wire                    t4hz_clk;         // 4 Hz时钟信号
+wire                    t16khz_clk;       // 16 kHz时钟信号
+wire                    t6m25_clk;        // 6.25 MHz时钟信号
+wire                    t16m6_clk;        // 16.6 MHz时钟信号
 
-assign pgd_aux_bmc = 1'b1	;
+//-------------------------------------------------------------------------------------------------
+// 例化二级模块ClkDivTree相关信号
+//-------------------------------------------------------------------------------------------------
+wire                    w1uSCE;           // 1微秒时钟使能信号
+wire                    w10uSCE;          // 10微秒时钟使能信号
+wire                    w50uSCE;          // 50微秒时钟使能信号
+wire                    w500uSCE;         // 500微秒时钟使能信号
+wire                    w1mSCE;           // 1毫秒时钟使能信号
+wire                    w250mSCE;         // 250毫秒时钟使能信号
+wire                    w10mSCE;          // 10毫秒时钟使能信号
+wire                    w20mSCE;          // 20毫秒时钟使能信号
+wire                    w1SCE;            // 1秒时钟使能信号
 
-//--------------------------------------------------------------------------------------------------------------------------------------
-// sys clock
-//--------------------------------------------------------------------------------------------------------------------------------------
-pll_i25M_o50M_o25M pll_inst(
-  .CLKI     (i_CLK_25M_CPLD         ), //in
-  .RST       (~i_PWRGD_P3V3_STBY ), //in  
-  .CLKOP   (clk_50m                       ), //out
-  .CLKOS   (clk_25m                       ), //out
-  // .CLKOS2 (clk_2p5m                     ),
-  .LOCK     (pll_lock                     )  //out
-);
-//------------------------------------------------------------------------------------------------------------------------------------------
-// SYS RST
-//------------------------------------------------------------------------------------------------------------------------------------------
-pon_reset pon_reset_inst(
-  .clk					(clk_50m				),	//in
-  .pll_lock				(pll_lock				),	//in
-  .pgd_p3v3_stby		        (i_PWRGD_P3V3_STBY	        ),	//in
-  .pgd_aux_gmt			(pgd_aux_bmc			),	//in, all BMC power ok
-  .done_booting			(1'b1					),	//in
-  .done_booting_delayed	(done_booting_delayed	),	//in;  delayed version of done_booting (if not used, set to 1'b1)
-  .pon_reset_n			(pon_reset_n			),	//out; master AUX power-on reset (based on pgd_p3v3_stby)
-  .pon_reset_db_n		(pon_reset_db_n			),	//out; when done_booting_delayed not usd;  pon_reset_db_n = pon_reset_n. 
-  .pgd_aux_system		(pgd_aux_system			),	//out; AUX pgood indicator (based on both pgd_p3v3_stby and pgd_aux_gmt) pgd_aux_gmt means BMC p2v5/ BMC p1v2/ BMC p1v1/ BMC p1v0 pgd power good.
-  .pgd_aux_system_sasd	(pgd_aux_system_sasd	),	//out; SASD version of pgd_aux_system; pgd_aux_system_sasd = pgd_aux_system
-  .cpld_ready			(	)
-);
+//-------------------------------------------------------------------------------------------------
+// 例化二级模块pon_reset相关信号
+//-------------------------------------------------------------------------------------------------
+wire                    pon_reset_n;                 // 电源复位信号，低电平有效
+wire                    pon_reset_db_n;              // 去抖动后的电源复位信号，低电平有效
+wire                    pgd_aux_system;              // 辅助系统电源良好信号
+wire                    pgd_aux_system_sasd;         // 辅助系统电源良好信号的SASD版本
+wire                    pgd_aux_bmc;                 // BMC辅助电源良好信号
+wire                    done_booting_delayed = 1'b1; // 延迟的启动完成信号，固定为高电平
 
-// ------------------------------------------------------------------------------------------------------------
-// 时钟生成模块，能够基于输入时钟生成多种定时信号和慢速时钟信号
-//--------------------------------------------------------------------------------------------------------------
-timer_gen timer_gen_inst(
-  .clk               (clk_50m          ), // 输入时钟信号，频率为 50 MHz
-  .reset             (~pon_reset_n    ), // 异步复位信号，低电平有效
-  .t40ns             (t40ns_tick      ), // 40 纳秒脉冲
-  .t80ns             (),                 // 80 纳秒脉冲（未使用）
-  .t160ns            (),                 // 160 纳秒脉冲（未使用）
-  .t1us              (t1us_tick       ), // 1 微秒脉冲
-  .t2us              (t2us_tick       ), // 2 微秒脉冲
-  .t16us             (t16us_tick      ), // 16 微秒脉冲
-  .t32us             (t32us_tick      ), // 32 微秒脉冲
-  .t128us            (t128us_tick     ), // 128 微秒脉冲
-  .t512us            (t512us_tick     ), // 512 微秒脉冲
-  .t1ms              (t1ms_tick       ), // 1 毫秒脉冲
-  .t2ms              (t2ms_tick       ), // 2 毫秒脉冲
-  .t16ms             (),                 // 16 毫秒脉冲（未使用）
-  .t32ms             (t32ms_tick      ), // 32 毫秒脉冲
-  .t64ms             (t64ms_tick      ), // 64 毫秒脉冲
-  .t128ms            (t128ms_tick     ), // 128 毫秒脉冲
-  .t256ms            (t256ms_tick     ), // 256 毫秒脉冲
-  .t512ms            (t512ms_tick     ), // 512 毫秒脉冲
-  .t1s               (t1s_tick        ), // 1 秒脉冲
-  .clk_1hz           (t1hz_clk        ), // 1 Hz 时钟信号
-  .clk_2p5hz         (t2p5hz_clk      ), // 2.5 Hz 时钟信号
-  .clk_4hz           (t4hz_clk        ), // 4 Hz 时钟信号
-  .clk_16khz         (t16khz_clk      ), // 16 kHz 时钟信号
-  .clk_6m25          (t6m25_clk       ), // 6.25 MHz 时钟信号
-  .clk_16m6          (t16m6_clk       )  // 16.6 MHz 时钟信号
-);
+assign pgd_aux_bmc = 1'b1; // 将BMC辅助电源良好信号固定为高电平
 
-// ------------------------------------------------------------------------------------------------------------
-// 生成多个同步时钟使能信号（Clock Enables, CEs) 10uS, 50uS, 500uS, 1mS, 20mS and 250mS
-//--------------------------------------------------------------------------------------------------------------
-ClkDivTree mClkDivTree (
-    .iClk           ( clk_50m            ), // 输入时钟信号，频率为50 MHz
-    .iRst           ( ~pon_reset_n       ), // 异步复位信号，低电平有效
-    .o1uSCE         ( w1uSCE             ), // 输出1微秒时钟使能信号
-    .o10uSCE        ( w10uSCE            ), // 输出10微秒时钟使能信号
-    .o50uSCE        ( w50uSCE            ), // 输出50微秒时钟使能信号
-    .o500uSCE       ( w500uSCE           ), // 输出500微秒时钟使能信号
-    .o1mSCE         ( w1mSCE             ), // 输出1毫秒时钟使能信号
-    .o250mSCE       ( w250mSCE           ), // 输出250毫秒时钟使能信号
-    .o10mSCE        ( w10mSCE            ), // 输出10毫秒时钟使能信号
-    .o20mSCE        ( w20mSCE            ), // 输出20毫秒时钟使能信号
-    .o1SCE          ( w1SCE              )  // 输出1秒时钟使能信号
-);
 
-// -------------------------------------------------------------------------------------------------------------
-// 生成多个同步时钟使能信号（Clock Enables, CEs)
-//--------------------------------------------------------------------------------------------------------------
-wire wb_clk;
-defparam inst_osch.NOM_FREQ = "4.29";
-OSCH inst_osch(
-    .STDBY      (1'b0       ), // 输入，控制振荡器是否进入待机模式
-    .OSC        (wb_clk     ), // 输出，振荡器生成的时钟信号
-    .SEDSTDBY   (           )  // 输出，振荡器进入待机模式的状态信号（未使用）
-);
-
-// -------------------------------------------------------------------------------------------------------------
-// 生成多个同步时钟使能信号（Clock Enables, CEs)
-//--------------------------------------------------------------------------------------------------------------
-I2C_UPDATE inst_i2c_update_flash_config(
-.wb_clk_i	(wb_clk	),
-.wb_rst_i	(		),
-.wb_cyc_i	(		),
-.wb_stb_i	(		),
-.wb_we_i	(		),
-.wb_adr_i	(		),
-.wb_dat_i	(		),
-.wb_dat_o	(		),
-.wb_ack_o	(		),
-.i2c1_irqo	(		),
-.wbc_ufm_irq(              ),
-.i2c1_scl	(io_I2C7_UPDATE_SCL	),
-.i2c1_sda	(io_I2C7_UPDATE_SDA	)
-); 
-										   
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //For db_inst_amd_cpu_prsnt
 //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -983,261 +873,11 @@ reg      r_zt2_board_prsnt_n      ;
 wire    w_zt2_board_prsnt_n;
 
 wire    w_bmc_jtag_mux_s;
-//------------------------------------------------------------------------------------------------//
-//SIGNAL DEBOUNCE
-//------------------------------------------------------------------------------------------------//
-PGM_DEBOUNCE #(.SIGCNT(3), .NBITS(2'b10), .ENABLE(1'b1)) db_inst_pwr_btn(
-  .clk(clk_50m),
-  .rst(~pon_reset_n),
-  .timer_tick(t32ms_tick),
-  .din({
-		i_PAL_PWR_BTN_N     ,//01
-                i_PAL_BUTTOPN_RST_N ,//02
-                i_PAL_BMCUID_BUTTON //03
-	   }),             
-  .dout({
-		db_i_pwr_btn_cpld_n_r ,//01
-                db_i_pal_ext_rst_n  ,//02
-                db_i_pal_bmcuid_button  //03
-       }) 
-);
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//VR OCP Signal DEBOUNCE
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-PGM_DEBOUNCE #(.SIGCNT(6), .NBITS(2'b10), .ENABLE(1'b1)) db_vr_ocp_low (
-  .clk(clk_50m),
-  .rst(~pon_reset_n),
-  .timer_tick(t64ms_tick),
-  .din({
-			i_P0_VDD_CORE_0_OCP_N_R			,//01
-			i_PAL_P0_VDD_CORE_1_OCP_N		,//02
-			i_P0_VDDIO_OCP_N			 	,//03
-                        i_P1_VDD_CORE_0_OCP_N_R			,//04
-			i_PAL_P1_VDD_CORE_1_OCP_N		,//05
-			i_P1_VDDIO_OCP_N			 	  //06                 
-  }),             
-  .dout({
-			db_i_p0_vdd_core_0_ocp_n_r		,//01
-			db_i_pal_p0_vdd_core_1_ocp_n	,//02
-			db_i_p0_vddio_ocp_n				,//03
-                        db_i_p1_vdd_core_0_ocp_n_r		,//04
-			db_i_pal_p1_vdd_core_1_ocp_n	,//05
-			db_i_p1_vddio_ocp_n				  //06                      
-  }) 
-);
-//-------------------------------------------------------------------------------------------------
-// for PSU Signal DEBOUNCE        8 Signal
-// ------------------------------------------------------------------------------------------------
-PGM_DEBOUNCE #(.SIGCNT(10), .NBITS(2'b10), .ENABLE(1'b1)) db_inst_psu (
-  .clk(clk_50m),
-  .rst(~pon_reset_n),
-  .timer_tick(t64ms_tick),
-  .din({
-                 i_PS1_PRSNT                    ,   //01
-                 i_PS1_DCOK_N                  ,   //02
-                 i_PS1_SMB_ALERT            ,   //03
-                 i_PS1_ACFAIL_N              ,   //04
-                 i_PS2_PRSNT                    ,   //05
-                 i_PS2_DCOK_N                  ,   //06
-                 i_PS2_SMB_ALERT            ,   //07
-                 i_PS2_ACFAIL_N              ,   //08
-                 w_ps3_prsnt                    ,   //09
-                 w_ps4_prsnt                         //10
-  }),
-  .dout({
-                 db_i_ps1_prsnt              ,   //01
-                 db_i_ps1_dcok_n            ,   //02
-                 db_i_ps1_smb_alert      ,   //03
-                 db_i_ps1_acfail_n        ,   //04
-                 db_i_ps2_prsnt              ,   //05
-                 db_i_ps2_dcok_n            ,   //06
-                 db_i_ps2_smb_alert      ,   //07
-                 db_i_ps2_acfail_n        ,   //08
-                 db_i_ps3_prsnt              ,   //09
-                 db_i_ps4_prsnt                   //10
-  })
-);
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//CPU Signal DEBOUNCE
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//Active Low Reset
-SYNC_DATA_N #(.SIGCNT(17)) sync_cpu_data_low (
-  .clk    (clk_50m),
-  .rst_n  (pon_reset_n),          
-  .din    ({
-			(i_P0_SLP_S3_N | w_cpu_module_p0_slp_s3_n)	,//01
-			(i_P0_SLP_S5_N | w_cpu_module_p0_slp_s5_n)	,//02
-                        i_P1_SLP_S3_N						        ,//03//unused
-                        i_P1_SLP_S5_N						        ,//04//unused
-			i_P0_PWROK								,//05//& cpu_module_p0_pwrok)	, 
- 			i_P1_PWROK								,//06//& cpu_module_p1_pwrok)	, 
-			i_P0_RESET_N							,//07
-			i_P1_RESET_N							,//08
-			i_P0_PWRGD_OUT							,//09//| cpu_module_p0_pwrgdout),           
-			i_P1_PWRGD_OUT							,//10//| cpu_module_p1_pwrgdout), 
-			i_P0_SMERR_N							,//11//unused
-			i_P1_SMERR_N							,//12//unused
-			i_P0_PCIE_RST_N_0						,//13
-			i_P0_PCIE_RST_N_1						,//14
-			i_P1_PCIE_RST_N_0						,//15
-			i_P1_PCIE_RST_N_1						,//16
-			i_P0_BIOS_POST_STAGE_R_N				  //17
-			}),			
-  .dout   ({
-			db_i_p0_slp_s3_n			,//01
-			db_i_p0_slp_s5_n			,//02
-			db_i_p1_slp_s3_n			,//03//unused
-			db_i_p1_slp_s5_n			,//04//unused            
-			db_i_p0_pwrok				,//05
-			db_i_p1_pwrok				,//06
-			db_i_p0_reset_n				,//07
-			db_i_p1_reset_n				,//08
-			db_i_p0_pwrgd_out			,//09
-			db_i_p1_pwrgd_out			,//10
-			db_i_p0_smerr_n				,//11//unused
-			db_i_p1_smerr_n				,//12//unused
-			db_i_p0_pcie_rst_n_0		,//13
-			db_i_p0_pcie_rst_n_1		,//14
-			db_i_p1_pcie_rst_n_0		,//15
-			db_i_p1_pcie_rst_n_1		,//16
-			db_i_p0_bios_post_stage_r_n	  //17
-			})      
-);
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//cpu thermtrip Signal DEBOUNCE															
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-PGM_DEBOUNCE #(.SIGCNT(4), .NBITS(2'b10), .ENABLE(1'b1)) db_cpu_thermtrip (
-  .clk(clk_50m),
-  .rst(~pon_reset_n),
-  .timer_tick(1'b1),
-  .din({
-		 i_P0_VR_I2C7_ALERT_N	,//01
-                 i_P1_VR_I2C7_ALERT_N	,//02
-	         i_P0_THERMTRIP_N               ,//03
-	         i_P1_THERMTRIP_N                 //04
 
-  }),             
-  .dout({
-		 db_i_p0_vr_i2c7_alert_n	        ,//01
-		 db_i_p1_vr_i2c7_alert_n	        ,//02
-                 db_cpu_thermaltrip_n[0]         ,//03 
-                 db_cpu_thermaltrip_n[1]           //04 
-  }) 
-);
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-// PWRGOOD DEBOUNCE
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-PGM_DEBOUNCE_N #(.SIGCNT(21), .NBITS(2'b11), .ENABLE(1'b1)) db_inst_pwrgood (
-  .clk			(clk_50m),
-  .rst_n		(pon_reset_n),
-  .timer_tick	(1'b1),
-  .din({
-             i_P1V8_STBY_PG				,//01
-             i_PWRGD_P3V3_STBY			        ,//02
-             i_PG_P5V_STBY				        ,//03
-             i_PGD_P0_VDD_18_STBY                   ,//04
-             i_PGD_P1_VDD_18_STBY		        ,//05
-             i_PGD_P0_VDDC				        ,//06 	
-             i_PGD_P1_VDDC                                 ,//07
-             i_PGD_P0_VDD_11_SUS		        ,//08
-             i_PGD_P1_VDD_11_SUS                     ,//09
-             i_PGD_P0_VDD_CORE_0		        ,//10
-             i_PGD_P1_VDD_CORE_0		        ,//11
-             i_PGD_P0_VDD_CORE_1		        ,//12
-             i_PGD_P1_VDD_CORE_1		        ,//13
-             i_PGD_P0_VDD_SOC_0			,//14
-             i_PGD_P1_VDD_SOC_0			,//15
-             i_PGD_P0_VDDIO				,//16
-             i_PGD_P1_VDDIO				,//17
-             i_PGD_P3V3_STBY_B                         ,//18
-             i_PGD_P1V2_STBY                             ,//19
-             i_PGD_P5V                                         ,//20
-             i_PG_P1V0_STBY_M2_R
-	 }),             
-  .dout({
-             db_i_p1v8_stby_pg				,//01
-             db_i_pwrgd_p3v3_stby			,//02
-             db_i_pg_p5v_stby				,//03
-             db_i_pgd_p0_vdd_18_stby             ,//04
-             db_i_pgd_p1_vdd_18_stby		,//05
-             db_i_pgd_p0_vddc				,//06
-             db_i_pgd_p1_vddc                           ,//07
-             db_i_pgd_p0_vdd_11_sus		,//08
-             db_i_pgd_p1_vdd_11_sus               ,//09
-             db_i_pgd_p0_vdd_core_0		,//10
-             db_i_pgd_p1_vdd_core_0		,//11
-             db_i_pgd_p0_vdd_core_1		,//12
-             db_i_pgd_p1_vdd_core_1		,//13
-             db_i_pgd_p0_vdd_soc_0			,//14
-             db_i_pgd_p1_vdd_soc_0			,//15
-             db_i_pgd_p0_vddio				,//16
-             db_i_pgd_p1_vddio				,//17
-             db_i_pgd_p3v3_stby_b                   ,//18
-             db_i_pgd_p1v2_stby                       ,//19
-             db_i_pgd_p5v                                   ,//20
-             db_i_pg_p1v0_stby_m2_r
-	  }) 
-);
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-// DEVICE PRSNT
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//Active High Reset
-PGM_DEBOUNCE #(.SIGCNT(3), .NBITS (2'b11), .ENABLE(1'b1)) db_inst_amd_cpu_prsnt(   
-  .clk(clk_50m),
-  .timer_tick(t512us_tick),
-  .rst(~pon_reset_n),
-  .din({  
-                (i_P0_PRSNT_N & cpu_module_p0_prsnt_n) ,	//01 
-                (i_P1_PRSNT_N & cpu_module_p1_prsnt_n)  ,  //02 
-                i_P0_SPD_HOST_CTRL_N				        //03
-	  }),  
-  .dout({	  
-                db_cpu_prsnt_n[0],   //01
-                db_cpu_prsnt_n[1],   //02
-                db_i_p0_spd_host_ctrl_n            //03
-		})
-);
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-// for P12V_DROOP DEBOUNCE  2 Signal
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-PGM_DEBOUNCE #(.SIGCNT(2), .NBITS(2'b10), .ENABLE(1'b1)) db_p12v_droop (
-  .clk(clk_50m),
-  .rst(~pon_reset_n),
-  .timer_tick(t64ms_tick),
-  .din({
-             i_PGD_P12V_DROOP            , //1
-             i_PGD_P12V_STBY_DROOP         //2
-  }),
-  .dout({
-             db_i_pgd_p12v_droop         , //1
-             db_i_pgd_p12v_stby_droop      //2
-  })
-);
 
 wire    w_pgd_p12v_droop_neg;
-reg      r_p12v_discharge_r;
+reg     r_p12v_discharge_r;
 wire    w_p12v_discharge_r;
-
-Edge_Detect Edge_Detect_U1(    //2023-3-9 add 
-    .i_clk               (clk_50m),        
-    .i_rst_n             (pon_reset_n),       
-    .i_signal            (i_PGD_P12V_DROOP),//i_PGD_P12V_DROOP  w_PWRGD_P12V
-    
-    .o_signal_pos        (),
-    .o_signal_neg        (w_pgd_p12v_droop_neg),
-    .o_signal_invert     ()
-);
-
-always@(posedge clk_50m or negedge pon_reset_n) begin
-	if(~pon_reset_n) begin
-        r_p12v_discharge_r <= 1'b0;
-	end
-	else if(w_pgd_p12v_droop_neg) begin
-        r_p12v_discharge_r <= 1'b1;
-	end
-end
-assign  w_p12v_discharge_r = r_p12v_discharge_r;
 
 //SN74LV165     PVT_DATA
 //U152_DATA
@@ -1315,50 +955,366 @@ wire    w_PAL_M2_1_PRSNT_N;
 
 wire [6:0]pvti_ss_count;
 
-pvt_gpi #(
-  .TOTAL_BIT_COUNT(64),
-  .DEFAULT_STATE(64'h0),
-  .NUMBER_OF_COUNTER_BITS(7)
-) pvt_gpi_MB_inst (
-  .clk           (clk_50m),          //in
-  .reset_n       (pon_reset_n),      //in
-  .clk_ena       (t16us_tick),       //in
-  .serclk_in     (o_PVT_SS_CLK_R),   //in
-  .par_load_in_n (o_PVT_SS_LD_N_R),  //in
-  .sdi           (i_PVT_SS_DATI  ),  //in
-  .bit_idx_in    (pvti_ss_count),    //in
-  .bit_idx_out   (pvti_ss_count),    //out
-  .serclk_out    (o_PVT_SS_CLK_R ),  //out
-  .par_load_out_n(o_PVT_SS_LD_N_R),  //out
 
-  .par_data      ({w_P0_MCIOP0C_CB_ID1_R,w_P0_MCIOP0C_CB_ID0_R,w_P0_MCIOP0A_CB_ID1_R,w_P0_MCIOP0A_CB_ID0_R,
-                              w_P0_MCIOP1C_CB_ID1_R,w_P0_MCIOP1C_CB_ID0_R,w_P0_MCIOP1A_CB_ID1_R,w_P0_MCIOP1A_CB_ID0_R,        //u152_data
-                              
-                              w_P0_MCIOP2A_CB_ID0_R,w_P0_MCIOP2A_CB_ID1_R,w_P0_MCIOP2C_CB_ID0_R,w_P0_MCIOP2C_CB_ID1_R,
-                              w_P0_MCIOP3C_CB_ID1_R,w_P0_MCIOP3C_CB_ID0_R,w_P0_MCIOP3A_CB_ID1_R,w_P0_MCIOP3A_CB_ID0_R,      //u153_data
-                              
-                              w_P1_MCIOG1A_CB_ID0_R,w_P1_MCIOG1A_CB_ID1_R,w_P1_MCIOG1C_CB_ID0_R,w_P1_MCIOG1C_CB_ID1_R,
-                              w_P0_MCIOG3A_CB_ID0_R,w_P0_MCIOG3A_CB_ID1_R,w_P0_MCIOG3C_CB_ID0_R,w_P0_MCIOG3C_CB_ID1_R,        //u154_data
-                              
-                              w_SW_1,w_SW_2,w_SW_3,w_SW_4,
-                              w_SW_5,w_SW_6,w_SW_7,w_SW_8,      //u155_data
-                              
-                              w_PAL_BP4_AUX_PG,w_PAL_STBY_FAN_SHTDN,w_PG_P12V_SLOT_9,w_PG_P12V_SLOT_7,
-                              w_PAL_BP6_PRSNT_N,w_P1_MCIOP4A_CB_ID1_R,w_PG_P12V_SLOT_3,w_PAL_OCP1_HP_BUTTON_N,      //u156_data
-                              
-                              w_PG_P12V_SLOT_6,w_FAN_PRSNT_R,w_PAL_SLIMSAS1_PRSNT_N,w_NODE1_TYPE,
-                              w_PAL_MEN_CPU_SHTDN,w_PAL_S5_CPU_SHTDN,w_U157_NC_G,w_U157_NC_H,      //u157_data
-                              
-                              w_P1_MCIOP3C_CB_ID1_R,w_P1_MCIOP3C_CB_ID0_R,w_P1_MCIOP3A_CB_ID1_R,w_P1_MCIOP3A_CB_ID0_R,
-                              w_OCP1_CABLE_PRSNT_R,w_PAL_OCP1_PRSNT_B1_N,w_PAL_OCP1_PRSNT_B2_N,w_PAL_OCP1_PRSNT_B0_N,      //u158_data
-                              
-                              w_U159_NC_A,w_U159_NC_B,w_U159_NC_C,w_U159_NC_D,
-                              w_PAL_M2_0_PRSNT_N,w_NCSI_PRSNT_N,w_BMC_CARD_PRSNT_N,w_PAL_M2_1_PRSNT_N            //u159_data                              
-                              
+wire    w_ocp_prsnt_n;
+
+//-------------------------------------------------------------------------------------------------
+// PLL功能模块例化（锁相环时钟生成）
+// 功能：
+// 1. 输入25MHz时钟信号（i_CLK_25M_CPLD），通过PLL模块生成两个输出时钟：
+//    - 50MHz时钟信号（clk_50m）
+//    - 25MHz时钟信号（clk_25m）
+// 2. 输出PLL锁定信号（pll_lock），用于指示时钟稳定状态。
+//-------------------------------------------------------------------------------------------------
+pll_i25M_o50M_o25M pll_inst(
+  .CLKI     (i_CLK_25M_CPLD         ), // 输入时钟信号，频率为25MHz
+  .RST      (~i_PWRGD_P3V3_STBY     ), // 复位信号，低电平有效
+  .CLKOP    (clk_50m                ), // 输出50MHz时钟信号
+  .CLKOS    (clk_25m                ), // 输出25MHz时钟信号
+  // .CLKOS2 (clk_2p5m               ), // 未使用的2.5MHz时钟信号
+  .LOCK     (pll_lock               )  // 输出PLL锁定信号
+);
+
+//-------------------------------------------------------------------------------------------------
+// 电源复位模块（Power-On Reset）
+// 功能：
+// 1. 生成系统的电源复位信号（pon_reset_n），基于电源良好信号（pgd_p3v3_stby）和PLL锁定信号（pll_lock）。
+// 2. 提供去抖动后的复位信号（pon_reset_db_n）。
+// 3. 生成辅助系统电源良好信号（pgd_aux_system）及其SASD版本（pgd_aux_system_sasd）。
+//-------------------------------------------------------------------------------------------------
+pon_reset pon_reset_inst(
+  .clk                  (clk_50m                ), // 输入时钟信号，频率为50MHz
+  .pll_lock             (pll_lock               ), // 输入PLL锁定信号
+  .pgd_p3v3_stby        (i_PWRGD_P3V3_STBY      ), // 输入3.3V电源良好信号
+  .pgd_aux_gmt          (pgd_aux_bmc            ), // 输入BMC辅助电源良好信号
+  .done_booting         (1'b1                   ), // 固定高电平，表示启动完成
+  .done_booting_delayed (done_booting_delayed   ), // 延迟的启动完成信号
+  .pon_reset_n          (pon_reset_n            ), // 输出电源复位信号
+  .pon_reset_db_n       (pon_reset_db_n         ), // 输出去抖动后的电源复位信号
+  .pgd_aux_system       (pgd_aux_system         ), // 输出辅助系统电源良好信号
+  .pgd_aux_system_sasd  (pgd_aux_system_sasd    ), // 输出SASD版本的辅助系统电源良好信号
+  .cpld_ready           (                        )  // 未使用的CPLD准备信号
+);
+
+// ------------------------------------------------------------------------------------------------------------
+// 时钟生成模块，能够基于输入时钟生成多种定时信号和慢速时钟信号
+//--------------------------------------------------------------------------------------------------------------
+timer_gen timer_gen_inst(
+  .clk               (clk_50m          ), // 输入时钟信号，频率为 50 MHz
+  .reset             (~pon_reset_n    ), // 异步复位信号，低电平有效
+  .t40ns             (t40ns_tick      ), // 40 纳秒脉冲
+  .t80ns             (),                 // 80 纳秒脉冲（未使用）
+  .t160ns            (),                 // 160 纳秒脉冲（未使用）
+  .t1us              (t1us_tick       ), // 1 微秒脉冲
+  .t2us              (t2us_tick       ), // 2 微秒脉冲
+  .t16us             (t16us_tick      ), // 16 微秒脉冲
+  .t32us             (t32us_tick      ), // 32 微秒脉冲
+  .t128us            (t128us_tick     ), // 128 微秒脉冲
+  .t512us            (t512us_tick     ), // 512 微秒脉冲
+  .t1ms              (t1ms_tick       ), // 1 毫秒脉冲
+  .t2ms              (t2ms_tick       ), // 2 毫秒脉冲
+  .t16ms             (),                 // 16 毫秒脉冲（未使用）
+  .t32ms             (t32ms_tick      ), // 32 毫秒脉冲
+  .t64ms             (t64ms_tick      ), // 64 毫秒脉冲
+  .t128ms            (t128ms_tick     ), // 128 毫秒脉冲
+  .t256ms            (t256ms_tick     ), // 256 毫秒脉冲
+  .t512ms            (t512ms_tick     ), // 512 毫秒脉冲
+  .t1s               (t1s_tick        ), // 1 秒脉冲
+  .clk_1hz           (t1hz_clk        ), // 1 Hz 时钟信号
+  .clk_2p5hz         (t2p5hz_clk      ), // 2.5 Hz 时钟信号
+  .clk_4hz           (t4hz_clk        ), // 4 Hz 时钟信号
+  .clk_16khz         (t16khz_clk      ), // 16 kHz 时钟信号
+  .clk_6m25          (t6m25_clk       ), // 6.25 MHz 时钟信号
+  .clk_16m6          (t16m6_clk       )  // 16.6 MHz 时钟信号
+);
+
+// ------------------------------------------------------------------------------------------------------------
+// 生成多个同步时钟使能信号（Clock Enables, CEs) 10uS, 50uS, 500uS, 1mS, 20mS and 250mS
+//--------------------------------------------------------------------------------------------------------------
+ClkDivTree mClkDivTree (
+    .iClk           ( clk_50m            ), // 输入时钟信号，频率为50 MHz
+    .iRst           ( ~pon_reset_n       ), // 异步复位信号，低电平有效
+    .o1uSCE         ( w1uSCE             ), // 输出1微秒时钟使能信号
+    .o10uSCE        ( w10uSCE            ), // 输出10微秒时钟使能信号
+    .o50uSCE        ( w50uSCE            ), // 输出50微秒时钟使能信号
+    .o500uSCE       ( w500uSCE           ), // 输出500微秒时钟使能信号
+    .o1mSCE         ( w1mSCE             ), // 输出1毫秒时钟使能信号
+    .o250mSCE       ( w250mSCE           ), // 输出250毫秒时钟使能信号
+    .o10mSCE        ( w10mSCE            ), // 输出10毫秒时钟使能信号
+    .o20mSCE        ( w20mSCE            ), // 输出20毫秒时钟使能信号
+    .o1SCE          ( w1SCE              )  // 输出1秒时钟使能信号
+);
+
+// -------------------------------------------------------------------------------------------------------------
+// 内部振荡器（未使用）
+//--------------------------------------------------------------------------------------------------------------
+wire wb_clk;
+defparam inst_osch.NOM_FREQ = "4.29";
+OSCH inst_osch(
+    .STDBY      (1'b0       ), // 输入，控制振荡器是否进入待机模式
+    .OSC        (wb_clk     ), // 输出，振荡器生成的时钟信号
+    .SEDSTDBY   (           )  // 输出，振荡器进入待机模式的状态信号（未使用）
+);
+
+// -------------------------------------------------------------------------------------------------------------
+// I2C_UPDATE模块实例化
+// 功能：
+// 1. 通过I2C接口与外部设备（如Flash存储器）通信。
+// 2. 支持Wishbone总线协议，用于主控与I2C外设之间的数据传输和配置更新。
+// -------------------------------------------------------------------------------------------------------------
+I2C_UPDATE inst_i2c_update_flash_config(
+    .wb_clk_i    (wb_clk                ), // Wishbone 时钟信号，输入
+    .wb_rst_i    (                      ), // Wishbone 复位信号，未使用
+    .wb_cyc_i    (                      ), // Wishbone 总线周期信号，未使用
+    .wb_stb_i    (                      ), // Wishbone 选通信号，未使用
+    .wb_we_i     (                      ), // Wishbone 写使能信号，未使用
+    .wb_adr_i    (                      ), // Wishbone 地址信号，未使用
+    .wb_dat_i    (                      ), // Wishbone 数据输入信号，未使用
+    .wb_dat_o    (                      ), // Wishbone 数据输出信号，未使用
+    .wb_ack_o    (                      ), // Wishbone 应答信号，未使用
+    .i2c1_irqo   (                      ), // I2C 中断信号，未使用
+    .wbc_ufm_irq (                      ), // 用户闪存中断信号，未使用
+    .i2c1_scl    (io_I2C7_UPDATE_SCL    ), // I2C 时钟信号，与外部设备连接
+    .i2c1_sda    (io_I2C7_UPDATE_SDA    )  // I2C 数据信号，与外部设备连接
+);
+										   
+// -------------------------------------------------------------------------------------------------------------
+// PGM_DEBOUNCE模块实例化
+// 功能：
+// 1. 对输入信号进行去抖动处理，确保信号稳定。
+// 2. 使用时钟信号和定时信号对输入信号进行采样和滤波。
+// 3. 输出去抖动后的稳定信号。
+// -------------------------------------------------------------------------------------------------------------
+// 电源按钮信号去抖动
+// 按下按钮，服务器前面的蓝色指示灯（LED）会亮起或闪烁，使操作者在机架中能快速找到目标服务器
+PGM_DEBOUNCE #(.SIGCNT(3), .NBITS(2'b10), .ENABLE(1'b1)) db_inst_pwr_btn(
+  .clk(clk_50m),                      // 时钟信号，频率为50MHz
+  .rst(~pon_reset_n),                 // 复位信号，低电平有效
+  .timer_tick(t32ms_tick),            // 定时信号，32ms周期
+  .din({
+        i_PAL_PWR_BTN_N,              // 输入信号1：电源按钮信号
+        i_PAL_BUTTOPN_RST_N,          // 输入信号2：外部复位按钮信号
+        i_PAL_BMCUID_BUTTON           // 输入信号3：BMC UID按钮信号
+  }),
+  .dout({
+        db_i_pwr_btn_cpld_n_r,        // 输出信号1：去抖动后的电源按钮信号
+        db_i_pal_ext_rst_n,           // 输出信号2：去抖动后的外部复位按钮信号
+        db_i_pal_bmcuid_button        // 输出信号3：去抖动后的BMC UID按钮信号
+  }) 
+);
+
+// VR OCP信号去抖动
+// 过流保护（Over Current Protection, OCP）
+// 作用: VR OCP信号用于检测电压调节器是否发生了过流情况。当电流超过预设的安全阈值时，OCP信号会被触发。
+// 用途: 防止电路因过流而损坏，保护电源模块和负载设备的安全。
+PGM_DEBOUNCE #(.SIGCNT(6), .NBITS(2'b10), .ENABLE(1'b1)) db_vr_ocp_low (
+  .clk(clk_50m),                      // 时钟信号，频率为50MHz
+  .rst(~pon_reset_n),                 // 复位信号，低电平有效
+  .timer_tick(t64ms_tick),            // 定时信号，64ms周期
+  .din({
+        i_P0_VDD_CORE_0_OCP_N_R,      // 输入信号1：VR OCP信号1
+        i_PAL_P0_VDD_CORE_1_OCP_N,    // 输入信号2：VR OCP信号2
+        i_P0_VDDIO_OCP_N,             // 输入信号3：VR OCP信号3
+        i_P1_VDD_CORE_0_OCP_N_R,      // 输入信号4：VR OCP信号4
+        i_PAL_P1_VDD_CORE_1_OCP_N,    // 输入信号5：VR OCP信号5
+        i_P1_VDDIO_OCP_N              // 输入信号6：VR OCP信号6
+  }),
+  .dout({
+        db_i_p0_vdd_core_0_ocp_n_r,   // 输出信号1：去抖动后的VR OCP信号1
+        db_i_pal_p0_vdd_core_1_ocp_n, // 输出信号2：去抖动后的VR OCP信号2
+        db_i_p0_vddio_ocp_n,          // 输出信号3：去抖动后的VR OCP信号3
+        db_i_p1_vdd_core_0_ocp_n_r,   // 输出信号4：去抖动后的VR OCP信号4
+        db_i_pal_p1_vdd_core_1_ocp_n, // 输出信号5：去抖动后的VR OCP信号5
+        db_i_p1_vddio_ocp_n           // 输出信号6：去抖动后的VR OCP信号6
+  }) 
+);
+
+// PSU信号去抖动
+// 监控过流情况: 检测电压调节器是否发生过流。
+// 信号去抖动: 确保信号稳定，避免误判。
+// 故障保护: 在过流情况下触发保护机制，防止系统损坏。
+// 与电源管理交互: 确保系统能够安全地处理过流故障。
+PGM_DEBOUNCE #(.SIGCNT(10), .NBITS(2'b10), .ENABLE(1'b1)) db_inst_psu (
+  .clk(clk_50m),                      // 时钟信号，频率为50MHz
+  .rst(~pon_reset_n),                 // 复位信号，低电平有效
+  .timer_tick(t64ms_tick),            // 定时信号，64ms周期
+  .din({
+        i_PS1_PRSNT,                  // 输入信号1：PSU1存在信号
+        i_PS1_DCOK_N,                 // 输入信号2：PSU1直流电源正常信号
+        i_PS1_SMB_ALERT,              // 输入信号3：PSU1 SMBus警告信号
+        i_PS1_ACFAIL_N,               // 输入信号4：PSU1交流电源故障信号
+        i_PS2_PRSNT,                  // 输入信号5：PSU2存在信号
+        i_PS2_DCOK_N,                 // 输入信号6：PSU2直流电源正常信号
+        i_PS2_SMB_ALERT,              // 输入信号7：PSU2 SMBus警告信号
+        i_PS2_ACFAIL_N,               // 输入信号8：PSU2交流电源故障信号
+        w_ps3_prsnt,                  // 输入信号9：PSU3存在信号
+        w_ps4_prsnt                   // 输入信号10：PSU4存在信号
+  }),
+  .dout({
+        db_i_ps1_prsnt,               // 输出信号1：去抖动后的PSU1存在信号
+        db_i_ps1_dcok_n,              // 输出信号2：去抖动后的PSU1直流电源正常信号
+        db_i_ps1_smb_alert,           // 输出信号3：去抖动后的PSU1 SMBus警告信号
+        db_i_ps1_acfail_n,            // 输出信号4：去抖动后的PSU1交流电源故障信号
+        db_i_ps2_prsnt,               // 输出信号5：去抖动后的PSU2存在信号
+        db_i_ps2_dcok_n,              // 输出信号6：去抖动后的PSU2直流电源正常信号
+        db_i_ps2_smb_alert,           // 输出信号7：去抖动后的PSU2 SMBus警告信号
+        db_i_ps2_acfail_n,            // 输出信号8：去抖动后的PSU2交流电源故障信号
+        db_i_ps3_prsnt,               // 输出信号9：去抖动后的PSU3存在信号
+        db_i_ps4_prsnt                // 输出信号10：去抖动后的PSU4存在信号
+  })
+);
+
+// PGD电源良好信号进行去抖动处理，确保信号稳定
+PGM_DEBOUNCE_N #(.SIGCNT(21), .NBITS(2'b11), .ENABLE(1'b1)) db_inst_pwrgood (
+  .clk			(clk_50m),                    // 时钟信号，频率为50MHz
+  .rst_n		(pon_reset_n),                // 复位信号，低电平有效
+  .timer_tick	(1'b1),                     // 定时信号，始终为高电平
+  .din({
+             i_P1V8_STBY_PG,              // 输入信号1：1.8V待机电源良好信号
+             i_PWRGD_P3V3_STBY,           // 输入信号2：3.3V待机电源良好信号
+             i_PG_P5V_STBY,               // 输入信号3：5V待机电源良好信号
+             i_PGD_P0_VDD_18_STBY,        // 输入信号4：P0 1.8V待机电源良好信号
+             i_PGD_P1_VDD_18_STBY,        // 输入信号5：P1 1.8V待机电源良好信号
+             i_PGD_P0_VDDC,               // 输入信号6：P0核心电压电源良好信号
+             i_PGD_P1_VDDC,               // 输入信号7：P1核心电压电源良好信号
+             i_PGD_P0_VDD_11_SUS,         // 输入信号8：P0 1.1V挂起电源良好信号
+             i_PGD_P1_VDD_11_SUS,         // 输入信号9：P1 1.1V挂起电源良好信号
+             i_PGD_P0_VDD_CORE_0,         // 输入信号10：P0核心电压0电源良好信号
+             i_PGD_P1_VDD_CORE_0,         // 输入信号11：P1核心电压0电源良好信号
+             i_PGD_P0_VDD_CORE_1,         // 输入信号12：P0核心电压1电源良好信号
+             i_PGD_P1_VDD_CORE_1,         // 输入信号13：P1核心电压1电源良好信号
+             i_PGD_P0_VDD_SOC_0,          // 输入信号14：P0 SOC电压电源良好信号
+             i_PGD_P1_VDD_SOC_0,          // 输入信号15：P1 SOC电压电源良好信号
+             i_PGD_P0_VDDIO,              // 输入信号16：P0 IO电压电源良好信号
+             i_PGD_P1_VDDIO,              // 输入信号17：P1 IO电压电源良好信号
+             i_PGD_P3V3_STBY_B,           // 输入信号18：备用3.3V待机电源良好信号
+             i_PGD_P1V2_STBY,             // 输入信号19：1.2V待机电源良好信号
+             i_PGD_P5V,                   // 输入信号20：5V电源良好信号
+             i_PG_P1V0_STBY_M2_R          // 输入信号21：1.0V待机电源良好信号
+     }),             
+  .dout({
+             db_i_p1v8_stby_pg,           // 输出信号1：去抖动后的1.8V待机电源良好信号
+             db_i_pwrgd_p3v3_stby,        // 输出信号2：去抖动后的3.3V待机电源良好信号
+             db_i_pg_p5v_stby,            // 输出信号3：去抖动后的5V待机电源良好信号
+             db_i_pgd_p0_vdd_18_stby,     // 输出信号4：去抖动后的P0 1.8V待机电源良好信号
+             db_i_pgd_p1_vdd_18_stby,     // 输出信号5：去抖动后的P1 1.8V待机电源良好信号
+             db_i_pgd_p0_vddc,            // 输出信号6：去抖动后的P0核心电压电源良好信号
+             db_i_pgd_p1_vddc,            // 输出信号7：去抖动后的P1核心电压电源良好信号
+             db_i_pgd_p0_vdd_11_sus,      // 输出信号8：去抖动后的P0 1.1V挂起电源良好信号
+             db_i_pgd_p1_vdd_11_sus,      // 输出信号9：去抖动后的P1 1.1V挂起电源良好信号
+             db_i_pgd_p0_vdd_core_0,      // 输出信号10：去抖动后的P0核心电压0电源良好信号
+             db_i_pgd_p1_vdd_core_0,      // 输出信号11：去抖动后的P1核心电压0电源良好信号
+             db_i_pgd_p0_vdd_core_1,      // 输出信号12：去抖动后的P0核心电压1电源良好信号
+             db_i_pgd_p1_vdd_core_1,      // 输出信号13：去抖动后的P1核心电压1电源良好信号
+             db_i_pgd_p0_vdd_soc_0,       // 输出信号14：去抖动后的P0 SOC电压电源良好信号
+             db_i_pgd_p1_vdd_soc_0,       // 输出信号15：去抖动后的P1 SOC电压电源良好信号
+             db_i_pgd_p0_vddio,           // 输出信号16：去抖动后的P0 IO电压电源良好信号
+             db_i_pgd_p1_vddio,           // 输出信号17：去抖动后的P1 IO电压电源良好信号
+             db_i_pgd_p3v3_stby_b,        // 输出信号18：去抖动后的备用3.3V待机电源良好信号
+             db_i_pgd_p1v2_stby,          // 输出信号19：去抖动后的1.2V待机电源良好信号
+             db_i_pgd_p5v,                // 输出信号20：去抖动后的5V电源良好信号
+             db_i_pg_p1v0_stby_m2_r       // 输出信号21：去抖动后的1.0V待机电源良好信号
+      }) 
+);
+
+// 设备存在信号和 SPD 主控信号信号去抖
+PGM_DEBOUNCE #(.SIGCNT(3), .NBITS(2'b11), .ENABLE(1'b1)) db_inst_amd_cpu_prsnt(   
+  .clk(clk_50m),                                         // 时钟信号，频率为50MHz
+  .timer_tick(t512us_tick),                              // 定时信号，512微秒周期
+  .rst(~pon_reset_n),                                    // 复位信号，低电平有效
+  .din({  
+                (i_P0_PRSNT_N & cpu_module_p0_prsnt_n),  // 输入信号1：P0设备存在信号
+                (i_P1_PRSNT_N & cpu_module_p1_prsnt_n),  // 输入信号2：P1设备存在信号
+                i_P0_SPD_HOST_CTRL_N                     // 输入信号3：P0 SPD主控信号
+      }),  
+  .dout({	  
+                db_cpu_prsnt_n[0],                       // 输出信号1：去抖动后的P0设备存在信号
+                db_cpu_prsnt_n[1],                       // 输出信号2：去抖动后的P1设备存在信号
+                db_i_p0_spd_host_ctrl_n                  // 输出信号3：去抖动后的P0 SPD主控信号
+        })
+);
+
+// 12V电源和12V待机电源的电压下跌信号去抖
+PGM_DEBOUNCE #(.SIGCNT(2), .NBITS(2'b10), .ENABLE(1'b1)) db_p12v_droop (
+  .clk(clk_50m),                      // 时钟信号，频率为50MHz
+  .rst(~pon_reset_n),                 // 复位信号，低电平有效
+  .timer_tick(t64ms_tick),            // 定时信号，64ms周期
+  .din({
+             i_PGD_P12V_DROOP,        // 输入信号1：12V电源电压下跌信号
+             i_PGD_P12V_STBY_DROOP    // 输入信号2：12V待机电源电压下跌信号
+  }),
+  .dout({
+             db_i_pgd_p12v_droop,     // 输出信号1：去抖动后的12V电源电压下跌信号
+             db_i_pgd_p12v_stby_droop // 输出信号2：去抖动后的12V待机电源电压下跌信号
+  })
+);
+
+// -------------------------------------------------------------------------------------------------------------
+// Edge_Detect边沿检测模块实例化
+// -------------------------------------------------------------------------------------------------------------
+Edge_Detect Edge_Detect_U1(    // 2023-3-9 添加
+    .i_clk               (clk_50m),               // 输入时钟信号，频率为 50MHz
+    .i_rst_n             (pon_reset_n),           // 复位信号，低电平有效
+    .i_signal            (i_PGD_P12V_DROOP),      // 输入信号：12V 电源电压下跌信号
+    .o_signal_pos        (),                      // 输出信号：上升沿检测（未使用）
+    .o_signal_neg        (w_pgd_p12v_droop_neg),  // 输出信号：下降沿检测
+    .o_signal_invert     ()                       // 输出信号：信号翻转（未使用）
+);
+
+always@(posedge clk_50m or negedge pon_reset_n) begin
+	if(~pon_reset_n) begin
+        r_p12v_discharge_r <= 1'b0;
+	end
+	else if(w_pgd_p12v_droop_neg) begin
+        r_p12v_discharge_r <= 1'b1;
+	end
+end
+assign  w_p12v_discharge_r = r_p12v_discharge_r;
+
+
+//-------------------------------------------------------------------------------------------------
+// PVT_GPI 模块实例化
+//-------------------------------------------------------------------------------------------------
+// 功能：
+// 1. 通过串行输入信号采集多个并行数据位。
+// 2. 支持串行时钟输入和并行加载信号输入。
+// 3. 输出采集到的并行数据，用于后续逻辑处理。
+pvt_gpi #(
+  .TOTAL_BIT_COUNT(64),               // 总位宽：64位
+  .DEFAULT_STATE(64'h0),              // 默认状态：全为0
+  .NUMBER_OF_COUNTER_BITS(7)          // 计数器位宽：7位
+) pvt_gpi_MB_inst (
+  .clk           (clk_50m),           // 输入时钟信号，频率为50MHz
+  .reset_n       (pon_reset_n),       // 复位信号，低电平有效
+  .clk_ena       (t16us_tick),        // 时钟使能信号，16微秒周期
+  .serclk_in     (o_PVT_SS_CLK_R),    // 串行时钟输入信号
+  .par_load_in_n (o_PVT_SS_LD_N_R),   // 并行加载信号输入，低电平有效
+  .sdi           (i_PVT_SS_DATI),     // 串行数据输入信号
+  .bit_idx_in    (pvti_ss_count),     // 输入位索引
+  .bit_idx_out   (pvti_ss_count),     // 输出位索引
+  .serclk_out    (o_PVT_SS_CLK_R),    // 串行时钟输出信号
+  .par_load_out_n(o_PVT_SS_LD_N_R),   // 并行加载信号输出，低电平有效
+
+  // 并行数据输出信号
+  .par_data      ({
+                              w_P0_MCIOP0C_CB_ID1_R, w_P0_MCIOP0C_CB_ID0_R, w_P0_MCIOP0A_CB_ID1_R, w_P0_MCIOP0A_CB_ID0_R, // U152 数据
+                              w_P0_MCIOP1C_CB_ID1_R, w_P0_MCIOP1C_CB_ID0_R, w_P0_MCIOP1A_CB_ID1_R, w_P0_MCIOP1A_CB_ID0_R, // U153 数据
+                              w_P0_MCIOP2A_CB_ID0_R, w_P0_MCIOP2A_CB_ID1_R, w_P0_MCIOP2C_CB_ID0_R, w_P0_MCIOP2C_CB_ID1_R, // U154 数据
+                              w_P0_MCIOP3C_CB_ID1_R, w_P0_MCIOP3C_CB_ID0_R, w_P0_MCIOP3A_CB_ID1_R, w_P0_MCIOP3A_CB_ID0_R, // U155 数据
+                              w_P1_MCIOG1A_CB_ID0_R, w_P1_MCIOG1A_CB_ID1_R, w_P1_MCIOG1C_CB_ID0_R, w_P1_MCIOG1C_CB_ID1_R, // U156 数据
+                              w_P0_MCIOG3A_CB_ID0_R, w_P0_MCIOG3A_CB_ID1_R, w_P0_MCIOG3C_CB_ID0_R, w_P0_MCIOG3C_CB_ID1_R, // U157 数据
+                              w_SW_1, w_SW_2, w_SW_3, w_SW_4, w_SW_5, w_SW_6, w_SW_7, w_SW_8,                             // U158 数据
+                              w_PAL_BP4_AUX_PG, w_PAL_STBY_FAN_SHTDN, w_PG_P12V_SLOT_9, w_PG_P12V_SLOT_7,                 // U159 数据
+                              w_PAL_BP6_PRSNT_N, w_P1_MCIOP4A_CB_ID1_R, w_PG_P12V_SLOT_3, w_PAL_OCP1_HP_BUTTON_N,         // U160 数据
+                              w_PG_P12V_SLOT_6, w_FAN_PRSNT_R, w_PAL_SLIMSAS1_PRSNT_N, w_NODE1_TYPE,                      // U161 数据
+                              w_PAL_MEN_CPU_SHTDN, w_PAL_S5_CPU_SHTDN, w_U157_NC_G, w_U157_NC_H,                          // U162 数据
+                              w_P1_MCIOP3C_CB_ID1_R, w_P1_MCIOP3C_CB_ID0_R, w_P1_MCIOP3A_CB_ID1_R, w_P1_MCIOP3A_CB_ID0_R, // U163 数据
+                              w_OCP1_CABLE_PRSNT_R, w_PAL_OCP1_PRSNT_B1_N, w_PAL_OCP1_PRSNT_B2_N, w_PAL_OCP1_PRSNT_B0_N,  // U164 数据
+                              w_U159_NC_A, w_U159_NC_B, w_U159_NC_C, w_U159_NC_D,                                         // U165 数据
+                              w_PAL_M2_0_PRSNT_N, w_NCSI_PRSNT_N, w_BMC_CARD_PRSNT_N, w_PAL_M2_1_PRSNT_N                  // U166 数据
                               })
 );
-//-------------------------------------------------------------------------------------------------//
-wire    w_ocp_prsnt_n;
+
 
 
 //-------------------------------------------------------------------------------------------------
@@ -1374,7 +1330,7 @@ wire [199:0] mcpld_to_scpld_p2s_data   ; //2024-8-2 chg 159 to 199
 wire [199:0] scpld_to_mcpld_s2p_data   ;
 
 reg [191:0]	scpld_to_mcpld_data_filter;
-reg 	    scpld_sgpio_fail          ;
+reg 	      scpld_sgpio_fail          ;
 
 
 //scpld ---> mcpld
@@ -3915,106 +3871,114 @@ assign  o_TPM_IO2_RST                                             =   db_i_p0_pc
 assign  o_EEPROM_WP_N_R                                         =   w_eeprom_wp ? 1'b0 : 1'b1;
 assign  o_PAL_PVCC_HPMOS_SW_R                             =   w_FM_P12V_EN  ;//2025-02-09 add
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-//I2C RAM  Start
-//--------------------------------------------------------------------------------------------------------------------------------------------------
-/************************************************************************************************************************************************************************/
-// reg [7:0] r_uid_led_fb				;	// UID LED hitless
+//-------------------------------------------------------------------------------------------------
+// BMC_CPLD_I2C_RAM 模块实例化
+//-------------------------------------------------------------------------------------------------
+// 功能：
+// 1. 通过 I2C 接口与外部设备通信，支持数据的读写操作。
+// 2. 提供多个输入信号，用于传递系统状态和配置信息。
+// 3. 输出信号用于与其他模块交互，支持状态反馈和控制。
 bmc_cpld_i2c_ram #(
-.DLY_LEN       (16)   //50MHz,330ns
-)bmc_cpld_i2c_ram_u0
-(
-.i_rst_n		(pon_reset_n	),  
-.i_clk			(clk_25m		),
-.i_1ms_clk		(t1ms_tick		),	          
-.i_rst_i2c_n	(1'b1			),		
-.i_scl			(i_I2C7_PAL_SCL		), 
-.io_sda			(io_I2C7_PAL_SDA	),
+    .DLY_LEN(16) // 延迟长度，50MHz 时钟下约 330ns
+) bmc_cpld_i2c_ram_u0 (
+// 时钟和复位信号
+    .i_rst_n        (pon_reset_n),       // 复位信号，低电平有效
+    .i_clk          (clk_25m),           // 时钟信号，频率为 25MHz
+    .i_1ms_clk      (t1ms_tick),         // 1ms 时钟信号
+    .i_rst_i2c_n    (1'b1),              // I2C 复位信号，始终为高电平
 
-.i_product_id			(`PRODUCT_ID	),	                        //addr 0x0000	
-.i_vender_id			(`VENDER_ID	        ),				//addr 0x0001
-.i_board_id				({4'b0000,w_board_id}   ),	        //addr 0x0002	
-.i_pcb_version			({5'b0,w_pcb_version}   ),	        //addr 0x0003	
-.i_bom_id				({5'b0,w_pca_version}   ),	        //addr 0x0004
-.i_cpld_version			(`CPLD_VERSION	),				//addr 0x0005
-.o_test_reg				(		),                                 		//addr 0x0006
-.i_year					(`Year	),						//addr 0x0007
-.i_month				(`Month	),						//addr 0x0008
-.i_day					(`Day	),						//addr 0x0009
-.i_nc_pin                              ({7'b0,w_nc_pin}),                            //addr 0x000a 
-.i_cpld_compa_version	(8'h00	),  					   	//addr 0x000b
-.i_cpld_debug_version	(`DEBUG_VERSION	),  				//addr 0x000c
+    // I2C 接口信号
+    .i_scl          (i_I2C7_PAL_SCL),    // I2C 时钟信号
+    .io_sda         (io_I2C7_PAL_SDA),   // I2C 数据信号
 
-//PSU--0x000D
-.i_PS1_PRSNT                              (db_i_ps1_prsnt)                  , //addr 0x000D bit7
-.i_PS2_PRSNT                              (db_i_ps2_prsnt)                  , //addr 0x000D bit6
-.i_PS3_PRSNT                              (db_i_ps3_prsnt)                  , //addr 0x000D bit5
-.i_PS4_PRSNT                              (db_i_ps4_prsnt)                  , //addr 0x000D bit4
-.i_PS1_ACFAIL                            (db_i_ps1_acfail_n)            , //addr 0x000D bit3
-.i_PS2_ACFAIL                            (db_i_ps2_acfail_n)            , //addr 0x000D bit2
-.i_PS1_DCOK                                (db_i_ps1_dcok_n)                , //addr 0x000D bit1
-.i_PS2_DCOK                                (db_i_ps2_dcok_n)                , //addr 0x000D bit0
-//PSU--0x000E
-.i_PS1_ALERT                              (db_i_ps1_smb_alert)                , //addr 0x000E bit7
-.i_PS2_ALERT                              (db_i_ps2_smb_alert)                , //addr 0x000E bit6
-.i_PS1_P12V_ON                          (w_ps1_p12v_on_r)                      , //addr 0x000E bit5
-.i_PS2_P12V_ON                          (w_ps2_p12v_on_r)                      , //addr 0x000E bit4
-.i_PS_OFF                                    (w_pal_ps_off_r)                        , //addr 0x000E bit3
-.i_DUAL_EN                                  (w_pal_dual_en_r)                      , //addr 0x000E bit2
-.i_P12V_DROOP                            (db_i_pgd_p12v_droop)              , //addr 0x000E bit1
-.i_P12V_STBY_DROOP                  (db_i_pgd_p12v_stby_droop)    , //addr 0x000E bit0
-//P12V --0x000F
-.i_P12V_DISCHARGE                    (w_p12v_discharge_r)                , //addr 0x000F bit7
+    // 系统配置信号
+    .i_product_id           (`PRODUCT_ID),              // 产品 ID，地址 0x0000
+    .i_vender_id            (`VENDER_ID),               // 厂商 ID，地址 0x0001
+    .i_board_id             ({4'b0000, w_board_id}),    // 板卡 ID，地址 0x0002
+    .i_pcb_version          ({5'b0, w_pcb_version}),    // PCB 版本号，地址 0x0003
+    .i_bom_id               ({5'b0, w_pca_version}),    // BOM ID，地址 0x0004
+    .i_cpld_version         (`CPLD_VERSION),            // CPLD 版本号，地址 0x0005
+    .o_test_reg             (),                         // 测试寄存器，地址 0x0006
+    .i_year                 (`Year),                    // 年份，地址 0x0007
+    .i_month                (`Month),                   // 月份，地址 0x0008
+    .i_day                  (`Day),                     // 日期，地址 0x0009
+    .i_nc_pin               ({7'b0, w_nc_pin}),         // 未连接引脚，地址 0x000A
+    .i_cpld_compa_version   (8'h00),                    // CPLD 兼容版本，地址 0x000B
+    .i_cpld_debug_version   (`DEBUG_VERSION),           // CPLD 调试版本，地址 0x000C
 
-//POL PGD --0x0010
-.i_PGD_P5V_MB                                      (db_i_pgd_p5v                 )           , //addr 0x0010 bit7
-.i_PGD_P5V_STBY_MB                            (db_i_pg_p5v_stby         )           , //addr 0x0010 bit6
-.i_PGD_P3V3_STBY_MB                          (db_i_pwrgd_p3v3_stby )           , //addr 0x0010 bit5
-.i_PGD_P3V3_STBY_B_MB                      (db_i_pgd_p3v3_stby_b )           , //addr 0x0010 bit4
-.i_PGD_P1V8_PCH_STBY_MB                  (db_i_p1v8_stby_pg       )           , //addr 0x0010 bit3
-.i_PGD_P1V2_STBY_MB                          (db_i_pgd_p1v2_stby     )           , //addr 0x0010 bit2
-.i_PGD_P1V05_PCH_STBY_MB                (  )          , //addr 0x0010 bit1
-.i_PGD_PVNN_PCH_STBY_MB                  (  )          , //addr 0x0010 bit0
+    // 电源状态信号
+    // PSU 状态信号，地址 0x000D
+    .i_PS1_PRSNT            (db_i_ps1_prsnt),           // PSU1 存在信号
+    .i_PS2_PRSNT            (db_i_ps2_prsnt),           // PSU2 存在信号
+    .i_PS3_PRSNT            (db_i_ps3_prsnt),           // PSU3 存在信号
+    .i_PS4_PRSNT            (db_i_ps4_prsnt),           // PSU4 存在信号
+    .i_PS1_ACFAIL           (db_i_ps1_acfail_n),        // PSU1 交流电源故障信号
+    .i_PS2_ACFAIL           (db_i_ps2_acfail_n),        // PSU2 交流电源故障信号
+    .i_PS1_DCOK             (db_i_ps1_dcok_n),          // PSU1 直流电源正常信号
+    .i_PS2_DCOK             (db_i_ps2_dcok_n),          // PSU2 直流电源正常信号
 
-//--0x0011
-.i_USB_INNER_OVERCUR3                  (w_usb_inner_overcur3  )      , //addr 0x0011 bit7
-.i_USB2_LCD_OC_N                            (w_usb2_lcd_oc_n            )      , //addr 0x0011 bit6
+    // PSU 警告信号，地址 0x000E
+    .i_PS1_ALERT            (db_i_ps1_smb_alert),       // PSU1 警告信号
+    .i_PS2_ALERT            (db_i_ps2_smb_alert),       // PSU2 警告信号
+    .i_PS1_P12V_ON          (w_ps1_p12v_on_r),          // PSU1 12V 电源开启信号
+    .i_PS2_P12V_ON          (w_ps2_p12v_on_r),          // PSU2 12V 电源开启信号
+    .i_PS_OFF               (w_pal_ps_off_r),           // 电源关闭信号
+    .i_DUAL_EN              (w_pal_dual_en_r),          // 双电源使能信号
+    .i_P12V_DROOP           (db_i_pgd_p12v_droop),      // 12V 电压下跌信号
+    .i_P12V_STBY_DROOP      (db_i_pgd_p12v_stby_droop), // 12V 待机电压下跌信号
 
-//POL PGD --0x0012
-.i_PAL_P5V_EN_R_MB                             (w_pal_p5v_en_r          )    , //addr 0x0012 bit7
-.i_PAL_P5V_STBY_EN_R_MB                   (w_p5v_stby_en            )    , //addr 0x0012 bit6
-.i_P5V_STBY_USB_EN                             (w_p5v_stby_usb_en     )    , //addr 0x0012 bit5
-.i_P5V_EN                                             (  w_p5v_en    )    , //addr 0x0012 bit4
-.i_ncsi_main_pwr_en                           ( w_ocp_main_en     )    , //addr 0x0012 bit3
-.i_ncsi_aux_pwr_en                             (  w_ocp_aux_en    )    , //addr 0x0012 bit2
-.i_PAL_PVNN_STBY_EN_R_MB                 (      )    , //addr 0x0012 bit1
-.i_PAL_EN_PWM_CTRL_VCC_R_MB           (      )    , //addr 0x0012 bit0
-//0x0013
-.o_BMC_JTAG_MUX_S                           (w_bmc_jtag_mux_s),     //addr 0x0013 bit7 default 1
+    //POL PGD --0x0010
+    .i_PGD_P5V_MB            (db_i_pgd_p5v             ), // 5V 电源良好信号，地址 0x0010，bit7
+    .i_PGD_P5V_STBY_MB       (db_i_pg_p5v_stby         ), // 5V 待机电源良好信号，地址 0x0010，bit6
+    .i_PGD_P3V3_STBY_MB      (db_i_pwrgd_p3v3_stby     ), // 3.3V 待机电源良好信号，地址 0x0010，bit5
+    .i_PGD_P3V3_STBY_B_MB    (db_i_pgd_p3v3_stby_b     ), // 3.3V 待机备用电源良好信号，地址 0x0010，bit4
+    .i_PGD_P1V8_PCH_STBY_MB  (db_i_p1v8_stby_pg        ), // 1.8V PCH 待机电源良好信号，地址 0x0010，bit3
+    .i_PGD_P1V2_STBY_MB      (db_i_pgd_p1v2_stby       ), // 1.2V 待机电源良好信号，地址 0x0010，bit2
+    .i_PGD_P1V05_PCH_STBY_MB (                         ), // 1.05V PCH 待机电源良好信号（未连接），地址 0x0010，bit1
+    .i_PGD_PVNN_PCH_STBY_MB  (                         ), // PVNN PCH 待机电源良好信号（未连接），地址 0x0010，bit0
 
+    //--0x0011
+    .i_USB_INNER_OVERCUR3     (w_usb_inner_overcur3   ), // USB 内部过流信号，地址 0x0011，bit7
+    .i_USB2_LCD_OC_N          (w_usb2_lcd_oc_n        ), // USB2 LCD 过流信号，地址 0x0011，bit6
 
-//////////////0X0013 -0X001F RESERVED FOR FUTURE USE/////////////////////////////////////////////////////////////////////////
-//CPU0 PGD --0x0020
-.i_pwrgd_vdd_33_stby0			(db_i_pgd_p0_vddc			),	//addr 0x0020 bit7
-.i_pwrgd_vdd_18_stby0			(db_i_pgd_p0_vdd_18_stby	),	//addr 0x0020 bit6
-.i_pal_pgd_p0_vdd_core_1		(db_i_pgd_p0_vdd_core_1		),	//addr 0x0020 bit5
-.i_pal_pgd_p0_vdd_core_0		(db_i_pgd_p0_vdd_core_0		),	//addr 0x0020 bit4
-.i_pal_pgd_p0_vdd_soc_0			(db_i_pgd_p0_vdd_soc_0		),	//addr 0x0020 bit3
-.i_pal_pgd_p0_vddio				(db_i_pgd_p0_vddio			),	//addr 0x0020 bit2
-.i_pal_pgd_p0_vdd_sus_0			(db_i_pgd_p0_vdd_11_sus		),	//addr 0x0020 bit1
-.i_pal_cpu_sys_pwrok                        (w_cpu_sys_pwrok                        ),    //addr 0x0020 bit0
-//CPU0 ALERT --0x0021
-.i_p0_pwrgd_out_r				(db_i_p0_pwrgd_out			),	//addr 0x0021 bit7
-.i_p0_pwrok_r				        (db_i_p0_pwrok				),	//addr 0x0021 bit6
-.i_p0_pwr_good_r				(w_cpu_pwr_good				),	//addr 0x0021 bit5
-//CPU0 PWR EN --0x0022
-.i_p0_vddc_en					(w_grp_b_p0_33_s5_en		),	//addr 0x0022 bit7
-.i_p0_vdd_18_stby_en			(w_grp_b_p0_18_s5_en		),	//addr 0x0022 bit6
-.i_pal_p0_vdd_11_sus_en			(w_grp_c_p0_vdd11_en		),	//addr 0x0022 bit5
-.i_pal_p0_vddio_en_r			(w_grp_d_p0_vddio_en		),	//addr 0x0022 bit4
-.i_pal_p0_vdd_soc_en			(w_grp_d_p0_soc_en			),	//addr 0x0022 bit3
-.i_pal_p0_vdd_core_0_en_r		(w_grp_d_p0_vddcore0_en		),	//addr 0x0022 bit2
-.i_pal_p0_vdd_core_1_en_r		(w_grp_d_p0_vddcore1_en		),	//addr 0x0022 bit1
+    //POL PGD --0x0012
+    .i_PAL_P5V_EN_R_MB         (w_pal_p5v_en_r        ), // 5V 电源使能信号，地址 0x0012，bit7
+    .i_PAL_P5V_STBY_EN_R_MB    (w_p5v_stby_en         ), // 5V 待机电源使能信号，地址 0x0012，bit6
+    .i_P5V_STBY_USB_EN         (w_p5v_stby_usb_en     ), // 5V 待机 USB 电源使能信号，地址 0x0012，bit5
+    .i_P5V_EN                  (w_p5v_en              ), // 5V 电源使能信号，地址 0x0012，bit4
+    .i_ncsi_main_pwr_en        (w_ocp_main_en         ), // 主电源使能信号，地址 0x0012，bit3
+    .i_ncsi_aux_pwr_en         (w_ocp_aux_en          ), // 辅助电源使能信号，地址 0x0012，bit2
+    .i_PAL_PVNN_STBY_EN_R_MB   (                      ), // PVNN 待机电源使能信号（未连接），地址 0x0012，bit1
+    .i_PAL_EN_PWM_CTRL_VCC_R_MB(                      ), // PWM 控制 VCC 使能信号（未连接），地址 0x0012，bit0
+
+    //0x0013
+    .o_BMC_JTAG_MUX_S          (w_bmc_jtag_mux_s      ), // BMC JTAG 多路复用选择信号，地址 0x0013，bit7，默认值 1
+
+    //CPU0 PGD --0x0020
+    .i_pwrgd_vdd_33_stby0      (db_i_pgd_p0_vddc      ), // 3.3V 待机电源良好信号，地址 0x0020，bit7
+    .i_pwrgd_vdd_18_stby0      (db_i_pgd_p0_vdd_18_stby), // 1.8V 待机电源良好信号，地址 0x0020，bit6
+    .i_pal_pgd_p0_vdd_core_1   (db_i_pgd_p0_vdd_core_1), // 核心电源良好信号 1，地址 0x0020，bit5
+    .i_pal_pgd_p0_vdd_core_0   (db_i_pgd_p0_vdd_core_0), // 核心电源良好信号 0，地址 0x0020，bit4
+    .i_pal_pgd_p0_vdd_soc_0    (db_i_pgd_p0_vdd_soc_0 ), // SoC 电源良好信号，地址 0x0020，bit3
+    .i_pal_pgd_p0_vddio        (db_i_pgd_p0_vddio     ), // IO 电源良好信号，地址 0x0020，bit2
+    .i_pal_pgd_p0_vdd_sus_0    (db_i_pgd_p0_vdd_11_sus), // SUS 电源良好信号，地址 0x0020，bit1
+    .i_pal_cpu_sys_pwrok       (w_cpu_sys_pwrok       ), // CPU 系统电源良好信号，地址 0x0020，bit0
+
+    //CPU0 ALERT --0x0021
+    .i_p0_pwrgd_out_r          (db_i_p0_pwrgd_out     ), // 电源良好输出信号，地址 0x0021，bit7
+    .i_p0_pwrok_r              (db_i_p0_pwrok         ), // 电源正常信号，地址 0x0021，bit6
+    .i_p0_pwr_good_r           (w_cpu_pwr_good        ), // 电源良好信号，地址 0x0021，bit5
+
+    //CPU0 PWR EN --0x0022
+    .i_p0_vddc_en              (w_grp_b_p0_33_s5_en   ), // VDDC 电源使能信号，地址 0x0022，bit7
+    .i_p0_vdd_18_stby_en       (w_grp_b_p0_18_s5_en   ), // 1.8V 待机电源使能信号，地址 0x0022，bit6
+    .i_pal_p0_vdd_11_sus_en    (w_grp_c_p0_vdd11_en   ), // 1.1V SUS 电源使能信号，地址 0x0022，bit5
+    .i_pal_p0_vddio_en_r       (w_grp_d_p0_vddio_en   ), // IO 电源使能信号，地址 0x0022，bit4
+    .i_pal_p0_vdd_soc_en       (w_grp_d_p0_soc_en     ), // SoC 电源使能信号，地址 0x0022，bit3
+    .i_pal_p0_vdd_core_0_en_r  (w_grp_d_p0_vddcore0_en), // 核心电源 0 使能信号，地址 0x0022，bit2
+    .i_pal_p0_vdd_core_1_en_r  (w_grp_d_p0_vddcore1_en), // 核心电源 1 使能信号，地址 0x0022，bit1
+
+    
 //CPU0 PGD --0x0023
 .i_pwrgd_vdd_18_stby1			(db_i_pgd_p1_vdd_18_stby	),	//addr 0x0023 bit7	 
 .i_pwrgd_vdd_33_stby1			(db_i_pgd_p1_vddc		        ),	//addr 0x0023 bit6	 
