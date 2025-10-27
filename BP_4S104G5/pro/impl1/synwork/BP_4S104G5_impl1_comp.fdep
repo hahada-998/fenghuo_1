@@ -1,0 +1,116 @@
+#OPTIONS:"|-layerid|0|-orig_srs|D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\pro\\impl1\\synwork\\BP_4S104G5_impl1_comp.srs|-top|BP_4S104G5|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-I|D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\include|-I|D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\pro|-I|D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\pro\\impl1\\|-I|C:\\lscc\\diamond\\3.12\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\machxo3lf.v|-devicelib|C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001"
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\bin64\\c_ver.exe":1603937922
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\machxo3lf.v":1603938054
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\pmi_def.v":1603938054
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\hypermods.v":1603938190
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\umr_capim.v":1603938190
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\scemi_objects.v":1603938190
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\scemi_pipes.svh":1603938190
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\BP_4S104G5_TOP.v":1738981840
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\include\\BP_4S104G5_VA_port.v":1736473836
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\PLL\\pll_i25M_o50M_o25M.v":1667898784
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\I2C_UPDATE\\I2C_UPDATE.v":1637314136
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\bmc_i2c\\bmc_cpld_i2c_ram.v":1732155653
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\bmc_i2c\\i2c_slave_basic0.v":1662714071
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\bmc_i2c\\i2c_slave_bmc.v":1662714091
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\SGPIO_SLAVE\\p2s_slave.v":1663040116
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\SGPIO_SLAVE\\s2p_slave.v":1663048836
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\common\\edge_delay.v":1662702353
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\common\\lowpass_filter.v":1663048557
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\common\\pon_reset.v":1663040116
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\common\\synclib.v":1663039371
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\common\\timer_gen_50mhz.v":1638003307
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\74LV165\\pvt_gpi.v":1669903272
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\FAN\\fan_pwm_tach.v":1713778933
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\FAN\\fan_counter.v":1612920595
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\common\\Edge_Detect.v":1669903273
+#CUR:"D:\\Project\\CNIT-K\\8U SW\\code\\V10\\4port\\BP_4S104G5\\rtl\\source\\breath_led\\breath_led.v":1715848228
+0			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v" verilog
+1		*	"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v" verilog
+2			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v" verilog
+3			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v" verilog
+4			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" verilog
+5			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v" verilog
+6			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v" verilog
+7			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v" verilog
+8			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v" verilog
+9			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v" verilog
+10			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\lowpass_filter.v" verilog
+11			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\pon_reset.v" verilog
+12			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v" verilog
+13			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v" verilog
+14			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v" verilog
+15			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v" verilog
+16			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v" verilog
+17			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\Edge_Detect.v" verilog
+18			"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\breath_led\breath_led.v" verilog
+#Dependency Lists(Uses List)
+0 4 3 15 18 14 7 8 12 13 11 2 9 1
+1 4 3 15 18 14 7 8 12 13 11 2 9 0
+2 -1
+3 -1
+4 6
+5 -1
+6 5
+7 -1
+8 -1
+9 -1
+10 -1
+11 -1
+12 -1
+13 -1
+14 -1
+15 16 17
+16 -1
+17 -1
+18 -1
+#Dependency Lists(Users Of)
+0 1
+1 0
+2 1 0
+3 1 0
+4 1 0
+5 6
+6 4
+7 1 0
+8 1 0
+9 1 0
+10 -1
+11 1 0
+12 1 0
+13 1 0
+14 1 0
+15 1 0
+16 15
+17 15
+18 1 0
+#Design Unit to File Association
+module work fan_counter 16
+module work Edge_Detect 17
+module work PGM_DEBOUNCE_GPO_N 12
+module work ISOLATE_COMBI 12
+module work BREAK_COMBI 12
+module work BREAK_COMBI_N 12
+module work STABLE 12
+module work SYNC_DATA 12
+module work SYNC_DATA_N 12
+module work SYNC_RESET_SASD 12
+module work SYNC_RESET_AASD 12
+module work SYNC_RESET_N_AASD 12
+module work lowpass_filter 10
+module work i2c_slave_basic0 5
+module work i2c_slave_bmc 6
+module work bmc_cpld_i2c_ram 4
+module work I2C_UPDATE 3
+module work fan_pwm_tach 15
+module work breath_led 18
+module work pvt_gpi 14
+module work p2s_slave 7
+module work s2p_slave 8
+module work PGM_DEBOUNCE 12
+module work PGM_DEBOUNCE_N 12
+module work timer_gen 13
+module work pon_reset 11
+module work pll_i25M_o50M_o25M 2
+module work edge_delay 9
+module work BP_4S104G5 1

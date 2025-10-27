@@ -1,0 +1,306 @@
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Feb 08 10:33:14 2025
+
+C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f BP_4S104G5_impl1.p2t
+BP_4S104G5_impl1_map.ncd BP_4S104G5_impl1.dir BP_4S104G5_impl1.prf -gui -msgset
+D:/Project/CNIT-K/8U SW/code/V10/4port/BP_4S104G5/pro/promote.xml
+
+
+Preference file: BP_4S104G5_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            9.475        0            0.104        0            02:33        Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 2 mins 33 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Lattice Place and Route Report for Design "BP_4S104G5_impl1_map.ncd"
+Sat Feb 08 10:33:14 2025
+
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "D:/Project/CNIT-K/8U SW/code/V10/4port/BP_4S104G5/pro/promote.xml" -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 BP_4S104G5_impl1_map.ncd BP_4S104G5_impl1.dir/5_1.ncd BP_4S104G5_impl1.prf
+Preference file: BP_4S104G5_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file BP_4S104G5_impl1_map.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application par from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Preliminary    Version 37.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)  292+4(JTAG)/336     88% used
+                 292+4(JTAG)/336     88% bonded
+   IOLOGIC           68/336          20% used
+
+   SLICE           1995/3432         58% used
+
+   GSR                1/1           100% used
+   OSC                1/1           100% used
+   PLL                1/2            50% used
+   EFB                1/1           100% used
+
+
+Number of Signals: 6180
+Number of Connections: 17298
+
+Pin Constraint Summary:
+   290 out of 292 pins locked (99% locked).
+
+The following 3 signals are selected to use the primary clock routing resources:
+    clk_50m (driver: pll_inst/PLLInst_0, clk load #: 765)
+    clk_25m (driver: pll_inst/PLLInst_0, clk load #: 347)
+    genblk1[0].fan_pwm_tach_m.w_clk_1s_pos_i (driver: SLICE_1889, clk load #: 150)
+
+
+The following 4 signals are selected to use the secondary clock routing resources:
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i (driver: SLICE_1425, clk load #: 0, sr load #: 44, ce load #: 0)
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start (driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_478, clk load #: 0, sr load #: 18, ce load #: 0)
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_data_vld_pos (driver: SLICE_2637, clk load #: 0, sr load #: 0, ce load #: 18)
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1 (driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/SLICE_1852, clk load #: 8, sr load #: 0, ce load #: 0)
+
+Signal pon_reset_n is selected as Global Set/Reset.
+Starting Placer Phase 0.
+..........
+Finished Placer Phase 0.  REAL time: 16 secs 
+
+Starting Placer Phase 1.
+.....................
+Placer score = 1668871.
+Finished Placer Phase 1.  REAL time: 41 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  1648437
+Finished Placer Phase 2.  REAL time: 45 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  PLL        : 1 out of 2 (50%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_50m" from CLKOP on comp "pll_inst/PLLInst_0" on PLL site "LPLL", clk load = 765
+  PRIMARY "clk_25m" from CLKOS on comp "pll_inst/PLLInst_0" on PLL site "LPLL", clk load = 347
+  PRIMARY "genblk1[0].fan_pwm_tach_m.w_clk_1s_pos_i" from F1 on comp "SLICE_1889" on site "R2C19C", clk load = 150
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i" from F1 on comp "SLICE_1425" on site "R14C18B", clk load = 0, ce load = 0, sr load = 44
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start" from Q0 on comp "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_478" on site "R21C18C", clk load = 0, ce load = 0, sr load = 18
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_data_vld_pos" from F0 on comp "SLICE_2637" on site "R14C18D", clk load = 0, ce load = 18, sr load = 0
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1" from F0 on comp "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/SLICE_1852" on site "R21C18A", clk load = 8, ce load = 0, sr load = 0
+
+  PRIMARY  : 3 out of 8 (37%)
+  SECONDARY: 4 out of 8 (50%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   292 + 4(JTAG) out of 336 (88.1%) PIO sites used.
+   292 + 4(JTAG) out of 336 (88.1%) bonded PIO sites used.
+   Number of PIO comps: 292; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 74 / 84 ( 88%) | 3.3V       | -         |
+| 1        | 73 / 84 ( 86%) | 3.3V       | -         |
+| 2        | 71 / 84 ( 84%) | 3.3V       | -         |
+| 3        | 24 / 28 ( 85%) | 1.8V       | -         |
+| 4        | 22 / 24 ( 91%) | 3.3V       | -         |
+| 5        | 28 / 32 ( 87%) | 3.3V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 38 secs 
+
+Dumping design to file BP_4S104G5_impl1.dir/5_1.ncd.
+
+0 connections routed; 17298 unrouted.
+Starting router resource preassignment
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=wb_clk loads=1 clock_loads=1
+   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 loads=4 clock_loads=2
+   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 loads=4 clock_loads=2
+
+Completed router resource preassignment. Real time: 1 mins 35 secs 
+
+Start NBR router at 10:34:50 02/08/25
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 10:34:51 02/08/25
+
+Start NBR section for initial routing at 10:34:55 02/08/25
+Level 1, iteration 1
+0(0.00%) conflict; 14343(82.92%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.056ns/0.000ns; real time: 1 mins 42 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 14339(82.89%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.101ns/0.000ns; real time: 1 mins 43 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 14335(82.87%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.216ns/0.000ns; real time: 1 mins 45 secs 
+Level 4, iteration 1
+704(0.19%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.374ns/0.000ns; real time: 1 mins 51 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 57 (5.70%)
+
+Start NBR section for normal routing at 10:35:05 02/08/25
+Level 4, iteration 1
+504(0.13%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 1 mins 54 secs 
+Level 4, iteration 2
+296(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 1 mins 57 secs 
+Level 4, iteration 3
+140(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 1 mins 59 secs 
+Level 4, iteration 4
+68(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 2 mins 
+Level 4, iteration 5
+35(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 2 mins 2 secs 
+Level 4, iteration 6
+18(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 2 mins 2 secs 
+Level 4, iteration 7
+12(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 2 mins 4 secs 
+Level 4, iteration 8
+11(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.484ns/0.000ns; real time: 2 mins 4 secs 
+Level 4, iteration 9
+7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 6 secs 
+Level 4, iteration 10
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 6 secs 
+Level 4, iteration 11
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 7 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 8 secs 
+Level 4, iteration 13
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 9 secs 
+Level 4, iteration 14
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 9 secs 
+Level 4, iteration 15
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 11 secs 
+Level 4, iteration 16
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 11 secs 
+Level 4, iteration 17
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 12 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 10:35:26 02/08/25
+
+Start NBR section for re-routing at 10:35:30 02/08/25
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 9.475ns/0.000ns; real time: 2 mins 16 secs 
+
+Start NBR section for post-routing at 10:35:30 02/08/25
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 9.475ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=wb_clk loads=1 clock_loads=1
+   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 loads=4 clock_loads=2
+   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 loads=4 clock_loads=2
+
+Total CPU time 2 mins 9 secs 
+Total REAL time: 2 mins 32 secs 
+Completely routed.
+End of route.  17298 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file BP_4S104G5_impl1.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 9.475
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.104
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 2 mins 11 secs 
+Total REAL time to completion: 2 mins 33 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.

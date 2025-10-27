@@ -1,0 +1,517 @@
+
+Loading design for application trce from file bm_h13dsp_s_impl1_map.ncd.
+Design name: BM_H13DSP_S
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: D:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Preliminary    Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Thu Mar 13 19:05:46 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BM_H13DSP_S_impl1.tw1 -gui -msgset D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/promote.xml BM_H13DSP_S_impl1_map.ncd BM_H13DSP_S_impl1.prf 
+Design file:     bm_h13dsp_s_impl1_map.ncd
+Preference file: bm_h13dsp_s_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i_CLK_PAL2_IN_25M_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "wb_clk" 4.290000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 224.454ns
+         The internal maximum frequency of the following component is 115.660 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    EFB        WBCLKI         inst_i2c_update_flash_config/EFBInst_0
+
+   Delay:               8.646ns -- based on Minimum Pulse Width
+
+Report:  115.660MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 9.912ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              aux_uart_master_u2/curr_state[3]  (from clk_50m +)
+   Destination:    FF         Data in        aux_uart_master_u2/bps_count_bit[5]  (to clk_50m +)
+
+   Delay:               9.938ns  (44.1% logic, 55.9% route), 10 logic levels.
+
+ Constraint Details:
+
+      9.938ns physical path delay aux_uart_master_u2/SLICE_420 to aux_uart_master_u2/SLICE_39 meets
+     20.000ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 9.912ns
+
+ Physical Path Details:
+
+      Data path aux_uart_master_u2/SLICE_420 to aux_uart_master_u2/SLICE_39:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 *SLICE_420.CLK to */SLICE_420.Q1 aux_uart_master_u2/SLICE_420 (from clk_50m)
+ROUTE        10   e 1.030 */SLICE_420.Q1 to *SLICE_2330.A1 aux_uart_master_u2/curr_state[3]
+CTOF_DEL    ---     0.452 *SLICE_2330.A1 to *SLICE_2330.F1 aux_uart_master_u2/SLICE_2330
+ROUTE         1   e 1.030 *SLICE_2330.F1 to *SLICE_1630.D1 aux_uart_master_u2/un11_i_a2_0_a2_0[0]
+CTOF_DEL    ---     0.452 *SLICE_1630.D1 to *SLICE_1630.F1 aux_uart_master_u2/SLICE_1630
+ROUTE         1   e 0.401 *SLICE_1630.F1 to *SLICE_1630.A0 aux_uart_master_u2/bps_count_bit8_i_a2_0
+CTOF_DEL    ---     0.452 *SLICE_1630.A0 to *SLICE_1630.F0 aux_uart_master_u2/SLICE_1630
+ROUTE         1   e 1.030 *SLICE_1630.F0 to *SLICE_1628.C0 aux_uart_master_u2/bps_count_bit8_i_a2_1
+CTOF_DEL    ---     0.452 *SLICE_1628.C0 to *SLICE_1628.F0 aux_uart_master_u2/SLICE_1628
+ROUTE         2   e 1.030 *SLICE_1628.F0 to *SLICE_1629.B1 aux_uart_master_u2/N_1019
+CTOF_DEL    ---     0.452 *SLICE_1629.B1 to *SLICE_1629.F1 aux_uart_master_u2/SLICE_1629
+ROUTE         7   e 1.030 *SLICE_1629.F1 to *2/SLICE_42.B0 aux_uart_master_u2/N_972
+C0TOFCO_DE  ---     0.905 *2/SLICE_42.B0 to */SLICE_42.FCO aux_uart_master_u2/SLICE_42
+ROUTE         1   e 0.001 */SLICE_42.FCO to */SLICE_41.FCI aux_uart_master_u2/bps_count_bit_cry[0]
+FCITOFCO_D  ---     0.146 */SLICE_41.FCI to */SLICE_41.FCO aux_uart_master_u2/SLICE_41
+ROUTE         1   e 0.001 */SLICE_41.FCO to */SLICE_40.FCI aux_uart_master_u2/bps_count_bit_cry[2]
+FCITOFCO_D  ---     0.146 */SLICE_40.FCI to */SLICE_40.FCO aux_uart_master_u2/SLICE_40
+ROUTE         1   e 0.001 */SLICE_40.FCO to */SLICE_39.FCI aux_uart_master_u2/bps_count_bit_cry[4]
+FCITOF0_DE  ---     0.517 */SLICE_39.FCI to *2/SLICE_39.F0 aux_uart_master_u2/SLICE_39
+ROUTE         1   e 0.001 *2/SLICE_39.F0 to */SLICE_39.DI0 aux_uart_master_u2/bps_count_bit_s[5] (to clk_50m)
+                  --------
+                    9.938   (44.1% logic, 55.9% route), 10 logic levels.
+
+Report:   99.128MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 11.177ns (weighted slack = 22.354ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              mcpld_to_scpld_data_filter[10]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[7]  (to clk_25m +)
+
+   Delay:               8.673ns  (36.0% logic, 64.0% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.673ns physical path delay SLICE_1764 to bmc_cpld_i2c_ram_u0/SLICE_612 meets
+     20.000ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 11.177ns
+
+ Physical Path Details:
+
+      Data path SLICE_1764 to bmc_cpld_i2c_ram_u0/SLICE_612:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 SLICE_1764.CLK to  SLICE_1764.Q1 SLICE_1764 (from clk_50m)
+ROUTE         2   e 1.030  SLICE_1764.Q1 to   SLICE_383.B0 mcpld_to_scpld_data_filter[10]
+CTOF_DEL    ---     0.452   SLICE_383.B0 to   SLICE_383.F0 SLICE_383
+ROUTE         7   e 1.030   SLICE_383.F0 to *SLICE_1725.B1 w_ocp_prsnt_n
+CTOF_DEL    ---     0.452 *SLICE_1725.B1 to *SLICE_1725.F1 bmc_cpld_i2c_ram_u0/SLICE_1725
+ROUTE         1   e 0.401 *SLICE_1725.F1 to *SLICE_1725.A0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_38_0_a2_9_0[7]
+CTOF_DEL    ---     0.452 *SLICE_1725.A0 to *SLICE_1725.F0 bmc_cpld_i2c_ram_u0/SLICE_1725
+ROUTE         1   e 1.030 *SLICE_1725.F0 to *SLICE_1706.D0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_38_0_a2_9_2[7]
+CTOF_DEL    ---     0.452 *SLICE_1706.D0 to *SLICE_1706.F0 bmc_cpld_i2c_ram_u0/SLICE_1706
+ROUTE         1   e 1.030 *SLICE_1706.F0 to *SLICE_1728.C1 bmc_cpld_i2c_ram_u0/r_i2c_data_in_38_0_2[7]
+CTOF_DEL    ---     0.452 *SLICE_1728.C1 to *SLICE_1728.F1 bmc_cpld_i2c_ram_u0/SLICE_1728
+ROUTE         1   e 1.030 *SLICE_1728.F1 to */SLICE_612.B1 bmc_cpld_i2c_ram_u0/r_i2c_data_in_38_0_3[7]
+CTOF_DEL    ---     0.452 */SLICE_612.B1 to */SLICE_612.F1 bmc_cpld_i2c_ram_u0/SLICE_612
+ROUTE         1   e 0.001 */SLICE_612.F1 to *SLICE_612.DI1 bmc_cpld_i2c_ram_u0/r_i2c_data_in_38[7] (to clk_25m)
+                  --------
+                    8.673   (36.0% logic, 64.0% route), 7 logic levels.
+
+Report:   56.670MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i_CLK_PAL2_IN_25M_c"     |             |             |
+25.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "wb_clk" 4.290000 MHz ;   |    4.290 MHz|  115.660 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "clk_50m" 50.000000 MHz ; |   50.000 MHz|   99.128 MHz|  10  
+                                        |             |             |
+FREQUENCY NET "clk_25m" 25.000000 MHz ; |   25.000 MHz|   56.670 MHz|   7  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 20 clocks:
+
+Clock Domain: wb_clk   Source: inst_osch.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: w1mSCE   Source: SLICE_1326.Q0   Loads: 17
+   No transfer within this clock domain is found
+
+Clock Domain: t1us_tick   Source: timer_gen_inst/SLICE_909.Q0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_7   Source: s2p_164_u1/SLICE_2252.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_6   Source: s2p_164_u1/SLICE_2253.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_5   Source: s2p_164_u1/SLICE_2254.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_4   Source: s2p_164_u1/SLICE_2251.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_3   Source: s2p_164_u1/SLICE_2256.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_2   Source: s2p_164_u1/SLICE_2255.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_1   Source: s2p_164_u1/SLICE_2258.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst   Source: s2p_164_u1/SLICE_2257.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1.sclk   Source: s2p_164_u1/SLICE_874.Q0   Loads: 6
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_sclo   Source: inst_i2c_update_flash_config/EFBInst_0.I2C1SCLO   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_scli   Source: io_I2C7_2_UPDATE_SCL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: i_CLK_PAL2_IN_25M_c   Source: i_CLK_PAL2_IN_25M.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1268
+   Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 17
+
+Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS   Loads: 159
+   Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 15
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_1659.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2171.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2170.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_1659.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2171.F0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2170.F1   Loads: 5
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 47555 paths, 5 nets, and 14539 connections (87.83% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Thu Mar 13 19:05:47 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BM_H13DSP_S_impl1.tw1 -gui -msgset D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/promote.xml BM_H13DSP_S_impl1_map.ncd BM_H13DSP_S_impl1.prf 
+Design file:     bm_h13dsp_s_impl1_map.ncd
+Preference file: bm_h13dsp_s_impl1.prf
+Device,speed:    LCMXO3LF-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i_CLK_PAL2_IN_25M_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "wb_clk" 4.290000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_ocp_smrst_flag_dly[1]  (from clk_50m +)
+   Destination:    FF         Data in        r_ocp_smrst_flag_dly[2]  (to clk_50m +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_2357 to SLICE_2357 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_2357 to SLICE_2357:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 SLICE_2357.CLK to  SLICE_2357.Q0 SLICE_2357 (from clk_50m)
+ROUTE         4   e 0.199  SLICE_2357.Q0 to  SLICE_2357.M1 r_ocp_smrst_flag_dly[1] (to clk_50m)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[11]  (from clk_25m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[12]  (to clk_25m +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay bmc_cpld_i2c_ram_u0/SLICE_1653 to bmc_cpld_i2c_ram_u0/SLICE_1653 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path bmc_cpld_i2c_ram_u0/SLICE_1653 to bmc_cpld_i2c_ram_u0/SLICE_1653:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *LICE_1653.CLK to *SLICE_1653.Q0 bmc_cpld_i2c_ram_u0/SLICE_1653 (from clk_25m)
+ROUTE         1   e 0.199 *SLICE_1653.Q0 to *SLICE_1653.M1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[11] (to clk_25m)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i_CLK_PAL2_IN_25M_c"     |             |             |
+25.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "wb_clk" 4.290000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_50m" 50.000000 MHz ; |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk_25m" 25.000000 MHz ; |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 20 clocks:
+
+Clock Domain: wb_clk   Source: inst_osch.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: w1mSCE   Source: SLICE_1326.Q0   Loads: 17
+   No transfer within this clock domain is found
+
+Clock Domain: t1us_tick   Source: timer_gen_inst/SLICE_909.Q0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_7   Source: s2p_164_u1/SLICE_2252.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_6   Source: s2p_164_u1/SLICE_2253.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_5   Source: s2p_164_u1/SLICE_2254.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_4   Source: s2p_164_u1/SLICE_2251.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_3   Source: s2p_164_u1/SLICE_2256.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_2   Source: s2p_164_u1/SLICE_2255.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_1   Source: s2p_164_u1/SLICE_2258.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst   Source: s2p_164_u1/SLICE_2257.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1.sclk   Source: s2p_164_u1/SLICE_874.Q0   Loads: 6
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_sclo   Source: inst_i2c_update_flash_config/EFBInst_0.I2C1SCLO   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_scli   Source: io_I2C7_2_UPDATE_SCL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: i_CLK_PAL2_IN_25M_c   Source: i_CLK_PAL2_IN_25M.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1268
+   Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 17
+
+Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS   Loads: 159
+   Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 15
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_1659.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2171.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2170.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_1659.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2171.F0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2170.F1   Loads: 5
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 47555 paths, 5 nets, and 15275 connections (92.28% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

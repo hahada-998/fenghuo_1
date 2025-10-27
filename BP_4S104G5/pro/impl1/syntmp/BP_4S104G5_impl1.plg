@@ -1,0 +1,230 @@
+@P:  Worst Slack : -0.383
+@P:  fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Frequency : NA
+@P:  fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Estimated Period : NA
+@P:  fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Requested Period : 10.000
+@P:  fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock - Slack : NA
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Frequency : 132.1 MHz
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Period : 7.569
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Requested Period : 10.000
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Slack : 2.432
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Frequency : 96.3 MHz
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Period : 10.383
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Requested Period : 10.000
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Slack : -0.383
+@P:  System - Estimated Frequency : 115.2 MHz
+@P:  System - Requested Frequency : 100.0 MHz
+@P:  System - Estimated Period : 8.680
+@P:  System - Requested Period : 10.000
+@P:  System - Slack : 1.320
+@P:  Total Area : 3103.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:40s

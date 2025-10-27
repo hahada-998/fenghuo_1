@@ -1,0 +1,2 @@
+@E: CG103 :"D:\Project\CNIT-K\8U SW\code\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":969:37:969:37|Expecting expression
+

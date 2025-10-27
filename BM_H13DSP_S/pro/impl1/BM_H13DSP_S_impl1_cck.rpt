@@ -1,0 +1,414 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+
+# Written on Thu Mar 13 19:04:53 2025
+
+##### DESIGN INFO #######################################################
+
+Top View:                "BM_H13DSP_S"
+Constraint File(s):      (none)
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 0 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                    Ending                                      |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                      System                                      |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                      pll_i25M_o50M_o25M|CLKOP_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                      pll_i25M_o50M_o25M|CLKOS_inferred_clock     |     No paths         |     No paths         |     No paths         |     10.000                           
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     pll_i25M_o50M_o25M|CLKOP_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     pll_i25M_o50M_o25M|CLKOS_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     timer_gen|t1us_derived_clock                |     10.000           |     No paths         |     5.000            |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     ClkDiv_1s_1s|rDivClk_q_derived_clock        |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     s2p_164|sclk_derived_clock                  |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     System                                      |     No paths         |     No paths         |     10.000           |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     pll_i25M_o50M_o25M|CLKOP_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     pll_i25M_o50M_o25M|CLKOS_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     ClkDiv_1s_1s|rDivClk_q_derived_clock        |     Diff grp         |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     s2p_164|sclk_derived_clock                  |     Diff grp         |     No paths         |     No paths         |     No paths                         
+timer_gen|t1us_derived_clock                timer_gen|t1us_derived_clock                |     10.000           |     No paths         |     5.000            |     No paths                         
+ClkDiv_1s_1s|rDivClk_q_derived_clock        timer_gen|t1us_derived_clock                |     10.000           |     No paths         |     No paths         |     No paths                         
+ClkDiv_1s_1s|rDivClk_q_derived_clock        ClkDiv_1s_1s|rDivClk_q_derived_clock        |     10.000           |     No paths         |     No paths         |     No paths                         
+ClkDiv_1s_1s|rDivClk_q_derived_clock        s2p_164|sclk_derived_clock                  |     10.000           |     No paths         |     No paths         |     No paths                         
+s2p_164|sclk_derived_clock                  timer_gen|t1us_derived_clock                |     10.000           |     No paths         |     No paths         |     No paths                         
+s2p_164|sclk_derived_clock                  s2p_164|sclk_derived_clock                  |     10.000           |     No paths         |     No paths         |     No paths                         
+===================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:i_BMC_UART1_CPLD_RX
+p:i_BMC_UART1_TX
+p:i_BMC_UART5_CPLD_RX
+p:i_BMC_UART5_TX
+p:i_BREAK_DET1_DO_N
+p:i_BREAK_DET_DO_N
+p:i_CHASSIS_ID1_N
+p:i_CLK_PAL2_IN_25M
+p:i_CPLD1_CPLD2_RSV2_R
+p:i_CPLD2_DONE
+p:i_CPLD2_INIT_N
+p:i_CPLD_SGPIO0_CLK
+p:i_CPLD_SGPIO0_LD_N
+p:i_CPLD_SGPIO0_MOSI
+p:i_CPLD_SGPIO1_CLK
+p:i_CPLD_SGPIO1_LD_N
+p:i_CPLD_SGPIO1_MOSI
+p:i_HDR_PAL2_N_R
+p:i_I2C7_PAL2_SCL
+p:i_JTAG_BMC_TRST_R
+p:i_LEAKAGE0_PRSNT_N
+p:i_LEAKAGE_DET1_DO_N
+p:i_LEAKAGE_DET_DO_N
+p:i_LEAKAGE_PRSNT1_N
+p:i_NCSI_620F_PG
+p:i_NCSI_620F_THERMEL_ALERT_N
+p:i_NCSI_RSVD_CPLD
+p:i_OCP1_AUX_TMPALT_R
+p:i_OCP1_BIF0_N
+p:i_OCP1_BIF1_N
+p:i_OCP1_BIF2_N
+p:i_OCP1_DATA_IN_R
+p:i_OCP1_UART_RX_R
+p:i_P0_MCIOG3A_NVME0_PRSNT_N_R
+p:i_P0_MCIOG3A_NVME1_PRSNT_N_R
+p:i_P0_MCIOG3A_WAKE_N_R
+p:i_P0_MCIOG3C_NVME0_PRSNT_N_R
+p:i_P0_MCIOG3C_NVME1_PRSNT_N_R
+p:i_P0_MCIOG3C_WAKE_N_R
+p:i_P0_MCIOP1A_NVME0_PRSNT_N_R
+p:i_P0_MCIOP1A_NVME1_PRSNT_N_R
+p:i_P0_MCIOP1C_NVME0_PRSNT_N_R
+p:i_P0_MCIOP1C_NVME1_PRSNT_N_R
+p:i_P0_MCIOP2A_NVME0_PRSNT_N_R
+p:i_P0_MCIOP2A_NVME1_PRSNT_N_R
+p:i_P0_MCIOP2A_WAKE_N_R
+p:i_P0_MCIOP2C_NVME0_PRSNT_N_R
+p:i_P0_MCIOP2C_NVME1_PRSNT_N_R
+p:i_P0_MCIOP2C_WAKE_N_R
+p:i_P0_MCIOP3A_NVME0_PRSNT_N_R
+p:i_P0_MCIOP3A_NVME1_PRSNT_N_R
+p:i_P0_MCIOP3A_WAKE_N_R
+p:i_P0_MCIOP3C_NVME0_PRSNT_N_R
+p:i_P0_MCIOP3C_NVME1_PRSNT_N_R
+p:i_P0_MCIOP3C_WAKE_N_R
+p:i_P1_MCIOG1A_NVME0_PRSNT_N_R
+p:i_P1_MCIOG1A_NVME1_PRSNT_N_R
+p:i_P1_MCIOG1A_WAKE_N_R
+p:i_P1_MCIOG1C_NVME0_PRSNT_N_R
+p:i_P1_MCIOG1C_NVME1_PRSNT_N_R
+p:i_P1_MCIOG1C_WAKE_N_R
+p:i_P1_MCIOP0A_NVME0_PRSNT_N_R
+p:i_P1_MCIOP0A_NVME1_PRSNT_N_R
+p:i_P1_MCIOP0A_WAKE_N_R
+p:i_P1_MCIOP0C_NVME0_PRSNT_N_R
+p:i_P1_MCIOP0C_NVME1_PRSNT_N_R
+p:i_P1_MCIOP0C_WAKE_N_R
+p:i_P1_MCIOP1A_NVME0_PRSNT_N_R
+p:i_P1_MCIOP1A_NVME1_PRSNT_N_R
+p:i_P1_MCIOP1A_WAKE_N_R
+p:i_P1_MCIOP1C_NVME0_PRSNT_N_R
+p:i_P1_MCIOP1C_NVME1_PRSNT_N_R
+p:i_P1_MCIOP1C_WAKE_N_R
+p:i_P1_MCIOP2A_NVME0_PRSNT_N_R
+p:i_P1_MCIOP2A_NVME1_PRSNT_N_R
+p:i_P1_MCIOP2A_WAKE_N_R
+p:i_P1_MCIOP2C_NVME0_PRSNT_N_R
+p:i_P1_MCIOP2C_NVME1_PRSNT_N_R
+p:i_P1_MCIOP2C_WAKE_N_R
+p:i_P1_MCIOP3A_NVME0_PRSNT_N_R
+p:i_P1_MCIOP3A_NVME1_PRSNT_N_R
+p:i_P1_MCIOP3A_WAKE_N_R
+p:i_P1_MCIOP3C_NVME0_PRSNT_N_R
+p:i_P1_MCIOP3C_NVME1_PRSNT_N_R
+p:i_P1_MCIOP3C_WAKE_N_R
+p:i_P1_MCIOP4A_NVME0_PRSNT_N_R
+p:i_PAL2_PROGRAM_N
+p:i_PAL_CPLD_TCK_R
+p:i_PAL_CPLD_TDI_R
+p:i_PAL_CPLD_TMS_R
+p:i_PAL_MAIN_PWR_OK_R
+p:i_PAL_OCP1_PGD
+p:i_PAL_OCP1_PWRGD
+p:i_PAL_OCP1_SS_DATA_IN
+p:i_PAL_PCH_INTRUDER
+p:i_PAL_PE_WAKE_N
+p:i_PAL_TMP1_ALERT_N
+p:i_PAL_TMP2_ALERT_N
+p:i_PAL_TMP3_ALERT_N
+p:i_PAL_TMP4_ALERT_N
+p:i_PCH_INTRUDER_CABLE_INST_R_N
+p:i_PDB_SPGIO_DATAIN
+p:i_PS3_ACFAIL_N
+p:i_PS3_DCOK_N
+p:i_PS3_PRSNT
+p:i_PS3_SMB_ALERT
+p:i_PS4_ACFAIL_N
+p:i_PS4_DCOK_N
+p:i_PS4_PRSNT
+p:i_PS4_SMB_ALERT
+p:i_PVT2_SS_DATI
+p:i_SHORT_DET
+p:i_TYPEC_PRST
+p:i_UART1_TXD_CPLD
+p:i_UID_SW_IN_N
+p:i_USB2_LCD_OC_N
+p:i_USB_INNER_OVERCUR3
+p:io_I2C7_2_UPDATE_SCL (bidir end point)
+p:io_I2C7_2_UPDATE_SCL (bidir start point)
+p:io_I2C7_2_UPDATE_SDA (bidir end point)
+p:io_I2C7_2_UPDATE_SDA (bidir start point)
+p:io_I2C7_PAL2_SDA (bidir end point)
+p:io_I2C7_PAL2_SDA (bidir start point)
+p:io_P0_MCIOG3A_PWR_EN_R (bidir end point)
+p:io_P0_MCIOG3A_PWR_EN_R (bidir start point)
+p:io_P0_MCIOG3C_PWR_EN_R (bidir end point)
+p:io_P0_MCIOG3C_PWR_EN_R (bidir start point)
+p:io_P0_MCIOP1A_PWR_EN_R (bidir end point)
+p:io_P0_MCIOP1A_PWR_EN_R (bidir start point)
+p:io_P0_MCIOP1C_PWR_EN_R (bidir end point)
+p:io_P0_MCIOP1C_PWR_EN_R (bidir start point)
+p:io_P0_MCIOP2A_PWR_EN_R (bidir end point)
+p:io_P0_MCIOP2A_PWR_EN_R (bidir start point)
+p:io_P0_MCIOP2C_PWR_EN_R (bidir end point)
+p:io_P0_MCIOP2C_PWR_EN_R (bidir start point)
+p:io_P0_MCIOP3A_PWR_EN_R (bidir end point)
+p:io_P0_MCIOP3A_PWR_EN_R (bidir start point)
+p:io_P0_MCIOP3C_PWR_EN_R (bidir end point)
+p:io_P0_MCIOP3C_PWR_EN_R (bidir start point)
+p:io_P1_MCIOG1A_PWR_EN_R (bidir end point)
+p:io_P1_MCIOG1A_PWR_EN_R (bidir start point)
+p:io_P1_MCIOG1C_PWR_EN_R (bidir end point)
+p:io_P1_MCIOG1C_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP0A_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP0A_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP0C_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP0C_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP1A_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP1A_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP1C_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP1C_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP2A_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP2A_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP2C_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP2C_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP3A_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP3A_PWR_EN_R (bidir start point)
+p:io_P1_MCIOP3C_PWR_EN_R (bidir end point)
+p:io_P1_MCIOP3C_PWR_EN_R (bidir start point)
+p:io_PAL_BP1_PWR_ON_R (bidir end point)
+p:io_PAL_BP1_PWR_ON_R (bidir start point)
+p:io_PAL_BP2_PWR_ON_R (bidir end point)
+p:io_PAL_BP2_PWR_ON_R (bidir start point)
+p:io_PAL_BP3_PWR_ON_R (bidir end point)
+p:io_PAL_BP3_PWR_ON_R (bidir start point)
+p:io_PAL_BP4_PWR_ON_R (bidir end point)
+p:io_PAL_BP4_PWR_ON_R (bidir start point)
+p:io_PAL_BP5_PWR_ON_R (bidir end point)
+p:io_PAL_BP5_PWR_ON_R (bidir start point)
+p:io_PAL_BP6_PWR_ON_R (bidir end point)
+p:io_PAL_BP6_PWR_ON_R (bidir start point)
+p:io_PAL_BP8_PWR_ON_R (bidir end point)
+p:io_PAL_BP8_PWR_ON_R (bidir start point)
+p:o_BIOS_FLASH_RESET_R_N
+p:o_BMC_UART1_CPLD_TX
+p:o_BMC_UART1_RX
+p:o_BMC_UART5_CPLD_TX
+p:o_BMC_UART5_RX
+p:o_CHASSIS_ID0_N
+p:o_CLK_DB2000_2_1_OE_N
+p:o_CLK_DB2000_2_2_OE_N
+p:o_CPLD1_CPLD2_RSV1_R
+p:o_CPLD2_JTAGEN
+p:o_CPLD_SGPIO0_MISO
+p:o_CPLD_SGPIO1_MISO
+p:o_LED1_N
+p:o_LED2_N
+p:o_LED3_N
+p:o_LED4_N
+p:o_LED5_N
+p:o_LED6_N
+p:o_LED7_N
+p:o_LED8_N
+p:o_LED_PWRBTN_AMB_R
+p:o_LED_PWRBTN_GR_R
+p:o_M2_GPIO6_R
+p:o_M2_GPIO7_R
+p:o_M_2_SATAPCIE_SEL_R
+p:o_OCP1_ATNT_LED_R
+p:o_OCP1_CLK_R
+p:o_OCP1_GREEN_LED_R
+p:o_OCP1_LD_R
+p:o_OCP1_UART_TX_R
+p:o_P0_I2C5_9617_EN
+p:o_P0_MCIOG3A_GPU_THROTTLE_N_R
+p:o_P0_MCIOG3A_PERST_N_R
+p:o_P0_MCIOG3A_RSV_R
+p:o_P0_MCIOG3C_GPU_THROTTLE_N_R
+p:o_P0_MCIOG3C_PERST_N_R
+p:o_P0_MCIOG3C_RSV_R
+p:o_P0_MCIOP1A_GPU_THROTTLE_N_R
+p:o_P0_MCIOP1A_PERST_N_R
+p:o_P0_MCIOP1A_RSV_R
+p:o_P0_MCIOP1A_WAKE_N_R
+p:o_P0_MCIOP1C_GPU_THROTTLE_N_R
+p:o_P0_MCIOP1C_PERST_N_R
+p:o_P0_MCIOP1C_RSV_R
+p:o_P0_MCIOP1C_WAKE_N_R
+p:o_P0_MCIOP2A_GPU_THROTTLE_N_R
+p:o_P0_MCIOP2A_PERST_N_R
+p:o_P0_MCIOP2A_RSV_R
+p:o_P0_MCIOP2C_GPU_THROTTLE_N_R
+p:o_P0_MCIOP2C_PERST_N_R
+p:o_P0_MCIOP2C_RSV_R
+p:o_P0_MCIOP3A_GPU_THROTTLE_N_R
+p:o_P0_MCIOP3A_PERST_N_R
+p:o_P0_MCIOP3A_RSV_R
+p:o_P0_MCIOP3C_GPU_THROTTLE_N_R
+p:o_P0_MCIOP3C_PERST_N_R
+p:o_P0_MCIOP3C_RSV_R
+p:o_P0_SPI_TPM_CS_N_3V3
+p:o_P1_MCIOG1A_GPU_THROTTLE_N_R
+p:o_P1_MCIOG1A_PERST_N_R
+p:o_P1_MCIOG1A_RSV_R
+p:o_P1_MCIOG1C_GPU_THROTTLE_N_R
+p:o_P1_MCIOG1C_PERST_N_R
+p:o_P1_MCIOG1C_RSV_R
+p:o_P1_MCIOP0A_GPU_THROTTLE_N_R
+p:o_P1_MCIOP0A_PERST_N_R
+p:o_P1_MCIOP0A_RSV_R
+p:o_P1_MCIOP0C_GPU_THROTTLE_N_R
+p:o_P1_MCIOP0C_PERST_N_R
+p:o_P1_MCIOP0C_RSV_R
+p:o_P1_MCIOP1A_GPU_THROTTLE_N_R
+p:o_P1_MCIOP1A_PERST_N_R
+p:o_P1_MCIOP1A_RSV_R
+p:o_P1_MCIOP1C_GPU_THROTTLE_N_R
+p:o_P1_MCIOP1C_PERST_N_R
+p:o_P1_MCIOP1C_RSV_R
+p:o_P1_MCIOP2A_GPU_THROTTLE_N_R
+p:o_P1_MCIOP2A_PERST_N_R
+p:o_P1_MCIOP2A_RSV_R
+p:o_P1_MCIOP2C_GPU_THROTTLE_N_R
+p:o_P1_MCIOP2C_PERST_N_R
+p:o_P1_MCIOP2C_RSV_R
+p:o_P1_MCIOP3A_GPU_THROTTLE_N_R
+p:o_P1_MCIOP3A_PERST_N_R
+p:o_P1_MCIOP3A_RSV_R
+p:o_P1_MCIOP3C_GPU_THROTTLE_N_R
+p:o_P1_MCIOP3C_PERST_N_R
+p:o_P1_MCIOP3C_RSV_R
+p:o_P1_MCIOP4A_PERST_N_R
+p:o_P12V_DISCHARGE_R
+p:o_P12V_SLOT_3_ON
+p:o_P12V_SLOT_4_ON
+p:o_P12V_SLOT_5_ON
+p:o_P12V_SLOT_6_ON
+p:o_P12V_SLOT_7_ON
+p:o_P12V_SLOT_8_ON
+p:o_P12V_SLOT_9_ON
+p:o_PAL_BP1_CPU_IP2P
+p:o_PAL_BP2_CPU_IP2P
+p:o_PAL_BP4_CPU_IP2P
+p:o_PAL_BP5_CPU_IP2P
+p:o_PAL_BP6_CPU_IP2P
+p:o_PAL_BP8_CPU_IP2P
+p:o_PAL_CPLD_TDO
+p:o_PAL_LED_HEL_GR_R
+p:o_PAL_LED_HEL_RED_R
+p:o_PAL_LED_NIC_ACT_R
+p:o_PAL_LED_UID_R
+p:o_PAL_MB_SWITCH_EN_N_R
+p:o_PAL_OCP1_AUXPWR_ON_R
+p:o_PAL_OCP1_MAINPWR_ON_R
+p:o_PAL_OCP1_PERST2_R
+p:o_PAL_OCP1_PERST3_R
+p:o_PAL_OCP1_SWITCH_EN_N_R
+p:o_PAL_OCP_HP_ATN_LED_R
+p:o_PAL_OCP_HP_SW_EN_R
+p:o_PAL_OCP_MAIN_PWR_EN_R
+p:o_PAL_OCP_PERST0_N_R
+p:o_PAL_OCP_PWRBRK_OD_N_R
+p:o_PAL_OCP_SS_CLK_R
+p:o_PAL_OCP_SS_DATA_OUT_R
+p:o_PAL_OCP_SS_LD_N_R
+p:o_PAL_OCP_STBY_PWR_EN_R
+p:o_PAL_PCIE_M2_0_PERST_N_R
+p:o_PAL_PCIE_M2_1_PERST_N_R
+p:o_PAL_PWR_LOM_EN_R
+p:o_PAL_USB_HUB2_P3V3_EN_R
+p:o_PAL_USB_HUB2_RST_N_R
+p:o_PAL_USB_HUB2_VBUS_DET_R
+p:o_PCIE_SATA_RST_N
+p:o_PCIE_SATA_WAKE_HOST_R_N
+p:o_PDB_SPGIO_CLK
+p:o_PDB_SPGIO_DATAOUT
+p:o_PDB_SPGIO_LD
+p:o_PS3_P12V_ON_R
+p:o_PS4_P12V_ON_R
+p:o_PVT2_SS_CLK_R
+p:o_PVT2_SS_LD_N_R
+p:o_RST_I2C1_MUX_N_R
+p:o_RST_I2C4_MUX_N_R
+p:o_RST_I2C7_MUX_N_R
+p:o_RST_I2C10_MUX_N_R
+p:o_RST_I2C11_MUX_N_R
+p:o_SMB_PEHP_CPU0_OCP_ALERT
+p:o_SMB_PEHP_CPU1_OCP_ALERT
+p:o_SW_BIOS_FLASH_SPI_S_R
+p:o_SW_BIOS_SPI_OE
+p:o_SW_MB_TPM_OE
+p:o_UART1_RXD_CPLD
+p:o_USB_SW_S_R
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

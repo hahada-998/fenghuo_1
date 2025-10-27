@@ -1,0 +1,57 @@
+#
+# Logical Preferences generated for Lattice by Synplify map202309lat, Build 191R.
+#
+
+# Period Constraints 
+#FREQUENCY NET "pll_inst/clk_50m" 100.0 MHz;
+#FREQUENCY NET "pll_inst/clk_25m" 100.0 MHz;
+#FREQUENCY PORT "i_CPLD_ESPI_CLK" 100.0 MHz;
+#FREQUENCY NET "o_P0_PWR_BTN_R_N_c" 100.0 MHz;
+#FREQUENCY NET "timer_gen_inst/t1us_tick" 100.0 MHz;
+#FREQUENCY NET "mClkDivTree/m1mSCE/w1mSCE" 100.0 MHz;
+#FREQUENCY NET "s2p_164_u1/sclk" 100.0 MHz;
+
+
+# Output Constraints 
+
+# Input Constraints 
+
+# Point-to-point Delay Constraints 
+
+#MULTICYCLE FROM CLKNET "timer_gen_inst/t1us_tick"  TO CLKNET "timer_gen_inst/t1us_tick"  2X;
+#MULTICYCLE FROM CLKNET "timer_gen_inst/t1us_tick"  TO CLKNET "timer_gen_inst/t1us_tick"  1X;
+#MULTICYCLE FROM CLKNET "mClkDivTree/m1mSCE/w1mSCE"  TO CLKNET "mClkDivTree/m1mSCE/w1mSCE"  2X;
+#MULTICYCLE FROM CLKNET "mClkDivTree/m1mSCE/w1mSCE"  TO CLKNET "mClkDivTree/m1mSCE/w1mSCE"  1X;
+#MULTICYCLE FROM CLKNET "s2p_164_u1/sclk"  TO CLKNET "s2p_164_u1/sclk"  2X;
+#MULTICYCLE FROM CLKNET "s2p_164_u1/sclk"  TO CLKNET "s2p_164_u1/sclk"  1X;
+
+
+# Block Path Constraints 
+#BLOCK PATH FROM CLKNET "o_P0_PWR_BTN_R_N_c" TO CLKNET "i_CPLD_ESPI_CLK_c";
+#BLOCK PATH FROM CLKNET "o_P0_PWR_BTN_R_N_c" TO CLKNET "pll_inst/clk_25m";
+#BLOCK PATH FROM CLKNET "o_P0_PWR_BTN_R_N_c" TO CLKNET "pll_inst/clk_50m";
+#BLOCK PATH FROM CLKNET "i_CPLD_ESPI_CLK_c" TO CLKNET "o_P0_PWR_BTN_R_N_c";
+#BLOCK PATH FROM CLKNET "i_CPLD_ESPI_CLK_c" TO CLKNET "pll_inst/clk_25m";
+#BLOCK PATH FROM CLKNET "i_CPLD_ESPI_CLK_c" TO CLKNET "pll_inst/clk_50m";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_25m" TO CLKNET "o_P0_PWR_BTN_R_N_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_25m" TO CLKNET "i_CPLD_ESPI_CLK_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_25m" TO CLKNET "pll_inst/clk_50m";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_50m" TO CLKNET "o_P0_PWR_BTN_R_N_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_50m" TO CLKNET "i_CPLD_ESPI_CLK_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_50m" TO CLKNET "pll_inst/clk_25m";
+#BLOCK PATH FROM CLKNET "o_P0_PWR_BTN_R_N_c" TO CLKNET "i_CPLD_ESPI_CLK_c";
+#BLOCK PATH FROM CLKNET "o_P0_PWR_BTN_R_N_c" TO CLKNET "pll_inst/clk_25m";
+#BLOCK PATH FROM CLKNET "o_P0_PWR_BTN_R_N_c" TO CLKNET "pll_inst/clk_50m";
+#BLOCK PATH FROM CLKNET "i_CPLD_ESPI_CLK_c" TO CLKNET "o_P0_PWR_BTN_R_N_c";
+#BLOCK PATH FROM CLKNET "i_CPLD_ESPI_CLK_c" TO CLKNET "pll_inst/clk_25m";
+#BLOCK PATH FROM CLKNET "i_CPLD_ESPI_CLK_c" TO CLKNET "pll_inst/clk_50m";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_25m" TO CLKNET "o_P0_PWR_BTN_R_N_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_25m" TO CLKNET "i_CPLD_ESPI_CLK_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_25m" TO CLKNET "pll_inst/clk_50m";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_50m" TO CLKNET "o_P0_PWR_BTN_R_N_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_50m" TO CLKNET "i_CPLD_ESPI_CLK_c";
+#BLOCK PATH FROM CLKNET "pll_inst/clk_50m" TO CLKNET "pll_inst/clk_25m";
+
+BLOCK ASYNCPATHS;
+
+# End of generated Logical Preferences.

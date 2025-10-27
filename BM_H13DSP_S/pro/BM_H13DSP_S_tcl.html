@@ -1,0 +1,167 @@
+<HTML>
+<HEAD><TITLE>Lattice TCL Log</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="pn250206221233"></A><B><U><big>pn250206221233</big></U></B>
+#Start recording tcl command: 2/6/2025 21:21:26
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project new -name "BM_H13DSP_S" -impl "impl1" -dev LCMXO3LF-6900C-5BG400C -synthesis "synplify"
+prj_project save
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/BM_H13DSP_S_TOP.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/ClkDiv.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/ClkDivTree.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/delay.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_delay.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_detect.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_detect1.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/lowpass_filter.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/pon_reset.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/synclib.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/UID_Function.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/timer_gen_50mhz.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/74LV165/pvt_gpi.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/bmc_i2c/i2c_slave_basic0.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/bmc_i2c/i2c_slave_bmc.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/uart/aux_uart_master.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/uart/mcio_uart_master.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/IIC_Update/I2C_UPDATE.ipx"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/PLL/pll_i25M_o50M_o25M.ipx"
+prj_run Translate -impl impl1
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/SGPIO_SLAVE/s2p_slave.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/SGPIO_SLAVE/p2s_slave.v"
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+#Stop recording: 2/6/2025 22:12:33
+
+
+
+<A name="pn250209121020"></A><B><U><big>pn250209121020</big></U></B>
+#Start recording tcl command: 2/6/2025 22:12:40
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Map -impl impl1
+prj_src remove "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_detect1.v"
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_project save
+prj_project close
+#Stop recording: 2/9/2025 12:10:20
+
+
+
+<A name="pn250209164711"></A><B><U><big>pn250209164711</big></U></B>
+#Start recording tcl command: 2/9/2025 16:40:23
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Export -impl impl1
+prj_project close
+#Stop recording: 2/9/2025 16:47:11
+
+
+
+<A name="pn250209171814"></A><B><U><big>pn250209171814</big></U></B>
+#Start recording tcl command: 2/9/2025 17:18:09
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_project close
+#Stop recording: 2/9/2025 17:18:14
+
+
+
+<A name="pn250209190536"></A><B><U><big>pn250209190536</big></U></B>
+#Start recording tcl command: 2/9/2025 18:35:47
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Export -impl impl1
+prj_project close
+#Stop recording: 2/9/2025 19:05:36
+
+
+
+<A name="pn250221164747"></A><B><U><big>pn250221164747</big></U></B>
+#Start recording tcl command: 2/21/2025 16:21:08
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Export -impl impl1
+prj_project close
+#Stop recording: 2/21/2025 16:47:47
+
+
+
+<A name="pn250307183903"></A><B><U><big>pn250307183903</big></U></B>
+#Start recording tcl command: 3/7/2025 18:12:50
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/74HC164/s2p_164.v"
+prj_run Map -impl impl1
+prj_run Export -impl impl1
+prj_run Map -impl impl1
+prj_run Export -impl impl1
+prj_project save
+prj_project close
+#Stop recording: 3/7/2025 18:39:03
+
+
+
+<A name="pn250311201615"></A><B><U><big>pn250311201615</big></U></B>
+#Start recording tcl command: 3/11/2025 20:08:17
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Map -impl impl1
+prj_run Export -impl impl1
+prj_project close
+#Stop recording: 3/11/2025 20:16:15
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

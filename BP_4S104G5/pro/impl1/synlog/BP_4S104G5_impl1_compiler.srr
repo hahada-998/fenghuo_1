@@ -1,0 +1,459 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v" (library work)
+@I:"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\lowpass_filter.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\pon_reset.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\Edge_Detect.v" (library work)
+@I::"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\breath_led\breath_led.v" (library work)
+Verilog syntax check successful!
+Options changed - recompiling
+Selecting top level module BP_4S104G5
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+
+	CNTR_NBITS=32'b00000000000000000000000000000011
+	DEF_OUTPUT=1'b0
+	DELAY_MODE=1'b0
+   Generated name = edge_delay_3s_0_0
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
+Running optimization stage 1 on edge_delay_3s_0_0 .......
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
+Running optimization stage 1 on EHXPLLJ .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+Running optimization stage 1 on pll_i25M_o50M_o25M .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+Running optimization stage 1 on pon_reset .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":15:7:15:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":92:54:92:61|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":93:54:93:60|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":156:36:156:44|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":157:41:157:47|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":158:41:158:47|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":159:41:159:49|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":160:41:160:48|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":177:68:177:77|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":178:63:178:71|Removing redundant assignment.
+Running optimization stage 1 on timer_gen .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":268:7:268:20|Synthesizing module PGM_DEBOUNCE_N in library work.
+
+	SIGCNT=32'b00000000000000000000000000001101
+	NBITS=2'b11
+	NDELAY=32'b00000000000000000000000000001000
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_N_13s_3_8s_1
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":297:44:297:52|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":299:49:299:55|Removing redundant assignment.
+Running optimization stage 1 on PGM_DEBOUNCE_N_13s_3_8s_1 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+
+	SIGCNT=32'b00000000000000000000000000000110
+	NBITS=2'b11
+	NDELAY=32'b00000000000000000000000000001000
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_6s_3_8s_1
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
+Running optimization stage 1 on PGM_DEBOUNCE_6s_3_8s_1 .......
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v":18:7:18:15|Synthesizing module s2p_slave in library work.
+
+	NBIT=32'b00000000000000000000000000111100
+	DEFAULT_STATE=64'b0000000000000000000000000000000000000000000000000000000000000000
+	WCNT=32'b00000000000000000000000000000110
+   Generated name = s2p_slave_60s_6s_Z1
+Running optimization stage 1 on s2p_slave_60s_6s_Z1 .......
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+
+	NBIT=32'b00000000000000000000000000111100
+	WCNT=32'b00000000000000000000000000000110
+   Generated name = p2s_slave_60s_6s
+Running optimization stage 1 on p2s_slave_60s_6s .......
+@W: CL265 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@A: CL282 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":66:0:66:5|Feedback mux created for signal so. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+
+	TOTAL_BIT_COUNT=32'b00000000000000000000000000111000
+	DEFAULT_STATE=56'b00000000000000000000000000000000000000000000000000000000
+	SEGMENT_MAX=32'b00000000000000000000000000110111
+	SEGMENT_MIN=32'b00000000000000000000000000000000
+	NUMBER_OF_COUNTER_BITS=32'b00000000000000000000000000000110
+   Generated name = pvt_gpi_56s_55s_0s_6s_Z2
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
+Running optimization stage 1 on pvt_gpi_56s_55s_0s_6s_Z2 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+
+	TOTAL_BIT_COUNT=32'b00000000000000000000000000010000
+	DEFAULT_STATE=16'b0000000000000000
+	SEGMENT_MAX=32'b00000000000000000000000000001111
+	SEGMENT_MIN=32'b00000000000000000000000000000000
+	NUMBER_OF_COUNTER_BITS=32'b00000000000000000000000000000100
+   Generated name = pvt_gpi_16s_0_15s_0s_4s
+Running optimization stage 1 on pvt_gpi_16s_0_15s_0s_4s .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+
+	TOTAL_BIT_COUNT=32'b00000000000000000000000000101000
+	DEFAULT_STATE=40'b0000000000000000000000000000000000000000
+	SEGMENT_MAX=32'b00000000000000000000000000100111
+	SEGMENT_MIN=32'b00000000000000000000000000000000
+	NUMBER_OF_COUNTER_BITS=32'b00000000000000000000000000000110
+   Generated name = pvt_gpi_40s_39s_0s_6s_Z3
+Running optimization stage 1 on pvt_gpi_40s_39s_0s_6s_Z3 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+
+	CNTR_NBITS=32'b00000000000000000000000000000110
+	DEF_OUTPUT=1'b0
+	DELAY_MODE=1'b0
+   Generated name = edge_delay_6s_0_0
+Running optimization stage 1 on edge_delay_6s_0_0 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+
+	CNTR_NBITS=32'b00000000000000000000000000000100
+	DEF_OUTPUT=1'b0
+	DELAY_MODE=1'b0
+   Generated name = edge_delay_4s_0_0
+Running optimization stage 1 on edge_delay_4s_0_0 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\breath_led\breath_led.v":10:7:10:16|Synthesizing module breath_led in library work.
+Running optimization stage 1 on breath_led .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+
+	SIGCNT=32'b00000000000000000000000000011110
+	NBITS=2'b10
+	NDELAY=32'b00000000000000000000000000000100
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_30s_2_4s_1
+Running optimization stage 1 on PGM_DEBOUNCE_30s_2_4s_1 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+
+	SIGCNT=32'b00000000000000000000000000001111
+	NBITS=2'b10
+	NDELAY=32'b00000000000000000000000000000100
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_15s_2_4s_1
+Running optimization stage 1 on PGM_DEBOUNCE_15s_2_4s_1 .......
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
+Running optimization stage 1 on OSCH .......
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
+Running optimization stage 1 on BB .......
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
+Running optimization stage 1 on EFB .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+Running optimization stage 1 on I2C_UPDATE .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+
+	TOTAL_STAGES=32'b00000000000000000000000000000011
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_basic0_3s_16s
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+Running optimization stage 1 on i2c_slave_basic0_3s_16s .......
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@A: CL291 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":120:0:120:5|Register r_sampledData_scl_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":149:0:149:5|Register r_sampledData_sda_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL282 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Feedback mux created for signal r_I2c_address[6:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v":9:7:9:19|Synthesizing module i2c_slave_bmc in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_bmc_16s
+Running optimization stage 1 on i2c_slave_bmc_16s .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":2:7:2:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = bmc_cpld_i2c_ram_16s
+Running optimization stage 1 on bmc_cpld_i2c_ram_16s .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v":22:7:22:16|Synthesizing module BP_4S104G5 in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":596:35:596:61|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\Edge_Detect.v":4:7:4:17|Synthesizing module Edge_Detect in library work.
+Running optimization stage 1 on Edge_Detect .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":24:7:24:17|Synthesizing module fan_counter in library work.
+
+	WIDTH=32'b00000000000000000000000000001000
+	MAX_VALUE=32'b00000000000000000000000011111111
+   Generated name = fan_counter_8s_255s
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":50:22:50:33|Removing redundant assignment.
+Running optimization stage 1 on fan_counter_8s_255s .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":24:7:24:17|Synthesizing module fan_counter in library work.
+
+	WIDTH=32'b00000000000000000000000000001011
+	MAX_VALUE=32'b00000000000000000000001111111110
+   Generated name = fan_counter_11s_1022
+Running optimization stage 1 on fan_counter_11s_1022 .......
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v":11:7:11:18|Synthesizing module fan_pwm_tach in library work.
+Running optimization stage 1 on fan_pwm_tach .......
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1800:10:1800:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1801:10:1801:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1802:10:1802:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1803:9:1803:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1804:10:1804:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1805:10:1805:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1293:5:1293:16|Removing wire w_debug_led1, as there is no assignment to it.
+Running optimization stage 1 on BP_4S104G5 .......
+@W: CL168 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1202:48:1202:73|Removing instance edge_delay_gpu_base_pwr_gd because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[14].r_pwm_D_fan_limit[14][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[13].r_pwm_D_fan_limit[13][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[12].r_pwm_D_fan_limit[12][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[11].r_pwm_D_fan_limit[11][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[10].r_pwm_D_fan_limit[10][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[9].r_pwm_D_fan_limit[9][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[8].r_pwm_D_fan_limit[8][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[7].r_pwm_D_fan_limit[7][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[6].r_pwm_D_fan_limit[6][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[5].r_pwm_D_fan_limit[5][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[4].r_pwm_D_fan_limit[4][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[3].r_pwm_D_fan_limit[3][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[2].r_pwm_D_fan_limit[2][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[1].r_pwm_D_fan_limit[1][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[0].r_pwm_D_fan_limit[0][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL271 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":581:0:581:5|Pruning unused bits 51 to 5 of mcpld_to_swcpld_data_filter[51:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL265 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":581:0:581:5|Removing unused bit 2 of mcpld_to_swcpld_data_filter[51:0]. Either assign all bits or reduce the width of the signal.
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1212:28:1212:79|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1212:28:1212:79|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1212:28:1212:79|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1002:23:1002:59|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1002:23:1002:59|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+Running optimization stage 2 on fan_pwm_tach .......
+Running optimization stage 2 on fan_counter_11s_1022 .......
+@W: CL190 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":41:0:41:5|Optimizing register bit r_cnt_result[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":41:0:41:5|Pruning register bit 10 of r_cnt_result[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Running optimization stage 2 on fan_counter_8s_255s .......
+Running optimization stage 2 on Edge_Detect .......
+Running optimization stage 2 on BP_4S104G5 .......
+Running optimization stage 2 on bmc_cpld_i2c_ram_16s .......
+Running optimization stage 2 on i2c_slave_bmc_16s .......
+Running optimization stage 2 on i2c_slave_basic0_3s_16s .......
+@W: CL190 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+Extracted state machine for register r_I2C_state
+State machine has 20 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+   10010
+   10011
+Running optimization stage 2 on I2C_UPDATE .......
+Running optimization stage 2 on EFB .......
+Running optimization stage 2 on BB .......
+Running optimization stage 2 on VHI .......
+Running optimization stage 2 on OSCH .......
+Running optimization stage 2 on PGM_DEBOUNCE_15s_2_4s_1 .......
+Running optimization stage 2 on PGM_DEBOUNCE_30s_2_4s_1 .......
+Running optimization stage 2 on breath_led .......
+Running optimization stage 2 on edge_delay_4s_0_0 .......
+Running optimization stage 2 on edge_delay_6s_0_0 .......
+Running optimization stage 2 on pvt_gpi_40s_39s_0s_6s_Z3 .......
+Running optimization stage 2 on pvt_gpi_16s_0_15s_0s_4s .......
+Running optimization stage 2 on pvt_gpi_56s_55s_0s_6s_Z2 .......
+Running optimization stage 2 on p2s_slave_60s_6s .......
+Running optimization stage 2 on s2p_slave_60s_6s_Z1 .......
+Running optimization stage 2 on PGM_DEBOUNCE_6s_3_8s_1 .......
+Running optimization stage 2 on PGM_DEBOUNCE_N_13s_3_8s_1 .......
+Running optimization stage 2 on timer_gen .......
+Running optimization stage 2 on pon_reset .......
+Running optimization stage 2 on pll_i25M_o50M_o25M .......
+Running optimization stage 2 on EHXPLLJ .......
+Running optimization stage 2 on VLO .......
+Running optimization stage 2 on edge_delay_3s_0_0 .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 110MB peak: 112MB)
+
+Process took 0h:00m:17s realtime, 0h:00m:16s cputime
+
+Process completed successfully.
+# Sat Feb  8 10:31:41 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+File D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 96MB peak: 96MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Feb  8 10:31:42 2025
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 22MB peak: 22MB)
+
+Process took 0h:00m:17s realtime, 0h:00m:16s cputime
+
+Process completed successfully.
+# Sat Feb  8 10:31:42 2025
+
+###########################################################]

@@ -1,0 +1,319 @@
+Loading design for application iotiming from file bm_h13dsp_s_impl1.ncd.
+Design name: BM_H13DSP_S
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Preliminary    Version 37.5.
+Loading design for application iotiming from file bm_h13dsp_s_impl1.ncd.
+Design name: BM_H13DSP_S
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Preliminary    Version 37.5.
+// Design: BM_H13DSP_S
+// Package: CABGA400
+// ncd File: bm_h13dsp_s_impl1.ncd
+// Version: Diamond (64-bit) 3.12.0.240.2
+// Written on Thu Mar 13 19:07:10 2025
+// M: Minimum Performance Grade
+// iotiming BM_H13DSP_S_impl1.ncd BM_H13DSP_S_impl1.prf -gui -msgset D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port                          Clock                Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+i_BMC_UART1_TX                i_CLK_PAL2_IN_25M    R    10.487      5      -2.233     M
+i_BREAK_DET1_DO_N             i_CLK_PAL2_IN_25M    R     7.327      5      -0.863     M
+i_BREAK_DET_DO_N              i_CLK_PAL2_IN_25M    R     9.643      5      -2.020     M
+i_CHASSIS_ID1_N               i_CLK_PAL2_IN_25M    R     8.152      5      -1.661     M
+i_CPLD2_DONE                  i_CLK_PAL2_IN_25M    R    11.656      5      -2.592     M
+i_CPLD2_INIT_N                i_CLK_PAL2_IN_25M    R    11.504      5      -2.574     M
+i_CPLD_SGPIO0_CLK             i_CLK_PAL2_IN_25M    R     2.159      5       2.304     5
+i_CPLD_SGPIO0_LD_N            i_CLK_PAL2_IN_25M    R     2.085      5       2.268     5
+i_CPLD_SGPIO0_MOSI            i_CLK_PAL2_IN_25M    R    -0.203      M       2.268     5
+i_CPLD_SGPIO1_CLK             i_CLK_PAL2_IN_25M    R    11.836      5      -2.647     M
+i_CPLD_SGPIO1_LD_N            i_CLK_PAL2_IN_25M    R    10.915      5      -2.369     M
+i_CPLD_SGPIO1_MOSI            i_CLK_PAL2_IN_25M    R    11.682      5      -2.642     M
+i_HDR_PAL2_N_R                i_CLK_PAL2_IN_25M    R    12.214      5      -2.788     M
+i_I2C7_PAL2_SCL               i_CLK_PAL2_IN_25M    R     5.135      5       2.114     5
+i_JTAG_BMC_TRST_R             i_CLK_PAL2_IN_25M    R    10.774      5      -2.366     M
+i_LEAKAGE0_PRSNT_N            i_CLK_PAL2_IN_25M    R     8.307      5      -1.573     M
+i_LEAKAGE_DET1_DO_N           i_CLK_PAL2_IN_25M    R     7.331      5      -1.452     M
+i_LEAKAGE_DET_DO_N            i_CLK_PAL2_IN_25M    R     7.878      5      -1.646     M
+i_LEAKAGE_PRSNT1_N            i_CLK_PAL2_IN_25M    R     8.417      5      -1.464     M
+i_NCSI_620F_PG                i_CLK_PAL2_IN_25M    R     5.223      5      -0.995     M
+i_NCSI_620F_THERMEL_ALERT_N   i_CLK_PAL2_IN_25M    R     5.151      5      -1.013     M
+i_NCSI_RSVD_CPLD              i_CLK_PAL2_IN_25M    R    10.261      5      -2.249     M
+i_OCP1_AUX_TMPALT_R           i_CLK_PAL2_IN_25M    R     4.948      5      -0.894     M
+i_OCP1_BIF0_N                 i_CLK_PAL2_IN_25M    R    10.059      5      -2.125     M
+i_OCP1_BIF1_N                 i_CLK_PAL2_IN_25M    R     9.977      5      -2.144     M
+i_OCP1_BIF2_N                 i_CLK_PAL2_IN_25M    R    11.008      5      -2.434     M
+i_OCP1_DATA_IN_R              i_CLK_PAL2_IN_25M    R     9.650      5      -2.007     M
+i_OCP1_UART_RX_R              i_CLK_PAL2_IN_25M    R    10.182      5      -2.158     M
+i_P0_MCIOG3A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     7.773      5      -1.679     M
+i_P0_MCIOG3A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.400      5      -1.040     M
+i_P0_MCIOG3A_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.682      5      -2.492     M
+i_P0_MCIOG3C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     7.844      5      -1.641     M
+i_P0_MCIOG3C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.797      5      -1.484     M
+i_P0_MCIOG3C_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.069      5      -2.286     M
+i_P0_MCIOP1A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     8.498      5      -1.824     M
+i_P0_MCIOP1A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.025      5      -1.038     M
+i_P0_MCIOP1C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.847      5      -1.218     M
+i_P0_MCIOP1C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.383      5      -1.115     M
+i_P0_MCIOP2A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     8.068      5      -1.810     M
+i_P0_MCIOP2A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     8.213      5      -1.840     M
+i_P0_MCIOP2A_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.717      5      -2.528     M
+i_P0_MCIOP2C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     8.387      5      -1.805     M
+i_P0_MCIOP2C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.601      5      -1.372     M
+i_P0_MCIOP2C_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.601      5      -2.474     M
+i_P0_MCIOP3A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.958      5      -1.463     M
+i_P0_MCIOP3A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.746      5      -1.471     M
+i_P0_MCIOP3A_WAKE_N_R         i_CLK_PAL2_IN_25M    R     9.070      5      -2.009     M
+i_P0_MCIOP3C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.250      5      -1.043     M
+i_P0_MCIOP3C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.482      5      -1.407     M
+i_P0_MCIOP3C_WAKE_N_R         i_CLK_PAL2_IN_25M    R     9.685      5      -2.157     M
+i_P1_MCIOG1A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.999      5      -1.374     M
+i_P1_MCIOG1A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     3.790      5      -0.572     M
+i_P1_MCIOG1A_WAKE_N_R         i_CLK_PAL2_IN_25M    R     9.681      5      -2.203     M
+i_P1_MCIOG1C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.875      5      -1.285     M
+i_P1_MCIOG1C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     4.910      5      -0.907     M
+i_P1_MCIOG1C_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.333      5      -2.357     M
+i_P1_MCIOP0A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.004      5      -1.063     M
+i_P1_MCIOP0A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.197      5      -0.927     M
+i_P1_MCIOP0A_WAKE_N_R         i_CLK_PAL2_IN_25M    R     9.578      5      -2.134     M
+i_P1_MCIOP0C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.619      5      -1.109     M
+i_P1_MCIOP0C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.521      5      -1.323     M
+i_P1_MCIOP0C_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.587      5      -2.467     M
+i_P1_MCIOP1A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.995      5      -1.155     M
+i_P1_MCIOP1A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.798      5      -1.092     M
+i_P1_MCIOP1A_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.406      5      -2.316     M
+i_P1_MCIOP1C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     3.886      5      -0.569     M
+i_P1_MCIOP1C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     8.521      5      -1.747     M
+i_P1_MCIOP1C_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.245      5      -2.259     M
+i_P1_MCIOP2A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     7.058      5      -1.493     M
+i_P1_MCIOP2A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.905      5      -1.479     M
+i_P1_MCIOP2A_WAKE_N_R         i_CLK_PAL2_IN_25M    R    11.227      5      -2.556     M
+i_P1_MCIOP2C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.417      5      -1.290     M
+i_P1_MCIOP2C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     8.330      5      -1.814     M
+i_P1_MCIOP2C_WAKE_N_R         i_CLK_PAL2_IN_25M    R    10.139      5      -2.212     M
+i_P1_MCIOP3A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.504      5      -0.942     M
+i_P1_MCIOP3A_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.790      5      -1.056     M
+i_P1_MCIOP3A_WAKE_N_R         i_CLK_PAL2_IN_25M    R     8.179      5      -1.747     M
+i_P1_MCIOP3C_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     6.965      5      -1.453     M
+i_P1_MCIOP3C_NVME1_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     5.596      5      -1.040     M
+i_P1_MCIOP3C_WAKE_N_R         i_CLK_PAL2_IN_25M    R     8.787      5      -1.924     M
+i_P1_MCIOP4A_NVME0_PRSNT_N_R  i_CLK_PAL2_IN_25M    R     7.513      5      -1.524     M
+i_PAL2_PROGRAM_N              i_CLK_PAL2_IN_25M    R     4.220      5      -0.540     M
+i_PAL_CPLD_TCK_R              i_CLK_PAL2_IN_25M    R     9.739      5      -2.051     M
+i_PAL_CPLD_TDI_R              i_CLK_PAL2_IN_25M    R     8.278      5      -1.684     M
+i_PAL_CPLD_TMS_R              i_CLK_PAL2_IN_25M    R     8.554      5      -1.720     M
+i_PAL_MAIN_PWR_OK_R           i_CLK_PAL2_IN_25M    R     9.496      5      -2.030     M
+i_PAL_OCP1_PGD                i_CLK_PAL2_IN_25M    R     2.704      5       2.254     5
+i_PAL_OCP1_PWRGD              i_CLK_PAL2_IN_25M    R     3.822      5       2.254     5
+i_PAL_OCP1_SS_DATA_IN         i_CLK_PAL2_IN_25M    R     4.027      5       2.254     5
+i_PAL_PCH_INTRUDER            i_CLK_PAL2_IN_25M    R     7.577      5      -1.536     M
+i_PAL_PE_WAKE_N               i_CLK_PAL2_IN_25M    R     8.119      5      -1.698     M
+i_PAL_TMP1_ALERT_N            i_CLK_PAL2_IN_25M    R     7.459      5      -1.634     M
+i_PAL_TMP2_ALERT_N            i_CLK_PAL2_IN_25M    R     5.554      5      -1.014     M
+i_PAL_TMP3_ALERT_N            i_CLK_PAL2_IN_25M    R     6.044      5      -1.191     M
+i_PAL_TMP4_ALERT_N            i_CLK_PAL2_IN_25M    R     7.521      5      -1.573     M
+i_PCH_INTRUDER_CABLE_INST_R_N i_CLK_PAL2_IN_25M    R     5.213      5      -0.931     M
+i_PDB_SPGIO_DATAIN            i_CLK_PAL2_IN_25M    R     8.543      5      -1.737     M
+i_PS3_ACFAIL_N                i_CLK_PAL2_IN_25M    R     3.328      5       2.303     5
+i_PS3_DCOK_N                  i_CLK_PAL2_IN_25M    R     9.198      5       2.285     5
+i_PS3_PRSNT                   i_CLK_PAL2_IN_25M    R     9.323      5       2.275     5
+i_PS3_SMB_ALERT               i_CLK_PAL2_IN_25M    R     8.552      5      -1.892     M
+i_PS4_ACFAIL_N                i_CLK_PAL2_IN_25M    R     3.123      5       2.254     5
+i_PS4_DCOK_N                  i_CLK_PAL2_IN_25M    R     8.553      5       2.254     5
+i_PS4_PRSNT                   i_CLK_PAL2_IN_25M    R     8.752      5       2.254     5
+i_PS4_SMB_ALERT               i_CLK_PAL2_IN_25M    R     7.186      5      -1.413     M
+i_PVT2_SS_DATI                i_CLK_PAL2_IN_25M    R     4.151      5       2.225     5
+i_SHORT_DET                   i_CLK_PAL2_IN_25M    R    10.329      5      -2.345     M
+i_TYPEC_PRST                  i_CLK_PAL2_IN_25M    R     8.501      5      -1.745     M
+i_UART1_TXD_CPLD              i_CLK_PAL2_IN_25M    R     8.222      5      -1.656     M
+i_UID_SW_IN_N                 i_CLK_PAL2_IN_25M    R     4.066      5       0.106     M
+i_USB2_LCD_OC_N               i_CLK_PAL2_IN_25M    R     6.460      5      -1.275     M
+i_USB_INNER_OVERCUR3          i_CLK_PAL2_IN_25M    R     7.392      5      -1.591     M
+io_I2C7_2_UPDATE_SDA          io_I2C7_2_UPDATE_SCL R     2.109      5       1.623     5
+io_I2C7_PAL2_SDA              i_CLK_PAL2_IN_25M    R     4.220      5       2.114     5
+io_P0_MCIOG3A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     3.674      5       2.114     5
+io_P0_MCIOG3C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     4.309      5       2.114     5
+io_P0_MCIOP1A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     3.488      5       2.268     5
+io_P0_MCIOP1C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     2.755      5       2.304     5
+io_P0_MCIOP2A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     3.718      5       2.225     5
+io_P0_MCIOP2C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     3.735      5       2.114     5
+io_P0_MCIOP3A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     2.174      5       2.225     5
+io_P0_MCIOP3C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     4.554      5       2.114     5
+io_P1_MCIOG1A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     3.853      5       2.224     5
+io_P1_MCIOG1C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     4.282      5       2.285     5
+io_P1_MCIOP0A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     6.388      5       2.285     5
+io_P1_MCIOP0C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     4.601      5       2.267     5
+io_P1_MCIOP1A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     8.830      5       2.254     5
+io_P1_MCIOP1C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    11.096      5       2.254     5
+io_P1_MCIOP2A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     7.921      5       2.254     5
+io_P1_MCIOP2C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     9.465      5       2.275     5
+io_P1_MCIOP3A_PWR_EN_R        i_CLK_PAL2_IN_25M    R     5.013      5       2.254     5
+io_P1_MCIOP3C_PWR_EN_R        i_CLK_PAL2_IN_25M    R     4.058      5       2.254     5
+io_PAL_BP1_PWR_ON_R           i_CLK_PAL2_IN_25M    R     3.662      5       2.224     5
+io_PAL_BP2_PWR_ON_R           i_CLK_PAL2_IN_25M    R     4.487      5       2.114     5
+io_PAL_BP3_PWR_ON_R           i_CLK_PAL2_IN_25M    R     4.167      5       2.114     5
+io_PAL_BP4_PWR_ON_R           i_CLK_PAL2_IN_25M    R     3.743      5       2.303     5
+io_PAL_BP5_PWR_ON_R           i_CLK_PAL2_IN_25M    R     5.918      5       2.114     5
+io_PAL_BP6_PWR_ON_R           i_CLK_PAL2_IN_25M    R     4.073      5       2.224     5
+io_PAL_BP8_PWR_ON_R           i_CLK_PAL2_IN_25M    R     4.242      5       2.114     5
+
+
+// Clock to Output Delay
+
+Port                          Clock                Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+io_I2C7_2_UPDATE_SDA          io_I2C7_2_UPDATE_SCL F    11.903         5        2.692          M
+io_I2C7_PAL2_SDA              i_CLK_PAL2_IN_25M    R    14.368         5        3.285          M
+io_P0_MCIOG3A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    13.831         5        3.014          M
+io_P0_MCIOG3C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    14.373         5        3.200          M
+io_P0_MCIOP1A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    12.916         5        3.238          M
+io_P0_MCIOP1C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    15.469         5        3.285          M
+io_P0_MCIOP2A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    15.357         5        3.118          M
+io_P0_MCIOP2C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    15.092         5        3.186          M
+io_P0_MCIOP3A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    16.385         5        3.177          M
+io_P0_MCIOP3C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    15.687         5        3.232          M
+io_P1_MCIOG1A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    15.710         5        3.268          M
+io_P1_MCIOG1C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    15.338         5        3.386          M
+io_P1_MCIOP0A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    14.639         5        3.308          M
+io_P1_MCIOP0C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    13.284         5        3.607          M
+io_P1_MCIOP1A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    14.343         5        3.254          M
+io_P1_MCIOP1C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    13.409         5        3.259          M
+io_P1_MCIOP2A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    14.558         5        2.886          M
+io_P1_MCIOP2C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    14.326         5        3.163          M
+io_P1_MCIOP3A_PWR_EN_R        i_CLK_PAL2_IN_25M    R    13.500         5        3.245          M
+io_P1_MCIOP3C_PWR_EN_R        i_CLK_PAL2_IN_25M    R    13.239         5        2.920          M
+io_PAL_BP1_PWR_ON_R           i_CLK_PAL2_IN_25M    R    12.156         5        2.374          M
+io_PAL_BP2_PWR_ON_R           i_CLK_PAL2_IN_25M    R    10.864         5        2.429          M
+io_PAL_BP3_PWR_ON_R           i_CLK_PAL2_IN_25M    R    13.178         5        2.429          M
+io_PAL_BP4_PWR_ON_R           i_CLK_PAL2_IN_25M    R    11.065         5        2.375          M
+io_PAL_BP5_PWR_ON_R           i_CLK_PAL2_IN_25M    R    10.847         5        2.429          M
+io_PAL_BP6_PWR_ON_R           i_CLK_PAL2_IN_25M    R    11.669         5        2.374          M
+io_PAL_BP8_PWR_ON_R           i_CLK_PAL2_IN_25M    R    11.286         5        2.429          M
+o_CLK_DB2000_2_1_OE_N         i_CLK_PAL2_IN_25M    R    11.123         5        3.547          M
+o_CLK_DB2000_2_2_OE_N         i_CLK_PAL2_IN_25M    R    10.744         5        3.442          M
+o_CPLD_SGPIO0_MISO            i_CLK_PAL2_IN_25M    R    10.526         5        3.459          M
+o_LED1_N                      i_CLK_PAL2_IN_25M    R     6.812         5        2.386          M
+o_LED2_N                      i_CLK_PAL2_IN_25M    R     6.886         5        2.379          M
+o_LED3_N                      i_CLK_PAL2_IN_25M    R     6.886         5        2.379          M
+o_LED4_N                      i_CLK_PAL2_IN_25M    R     6.886         5        2.379          M
+o_LED5_N                      i_CLK_PAL2_IN_25M    R     6.812         5        2.386          M
+o_LED6_N                      i_CLK_PAL2_IN_25M    R     6.886         5        2.379          M
+o_LED7_N                      i_CLK_PAL2_IN_25M    R     6.886         5        2.379          M
+o_LED8_N                      i_CLK_PAL2_IN_25M    R     6.886         5        2.379          M
+o_LED_PWRBTN_AMB_R            i_CLK_PAL2_IN_25M    R     6.874         5        2.374          M
+o_LED_PWRBTN_GR_R             i_CLK_PAL2_IN_25M    R     6.874         5        2.374          M
+o_OCP1_CLK_R                  i_CLK_PAL2_IN_25M    R     9.917         5        3.277          M
+o_OCP1_LD_R                   i_CLK_PAL2_IN_25M    R     9.406         5        3.101          M
+o_P0_MCIOG3A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    10.341         5        3.396          M
+o_P0_MCIOG3A_PERST_N_R        i_CLK_PAL2_IN_25M    R    12.563         5        4.041          M
+o_P0_MCIOG3C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.660         5        3.200          M
+o_P0_MCIOG3C_PERST_N_R        i_CLK_PAL2_IN_25M    R    11.743         5        3.804          M
+o_P0_MCIOP1A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    10.408         5        3.434          M
+o_P0_MCIOP1A_PERST_N_R        i_CLK_PAL2_IN_25M    R     7.984         5        2.663          M
+o_P0_MCIOP1A_WAKE_N_R         i_CLK_PAL2_IN_25M    R    11.035         5        3.597          M
+o_P0_MCIOP1C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    10.581         5        3.500          M
+o_P0_MCIOP1C_PERST_N_R        i_CLK_PAL2_IN_25M    R     9.376         5        3.063          M
+o_P0_MCIOP2A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    10.376         5        3.383          M
+o_P0_MCIOP2A_PERST_N_R        i_CLK_PAL2_IN_25M    R    13.381         5        4.275          M
+o_P0_MCIOP2C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    11.220         5        3.675          M
+o_P0_MCIOP2C_PERST_N_R        i_CLK_PAL2_IN_25M    R    12.402         5        3.945          M
+o_P0_MCIOP3A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    10.354         5        3.372          M
+o_P0_MCIOP3A_PERST_N_R        i_CLK_PAL2_IN_25M    R    11.120         5        3.607          M
+o_P0_MCIOP3C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.938         5        3.269          M
+o_P0_MCIOP3C_PERST_N_R        i_CLK_PAL2_IN_25M    R    11.187         5        3.597          M
+o_P12V_DISCHARGE_R            i_CLK_PAL2_IN_25M    R     6.764         5        2.363          M
+o_P12V_SLOT_3_ON              i_CLK_PAL2_IN_25M    R    12.517         5        3.773          M
+o_P12V_SLOT_4_ON              i_CLK_PAL2_IN_25M    R    11.276         5        3.396          M
+o_P12V_SLOT_5_ON              i_CLK_PAL2_IN_25M    R    12.700         5        3.701          M
+o_P12V_SLOT_6_ON              i_CLK_PAL2_IN_25M    R    13.093         5        3.687          M
+o_P12V_SLOT_7_ON              i_CLK_PAL2_IN_25M    R    12.928         5        3.693          M
+o_P12V_SLOT_8_ON              i_CLK_PAL2_IN_25M    R    11.938         5        3.415          M
+o_P12V_SLOT_9_ON              i_CLK_PAL2_IN_25M    R    12.098         5        3.416          M
+o_P1_MCIOG1A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.251         5        3.077          M
+o_P1_MCIOG1A_PERST_N_R        i_CLK_PAL2_IN_25M    R    11.600         5        3.795          M
+o_P1_MCIOG1C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R    10.010         5        3.258          M
+o_P1_MCIOG1C_PERST_N_R        i_CLK_PAL2_IN_25M    R    12.052         5        3.934          M
+o_P1_MCIOP0A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     8.163         5        2.738          M
+o_P1_MCIOP0A_PERST_N_R        i_CLK_PAL2_IN_25M    R    11.600         5        3.795          M
+o_P1_MCIOP0C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.160         5        3.029          M
+o_P1_MCIOP0C_PERST_N_R        i_CLK_PAL2_IN_25M    R     8.811         5        2.903          M
+o_P1_MCIOP1A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     8.387         5        2.786          M
+o_P1_MCIOP1A_PERST_N_R        i_CLK_PAL2_IN_25M    R     7.991         5        2.666          M
+o_P1_MCIOP1C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     8.873         5        2.953          M
+o_P1_MCIOP1C_PERST_N_R        i_CLK_PAL2_IN_25M    R     7.542         5        2.528          M
+o_P1_MCIOP2A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.952         5        3.303          M
+o_P1_MCIOP2A_PERST_N_R        i_CLK_PAL2_IN_25M    R     9.642         5        3.155          M
+o_P1_MCIOP2C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.427         5        3.121          M
+o_P1_MCIOP2C_PERST_N_R        i_CLK_PAL2_IN_25M    R     9.847         5        3.214          M
+o_P1_MCIOP3A_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     8.001         5        2.681          M
+o_P1_MCIOP3A_PERST_N_R        i_CLK_PAL2_IN_25M    R     8.056         5        2.696          M
+o_P1_MCIOP3C_GPU_THROTTLE_N_R i_CLK_PAL2_IN_25M    R     9.398         5        3.117          M
+o_P1_MCIOP3C_PERST_N_R        i_CLK_PAL2_IN_25M    R     8.056         5        2.696          M
+o_P1_MCIOP4A_PERST_N_R        i_CLK_PAL2_IN_25M    R     8.913         5        2.939          M
+o_PAL_BMC_RMII_CLK_50M_R      i_CLK_PAL2_IN_25M    R    12.598         5        3.976          M
+o_PAL_LED_HEL_GR_R            i_CLK_PAL2_IN_25M    R     6.981         5        2.429          M
+o_PAL_LED_HEL_RED_R           i_CLK_PAL2_IN_25M    R     6.874         5        2.374          M
+o_PAL_LED_NIC_ACT_R           i_CLK_PAL2_IN_25M    R    16.079         5        3.682          M
+o_PAL_LED_UID_R               i_CLK_PAL2_IN_25M    R     6.981         5        2.429          M
+o_PAL_MB_SWITCH_EN_N_R        i_CLK_PAL2_IN_25M    R     6.981         5        2.429          M
+o_PAL_NCSI_50M_REF_CLK_R      i_CLK_PAL2_IN_25M    R    12.156         5        3.836          M
+o_PAL_OCP1_AUXPWR_ON_R        i_CLK_PAL2_IN_25M    R     6.874         5        2.374          M
+o_PAL_OCP1_MAINPWR_ON_R       i_CLK_PAL2_IN_25M    R     6.874         5        2.374          M
+o_PAL_OCP1_PERST2_R           i_CLK_PAL2_IN_25M    R     8.996         5        2.978          M
+o_PAL_OCP1_PERST3_R           i_CLK_PAL2_IN_25M    R     8.113         5        2.706          M
+o_PAL_OCP1_SWITCH_EN_N_R      i_CLK_PAL2_IN_25M    R     6.752         5        2.357          M
+o_PAL_OCP_HP_SW_EN_R          i_CLK_PAL2_IN_25M    R     6.874         5        2.374          M
+o_PAL_OCP_MAIN_PWR_EN_R       i_CLK_PAL2_IN_25M    R     6.800         5        2.383          M
+o_PAL_OCP_NCSI_CLK_50M_R      i_CLK_PAL2_IN_25M    R    12.851         5        4.067          M
+o_PAL_OCP_PERST0_N_R          i_CLK_PAL2_IN_25M    R     6.752         5        2.357          M
+o_PAL_OCP_PWRBRK_OD_N_R       i_CLK_PAL2_IN_25M    R     6.752         5        2.357          M
+o_PAL_OCP_SS_CLK_R            i_CLK_PAL2_IN_25M    R     9.709         5        3.202          M
+o_PAL_OCP_SS_LD_N_R           i_CLK_PAL2_IN_25M    R     9.369         5        3.090          M
+o_PAL_OCP_STBY_PWR_EN_R       i_CLK_PAL2_IN_25M    R     6.800         5        2.383          M
+o_PAL_PCIE_M2_0_PERST_N_R     i_CLK_PAL2_IN_25M    R    10.494         5        3.459          M
+o_PAL_PCIE_M2_1_PERST_N_R     i_CLK_PAL2_IN_25M    R    10.501         5        3.462          M
+o_PAL_PWR_LOM_EN_R            i_CLK_PAL2_IN_25M    R    14.434         5        3.625          M
+o_PAL_USB_HUB2_P3V3_EN_R      i_CLK_PAL2_IN_25M    R     6.764         5        2.363          M
+o_PAL_USB_HUB2_RST_N_R        i_CLK_PAL2_IN_25M    R    11.150         5        3.616          M
+o_PAL_USB_HUB2_VBUS_DET_R     i_CLK_PAL2_IN_25M    R    10.392         5        3.406          M
+o_PCIE_SATA_RST_N             i_CLK_PAL2_IN_25M    R    11.357         5        3.696          M
+o_PS3_P12V_ON_R               i_CLK_PAL2_IN_25M    R    13.218         5        3.970          M
+o_PS4_P12V_ON_R               i_CLK_PAL2_IN_25M    R    11.882         5        3.685          M
+o_PVT2_SS_CLK_R               i_CLK_PAL2_IN_25M    R     8.007         5        2.682          M
+o_PVT2_SS_LD_N_R              i_CLK_PAL2_IN_25M    R     8.560         5        2.838          M
+o_RST_I2C10_MUX_N_R           i_CLK_PAL2_IN_25M    R     9.966         5        3.262          M
+o_RST_I2C11_MUX_N_R           i_CLK_PAL2_IN_25M    R     9.997         5        3.278          M
+o_RST_I2C1_MUX_N_R            i_CLK_PAL2_IN_25M    R     8.357         5        2.788          M
+o_RST_I2C4_MUX_N_R            i_CLK_PAL2_IN_25M    R     8.281         5        2.780          M
+o_RST_I2C7_MUX_N_R            i_CLK_PAL2_IN_25M    R    10.571         5        3.496          M
+o_SMB_PEHP_CPU0_OCP_ALERT     i_CLK_PAL2_IN_25M    R     9.881         5        3.267          M
+o_SMB_PEHP_CPU1_OCP_ALERT     i_CLK_PAL2_IN_25M    R     9.889         5        3.255          M
+o_SW_BIOS_FLASH_SPI_S_R       i_CLK_PAL2_IN_25M    R     6.981         5        2.429          M
+o_USB_SW_S_R                  i_CLK_PAL2_IN_25M    R     6.981         5        2.429          M
+
+
+// Internal_Clock to Output
+
+Port                  Internal_Clock                        
+--------------------------------------------------------
+io_I2C7_2_UPDATE_SCL  inst_i2c_update_flash_config/i2c1_sclo
+io_I2C7_2_UPDATE_SDA  inst_i2c_update_flash_config/i2c1_sclo
+o_P0_MCIOP1C_RSV_R    t1us_tick                             
+o_P0_MCIOP1C_WAKE_N_R s2p_164_u1.sclk                       
+WARNING: you must also run trce with hold speed: 5
+WARNING: you must also run trce with setup speed: M

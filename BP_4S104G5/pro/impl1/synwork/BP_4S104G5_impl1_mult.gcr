@@ -1,0 +1,273 @@
+i pll_inst.CLKOS_i
+m 0 0
+u 115 648
+p {t:pll_inst.PLLInst_0.CLKOS}{t:pll_inst.CLKOS_inferred_clock.I[0]}{t:pll_inst.CLKOS_inferred_clock.OUT[0]}{p:pll_inst.CLKOS}{t:pll_inst.CLKOS}{t:genblk1\[14\]\.r_pwm_D_fan_pre_limit\[14\][7:0].C}
+e ckid0_0 {t:genblk1\[14\]\.r_pwm_D_fan_pre_limit\[14\][7:0].C} dffr
+c ckid0_0 {t:pll_inst.PLLInst_0.CLKOS} EHXPLLJ Unsupported/too complex instance on clock path
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1
+m 0 0
+u 16 16
+n ckid0_1 {t:bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15].C} Clock source is invalid for GCC
+p {t:bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1.OUT}{t:bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15].C}
+e ckid0_1 {t:bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15].C} lat
+d ckid0_1 {t:bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1.OUT} and Unable to find a clock in input cone
+i pll_inst.CLKOP_i
+m 0 0
+u 513 1327
+p {t:pll_inst.PLLInst_0.CLKOP}{t:pll_inst.CLKOP_inferred_clock.I[0]}{t:pll_inst.CLKOP_inferred_clock.OUT[0]}{p:pll_inst.CLKOP}{t:pll_inst.CLKOP}{t:r_sw3_spi_cs_sel_err_flag.C}
+e ckid0_2 {t:r_sw3_spi_cs_sel_err_flag.C} dffr
+c ckid0_2 {t:pll_inst.PLLInst_0.CLKOP} EHXPLLJ Unsupported/too complex instance on clock path
+i genblk1Û10Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_3 {t:genblk1\[10\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[10\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_3 {t:genblk1\[10\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_3 {t:genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û1Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_4 {t:genblk1\[1\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[1\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_4 {t:genblk1\[1\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_4 {t:genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û6Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_5 {t:genblk1\[6\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[6\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_5 {t:genblk1\[6\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_5 {t:genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û4Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_6 {t:genblk1\[4\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[4\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_6 {t:genblk1\[4\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_6 {t:genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û13Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_7 {t:genblk1\[13\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[13\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_7 {t:genblk1\[13\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_7 {t:genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û3Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_8 {t:genblk1\[3\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[3\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_8 {t:genblk1\[3\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_8 {t:genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û5Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_9 {t:genblk1\[5\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[5\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_9 {t:genblk1\[5\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_9 {t:genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û12Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_10 {t:genblk1\[12\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[12\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_10 {t:genblk1\[12\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_10 {t:genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û2Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_11 {t:genblk1\[2\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[2\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_11 {t:genblk1\[2\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_11 {t:genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û8Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_12 {t:genblk1\[8\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[8\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_12 {t:genblk1\[8\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_12 {t:genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û0Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_13 {t:genblk1\[0\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[0\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_13 {t:genblk1\[0\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_13 {t:genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û11Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_14 {t:genblk1\[11\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[11\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_14 {t:genblk1\[11\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_14 {t:genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û7Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_15 {t:genblk1\[7\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[7\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_15 {t:genblk1\[7\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_15 {t:genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û14Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_16 {t:genblk1\[14\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[14\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_16 {t:genblk1\[14\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_16 {t:genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û9Ý®fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i
+m 0 0
+u 2 22
+n ckid0_17 {t:genblk1\[9\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} Clock source is invalid for GCC
+p {t:genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT}{p:genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos_i_buf}{t:genblk1\[9\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C}
+e ckid0_17 {t:genblk1\[9\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].C} dffr
+d ckid0_17 {t:genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT} and Unable to find a clock in input cone
+i genblk1Û10Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û10Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û1Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û1Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û6Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û6Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û4Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û4Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û13Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û13Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û3Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û3Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û5Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û5Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û12Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û12Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û2Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û2Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û8Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û8Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û0Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û0Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û11Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û11Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û7Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û7Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û14Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û14Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i genblk1Û9Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_b
+m 0 0
+u 0 0
+i genblk1Û9Ý®fan_pwm_tach_m.Edge_Detect_u1.r_signal_a
+m 0 0
+u 0 0
+i pll_inst.LOCK
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_RW
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[15]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[14]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[13]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[12]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[11]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[10]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[9]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[8]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[7]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[6]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[5]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[4]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[3]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[2]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[0]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_write_byte_cnt[1]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_addr_hit
+m 0 0
+u 0 0
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

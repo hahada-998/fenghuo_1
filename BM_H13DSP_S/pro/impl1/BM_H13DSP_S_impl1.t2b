@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro"  

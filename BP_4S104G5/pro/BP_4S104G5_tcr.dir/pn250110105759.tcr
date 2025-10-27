@@ -1,0 +1,10 @@
+#Start recording tcl command: 1/10/2025 09:50:12
+#Project Location: D:/Project/CNIT-K/8U SW/code/V10/BP_4S104G5/pro; Project name: BP_4S104G5
+prj_project open "D:/Project/CNIT-K/8U SW/code/V10/BP_4S104G5/pro/BP_4S104G5.ldf"
+prj_run Map -impl impl1
+prj_run Export -impl impl1
+prj_project save
+prj_run Export -impl impl1
+prj_project save
+prj_project close
+#Stop recording: 1/10/2025 10:57:59

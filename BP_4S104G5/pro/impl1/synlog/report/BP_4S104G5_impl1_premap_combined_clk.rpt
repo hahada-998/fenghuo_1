@@ -1,0 +1,42 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 1975 clock pin(s) of sequential element(s)
+16 gated/generated clock tree(s) driving 346 clock pin(s) of sequential element(s)
+0 instances converted, 346 sequential instances remain driven by gated/generated clocks
+
+================================================ Non-Gated/Non-Generated Clocks ================================================
+Clock Tree ID     Driving Element              Drive Element Type     Fanout     Sample Instance                                
+--------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       pll_inst.PLLInst_0.CLKOS     EHXPLLJ                648        genblk1\[14\]\.r_pwm_D_fan_pre_limit\[14\][7:0]
+@KP:ckid0_2       pll_inst.PLLInst_0.CLKOP     EHXPLLJ                1327       r_sw3_spi_cs_sel_err_flag                      
+================================================================================================================================
+================================================================================================ Gated/Generated Clocks =================================================================================================
+Clock Tree ID     Driving Element                                                   Drive Element Type     Unconverted Fanout     Sample Instance                                         Explanation                    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1.OUT             and                    16                     bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC
+@KP:ckid0_3       genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[10\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_4       genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[1\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_5       genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[6\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_6       genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[4\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_7       genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[13\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_8       genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[3\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_9       genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[5\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_10      genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[12\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_11      genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[2\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_12      genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[8\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_13      genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[0\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_14      genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[11\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_15      genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[7\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_16      genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[14\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_17      genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[9\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+=========================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+

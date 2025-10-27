@@ -1,0 +1,30 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 2778 clock pin(s) of sequential element(s)
+4 gated/generated clock tree(s) driving 32 clock pin(s) of sequential element(s)
+0 instances converted, 32 sequential instances remain driven by gated/generated clocks
+
+=========================================== Non-Gated/Non-Generated Clocks ============================================
+Clock Tree ID     Driving Element              Drive Element Type     Fanout     Sample Instance                       
+-----------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       pll_inst.PLLInst_0.CLKOP     EHXPLLJ                2512       r_ocp_smrst_n_dly_time_cnt[8:0]       
+@KP:ckid0_1       pll_inst.PLLInst_0.CLKOS     EHXPLLJ                266        bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0]
+=======================================================================================================================
+===================================================================================================== Gated/Generated Clocks =====================================================================================================
+Clock Tree ID     Driving Element                                              Drive Element Type     Unconverted Fanout     Sample Instance                                            Explanation                               
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_2       bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT     and                    16                     bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC           
+@KP:ckid0_3       s2p_164_u1.sclk.Q[0]                                         dffr                   5                      s2p_164_u1.data_out_cnt[3:0]                               Derived clock on input (not legal for GCC)
+@KP:ckid0_5       mClkDivTree.m1mSCE.rDivClk_q.Q[0]                            dffr                   9                      s2p_164_u1.r_data_chg_flag                                 Derived clock on input (not legal for GCC)
+@KP:ckid0_7       timer_gen_inst.t1us.Q[0]                                     dffr                   2                      s2p_164_u1.sclk                                            Derived clock on input (not legal for GCC)
+==================================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+

@@ -1,0 +1,78 @@
+Running in Lattice mode
+
+Starting:    C:\lscc\diamond\3.12\synpbase\bin64\mbin\synbatch.exe
+Install:     C:\lscc\diamond\3.12\synpbase
+Hostname:    RDHZW7137
+Date:        Thu Jan 23 13:58:18 2025
+Version:     Q-2020.03L-SP1
+
+Arguments:   -product synplify_pro -batch BP_4S104G5_impl1_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+log file: "D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srr"
+Running: impl1 in foreground
+
+Running proj_1|impl1
+
+Running Flow: compile (Compile) on proj_1|impl1
+# Thu Jan 23 13:58:19 2025
+
+Running Flow: compile_flow (Compile Process) on proj_1|impl1
+# Thu Jan 23 13:58:19 2025
+
+Running: compiler (Compile Input) on proj_1|impl1
+# Thu Jan 23 13:58:19 2025
+Copied D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_comp.srs to D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srs
+
+compiler completed
+# Thu Jan 23 13:58:29 2025
+
+Return Code: 0
+Run Time:00h:00m:10s
+
+Running: multi_srs_gen (Multi-srs Generator) on proj_1|impl1
+# Thu Jan 23 13:58:29 2025
+
+multi_srs_gen completed
+# Thu Jan 23 13:58:30 2025
+
+Return Code: 0
+Run Time:00h:00m:01s
+Copied D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_mult.srs to D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srs
+Copied D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srr to D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srf
+Complete: Compile Process on proj_1|impl1
+
+Running: premap (Premap) on proj_1|impl1
+# Thu Jan 23 13:58:30 2025
+
+premap completed with warnings
+# Thu Jan 23 13:58:35 2025
+
+Return Code: 1
+Run Time:00h:00m:05s
+Complete: Compile on proj_1|impl1
+
+Running Flow: map (Map) on proj_1|impl1
+# Thu Jan 23 13:58:35 2025
+
+Running: fpga_mapper (Map & Optimize) on proj_1|impl1
+# Thu Jan 23 13:58:35 2025
+Copied D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_m.srm to D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srm
+
+fpga_mapper completed with warnings
+# Thu Jan 23 13:59:11 2025
+
+Return Code: 1
+Run Time:00h:00m:36s
+Complete: Map on proj_1|impl1
+Copied D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srr to D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.srf
+Complete: Logic Synthesis on proj_1|impl1
+TCL script complete: "BP_4S104G5_impl1_synplify.tcl"
+exit status=0
+exit status=0
+Save changes for project:
+D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\pro\impl1\proj_1.prj
+batch mode default:no

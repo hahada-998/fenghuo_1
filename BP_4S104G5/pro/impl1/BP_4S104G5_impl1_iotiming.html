@@ -1,0 +1,378 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file bp_4s104g5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 6
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Preliminary    Version 37.5.
+Loading design for application iotiming from file bp_4s104g5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: M
+Package Status:                     Final          Version 1.16.
+Performance Hardware Data Status:   Preliminary    Version 37.5.
+// Design: BP_4S104G5
+// Package: CABGA400
+// ncd File: bp_4s104g5_impl1.ncd
+// Version: Diamond (64-bit) 3.12.0.240.2
+// Written on Sat Feb 08 10:36:06 2025
+// M: Minimum Performance Grade
+// iotiming BP_4S104G5_impl1.ncd BP_4S104G5_impl1.prf -gui -msgset D:/Project/CNIT-K/8U SW/code/V10/4port/BP_4S104G5/pro/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port                     Clock                   Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+i_3V3IO_RSVD0_FFU_R      i_CPLD_CLK              R     9.670      5      -1.555     M
+i_3V3IO_RSVD1_FFU_R      i_CPLD_CLK              R    12.013      5      -1.364     M
+i_3V3IO_RSVD1_R          i_CPLD_CLK              R    12.669      5      -3.261     M
+i_3V3IO_RSVD2_FFU_R      i_CPLD_CLK              R     7.750      5      -1.210     M
+i_3V3IO_RSVD3_FFU_R      i_CPLD_CLK              R    10.185      5      -1.294     M
+i_3V3IO_RSVD3_R          i_CPLD_CLK              R    12.019      5      -3.101     M
+i_3V3IO_RSVD4_FFU_R      i_CPLD_CLK              R    11.989      5      -3.089     M
+i_3V3IO_RSVD4_R          i_CPLD_CLK              R    12.041      5      -3.100     M
+i_3V3IO_RSVD5_FFU_R      i_CPLD_CLK              R     9.221      5      -2.212     M
+i_74LV165_1_DATA_IN_R    i_CPLD_CLK              R     6.634      5       0.877     5
+i_74LV165_DATA_IN_R      i_CPLD_CLK              R     6.727      5       0.687     5
+i_BASE_PRSNT_N_R         i_CPLD_CLK              R    10.517      5      -2.559     M
+i_BB_RSVD_1_R            i_CPLD_CLK              R     9.172      5      -2.196     M
+i_BP1_PWR_PG_R           i_CPLD_CLK              R     7.170      5      -1.668     M
+i_BP2_PWR_PG_R           i_CPLD_CLK              R     8.296      5      -1.970     M
+i_BPTB_RE_DONE_R         i_CPLD_CLK              R     8.650      5      -2.007     M
+i_CT_P1V25_SW0_PG        i_CPLD_CLK              R     6.228      5       0.827     5
+i_CT_P1V25_SW1_PG        i_CPLD_CLK              R     8.331      5       0.687     5
+i_CT_P1V25_SW2_PG        i_CPLD_CLK              R     6.580      5       0.687     5
+i_CT_P1V25_SW3_PG        i_CPLD_CLK              R     7.350      5       0.687     5
+i_DS160_RX_ALL_DONE_N    i_CPLD_CLK              R     8.022      5      -2.011     M
+i_DS160_TX_ALL_DONE_N    i_CPLD_CLK              R    11.102      5      -2.737     M
+i_FPGA_EROT_FATALERR_N_R i_CPLD_CLK              R     8.072      5      -1.953     M
+i_FPGA_OVERT_N_R         i_CPLD_CLK              R     9.159      5      -2.246     M
+i_GPU_BASE_HMC_READY_R   i_CPLD_CLK              R     8.353      5      -2.006     M
+i_GPU_BASE_PWR_GD_R      i_CPLD_CLK              R     7.752      5      -1.767     M
+i_HMC_PRSNT_N_R          i_CPLD_CLK              R     7.820      5      -1.859     M
+i_I2C1_ALERT_N_R         i_CPLD_CLK              R     9.167      5      -2.130     M
+i_I2C2_ALERT_N_R         i_CPLD_CLK              R    10.420      5      -2.508     M
+i_I2C9_9548_CH4_ALERT    i_CPLD_CLK              R     8.805      5      -2.236     M
+i_I2C_CPLD_SCL           i_CPLD_CLK              R     9.235      5       0.848     5
+i_MB_SGPIO_CLK           i_CPLD_CLK              R     1.927      5       0.859     5
+i_MB_SGPIO_DATA_OUT      i_CPLD_CLK              R     0.303      M       0.687     5
+i_MB_SGPIO_LD            i_CPLD_CLK              R     2.099      5       0.798     5
+i_NIC_3P3V_A_PG_R        i_CPLD_CLK              R     9.007      5      -2.168     M
+i_NIC_3P3V_B_PG_R        i_CPLD_CLK              R    10.069      5      -2.456     M
+i_NIC_SGPIO_SDI_R        i_CPLD_CLK              R     6.252      5       0.877     5
+i_NIC_SGPIO_SDO_R        i_CPLD_CLK              R     9.740      5      -2.403     M
+i_P0V8_SW0_PWRGD         i_CPLD_CLK              R     7.877      5       0.827     5
+i_P0V8_SW1_PWRGD         i_CPLD_CLK              R     7.612      5       0.687     5
+i_P0V8_SW2_PWRGD         i_CPLD_CLK              R     7.876      5       0.798     5
+i_P0V8_SW3_PWRGD         i_CPLD_CLK              R     7.638      5       0.798     5
+i_P12V_PG                i_CPLD_CLK              R     6.204      5       0.687     5
+i_P3V3_STBY_PG           i_CPLD_CLK              R     7.390      5       0.687     5
+i_P5V_RIGHTEAR_USB_OC    i_CPLD_CLK              R     9.835      5      -2.367     M
+i_P5V_STBY_USB_OC        i_CPLD_CLK              R     7.939      5      -1.898     M
+i_P5V_VGA_OC             i_CPLD_CLK              R     9.933      5      -2.435     M
+i_PAL_FAN10_TACH1        i_CPLD_CLK              R     6.165      5       0.827     5
+i_PAL_FAN10_TACH2        i_CPLD_CLK              R     6.596      5       0.827     5
+i_PAL_FAN11_TACH1        i_CPLD_CLK              R     4.920      5       0.687     5
+i_PAL_FAN11_TACH2        i_CPLD_CLK              R     6.350      5       0.687     5
+i_PAL_FAN12_TACH1        i_CPLD_CLK              R     4.685      5       0.687     5
+i_PAL_FAN12_TACH2        i_CPLD_CLK              R     5.413      5       0.798     5
+i_PAL_FAN13_TACH1        i_CPLD_CLK              R     6.148      5       0.687     5
+i_PAL_FAN13_TACH2        i_CPLD_CLK              R     5.777      5       0.848     5
+i_PAL_FAN14_TACH1        i_CPLD_CLK              R     4.241      5       0.859     5
+i_PAL_FAN14_TACH2        i_CPLD_CLK              R     6.358      5       0.848     5
+i_PAL_FAN15_TACH1        i_CPLD_CLK              R     7.725      5       0.841     5
+i_PAL_FAN15_TACH2        i_CPLD_CLK              R     6.054      5       0.841     5
+i_PAL_FAN1_TACH1         i_CPLD_CLK              R     6.134      5       0.848     5
+i_PAL_FAN1_TACH2         i_CPLD_CLK              R     5.230      5       0.687     5
+i_PAL_FAN2_TACH1         i_CPLD_CLK              R     4.567      5       0.687     5
+i_PAL_FAN2_TACH2         i_CPLD_CLK              R     5.521      5       0.798     5
+i_PAL_FAN3_TACH1         i_CPLD_CLK              R     4.989      5       0.687     5
+i_PAL_FAN3_TACH2         i_CPLD_CLK              R     5.267      5       0.687     5
+i_PAL_FAN4_TACH1         i_CPLD_CLK              R     5.048      5       0.687     5
+i_PAL_FAN4_TACH2         i_CPLD_CLK              R     5.746      5       0.687     5
+i_PAL_FAN5_TACH1         i_CPLD_CLK              R     5.999      5       0.798     5
+i_PAL_FAN5_TACH2         i_CPLD_CLK              R     5.718      5       0.798     5
+i_PAL_FAN6_TACH1         i_CPLD_CLK              R     5.287      5       0.687     5
+i_PAL_FAN6_TACH2         i_CPLD_CLK              R     5.710      5       0.798     5
+i_PAL_FAN7_TACH1         i_CPLD_CLK              R     6.202      5       0.687     5
+i_PAL_FAN7_TACH2         i_CPLD_CLK              R     5.893      5       0.798     5
+i_PAL_FAN8_TACH1         i_CPLD_CLK              R     5.776      5       0.687     5
+i_PAL_FAN8_TACH2         i_CPLD_CLK              R     4.797      5       0.687     5
+i_PAL_FAN9_TACH1         i_CPLD_CLK              R     4.431      5       0.687     5
+i_PAL_FAN9_TACH2         i_CPLD_CLK              R     5.471      5       0.687     5
+i_PAL_RAA_CFP_R          i_CPLD_CLK              R     8.135      5      -1.864     M
+i_PAL_SAS_ALL_DONE_N     i_CPLD_CLK              R     9.466      5      -2.258     M
+i_PE0_PERST_R            i_CPLD_CLK              R     9.598      5      -2.339     M
+i_PG_P1V8_PLL_R          i_CPLD_CLK              R     7.938      5       0.798     5
+i_PG_P1V8_R              i_CPLD_CLK              R     6.378      5       0.687     5
+i_PG_P5V0_R              i_CPLD_CLK              R     9.483      5      -2.397     M
+i_PSU0_PWROK_N           i_CPLD_CLK              R     8.127      5       0.798     5
+i_PSU1_PWROK_N           i_CPLD_CLK              R     9.127      5       0.859     5
+i_PSU2_PWROK_N           i_CPLD_CLK              R     7.331      5       0.859     5
+i_PSU3_PWROK_N           i_CPLD_CLK              R     6.526      5       0.877     5
+i_PSU4_PWROK_N           i_CPLD_CLK              R     8.611      5       0.687     5
+i_PSU5_PWROK_N           i_CPLD_CLK              R     7.647      5       0.687     5
+i_RETIMER1_INT_N_R       i_CPLD_CLK              R     9.998      5      -2.366     M
+i_RETIMER2_INT_N_R       i_CPLD_CLK              R    10.424      5      -2.502     M
+i_RETIMER3_INT_N_R       i_CPLD_CLK              R     8.960      5      -2.202     M
+i_RETIMER4_INT_N_R       i_CPLD_CLK              R    10.321      5      -2.551     M
+i_RETIMER5_INT_N_R       i_CPLD_CLK              R     9.253      5      -2.257     M
+i_RETIMER6_INT_N_R       i_CPLD_CLK              R    11.288      5      -2.899     M
+i_RETIMER7_INT_N_R       i_CPLD_CLK              R     8.259      5      -1.904     M
+i_RETIMER8_INT_N_R       i_CPLD_CLK              R     9.094      5      -2.223     M
+i_RSVD_PARTNER0_R        i_CPLD_CLK              R     8.912      5      -2.155     M
+i_RSVD_PARTNER1_R        i_CPLD_CLK              R     8.182      5      -1.876     M
+i_RSVD_PARTNER2_R        i_CPLD_CLK              R     8.059      5      -1.834     M
+i_RSVD_PARTNER3_R        i_CPLD_CLK              R     8.213      5      -1.888     M
+i_SMB_PSU0_ALERT_R       i_CPLD_CLK              R    10.558      5      -2.624     M
+i_SMB_PSU1_ALERT_R       i_CPLD_CLK              R    11.204      5      -2.762     M
+i_SMB_PSU2_ALERT_R       i_CPLD_CLK              R     7.399      5      -1.783     M
+i_SMB_PSU3_ALERT_R       i_CPLD_CLK              R    10.482      5      -2.655     M
+i_SMB_PSU4_ALERT_R       i_CPLD_CLK              R    10.788      5      -2.813     M
+i_SMB_PSU5_ALERT_R       i_CPLD_CLK              R     9.716      5      -2.457     M
+i_SW0_SLOT1_RST_N_R      i_CPLD_CLK              R     7.322      5      -1.666     M
+i_SW0_SLOT2_RST_N_R      i_CPLD_CLK              R     7.276      5      -1.667     M
+i_SW0_SLOT3_RST_N_R      i_CPLD_CLK              R    10.031      5      -2.465     M
+i_SW0_SLOT4_RST_N_R      i_CPLD_CLK              R     9.772      5      -2.405     M
+i_SW0_SLOT5_RST_N_R      i_CPLD_CLK              R     9.010      5      -2.111     M
+i_SW0_SLOT6_RST_N_R      i_CPLD_CLK              R     9.409      5      -2.263     M
+i_SW1_SLOT1_RST_N_R      i_CPLD_CLK              R     9.842      5      -2.381     M
+i_SW1_SLOT2_RST_N_R      i_CPLD_CLK              R    10.092      5      -2.429     M
+i_SW1_SLOT3_RST_N_R      i_CPLD_CLK              R     9.249      5      -2.187     M
+i_SW1_SLOT4_RST_N_R      i_CPLD_CLK              R    10.054      5      -2.435     M
+i_SW1_SLOT5_RST_N_R      i_CPLD_CLK              R     9.017      5      -2.122     M
+i_SW1_SLOT6_RST_N_R      i_CPLD_CLK              R     9.759      5      -2.367     M
+i_SW2_SLOT1_RST_N_R      i_CPLD_CLK              R    10.627      5      -2.699     M
+i_SW2_SLOT2_RST_N_R      i_CPLD_CLK              R    10.494      5      -2.621     M
+i_SW2_SLOT3_RST_N_R      i_CPLD_CLK              R     8.948      5      -2.124     M
+i_SW2_SLOT4_RST_N_R      i_CPLD_CLK              R    10.295      5      -2.557     M
+i_SW2_SLOT5_RST_N_R      i_CPLD_CLK              R    10.552      5      -2.614     M
+i_SW2_SLOT6_RST_N_R      i_CPLD_CLK              R    10.934      5      -2.737     M
+i_SW3_SLOT1_RST_N_R      i_CPLD_CLK              R    11.237      5      -2.786     M
+i_SW3_SLOT2_RST_N_R      i_CPLD_CLK              R    10.655      5      -2.645     M
+i_SW3_SLOT3_RST_N_R      i_CPLD_CLK              R    11.147      5      -2.861     M
+i_SW3_SLOT4_RST_N_R      i_CPLD_CLK              R     9.758      5      -2.435     M
+i_SW3_SLOT5_RST_N_R      i_CPLD_CLK              R    10.914      5      -2.729     M
+i_SW3_SLOT6_RST_N_R      i_CPLD_CLK              R    11.026      5      -2.775     M
+i_THERM_OVERT_N_R        i_CPLD_CLK              R    10.597      5      -2.594     M
+io_I2C9_CPLD_UPDATE_SDA  io_I2C9_CPLD_UPDATE_SCL R     2.109      5       1.623     5
+io_I2C_CPLD_SDA          i_CPLD_CLK              R     8.074      5       0.798     5
+
+
+// Clock to Output Delay
+
+Port                    Clock                   Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+io_I2C9_CPLD_UPDATE_SDA io_I2C9_CPLD_UPDATE_SCL F    11.903         5        2.692          M
+io_I2C_CPLD_SDA         i_CPLD_CLK              R    14.986         5        3.278          M
+o_74LV165_1_CLK_R       i_CPLD_CLK              R     7.134         5        2.365          M
+o_74LV165_1_LD_R        i_CPLD_CLK              R     7.513         5        2.470          M
+o_74LV165_CLK_R         i_CPLD_CLK              R     8.922         5        2.948          M
+o_74LV165_LD_R          i_CPLD_CLK              R     8.595         5        2.828          M
+o_BP1_PWR_EN_R          i_CPLD_CLK              R    10.218         5        3.256          M
+o_BP2_PWR_EN_R          i_CPLD_CLK              R     8.844         5        2.819          M
+o_BPTB_EEP_WP_R         i_CPLD_CLK              R     6.474         5        2.177          M
+o_BP_EEPROM_WP_R        i_CPLD_CLK              R     7.636         5        2.550          M
+o_CT_P1V25_SW_EN        i_CPLD_CLK              R     5.554         5        1.962          M
+o_GPU_BASE_POWER_EN_R   i_CPLD_CLK              R     8.845         5        2.821          M
+o_MB_SGPIO_DATA_IN      i_CPLD_CLK              R     6.572         5        2.173          M
+o_NIC1_PERST_N_R        i_CPLD_CLK              R    11.410         5        3.022          M
+o_NIC2_PERST_N_R        i_CPLD_CLK              R    11.558         5        3.256          M
+o_NIC3_PERST_N_R        i_CPLD_CLK              R    12.371         5        3.338          M
+o_NIC4_PERST_N_R        i_CPLD_CLK              R    11.166         5        3.184          M
+o_NIC5_PERST_N_R        i_CPLD_CLK              R    11.173         5        3.182          M
+o_NIC6_PERST_N_R        i_CPLD_CLK              R    11.146         5        3.168          M
+o_NIC7_PERST_N_R        i_CPLD_CLK              R    11.123         5        3.183          M
+o_NIC8_PERST_N_R        i_CPLD_CLK              R    11.613         5        3.268          M
+o_NICSLOT_3P3V_EN_R     i_CPLD_CLK              R    17.831         5        3.362          M
+o_NIC_SGPIO_CLK_R       i_CPLD_CLK              R     8.893         5        2.954          M
+o_NIC_SGPIO_SLOAD_R     i_CPLD_CLK              R     8.914         5        2.944          M
+o_P0V8_SW_EN            i_CPLD_CLK              R     8.015         5        2.676          M
+o_P1V8_EN               i_CPLD_CLK              R     8.244         5        2.738          M
+o_P1V8_PLL_EN           i_CPLD_CLK              R     8.465         5        2.758          M
+o_P5V0_EN               i_CPLD_CLK              R     7.642         5        2.512          M
+o_PAL_DB2000_1_PWRGD    i_CPLD_CLK              R    10.557         5        3.303          M
+o_PAL_DB2000_PWRGD      i_CPLD_CLK              R     5.337         5        1.896          M
+o_PAL_FAN10_LED_G       i_CPLD_CLK              R     8.530         5        2.805          M
+o_PAL_FAN10_LED_R       i_CPLD_CLK              R     8.794         5        2.908          M
+o_PAL_FAN10_PWM         i_CPLD_CLK              R    14.271         5        3.290          M
+o_PAL_FAN11_LED_G       i_CPLD_CLK              R     7.696         5        2.559          M
+o_PAL_FAN11_LED_R       i_CPLD_CLK              R     8.115         5        2.660          M
+o_PAL_FAN11_PWM         i_CPLD_CLK              R    13.013         5        3.040          M
+o_PAL_FAN12_LED_G       i_CPLD_CLK              R    10.172         5        3.266          M
+o_PAL_FAN12_LED_R       i_CPLD_CLK              R     8.496         5        2.766          M
+o_PAL_FAN12_PWM         i_CPLD_CLK              R    15.023         5        3.417          M
+o_PAL_FAN13_LED_G       i_CPLD_CLK              R     9.981         5        3.217          M
+o_PAL_FAN13_LED_R       i_CPLD_CLK              R     8.655         5        2.838          M
+o_PAL_FAN13_PWM         i_CPLD_CLK              R    12.912         5        2.960          M
+o_PAL_FAN14_LED_G       i_CPLD_CLK              R    10.327         5        3.288          M
+o_PAL_FAN14_LED_R       i_CPLD_CLK              R     7.003         5        2.352          M
+o_PAL_FAN14_PWM         i_CPLD_CLK              R    15.833         5        3.604          M
+o_PAL_FAN15_LED_G       i_CPLD_CLK              R     6.574         5        2.214          M
+o_PAL_FAN15_LED_R       i_CPLD_CLK              R     7.042         5        2.336          M
+o_PAL_FAN15_PWM         i_CPLD_CLK              R    11.443         5        3.000          M
+o_PAL_FAN1_LED_G        i_CPLD_CLK              R     7.993         5        2.669          M
+o_PAL_FAN1_LED_R        i_CPLD_CLK              R     7.160         5        2.373          M
+o_PAL_FAN1_PWM          i_CPLD_CLK              R    13.488         5        3.162          M
+o_PAL_FAN2_LED_G        i_CPLD_CLK              R     7.332         5        2.424          M
+o_PAL_FAN2_LED_R        i_CPLD_CLK              R     6.741         5        2.258          M
+o_PAL_FAN2_PWM          i_CPLD_CLK              R    13.901         5        3.653          M
+o_PAL_FAN3_LED_G        i_CPLD_CLK              R     7.268         5        2.429          M
+o_PAL_FAN3_LED_R        i_CPLD_CLK              R     8.824         5        2.881          M
+o_PAL_FAN3_PWM          i_CPLD_CLK              R    12.720         5        3.335          M
+o_PAL_FAN4_LED_G        i_CPLD_CLK              R     7.127         5        2.363          M
+o_PAL_FAN4_LED_R        i_CPLD_CLK              R     7.963         5        2.624          M
+o_PAL_FAN4_PWM          i_CPLD_CLK              R    11.762         5        2.603          M
+o_PAL_FAN5_LED_G        i_CPLD_CLK              R     8.594         5        2.827          M
+o_PAL_FAN5_LED_R        i_CPLD_CLK              R     7.983         5        2.619          M
+o_PAL_FAN5_PWM          i_CPLD_CLK              R    14.919         5        3.879          M
+o_PAL_FAN6_LED_G        i_CPLD_CLK              R     8.614         5        2.839          M
+o_PAL_FAN6_LED_R        i_CPLD_CLK              R     7.500         5        2.497          M
+o_PAL_FAN6_PWM          i_CPLD_CLK              R    15.547         5        3.866          M
+o_PAL_FAN7_LED_G        i_CPLD_CLK              R     8.462         5        2.801          M
+o_PAL_FAN7_LED_R        i_CPLD_CLK              R     6.741         5        2.258          M
+o_PAL_FAN7_PWM          i_CPLD_CLK              R    11.300         5        2.710          M
+o_PAL_FAN8_LED_G        i_CPLD_CLK              R     8.129         5        2.664          M
+o_PAL_FAN8_LED_R        i_CPLD_CLK              R     7.842         5        2.553          M
+o_PAL_FAN8_PWM          i_CPLD_CLK              R    12.903         5        2.849          M
+o_PAL_FAN9_LED_G        i_CPLD_CLK              R     7.948         5        2.608          M
+o_PAL_FAN9_LED_R        i_CPLD_CLK              R     6.918         5        2.318          M
+o_PAL_FAN9_PWM          i_CPLD_CLK              R    14.376         5        3.300          M
+o_PAL_HSC0_EN_R         i_CPLD_CLK              R    13.888         5        3.693          M
+o_PAL_RAA_EN_N          i_CPLD_CLK              R    11.325         5        3.581          M
+o_PAL_RETIMER1_0P9_EN_R i_CPLD_CLK              R     8.866         5        2.911          M
+o_PAL_RETIMER2_0P9_EN_R i_CPLD_CLK              R     8.586         5        2.842          M
+o_PAL_RETIMER3_0P9_EN_R i_CPLD_CLK              R     9.005         5        2.945          M
+o_PAL_RETIMER4_0P9_EN_R i_CPLD_CLK              R     8.608         5        2.849          M
+o_PAL_RETIMER5_0P9_EN_R i_CPLD_CLK              R     8.866         5        2.911          M
+o_PAL_RETIMER6_0P9_EN_R i_CPLD_CLK              R     7.231         5        2.426          M
+o_PAL_RETIMER7_0P9_EN_R i_CPLD_CLK              R     8.392         5        2.781          M
+o_PAL_RETIMER8_0P9_EN_R i_CPLD_CLK              R     7.610         5        2.532          M
+o_PAL_USBMUX_SEL        i_CPLD_CLK              R     7.484         5        2.477          M
+o_PSU0_PSON_R           i_CPLD_CLK              R    10.664         5        3.178          M
+o_PSU1_PSON_R           i_CPLD_CLK              R    12.336         5        3.190          M
+o_PSU2_PSON_R           i_CPLD_CLK              R    11.508         5        3.368          M
+o_PSU3_PSON_R           i_CPLD_CLK              R    10.953         5        3.245          M
+o_PSU4_PSON_R           i_CPLD_CLK              R    10.945         5        3.338          M
+o_PSU5_PSON_R           i_CPLD_CLK              R    10.369         5        3.035          M
+o_PWR_BRAKE_N_R         i_CPLD_CLK              R     9.015         5        2.952          M
+o_RETIMER1_RESET_N_R    i_CPLD_CLK              R     6.613         5        2.021          M
+o_RETIMER2_RESET_N_R    i_CPLD_CLK              R     6.577         5        2.003          M
+o_RETIMER3_RESET_N_R    i_CPLD_CLK              R     6.577         5        2.003          M
+o_RETIMER4_RESET_N_R    i_CPLD_CLK              R     6.577         5        2.003          M
+o_RETIMER5_RESET_N_R    i_CPLD_CLK              R     6.577         5        2.003          M
+o_RETIMER6_RESET_N_R    i_CPLD_CLK              R     6.577         5        2.003          M
+o_RETIMER7_RESET_N_R    i_CPLD_CLK              R     6.613         5        2.021          M
+o_RETIMER8_RESET_N_R    i_CPLD_CLK              R     6.613         5        2.021          M
+o_RETIMER_1P8V_EN_R     i_CPLD_CLK              R    11.543         5        3.340          M
+o_SLOT1_THORTTLE_R      i_CPLD_CLK              R     8.001         5        2.635          M
+o_SLOT2_THORTTLE_R      i_CPLD_CLK              R     8.034         5        2.652          M
+o_SLOT3_THORTTLN_R      i_CPLD_CLK              R     9.385         5        3.077          M
+o_SLOT4_THORTTLE_R      i_CPLD_CLK              R     8.854         5        2.928          M
+o_SLOT5_THORTTLE_R      i_CPLD_CLK              R     7.189         5        2.414          M
+o_SLOT6_THORTTLE_R      i_CPLD_CLK              R     8.089         5        2.699          M
+o_SLOT7_THORTTLE_R      i_CPLD_CLK              R     8.404         5        2.762          M
+o_SLOT8_THORTTLE_R      i_CPLD_CLK              R     7.642         5        2.512          M
+o_SW0_NVME1_RST_R       i_CPLD_CLK              R    10.443         5        3.381          M
+o_SW0_PEX_PERST_N_R     i_CPLD_CLK              R    10.822         5        3.486          M
+o_SW0_SPI_CS_SEL_R      i_CPLD_CLK              R    10.344         5        2.909          M
+o_SW1_NVME1_RST_R       i_CPLD_CLK              R     7.224         5        2.424          M
+o_SW1_PEX_PERST_N_R     i_CPLD_CLK              R    11.567         5        3.674          M
+o_SW1_SPI_CS_SEL_R      i_CPLD_CLK              R     9.313         5        2.777          M
+o_SW2_NVME1_RST_R       i_CPLD_CLK              R    10.095         5        3.282          M
+o_SW2_PEX_PERST_N_R     i_CPLD_CLK              R    10.592         5        3.388          M
+o_SW2_SPI_CS_SEL_R      i_CPLD_CLK              R    11.008         5        3.335          M
+o_SW3_NVME1_RST_R       i_CPLD_CLK              R     9.646         5        3.139          M
+o_SW3_PEX_PERST_N_R     i_CPLD_CLK              R    10.865         5        3.485          M
+o_SW3_SPI_CS_SEL_R      i_CPLD_CLK              R     9.725         5        2.930          M
+o_UBB_FPGA_PEX_RST_N_R  i_CPLD_CLK              R     5.337         5        1.896          M
+o_UBB_PEX_RST0_N_R      i_CPLD_CLK              R    10.328         5        3.242          M
+o_UBB_PEX_RST1_N_R      i_CPLD_CLK              R     9.886         5        3.102          M
+o_UBB_PEX_RST2_N_R      i_CPLD_CLK              R    11.518         5        3.581          M
+o_WP_HW_CTRL_N          i_CPLD_CLK              R     7.877         5        3.105          M
+o_debug_led1            i_CPLD_CLK              R    15.216         5        3.425          M
+o_debug_led2            i_CPLD_CLK              R     5.337         5        1.896          M
+
+
+// Internal_Clock to Output
+
+Port                    Internal_Clock                        
+--------------------------------------------------------
+io_I2C9_CPLD_UPDATE_SCL inst_i2c_update_flash_config/i2c1_sclo
+io_I2C9_CPLD_UPDATE_SDA inst_i2c_update_flash_config/i2c1_sclo
+WARNING: you must also run trce with hold speed: 5
+WARNING: you must also run trce with setup speed: M
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

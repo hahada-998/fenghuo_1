@@ -1,0 +1,1187 @@
+# Thu Mar 13 19:04:54 2025
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202003lat, Build 172R, Built Nov  2 2020 09:31:45, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 128MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 128MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 133MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 136MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 174MB)
+
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_P0_SPI_TPM_CS_N_3V3 (in view: work.BM_H13DSP_S(verilog)) on net o_P0_SPI_TPM_CS_N_3V3 (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_CHASSIS_ID0_N (in view: work.BM_H13DSP_S(verilog)) on net o_CHASSIS_ID0_N (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_M2_GPIO7_R (in view: work.BM_H13DSP_S(verilog)) on net o_M2_GPIO7_R (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_M2_GPIO6_R (in view: work.BM_H13DSP_S(verilog)) on net o_M2_GPIO6_R (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_UART1_RXD_CPLD (in view: work.BM_H13DSP_S(verilog)) on net o_UART1_RXD_CPLD (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_M_2_SATAPCIE_SEL_R (in view: work.BM_H13DSP_S(verilog)) on net o_M_2_SATAPCIE_SEL_R (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_BIOS_FLASH_RESET_R_N (in view: work.BM_H13DSP_S(verilog)) on net o_BIOS_FLASH_RESET_R_N (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_PCIE_SATA_WAKE_HOST_R_N (in view: work.BM_H13DSP_S(verilog)) on net o_PCIE_SATA_WAKE_HOST_R_N (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_PDB_SPGIO_CLK (in view: work.BM_H13DSP_S(verilog)) on net o_PDB_SPGIO_CLK (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":2421:28:2421:31|Tristate driver o_PDB_SPGIO_DATAOUT (in view: work.BM_H13DSP_S(verilog)) on net o_PDB_SPGIO_DATAOUT (in view: work.BM_H13DSP_S(verilog)) has its enable tied to GND.
+@W: BN132 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_detect.v":45:0:45:5|Removing sequential instance UID_Function_u0.Edge_Detect_U0.r_signal_a because it is equivalent to instance UID_Function_u0.r0_UID_BTN_ALL_dly. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\uid_function.v":268:0:268:5|Removing sequential instance UID_Function_u0.r1_UID_BTN_ALL_dly because it is equivalent to instance UID_Function_u0.Edge_Detect_U0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 185MB peak: 185MB)
+
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":1939:0:1939:5|Found counter in view:work.BM_H13DSP_S(verilog) instance r_ocp_smrst_n_dly_time_cnt[8:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\timer_gen_50mhz.v":71:0:71:5|Found counter in view:work.timer_gen(verilog) instance usec_tmr[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\timer_gen_50mhz.v":71:0:71:5|Found counter in view:work.timer_gen(verilog) instance sec_tmr[14:0] 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[46] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[46] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[45] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[45] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[39] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[39] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[33] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[33] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[22] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[22] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[21] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[21] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[16] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[16] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[14] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[14] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[13] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[13] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[12] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[12] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[11] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[11] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[10] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[10] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[9] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[9] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[8] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[8] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[7] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[7] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[4] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[4] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[3] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[3] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[1] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[1] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[0] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[0] (in view: work.pvt_gpi_48s_47s_0s_6s_Z1(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[195] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[194] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[193] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[192] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[191] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[190] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[189] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[188] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[187] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[186] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[185] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[184] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[183] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[182] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[181] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[180] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[179] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[178] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[177] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[176] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[175] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[174] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[173] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[172] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[171] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[170] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[169] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[168] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[167] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[166] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[165] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[164] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[163] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[162] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[161] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[160] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[159] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[158] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[157] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[156] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[155] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[154] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[153] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[152] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[151] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[150] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[149] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[148] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[147] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[146] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[145] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[144] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[143] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[142] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[141] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[140] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[139] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[138] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[137] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[136] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[135] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[134] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[133] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[132] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[131] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[130] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[129] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[128] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[127] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[126] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[125] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[124] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[123] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[122] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[121] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[120] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[119] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[118] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[117] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[116] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[115] (in view: work.s2p_slave_200s_8s_Z2(verilog)) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\synlog\BM_H13DSP_S_impl1_fpga_mapper.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\s2p_slave.v":79:2:79:7|Found counter in view:work.s2p_slave_200s_8s_Z2(verilog) instance cnt[7:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\sgpio_slave\p2s_slave.v":66:0:66:5|Found counter in view:work.p2s_slave_200s_8s(verilog) instance cnt[7:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_17(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_17(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_16(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_16(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_15(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_15(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_14(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_14(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_13(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_13(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_12(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_12(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_11(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_11(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_10(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_10(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_9(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_9(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_8(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_8(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_7(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_7(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_6(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_6(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_5(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_5(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_4(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_4(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_3(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_3(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_2(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_2(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_1(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_1(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Found counter in view:work.UART_MASTER_Z4_0(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\mcio_uart_master.v":189:0:189:5|Found counter in view:work.UART_MASTER_Z4_0(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74lv165\pvt_gpi.v":35:0:35:5|Found counter in view:work.pvt_gpi_32s_0_31s_0s_6s(verilog) instance bit_idx_out_1[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_5000000s_23s_1(verilog) instance rCount[22:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_2500000s_22s_4(verilog) instance rCount[21:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_2500000s_22s_3(verilog) instance rCount[21:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_2500000s_22s_2(verilog) instance rCount[21:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_2500000s_22s_1(verilog) instance rCount[21:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_5000000s_23s_0(verilog) instance rCount[22:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_50000000s_26s(verilog) instance rCount[25:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\delay.v":32:0:32:5|Found counter in view:work.delay_2500000s_22s_0(verilog) instance rCount[21:0] 
+@N: MF179 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\74hc164\s2p_164.v":29:9:29:25|Found 8 by 8 bit equality operator ('==') r_data_chg_flag5 (in view: work.s2p_164(verilog))
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_6(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_5(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_4(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_3(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_2(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_1(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0_0(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bmc_i2c\i2c_slave_bmc.v":113:0:113:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_write_byte_cnt[15:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bmc_i2c\i2c_slave_bmc.v":103:0:103:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_read_byte_cnt[15:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Found counter in view:work.i2c_slave_basic0_3s_16s(verilog) instance r_timeout_cnt[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_4(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_4(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_5(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_5(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_0(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_0(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_3(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_3(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_2(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_2(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_1(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_1(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":223:0:223:5|Found counter in view:work.AUX_UART_MASTER_Z3_6(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\uart\aux_uart_master.v":213:0:213:5|Found counter in view:work.AUX_UART_MASTER_Z3_6(verilog) instance bps_count_bit[5:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 195MB peak: 195MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:04s; Memory used current: 211MB peak: 211MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 213MB peak: 225MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:07s; Memory used current: 214MB peak: 225MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:14s; CPU Time elapsed 0h:00m:13s; Memory used current: 247MB peak: 247MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 248MB peak: 248MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:16s; CPU Time elapsed 0h:00m:16s; Memory used current: 248MB peak: 249MB)
+
+@N: FX1019 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":1929:0:1929:5|Adding ASYNC_REG property on synchronizing instance r_ocp_smrst_flag_dly[0] (in view: work.BM_H13DSP_S(verilog)).
+
+Finished technology mapping (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:19s; Memory used current: 306MB peak: 306MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:19s		     0.57ns		2912 /      2123
+   2		0h:00m:19s		     0.57ns		2869 /      2123
+@N: FX1019 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\bm_h13dsp_s_top.v":1929:0:1929:5|Adding ASYNC_REG property on synchronizing instance r_ocp_smrst_flag_dly[0] (in view: work.BM_H13DSP_S(verilog)).
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:21s; CPU Time elapsed 0h:00m:20s; Memory used current: 306MB peak: 307MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:24s; CPU Time elapsed 0h:00m:23s; Memory used current: 308MB peak: 308MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:25s; CPU Time elapsed 0h:00m:24s; Memory used current: 258MB peak: 308MB)
+
+Writing Analyst data base D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\synwork\BM_H13DSP_S_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:26s; CPU Time elapsed 0h:00m:25s; Memory used current: 300MB peak: 308MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\BM_H13DSP_S_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:26s; Memory used current: 307MB peak: 308MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:27s; Memory used current: 302MB peak: 308MB)
+
+@W: MT246 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\iic_update\i2c_update.v":92:8:92:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"d:\work_file\cpld_code\cpld_db\34.cnit-k amd gpu server v200r001b01\02.mb_s cpld\v01\bm_h13dsp_s\rtl\source\pll\pll_i25m_o50m_o25m.v":67:12:67:20|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock pll_i25M_o50M_o25M|CLKOP_inferred_clock with period 10.00ns. Please declare a user-defined clock on net pll_inst.clk_50m.
+@W: MT420 |Found inferred clock pll_i25M_o50M_o25M|CLKOS_inferred_clock with period 10.00ns. Please declare a user-defined clock on net pll_inst.clk_25m.
+@N: MT615 |Found clock timer_gen|t1us_derived_clock with period 10.00ns 
+@N: MT615 |Found clock ClkDiv_1s_1s|rDivClk_q_derived_clock with period 10.00ns 
+@N: MT615 |Found clock s2p_164|sclk_derived_clock with period 10.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu Mar 13 19:05:23 2025
+#
+
+
+Top view:               BM_H13DSP_S
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.104
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                                            Requested     Estimated     Requested     Estimated                Clock                                                      Clock              
+Starting Clock                              Frequency     Frequency     Period        Period        Slack      Type                                                       Group              
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ClkDiv_1s_1s|rDivClk_q_derived_clock        100.0 MHz     375.2 MHz     10.000        2.665         8.292      derived (from pll_i25M_o50M_o25M|CLKOP_inferred_clock)     Inferred_clkgroup_0
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     100.0 MHz     99.0 MHz      10.000        10.104        -0.104     inferred                                                   Inferred_clkgroup_0
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     100.0 MHz     104.0 MHz     10.000        9.619         0.381      inferred                                                   Inferred_clkgroup_1
+s2p_164|sclk_derived_clock                  100.0 MHz     363.8 MHz     10.000        2.749         7.251      derived (from timer_gen|t1us_derived_clock)                Inferred_clkgroup_0
+timer_gen|t1us_derived_clock                100.0 MHz     363.8 MHz     10.000        2.749         13.123     derived (from pll_i25M_o50M_o25M|CLKOP_inferred_clock)     Inferred_clkgroup_0
+System                                      100.0 MHz     151.4 MHz     10.000        6.603         3.397      system                                                     system_clkgroup    
+=============================================================================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                            |    rise  to  rise    |    fall  to  fall   |    rise  to  fall    |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                 Ending                                   |  constraint  slack   |  constraint  slack  |  constraint  slack   |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                   System                                   |  10.000      10.000  |  No paths    -      |  No paths    -       |  No paths    -    
+System                                   pll_i25M_o50M_o25M|CLKOS_inferred_clock  |  10.000      3.397   |  No paths    -      |  No paths    -       |  No paths    -    
+System                                   ClkDiv_1s_1s|rDivClk_q_derived_clock     |  10.000      4.670   |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock  pll_i25M_o50M_o25M|CLKOP_inferred_clock  |  10.000      -0.105  |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  System                                   |  10.000      8.923   |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  pll_i25M_o50M_o25M|CLKOP_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock  |  10.000      0.381   |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  ClkDiv_1s_1s|rDivClk_q_derived_clock     |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  s2p_164|sclk_derived_clock               |  Diff grp    -       |  No paths    -      |  No paths    -       |  No paths    -    
+timer_gen|t1us_derived_clock             timer_gen|t1us_derived_clock             |  10.000      18.268  |  No paths    -      |  5.000       13.123  |  No paths    -    
+ClkDiv_1s_1s|rDivClk_q_derived_clock     timer_gen|t1us_derived_clock             |  10.000      8.292   |  No paths    -      |  No paths    -       |  No paths    -    
+ClkDiv_1s_1s|rDivClk_q_derived_clock     ClkDiv_1s_1s|rDivClk_q_derived_clock     |  10.000      14.670  |  No paths    -      |  No paths    -       |  No paths    -    
+ClkDiv_1s_1s|rDivClk_q_derived_clock     s2p_164|sclk_derived_clock               |  10.000      8.292   |  No paths    -      |  No paths    -       |  No paths    -    
+s2p_164|sclk_derived_clock               timer_gen|t1us_derived_clock             |  10.000      7.251   |  No paths    -      |  No paths    -       |  No paths    -    
+s2p_164|sclk_derived_clock               s2p_164|sclk_derived_clock               |  10.000      16.975  |  No paths    -      |  No paths    -       |  No paths    -    
+==========================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: ClkDiv_1s_1s|rDivClk_q_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                  Starting                                                                         Arrival           
+Instance                          Reference                                Type        Pin     Net                 Time        Slack 
+                                  Clock                                                                                              
+-------------------------------------------------------------------------------------------------------------------------------------
+s2p_164_u1.r_data_chg_flag        ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3BX     Q       r_data_chg_flag     1.180       8.292 
+s2p_164_u1.r_old_data_0_.II_0     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     Q       o1_6                0.972       14.669
+s2p_164_u1.r_old_data_0_.II_1     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3BX     Q       o2_6                0.972       14.669
+s2p_164_u1.r_old_data_1_.II_0     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     Q       o1_5                0.972       14.669
+s2p_164_u1.r_old_data_1_.II_1     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3BX     Q       o2_5                0.972       14.669
+s2p_164_u1.r_old_data_2_.II_0     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     Q       o1_4                0.972       14.812
+s2p_164_u1.r_old_data_2_.II_1     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3BX     Q       o2_4                0.972       14.812
+s2p_164_u1.r_old_data_3_.II_0     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     Q       o1_3                0.972       14.812
+s2p_164_u1.r_old_data_3_.II_1     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3BX     Q       o2_3                0.972       14.812
+s2p_164_u1.r_old_data_4_.II_0     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     Q       o1_2                0.972       14.812
+=====================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                               Starting                                                                                        Required           
+Instance                       Reference                                Type        Pin     Net                                Time         Slack 
+                               Clock                                                                                                              
+--------------------------------------------------------------------------------------------------------------------------------------------------
+s2p_164_u1.data_out_cnt[0]     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     D       data_out_cnt_3[0]                  10.089       8.292 
+s2p_164_u1.data_out_cnt[1]     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     D       data_out_cnt_3[1]                  10.089       8.292 
+s2p_164_u1.data_out_cnt[2]     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     D       data_out_cnt_3[2]                  10.089       8.292 
+s2p_164_u1.data_out_cnt[3]     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     D       data_out_cnt_3[3]                  10.089       8.292 
+s2p_164_u1.sclk                ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3DX     D       sclk_3_0_0                         10.089       8.292 
+s2p_164_u1.r_data_chg_flag     ClkDiv_1s_1s|rDivClk_q_derived_clock     FD1S3BX     D       r_data_chg_flag5_0_data_tmp[3]     19.894       14.669
+==================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      1.797
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 8.292
+
+    Number of logic level(s):                1
+    Starting point:                          s2p_164_u1.r_data_chg_flag / Q
+    Ending point:                            s2p_164_u1.data_out_cnt[3] / D
+    The start point is clocked by            ClkDiv_1s_1s|rDivClk_q_derived_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            s2p_164|sclk_derived_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                     Pin      Pin               Arrival     No. of    
+Name                                  Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------
+s2p_164_u1.r_data_chg_flag            FD1S3BX      Q        Out     1.180     1.180 r     -         
+r_data_chg_flag                       Net          -        -       -         -           5         
+s2p_164_u1.data_out_cnt_3_f0_0[3]     ORCALUT4     C        In      0.000     1.180 r     -         
+s2p_164_u1.data_out_cnt_3_f0_0[3]     ORCALUT4     Z        Out     0.617     1.797 f     -         
+data_out_cnt_3[3]                     Net          -        -       -         -           1         
+s2p_164_u1.data_out_cnt[3]            FD1S3DX      D        In      0.000     1.797 f     -         
+====================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: pll_i25M_o50M_o25M|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                        Starting                                                                             Arrival           
+Instance                                Reference                                   Type        Pin     Net                  Time        Slack 
+                                        Clock                                                                                                  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.curr_state[3]        pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     Q       curr_state[3]        1.232       -0.104
+aux_uart_master_u2.curr_state[7]        pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     Q       curr_state[7]        1.204       -0.076
+aux_uart_master_u6.bps_count_bit[0]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[0]     1.044       0.764 
+aux_uart_master_u5.bps_count_bit[0]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[0]     1.044       0.764 
+aux_uart_master_u2.bps_count_bit[0]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[0]     1.044       0.764 
+aux_uart_master_u6.bps_count_bit[1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[1]     1.044       0.764 
+aux_uart_master_u2.bps_count_bit[1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[1]     1.044       0.764 
+aux_uart_master_u5.bps_count_bit[1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[1]     1.044       0.764 
+aux_uart_master_u3.bps_count_bit[1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[1]     1.044       0.764 
+aux_uart_master_u6.bps_count_bit[2]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       bps_count_bit[2]     1.044       0.764 
+===============================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                               Required           
+Instance                                Reference                                   Type        Pin     Net                    Time         Slack 
+                                        Clock                                                                                                     
+--------------------------------------------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.bps_count_bit[5]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[5]     9.894        -0.104
+aux_uart_master_u2.bps_count_bit[3]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[3]     9.894        0.038 
+aux_uart_master_u2.bps_count_bit[4]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[4]     9.894        0.038 
+aux_uart_master_u2.bps_count_bit[1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[1]     9.894        0.181 
+aux_uart_master_u2.bps_count_bit[2]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[2]     9.894        0.181 
+aux_uart_master_u3.bps_count_bit[5]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[5]     9.894        0.764 
+aux_uart_master_u5.bps_count_bit[5]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[5]     9.894        0.764 
+aux_uart_master_u6.bps_count_bit[5]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[5]     9.894        0.764 
+aux_uart_master_u3.bps_count_bit[3]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[3]     9.894        0.907 
+aux_uart_master_u5.bps_count_bit[3]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       bps_count_bit_s[3]     9.894        0.907 
+==================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      9.999
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.105
+
+    Number of logic level(s):                9
+    Starting point:                          aux_uart_master_u2.curr_state[3] / Q
+    Ending point:                            aux_uart_master_u2.bps_count_bit[5] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.curr_state[3]               FD1S3DX      Q        Out     1.232     1.232 r     -         
+curr_state[3]                                  Net          -        -       -         -           10        
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     A        In      0.000     1.232 r     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     Z        Out     1.017     2.249 f     -         
+un11_i_a2_0_a2_0[0]                            Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     D        In      0.000     2.249 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     Z        Out     1.017     3.265 f     -         
+bps_count_bit8_i_a2_0                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     A        In      0.000     3.265 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     Z        Out     1.017     4.282 f     -         
+bps_count_bit8_i_a2_1                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     C        In      0.000     4.282 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     Z        Out     1.089     5.371 f     -         
+N_1019                                         Net          -        -       -         -           2         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     B        In      0.000     5.371 f     -         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     Z        Out     1.249     6.620 f     -         
+N_972                                          Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        A1       In      0.000     6.620 f     -         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        COUT     Out     1.544     8.164 r     -         
+bps_count_bit_cry[0]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        CIN      In      0.000     8.164 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        COUT     Out     0.143     8.307 r     -         
+bps_count_bit_cry[2]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        CIN      In      0.000     8.307 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        COUT     Out     0.143     8.450 r     -         
+bps_count_bit_cry[4]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        CIN      In      0.000     8.450 r     -         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        S0       Out     1.549     9.999 r     -         
+bps_count_bit_s[5]                             Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit[5]            FD1P3DX      D        In      0.000     9.999 r     -         
+=============================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      9.999
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.105
+
+    Number of logic level(s):                9
+    Starting point:                          aux_uart_master_u2.curr_state[3] / Q
+    Ending point:                            aux_uart_master_u2.bps_count_bit[5] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.curr_state[3]               FD1S3DX      Q        Out     1.232     1.232 r     -         
+curr_state[3]                                  Net          -        -       -         -           10        
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     A        In      0.000     1.232 r     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     Z        Out     1.017     2.249 f     -         
+un11_i_a2_0_a2_0[0]                            Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     D        In      0.000     2.249 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     Z        Out     1.017     3.265 f     -         
+bps_count_bit8_i_a2_0                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     A        In      0.000     3.265 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     Z        Out     1.017     4.282 f     -         
+bps_count_bit8_i_a2_1                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     C        In      0.000     4.282 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     Z        Out     1.089     5.371 f     -         
+N_1019                                         Net          -        -       -         -           2         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     B        In      0.000     5.371 f     -         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     Z        Out     1.249     6.620 f     -         
+N_972                                          Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        B0       In      0.000     6.620 f     -         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        COUT     Out     1.544     8.164 r     -         
+bps_count_bit_cry[0]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        CIN      In      0.000     8.164 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        COUT     Out     0.143     8.307 r     -         
+bps_count_bit_cry[2]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        CIN      In      0.000     8.307 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        COUT     Out     0.143     8.450 r     -         
+bps_count_bit_cry[4]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        CIN      In      0.000     8.450 r     -         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        S0       Out     1.549     9.999 r     -         
+bps_count_bit_s[5]                             Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit[5]            FD1P3DX      D        In      0.000     9.999 r     -         
+=============================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      9.971
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.077
+
+    Number of logic level(s):                9
+    Starting point:                          aux_uart_master_u2.curr_state[7] / Q
+    Ending point:                            aux_uart_master_u2.bps_count_bit[5] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.curr_state[7]               FD1S3DX      Q        Out     1.204     1.204 r     -         
+curr_state[7]                                  Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     B        In      0.000     1.204 r     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     Z        Out     1.017     2.221 f     -         
+un11_i_a2_0_a2_0[0]                            Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     D        In      0.000     2.221 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     Z        Out     1.017     3.237 f     -         
+bps_count_bit8_i_a2_0                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     A        In      0.000     3.237 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     Z        Out     1.017     4.254 f     -         
+bps_count_bit8_i_a2_1                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     C        In      0.000     4.254 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     Z        Out     1.089     5.343 f     -         
+N_1019                                         Net          -        -       -         -           2         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     B        In      0.000     5.343 f     -         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     Z        Out     1.249     6.592 f     -         
+N_972                                          Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        A1       In      0.000     6.592 f     -         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        COUT     Out     1.544     8.136 r     -         
+bps_count_bit_cry[0]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        CIN      In      0.000     8.136 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        COUT     Out     0.143     8.279 r     -         
+bps_count_bit_cry[2]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        CIN      In      0.000     8.279 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        COUT     Out     0.143     8.422 r     -         
+bps_count_bit_cry[4]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        CIN      In      0.000     8.422 r     -         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        S0       Out     1.549     9.971 r     -         
+bps_count_bit_s[5]                             Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit[5]            FD1P3DX      D        In      0.000     9.971 r     -         
+=============================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      9.971
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.077
+
+    Number of logic level(s):                9
+    Starting point:                          aux_uart_master_u2.curr_state[7] / Q
+    Ending point:                            aux_uart_master_u2.bps_count_bit[5] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.curr_state[7]               FD1S3DX      Q        Out     1.204     1.204 r     -         
+curr_state[7]                                  Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     B        In      0.000     1.204 r     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     Z        Out     1.017     2.221 f     -         
+un11_i_a2_0_a2_0[0]                            Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     D        In      0.000     2.221 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     Z        Out     1.017     3.237 f     -         
+bps_count_bit8_i_a2_0                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     A        In      0.000     3.237 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     Z        Out     1.017     4.254 f     -         
+bps_count_bit8_i_a2_1                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     C        In      0.000     4.254 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     Z        Out     1.089     5.343 f     -         
+N_1019                                         Net          -        -       -         -           2         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     B        In      0.000     5.343 f     -         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     Z        Out     1.249     6.592 f     -         
+N_972                                          Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        B0       In      0.000     6.592 f     -         
+aux_uart_master_u2.bps_count_bit_cry_0[0]      CCU2D        COUT     Out     1.544     8.136 r     -         
+bps_count_bit_cry[0]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        CIN      In      0.000     8.136 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        COUT     Out     0.143     8.279 r     -         
+bps_count_bit_cry[2]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        CIN      In      0.000     8.279 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        COUT     Out     0.143     8.422 r     -         
+bps_count_bit_cry[4]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        CIN      In      0.000     8.422 r     -         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        S0       Out     1.549     9.971 r     -         
+bps_count_bit_s[5]                             Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit[5]            FD1P3DX      D        In      0.000     9.971 r     -         
+=============================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      9.856
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 0.038
+
+    Number of logic level(s):                8
+    Starting point:                          aux_uart_master_u2.curr_state[3] / Q
+    Ending point:                            aux_uart_master_u2.bps_count_bit[5] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                              Pin      Pin               Arrival     No. of    
+Name                                           Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------
+aux_uart_master_u2.curr_state[3]               FD1S3DX      Q        Out     1.232     1.232 r     -         
+curr_state[3]                                  Net          -        -       -         -           10        
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     A        In      0.000     1.232 r     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0       ORCALUT4     Z        Out     1.017     2.249 f     -         
+un11_i_a2_0_a2_0[0]                            Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     D        In      0.000     2.249 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_0_0     ORCALUT4     Z        Out     1.017     3.265 f     -         
+bps_count_bit8_i_a2_0                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     A        In      0.000     3.265 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2_1       ORCALUT4     Z        Out     1.017     4.282 f     -         
+bps_count_bit8_i_a2_1                          Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     C        In      0.000     4.282 f     -         
+aux_uart_master_u2.bps_count_bit8_i_a2         ORCALUT4     Z        Out     1.089     5.371 f     -         
+N_1019                                         Net          -        -       -         -           2         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     B        In      0.000     5.371 f     -         
+aux_uart_master_u2.bps_count_bit8_i            ORCALUT4     Z        Out     1.249     6.620 f     -         
+N_972                                          Net          -        -       -         -           7         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        A1       In      0.000     6.620 f     -         
+aux_uart_master_u2.bps_count_bit_cry_0[1]      CCU2D        COUT     Out     1.544     8.164 r     -         
+bps_count_bit_cry[2]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        CIN      In      0.000     8.164 r     -         
+aux_uart_master_u2.bps_count_bit_cry_0[3]      CCU2D        COUT     Out     0.143     8.307 r     -         
+bps_count_bit_cry[4]                           Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        CIN      In      0.000     8.307 r     -         
+aux_uart_master_u2.bps_count_bit_s_0[5]        CCU2D        S0       Out     1.549     9.856 r     -         
+bps_count_bit_s[5]                             Net          -        -       -         -           1         
+aux_uart_master_u2.bps_count_bit[5]            FD1P3DX      D        In      0.000     9.856 r     -         
+=============================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: pll_i25M_o50M_o25M|CLKOS_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                           Starting                                                                                Arrival          
+Instance                                                   Reference                                   Type        Pin     Net                     Time        Slack
+                                                           Clock                                                                                                    
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[4]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[4]        1.309       0.381
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[13]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[13]     1.228       0.390
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[11]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[11]     1.180       0.438
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[12]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[12]     1.180       0.438
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[3]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[3]        1.302       0.508
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[14]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[14]     1.148       0.542
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[6]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[6]      1.148       0.647
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[5]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[5]        1.376       1.331
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[0]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[0]        1.387       1.440
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[1]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[1]        1.384       1.443
+====================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                         Starting                                                                                Required          
+Instance                                 Reference                                   Type        Pin     Net                     Time         Slack
+                                         Clock                                                                                                     
+---------------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[1]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[1]     10.089       0.381
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[7]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[7]     10.089       0.381
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[4]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[4]     10.089       0.502
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[3]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[3]     10.089       1.302
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[0]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[0]     10.089       1.398
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[5]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[5]     10.089       1.398
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[6]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_38[6]     10.089       1.398
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[2]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_N_6_mux_0_i           10.089       2.100
+bmc_cpld_i2c_ram_u0.r_reg_008a[0]        pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1P3BX     SP      r_reg_008a4             9.528        2.713
+bmc_cpld_i2c_ram_u0.r_reg_008a[1]        pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1P3BX     SP      r_reg_008a4             9.528        2.713
+===================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      9.708
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 0.381
+
+    Number of logic level(s):                9
+    Starting point:                          bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[4] / Q
+    Ending point:                            bmc_cpld_i2c_ram_u0.r_i2c_data_in[7] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                  Pin      Pin               Arrival     No. of    
+Name                                                               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[4]              FD1S3BX      Q        Out     1.309     1.309 r     -         
+w_i2c_command[4]                                                   Net          -        -       -         -           28        
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command_RNIT76B[14]     ORCALUT4     A        In      0.000     1.309 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command_RNIT76B[14]     ORCALUT4     Z        Out     1.017     2.325 r     -         
+r_i2c_data_in_38_sn_m41_0_0_a3_0_4_0                               Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command_RNIRCR51[6]     ORCALUT4     B        In      0.000     2.325 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command_RNIRCR51[6]     ORCALUT4     Z        Out     0.449     2.774 r     -         
+r_i2c_data_in_38_sn_m41_0_0_a3_0_4                                 Net          -        -       -         -           2         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_4_1_RNO[0]               ORCALUT4     A        In      0.000     2.774 r     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_4_1_RNO[0]               ORCALUT4     Z        Out     1.017     3.791 r     -         
+r_N_18_mux                                                         Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_4_1[0]                   ORCALUT4     B        In      0.000     3.791 r     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_4_1[0]                   ORCALUT4     Z        Out     1.017     4.808 f     -         
+r_i2c_data_in_38_0_a2_4_1[0]                                       Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_4[0]                     ORCALUT4     A        In      0.000     4.808 f     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_4[0]                     ORCALUT4     Z        Out     1.233     6.041 r     -         
+N_1202                                                             Net          -        -       -         -           6         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_1[7]                     ORCALUT4     A        In      0.000     6.041 r     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_a2_1[7]                     ORCALUT4     Z        Out     1.017     7.057 r     -         
+N_399                                                              Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_2[7]                        ORCALUT4     A        In      0.000     7.057 r     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_2[7]                        ORCALUT4     Z        Out     1.017     8.074 r     -         
+r_i2c_data_in_38_0_2[7]                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_3[7]                        ORCALUT4     C        In      0.000     8.074 r     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0_3[7]                        ORCALUT4     Z        Out     1.017     9.091 r     -         
+r_i2c_data_in_38_0_3[7]                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0[7]                          ORCALUT4     B        In      0.000     9.091 r     -         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in_38_0[7]                          ORCALUT4     Z        Out     0.617     9.708 r     -         
+r_i2c_data_in_38[7]                                                Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.r_i2c_data_in[7]                               FD1S3DX      D        In      0.000     9.708 r     -         
+=================================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: s2p_164|sclk_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                                               Arrival          
+Instance                       Reference                      Type        Pin     Net                 Time        Slack
+                               Clock                                                                                   
+-----------------------------------------------------------------------------------------------------------------------
+s2p_164_u1.data_out_cnt[2]     s2p_164|sclk_derived_clock     FD1S3DX     Q       so9_i[2]            1.204       7.251
+s2p_164_u1.data_out_cnt[0]     s2p_164|sclk_derived_clock     FD1S3DX     Q       CO0                 1.180       7.275
+s2p_164_u1.data_out_cnt[1]     s2p_164|sclk_derived_clock     FD1S3DX     Q       so9_i[1]            1.180       7.275
+s2p_164_u1.data_out_cnt[3]     s2p_164|sclk_derived_clock     FD1S3DX     Q       data_out_cnt[3]     1.188       8.284
+=======================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                               Starting                                                                             Required           
+Instance                       Reference                      Type         Pin     Net                              Time         Slack 
+                               Clock                                                                                                   
+---------------------------------------------------------------------------------------------------------------------------------------
+s2p_164_u1.sclk                s2p_164|sclk_derived_clock     FD1S3DX      D       sclk_3_0_0                       10.089       7.251 
+s2p_164_u1_soio                s2p_164|sclk_derived_clock     OFS1P3BX     D       s2p_164_u1.so_2                  19.894       16.975
+s2p_164_u1.data_out_cnt[2]     s2p_164|sclk_derived_clock     FD1S3DX      D       data_out_cnt_3[2]                20.089       17.203
+s2p_164_u1.data_out_cnt[3]     s2p_164|sclk_derived_clock     FD1S3DX      D       data_out_cnt_3[3]                20.089       17.203
+s2p_164_u1.data_out_cnt[0]     s2p_164|sclk_derived_clock     FD1S3DX      D       data_out_cnt_3[0]                20.089       18.284
+s2p_164_u1.data_out_cnt[1]     s2p_164|sclk_derived_clock     FD1S3DX      D       data_out_cnt_3[1]                20.089       18.284
+s2p_164_u1_soio                s2p_164|sclk_derived_clock     OFS1P3BX     SP      s2p_164_u1.data_out_cnt_i[3]     19.528       18.341
+=======================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      2.837
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 7.251
+
+    Number of logic level(s):                2
+    Starting point:                          s2p_164_u1.data_out_cnt[2] / Q
+    Ending point:                            s2p_164_u1.sclk / D
+    The start point is clocked by            s2p_164|sclk_derived_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            timer_gen|t1us_derived_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                              Pin      Pin               Arrival     No. of    
+Name                           Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------
+s2p_164_u1.data_out_cnt[2]     FD1S3DX      Q        Out     1.204     1.204 r     -         
+so9_i[2]                       Net          -        -       -         -           7         
+s2p_164_u1.sclk5_0_a3_1        ORCALUT4     C        In      0.000     1.204 r     -         
+s2p_164_u1.sclk5_0_a3_1        ORCALUT4     Z        Out     1.017     2.221 f     -         
+sclk5_0_a3_1                   Net          -        -       -         -           1         
+s2p_164_u1.sclk_RNO            ORCALUT4     C        In      0.000     2.221 f     -         
+s2p_164_u1.sclk_RNO            ORCALUT4     Z        Out     0.617     2.837 r     -         
+sclk_3_0_0                     Net          -        -       -         -           1         
+s2p_164_u1.sclk                FD1S3DX      D        In      0.000     2.837 r     -         
+=============================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: timer_gen|t1us_derived_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                    Starting                                                        Arrival           
+Instance            Reference                        Type        Pin     Net        Time        Slack 
+                    Clock                                                                             
+------------------------------------------------------------------------------------------------------
+s2p_164_u1.sclk     timer_gen|t1us_derived_clock     FD1S3DX     Q       sclk_i     1.204       13.123
+======================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                        Starting                                                                      Required           
+Instance                Reference                        Type         Pin     Net                     Time         Slack 
+                        Clock                                                                                            
+-------------------------------------------------------------------------------------------------------------------------
+s2p_164_u1_o_sclkio     timer_gen|t1us_derived_clock     OFS1P3BX     D       s2p_164_u1.sclk_i_i     14.894       13.123
+s2p_164_u1.sclk         timer_gen|t1us_derived_clock     FD1S3DX      D       sclk_3_0_0              20.089       18.268
+=========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      15.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         14.894
+
+    - Propagation time:                      1.772
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 13.123
+
+    Number of logic level(s):                1
+    Starting point:                          s2p_164_u1.sclk / Q
+    Ending point:                            s2p_164_u1_o_sclkio / D
+    The start point is clocked by            timer_gen|t1us_derived_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            timer_gen|t1us_derived_clock [falling] (rise=0.000 fall=5.000 period=10.000) on pin SCLK
+    -Timing constraint applied as multi cycle path with factor 2 (from c:timer_gen|t1us_derived_clock to c:timer_gen|t1us_derived_clock)
+
+Instance / Net                           Pin      Pin               Arrival     No. of    
+Name                        Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------
+s2p_164_u1.sclk             FD1S3DX      Q        Out     1.204     1.204 r     -         
+sclk_i                      Net          -        -       -         -           7         
+s2p_164_u1.sclk_RNIFFLE     INV          A        In      0.000     1.204 r     -         
+s2p_164_u1.sclk_RNIFFLE     INV          Z        Out     0.568     1.772 f     -         
+sclk_i_i                    Net          -        -       -         -           1         
+s2p_164_u1_o_sclkio         OFS1P3BX     D        In      0.000     1.772 f     -         
+==========================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                           Starting                                                 Arrival          
+Instance                                                   Reference     Type        Pin     Net                    Time        Slack
+                                                           Clock                                                                     
+-------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[2]      System        FD1S1AY     Q       w_i2c_command_0[2]     1.108       3.397
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[3]      System        FD1S1AY     Q       w_i2c_command_0[3]     1.108       3.540
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[4]      System        FD1S1AY     Q       w_i2c_command_0[4]     1.108       3.540
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[5]      System        FD1S1AY     Q       w_i2c_command_0[5]     1.108       3.683
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[6]      System        FD1S1AY     Q       w_i2c_command[6]       1.108       3.683
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[7]      System        FD1S1AY     Q       w_i2c_command[7]       1.108       3.825
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[8]      System        FD1S1AY     Q       w_i2c_command[8]       1.108       3.825
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[9]      System        FD1S1AY     Q       w_i2c_command[9]       1.108       3.968
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[10]     System        FD1S1AY     Q       w_i2c_command[10]      1.108       3.968
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[11]     System        FD1S1AY     Q       w_i2c_command[11]      1.108       4.111
+=====================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                           Starting                                      Required          
+Instance                                                   Reference     Type        Pin     Net         Time         Slack
+                                                           Clock                                                           
+---------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[15]     System        FD1S3BX     D       un6[15]     10.089       3.397
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[13]     System        FD1S3BX     D       un6[13]     10.089       3.540
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[14]     System        FD1S3BX     D       un6[14]     10.089       3.540
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[11]     System        FD1S3BX     D       un6[11]     10.089       3.683
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[12]     System        FD1S3BX     D       un6[12]     10.089       3.683
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[9]      System        FD1S3BX     D       un6[9]      10.089       3.825
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[10]     System        FD1S3BX     D       un6[10]     10.089       3.825
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[7]      System        FD1S3BX     D       un6[7]      10.089       3.968
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[8]      System        FD1S3BX     D       un6[8]      10.089       3.968
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[5]      System        FD1S3BX     D       un6[5]      10.089       4.111
+===========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      6.692
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 3.397
+
+    Number of logic level(s):                10
+    Starting point:                          bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[2] / Q
+    Ending point:                            bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[15] / D
+    The start point is clocked by            System [rising] on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                          Pin      Pin               Arrival     No. of    
+Name                                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[2]      FD1S1AY      Q        Out     1.108     1.108 r     -         
+w_i2c_command_0[2]                                         Net          -        -       -         -           3         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_1               ORCALUT4     C        In      0.000     1.108 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_1               ORCALUT4     Z        Out     1.017     2.125 r     -         
+un6_0_1_0                                                  Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_1_0       CCU2D        C1       In      0.000     2.125 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_1_0       CCU2D        COUT     Out     1.544     3.669 r     -         
+un6_0_0_cry_2                                              Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_3_0       CCU2D        CIN      In      0.000     3.669 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_3_0       CCU2D        COUT     Out     0.143     3.812 r     -         
+un6_0_0_cry_4                                              Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_5_0       CCU2D        CIN      In      0.000     3.812 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_5_0       CCU2D        COUT     Out     0.143     3.955 r     -         
+un6_0_0_cry_6                                              Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_7_0       CCU2D        CIN      In      0.000     3.955 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_7_0       CCU2D        COUT     Out     0.143     4.098 r     -         
+un6_0_0_cry_8                                              Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_9_0       CCU2D        CIN      In      0.000     4.098 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_9_0       CCU2D        COUT     Out     0.143     4.240 r     -         
+un6_0_0_cry_10                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_11_0      CCU2D        CIN      In      0.000     4.240 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_11_0      CCU2D        COUT     Out     0.143     4.383 r     -         
+un6_0_0_cry_12                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_13_0      CCU2D        CIN      In      0.000     4.383 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_cry_13_0      CCU2D        COUT     Out     0.143     4.526 r     -         
+un6_0_0_cry_14                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_s_15_0        CCU2D        CIN      In      0.000     4.526 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_0_0_s_15_0        CCU2D        S0       Out     1.549     6.075 r     -         
+un60[15]                                                   Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_m[15]             ORCALUT4     C        In      0.000     6.075 r     -         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.un6_m[15]             ORCALUT4     Z        Out     0.617     6.692 r     -         
+un6[15]                                                    Net          -        -       -         -           1         
+bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_i2c_command[15]     FD1S3BX      D        In      0.000     6.692 r     -         
+=========================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:27s; Memory used current: 302MB peak: 308MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:27s; Memory used current: 302MB peak: 308MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo3lf_6900c-5
+
+Register bits: 2148 of 54912 (4%)
+Latch bits:      30
+PIC Latch:       0
+I/O cells:       298
+
+
+Details:
+BB:             28
+CCU2D:          383
+EFB:            1
+EHXPLLJ:        1
+FD1P3AX:        238
+FD1P3BX:        95
+FD1P3DX:        1053
+FD1S1AY:        16
+FD1S1D:         14
+FD1S3AX:        2
+FD1S3BX:        118
+FD1S3DX:        567
+GSR:            1
+IB:             117
+IFS1P3BX:       7
+IFS1P3DX:       33
+INV:            37
+L6MUX21:        11
+OB:             120
+OBZ:            33
+OFS1P3BX:       15
+OFS1P3DX:       20
+ORCALUT4:       2845
+OSCH:           1
+PFUMX:          56
+PUR:            1
+VHI:            66
+VLO:            62
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:29s; CPU Time elapsed 0h:00m:27s; Memory used current: 103MB peak: 308MB)
+
+Process took 0h:00m:29s realtime, 0h:00m:28s cputime
+# Thu Mar 13 19:05:24 2025
+
+###########################################################]

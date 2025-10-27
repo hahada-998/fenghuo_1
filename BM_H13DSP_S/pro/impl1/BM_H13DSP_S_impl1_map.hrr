@@ -1,0 +1,669 @@
+---------------------------------------------------
+Report for cell BM_H13DSP_S
+   Instance path: BM_H13DSP_S
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1849.00        100.0
+                                 IOLGC	      68.00        100.0
+                                  LUT4	    2887.00        100.0
+                                 IOREG	         75        100.0
+                                 IOBUF	        298        100.0
+                                PFUREG	       2103        100.0
+                                RIPPLE	        383        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             timer_gen	          1         1.5
+                  s2p_slave_200s_8s_Z2	          1         4.1
+                               s2p_164	          1         2.0
+                     p2s_slave_200s_8s	          1         3.4
+                    pll_i25M_o50M_o25M	          1         0.0
+              pvt_gpi_48s_47s_0s_6s_Z1	          1         1.9
+                 pvt_gpi_8s_0_7s_0s_3s	          1         0.2
+               pvt_gpi_32s_0_31s_0s_6s	          1         2.1
+                             pon_reset	          1         0.1
+                   edge_delay_6s_0_0_7	          1         0.3
+                   edge_delay_6s_0_0_8	          1         0.3
+                   edge_delay_6s_0_0_9	          1         0.3
+                     edge_delay_6s_0_0	          1         0.3
+                  edge_delay_6s_0_0_11	          1         0.3
+                   edge_delay_6s_0_0_6	          1         0.3
+                  edge_delay_6s_0_0_10	          1         0.3
+                    delay_2500000s_22s	          1         0.8
+                  delay_2500000s_22s_7	          1         0.9
+                    delay_5000000s_23s	          1         0.9
+                  delay_5000000s_23s_1	          1         0.8
+                   delay_50000000s_26s	          1         0.9
+                  delay_2500000s_22s_5	          1         0.9
+                  delay_2500000s_22s_6	          1         0.8
+                  delay_2500000s_22s_4	          1         0.9
+                  bmc_cpld_i2c_ram_16s	          1        15.9
+UID_Function_5_0_1_31s_154_247_0_255_1_Z6	          1         1.9
+                 UART_MASTER_Z4_7_11_9	          1         2.2
+                 UART_MASTER_Z4_7_11_8	          1         2.2
+                 UART_MASTER_Z4_7_11_2	          1         2.2
+                 UART_MASTER_Z4_7_11_5	          1         2.2
+                 UART_MASTER_Z4_7_11_6	          1         2.2
+                 UART_MASTER_Z4_7_11_4	          1         2.2
+                 UART_MASTER_Z4_7_11_3	          1         2.2
+                UART_MASTER_Z4_7_11_13	          1         2.4
+                UART_MASTER_Z4_7_11_15	          1         2.2
+                UART_MASTER_Z4_7_11_16	          1         2.2
+                UART_MASTER_Z4_7_11_14	          1         2.4
+                UART_MASTER_Z4_7_11_11	          1         2.4
+                UART_MASTER_Z4_7_11_12	          1         2.4
+                UART_MASTER_Z4_7_11_10	          1         2.4
+                   UART_MASTER_Z4_7_11	          1         2.2
+                 UART_MASTER_Z4_7_11_0	          1         2.2
+              PGM_DEBOUNCE_N_2s_3_8s_1	          1         0.3
+                PGM_DEBOUNCE_8s_2_4s_1	          1         0.7
+                PGM_DEBOUNCE_1s_2_4s_1	          1         0.1
+                 UART_MASTER_Z4_7_11_1	          1         2.2
+                 UART_MASTER_Z4_7_11_7	          1         2.2
+                            I2C_UPDATE	          1         0.0
+                         Edge_Detect_3	          1         0.1
+                            ClkDivTree	          1         0.8
+                  AUX_UART_MASTER_Z3_4	          1         1.9
+                  AUX_UART_MASTER_Z3_6	          1         1.8
+                  AUX_UART_MASTER_Z3_5	          1         2.0
+                  AUX_UART_MASTER_Z3_0	          1         2.0
+                  AUX_UART_MASTER_Z3_2	          1         2.8
+                  AUX_UART_MASTER_Z3_3	          1         1.9
+                  AUX_UART_MASTER_Z3_1	          1         2.0
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_6
+   Instance path: BM_H13DSP_S/aux_uart_master_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      33.83         1.8
+                                  LUT4	      54.00         1.9
+                                PFUREG	         36         1.7
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_1
+   Instance path: BM_H13DSP_S/aux_uart_master_u6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.67         2.0
+                                  LUT4	      60.00         2.1
+                                PFUREG	         36         1.7
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_2
+   Instance path: BM_H13DSP_S/aux_uart_master_u5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      51.50         2.8
+                                  LUT4	      89.00         3.1
+                                PFUREG	         58         2.8
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_3
+   Instance path: BM_H13DSP_S/aux_uart_master_u4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.33         1.9
+                                  LUT4	      55.00         1.9
+                                PFUREG	         36         1.7
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_0
+   Instance path: BM_H13DSP_S/aux_uart_master_u7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.67         2.0
+                                  LUT4	      58.00         2.0
+                                PFUREG	         36         1.7
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_5
+   Instance path: BM_H13DSP_S/aux_uart_master_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.50         2.0
+                                  LUT4	      60.00         2.1
+                                PFUREG	         36         1.7
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell AUX_UART_MASTER_Z3_4
+   Instance path: BM_H13DSP_S/aux_uart_master_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      35.17         1.9
+                                  LUT4	      56.00         1.9
+                                PFUREG	         36         1.7
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell bmc_cpld_i2c_ram_16s
+   Instance path: BM_H13DSP_S/bmc_cpld_i2c_ram_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     293.08        15.9
+                                  LUT4	     466.00        16.1
+                                PFUREG	        292        13.9
+                                RIPPLE	         40        10.4
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     i2c_slave_bmc_16s	          1         8.8
+---------------------------------------------------
+Report for cell i2c_slave_bmc_16s
+   Instance path: BM_H13DSP_S/bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     163.33         8.8
+                                  LUT4	     227.00         7.9
+                                PFUREG	        194         9.2
+                                RIPPLE	         40        10.4
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+               i2c_slave_basic0_3s_16s	          1         3.6
+---------------------------------------------------
+Report for cell i2c_slave_basic0_3s_16s
+   Instance path: BM_H13DSP_S/bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      65.67         3.6
+                                  LUT4	     105.00         3.6
+                                PFUREG	        103         4.9
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0_11
+   Instance path: BM_H13DSP_S/edge_delay_slot_9_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.67         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0_10
+   Instance path: BM_H13DSP_S/edge_delay_slot_8_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.67         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0_9
+   Instance path: BM_H13DSP_S/edge_delay_slot_7_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.67         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0_8
+   Instance path: BM_H13DSP_S/edge_delay_slot_6_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.67         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0_7
+   Instance path: BM_H13DSP_S/edge_delay_slot_5_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.67         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0_6
+   Instance path: BM_H13DSP_S/edge_delay_slot_4_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.42         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0
+   Instance path: BM_H13DSP_S/edge_delay_slot_3_on_dly_10ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.42         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          7         0.3
+                                RIPPLE	          4         1.0
+---------------------------------------------------
+Report for cell s2p_164
+   Instance path: BM_H13DSP_S/s2p_164_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.33         2.0
+                                  LUT4	      57.00         2.0
+                                PFUREG	         30         1.4
+                                RIPPLE	          3         0.8
+---------------------------------------------------
+Report for cell delay_2500000s_22s_7
+   Instance path: BM_H13DSP_S/USB_PWR_EN_DLY100ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.33         0.9
+                                  LUT4	      11.00         0.4
+                                PFUREG	         23         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell UID_Function_5_0_1_31s_154_247_0_255_1_Z6
+   Instance path: BM_H13DSP_S/UID_Function_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.92         1.9
+                                  LUT4	      57.00         2.0
+                                PFUREG	         30         1.4
+                                RIPPLE	         10         2.6
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+           lowpass_filter_3_1_0_4_Z5_1	          1         0.1
+                           Edge_Detect	          1         0.0
+                         Edge_Detect_0	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_0
+   Instance path: BM_H13DSP_S/UID_Function_u0/Edge_Detect_U2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell Edge_Detect
+   Instance path: BM_H13DSP_S/UID_Function_u0/Edge_Detect_U0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.0
+                                PFUREG	          1         0.0
+---------------------------------------------------
+Report for cell lowpass_filter_3_1_0_4_Z5_1
+   Instance path: BM_H13DSP_S/UID_Function_u0/lowpass_filter_U0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                  LUT4	       1.00         0.0
+                                PFUREG	          5         0.2
+---------------------------------------------------
+Report for cell delay_50000000s_26s
+   Instance path: BM_H13DSP_S/ocp_perst_dly1000ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      17.00         0.9
+                                  LUT4	      11.00         0.4
+                                PFUREG	         27         1.3
+                                RIPPLE	         14         3.7
+---------------------------------------------------
+Report for cell delay_5000000s_23s_1
+   Instance path: BM_H13DSP_S/ocp_main_pwr_en_dly100ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.33         0.8
+                                  LUT4	      12.00         0.4
+                                PFUREG	         24         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell delay_2500000s_22s_6
+   Instance path: BM_H13DSP_S/ocp1_stby_pwr_en_dly50ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.42         0.8
+                                  LUT4	      11.00         0.4
+                                PFUREG	         23         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell delay_2500000s_22s_5
+   Instance path: BM_H13DSP_S/ocp1_main_pwr_en_dly50ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.83         0.9
+                                  LUT4	      11.00         0.4
+                                PFUREG	         23         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell delay_2500000s_22s_4
+   Instance path: BM_H13DSP_S/ocp1_aux_pwr_en_dly50ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.75         0.9
+                                  LUT4	      11.00         0.4
+                                PFUREG	         23         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell delay_2500000s_22s
+   Instance path: BM_H13DSP_S/ocp_hp_sw_en_dly50ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.42         0.8
+                                  LUT4	      12.00         0.4
+                                PFUREG	         23         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell delay_5000000s_23s
+   Instance path: BM_H13DSP_S/ocp1_prsnt_invert_dly100ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.75         0.9
+                                  LUT4	      11.00         0.4
+                                PFUREG	         24         1.1
+                                RIPPLE	         12         3.1
+---------------------------------------------------
+Report for cell Edge_Detect_3
+   Instance path: BM_H13DSP_S/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.08         0.1
+                                  LUT4	       2.00         0.1
+                                PFUREG	          4         0.2
+---------------------------------------------------
+Report for cell pvt_gpi_8s_0_7s_0s_3s
+   Instance path: BM_H13DSP_S/pvt_ocp_riser_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.83         0.2
+                                  LUT4	       4.00         0.1
+                                PFUREG	          5         0.2
+---------------------------------------------------
+Report for cell pvt_gpi_32s_0_31s_0s_6s
+   Instance path: BM_H13DSP_S/pvt_ocp0_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.50         2.1
+                                  LUT4	      68.00         2.4
+                                PFUREG	         30         1.4
+                                RIPPLE	          3         0.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_16
+   Instance path: BM_H13DSP_S/uart_master_u18
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.67         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_15
+   Instance path: BM_H13DSP_S/uart_master_u17
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.83         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_14
+   Instance path: BM_H13DSP_S/uart_master_u16
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      43.92         2.4
+                                  LUT4	      74.00         2.6
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_13
+   Instance path: BM_H13DSP_S/uart_master_u15
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      43.83         2.4
+                                  LUT4	      74.00         2.6
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_12
+   Instance path: BM_H13DSP_S/uart_master_u14
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      44.17         2.4
+                                  LUT4	      74.00         2.6
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_11
+   Instance path: BM_H13DSP_S/uart_master_u13
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      43.83         2.4
+                                  LUT4	      74.00         2.6
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_10
+   Instance path: BM_H13DSP_S/uart_master_u12
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      44.42         2.4
+                                  LUT4	      75.00         2.6
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_9
+   Instance path: BM_H13DSP_S/uart_master_u11
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      41.50         2.2
+                                  LUT4	      70.00         2.4
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_8
+   Instance path: BM_H13DSP_S/uart_master_u10
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.00         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_7
+   Instance path: BM_H13DSP_S/uart_master_u9
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.67         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_6
+   Instance path: BM_H13DSP_S/uart_master_u8
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.50         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_5
+   Instance path: BM_H13DSP_S/uart_master_u7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.17         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_4
+   Instance path: BM_H13DSP_S/uart_master_u6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.33         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_3
+   Instance path: BM_H13DSP_S/uart_master_u5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.33         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_2
+   Instance path: BM_H13DSP_S/uart_master_u4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.92         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_1
+   Instance path: BM_H13DSP_S/uart_master_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      39.92         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11_0
+   Instance path: BM_H13DSP_S/uart_master_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.83         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell UART_MASTER_Z4_7_11
+   Instance path: BM_H13DSP_S/uart_master_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      40.83         2.2
+                                  LUT4	      67.00         2.3
+                                PFUREG	         47         2.2
+                                RIPPLE	          7         1.8
+---------------------------------------------------
+Report for cell p2s_slave_200s_8s
+   Instance path: BM_H13DSP_S/inst_slv_to_mb_p2s
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      62.33         3.4
+                                  LUT4	     126.00         4.4
+                                PFUREG	         20         1.0
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell s2p_slave_200s_8s_Z2
+   Instance path: BM_H13DSP_S/inst_mb_to_slv_s2p
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      76.00         4.1
+                                  LUT4	     122.00         4.2
+                                PFUREG	        127         6.0
+                                RIPPLE	          5         1.3
+---------------------------------------------------
+Report for cell pvt_gpi_48s_47s_0s_6s_Z1
+   Instance path: BM_H13DSP_S/pvt_gpi_MB_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.33         1.9
+                                  LUT4	      70.00         2.4
+                                PFUREG	         36         1.7
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_1s_2_4s_1
+   Instance path: BM_H13DSP_S/db_inst_uid_btn
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.42         0.1
+                                  LUT4	       4.00         0.1
+                                PFUREG	          5         0.2
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_N_2s_3_8s_1
+   Instance path: BM_H13DSP_S/db_inst_pwrgood
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.50         0.3
+                                  LUT4	      10.00         0.3
+                                PFUREG	         10         0.5
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_8s_2_4s_1
+   Instance path: BM_H13DSP_S/db_inst_psu
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      12.75         0.7
+                                  LUT4	      24.00         0.8
+                                PFUREG	         24         1.1
+---------------------------------------------------
+Report for cell I2C_UPDATE
+   Instance path: BM_H13DSP_S/inst_i2c_update_flash_config
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          2         0.7
+---------------------------------------------------
+Report for cell ClkDivTree
+   Instance path: BM_H13DSP_S/mClkDivTree
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.92         0.8
+                                  LUT4	      29.00         1.0
+                                PFUREG	         24         1.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          ClkDiv_1s_1s	          1         0.1
+                          ClkDiv_4s_9s	          1         0.2
+                         ClkDiv_6s_49s	          1         0.2
+                        ClkDiv_5s_9s_1	          1         0.2
+                        ClkDiv_3s_4s_1	          1         0.1
+---------------------------------------------------
+Report for cell ClkDiv_1s_1s
+   Instance path: BM_H13DSP_S/mClkDivTree/m1mSCE
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.33         0.1
+                                  LUT4	       2.00         0.1
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell ClkDiv_4s_9s
+   Instance path: BM_H13DSP_S/mClkDivTree/m500uSCE
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.42         0.2
+                                  LUT4	       6.00         0.2
+                                PFUREG	          5         0.2
+---------------------------------------------------
+Report for cell ClkDiv_3s_4s_1
+   Instance path: BM_H13DSP_S/mClkDivTree/m50uSCE
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.67         0.1
+                                  LUT4	       4.00         0.1
+                                PFUREG	          4         0.2
+---------------------------------------------------
+Report for cell ClkDiv_5s_9s_1
+   Instance path: BM_H13DSP_S/mClkDivTree/m10uSCE
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.50         0.2
+                                  LUT4	       8.00         0.3
+                                PFUREG	          6         0.3
+---------------------------------------------------
+Report for cell ClkDiv_6s_49s
+   Instance path: BM_H13DSP_S/mClkDivTree/m1uSCE
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.00         0.2
+                                  LUT4	       9.00         0.3
+                                PFUREG	          7         0.3
+---------------------------------------------------
+Report for cell timer_gen
+   Instance path: BM_H13DSP_S/timer_gen_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      27.08         1.5
+                                  LUT4	      26.00         0.9
+                                PFUREG	         42         2.0
+                                RIPPLE	         11         2.9
+---------------------------------------------------
+Report for cell pon_reset
+   Instance path: BM_H13DSP_S/pon_reset_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.58         0.1
+                                  LUT4	       2.00         0.1
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell pll_i25M_o50M_o25M
+   Instance path: BM_H13DSP_S/pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.0
+                                  LUT4	       1.00         0.0

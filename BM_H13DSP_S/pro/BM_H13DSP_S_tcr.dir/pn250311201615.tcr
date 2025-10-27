@@ -1,0 +1,7 @@
+#Start recording tcl command: 3/11/2025 20:08:17
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Map -impl impl1
+prj_run Export -impl impl1
+prj_project close
+#Stop recording: 3/11/2025 20:16:15

@@ -1,0 +1,379 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file bm_h13dsp_m_impl1.ncd.
+Design name: BM_H13DSP_M
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 6
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Loading design for application iotiming from file bm_h13dsp_m_impl1.ncd.
+Design name: BM_H13DSP_M
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: M
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+// Design: BM_H13DSP_M
+// Package: CABGA400
+// ncd File: bm_h13dsp_m_impl1.ncd
+// Version: Diamond (64-bit) 3.14.0.75.2
+// Written on Thu Oct 23 14:13:30 2025
+// M: Minimum Performance Grade
+// iotiming BM_H13DSP_M_impl1.ncd BM_H13DSP_M_impl1.prf -gui -msgset C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5):
+
+// Input Setup and Hold Times
+
+Port                         Clock              Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+i_BMC_JTAG_DBREQ_N           i_CLK_25M_CPLD     R    11.748      5      -2.659     M
+i_CLK_GEN_ALERT_R_N          i_CLK_25M_CPLD     R    10.628      5      -1.017     M
+i_CPLD2_JTAGEN_R             i_CLK_25M_CPLD     R    10.767      5      -2.387     M
+i_CPLD_DONE                  i_CLK_25M_CPLD     R     9.739      5      -2.052     M
+i_CPLD_ESPI_CS_N             i_CPLD_ESPI_CLK    R    10.209      5       0.030     M
+i_CPLD_ESPI_D0               i_CPLD_ESPI_CLK    R    -0.574      M       3.473     5
+i_CPLD_ESPI_RESET_N          i_CPLD_ESPI_CLK    R     7.287      5       0.188     M
+i_CPLD_INIT_N                i_CLK_25M_CPLD     R     9.482      5      -1.954     M
+i_CPLD_JTAG_EN               i_CLK_25M_CPLD     R     9.287      5      -1.880     M
+i_CPLD_SGPIO0_MISO_R         i_CLK_25M_CPLD     R     0.054      M       1.788     5
+i_CPLD_SGPIO1_MISO_R         i_CLK_25M_CPLD     R    10.119      5      -2.192     M
+i_CPLD_SN                    i_CLK_25M_CPLD     R    10.767      5      -2.387     M
+i_CPU0_SGPIO0_CLK            i_CLK_25M_CPLD     R    12.326      5      -2.715     M
+i_CPU0_SGPIO1_CLK            i_CLK_25M_CPLD     R    12.058      5      -2.602     M
+i_CPU0_SGPIO2_CLK            i_CLK_25M_CPLD     R    10.838      5      -2.240     M
+i_CPU0_SGPIO3_CLK            i_CLK_25M_CPLD     R    10.786      5      -2.271     M
+i_FAN_SPGIO_DATAIN           i_CLK_25M_CPLD     R     9.723      5      -1.972     M
+i_FRONT_VGA_CABLE_PRSNT_N    i_CLK_25M_CPLD     R     6.897      5      -1.596     M
+i_HDR_N_R                    i_CLK_25M_CPLD     R    12.466      5      -2.864     M
+i_HDT_CONN_TESTEN            i_CLK_25M_CPLD     R    10.603      5      -2.194     M
+i_I2C7_PAL_SCL               i_CLK_25M_CPLD     R     6.553      5       1.928     5
+i_IRQ_SPI_TPM_N              i_CLK_25M_CPLD     R    11.943      5      -2.646     M
+i_P0_BIOS_POST_STAGE_R_N     i_CLK_25M_CPLD     R     0.144      M       1.209     5
+i_P0_CORETYPE_0              i_CLK_25M_CPLD     R     6.283      5      -1.346     M
+i_P0_CORETYPE_1              i_CLK_25M_CPLD     R     8.246      5      -1.801     M
+i_P0_CORETYPE_2              i_CLK_25M_CPLD     R     7.694      5      -1.682     M
+i_P0_CPLD_SCL                i_CLK_25M_CPLD     R     4.406      5       1.788     5
+i_P0_CPLD_SPARE_0            i_CLK_25M_CPLD     R     9.344      5      -1.976     M
+i_P0_CPLD_SPARE_1            i_CLK_25M_CPLD     R     8.075      5      -1.611     M
+i_P0_CPLD_SPARE_2            i_CLK_25M_CPLD     R     8.984      5      -1.863     M
+i_P0_CPLD_SPARE_3            i_CLK_25M_CPLD     R     8.420      5      -1.685     M
+i_P0_I3C_APML_ALERT_N        i_CLK_25M_CPLD     R     7.613      5      -1.672     M
+i_P0_MCIOP0A_DATAIN_R        i_CLK_25M_CPLD     R     5.004      5       1.941     5
+i_P0_MCIOP0A_NVME0_PRSNT_N_R i_CLK_25M_CPLD     R     6.301      5      -1.334     M
+i_P0_MCIOP0A_NVME1_PRSNT_N_R i_CLK_25M_CPLD     R     7.243      5      -1.774     M
+i_P0_MCIOP0C_DATAIN_R        i_CLK_25M_CPLD     R     0.054      M       1.788     5
+i_P0_MCIOP0C_NVME0_PRSNT_N_R i_CLK_25M_CPLD     R     7.174      5      -1.691     M
+i_P0_MCIOP0C_NVME1_PRSNT_N_R i_CLK_25M_CPLD     R     6.990      5      -1.508     M
+i_P0_MCIOP1AC_VPPI2C_SCL     i_CLK_25M_CPLD     R    11.183      5      -2.634     M
+i_P0_MCIOP1AC_VPPI2C_SDA     i_CLK_25M_CPLD     R    10.966      5      -2.594     M
+i_P0_MCIOP1A_DATAIN_R        i_CLK_25M_CPLD     R     6.890      5       1.788     5
+i_P0_MCIOP3AC_VPPI2C_SCL     i_CLK_25M_CPLD     R    10.125      5      -2.318     M
+i_P0_MCIOP3AC_VPPI2C_SDA     i_CLK_25M_CPLD     R    10.351      5      -2.404     M
+i_P0_MCIOP3A_DATAIN_R        i_CLK_25M_CPLD     R    11.485      5      -2.709     M
+i_P0_PCIE_RST_N_0            i_CLK_25M_CPLD     R     0.155      M       1.166     5
+i_P0_PCIE_RST_N_1            i_CLK_25M_CPLD     R     0.135      M       1.216     5
+i_P0_PRSNT_N                 i_CLK_25M_CPLD     R    10.000      5      -2.216     M
+i_P0_PWRGD_OUT               i_CLK_25M_CPLD     R     0.155      M       1.166     5
+i_P0_PWROK                   i_CLK_25M_CPLD     R     0.135      M       1.216     5
+i_P0_RESET_N                 i_CLK_25M_CPLD     R     0.135      M       1.216     5
+i_P0_SGPIO_DATA_R            i_CLK_25M_CPLD     R    10.406      5      -2.322     M
+i_P0_SGPIO_LD_R              i_CLK_25M_CPLD     R    10.470      5      -2.344     M
+i_P0_SLP_S3_N                i_CLK_25M_CPLD     R     2.374      5      -0.327     M
+i_P0_SLP_S5_N                i_CLK_25M_CPLD     R     2.948      5      -0.505     M
+i_P0_SMERR_N                 i_CLK_25M_CPLD     R     9.106      5       1.216     5
+i_P0_SP5R_R_1                i_CLK_25M_CPLD     R     9.527      5      -2.254     M
+i_P0_SP5R_R_2                i_CLK_25M_CPLD     R     6.841      5      -1.385     M
+i_P0_SP5R_R_3                i_CLK_25M_CPLD     R    11.057      5      -2.583     M
+i_P0_SP5R_R_4                i_CLK_25M_CPLD     R     9.569      5      -2.100     M
+i_P0_SPD_HOST_CTRL_N         i_CLK_25M_CPLD     R     8.425      5       1.166     5
+i_P0_THERMTRIP_N             i_CLK_25M_CPLD     R     6.407      5       1.216     5
+i_P0_UART_TXD_0              i_CLK_25M_CPLD     R     8.746      5      -1.797     M
+i_P0_VDDIO_OCP_N             i_CLK_25M_CPLD     R     5.609      5       1.788     5
+i_P0_VDD_CORE_0_OCP_N_R      i_CLK_25M_CPLD     R     5.195      5       1.216     5
+i_P0_VR_I2C7_ALERT_N         i_CLK_25M_CPLD     R     6.517      5       1.788     5
+i_P0_XTRIG_N_4               i_CLK_25M_CPLD     R     9.495      5      -2.030     M
+i_P0_XTRIG_N_5               i_CLK_25M_CPLD     R     8.333      5      -1.710     M
+i_P0_XTRIG_N_6               i_CLK_25M_CPLD     R     8.803      5      -1.834     M
+i_P0_XTRIG_N_7               i_CLK_25M_CPLD     R     8.083      5      -1.590     M
+i_P1V8_STBY_PG               i_CLK_25M_CPLD     R     4.801      5       1.928     5
+i_P1_CORETYPE_0              i_CLK_25M_CPLD     R     6.869      5      -1.483     M
+i_P1_CORETYPE_1              i_CLK_25M_CPLD     R     9.283      5      -2.133     M
+i_P1_CORETYPE_2              i_CLK_25M_CPLD     R     8.401      5      -1.919     M
+i_P1_I3C_APML_ALERT_N        i_CLK_25M_CPLD     R     8.309      5      -1.874     M
+i_P1_PCIE_RST_N_0            i_CLK_25M_CPLD     R     0.144      M       1.209     5
+i_P1_PCIE_RST_N_1            i_CLK_25M_CPLD     R     0.126      M       1.245     5
+i_P1_PRSNT_N                 i_CLK_25M_CPLD     R     9.082      5      -1.976     M
+i_P1_PWRGD_OUT               i_CLK_25M_CPLD     R     0.135      M       1.216     5
+i_P1_PWROK                   i_CLK_25M_CPLD     R     0.144      M       1.209     5
+i_P1_RESET_N                 i_CLK_25M_CPLD     R     0.155      M       1.166     5
+i_P1_SLP_S3_N                i_CLK_25M_CPLD     R     7.171      5      -1.396     M
+i_P1_SLP_S5_N                i_CLK_25M_CPLD     R     9.537      5      -2.125     M
+i_P1_SMERR_N                 i_CLK_25M_CPLD     R     9.207      5       1.166     5
+i_P1_SP5R_R_1                i_CLK_25M_CPLD     R     6.704      5      -1.396     M
+i_P1_SP5R_R_2                i_CLK_25M_CPLD     R     6.985      5      -1.475     M
+i_P1_SP5R_R_3                i_CLK_25M_CPLD     R     9.135      5      -1.977     M
+i_P1_SP5R_R_4                i_CLK_25M_CPLD     R     7.705      5      -1.540     M
+i_P1_THERMTRIP_N             i_CLK_25M_CPLD     R     5.841      5       1.216     5
+i_P1_VDDIO_OCP_N             i_CLK_25M_CPLD     R     5.264      5       1.977     5
+i_P1_VDD_CORE_0_OCP_N_R      i_CLK_25M_CPLD     R     5.774      5       1.216     5
+i_P1_VR_I2C7_ALERT_N         i_CLK_25M_CPLD     R     4.609      5       1.928     5
+i_P1_XTRIG_N_4               i_CLK_25M_CPLD     R     9.183      5      -1.959     M
+i_P1_XTRIG_N_5               i_CLK_25M_CPLD     R     9.399      5      -2.013     M
+i_P1_XTRIG_N_6               i_CLK_25M_CPLD     R    10.393      5      -2.210     M
+i_P1_XTRIG_N_7               i_CLK_25M_CPLD     R    10.373      5      -2.195     M
+i_PAL_BMCUID_BUTTON          i_CLK_25M_CPLD     R     3.791      5       1.928     5
+i_PAL_BUTTOPN_RST_N          i_CLK_25M_CPLD     R     5.058      5       1.928     5
+i_PAL_LCD_CARD_IN            i_CLK_25M_CPLD     R    11.269      5      -2.483     M
+i_PAL_P0_VDD_CORE_1_OCP_N    i_CLK_25M_CPLD     R     5.267      5       1.245     5
+i_PAL_P1_VDD_CORE_1_OCP_N    i_CLK_25M_CPLD     R     6.081      5       1.209     5
+i_PAL_PEOGRAM_N              i_CLK_25M_CPLD     R     8.990      5      -1.817     M
+i_PAL_PWR_BTN_N              i_CLK_25M_CPLD     R     3.947      5       1.928     5
+i_PGD_P0_VDDC                i_CLK_25M_CPLD     R     4.814      5       1.788     5
+i_PGD_P0_VDDIO               i_CLK_25M_CPLD     R     5.681      5       1.788     5
+i_PGD_P0_VDD_11_SUS          i_CLK_25M_CPLD     R     6.329      5       1.898     5
+i_PGD_P0_VDD_18_STBY         i_CLK_25M_CPLD     R     5.351      5       1.788     5
+i_PGD_P0_VDD_CORE_0          i_CLK_25M_CPLD     R     4.410      5       1.788     5
+i_PGD_P0_VDD_CORE_1          i_CLK_25M_CPLD     R     5.619      5       1.959     5
+i_PGD_P0_VDD_SOC_0           i_CLK_25M_CPLD     R     5.635      5       1.788     5
+i_PGD_P12V_DROOP             i_CLK_25M_CPLD     R     5.126      5       1.959     5
+i_PGD_P12V_STBY_DROOP        i_CLK_25M_CPLD     R     8.497      5       1.898     5
+i_PGD_P1V2_STBY              i_CLK_25M_CPLD     R     6.309      5       1.959     5
+i_PGD_P1_VDDC                i_CLK_25M_CPLD     R     5.574      5       1.928     5
+i_PGD_P1_VDDIO               i_CLK_25M_CPLD     R     6.129      5       1.959     5
+i_PGD_P1_VDD_11_SUS          i_CLK_25M_CPLD     R     4.460      5       1.928     5
+i_PGD_P1_VDD_18_STBY         i_CLK_25M_CPLD     R     4.458      5       1.788     5
+i_PGD_P1_VDD_CORE_0          i_CLK_25M_CPLD     R     4.831      5       1.941     5
+i_PGD_P1_VDD_CORE_1          i_CLK_25M_CPLD     R     4.821      5       1.928     5
+i_PGD_P1_VDD_SOC_0           i_CLK_25M_CPLD     R     5.403      5       1.928     5
+i_PGD_P3V3_STBY_B            i_CLK_25M_CPLD     R     6.127      5       1.788     5
+i_PGD_P5V                    i_CLK_25M_CPLD     R     5.270      5       1.788     5
+i_PG_P1V0_STBY_M2_R          i_CLK_25M_CPLD     R    12.708      5       1.959     5
+i_PG_P5V_STBY                i_CLK_25M_CPLD     R     5.818      5       1.941     5
+i_PS1_ACFAIL_N               i_CLK_25M_CPLD     R     5.122      5       1.941     5
+i_PS1_DCOK_N                 i_CLK_25M_CPLD     R    13.596      5       1.977     5
+i_PS1_PRSNT                  i_CLK_25M_CPLD     R    13.633      5       1.959     5
+i_PS1_SMB_ALERT              i_CLK_25M_CPLD     R     4.966      5       1.959     5
+i_PS2_ACFAIL_N               i_CLK_25M_CPLD     R     5.543      5       1.941     5
+i_PS2_DCOK_N                 i_CLK_25M_CPLD     R    12.948      5       1.941     5
+i_PS2_PRSNT                  i_CLK_25M_CPLD     R    12.334      5       1.941     5
+i_PS2_SMB_ALERT              i_CLK_25M_CPLD     R     6.301      5       1.959     5
+i_PVT_SS_DATI                i_CLK_25M_CPLD     R     4.539      5       1.928     5
+i_PWRGD_P3V3_STBY            i_CLK_25M_CPLD     R     7.603      5       1.959     5
+i_RTC_INTA_N                 i_CLK_25M_CPLD     R     7.525      5      -1.761     M
+i_RTC_SQW                    i_CLK_25M_CPLD     R     7.210      5      -1.657     M
+i_SATA1_BACKPLANE_TYPE       i_CLK_25M_CPLD     R    11.785      5      -2.685     M
+i_SATA1_SDATAOUT0_R          i_CLK_25M_CPLD     R    10.809      5      -2.403     M
+i_SS_PAL_DATA_IN_R           i_CLK_25M_CPLD     R     0.018      M       1.941     5
+i_UART_CPLD_RX_R             i_CLK_25M_CPLD     R    11.032      5      -2.453     M
+io_I2C7_PAL_SDA              i_CLK_25M_CPLD     R     6.104      5       1.928     5
+io_I2C7_UPDATE_SDA           io_I2C7_UPDATE_SCL R     2.109      5       1.623     5
+io_P0_CPLD_SDA               i_CLK_25M_CPLD     R     3.964      5       1.788     5
+io_P0_MCIOP0A_PWR_EN_R       i_CLK_25M_CPLD     R     4.089      5       1.977     5
+io_P0_MCIOP0C_PWR_EN_R       i_CLK_25M_CPLD     R     5.176      5       1.788     5
+
+
+// Clock to Output Delay
+
+Port                               Clock              Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+io_I2C7_PAL_SDA                    i_CLK_25M_CPLD     R    15.045         5        3.138          M
+io_I2C7_UPDATE_SDA                 io_I2C7_UPDATE_SCL F    11.903         5        2.692          M
+io_P0_CPLD_SDA                     i_CLK_25M_CPLD     R    13.874         5        2.951          M
+io_P0_MCIOP0A_PWR_EN_R             i_CLK_25M_CPLD     R    17.332         5        3.041          M
+io_P0_MCIOP0C_PWR_EN_R             i_CLK_25M_CPLD     R    17.259         5        3.387          M
+o_BIOS_POST_CMPLT_BMC_N_R          i_CLK_25M_CPLD     R    10.338         5        3.296          M
+o_BMC_I2C9_9548_1_RST_N_R          i_CLK_25M_CPLD     R     8.558         5        2.710          M
+o_BMC_I2C9_9548_2_RST_N_R          i_CLK_25M_CPLD     R    10.932         5        3.439          M
+o_BMC_I2C9_9548_3_RST_N_R          i_CLK_25M_CPLD     R     9.368         5        2.978          M
+o_BMC_I2C9_9548_4_RST_N_R          i_CLK_25M_CPLD     R     8.989         5        2.873          M
+o_BMC_JTAG_MUX_S                   i_CLK_25M_CPLD     R     8.735         5        2.799          M
+o_BMC_JTAG_TRST_R_N                i_CLK_25M_CPLD     R    10.327         5        3.250          M
+o_CLK_DB2000_1_1_OE_N              i_CLK_25M_CPLD     R    11.711         5        3.568          M
+o_CLK_DB2000_1_2_OE_N              i_CLK_25M_CPLD     R    11.711         5        3.568          M
+o_CLK_DB800_3_1_OE_N_R             i_CLK_25M_CPLD     R    12.494         5        3.832          M
+o_CLK_DB800_3_2_OE_N_R             i_CLK_25M_CPLD     R    11.295         5        3.490          M
+o_CPLD_ESPI_D1                     i_CPLD_ESPI_CLK    F     9.937         5        2.950          M
+o_CPLD_SGPIO0_CLK_R                i_CLK_25M_CPLD     R    10.564         5        3.319          M
+o_CPLD_SGPIO0_LD_N_R               i_CLK_25M_CPLD     R     9.472         5        3.015          M
+o_CPLD_SGPIO0_MOSI_R               i_CLK_25M_CPLD     R     8.411         5        2.679          M
+o_EEPROM_WP_N_R                    i_CLK_25M_CPLD     R    11.268         5        3.482          M
+o_FAN_PWR_EN                       i_CLK_25M_CPLD     R    14.248         5        3.409          M
+o_FM_PLD_DB800_3_CLKS_DEV_EN_R     i_CLK_25M_CPLD     R    11.388         5        3.421          M
+o_HDT_CPU_PWROK                    i_CLK_25M_CPLD     R     9.981         5        2.885          M
+o_I3C_MUX_SEL_R_0                  i_CLK_25M_CPLD     R    11.685         5        3.656          M
+o_I3C_MUX_SEL_R_1                  i_CLK_25M_CPLD     R    10.927         5        3.445          M
+o_I3C_MUX_SEL_R_2                  i_CLK_25M_CPLD     R     8.516         5        2.721          M
+o_I3C_MUX_SEL_R_3                  i_CLK_25M_CPLD     R    10.478         5        3.302          M
+o_P0_DIMM_AF_PCAMP_R               i_CLK_25M_CPLD     R    13.962         5        3.435          M
+o_P0_DIMM_GL_PCAMP_R               i_CLK_25M_CPLD     R    14.770         5        3.632          M
+o_P0_I2C_9617_EN                   i_CLK_25M_CPLD     R     8.758         5        2.810          M
+o_P0_KBRST_N                       i_CLK_25M_CPLD     R    11.706         5        3.343          M
+o_P0_MCIOP0A_CLK_R                 i_CLK_25M_CPLD     R     9.546         5        3.059          M
+o_P0_MCIOP0A_GPU_THROTTLE_N_R      i_CLK_25M_CPLD     R     9.304         5        2.951          M
+o_P0_MCIOP0A_LD_R                  i_CLK_25M_CPLD     R     8.615         5        2.736          M
+o_P0_MCIOP0A_PERST_N_R             i_CLK_25M_CPLD     R    11.229         5        3.571          M
+o_P0_MCIOP0A_WAKE_N_R              i_CLK_25M_CPLD     R     9.437         5        3.021          M
+o_P0_MCIOP0C_CLK_R                 i_CLK_25M_CPLD     R     9.692         5        3.067          M
+o_P0_MCIOP0C_GPU_THROTTLE_N_R      i_CLK_25M_CPLD     R     8.809         5        2.817          M
+o_P0_MCIOP0C_LD_R                  i_CLK_25M_CPLD     R     7.509         5        2.395          M
+o_P0_MCIOP0C_PERST_N_R             i_CLK_25M_CPLD     R    10.932         5        3.427          M
+o_P0_MCIOP1A_CLK_R                 i_CLK_25M_CPLD     R     8.233         5        2.614          M
+o_P0_MCIOP1A_LD_R                  i_CLK_25M_CPLD     R     7.888         5        2.501          M
+o_P0_NMI_SYNC_FLOOD_N              i_CLK_25M_CPLD     R    11.396         5        3.220          M
+o_P0_PCIE_WAKE_N_R                 i_CLK_25M_CPLD     R    11.899         5        3.442          M
+o_P0_PROCHOT_N                     i_CLK_25M_CPLD     R    11.280         5        3.197          M
+o_P0_PWR_BTN_R_N                   i_CLK_25M_CPLD     R    15.047         5        2.894          M
+o_P0_PWR_GOOD                      i_CLK_25M_CPLD     R    10.767         5        3.083          M
+o_P0_RSMRST_N                      i_CLK_25M_CPLD     R    11.272         5        3.257          M
+o_P0_SPI_T245_OE_N_R               i_CLK_25M_CPLD     R    11.999         5        2.942          M
+o_P0_SYS_RESET_R_N                 i_CLK_25M_CPLD     R    15.228         5        3.799          M
+o_P0_UART_RXD_1                    i_CLK_25M_CPLD     R    16.191         5        3.714          M
+o_P0_VDDC_EN_R                     i_CLK_25M_CPLD     R    11.209         5        2.993          M
+o_P0_VPP_9545_1_RST_N_R            i_CLK_25M_CPLD     R    11.047         5        3.480          M
+o_P0_VPP_9545_2_RST_N_R            i_CLK_25M_CPLD     R    10.137         5        3.232          M
+o_P12V_SLOT_0_ON                   i_CLK_25M_CPLD     R    11.863         5        3.150          M
+o_P12V_SLOT_1_ON                   i_CLK_25M_CPLD     R    11.800         5        3.150          M
+o_P12V_SLOT_2_ON                   i_CLK_25M_CPLD     R    13.263         5        3.536          M
+o_P1V0_STBY_M2_EN                  i_CLK_25M_CPLD     R    14.801         5        3.972          M
+o_P1V2_STBY_EN_R                   i_CLK_25M_CPLD     R     9.949         5        3.153          M
+o_P1_DIMM_AF_PCAMP_R               i_CLK_25M_CPLD     R    13.899         5        3.401          M
+o_P1_DIMM_GL_PCAMP_R               i_CLK_25M_CPLD     R    13.899         5        3.401          M
+o_P1_KBRST_N                       i_CLK_25M_CPLD     R    11.621         5        3.301          M
+o_P1_NMI_SYNC_FLOOD_N              i_CLK_25M_CPLD     R    11.009         5        3.127          M
+o_P1_PCIE_WAKE_N_R                 i_CLK_25M_CPLD     R    12.217         5        3.614          M
+o_P1_PROCHOT_N                     i_CLK_25M_CPLD     R     7.745         5        2.269          M
+o_P1_PWR_GOOD                      i_CLK_25M_CPLD     R    13.941         5        4.040          M
+o_P1_RSMRST_N                      i_CLK_25M_CPLD     R    11.629         5        3.372          M
+o_P1_SYS_RESET_R_N                 i_CLK_25M_CPLD     R    13.370         5        3.237          M
+o_P1_VDDC_EN_R                     i_CLK_25M_CPLD     R    13.881         5        3.319          M
+o_P1_VDDIO_RST_L_N                 i_CLK_25M_CPLD     R    14.515         5        4.151          M
+o_P1_VDD_18_STBY_EN                i_CLK_25M_CPLD     R    13.008         5        3.015          M
+o_P3V_BAT_SWITCH_EN_R              i_CLK_25M_CPLD     R    13.219         5        4.018          M
+o_P5V_VGA2_EN_N_R                  i_CLK_25M_CPLD     R    11.189         5        3.443          M
+o_PAL_BAT_SENSE_R                  i_CLK_25M_CPLD     R    10.579         5        3.356          M
+o_PAL_BIOS_DEBUG_R_N               i_CLK_25M_CPLD     R     9.421         5        2.717          M
+o_PAL_BMC_AUX_PGD                  i_CLK_25M_CPLD     R    11.668         5        3.558          M
+o_PAL_BMC_PERST_N_R                i_CLK_25M_CPLD     R     8.278         5        2.654          M
+o_PAL_BMC_POST_DONE_FLAG_R         i_CLK_25M_CPLD     R    10.759         5        3.117          M
+o_PAL_BMC_SRST_N_R                 i_CLK_25M_CPLD     R     6.438         5        2.145          M
+o_PAL_CLEAR_CMOS_R_N               i_CLK_25M_CPLD     R    17.443         5        3.171          M
+o_PAL_CMOS_CLEAR_R                 i_CLK_25M_CPLD     R    14.753         5        3.261          M
+o_PAL_DB2000_1_PWRGD_R             i_CLK_25M_CPLD     R    11.638         5        3.609          M
+o_PAL_DB2000_2_PWRGD_R             i_CLK_25M_CPLD     R     8.680         5        2.770          M
+o_PAL_DUAL_EN_R                    i_CLK_25M_CPLD     R    12.576         5        3.902          M
+o_PAL_I3C_MUX_EN_R_N               i_CLK_25M_CPLD     R    10.049         5        3.078          M
+o_PAL_P0_I2C5_9548_RST_R           i_CLK_25M_CPLD     R     8.152         5        2.612          M
+o_PAL_P0_PRSENT_HDT                i_CLK_25M_CPLD     R    12.433         5        3.616          M
+o_PAL_P0_VDDIO_EN_R                i_CLK_25M_CPLD     R    13.704         5        3.339          M
+o_PAL_P0_VDDIO_RST_N               i_CLK_25M_CPLD     R    10.954         5        3.295          M
+o_PAL_P0_VDD_11_SUS_EN             i_CLK_25M_CPLD     R    13.789         5        3.052          M
+o_PAL_P0_VDD_18_STBY_EN_R          i_CLK_25M_CPLD     R    11.335         5        3.104          M
+o_PAL_P0_VDD_CORE_0_EN_R           i_CLK_25M_CPLD     R    12.847         5        3.282          M
+o_PAL_P0_VDD_CORE_0_SOC_RST_L_N    i_CLK_25M_CPLD     R    11.405         5        3.438          M
+o_PAL_P0_VDD_CORE_1_11_SUS_RST_L_N i_CLK_25M_CPLD     R    11.586         5        4.008          M
+o_PAL_P0_VDD_CORE_1_EN_R           i_CLK_25M_CPLD     R    12.739         5        3.226          M
+o_PAL_P0_VDD_SOC_EN                i_CLK_25M_CPLD     R    14.316         5        3.427          M
+o_PAL_P1_PRSENT_HDT                i_CLK_25M_CPLD     R     9.558         5        2.735          M
+o_PAL_P1_VDDIO_EN_R                i_CLK_25M_CPLD     R    13.600         5        3.375          M
+o_PAL_P1_VDD_11_SUS_EN             i_CLK_25M_CPLD     R    12.264         5        3.302          M
+o_PAL_P1_VDD_CORE_0_EN_R           i_CLK_25M_CPLD     R    14.286         5        3.329          M
+o_PAL_P1_VDD_CORE_0_SOC_RST_L_N    i_CLK_25M_CPLD     R    13.965         5        3.959          M
+o_PAL_P1_VDD_CORE_1_11_SUS_RST_L_N i_CLK_25M_CPLD     R    11.990         5        3.861          M
+o_PAL_P1_VDD_CORE_1_EN_R           i_CLK_25M_CPLD     R    12.637         5        3.515          M
+o_PAL_P1_VDD_SOC_EN                i_CLK_25M_CPLD     R    14.531         5        3.521          M
+o_PAL_P5V_EN_R                     i_CLK_25M_CPLD     R    14.469         5        3.605          M
+o_PAL_P5V_STBY_EN_R                i_CLK_25M_CPLD     R    11.695         5        3.387          M
+o_PAL_PS_OFF_R                     i_CLK_25M_CPLD     R    11.199         5        3.052          M
+o_PAL_PVCC_HPMOS_SW_R              i_CLK_25M_CPLD     R     9.074         5        2.870          M
+o_PS1_P12V_ON_R                    i_CLK_25M_CPLD     R    10.878         5        3.378          M
+o_PS2_P12V_ON_R                    i_CLK_25M_CPLD     R    14.770         5        4.431          M
+o_PVT_SS_CLK_R                     i_CLK_25M_CPLD     R     9.727         5        3.107          M
+o_PVT_SS_LD_N_R                    i_CLK_25M_CPLD     R    10.136         5        3.205          M
+o_SCALED_BAT_TEST_EN_R             i_CLK_25M_CPLD     R     9.615         5        3.079          M
+o_SS_PAL_CLK_R                     i_CLK_25M_CPLD     R     9.511         5        3.026          M
+o_SS_PAL_DATA_OUT_R                i_CLK_25M_CPLD     R     9.052         5        2.879          M
+o_SS_PAL_LOAD_N_R                  i_CLK_25M_CPLD     R     9.486         5        3.029          M
+o_TPM_IO2_RST                      i_CLK_25M_CPLD     R     9.518         5        3.016          M
+
+
+// Internal_Clock to Output
+
+Port                  Internal_Clock                        
+--------------------------------------------------------
+io_I2C7_UPDATE_SCL    inst_i2c_update_flash_config/i2c1_sclo
+io_I2C7_UPDATE_SDA    inst_i2c_update_flash_config/i2c1_sclo
+o_P0_MCIOP0C_RSV_R    t1us_tick                             
+o_P0_MCIOP0C_WAKE_N_R s2p_164_u1.sclk                       
+WARNING: you must also run trce with hold speed: 5
+WARNING: you must also run trce with setup speed: M
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

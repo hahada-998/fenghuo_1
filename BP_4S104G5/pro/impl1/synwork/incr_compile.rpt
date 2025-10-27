@@ -1,0 +1,192 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+Modified Files: 38
+FID:  path (prevtimestamp, timestamp)
+65       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36)
+66       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v (N/A, 2022-12-01 22:01:12)
+67       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40)
+68       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v (N/A, 2021-02-10 09:29:55)
+69       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v (N/A, 2024-04-22 17:42:13)
+70       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v (N/A, 2021-11-19 17:28:56)
+71       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v (N/A, 2022-11-08 17:13:04)
+72       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v (N/A, 2022-09-13 11:35:16)
+73       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v (N/A, 2022-09-13 14:00:36)
+74       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (N/A, 2024-11-21 10:20:53)
+75       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v (N/A, 2022-09-09 17:01:11)
+76       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v (N/A, 2022-09-09 17:01:31)
+77       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\breath_led\breath_led.v (N/A, 2024-05-16 16:30:28)
+78       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\Edge_Detect.v (N/A, 2022-12-01 22:01:13)
+79       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v (N/A, 2022-09-09 13:45:53)
+80       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\lowpass_filter.v (N/A, 2022-09-13 13:55:57)
+81       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\pon_reset.v (N/A, 2022-09-13 11:35:16)
+82       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51)
+83       D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v (N/A, 2021-11-27 16:55:07)
+46       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (2025-01-10 09:50:36, N/A)
+47       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v (2022-12-01 22:01:12, N/A)
+48       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (2025-01-23 13:57:45, N/A)
+49       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\FAN\fan_counter.v (2021-02-10 09:29:55, N/A)
+50       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v (2024-04-22 17:42:13, N/A)
+51       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v (2021-11-19 17:28:56, N/A)
+52       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v (2022-11-08 17:13:04, N/A)
+53       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v (2022-09-13 11:35:16, N/A)
+54       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v (2022-09-13 14:00:36, N/A)
+55       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (2024-11-21 10:20:53, N/A)
+56       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v (2022-09-09 17:01:11, N/A)
+57       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v (2022-09-09 17:01:31, N/A)
+58       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\breath_led\breath_led.v (2024-05-16 16:30:28, N/A)
+59       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\common\Edge_Detect.v (2022-12-01 22:01:13, N/A)
+60       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\common\edge_delay.v (2022-09-09 13:45:53, N/A)
+61       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\common\lowpass_filter.v (2022-09-13 13:55:57, N/A)
+62       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\common\pon_reset.v (2022-09-13 11:35:16, N/A)
+63       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\common\synclib.v (2022-09-13 11:22:51, N/A)
+64       D:\Project\CNIT-K\8U SW\code\V10\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v (2021-11-27 16:55:07, N/A)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 29
+MID:  lib.cell.view
+0        work.BP_4S104G5.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (module definition)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+1        work.BREAK_COMBI.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+2        work.BREAK_COMBI_N.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+26       work.Edge_Detect.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v (N/A, 2024-04-22 17:42:13) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\Edge_Detect.v (N/A, 2022-12-01 22:01:13) <-- (module definition)
+4        work.I2C_UPDATE.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v (N/A, 2021-11-19 17:28:56) <-- (module definition)
+5        work.ISOLATE_COMBI.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+6        work.PGM_DEBOUNCE.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+7        work.PGM_DEBOUNCE_GPO_N.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+8        work.PGM_DEBOUNCE_N.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+9        work.STABLE.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+10       work.SYNC_DATA.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+11       work.SYNC_DATA_N.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+12       work.SYNC_RESET_AASD.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+13       work.SYNC_RESET_N_AASD.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+14       work.SYNC_RESET_SASD.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v (N/A, 2022-09-13 11:22:51) <-- (module definition)
+16       work.bmc_cpld_i2c_ram.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (N/A, 2024-11-21 10:20:53) <-- (module definition)
+30       work.breath_led.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\breath_led\breath_led.v (N/A, 2024-05-16 16:30:28) <-- (module definition)
+17       work.edge_delay.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v (N/A, 2022-09-09 13:45:53) <-- (module definition)
+27       work.fan_counter.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v (N/A, 2021-02-10 09:29:55) <-- (module definition)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v (N/A, 2024-04-22 17:42:13) <-- (may instantiate this module)
+28       work.fan_pwm_tach.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v (N/A, 2024-04-22 17:42:13) <-- (module definition)
+18       work.i2c_slave_basic0.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (N/A, 2024-11-21 10:20:53) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v (N/A, 2022-09-09 17:01:11) <-- (module definition)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v (N/A, 2022-09-09 17:01:31) <-- (may instantiate this module)
+19       work.i2c_slave_bmc.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (N/A, 2024-11-21 10:20:53) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v (N/A, 2022-09-09 17:01:31) <-- (module definition)
+20       work.lowpass_filter.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\lowpass_filter.v (N/A, 2022-09-13 13:55:57) <-- (module definition)
+21       work.p2s_slave.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v (N/A, 2022-09-13 11:35:16) <-- (module definition)
+22       work.pll_i25M_o50M_o25M.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v (N/A, 2022-11-08 17:13:04) <-- (module definition)
+23       work.pon_reset.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\pon_reset.v (N/A, 2022-09-13 11:35:16) <-- (module definition)
+29       work.pvt_gpi.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v (N/A, 2022-12-01 22:01:12) <-- (module definition)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+24       work.s2p_slave.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v (N/A, 2022-09-13 14:00:36) <-- (module definition)
+25       work.timer_gen.verilog may have changed because the following files changed:
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v (N/A, 2025-01-10 09:50:36) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v (N/A, 2025-02-08 10:30:40) <-- (may instantiate this module)
+                        D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v (N/A, 2021-11-27 16:55:07) <-- (module definition)
+
+*******************************************************************
+Unmodified files: 6
+FID:  path (timestamp)
+0        C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v (2020-10-29 10:20:54)
+1        C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v (2020-10-29 10:20:54)
+2        C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v (2020-10-29 10:23:10)
+3        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v (2020-10-29 10:23:10)
+4        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh (2020-10-29 10:23:10)
+5        C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v (2020-10-29 10:23:10)
+
+*******************************************************************
+Unchanged modules: 0
+MID:  lib.cell.view

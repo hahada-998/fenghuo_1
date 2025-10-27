@@ -1,0 +1,1302 @@
+---------------------------------------------------
+Report for cell BP_4S104G5
+   Instance path: BP_4S104G5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1995.00        100.0
+                                 IOLGC	      68.00        100.0
+                                  LUT4	    3107.00        100.0
+                                 IOREG	         68        100.0
+                                 IOBUF	        292        100.0
+                                PFUREG	       2066        100.0
+                                RIPPLE	        428        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             timer_gen	          1         1.3
+                   s2p_slave_60s_6s_Z1	          1         0.9
+              pvt_gpi_56s_55s_0s_6s_Z2	          1         2.9
+               pvt_gpi_16s_0_15s_0s_4s	          1         1.4
+              pvt_gpi_40s_39s_0s_6s_Z3	          1         1.8
+                             pon_reset	          1         0.1
+                    pll_i25M_o50M_o25M	          1         0.0
+                      p2s_slave_60s_6s	          1         0.8
+                        fan_pwm_tach_5	          1         3.3
+                        fan_pwm_tach_9	          1         3.0
+                        fan_pwm_tach_7	          1         3.1
+                        fan_pwm_tach_8	          1         3.3
+                        fan_pwm_tach_6	          1         3.0
+                       fan_pwm_tach_13	          1         3.3
+                        fan_pwm_tach_3	          1         3.2
+                        fan_pwm_tach_4	          1         2.9
+                       fan_pwm_tach_14	          1         3.1
+                        fan_pwm_tach_2	          1         3.0
+                       fan_pwm_tach_11	          1         2.4
+                       fan_pwm_tach_12	          1         3.0
+                        fan_pwm_tach_1	          1         3.0
+                       fan_pwm_tach_10	          1         3.0
+                        fan_pwm_tach_0	          1         2.3
+                  edge_delay_3s_0_0_15	          1         0.1
+                   edge_delay_4s_0_0_2	          1         0.2
+                     edge_delay_6s_0_0	          1         0.3
+                   edge_delay_3s_0_0_9	          1         0.3
+                     edge_delay_4s_0_0	          1         0.2
+                   edge_delay_4s_0_0_0	          1         0.2
+                  edge_delay_3s_0_0_16	          1         0.1
+                  edge_delay_3s_0_0_17	          1         0.1
+                  edge_delay_3s_0_0_11	          1         0.1
+                  edge_delay_3s_0_0_13	          1         0.1
+                  edge_delay_3s_0_0_14	          1         0.1
+                  edge_delay_3s_0_0_12	          1         0.1
+                     edge_delay_3s_0_0	          1         0.1
+                  edge_delay_3s_0_0_10	          1         0.1
+                            breath_led	          1         1.4
+                  bmc_cpld_i2c_ram_16s	          1        31.3
+                PGM_DEBOUNCE_6s_3_8s_1	          1         0.9
+             PGM_DEBOUNCE_N_13s_3_8s_1	          1         1.9
+               PGM_DEBOUNCE_30s_2_4s_1	          1         3.2
+               PGM_DEBOUNCE_15s_2_4s_1	          1         1.8
+                            I2C_UPDATE	          1         0.0
+---------------------------------------------------
+Report for cell bmc_cpld_i2c_ram_16s
+   Instance path: BP_4S104G5/bmc_cpld_i2c_ram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     624.08        31.3
+                                  LUT4	    1042.67        33.6
+                                PFUREG	        434        21.0
+                                RIPPLE	         48        11.2
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     i2c_slave_bmc_16s	          1        28.1
+---------------------------------------------------
+Report for cell i2c_slave_bmc_16s
+   Instance path: BP_4S104G5/bmc_cpld_i2c_ram/i2c_slave_bmc_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     560.75        28.1
+                                  LUT4	    1042.67        33.6
+                                PFUREG	        194         9.4
+                                RIPPLE	         48        11.2
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+               i2c_slave_basic0_3s_16s	          1         3.2
+---------------------------------------------------
+Report for cell i2c_slave_basic0_3s_16s
+   Instance path: BP_4S104G5/bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      64.80         3.2
+                                  LUT4	     108.00         3.5
+                                PFUREG	        103         5.0
+                                RIPPLE	          4         0.9
+---------------------------------------------------
+Report for cell I2C_UPDATE
+   Instance path: BP_4S104G5/inst_i2c_update_flash_config
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOBUF	          2         0.7
+---------------------------------------------------
+Report for cell fan_pwm_tach_0
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      46.42         2.3
+                                  LUT4	      76.50         2.5
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_27	          1         0.3
+               fan_counter_11s_1022_56	          1         0.4
+               fan_counter_11s_1022_57	          1         0.4
+                        Edge_Detect_43	          1         0.0
+                        Edge_Detect_44	          1         0.0
+                      Edge_Detect_3_13	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_13
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_57
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.33         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_44
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.67         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_56
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.33         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_43
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.67         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_27
+   Instance path: BP_4S104G5/genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.33         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_1
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      59.98         3.0
+                                  LUT4	      81.17         2.6
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_26	          1         0.3
+               fan_counter_11s_1022_54	          1         0.4
+               fan_counter_11s_1022_55	          1         0.4
+                        Edge_Detect_40	          1         0.0
+                        Edge_Detect_41	          1         0.0
+                      Edge_Detect_3_12	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_12
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_55
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_41
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_54
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_40
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_26
+   Instance path: BP_4S104G5/genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_2
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      60.17         3.0
+                                  LUT4	      81.50         2.6
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_25	          1         0.3
+               fan_counter_11s_1022_52	          1         0.4
+               fan_counter_11s_1022_53	          1         0.4
+                        Edge_Detect_37	          1         0.0
+                      Edge_Detect_3_11	          1         0.0
+                        Edge_Detect_38	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_11
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_53
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_38
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_52
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_37
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_25
+   Instance path: BP_4S104G5/genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_3
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      64.67         3.2
+                                  LUT4	      80.50         2.6
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_24	          1         0.3
+               fan_counter_11s_1022_50	          1         0.4
+               fan_counter_11s_1022_51	          1         0.4
+                      Edge_Detect_3_10	          1         0.0
+                        Edge_Detect_34	          1         0.0
+                        Edge_Detect_35	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_10
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_51
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_35
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_50
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_34
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_24
+   Instance path: BP_4S104G5/genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_4
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      58.28         2.9
+                                  LUT4	      78.50         2.5
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_23	          1         0.3
+               fan_counter_11s_1022_48	          1         0.4
+               fan_counter_11s_1022_49	          1         0.4
+                       Edge_Detect_3_9	          1         0.0
+                        Edge_Detect_31	          1         0.0
+                        Edge_Detect_32	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_9
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.20         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_49
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_32
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_48
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_31
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_23
+   Instance path: BP_4S104G5/genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_5
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      64.92         3.3
+                                  LUT4	      81.50         2.6
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_22	          1         0.3
+               fan_counter_11s_1022_46	          1         0.4
+               fan_counter_11s_1022_47	          1         0.4
+                       Edge_Detect_3_8	          1         0.0
+                        Edge_Detect_28	          1         0.0
+                        Edge_Detect_29	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_8
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_47
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_29
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_46
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_28
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_22
+   Instance path: BP_4S104G5/genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_6
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      60.67         3.0
+                                  LUT4	      88.50         2.8
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_21	          1         0.3
+               fan_counter_11s_1022_44	          1         0.4
+               fan_counter_11s_1022_45	          1         0.4
+                       Edge_Detect_3_7	          1         0.0
+                        Edge_Detect_25	          1         0.0
+                        Edge_Detect_26	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_7
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_45
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_26
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_44
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_25
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_21
+   Instance path: BP_4S104G5/genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_7
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      61.95         3.1
+                                  LUT4	      89.50         2.9
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_20	          1         0.3
+               fan_counter_11s_1022_42	          1         0.4
+               fan_counter_11s_1022_43	          1         0.4
+                       Edge_Detect_3_6	          1         0.0
+                        Edge_Detect_22	          1         0.0
+                        Edge_Detect_23	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_6
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.20         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_43
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_23
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_42
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_22
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_20
+   Instance path: BP_4S104G5/genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_8
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      65.25         3.3
+                                  LUT4	      81.17         2.6
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_19	          1         0.3
+               fan_counter_11s_1022_40	          1         0.4
+               fan_counter_11s_1022_41	          1         0.4
+                       Edge_Detect_3_5	          1         0.0
+                        Edge_Detect_19	          1         0.0
+                        Edge_Detect_20	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_5
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_41
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_20
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_40
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_19
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_19
+   Instance path: BP_4S104G5/genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_9
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      59.42         3.0
+                                  LUT4	      79.50         2.6
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_18	          1         0.3
+               fan_counter_11s_1022_38	          1         0.4
+               fan_counter_11s_1022_39	          1         0.4
+                       Edge_Detect_3_4	          1         0.0
+                        Edge_Detect_16	          1         0.0
+                        Edge_Detect_17	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_4
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_39
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_17
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_38
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_16
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_18
+   Instance path: BP_4S104G5/genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_10
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      60.47         3.0
+                                  LUT4	     102.00         3.3
+                                PFUREG	         57         2.8
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_17	          1         0.3
+               fan_counter_11s_1022_36	          1         0.4
+               fan_counter_11s_1022_37	          1         0.4
+                       Edge_Detect_3_3	          1         0.2
+                        Edge_Detect_13	          1         0.0
+                        Edge_Detect_14	          1         0.0
+                        Edge_Detect_12	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_3
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.63         0.2
+                                  LUT4	       9.00         0.3
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_37
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.33         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_14
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.58         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_36
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.33         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_13
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_17
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.33         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell Edge_Detect_12
+   Instance path: BP_4S104G5/genblk1[0].fan_pwm_tach_m/Edge_Detect_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.83         0.0
+                                  LUT4	       1.00         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_pwm_tach_11
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      47.00         2.4
+                                  LUT4	      75.50         2.4
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_16	          1         0.3
+               fan_counter_11s_1022_34	          1         0.4
+               fan_counter_11s_1022_35	          1         0.4
+                       Edge_Detect_3_2	          1         0.0
+                        Edge_Detect_11	          1         0.0
+                        Edge_Detect_10	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_2
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_35
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_11
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.83         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_34
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_10
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.67         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_16
+   Instance path: BP_4S104G5/genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_12
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      60.42         3.0
+                                  LUT4	      82.50         2.7
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+               fan_counter_11s_1022_32	          1         0.4
+                fan_counter_8s_255s_15	          1         0.3
+               fan_counter_11s_1022_33	          1         0.4
+                         Edge_Detect_7	          1         0.0
+                         Edge_Detect_8	          1         0.0
+                       Edge_Detect_3_1	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_1
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_33
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_8
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_32
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_7
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_15
+   Instance path: BP_4S104G5/genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_13
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      66.42         3.3
+                                  LUT4	     106.50         3.4
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                fan_counter_8s_255s_14	          1         0.3
+               fan_counter_11s_1022_30	          1         0.4
+               fan_counter_11s_1022_31	          1         0.4
+                         Edge_Detect_5	          1         0.0
+                         Edge_Detect_4	          1         0.0
+                       Edge_Detect_3_0	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3_0
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_31
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_5
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_30
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_4
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s_14
+   Instance path: BP_4S104G5/genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell fan_pwm_tach_14
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      61.67         3.1
+                                  LUT4	      88.50         2.8
+                                PFUREG	         53         2.6
+                                RIPPLE	         22         5.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                   fan_counter_8s_255s	          1         0.3
+                  fan_counter_11s_1022	          1         0.4
+               fan_counter_11s_1022_29	          1         0.4
+                         Edge_Detect_3	          1         0.0
+                         Edge_Detect_1	          1         0.0
+                         Edge_Detect_0	          1         0.0
+---------------------------------------------------
+Report for cell Edge_Detect_3
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m/Edge_Detect_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.17         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell fan_counter_11s_1022_29
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_1
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m/Edge_Detect_u3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_11s_1022
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.00         0.4
+                                  LUT4	       4.00         0.1
+                                PFUREG	         10         0.5
+                                RIPPLE	          6         1.4
+---------------------------------------------------
+Report for cell Edge_Detect_0
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m/Edge_Detect_u2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell fan_counter_8s_255s
+   Instance path: BP_4S104G5/genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.25         0.3
+                                  LUT4	       1.00         0.0
+                                PFUREG	          8         0.4
+                                RIPPLE	          5         1.2
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_15s_2_4s_1
+   Instance path: BP_4S104G5/db_inst_fan_prsnt
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.67         1.8
+                                  LUT4	      60.00         1.9
+                                PFUREG	         75         3.6
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_30s_2_4s_1
+   Instance path: BP_4S104G5/db_fan_tach_p
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      62.87         3.2
+                                  LUT4	     120.00         3.9
+                                PFUREG	        120         5.8
+---------------------------------------------------
+Report for cell breath_led
+   Instance path: BP_4S104G5/debug_led1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      27.58         1.4
+                                  LUT4	      37.00         1.2
+                                PFUREG	         33         1.6
+                                RIPPLE	         27         6.3
+---------------------------------------------------
+Report for cell edge_delay_4s_0_0_0
+   Instance path: BP_4S104G5/edge_delay_pch_rsmrst_n
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.00         0.2
+                                  LUT4	       8.00         0.3
+                                PFUREG	          4         0.2
+---------------------------------------------------
+Report for cell edge_delay_4s_0_0_2
+   Instance path: BP_4S104G5/edge_delay_retimer2_1p8_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.58         0.2
+                                  LUT4	       8.00         0.3
+                                PFUREG	          5         0.2
+---------------------------------------------------
+Report for cell edge_delay_4s_0_0
+   Instance path: BP_4S104G5/edge_delay_retimer1_1p8_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.33         0.2
+                                  LUT4	       8.00         0.3
+                                PFUREG	          5         0.2
+---------------------------------------------------
+Report for cell edge_delay_6s_0_0
+   Instance path: BP_4S104G5/edge_delay_p0v8_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.3
+                                  LUT4	       4.00         0.1
+                                PFUREG	          6         0.3
+                                RIPPLE	          4         0.9
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_17
+   Instance path: BP_4S104G5/edge_delay_p1v25_pg_50ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.83         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          4         0.2
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_16
+   Instance path: BP_4S104G5/edge_delay_p0v8_pg_50ms
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell pvt_gpi_40s_39s_0s_6s_Z3
+   Instance path: BP_4S104G5/pvt_nic_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.50         1.8
+                                  LUT4	      73.00         2.3
+                                PFUREG	         41         2.0
+---------------------------------------------------
+Report for cell pvt_gpi_16s_0_15s_0s_4s
+   Instance path: BP_4S104G5/pvt1_SW_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      28.08         1.4
+                                  LUT4	      73.00         2.3
+                                PFUREG	         21         1.0
+---------------------------------------------------
+Report for cell pvt_gpi_56s_55s_0s_6s_Z2
+   Instance path: BP_4S104G5/pvt_SW_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      58.58         2.9
+                                  LUT4	     125.00         4.0
+                                PFUREG	         57         2.8
+---------------------------------------------------
+Report for cell p2s_slave_60s_6s
+   Instance path: BP_4S104G5/inst_slv_to_mb_p2s
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.17         0.8
+                                  LUT4	      18.00         0.6
+                                PFUREG	         18         0.9
+                                RIPPLE	          4         0.9
+---------------------------------------------------
+Report for cell s2p_slave_60s_6s_Z1
+   Instance path: BP_4S104G5/inst_mb_to_slv_s2p
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.33         0.9
+                                  LUT4	      22.00         0.7
+                                PFUREG	         35         1.7
+                                RIPPLE	          4         0.9
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_6s_3_8s_1
+   Instance path: BP_4S104G5/db_inst_psu0_pwrok_n
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.50         0.9
+                                  LUT4	      42.00         1.4
+                                PFUREG	         30         1.5
+---------------------------------------------------
+Report for cell PGM_DEBOUNCE_N_13s_3_8s_1
+   Instance path: BP_4S104G5/db_power_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.00         1.9
+                                  LUT4	      84.00         2.7
+                                PFUREG	         60         2.9
+---------------------------------------------------
+Report for cell timer_gen
+   Instance path: BP_4S104G5/timer_gen_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      26.67         1.3
+                                  LUT4	      26.00         0.8
+                                PFUREG	         37         1.8
+                                RIPPLE	         11         2.6
+---------------------------------------------------
+Report for cell pon_reset
+   Instance path: BP_4S104G5/pon_reset_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.67         0.1
+                                  LUT4	       2.00         0.1
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell pll_i25M_o50M_o25M
+   Instance path: BP_4S104G5/pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                  LUT4	       1.00         0.0
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_15
+   Instance path: BP_4S104G5/edge_delay_retimer8_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_14
+   Instance path: BP_4S104G5/edge_delay_retimer7_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_13
+   Instance path: BP_4S104G5/edge_delay_retimer6_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_12
+   Instance path: BP_4S104G5/edge_delay_retimer5_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_11
+   Instance path: BP_4S104G5/edge_delay_retimer4_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_10
+   Instance path: BP_4S104G5/edge_delay_retimer3_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0_9
+   Instance path: BP_4S104G5/edge_delay_retimer2_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       5.00         0.3
+                                  LUT4	      16.00         0.5
+                                PFUREG	          3         0.1
+---------------------------------------------------
+Report for cell edge_delay_3s_0_0
+   Instance path: BP_4S104G5/edge_delay_retimer1_0p9_pg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.25         0.1
+                                  LUT4	       6.00         0.2
+                                PFUREG	          3         0.1

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>BM_H13DSP_M|i_CPLD_ESPI_CLK</data>
+<data>100.0 MHz</data>
+<data>61.3 MHz</data>
+<data>-3.153</data>
+</row>
+<row>
+<data>BM_H13DSP_M|o_P0_PWR_BTN_R_N_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>NA</data>
+<data>NA</data>
+</row>
+<row>
+<data>ClkDiv_1s_1s|rDivClk_q_derived_clock</data>
+<data>100.0 MHz</data>
+<data>367.0 MHz</data>
+<data>7.275</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOP_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>109.8 MHz</data>
+<data>0.895</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOS_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>101.2 MHz</data>
+<data>0.123</data>
+</row>
+<row>
+<data>s2p_164|sclk_derived_clock</data>
+<data>100.0 MHz</data>
+<data>363.8 MHz</data>
+<data>7.251</data>
+</row>
+<row>
+<data>timer_gen|t1us_derived_clock</data>
+<data>100.0 MHz</data>
+<data>363.8 MHz</data>
+<data>13.123</data>
+</row>
+<row>
+<data>System</data>
+<data>100.0 MHz</data>
+<data>373.6 MHz</data>
+<data>7.324</data>
+</row>
+</report_table>

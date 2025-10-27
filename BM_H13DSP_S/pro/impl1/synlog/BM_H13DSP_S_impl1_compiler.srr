@@ -1,0 +1,580 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+@I::"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v" (library work)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v" (library work)
+@I:"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDivTree.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\delay.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\edge_delay.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\edge_detect.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\lowpass_filter.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\pon_reset.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_bmc.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\aux_uart_master.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\IIC_Update\I2C_UPDATE.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\PLL\pll_i25M_o50M_o25M.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\s2p_slave.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v" (library work)
+Verilog syntax check successful!
+File D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v changed - recompiling
+Selecting top level module BM_H13DSP_S
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\aux_uart_master.v":58:32:58:37|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":66:32:66:37|Removing redundant assignment.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
+Running optimization stage 1 on EHXPLLJ .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+Running optimization stage 1 on pll_i25M_o50M_o25M .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+Running optimization stage 1 on pon_reset .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":3:7:3:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":82:54:82:61|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":83:54:83:60|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":145:39:145:47|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":146:41:146:47|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":147:41:147:47|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":148:41:148:49|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":149:41:149:48|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":239:68:239:77|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":240:63:240:71|Removing redundant assignment.
+Running optimization stage 1 on timer_gen .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000110
+	MAX_DIV_CNT=32'b00000000000000000000000000110001
+   Generated name = ClkDiv_6s_49s
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
+Running optimization stage 1 on ClkDiv_6s_49s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000001001
+   Generated name = ClkDiv_5s_9s
+Running optimization stage 1 on ClkDiv_5s_9s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000011
+	MAX_DIV_CNT=32'b00000000000000000000000000000100
+   Generated name = ClkDiv_3s_4s
+Running optimization stage 1 on ClkDiv_3s_4s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000100
+	MAX_DIV_CNT=32'b00000000000000000000000000001001
+   Generated name = ClkDiv_4s_9s
+Running optimization stage 1 on ClkDiv_4s_9s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000001
+	MAX_DIV_CNT=32'b00000000000000000000000000000001
+   Generated name = ClkDiv_1s_1s
+Running optimization stage 1 on ClkDiv_1s_1s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000011000
+   Generated name = ClkDiv_5s_24s
+Running optimization stage 1 on ClkDiv_5s_24s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000010011
+   Generated name = ClkDiv_5s_19s
+Running optimization stage 1 on ClkDiv_5s_19s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
+Running optimization stage 1 on ClkDivTree .......
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
+Running optimization stage 1 on OSCH .......
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
+Running optimization stage 1 on BB .......
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
+Running optimization stage 1 on EFB .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\IIC_Update\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+Running optimization stage 1 on I2C_UPDATE .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+
+	SIGCNT=32'b00000000000000000000000000001000
+	NBITS=2'b10
+	NDELAY=32'b00000000000000000000000000000100
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_8s_2_4s_1
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
+Running optimization stage 1 on PGM_DEBOUNCE_8s_2_4s_1 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":268:7:268:20|Synthesizing module PGM_DEBOUNCE_N in library work.
+
+	SIGCNT=32'b00000000000000000000000000000010
+	NBITS=2'b11
+	NDELAY=32'b00000000000000000000000000001000
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_N_2s_3_8s_1
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":297:44:297:52|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":299:49:299:55|Removing redundant assignment.
+Running optimization stage 1 on PGM_DEBOUNCE_N_2s_3_8s_1 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+
+	SIGCNT=32'b00000000000000000000000000000001
+	NBITS=2'b10
+	NDELAY=32'b00000000000000000000000000000100
+	ENABLE=1'b1
+   Generated name = PGM_DEBOUNCE_1s_2_4s_1
+Running optimization stage 1 on PGM_DEBOUNCE_1s_2_4s_1 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+
+	TOTAL_BIT_COUNT=32'b00000000000000000000000000110000
+	DEFAULT_STATE=48'b000000000000000000000000000000000000000000000000
+	SEGMENT_MAX=32'b00000000000000000000000000101111
+	SEGMENT_MIN=32'b00000000000000000000000000000000
+	NUMBER_OF_COUNTER_BITS=32'b00000000000000000000000000000110
+   Generated name = pvt_gpi_48s_47s_0s_6s_Z1
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
+Running optimization stage 1 on pvt_gpi_48s_47s_0s_6s_Z1 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":18:7:18:15|Synthesizing module s2p_slave in library work.
+
+	NBIT=32'b00000000000000000000000011001000
+	DEFAULT_STATE=64'b0000000000000000000000000000000000000000000000000000000000000000
+	WCNT=32'b00000000000000000000000000001000
+   Generated name = s2p_slave_200s_8s_Z2
+Running optimization stage 1 on s2p_slave_200s_8s_Z2 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+
+	NBIT=32'b00000000000000000000000011001000
+	WCNT=32'b00000000000000000000000000001000
+   Generated name = p2s_slave_200s_8s
+Running optimization stage 1 on p2s_slave_200s_8s .......
+@W: CL265 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@A: CL282 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":66:0:66:5|Feedback mux created for signal so. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\aux_uart_master.v":25:7:25:21|Synthesizing module AUX_UART_MASTER in library work.
+
+	NBIT_IN=32'b00000000000000000000000000010000
+	NBIT_OUT=32'b00000000000000000000000000010000
+	BPS_COUNT_NUM=32'b00000000000000000000000000110000
+	DEF_OUTPUT=1'b0
+	START_COUNT_NUM=32'b00000000000000000000000000011000
+	NBIT_IN6=32'b00000000000000000000000000010110
+	NBIT_OUT6=32'b00000000000000000000000000010110
+	WCNT=32'b00000000000000000000000000000101
+	BPS_CNT=32'b00000000000000000000000000000110
+	WAIT_T=5'b00011
+	DETECT=3'b000
+	IDLE=3'b001
+	START=3'b010
+	DATA_OUT=3'b011
+	WAIT=3'b100
+	RESTART=3'b101
+	DATA_IN=3'b110
+	PASS_THROUGH=3'b111
+   Generated name = AUX_UART_MASTER_Z3
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\aux_uart_master.v":256:75:256:84|Removing redundant assignment.
+Running optimization stage 1 on AUX_UART_MASTER_Z3 .......
+@A: CL282 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\aux_uart_master.v":223:0:223:5|Feedback mux created for signal reg_par_data_out[21:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":25:7:25:17|Synthesizing module UART_MASTER in library work.
+
+	NBIT_IN=32'b00000000000000000000000000010000
+	NBIT_OUT=32'b00000000000000000000000000010000
+	BPS_COUNT_NUM=32'b00000000000000000000000000110000
+	START_COUNT_NUM=32'b00000000000000000000000000011000
+	NBIT_IN6=32'b00000000000000000000000000010110
+	NBIT_OUT6=32'b00000000000000000000000000010110
+	WCNT=32'b00000000000000000000000000000101
+	BPS_CNT=32'b00000000000000000000000000000110
+	WAIT_T=5'b00011
+	IDLE=3'b000
+	START=3'b001
+	DATA_OUT=3'b010
+	WAIT=3'b011
+	RESTART=3'b100
+	DATA_IN=3'b101
+   Generated name = UART_MASTER_Z4
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":227:71:227:80|Removing redundant assignment.
+Running optimization stage 1 on UART_MASTER_Z4 .......
+@A: CL282 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Feedback mux created for signal reg_par_data_out[21:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+
+	TOTAL_BIT_COUNT=32'b00000000000000000000000000100000
+	DEFAULT_STATE=32'b00000000000000000000000000000000
+	SEGMENT_MAX=32'b00000000000000000000000000011111
+	SEGMENT_MIN=32'b00000000000000000000000000000000
+	NUMBER_OF_COUNTER_BITS=32'b00000000000000000000000000000110
+   Generated name = pvt_gpi_32s_0_31s_0s_6s
+Running optimization stage 1 on pvt_gpi_32s_0_31s_0s_6s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+
+	TOTAL_BIT_COUNT=32'b00000000000000000000000000001000
+	DEFAULT_STATE=8'b00000000
+	SEGMENT_MAX=32'b00000000000000000000000000000111
+	SEGMENT_MIN=32'b00000000000000000000000000000000
+	NUMBER_OF_COUNTER_BITS=32'b00000000000000000000000000000011
+   Generated name = pvt_gpi_8s_0_7s_0s_3s
+Running optimization stage 1 on pvt_gpi_8s_0_7s_0s_3s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\edge_detect.v":9:7:9:17|Synthesizing module Edge_Detect in library work.
+Running optimization stage 1 on Edge_Detect .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\delay.v":8:7:8:11|Synthesizing module delay in library work.
+
+	COUNT=32'b00000000010011000100101101000000
+	TOTAL_BITS=32'b00000000000000000000000000010111
+   Generated name = delay_5000000s_23s
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\delay.v":49:13:49:18|Removing redundant assignment.
+Running optimization stage 1 on delay_5000000s_23s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\delay.v":8:7:8:11|Synthesizing module delay in library work.
+
+	COUNT=32'b00000000001001100010010110100000
+	TOTAL_BITS=32'b00000000000000000000000000010110
+   Generated name = delay_2500000s_22s
+Running optimization stage 1 on delay_2500000s_22s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\delay.v":8:7:8:11|Synthesizing module delay in library work.
+
+	COUNT=32'b00000010111110101111000010000000
+	TOTAL_BITS=32'b00000000000000000000000000011010
+   Generated name = delay_50000000s_26s
+Running optimization stage 1 on delay_50000000s_26s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
+
+	TOTAL_STAGES=32'b00000000000000000000000000000011
+	INIT_VALUE=1'b1
+	LOW=1'b0
+	HIGH=1'b1
+	Z=1'bz
+	STAGES=32'b00000000000000000000000000000100
+   Generated name = lowpass_filter_3_1_0_1_4_Z5
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\lowpass_filter.v":61:21:61:26|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\lowpass_filter.v":75:26:75:35|Removing redundant assignment.
+Running optimization stage 1 on lowpass_filter_3_1_0_1_4_Z5 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":27:7:27:18|Synthesizing module UID_Function in library work.
+
+	LONG_PRESS=4'b0101
+	LOW=1'b0
+	HIGH=1'b1
+	Z=1'bz
+	CNT_1S=32'b00000000000000000000000000011111
+	CNT_6S=32'b00000000000000000000000010011010
+	CNT_9S=32'b00000000000000000000000011110111
+	UID_OFF=8'b00000000
+	UID_ON=8'b11111111
+	UID_BLK_NHZ=8'b00000001
+   Generated name = UID_Function_5_0_1_31s_154_247_0_255_1_Z6
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":122:24:122:35|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":134:23:134:33|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":157:27:157:41|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":167:23:167:33|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":264:35:264:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":295:22:295:31|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":318:27:318:42|Removing redundant assignment.
+Running optimization stage 1 on UID_Function_5_0_1_31s_154_247_0_255_1_Z6 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v":3:7:3:13|Synthesizing module s2p_164 in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v":30:19:30:28|Removing redundant assignment.
+@W: CG1340 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v":105:11:105:25|Index into variable pi could be out of range ; a simulation mismatch is possible.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v":109:8:109:9|Removing redundant assignment.
+Running optimization stage 1 on s2p_164 .......
+@A: CL291 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v":24:0:24:5|Register r_old_data with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+
+	CNTR_NBITS=32'b00000000000000000000000000000110
+	DEF_OUTPUT=1'b0
+	DELAY_MODE=1'b0
+   Generated name = edge_delay_6s_0_0
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
+Running optimization stage 1 on edge_delay_6s_0_0 .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+
+	TOTAL_STAGES=32'b00000000000000000000000000000011
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_basic0_3s_16s
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+Running optimization stage 1 on i2c_slave_basic0_3s_16s .......
+@W: CL169 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@A: CL291 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":120:0:120:5|Register r_sampledData_scl_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":149:0:149:5|Register r_sampledData_sda_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL282 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Feedback mux created for signal r_I2c_address[6:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":10:7:10:19|Synthesizing module i2c_slave_bmc in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_bmc_16s
+Running optimization stage 1 on i2c_slave_bmc_16s .......
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":2:7:2:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = bmc_cpld_i2c_ram_16s
+@W: CG133 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":299:10:299:19|Object r_reg_0011 is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on bmc_cpld_i2c_ram_16s .......
+@W: CL271 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":659:0:659:5|Pruning unused bits 7 to 2 of r_reg_000d[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":23:8:23:18|Synthesizing module BM_H13DSP_S in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":816:34:816:59|Removing redundant assignment.
+@W: CG781 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":187:10:187:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":188:10:188:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":189:10:189:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":190:9:190:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":191:10:191:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":192:10:192:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":43:5:43:12|Removing wire clk_2p5m, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":57:5:57:14|Removing wire t16ms_tick, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":231:8:231:21|Removing wire db_i_ps1_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":232:8:232:22|Removing wire db_i_ps1_dcok_n, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":233:8:233:25|Removing wire db_i_ps1_smb_alert, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":234:8:234:24|Removing wire db_i_ps1_acfail_n, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":235:8:235:21|Removing wire db_i_ps2_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":236:8:236:22|Removing wire db_i_ps2_dcok_n, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":237:8:237:25|Removing wire db_i_ps2_smb_alert, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":238:8:238:24|Removing wire db_i_ps2_acfail_n, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":317:8:317:30|Removing wire w_pal_ocp1_mainpwr_on_r, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":318:8:318:29|Removing wire w_pal_ocp1_auxpwr_on_r, as there is no assignment to it.
+@W: CG360 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1609:8:1609:28|Removing wire w_OCP_RISER_BOARD_ID5, as there is no assignment to it.
+Running optimization stage 1 on BM_H13DSP_S .......
+@W: CL169 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2205:0:2205:5|Pruning unused register r_pal_biosrom_io11. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":801:0:801:5|Pruning unused register mb_sgpio_fail. Make sure that there are no unused intermediate registers.
+@W: CL271 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":801:0:801:5|Pruning unused bits 191 to 52 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":801:0:801:5|Pruning unused bits 15 to 13 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2287:41:2287:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2287:41:2287:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2010:2:2010:3|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":356:50:356:53|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2421:28:2421:31|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2010:2:2010:3|Duplicate LOC attributes found on net
+Running optimization stage 2 on BM_H13DSP_S .......
+@W: CL177 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1978:0:1978:5|Sharing sequential element r_pal_ocp_perst3_n_r. Add a syn_preserve attribute to the element to prevent sharing.
+Running optimization stage 2 on bmc_cpld_i2c_ram_16s .......
+Running optimization stage 2 on i2c_slave_bmc_16s .......
+Running optimization stage 2 on i2c_slave_basic0_3s_16s .......
+@W: CL190 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+Extracted state machine for register r_I2C_state
+State machine has 20 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+   10010
+   10011
+Running optimization stage 2 on edge_delay_6s_0_0 .......
+Running optimization stage 2 on s2p_164 .......
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74HC164\s2p_164.v":4:24:4:28|Input i_clk is unused.
+Running optimization stage 2 on UID_Function_5_0_1_31s_154_247_0_255_1_Z6 .......
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\common\UID_Function.v":171:0:171:5|Trying to extract state machine for register r_flag_uid.
+Extracted state machine for register r_flag_uid
+State machine has 3 reachable states with original encodings of:
+   00000000
+   00000001
+   11111111
+Running optimization stage 2 on lowpass_filter_3_1_0_1_4_Z5 .......
+Running optimization stage 2 on delay_50000000s_26s .......
+Running optimization stage 2 on delay_2500000s_22s .......
+Running optimization stage 2 on delay_5000000s_23s .......
+Running optimization stage 2 on Edge_Detect .......
+Running optimization stage 2 on pvt_gpi_8s_0_7s_0s_3s .......
+Running optimization stage 2 on pvt_gpi_32s_0_31s_0s_6s .......
+@W: CL190 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v":35:0:35:5|Optimizing register bit bit_idx_out[5] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\74LV165\pvt_gpi.v":35:0:35:5|Pruning register bit 5 of bit_idx_out[5:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Running optimization stage 2 on UART_MASTER_Z4 .......
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":95:0:95:5|Trying to extract state machine for register curr_state.
+Extracted state machine for register curr_state
+State machine has 6 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+Running optimization stage 2 on AUX_UART_MASTER_Z3 .......
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\rtl\source\uart\aux_uart_master.v":90:0:90:5|Trying to extract state machine for register curr_state.
+Extracted state machine for register curr_state
+State machine has 8 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+   110
+   111
+Running optimization stage 2 on p2s_slave_200s_8s .......
+Running optimization stage 2 on s2p_slave_200s_8s_Z2 .......
+Running optimization stage 2 on pvt_gpi_48s_47s_0s_6s_Z1 .......
+Running optimization stage 2 on PGM_DEBOUNCE_1s_2_4s_1 .......
+Running optimization stage 2 on PGM_DEBOUNCE_N_2s_3_8s_1 .......
+Running optimization stage 2 on PGM_DEBOUNCE_8s_2_4s_1 .......
+Running optimization stage 2 on I2C_UPDATE .......
+Running optimization stage 2 on EFB .......
+Running optimization stage 2 on BB .......
+Running optimization stage 2 on VHI .......
+Running optimization stage 2 on OSCH .......
+Running optimization stage 2 on ClkDivTree .......
+Running optimization stage 2 on ClkDiv_5s_19s .......
+Running optimization stage 2 on ClkDiv_5s_24s .......
+Running optimization stage 2 on ClkDiv_1s_1s .......
+Running optimization stage 2 on ClkDiv_4s_9s .......
+Running optimization stage 2 on ClkDiv_3s_4s .......
+Running optimization stage 2 on ClkDiv_5s_9s .......
+Running optimization stage 2 on ClkDiv_6s_49s .......
+Running optimization stage 2 on timer_gen .......
+Running optimization stage 2 on pon_reset .......
+Running optimization stage 2 on pll_i25M_o50M_o25M .......
+Running optimization stage 2 on EHXPLLJ .......
+Running optimization stage 2 on VLO .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 108MB peak: 112MB)
+
+Process took 0h:00m:09s realtime, 0h:00m:09s cputime
+
+Process completed successfully.
+# Thu Mar 13 19:04:47 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+File D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 94MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Mar 13 19:04:47 2025
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\synwork\BM_H13DSP_S_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:10s; CPU Time elapsed 0h:00m:09s; Memory used current: 22MB peak: 23MB)
+
+Process took 0h:00m:10s realtime, 0h:00m:09s cputime
+
+Process completed successfully.
+# Thu Mar 13 19:04:47 2025
+
+###########################################################]

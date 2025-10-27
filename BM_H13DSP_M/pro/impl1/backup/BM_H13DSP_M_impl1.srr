@@ -1,0 +1,114 @@
+#Build: Synplify Pro (R) Q-2020.03L-SP1, Build 182R, Oct 29 2020
+#install: D:\lscc\diamond\3.12\synpbase
+#OS: Windows 8 6.2
+#Hostname: RDHZW10V129
+
+# Sun Feb  9 17:01:09 2025
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+@I::"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v" (library work)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"D:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v" (library work)
+@I:"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v" (library work)
+@I:"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\include\pwrseq_define.vh" (library work)
+@W: CG921 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":968:8:968:24|w_PAL_BP6_PRSNT_N is already declared in this scope.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1169:8:1169:27|Net w_PWRGD_P12V_PS3_PS4 is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1170:8:1170:23|Net w_PS3_PS4_ACFAIL is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1329:7:1329:21|Net w_bmc_active0_n is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1330:7:1330:26|Net w_pal_p12v_stby_drop is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1331:7:1331:18|Net w_ale_tmp1_n is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1332:7:1332:27|Net w_pal_bmcuid_button_r is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1333:7:1333:23|Net w_peci_master_sel is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1334:7:1334:27|Net w_pcie_pal_bmc_wake_n is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1335:7:1335:22|Net w_password_clear is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1336:7:1336:31|Net w_fm_cpu1_disable_cod_n_r is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1338:7:1338:22|Net cmu_pg_p5v0_stby is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1339:7:1339:22|Net cmu_pg_p3v3_stby is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1340:7:1340:26|Net cmu_pg_p3v3_stby_rgm is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1341:7:1341:22|Net cmu_pg_p2v5_stby is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1342:7:1342:22|Net cmu_pg_p1v8_stby is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1343:7:1343:22|Net cmu_pg_p1v2_stby is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1344:7:1344:22|Net cmu_pg_p1v0_stby is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1345:7:1345:22|Net w_bmc_ready_flag is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1346:7:1346:19|Net w_bmc_onctl_n is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1634:8:1634:18|Net w_sys_pwrok is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":2576:8:2576:19|Net w_PWRGD_P12V is not declared.
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":2609:8:2609:24|Net w_p1v0_stby_m2_en is not declared.
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" (library work)
+@W: CG1337 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1369:7:1369:16|Net w_ram_0212 is not declared.
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\power_button.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\delay.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDivTree.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_detect.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\lowpass_filter.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\pon_reset.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\cpu_module.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\dimm_fail_event.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ERROR_CODE.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\pwrseq_master.v" (library work)
+@I::"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\pwrseq_slave.v" (library work)
+@E: Can't open file as03mb03_define.vh
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Feb  9 17:01:09 2025
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Sun Feb  9 17:01:09 2025
+
+###########################################################]

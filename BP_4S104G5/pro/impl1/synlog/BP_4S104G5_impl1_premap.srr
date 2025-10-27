@@ -1,0 +1,299 @@
+# Sat Feb  8 10:31:45 2025
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202003lat, Build 172R, Built Nov  2 2020 09:31:45, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@A: MF827 |No constraint file specified.
+@L: D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\BP_4S104G5_impl1_scck.rpt 
+See clock summary report "D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\BP_4S104G5_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 135MB peak: 135MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 145MB peak: 145MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 146MB peak: 147MB)
+
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_BP_9548_RST_N_R (in view: work.BP_4S104G5(verilog)) on net o_BP_9548_RST_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_DS160_RX_READ_EN_N (in view: work.BP_4S104G5(verilog)) on net o_DS160_RX_READ_EN_N (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_DS160_TX_READ_EN_N (in view: work.BP_4S104G5(verilog)) on net o_DS160_TX_READ_EN_N (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_FPGA_BOOT_EN_R (in view: work.BP_4S104G5(verilog)) on net o_FPGA_BOOT_EN_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_FPGA_EROT_RECOV_N_R (in view: work.BP_4S104G5(verilog)) on net o_FPGA_EROT_RECOV_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_FPGA_EROT_RST_N_R (in view: work.BP_4S104G5(verilog)) on net o_FPGA_EROT_RST_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_HGX_DETECT_N_R (in view: work.BP_4S104G5(verilog)) on net o_HGX_DETECT_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_I2C_RST0_N_R (in view: work.BP_4S104G5(verilog)) on net o_I2C_RST0_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_I2C_RST1_N_R (in view: work.BP_4S104G5(verilog)) on net o_I2C_RST1_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_I2C_RST2_N_R (in view: work.BP_4S104G5(verilog)) on net o_I2C_RST2_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\pon_reset.v":76:0:76:5|Removing sequential instance pon_reset_db_n (in view: work.pon_reset(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\pon_reset.v":61:0:61:5|Removing sequential instance pgd_aux_system_sasd (in view: work.pon_reset(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":57:2:57:7|Removing sequential instance t40ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":57:2:57:7|Removing sequential instance t160ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":97:0:97:5|Removing sequential instance t2us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":97:0:97:5|Removing sequential instance t128us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":97:0:97:5|Removing sequential instance t16ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":97:0:97:5|Removing sequential instance t32ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":97:0:97:5|Removing sequential instance t64ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":97:0:97:5|Removing sequential instance t256ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\synclib.v":284:4:284:9|Removing sequential instance mInst\[2\]\.out_i[2] (in view: work.PGM_DEBOUNCE_N_13s_3_8s_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\pon_reset.v":61:0:61:5|Removing sequential instance pgd_aux_system_reg (in view: work.pon_reset(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_8(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_7(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_6(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_5(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_12(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_11(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_10(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_9(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_16(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_15(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_13(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_20(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_19(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_18(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_17(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_24(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_23(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_22(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_21(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_28(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_27(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_26(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_25(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_32(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_31(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_30(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_29(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_36(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_35(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_34(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_33(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_40(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_39(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_38(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_37(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_44(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_43(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_42(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_41(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_48(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_47(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_46(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_45(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_52(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_51(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_50(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_49(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_56(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_55(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_54(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3_53(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_8(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_7(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_6(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_5(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_12(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_11(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_10(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_9(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_16(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_15(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_13(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_20(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_19(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_18(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_17(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_24(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_23(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_22(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":54:0:54:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3_21(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\synlog\BP_4S104G5_impl1_premap.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+Encoding state machine r_I2C_state[19:0] (in view: work.i2c_slave_basic0_3s_16s(verilog))
+original code -> new code
+   00000 -> 00000000000000000001
+   00001 -> 00000000000000000010
+   00010 -> 00000000000000000100
+   00011 -> 00000000000000001000
+   00100 -> 00000000000000010000
+   00101 -> 00000000000000100000
+   00110 -> 00000000000001000000
+   00111 -> 00000000000010000000
+   01000 -> 00000000000100000000
+   01001 -> 00000000001000000000
+   01010 -> 00000000010000000000
+   01011 -> 00000000100000000000
+   01100 -> 00000001000000000000
+   01101 -> 00000010000000000000
+   01110 -> 00000100000000000000
+   01111 -> 00001000000000000000
+   10000 -> 00010000000000000000
+   10001 -> 00100000000000000000
+   10010 -> 01000000000000000000
+   10011 -> 10000000000000000000
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 190MB peak: 190MB)
+
+@N: MF578 |Incompatible asynchronous control logic preventing generated clock conversion.
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 191MB peak: 191MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 191MB peak: 191MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 191MB peak: 191MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=240 on top level netlist BP_4S104G5 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 191MB peak: 192MB)
+
+@N: MT611 :|Automatically generated clock Edge_Detect_3_55|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_51|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_47|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_43|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_39|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_35|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_31|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_27|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_23|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_19|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_15|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_11|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_7|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_3_3|o_signal_pos_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock Edge_Detect_2|o_signal_pos_inferred_clock is not used and is being removed
+
+
+Clock Summary
+******************
+
+          Start                                       Requested     Requested     Clock        Clock                   Clock
+Level     Clock                                       Frequency     Period        Type         Group                   Load 
+----------------------------------------------------------------------------------------------------------------------------
+0 -       pll_i25M_o50M_o25M|CLKOP_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_1     1327 
+                                                                                                                            
+0 -       pll_i25M_o50M_o25M|CLKOS_inferred_clock     100.0 MHz     10.000        inferred     Inferred_clkgroup_0     648  
+============================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                            Clock     Source                                Clock Pin                                           Non-clock Pin     Non-clock Pin
+Clock                                       Load      Pin                                   Seq Example                                         Seq Example       Comb Example 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     1327      pll_inst.PLLInst_0.CLKOP(EHXPLLJ)     mcpld_to_swcpld_data_filter[1:0].C                  -                 -            
+                                                                                                                                                                               
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     648       pll_inst.PLLInst_0.CLKOS(EHXPLLJ)     genblk1\[0\]\.r_pwm_D_fan_limit_use\[0\][7:0].C     -                 -            
+===============================================================================================================================================================================
+
+@W: MT531 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Found signal identified as System clock which controls 346 sequential elements including genblk1\[9\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT529 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Found inferred clock pll_i25M_o50M_o25M|CLKOS_inferred_clock which controls 648 sequential elements including bmc_cpld_i2c_ram.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_state[19]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_delay.v":52:0:52:5|Found inferred clock pll_i25M_o50M_o25M|CLKOP_inferred_clock which controls 1327 sequential elements including edge_delay_retimer1_0p9_pg.timer_cnt[2:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 1975 clock pin(s) of sequential element(s)
+16 gated/generated clock tree(s) driving 346 clock pin(s) of sequential element(s)
+0 instances converted, 346 sequential instances remain driven by gated/generated clocks
+
+================================================ Non-Gated/Non-Generated Clocks ================================================
+Clock Tree ID     Driving Element              Drive Element Type     Fanout     Sample Instance                                
+--------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       pll_inst.PLLInst_0.CLKOS     EHXPLLJ                648        genblk1\[14\]\.r_pwm_D_fan_pre_limit\[14\][7:0]
+@KP:ckid0_2       pll_inst.PLLInst_0.CLKOP     EHXPLLJ                1327       r_sw3_spi_cs_sel_err_flag                      
+================================================================================================================================
+================================================================================================ Gated/Generated Clocks =================================================================================================
+Clock Tree ID     Driving Element                                                   Drive Element Type     Unconverted Fanout     Sample Instance                                         Explanation                    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1.OUT             and                    16                     bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC
+@KP:ckid0_3       genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[10\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_4       genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[1\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_5       genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[6\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_6       genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[4\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_7       genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[13\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_8       genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[3\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_9       genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[5\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_10      genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[12\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_11      genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[2\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_12      genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[8\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_13      genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[0\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_14      genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[11\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_15      genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[7\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+@KP:ckid0_16      genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT     and                    22                     genblk1\[14\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]     Clock source is invalid for GCC
+@KP:ckid0_17      genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos.OUT      and                    22                     genblk1\[9\]\.fan_pwm_tach_m.o_fan_tach1_cnt[10:0]      Clock source is invalid for GCC
+=========================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:04s; Memory used current: 192MB peak: 192MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:04s; Memory used current: 192MB peak: 192MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:04s; Memory used current: 193MB peak: 193MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:05s; Memory used current: 109MB peak: 193MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:05s cputime
+# Sat Feb  8 10:31:52 2025
+
+###########################################################]

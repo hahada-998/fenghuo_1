@@ -1,0 +1,1073 @@
+
+Loading design for application trce from file bm_h13dsp_m_impl1_map.ncd.
+Design name: BM_H13DSP_M
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/studyware/lattice_diamond_3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Thu Oct 23 14:11:45 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BM_H13DSP_M_impl1.tw1 -gui -msgset C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/promote.xml BM_H13DSP_M_impl1_map.ncd BM_H13DSP_M_impl1.prf 
+Design file:     bm_h13dsp_m_impl1_map.ncd
+Preference file: bm_h13dsp_m_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   1.800 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i_CLK_25M_CPLD_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "wb_clk" 4.290000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 224.454ns
+         The internal maximum frequency of the following component is 115.660 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    EFB        WBCLKI         inst_i2c_update_flash_config/EFBInst_0
+
+   Delay:               8.646ns -- based on Minimum Pulse Width
+
+Report:  115.660MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 7.938ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              pwrseq_master_inst/state[18]  (from clk_50m +)
+   Destination:    FF         Data in        pwrseq_master_inst/dispg_watchdog_timeout  (to clk_50m +)
+
+   Delay:              11.813ns  (30.2% logic, 69.8% route), 8 logic levels.
+
+ Constraint Details:
+
+     11.813ns physical path delay pwrseq_master_inst/SLICE_1147 to pwrseq_master_inst/SLICE_1110 meets
+     20.000ns delay constraint less
+      0.249ns CE_SET requirement (totaling 19.751ns) by 7.938ns
+
+ Physical Path Details:
+
+      Data path pwrseq_master_inst/SLICE_1147 to pwrseq_master_inst/SLICE_1110:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 *LICE_1147.CLK to *SLICE_1147.Q0 pwrseq_master_inst/SLICE_1147 (from clk_50m)
+ROUTE         5   e 1.030 *SLICE_1147.Q0 to  SLICE_3098.C0 pwrseq_master_inst/state[18]
+CTOF_DEL    ---     0.452  SLICE_3098.C0 to  SLICE_3098.F0 SLICE_3098
+ROUTE         1   e 1.030  SLICE_3098.F0 to  SLICE_2562.A1 pwrseq_master_inst/lim_m3_e_1
+CTOF_DEL    ---     0.452  SLICE_2562.A1 to  SLICE_2562.F1 SLICE_2562
+ROUTE         4   e 1.030  SLICE_2562.F1 to  SLICE_2559.C0 pwrseq_master_inst/lim_m3_e_2
+CTOF_DEL    ---     0.452  SLICE_2559.C0 to  SLICE_2559.F0 SLICE_2559
+ROUTE         1   e 1.030  SLICE_2559.F0 to *SLICE_1156.B1 pwrseq_master_inst/N_1098
+CTOF_DEL    ---     0.452 *SLICE_1156.B1 to *SLICE_1156.F1 pwrseq_master_inst/SLICE_1156
+ROUTE         4   e 1.030 *SLICE_1156.F1 to *SLICE_1123.A0 pwrseq_master_inst/N_1149
+CTOF_DEL    ---     0.452 *SLICE_1123.A0 to *SLICE_1123.F0 pwrseq_master_inst/SLICE_1123
+ROUTE        13   e 1.030 *SLICE_1123.F0 to  SLICE_2869.C0 pwrseq_master_inst/off_state
+CTOF_DEL    ---     0.452  SLICE_2869.C0 to  SLICE_2869.F0 SLICE_2869
+ROUTE         1   e 1.030  SLICE_2869.F0 to  SLICE_2579.B1 pwrseq_master_inst/un1_m2_i_1
+CTOF_DEL    ---     0.452  SLICE_2579.B1 to  SLICE_2579.F1 SLICE_2579
+ROUTE         1   e 1.030  SLICE_2579.F1 to *SLICE_1110.CE pwrseq_master_inst/dispg_watchdog_timeout_RNO (to clk_50m)
+                  --------
+                   11.813   (30.2% logic, 69.8% route), 8 logic levels.
+
+Report:   82.905MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 6.507ns (weighted slack = 13.014ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_pwrgood/mInst[16].out_i[16]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              13.343ns  (36.9% logic, 63.1% route), 11 logic levels.
+
+ Constraint Details:
+
+     13.343ns physical path delay SLICE_2600 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 6.507ns
+
+ Physical Path Details:
+
+      Data path SLICE_2600 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409 SLICE_2600.CLK to  SLICE_2600.Q0 SLICE_2600 (from clk_50m)
+ROUTE         3   e 1.030  SLICE_2600.Q0 to *SLICE_2220.A1 db_i_pgd_p1_vdd_18_stby
+CTOF_DEL    ---     0.452 *SLICE_2220.A1 to *SLICE_2220.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1   e 0.401 *SLICE_2220.F1 to *SLICE_2220.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz_3[0]
+CTOF_DEL    ---     0.452 *SLICE_2220.A0 to *SLICE_2220.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1   e 1.030 *SLICE_2220.F0 to *SLICE_1984.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz[0]
+CTOF_DEL    ---     0.452 *SLICE_1984.A0 to *SLICE_1984.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1   e 0.401 *SLICE_1984.F0 to *SLICE_1984.A1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452 *SLICE_1984.A1 to *SLICE_1984.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1   e 1.030 *SLICE_1984.F1 to *SLICE_2230.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452 *SLICE_2230.A0 to *SLICE_2230.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1   e 1.030 *SLICE_2230.F0 to *SLICE_2229.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452 *SLICE_2229.D0 to *SLICE_2229.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1   e 1.030 *SLICE_2229.F0 to *SLICE_2113.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452 *SLICE_2113.B0 to *SLICE_2113.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1   e 0.401 *SLICE_2113.F0 to *SLICE_2113.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452 *SLICE_2113.B1 to *SLICE_2113.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1   e 1.030 *SLICE_2113.F1 to *SLICE_2131.D1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452 *SLICE_2131.D1 to *SLICE_2131.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1   e 1.030 *SLICE_2131.F1 to */SLICE_516.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452 */SLICE_516.D0 to */SLICE_516.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1   e 0.001 */SLICE_516.F0 to *SLICE_516.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   13.343   (36.9% logic, 63.1% route), 11 logic levels.
+
+Report:   37.056MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i_CLK_25M_CPLD_c"        |             |             |
+25.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "wb_clk" 4.290000 MHz ;   |    4.290 MHz|  115.660 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "clk_50m" 50.000000 MHz ; |   50.000 MHz|   82.905 MHz|   8  
+                                        |             |             |
+FREQUENCY NET "clk_25m" 25.000000 MHz ; |   25.000 MHz|   37.056 MHz|  11  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 58 clocks:
+
+Clock Domain: wb_clk   Source: inst_osch.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: w1mSCE   Source: SLICE_1622.Q0   Loads: 21
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: t1us_tick   Source: SLICE_1557.Q0   Loads: 53
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_7   Source: SLICE_2910.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_6   Source: SLICE_2909.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_5   Source: SLICE_2912.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_4   Source: SLICE_2911.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_3   Source: SLICE_2914.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_2   Source: SLICE_2913.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_1   Source: SLICE_2908.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst   Source: SLICE_2915.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1.sclk   Source: s2p_164_u1/SLICE_1344.Q0   Loads: 6
+   No transfer within this clock domain is found
+
+Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_sclo   Source: inst_i2c_update_flash_config/EFBInst_0.I2C1SCLO   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_scli   Source: io_I2C7_UPDATE_SCL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD   Loads: 115
+   No transfer within this clock domain is found
+
+Clock Domain: i_CLK_25M_CPLD_c   Source: i_CLK_25M_CPLD.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1159
+   Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 50
+
+Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS   Loads: 350
+   Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 387
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0   Loads: 4
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 38944 paths, 4 nets, and 15348 connections (77.11% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Thu Oct 23 14:11:46 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BM_H13DSP_M_impl1.tw1 -gui -msgset C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/promote.xml BM_H13DSP_M_impl1_map.ncd BM_H13DSP_M_impl1.prf 
+Design file:     bm_h13dsp_m_impl1_map.ncd
+Preference file: bm_h13dsp_m_impl1.prf
+Device,speed:    LCMXO3LF-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   1.800 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i_CLK_25M_CPLD_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "wb_clk" 4.290000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              system_rst_u0/lowpass_filter_U0/r_data[0]  (from clk_50m +)
+   Destination:    FF         Data in        system_rst_u0/lowpass_filter_U0/r_data[1]  (to clk_50m +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_2326 to SLICE_2326 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_2326 to SLICE_2326:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 SLICE_2326.CLK to  SLICE_2326.Q0 SLICE_2326 (from clk_50m)
+ROUTE         2   e 0.199  SLICE_2326.Q0 to  SLICE_2326.M1 system_rst_u0/lowpass_filter_U0/r_data[0] (to clk_50m)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[11]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[12]  (to clk_25m +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_2320 to SLICE_2320 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_2320 to SLICE_2320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 SLICE_2320.CLK to  SLICE_2320.Q0 SLICE_2320 (from clk_25m)
+ROUTE         1   e 0.199  SLICE_2320.Q0 to  SLICE_2320.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[11] (to clk_25m)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i_CLK_25M_CPLD_c"        |             |             |
+25.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "wb_clk" 4.290000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_50m" 50.000000 MHz ; |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk_25m" 25.000000 MHz ; |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 58 clocks:
+
+Clock Domain: wb_clk   Source: inst_osch.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: w1mSCE   Source: SLICE_1622.Q0   Loads: 21
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: t1us_tick   Source: SLICE_1557.Q0   Loads: 53
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_7   Source: SLICE_2910.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_6   Source: SLICE_2909.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_5   Source: SLICE_2912.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_4   Source: SLICE_2911.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_3   Source: SLICE_2914.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_2   Source: SLICE_2913.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_1   Source: SLICE_2908.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst   Source: SLICE_2915.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1.sclk   Source: s2p_164_u1/SLICE_1344.Q0   Loads: 6
+   No transfer within this clock domain is found
+
+Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_sclo   Source: inst_i2c_update_flash_config/EFBInst_0.I2C1SCLO   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_scli   Source: io_I2C7_UPDATE_SCL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD   Loads: 115
+   No transfer within this clock domain is found
+
+Clock Domain: i_CLK_25M_CPLD_c   Source: i_CLK_25M_CPLD.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1159
+   Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 50
+
+Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS   Loads: 350
+   Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 387
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0   Loads: 4
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 38944 paths, 4 nets, and 16311 connections (81.95% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

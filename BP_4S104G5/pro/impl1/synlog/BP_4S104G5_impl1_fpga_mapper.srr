@@ -1,0 +1,1077 @@
+# Sat Feb  8 10:31:53 2025
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202003lat, Build 172R, Built Nov  2 2020 09:31:45, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 128MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 128MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 133MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 135MB peak: 137MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 176MB peak: 176MB)
+
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_I2C_RST2_N_R (in view: work.BP_4S104G5(verilog)) on net o_I2C_RST2_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_I2C_RST1_N_R (in view: work.BP_4S104G5(verilog)) on net o_I2C_RST1_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_I2C_RST0_N_R (in view: work.BP_4S104G5(verilog)) on net o_I2C_RST0_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_DS160_RX_READ_EN_N (in view: work.BP_4S104G5(verilog)) on net o_DS160_RX_READ_EN_N (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_DS160_TX_READ_EN_N (in view: work.BP_4S104G5(verilog)) on net o_DS160_TX_READ_EN_N (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_NVLINK_REFCLK_SELECT_R (in view: work.BP_4S104G5(verilog)) on net o_NVLINK_REFCLK_SELECT_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_HGX_DETECT_N_R (in view: work.BP_4S104G5(verilog)) on net o_HGX_DETECT_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_FPGA_BOOT_EN_R (in view: work.BP_4S104G5(verilog)) on net o_FPGA_BOOT_EN_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_FPGA_EROT_RST_N_R (in view: work.BP_4S104G5(verilog)) on net o_FPGA_EROT_RST_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":147:27:147:30|Tristate driver o_FPGA_EROT_RECOV_N_R (in view: work.BP_4S104G5(verilog)) on net o_FPGA_EROT_RECOV_N_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\pon_reset.v":43:0:43:5|Removing sequential instance pon_reset_inst.reset2_reg[2:0] because it is equivalent to instance pon_reset_inst.reset1_reg[2:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bp_4s104g5_top.v":1546:8:1546:19|Removing user instance un1_pon_reset_n because it is equivalent to instance un1_pgd_aux_system. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 186MB peak: 186MB)
+
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":81:0:81:5|Found counter in view:work.timer_gen(verilog) instance usec_tmr[4:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":81:0:81:5|Found counter in view:work.timer_gen(verilog) instance sec_tmr[14:0] 
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":47:2:47:7|Removing sequential instance cnt20ns[2] (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[55] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[54] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[53] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[52] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[51] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[50] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[49] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[48] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[47] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[46] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[45] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[44] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[43] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[42] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[41] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[40] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[39] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[38] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[37] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[36] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[35] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[34] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[33] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[32] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[31] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[30] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[29] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[28] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[27] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[26] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[25] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[24] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[23] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[22] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[21] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[20] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[19] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[18] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[17] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[16] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[15] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[14] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[13] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[12] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[11] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[10] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[9] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":89:2:89:7|Removing sequential instance po_r[6] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[55] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[54] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[53] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[52] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[51] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[50] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[49] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[48] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[47] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[46] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[45] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[44] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[43] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[42] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[41] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[40] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[39] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[38] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[37] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[36] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[35] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[34] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[33] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[32] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[31] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[30] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[29] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[28] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[27] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[26] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[25] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[24] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[23] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[22] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[21] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[20] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[19] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[18] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[17] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[16] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[15] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[14] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[13] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[12] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[11] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[10] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[9] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":97:2:97:7|Removing sequential instance po[6] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":79:2:79:7|Found counter in view:work.s2p_slave_60s_6s_Z1(verilog) instance cnt[5:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\sgpio_slave\p2s_slave.v":66:0:66:5|Found counter in view:work.p2s_slave_60s_6s(verilog) instance cnt[5:0] 
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[36] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[36] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[29] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[29] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Removing sequential instance par_data[28] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) because it does not drive other instances.
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[28] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\synlog\BP_4S104G5_impl1_fpga_mapper.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[27] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[8] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[3] (in view: work.pvt_gpi_56s_55s_0s_6s_Z2(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":35:0:35:5|Found counter in view:work.pvt_gpi_16s_0_15s_0s_4s(verilog) instance bit_idx_out[3:0] 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[5] (in view: work.pvt_gpi_40s_39s_0s_6s_Z3(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[4] (in view: work.pvt_gpi_40s_39s_0s_6s_Z3(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[3] (in view: work.pvt_gpi_40s_39s_0s_6s_Z3(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[2] (in view: work.pvt_gpi_40s_39s_0s_6s_Z3(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[1] (in view: work.pvt_gpi_40s_39s_0s_6s_Z3(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\74lv165\pvt_gpi.v":25:0:25:5|Boundary register par_data[0] (in view: work.pvt_gpi_40s_39s_0s_6s_Z3(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_4s_0_0_2(verilog) instance timer_cnt[3:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_4s_0_0_1(verilog) instance timer_cnt[3:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_4s_0_0_0(verilog) instance timer_cnt[3:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[9].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[9].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_0(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_1(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_0(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[14].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[14].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_1(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_3(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_2(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[7].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[7].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_2(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_5(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_4(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[11].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[11].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_3(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_7(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_6(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[0].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[0].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_4(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_9(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_8(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[8].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[8].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_5(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_11(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_10(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[2].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[2].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_6(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_13(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_12(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[12].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[12].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_7(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_15(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_14(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[5].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[5].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_8(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_17(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_16(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[3].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[3].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_9(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_19(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_18(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[13].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[13].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_10(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_21(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_20(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[4].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[4].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_11(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_23(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_22(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[6].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[6].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_12(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_25(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_24(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[1].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[1].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_13(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_27(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_26(verilog) instance r_cnt_result[9:0] 
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":193:0:193:5|Sequential instance genblk1[10].fan_pwm_tach_m.o_fan_tach0_cnt[10] is reduced to a combinational gate by constant propagation.
+@W: MO129 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_pwm_tach.v":201:0:201:5|Sequential instance genblk1[10].fan_pwm_tach_m.o_fan_tach1_cnt[10] is reduced to a combinational gate by constant propagation.
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_8s_255s_14(verilog) instance r_cnt_result[7:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_29(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\fan\fan_counter.v":41:0:41:5|Found counter in view:work.fan_counter_11s_1022_28(verilog) instance r_cnt_result[9:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_bmc.v":112:0:112:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_write_byte_cnt[15:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_bmc.v":102:0:102:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_read_byte_cnt[15:0] 
+@N: MO231 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Found counter in view:work.i2c_slave_basic0_3s_16s(verilog) instance r_timeout_cnt[5:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 201MB peak: 201MB)
+
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[6].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[4].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[13].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[3].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[5].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[12].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[8].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[11].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[14].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[9].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u1.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[6].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[4].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[13].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[3].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[5].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[12].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[8].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[11].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[14].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[9].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u0.r_signal_a. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[14].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[9].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[9].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[11].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[8].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[12].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[5].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[3].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[13].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[4].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[6].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u1.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[14].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[9].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[9].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[11].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[8].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[7].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[12].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[5].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[3].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[13].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[4].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[6].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[2].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[10].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\common\edge_detect.v":40:0:40:5|Removing instance genblk1[1].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b because it is equivalent to instance genblk1[0].fan_pwm_tach_m.Edge_Detect_u0.r_signal_b. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:11s; CPU Time elapsed 0h:00m:11s; Memory used current: 226MB peak: 226MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:15s; CPU Time elapsed 0h:00m:14s; Memory used current: 228MB peak: 246MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:17s; CPU Time elapsed 0h:00m:16s; Memory used current: 229MB peak: 246MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:19s; CPU Time elapsed 0h:00m:18s; Memory used current: 229MB peak: 246MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:20s; CPU Time elapsed 0h:00m:19s; Memory used current: 229MB peak: 246MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:22s; CPU Time elapsed 0h:00m:22s; Memory used current: 229MB peak: 246MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:28s; CPU Time elapsed 0h:00m:27s; Memory used current: 298MB peak: 304MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:28s		     1.24ns		3152 /      2090
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:30s; CPU Time elapsed 0h:00m:29s; Memory used current: 298MB peak: 304MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:34s; CPU Time elapsed 0h:00m:33s; Memory used current: 299MB peak: 304MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:35s; CPU Time elapsed 0h:00m:34s; Memory used current: 251MB peak: 304MB)
+
+Writing Analyst data base D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:38s; CPU Time elapsed 0h:00m:35s; Memory used current: 293MB peak: 304MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:40s; CPU Time elapsed 0h:00m:38s; Memory used current: 300MB peak: 304MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:41s; CPU Time elapsed 0h:00m:39s; Memory used current: 295MB peak: 304MB)
+
+@W: MT246 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\i2c_update\i2c_update.v":91:8:91:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"d:\project\cnit-k\8u sw\code\v10\4port\bp_4s104g5\rtl\source\pll\pll_i25m_o50m_o25m.v":67:12:67:20|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock pll_i25M_o50M_o25M|CLKOS_inferred_clock with period 10.00ns. Please declare a user-defined clock on net pll_inst.clk_25m.
+@W: MT420 |Found inferred clock pll_i25M_o50M_o25M|CLKOP_inferred_clock with period 10.00ns. Please declare a user-defined clock on net pll_inst.clk_50m.
+@W: MT420 |Found inferred clock fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[10\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[1\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[6\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[4\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[13\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[3\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[5\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[12\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[2\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[8\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[11\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[7\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[14\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+@W: MT420 |Found inferred clock fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock with period 10.00ns. Please declare a user-defined clock on net genblk1\[9\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Sat Feb  8 10:32:35 2025
+#
+
+
+Top view:               BP_4S104G5
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.383
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                                                               Requested     Estimated     Requested     Estimated                Clock        Clock               
+Starting Clock                                                 Frequency     Frequency     Period        Period        Slack      Type         Group               
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_2 
+fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_3 
+fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_4 
+fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_5 
+fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_6 
+fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_7 
+fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_8 
+fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_9 
+fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_10
+fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock      100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_11
+fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_12
+fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_13
+fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_14
+fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_15
+fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock     100.0 MHz     NA            10.000        NA            NA         inferred     Inferred_clkgroup_16
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                        100.0 MHz     132.1 MHz     10.000        7.569         2.432      inferred     Inferred_clkgroup_1 
+pll_i25M_o50M_o25M|CLKOS_inferred_clock                        100.0 MHz     96.3 MHz      10.000        10.383        -0.383     inferred     Inferred_clkgroup_0 
+System                                                         100.0 MHz     115.2 MHz     10.000        8.680         1.320      system       system_clkgroup     
+===================================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                                                  |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                                    Ending                                                      |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                                      System                                                      |  10.000      10.000  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                                      pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  10.000      1.320   |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock                     System                                                      |  10.000      8.923   |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock                     pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  10.000      -0.383  |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock                     pll_i25M_o50M_o25M|CLKOP_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     pll_i25M_o50M_o25M|CLKOP_inferred_clock                     |  10.000      2.432   |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock                     fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_0|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_1|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_2|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_3|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_4|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_5|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_6|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_7|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_8|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_9|Edge_Detect_u1_w_clk_1s_pos_inferred_clock   pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_10|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_11|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_12|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_13|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+fan_pwm_tach_14|Edge_Detect_u1_w_clk_1s_pos_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock                     |  Diff grp    -       |  No paths    -      |  No paths    -      |  No paths    -    
+===============================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: pll_i25M_o50M_o25M|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                           Starting                                                                          Arrival          
+Instance                                                   Reference                                   Type        Pin     Net               Time        Slack
+                                                           Clock                                                                                              
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.r_signal_a     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3BX     Q       r_signal_a        1.044       2.432
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.r_signal_b     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3BX     Q       r_signal_b        0.972       2.503
+debug_led1.inc_dec_flag                                    pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       inc_dec_flag      1.319       4.203
+debug_led1.duty_cycle[0]                                   pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       un1_led_0         1.148       4.231
+debug_led1.period_cnt[0]                                   pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     Q       period_cnt[0]     1.108       4.271
+debug_led1.duty_cycle[1]                                   pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       un1_led_1         1.108       4.414
+debug_led1.duty_cycle[2]                                   pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     Q       un1_led_2         1.108       4.414
+debug_led1.period_cnt[1]                                   pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     Q       period_cnt[1]     1.108       4.414
+debug_led1.period_cnt[2]                                   pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     Q       period_cnt[2]     1.108       4.414
+genblk1\[4\]\.fan_pwm_tach_m.r_clr_pwm_cnt                 pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     Q       r_clr_pwm_cnt     1.044       4.505
+==============================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                                Starting                                                                                    Required          
+Instance                                                        Reference                                   Type        Pin     Net                         Time         Slack
+                                                                Clock                                                                                                         
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+debug_led1.duty_cycle[15]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       duty_cycle_6_iv_i_0[15]     10.089       4.203
+debug_led1.period_cnt[15]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       period_cnt_3[15]            10.089       4.271
+debug_led1.duty_cycle[13]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       duty_cycle_6[13]            10.089       4.346
+debug_led1.duty_cycle[14]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       N_10                        10.089       4.346
+debug_led1.period_cnt[14]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       period_cnt_3[14]            10.089       4.414
+debug_led1.duty_cycle[11]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       duty_cycle_6[11]            10.089       4.488
+debug_led1.duty_cycle[12]                                       pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       duty_cycle_6[12]            10.089       4.488
+genblk1\[4\]\.fan_pwm_tach_m.fan_pwm_cnt_u0.r_cnt_result[7]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       r_cnt_result_s[7]           9.894        4.505
+genblk1\[8\]\.fan_pwm_tach_m.fan_pwm_cnt_u0.r_cnt_result[7]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       r_cnt_result_s[7]           9.894        4.505
+genblk1\[3\]\.fan_pwm_tach_m.fan_pwm_cnt_u0.r_cnt_result[7]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       r_cnt_result_s[7]           9.894        4.505
+==============================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      7.463
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 2.431
+
+    Number of logic level(s):                8
+    Starting point:                          genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.r_signal_a / Q
+    Ending point:                            genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result[9] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                                   Pin      Pin               Arrival     No. of    
+Name                                                                                Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------------------
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.r_signal_a                              FD1S3BX      Q        Out     1.044     1.044 r     -         
+r_signal_a                                                                          Net          -        -       -         -           2         
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos                            ORCALUT4     A        In      0.000     1.044 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.o_signal_pos                            ORCALUT4     Z        Out     1.870     2.914 r     -         
+w_clk_1s_pos_i                                                                      Net          -        -       -         -           345       
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos_inferred_clock_RNIOKPD     INV          A        In      0.000     2.914 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.Edge_Detect_u1.w_clk_1s_pos_inferred_clock_RNIOKPD     INV          Z        Out     0.884     3.798 f     -         
+w_clk_1s_pos_i_0                                                                    Net          -        -       -         -           22        
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[0]                   CCU2D        A1       In      0.000     3.798 f     -         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[0]                   CCU2D        COUT     Out     1.544     5.343 r     -         
+r_cnt_result_cry[0]                                                                 Net          -        -       -         -           1         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[1]                   CCU2D        CIN      In      0.000     5.343 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[1]                   CCU2D        COUT     Out     0.143     5.486 r     -         
+r_cnt_result_cry[2]                                                                 Net          -        -       -         -           1         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[3]                   CCU2D        CIN      In      0.000     5.486 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[3]                   CCU2D        COUT     Out     0.143     5.628 r     -         
+r_cnt_result_cry[4]                                                                 Net          -        -       -         -           1         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[5]                   CCU2D        CIN      In      0.000     5.628 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[5]                   CCU2D        COUT     Out     0.143     5.771 r     -         
+r_cnt_result_cry[6]                                                                 Net          -        -       -         -           1         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[7]                   CCU2D        CIN      In      0.000     5.771 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_cry_0[7]                   CCU2D        COUT     Out     0.143     5.914 r     -         
+r_cnt_result_cry[8]                                                                 Net          -        -       -         -           1         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_s_0[9]                     CCU2D        CIN      In      0.000     5.914 r     -         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result_s_0[9]                     CCU2D        S0       Out     1.549     7.463 r     -         
+r_cnt_result_s[9]                                                                   Net          -        -       -         -           1         
+genblk1\[0\]\.fan_pwm_tach_m.fan_pwm_cnt_u2.r_cnt_result[9]                         FD1P3DX      D        In      0.000     7.463 r     -         
+==================================================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: pll_i25M_o50M_o25M|CLKOS_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                        Starting                                                                                Arrival           
+Instance                                                Reference                                   Type        Pin     Net                     Time        Slack 
+                                                        Clock                                                                                                     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[0]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[0]        1.630       -0.383
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[1]        1.614       -0.363
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[2]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[2]        1.601       -0.354
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[3]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[3]        1.555       -0.256
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[4]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[4]        1.443       -0.144
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[5]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[5]        1.413       -0.114
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[6]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[6]        1.344       -0.045
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[7]      pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[7]        1.256       0.072 
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[14]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[14]       1.180       0.116 
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[15]     1.180       0.116 
+==================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                        Starting                                                                                 Required           
+Instance                                                Reference                                   Type        Pin     Net                      Time         Slack 
+                                                        Clock                                                                                                       
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.r_i2c_data_in[0]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[0]     9.894        -0.383
+bmc_cpld_i2c_ram.r_i2c_data_in[7]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[7]     9.894        -0.383
+bmc_cpld_i2c_ram.r_i2c_data_in[6]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[6]     9.894        -0.311
+bmc_cpld_i2c_ram.r_i2c_data_in[5]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[5]     9.894        0.072 
+bmc_cpld_i2c_ram.r_i2c_data_in[1]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[1]     9.894        0.307 
+bmc_cpld_i2c_ram.r_i2c_data_in[2]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[2]     9.894        0.307 
+bmc_cpld_i2c_ram.r_i2c_data_in[3]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[3]     9.894        0.307 
+bmc_cpld_i2c_ram.r_i2c_data_in[4]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_178[4]     9.894        0.307 
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un6[15]                  10.089       1.046 
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[13]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un6[13]                  10.089       1.189 
+====================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      10.278
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.383
+
+    Number of logic level(s):                9
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[0] / Q
+    Ending point:                            bmc_cpld_i2c_ram.r_i2c_data_in[0] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                 Pin      Pin               Arrival      No. of    
+Name                                                              Type         Name     Dir     Delay     Time         Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[0]                FD1S3BX      Q        Out     1.630     1.630 r      -         
+w_i2c_command[0]                                                  Net          -        -       -         -            223       
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIUIHH_0[2]      ORCALUT4     A        In      0.000     1.630 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIUIHH_0[2]      ORCALUT4     Z        Out     1.277     2.907 f      -         
+N_143                                                             Net          -        -       -         -            10        
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     C        In      0.000     2.907 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     Z        Out     1.017     3.924 r      -         
+r_i2c_data_in_178_sn_m129_0_0_0                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     B        In      0.000     3.924 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     Z        Out     1.017     4.941 r      -         
+r_i2c_data_in_178_sn_m129_0_0_3                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     C        In      0.000     4.941 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     Z        Out     1.017     5.957 r      -         
+r_i2c_data_in_178_sn_m129_0_0_5                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     B        In      0.000     5.957 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     Z        Out     1.249     7.206 r      -         
+r_i2c_data_in_178_sn_N_130                                        Net          -        -       -         -            7         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     A        In      0.000     7.206 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     Z        Out     1.089     8.295 f      -         
+r_i2c_data_in_178_174_s[7]                                        Net          -        -       -         -            2         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[0]        PFUMX        C0       In      0.000     8.295 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[0]        PFUMX        Z        Out     0.802     9.097 r      -         
+N_1632                                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[0]          L6MUX21      D1       In      0.000     9.097 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[0]          L6MUX21      Z        Out     0.732     9.829 r      -         
+r_i2c_data_in_178_d[0]                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[0]            ORCALUT4     A        In      0.000     9.829 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[0]            ORCALUT4     Z        Out     0.449     10.278 r     -         
+r_i2c_data_in_178[0]                                              Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.r_i2c_data_in[0]                                 FD1S3DX      D        In      0.000     10.278 r     -         
+=================================================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      10.278
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.383
+
+    Number of logic level(s):                9
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[0] / Q
+    Ending point:                            bmc_cpld_i2c_ram.r_i2c_data_in[7] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                 Pin      Pin               Arrival      No. of    
+Name                                                              Type         Name     Dir     Delay     Time         Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[0]                FD1S3BX      Q        Out     1.630     1.630 r      -         
+w_i2c_command[0]                                                  Net          -        -       -         -            223       
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIUIHH_0[2]      ORCALUT4     A        In      0.000     1.630 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIUIHH_0[2]      ORCALUT4     Z        Out     1.277     2.907 f      -         
+N_143                                                             Net          -        -       -         -            10        
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     C        In      0.000     2.907 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     Z        Out     1.017     3.924 r      -         
+r_i2c_data_in_178_sn_m129_0_0_0                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     B        In      0.000     3.924 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     Z        Out     1.017     4.941 r      -         
+r_i2c_data_in_178_sn_m129_0_0_3                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     C        In      0.000     4.941 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     Z        Out     1.017     5.957 r      -         
+r_i2c_data_in_178_sn_m129_0_0_5                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     B        In      0.000     5.957 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     Z        Out     1.249     7.206 r      -         
+r_i2c_data_in_178_sn_N_130                                        Net          -        -       -         -            7         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     A        In      0.000     7.206 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     Z        Out     1.089     8.295 f      -         
+r_i2c_data_in_178_174_s[7]                                        Net          -        -       -         -            2         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[7]        PFUMX        C0       In      0.000     8.295 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[7]        PFUMX        Z        Out     0.802     9.097 r      -         
+N_1639                                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[7]          L6MUX21      D1       In      0.000     9.097 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[7]          L6MUX21      Z        Out     0.732     9.829 r      -         
+r_i2c_data_in_178_d[7]                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[7]            ORCALUT4     A        In      0.000     9.829 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[7]            ORCALUT4     Z        Out     0.449     10.278 r     -         
+r_i2c_data_in_178[7]                                              Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.r_i2c_data_in[7]                                 FD1S3DX      D        In      0.000     10.278 r     -         
+=================================================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      10.258
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.363
+
+    Number of logic level(s):                9
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1] / Q
+    Ending point:                            bmc_cpld_i2c_ram.r_i2c_data_in[0] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                 Pin      Pin               Arrival      No. of    
+Name                                                              Type         Name     Dir     Delay     Time         Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1]                FD1S3BX      Q        Out     1.614     1.614 r      -         
+w_i2c_command[1]                                                  Net          -        -       -         -            213       
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIVJHH[2]        ORCALUT4     A        In      0.000     1.614 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIVJHH[2]        ORCALUT4     Z        Out     1.273     2.887 r      -         
+N_134                                                             Net          -        -       -         -            9         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     A        In      0.000     2.887 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     Z        Out     1.017     3.904 f      -         
+r_i2c_data_in_178_sn_m129_0_0_0                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     B        In      0.000     3.904 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     Z        Out     1.017     4.921 f      -         
+r_i2c_data_in_178_sn_m129_0_0_3                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     C        In      0.000     4.921 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     Z        Out     1.017     5.937 f      -         
+r_i2c_data_in_178_sn_m129_0_0_5                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     B        In      0.000     5.937 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     Z        Out     1.249     7.186 f      -         
+r_i2c_data_in_178_sn_N_130                                        Net          -        -       -         -            7         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     A        In      0.000     7.186 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     Z        Out     1.089     8.275 r      -         
+r_i2c_data_in_178_174_s[7]                                        Net          -        -       -         -            2         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[0]        PFUMX        C0       In      0.000     8.275 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[0]        PFUMX        Z        Out     0.802     9.077 r      -         
+N_1632                                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[0]          L6MUX21      D1       In      0.000     9.077 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[0]          L6MUX21      Z        Out     0.732     9.809 r      -         
+r_i2c_data_in_178_d[0]                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[0]            ORCALUT4     A        In      0.000     9.809 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[0]            ORCALUT4     Z        Out     0.449     10.258 r     -         
+r_i2c_data_in_178[0]                                              Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.r_i2c_data_in[0]                                 FD1S3DX      D        In      0.000     10.258 r     -         
+=================================================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      10.258
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.363
+
+    Number of logic level(s):                9
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1] / Q
+    Ending point:                            bmc_cpld_i2c_ram.r_i2c_data_in[7] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                 Pin      Pin               Arrival      No. of    
+Name                                                              Type         Name     Dir     Delay     Time         Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1]                FD1S3BX      Q        Out     1.614     1.614 r      -         
+w_i2c_command[1]                                                  Net          -        -       -         -            213       
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIVJHH[2]        ORCALUT4     A        In      0.000     1.614 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIVJHH[2]        ORCALUT4     Z        Out     1.273     2.887 r      -         
+N_134                                                             Net          -        -       -         -            9         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     A        In      0.000     2.887 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     Z        Out     1.017     3.904 f      -         
+r_i2c_data_in_178_sn_m129_0_0_0                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     B        In      0.000     3.904 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     Z        Out     1.017     4.921 f      -         
+r_i2c_data_in_178_sn_m129_0_0_3                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     C        In      0.000     4.921 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     Z        Out     1.017     5.937 f      -         
+r_i2c_data_in_178_sn_m129_0_0_5                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     B        In      0.000     5.937 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     Z        Out     1.249     7.186 f      -         
+r_i2c_data_in_178_sn_N_130                                        Net          -        -       -         -            7         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     A        In      0.000     7.186 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     Z        Out     1.089     8.275 r      -         
+r_i2c_data_in_178_174_s[7]                                        Net          -        -       -         -            2         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[7]        PFUMX        C0       In      0.000     8.275 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[7]        PFUMX        Z        Out     0.802     9.077 r      -         
+N_1639                                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[7]          L6MUX21      D1       In      0.000     9.077 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[7]          L6MUX21      Z        Out     0.732     9.809 r      -         
+r_i2c_data_in_178_d[7]                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[7]            ORCALUT4     A        In      0.000     9.809 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[7]            ORCALUT4     Z        Out     0.449     10.258 r     -         
+r_i2c_data_in_178[7]                                              Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.r_i2c_data_in[7]                                 FD1S3DX      D        In      0.000     10.258 r     -         
+=================================================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      10.249
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.354
+
+    Number of logic level(s):                9
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[2] / Q
+    Ending point:                            bmc_cpld_i2c_ram.r_i2c_data_in[0] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                 Pin      Pin               Arrival      No. of    
+Name                                                              Type         Name     Dir     Delay     Time         Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[2]                FD1S3BX      Q        Out     1.601     1.601 r      -         
+w_i2c_command[2]                                                  Net          -        -       -         -            205       
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIUIHH_0[2]      ORCALUT4     B        In      0.000     1.601 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIUIHH_0[2]      ORCALUT4     Z        Out     1.277     2.878 f      -         
+N_143                                                             Net          -        -       -         -            10        
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     C        In      0.000     2.878 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_reg_01314_0_a2_0_RNIH1I22     ORCALUT4     Z        Out     1.017     3.895 r      -         
+r_i2c_data_in_178_sn_m129_0_0_0                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     B        In      0.000     3.895 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNI16EE3[4]       ORCALUT4     Z        Out     1.017     4.912 r      -         
+r_i2c_data_in_178_sn_m129_0_0_3                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     C        In      0.000     4.912 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIORDT5[4]       ORCALUT4     Z        Out     1.017     5.929 r      -         
+r_i2c_data_in_178_sn_m129_0_0_5                                   Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     B        In      0.000     5.929 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command_RNIIUNM9[6]       ORCALUT4     Z        Out     1.249     7.177 r      -         
+r_i2c_data_in_178_sn_N_130                                        Net          -        -       -         -            7         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     A        In      0.000     7.177 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174_s[7]      ORCALUT4     Z        Out     1.089     8.266 f      -         
+r_i2c_data_in_178_174_s[7]                                        Net          -        -       -         -            2         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[0]        PFUMX        C0       In      0.000     8.266 f      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_174[0]        PFUMX        Z        Out     0.802     9.068 r      -         
+N_1632                                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[0]          L6MUX21      D1       In      0.000     9.068 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178_d[0]          L6MUX21      Z        Out     0.732     9.800 r      -         
+r_i2c_data_in_178_d[0]                                            Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[0]            ORCALUT4     A        In      0.000     9.800 r      -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_data_in_178[0]            ORCALUT4     Z        Out     0.449     10.249 r     -         
+r_i2c_data_in_178[0]                                              Net          -        -       -         -            1         
+bmc_cpld_i2c_ram.r_i2c_data_in[0]                                 FD1S3DX      D        In      0.000     10.249 r     -         
+=================================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                        Starting                                                 Arrival          
+Instance                                                Reference     Type        Pin     Net                    Time        Slack
+                                                        Clock                                                                     
+----------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[1]      System        FD1S1AY     Q       un6_0_4                1.108       1.320
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[2]      System        FD1S1AY     Q       w_i2c_command_0[2]     1.044       1.527
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[3]      System        FD1S1AY     Q       w_i2c_command_0[3]     1.044       1.527
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[4]      System        FD1S1AY     Q       w_i2c_command_0[4]     1.044       1.670
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[5]      System        FD1S1AY     Q       w_i2c_command_0[5]     1.044       1.670
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[6]      System        FD1S1AY     Q       w_i2c_command_0[6]     1.044       1.813
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[7]      System        FD1S1AY     Q       w_i2c_command_0[7]     1.044       1.813
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[8]      System        FD1S1AY     Q       w_i2c_command_0[8]     1.044       1.956
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[9]      System        FD1S1AY     Q       w_i2c_command[9]       1.044       1.956
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[10]     System        FD1S1AY     Q       w_i2c_command[10]      1.044       2.098
+==================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                        Starting                                      Required          
+Instance                                                Reference     Type        Pin     Net         Time         Slack
+                                                        Clock                                                           
+------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]     System        FD1S3BX     D       un6[15]     10.089       1.320
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[13]     System        FD1S3BX     D       un6[13]     10.089       1.463
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[14]     System        FD1S3BX     D       un6[14]     10.089       1.463
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[11]     System        FD1S3BX     D       un6[11]     10.089       1.606
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[12]     System        FD1S3BX     D       un6[12]     10.089       1.606
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[9]      System        FD1S3BX     D       un6[9]      10.089       1.749
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[10]     System        FD1S3BX     D       un6[10]     10.089       1.749
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[7]      System        FD1S3BX     D       un6[7]      10.089       1.892
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[8]      System        FD1S3BX     D       un6[8]      10.089       1.892
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[5]      System        FD1S3BX     D       un6[5]      10.089       2.034
+========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      8.768
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 1.320
+
+    Number of logic level(s):                11
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[1] / Q
+    Ending point:                            bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15] / D
+    The start point is clocked by            System [rising] on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                       Pin      Pin               Arrival     No. of    
+Name                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[1]      FD1S1AY      Q        Out     1.108     1.108 r     -         
+un6_0_4                                                 Net          -        -       -         -           3         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_4_cry_1_0       CCU2D        A1       In      0.000     1.108 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_4_cry_1_0       CCU2D        COUT     Out     1.544     2.652 r     -         
+un6_0_4_cry_1                                           Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_4_cry_2_0       CCU2D        CIN      In      0.000     2.652 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_4_cry_2_0       CCU2D        S0       Out     1.549     4.201 r     -         
+un6_0_4[2]                                              Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_1_0         CCU2D        A1       In      0.000     4.201 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_1_0         CCU2D        COUT     Out     1.544     5.746 r     -         
+un6_0_cry_2                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_3_0         CCU2D        CIN      In      0.000     5.746 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_3_0         CCU2D        COUT     Out     0.143     5.889 r     -         
+un6_0_cry_4                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_5_0         CCU2D        CIN      In      0.000     5.889 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_5_0         CCU2D        COUT     Out     0.143     6.031 r     -         
+un6_0_cry_6                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_7_0         CCU2D        CIN      In      0.000     6.031 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_7_0         CCU2D        COUT     Out     0.143     6.174 r     -         
+un6_0_cry_8                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_9_0         CCU2D        CIN      In      0.000     6.174 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_9_0         CCU2D        COUT     Out     0.143     6.317 r     -         
+un6_0_cry_10                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_11_0        CCU2D        CIN      In      0.000     6.317 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_11_0        CCU2D        COUT     Out     0.143     6.460 r     -         
+un6_0_cry_12                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_13_0        CCU2D        CIN      In      0.000     6.460 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_cry_13_0        CCU2D        COUT     Out     0.143     6.603 r     -         
+un6_0_cry_14                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_s_15_0          CCU2D        CIN      In      0.000     6.603 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_0_s_15_0          CCU2D        S0       Out     1.549     8.152 r     -         
+un60[15]                                                Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_m[15]             ORCALUT4     C        In      0.000     8.152 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un6_m[15]             ORCALUT4     Z        Out     0.617     8.768 r     -         
+un6[15]                                                 Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]     FD1S3BX      D        In      0.000     8.768 r     -         
+======================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:42s; CPU Time elapsed 0h:00m:39s; Memory used current: 296MB peak: 304MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:42s; CPU Time elapsed 0h:00m:39s; Memory used current: 296MB peak: 304MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo3lf_6900c-5
+
+Register bits: 2112 of 54912 (4%)
+Latch bits:      22
+PIC Latch:       0
+I/O cells:       292
+
+
+Details:
+BB:             3
+CCU2D:          428
+EFB:            1
+EHXPLLJ:        1
+FD1P3AX:        8
+FD1P3BX:        113
+FD1P3DX:        893
+FD1S1AY:        16
+FD1S1D:         6
+FD1S3AX:        2
+FD1S3BX:        175
+FD1S3DX:        853
+GSR:            1
+IB:             137
+IFS1P3BX:       37
+IFS1P3DX:       19
+INV:            44
+L6MUX21:        79
+OB:             138
+OBZ:            14
+OFS1P3BX:       1
+OFS1P3DX:       11
+ORCALUT4:       3059
+OSCH:           1
+PFUMX:          227
+PUR:            1
+VHI:            123
+VLO:            93
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:43s; CPU Time elapsed 0h:00m:40s; Memory used current: 95MB peak: 304MB)
+
+Process took 0h:00m:44s realtime, 0h:00m:41s cputime
+# Sat Feb  8 10:32:38 2025
+
+###########################################################]

@@ -1,0 +1,27 @@
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Feb 08 10:33:14 2025
+
+C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f BP_4S104G5_impl1.p2t
+BP_4S104G5_impl1_map.ncd BP_4S104G5_impl1.dir BP_4S104G5_impl1.prf -gui -msgset
+D:/Project/CNIT-K/8U SW/code/V10/4port/BP_4S104G5/pro/promote.xml
+
+
+Preference file: BP_4S104G5_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            9.475        0            0.104        0            02:33        Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 2 mins 33 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

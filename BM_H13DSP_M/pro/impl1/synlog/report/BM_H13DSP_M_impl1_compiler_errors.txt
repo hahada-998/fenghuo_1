@@ -1,0 +1,6 @@
+@E: CG855 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":306:7:306:20|Duplicate module name PGM_DEBOUNCE_N
+@E: CG254 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":313:0:313:4|Redeclaration of ports. Cannot mix styles.
+@E: CG254 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":314:0:314:4|Redeclaration of ports. Cannot mix styles.
+@E: CG254 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":315:0:315:5|Redeclaration of ports. Cannot mix styles.
+@E: CS243 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":315:20:315:23|Direction (input, output, inout) set multiple times for port dout
+

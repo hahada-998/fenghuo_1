@@ -1,0 +1,872 @@
+[ START MERGED ]
+r_sda_en_i bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en
+pon_reset_n_i pon_reset_n
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
+[ END MERGED ]
+[ START CLIPPED ]
+pll_inst/GND
+timer_gen_inst/GND
+inst_mb_to_slv_s2p/GND
+inst_slv_to_mb_p2s/GND
+edge_delay_p0v8_pg/GND
+debug_led1/GND
+genblk1[9].fan_pwm_tach_m/GND
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[14].fan_pwm_tach_m/GND
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[7].fan_pwm_tach_m/GND
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[11].fan_pwm_tach_m/GND
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[0].fan_pwm_tach_m/GND
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[8].fan_pwm_tach_m/GND
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[2].fan_pwm_tach_m/GND
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[12].fan_pwm_tach_m/GND
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[5].fan_pwm_tach_m/GND
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[3].fan_pwm_tach_m/GND
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[13].fan_pwm_tach_m/GND
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[4].fan_pwm_tach_m/GND
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[6].fan_pwm_tach_m/GND
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[1].fan_pwm_tach_m/GND
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+genblk1[10].fan_pwm_tach_m/GND
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/GND
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/GND
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/GND
+inst_i2c_update_flash_config/VCC
+inst_i2c_update_flash_config/GND
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/GND
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND
+pll_inst/CLKINTFB
+pll_inst/DPHSRC
+pll_inst/PLLACK
+pll_inst/PLLDATO0
+pll_inst/PLLDATO1
+pll_inst/PLLDATO2
+pll_inst/PLLDATO3
+pll_inst/PLLDATO4
+pll_inst/PLLDATO5
+pll_inst/PLLDATO6
+pll_inst/PLLDATO7
+pll_inst/REFCLK
+pll_inst/INTLOCK
+pll_inst/CLKOS3
+pll_inst/CLKOS2
+timer_gen_inst/sec_tmr_s_0_S1[13]
+timer_gen_inst/sec_tmr_s_0_COUT[13]
+timer_gen_inst/usec_tmr_cry_0_S0[0]
+timer_gen_inst/N_20
+timer_gen_inst/usec_tmr_cry_0_COUT[3]
+timer_gen_inst/sec_tmr_cry_0_S0[0]
+timer_gen_inst/N_19
+inst_mb_to_slv_s2p/cnt_cry_0_S0[0]
+inst_mb_to_slv_s2p/N_97
+inst_mb_to_slv_s2p/cnt_s_0_S1[5]
+inst_mb_to_slv_s2p/cnt_s_0_COUT[5]
+inst_slv_to_mb_p2s/cnt_cry_0_S0_0[0]
+inst_slv_to_mb_p2s/N_1
+inst_slv_to_mb_p2s/cnt_s_0_S1_0[5]
+inst_slv_to_mb_p2s/cnt_s_0_COUT_0[5]
+edge_delay_p0v8_pg/timer_cnt_cry_0_S0[0]
+edge_delay_p0v8_pg/N_1
+edge_delay_p0v8_pg/timer_cnt_s_0_S1[5]
+edge_delay_p0v8_pg/timer_cnt_s_0_COUT[5]
+debug_led1/un3_period_cnt_1_cry_0_0_S1
+debug_led1/un3_period_cnt_1_cry_0_0_S0
+debug_led1/N_1
+debug_led1/un3_period_cnt_1_s_15_0_S1
+debug_led1/un3_period_cnt_1_s_15_0_COUT
+debug_led1/un1_duty_cycle_1_cry_0_0_S1
+debug_led1/un1_duty_cycle_1_cry_0_0_S0
+debug_led1/N_2
+debug_led1/un1_duty_cycle_1_s_15_0_S1
+debug_led1/un1_duty_cycle_1_s_15_0_COUT
+debug_led1/un1_led_cry_0_0_S1
+debug_led1/un1_led_cry_0_0_S0
+debug_led1/N_3
+debug_led1/un1_led_cry_1_0_S1
+debug_led1/un1_led_cry_1_0_S0
+debug_led1/un1_led_cry_3_0_S1
+debug_led1/un1_led_cry_3_0_S0
+debug_led1/un1_led_cry_5_0_S1
+debug_led1/un1_led_cry_5_0_S0
+debug_led1/un1_led_cry_7_0_S1
+debug_led1/un1_led_cry_7_0_S0
+debug_led1/un1_led_cry_9_0_S1
+debug_led1/un1_led_cry_9_0_S0
+debug_led1/un1_led_cry_11_0_S1
+debug_led1/un1_led_cry_11_0_S0
+debug_led1/un1_led_cry_13_0_S1
+debug_led1/un1_led_cry_13_0_S0
+debug_led1/un1_led_cry_15_0_S0
+debug_led1/un1_led_cry_15_0_COUT
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0
+genblk1[9].fan_pwm_tach_m/N_1
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0
+genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0[0]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1[7]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT[7]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_0[0]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1[9]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT[9]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_1[0]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_0[9]
+genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_0[9]
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_0
+genblk1[14].fan_pwm_tach_m/N_1
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_0
+genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_0
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_2[0]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_0[7]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_0[7]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_3[0]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_1[9]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_1[9]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_4[0]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_2[9]
+genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_2[9]
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_1
+genblk1[7].fan_pwm_tach_m/N_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_1
+genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_1
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_5[0]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_1[7]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_1[7]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_6[0]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_3[9]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_3[9]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_7[0]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_4[9]
+genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_4[9]
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_2
+genblk1[11].fan_pwm_tach_m/N_1
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_2
+genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_2
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_8[0]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_2[7]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_2[7]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_9[0]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_5[9]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_5[9]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_10[0]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_6[9]
+genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_6[9]
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_3
+genblk1[0].fan_pwm_tach_m/N_1
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_3
+genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_3
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_11[0]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_3[7]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_3[7]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_12[0]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_7[9]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_7[9]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_13[0]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_8[9]
+genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_8[9]
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_4
+genblk1[8].fan_pwm_tach_m/N_1
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_4
+genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_4
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_14[0]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_4[7]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_4[7]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_15[0]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_9[9]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_9[9]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_16[0]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_10[9]
+genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_10[9]
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_5
+genblk1[2].fan_pwm_tach_m/N_1
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_5
+genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_5
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_17[0]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_5[7]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_5[7]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_18[0]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_11[9]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_11[9]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_19[0]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_12[9]
+genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_12[9]
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_6
+genblk1[12].fan_pwm_tach_m/N_1
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_6
+genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_6
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_20[0]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_6[7]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_6[7]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_21[0]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_13[9]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_13[9]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_22[0]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_14[9]
+genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_14[9]
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_7
+genblk1[5].fan_pwm_tach_m/N_1
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_7
+genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_7
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_23[0]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_7[7]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_7[7]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_24[0]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_15[9]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_15[9]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_25[0]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_16[9]
+genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_16[9]
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_8
+genblk1[3].fan_pwm_tach_m/N_1
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_8
+genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_8
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_26[0]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_8[7]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_8[7]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_27[0]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_17[9]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_17[9]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_28[0]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_18[9]
+genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_18[9]
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_9
+genblk1[13].fan_pwm_tach_m/N_1
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_9
+genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_9
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_29[0]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_9[7]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_9[7]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_30[0]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_19[9]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_19[9]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_31[0]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_20[9]
+genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_20[9]
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_10
+genblk1[4].fan_pwm_tach_m/N_1
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_10
+genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_10
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_32[0]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_10[7]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_10[7]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_33[0]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_21[9]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_21[9]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_34[0]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_22[9]
+genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_22[9]
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_11
+genblk1[6].fan_pwm_tach_m/N_1
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_11
+genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_11
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_35[0]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_11[7]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_11[7]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_36[0]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_23[9]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_23[9]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_37[0]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_24[9]
+genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_24[9]
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_12
+genblk1[1].fan_pwm_tach_m/N_1
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_12
+genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_12
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_38[0]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_12[7]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_12[7]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_39[0]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_25[9]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_25[9]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_40[0]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_26[9]
+genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_26[9]
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_13
+genblk1[10].fan_pwm_tach_m/N_1
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_13
+genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_13
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_41[0]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_13[7]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_13[7]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_42[0]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_27[9]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_27[9]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_43[0]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_28[9]
+genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_28[9]
+inst_i2c_update_flash_config/CFGSTDBY
+inst_i2c_update_flash_config/CFGWAKE
+inst_i2c_update_flash_config/WBCUFMIRQ
+inst_i2c_update_flash_config/TCOC
+inst_i2c_update_flash_config/TCINT
+inst_i2c_update_flash_config/SPIIRQO
+inst_i2c_update_flash_config/SPICSNEN
+inst_i2c_update_flash_config/SPIMCSN7
+inst_i2c_update_flash_config/SPIMCSN6
+inst_i2c_update_flash_config/SPIMCSN5
+inst_i2c_update_flash_config/SPIMCSN4
+inst_i2c_update_flash_config/SPIMCSN3
+inst_i2c_update_flash_config/SPIMCSN2
+inst_i2c_update_flash_config/SPIMCSN1
+inst_i2c_update_flash_config/SPIMCSN0
+inst_i2c_update_flash_config/SPIMOSIEN
+inst_i2c_update_flash_config/SPIMOSIO
+inst_i2c_update_flash_config/SPIMISOEN
+inst_i2c_update_flash_config/SPIMISOO
+inst_i2c_update_flash_config/SPISCKEN
+inst_i2c_update_flash_config/SPISCKO
+inst_i2c_update_flash_config/I2C2IRQO
+inst_i2c_update_flash_config/i2c1_irqo
+inst_i2c_update_flash_config/I2C2SDAOEN
+inst_i2c_update_flash_config/I2C2SDAO
+inst_i2c_update_flash_config/I2C2SCLOEN
+inst_i2c_update_flash_config/I2C2SCLO
+inst_i2c_update_flash_config/PLLDATO0_0
+inst_i2c_update_flash_config/PLLDATO1_0
+inst_i2c_update_flash_config/PLLDATO2_0
+inst_i2c_update_flash_config/PLLDATO3_0
+inst_i2c_update_flash_config/PLLDATO4_0
+inst_i2c_update_flash_config/PLLDATO5_0
+inst_i2c_update_flash_config/PLLDATO6_0
+inst_i2c_update_flash_config/PLLDATO7_0
+inst_i2c_update_flash_config/PLLADRO0
+inst_i2c_update_flash_config/PLLADRO1
+inst_i2c_update_flash_config/PLLADRO2
+inst_i2c_update_flash_config/PLLADRO3
+inst_i2c_update_flash_config/PLLADRO4
+inst_i2c_update_flash_config/PLLWEO
+inst_i2c_update_flash_config/PLL1STBO
+inst_i2c_update_flash_config/PLL0STBO
+inst_i2c_update_flash_config/PLLRSTO
+inst_i2c_update_flash_config/PLLCLKO
+inst_i2c_update_flash_config/wb_ack_o
+inst_i2c_update_flash_config/wb_dat_o_1[0]
+inst_i2c_update_flash_config/wb_dat_o_1[1]
+inst_i2c_update_flash_config/wb_dat_o_1[2]
+inst_i2c_update_flash_config/wb_dat_o_1[3]
+inst_i2c_update_flash_config/wb_dat_o_1[4]
+inst_i2c_update_flash_config/wb_dat_o_1[5]
+inst_i2c_update_flash_config/wb_dat_o_1[6]
+inst_i2c_update_flash_config/wb_dat_o_1[7]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S1
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S0
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_1
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_s_15_0_S1
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_s_15_0_COUT
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_2
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_3
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S1
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S0
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_4
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_4_cry_14_0_COUT
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_cry_0_0_S1
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_cry_0_0_S0
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_5
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_s_15_0_S1
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_s_15_0_COUT
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cry_0_S0[0]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_S1[5]
+bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_COUT[5]
+inst_osch_SEDSTDBY
+[ END CLIPPED ]
+[ START OSC ]
+wb_clk 4.29
+[ END OSC ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Sat Feb 08 10:33:09 2025
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=ENABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "io_I2C_CPLD_SDA" SITE "E20" ;
+LOCATE COMP "o_SMB_NIC_RST_N_R" SITE "W17" ;
+LOCATE COMP "o_PAL_FAN1_PWM" SITE "H14" ;
+LOCATE COMP "i_CPLD_CLK" SITE "B10" ;
+LOCATE COMP "io_I2C9_CPLD_UPDATE_SDA" SITE "D11" ;
+LOCATE COMP "io_I2C9_CPLD_UPDATE_SCL" SITE "C11" ;
+LOCATE COMP "i_ict_tp100" SITE "V15" ;
+LOCATE COMP "o_debug_led2" SITE "W13" ;
+LOCATE COMP "o_debug_led1" SITE "W12" ;
+LOCATE COMP "o_SW3_SPI_CS_SEL_R" SITE "J19" ;
+LOCATE COMP "o_SW2_SPI_CS_SEL_R" SITE "A13" ;
+LOCATE COMP "o_SW1_SPI_CS_SEL_R" SITE "B1" ;
+LOCATE COMP "o_SW0_SPI_CS_SEL_R" SITE "W11" ;
+LOCATE COMP "o_I2C_RST2_N_R" SITE "A4" ;
+LOCATE COMP "o_I2C_RST1_N_R" SITE "A6" ;
+LOCATE COMP "o_I2C_RST0_N_R" SITE "A8" ;
+LOCATE COMP "o_NIC8_PERST_N_R" SITE "N5" ;
+LOCATE COMP "o_NIC7_PERST_N_R" SITE "P4" ;
+LOCATE COMP "o_NIC6_PERST_N_R" SITE "U2" ;
+LOCATE COMP "o_NIC5_PERST_N_R" SITE "U1" ;
+LOCATE COMP "o_NIC4_PERST_N_R" SITE "M6" ;
+LOCATE COMP "o_NIC3_PERST_N_R" SITE "P6" ;
+LOCATE COMP "o_NIC2_PERST_N_R" SITE "R4" ;
+LOCATE COMP "o_NIC1_PERST_N_R" SITE "T4" ;
+LOCATE COMP "i_PE0_PERST_R" SITE "Y19" ;
+LOCATE COMP "o_UBB_PEX_RST2_N_R" SITE "Y15" ;
+LOCATE COMP "o_UBB_PEX_RST1_N_R" SITE "W7" ;
+LOCATE COMP "o_UBB_PEX_RST0_N_R" SITE "W9" ;
+LOCATE COMP "o_SW3_NVME1_RST_R" SITE "A9" ;
+LOCATE COMP "o_SW2_NVME1_RST_R" SITE "A3" ;
+LOCATE COMP "o_SW1_NVME1_RST_R" SITE "T7" ;
+LOCATE COMP "o_SW0_NVME1_RST_R" SITE "W16" ;
+LOCATE COMP "i_SW3_SLOT6_RST_N_R" SITE "R17" ;
+LOCATE COMP "i_SW3_SLOT5_RST_N_R" SITE "P17" ;
+LOCATE COMP "i_SW3_SLOT4_RST_N_R" SITE "P18" ;
+LOCATE COMP "i_SW3_SLOT3_RST_N_R" SITE "E6" ;
+LOCATE COMP "i_SW3_SLOT2_RST_N_R" SITE "M17" ;
+LOCATE COMP "i_SW3_SLOT1_RST_N_R" SITE "H15" ;
+LOCATE COMP "i_SW2_SLOT6_RST_N_R" SITE "E19" ;
+LOCATE COMP "i_SW2_SLOT5_RST_N_R" SITE "H16" ;
+LOCATE COMP "i_SW2_SLOT4_RST_N_R" SITE "M18" ;
+LOCATE COMP "i_SW2_SLOT3_RST_N_R" SITE "F6" ;
+LOCATE COMP "i_SW2_SLOT2_RST_N_R" SITE "D19" ;
+LOCATE COMP "i_SW2_SLOT1_RST_N_R" SITE "H18" ;
+LOCATE COMP "i_SW1_SLOT6_RST_N_R" SITE "C4" ;
+LOCATE COMP "i_SW1_SLOT5_RST_N_R" SITE "K7" ;
+LOCATE COMP "i_SW1_SLOT4_RST_N_R" SITE "J4" ;
+LOCATE COMP "i_SW1_SLOT3_RST_N_R" SITE "J2" ;
+LOCATE COMP "i_SW1_SLOT2_RST_N_R" SITE "B3" ;
+LOCATE COMP "i_SW1_SLOT1_RST_N_R" SITE "C2" ;
+LOCATE COMP "i_SW0_SLOT6_RST_N_R" SITE "F2" ;
+LOCATE COMP "i_SW0_SLOT5_RST_N_R" SITE "M4" ;
+LOCATE COMP "i_SW0_SLOT4_RST_N_R" SITE "J14" ;
+LOCATE COMP "i_SW0_SLOT3_RST_N_R" SITE "L14" ;
+LOCATE COMP "i_SW0_SLOT2_RST_N_R" SITE "U9" ;
+LOCATE COMP "i_SW0_SLOT1_RST_N_R" SITE "M5" ;
+LOCATE COMP "o_SW3_PEX_PERST_N_R" SITE "J20" ;
+LOCATE COMP "o_SW2_PEX_PERST_N_R" SITE "A15" ;
+LOCATE COMP "o_SW1_PEX_PERST_N_R" SITE "C1" ;
+LOCATE COMP "o_SW0_PEX_PERST_N_R" SITE "Y17" ;
+LOCATE COMP "o_PAL_USBMUX_SEL" SITE "L5" ;
+LOCATE COMP "o_PAL_USBMUX_OE_N" SITE "P14" ;
+LOCATE COMP "i_DS160_RX_ALL_DONE_N" SITE "C19" ;
+LOCATE COMP "o_DS160_RX_PWDN2" SITE "E17" ;
+LOCATE COMP "o_DS160_RX_PWDN1" SITE "Y10" ;
+LOCATE COMP "o_DS160_RX_READ_EN_N" SITE "Y12" ;
+LOCATE COMP "i_DS160_TX_ALL_DONE_N" SITE "T14" ;
+LOCATE COMP "o_DS160_TX_PWDN2" SITE "V10" ;
+LOCATE COMP "o_DS160_TX_PWDN1" SITE "V8" ;
+LOCATE COMP "o_DS160_TX_READ_EN_N" SITE "V9" ;
+LOCATE COMP "i_PAL_SAS_ALL_DONE_N" SITE "P16" ;
+LOCATE COMP "o_PAL_SAS_PWDN_R" SITE "A14" ;
+LOCATE COMP "i_NIC_SGPIO_SDO_R" SITE "M19" ;
+LOCATE COMP "i_NIC_SGPIO_SDI_R" SITE "P19" ;
+LOCATE COMP "o_NIC_SGPIO_SLOAD_R" SITE "N19" ;
+LOCATE COMP "o_NIC_SGPIO_CLK_R" SITE "L19" ;
+LOCATE COMP "i_74LV165_1_DATA_IN_R" SITE "R20" ;
+LOCATE COMP "o_74LV165_1_LD_R" SITE "A2" ;
+LOCATE COMP "o_74LV165_1_CLK_R" SITE "A1" ;
+LOCATE COMP "i_74LV165_DATA_IN_R" SITE "B19" ;
+LOCATE COMP "o_74LV165_LD_R" SITE "G20" ;
+LOCATE COMP "o_74LV165_CLK_R" SITE "L20" ;
+LOCATE COMP "i_MB_SGPIO_DATA_OUT" SITE "B2" ;
+LOCATE COMP "o_MB_SGPIO_DATA_IN" SITE "H1" ;
+LOCATE COMP "i_MB_SGPIO_LD" SITE "G1" ;
+LOCATE COMP "i_MB_SGPIO_CLK" SITE "J1" ;
+LOCATE COMP "i_BB_RSVD_1_R" SITE "A16" ;
+LOCATE COMP "i_3V3IO_RSVD4_R" SITE "A20" ;
+LOCATE COMP "i_3V3IO_RSVD3_R" SITE "F16" ;
+LOCATE COMP "i_3V3IO_RSVD1_R" SITE "A7" ;
+LOCATE COMP "i_3V3IO_RSVD5_FFU_R" SITE "F1" ;
+LOCATE COMP "i_3V3IO_RSVD4_FFU_R" SITE "J3" ;
+LOCATE COMP "i_3V3IO_RSVD3_FFU_R" SITE "H2" ;
+LOCATE COMP "i_3V3IO_RSVD2_FFU_R" SITE "K4" ;
+LOCATE COMP "i_3V3IO_RSVD1_FFU_R" SITE "N1" ;
+LOCATE COMP "i_3V3IO_RSVD0_FFU_R" SITE "W1" ;
+LOCATE COMP "i_RSVD_PARTNER3_R" SITE "M3" ;
+LOCATE COMP "i_RSVD_PARTNER2_R" SITE "P1" ;
+LOCATE COMP "i_RSVD_PARTNER1_R" SITE "M1" ;
+LOCATE COMP "i_RSVD_PARTNER0_R" SITE "U6" ;
+LOCATE COMP "i_HMC_PRSNT_N_R" SITE "T6" ;
+LOCATE COMP "i_BASE_PRSNT_N_R" SITE "F17" ;
+LOCATE COMP "o_GPU_BASE_STBY_EN_R" SITE "R6" ;
+LOCATE COMP "i_GPU_BASE_HMC_READY_R" SITE "W4" ;
+LOCATE COMP "o_WP_HW_CTRL_N" SITE "A17" ;
+LOCATE COMP "o_NVLINK_REFCLK_SELECT_R" SITE "B20" ;
+LOCATE COMP "o_HGX_DETECT_N_R" SITE "Y2" ;
+LOCATE COMP "o_FPGA_BOOT_EN_R" SITE "W2" ;
+LOCATE COMP "i_FPGA_OVERT_N_R" SITE "B7" ;
+LOCATE COMP "o_FPGA_EROT_RST_N_R" SITE "Y1" ;
+LOCATE COMP "o_FPGA_EROT_RECOV_N_R" SITE "W5" ;
+LOCATE COMP "i_FPGA_EROT_FATALERR_N_R" SITE "M2" ;
+LOCATE COMP "o_PWR_BRAKE_N_R" SITE "W8" ;
+LOCATE COMP "o_UBB_FPGA_PEX_RST_N_R" SITE "Y11" ;
+LOCATE COMP "o_UBB_PEX_STRAP1_R" SITE "Y13" ;
+LOCATE COMP "o_UBB_PEX_STRAP0_R" SITE "Y18" ;
+LOCATE COMP "i_THERM_OVERT_N_R" SITE "W6" ;
+LOCATE COMP "i_GPU_BASE_PWR_GD_R" SITE "Y9" ;
+LOCATE COMP "o_GPU_BASE_POWER_EN_R" SITE "K1" ;
+LOCATE COMP "i_GPU_BASE_FPGA_READY_R" SITE "V6" ;
+LOCATE COMP "o_BP_EEPROM_WP_R" SITE "Y8" ;
+LOCATE COMP "i_BPTB_RE_DONE_R" SITE "Y5" ;
+LOCATE COMP "o_BPTB_EEP_WP_R" SITE "A5" ;
+LOCATE COMP "o_BP_9548_RST_N_R" SITE "C20" ;
+LOCATE COMP "i_BP2_PRSNT_N_R" SITE "Y6" ;
+LOCATE COMP "o_BP2_PWR_EN_R" SITE "Y3" ;
+LOCATE COMP "i_BP2_PWR_PG_R" SITE "N2" ;
+LOCATE COMP "i_BP1_PWR_PG_R" SITE "Y7" ;
+LOCATE COMP "i_BP1_PRSNT_N_R" SITE "Y16" ;
+LOCATE COMP "o_BP1_PWR_EN_R" SITE "Y14" ;
+LOCATE COMP "o_SLOT8_THORTTLE_R" SITE "H20" ;
+LOCATE COMP "o_SLOT7_THORTTLE_R" SITE "M20" ;
+LOCATE COMP "o_SLOT6_THORTTLE_R" SITE "N20" ;
+LOCATE COMP "o_SLOT5_THORTTLE_R" SITE "K18" ;
+LOCATE COMP "o_SLOT4_THORTTLE_R" SITE "T19" ;
+LOCATE COMP "o_SLOT3_THORTTLN_R" SITE "U20" ;
+LOCATE COMP "o_SLOT2_THORTTLE_R" SITE "V19" ;
+LOCATE COMP "o_SLOT1_THORTTLE_R" SITE "F20" ;
+LOCATE COMP "o_RETIMER8_RESET_N_R" SITE "N4" ;
+LOCATE COMP "o_RETIMER7_RESET_N_R" SITE "R2" ;
+LOCATE COMP "o_RETIMER6_RESET_N_R" SITE "P5" ;
+LOCATE COMP "o_RETIMER5_RESET_N_R" SITE "R5" ;
+LOCATE COMP "o_RETIMER4_RESET_N_R" SITE "V1" ;
+LOCATE COMP "o_RETIMER3_RESET_N_R" SITE "T2" ;
+LOCATE COMP "o_RETIMER2_RESET_N_R" SITE "N6" ;
+LOCATE COMP "o_RETIMER1_RESET_N_R" SITE "M7" ;
+LOCATE COMP "i_RETIMER8_INT_N_R" SITE "V4" ;
+LOCATE COMP "i_RETIMER7_INT_N_R" SITE "R3" ;
+LOCATE COMP "i_RETIMER6_INT_N_R" SITE "T1" ;
+LOCATE COMP "i_RETIMER5_INT_N_R" SITE "U4" ;
+LOCATE COMP "i_RETIMER4_INT_N_R" SITE "T3" ;
+LOCATE COMP "i_RETIMER3_INT_N_R" SITE "N3" ;
+LOCATE COMP "i_RETIMER2_INT_N_R" SITE "R1" ;
+LOCATE COMP "i_RETIMER1_INT_N_R" SITE "V2" ;
+LOCATE COMP "i_NIC_3P3V_B_PG_R" SITE "V16" ;
+LOCATE COMP "i_NIC_3P3V_A_PG_R" SITE "U15" ;
+LOCATE COMP "o_RETIMER_1P8V_EN_R" SITE "W19" ;
+LOCATE COMP "o_NICSLOT_3P3V_EN_R" SITE "W18" ;
+LOCATE COMP "o_PAL_RETIMER8_0P9_EN_R" SITE "W14" ;
+LOCATE COMP "o_PAL_RETIMER7_0P9_EN_R" SITE "V14" ;
+LOCATE COMP "o_PAL_RETIMER6_0P9_EN_R" SITE "W15" ;
+LOCATE COMP "o_PAL_RETIMER5_0P9_EN_R" SITE "V20" ;
+LOCATE COMP "o_PAL_RETIMER4_0P9_EN_R" SITE "R19" ;
+LOCATE COMP "o_PAL_RETIMER3_0P9_EN_R" SITE "T20" ;
+LOCATE COMP "o_PAL_RETIMER2_0P9_EN_R" SITE "T17" ;
+LOCATE COMP "o_PAL_RETIMER1_0P9_EN_R" SITE "U19" ;
+LOCATE COMP "i_SMB_PSU5_ALERT_R" SITE "E15" ;
+LOCATE COMP "i_SMB_PSU4_ALERT_R" SITE "F15" ;
+LOCATE COMP "i_SMB_PSU3_ALERT_R" SITE "G14" ;
+LOCATE COMP "i_SMB_PSU2_ALERT_R" SITE "N18" ;
+LOCATE COMP "i_SMB_PSU1_ALERT_R" SITE "N17" ;
+LOCATE COMP "i_SMB_PSU0_ALERT_R" SITE "M16" ;
+LOCATE COMP "o_PSU5_PSON_R" SITE "P9" ;
+LOCATE COMP "o_PSU4_PSON_R" SITE "F12" ;
+LOCATE COMP "o_PSU3_PSON_R" SITE "P12" ;
+LOCATE COMP "o_PSU2_PSON_R" SITE "L16" ;
+LOCATE COMP "o_PSU1_PSON_R" SITE "L15" ;
+LOCATE COMP "o_PSU0_PSON_R" SITE "K15" ;
+LOCATE COMP "i_PSU5_PWROK_N" SITE "F14" ;
+LOCATE COMP "i_PSU4_PWROK_N" SITE "D15" ;
+LOCATE COMP "i_PSU3_PWROK_N" SITE "M14" ;
+LOCATE COMP "i_PSU2_PWROK_N" SITE "L2" ;
+LOCATE COMP "i_PSU1_PWROK_N" SITE "L1" ;
+LOCATE COMP "i_PSU0_PWROK_N" SITE "J15" ;
+LOCATE COMP "i_P5V_STBY_USB_OC" SITE "H19" ;
+LOCATE COMP "o_P5V_STBY_USB_EN" SITE "G13" ;
+LOCATE COMP "i_P5V_RIGHTEAR_USB_OC" SITE "T13" ;
+LOCATE COMP "o_P5V_RIGHTEAR_USB_EN" SITE "U14" ;
+LOCATE COMP "i_P5V_VGA_OC" SITE "D1" ;
+LOCATE COMP "o_P5V_VGA_EN" SITE "D2" ;
+LOCATE COMP "i_PG_P1V8_PLL_R" SITE "F19" ;
+LOCATE COMP "i_PG_P1V8_R" SITE "B12" ;
+LOCATE COMP "i_PG_P5V0_R" SITE "J18" ;
+LOCATE COMP "i_CT_P1V25_SW3_PG" SITE "F7" ;
+LOCATE COMP "i_CT_P1V25_SW2_PG" SITE "B18" ;
+LOCATE COMP "i_CT_P1V25_SW1_PG" SITE "D5" ;
+LOCATE COMP "i_CT_P1V25_SW0_PG" SITE "U12" ;
+LOCATE COMP "i_P0V8_SW3_PWRGD" SITE "F4" ;
+LOCATE COMP "i_P0V8_SW2_PWRGD" SITE "G6" ;
+LOCATE COMP "i_P0V8_SW1_PWRGD" SITE "C6" ;
+LOCATE COMP "i_P0V8_SW0_PWRGD" SITE "W10" ;
+LOCATE COMP "o_PAL_DB2000_1_PWRGD" SITE "P20" ;
+LOCATE COMP "o_PAL_DB2000_PWRGD" SITE "Y4" ;
+LOCATE COMP "i_P12V_PG" SITE "G10" ;
+LOCATE COMP "i_PAL_RAA_CFP_R" SITE "P11" ;
+LOCATE COMP "o_CT_P1V25_SW_EN" SITE "B4" ;
+LOCATE COMP "o_P0V8_SW_EN" SITE "P10" ;
+LOCATE COMP "o_P1V8_PLL_EN" SITE "F18" ;
+LOCATE COMP "o_P1V8_EN" SITE "F13" ;
+LOCATE COMP "o_P5V0_EN" SITE "G19" ;
+LOCATE COMP "i_P3V3_STBY_PG" SITE "A18" ;
+LOCATE COMP "o_PAL_RAA_EN_N" SITE "G9" ;
+LOCATE COMP "o_PAL_HSC0_RESTART_R" SITE "C18" ;
+LOCATE COMP "o_PAL_HSC0_EN_R" SITE "G16" ;
+LOCATE COMP "i_I2C9_9548_CH4_ALERT" SITE "H6" ;
+LOCATE COMP "i_I2C2_ALERT_N_R" SITE "W3" ;
+LOCATE COMP "i_I2C1_ALERT_N_R" SITE "P2" ;
+LOCATE COMP "i_I2C_CPLD_SCL" SITE "K19" ;
+LOCATE COMP "o_PAL_FAN15_LED_R" SITE "L6" ;
+LOCATE COMP "o_PAL_FAN15_LED_G" SITE "R10" ;
+LOCATE COMP "o_PAL_FAN14_LED_R" SITE "K6" ;
+LOCATE COMP "o_PAL_FAN14_LED_G" SITE "K5" ;
+LOCATE COMP "o_PAL_FAN13_LED_R" SITE "K17" ;
+LOCATE COMP "o_PAL_FAN13_LED_G" SITE "K16" ;
+LOCATE COMP "o_PAL_FAN12_LED_R" SITE "B17" ;
+LOCATE COMP "o_PAL_FAN12_LED_G" SITE "J16" ;
+LOCATE COMP "o_PAL_FAN11_LED_R" SITE "F10" ;
+LOCATE COMP "o_PAL_FAN11_LED_G" SITE "C10" ;
+LOCATE COMP "o_PAL_FAN10_LED_R" SITE "P8" ;
+LOCATE COMP "o_PAL_FAN10_LED_G" SITE "P7" ;
+LOCATE COMP "o_PAL_FAN9_LED_R" SITE "B8" ;
+LOCATE COMP "o_PAL_FAN9_LED_G" SITE "E7" ;
+LOCATE COMP "o_PAL_FAN8_LED_R" SITE "E1" ;
+LOCATE COMP "o_PAL_FAN8_LED_G" SITE "B9" ;
+LOCATE COMP "o_PAL_FAN7_LED_R" SITE "G8" ;
+LOCATE COMP "o_PAL_FAN7_LED_G" SITE "W20" ;
+LOCATE COMP "o_PAL_FAN6_LED_R" SITE "R9" ;
+LOCATE COMP "o_PAL_FAN6_LED_G" SITE "F8" ;
+LOCATE COMP "o_PAL_FAN5_LED_R" SITE "G3" ;
+LOCATE COMP "o_PAL_FAN5_LED_G" SITE "E2" ;
+LOCATE COMP "o_PAL_FAN4_LED_R" SITE "C3" ;
+LOCATE COMP "o_PAL_FAN4_LED_G" SITE "B6" ;
+LOCATE COMP "o_PAL_FAN3_LED_R" SITE "C12" ;
+LOCATE COMP "o_PAL_FAN3_LED_G" SITE "B11" ;
+LOCATE COMP "o_PAL_FAN2_LED_R" SITE "G7" ;
+LOCATE COMP "o_PAL_FAN2_LED_G" SITE "T9" ;
+LOCATE COMP "o_PAL_FAN1_LED_R" SITE "H4" ;
+LOCATE COMP "o_PAL_FAN1_LED_G" SITE "R8" ;
+LOCATE COMP "i_PAL_FAN15_TACH1" SITE "V17" ;
+LOCATE COMP "i_PAL_FAN15_TACH2" SITE "U18" ;
+LOCATE COMP "i_PAL_FAN14_TACH1" SITE "L3" ;
+LOCATE COMP "i_PAL_FAN14_TACH2" SITE "L17" ;
+LOCATE COMP "i_PAL_FAN13_TACH1" SITE "C16" ;
+LOCATE COMP "i_PAL_FAN13_TACH2" SITE "K20" ;
+LOCATE COMP "i_PAL_FAN12_TACH1" SITE "D6" ;
+LOCATE COMP "i_PAL_FAN12_TACH2" SITE "G5" ;
+LOCATE COMP "i_PAL_FAN11_TACH1" SITE "D7" ;
+LOCATE COMP "i_PAL_FAN11_TACH2" SITE "E14" ;
+LOCATE COMP "i_PAL_FAN10_TACH1" SITE "T8" ;
+LOCATE COMP "i_PAL_FAN10_TACH2" SITE "T11" ;
+LOCATE COMP "i_PAL_FAN9_TACH1" SITE "A10" ;
+LOCATE COMP "i_PAL_FAN9_TACH2" SITE "F11" ;
+LOCATE COMP "i_PAL_FAN8_TACH1" SITE "C15" ;
+LOCATE COMP "i_PAL_FAN8_TACH2" SITE "B15" ;
+LOCATE COMP "i_PAL_FAN7_TACH1" SITE "D16" ;
+LOCATE COMP "i_PAL_FAN7_TACH2" SITE "J6" ;
+LOCATE COMP "i_PAL_FAN6_TACH1" SITE "D14" ;
+LOCATE COMP "i_PAL_FAN6_TACH2" SITE "G15" ;
+LOCATE COMP "i_PAL_FAN5_TACH1" SITE "G4" ;
+LOCATE COMP "i_PAL_FAN5_TACH2" SITE "H3" ;
+LOCATE COMP "i_PAL_FAN4_TACH1" SITE "C8" ;
+LOCATE COMP "i_PAL_FAN4_TACH2" SITE "F9" ;
+LOCATE COMP "i_PAL_FAN3_TACH1" SITE "B14" ;
+LOCATE COMP "i_PAL_FAN3_TACH2" SITE "C14" ;
+LOCATE COMP "i_PAL_FAN2_TACH1" SITE "D8" ;
+LOCATE COMP "i_PAL_FAN2_TACH2" SITE "H7" ;
+LOCATE COMP "i_PAL_FAN1_TACH1" SITE "K14" ;
+LOCATE COMP "i_PAL_FAN1_TACH2" SITE "D10" ;
+LOCATE COMP "o_PAL_FAN15_PWM" SITE "T12" ;
+LOCATE COMP "o_PAL_FAN14_PWM" SITE "E4" ;
+LOCATE COMP "o_PAL_FAN13_PWM" SITE "G12" ;
+LOCATE COMP "o_PAL_FAN12_PWM" SITE "L7" ;
+LOCATE COMP "o_PAL_FAN11_PWM" SITE "A12" ;
+LOCATE COMP "o_PAL_FAN10_PWM" SITE "T16" ;
+LOCATE COMP "o_PAL_FAN9_PWM" SITE "G11" ;
+LOCATE COMP "o_PAL_FAN8_PWM" SITE "D17" ;
+LOCATE COMP "o_PAL_FAN7_PWM" SITE "A11" ;
+LOCATE COMP "o_PAL_FAN6_PWM" SITE "D12" ;
+LOCATE COMP "o_PAL_FAN5_PWM" SITE "F5" ;
+LOCATE COMP "o_PAL_FAN4_PWM" SITE "N14" ;
+LOCATE COMP "o_PAL_FAN3_PWM" SITE "B16" ;
+LOCATE COMP "o_PAL_FAN2_PWM" SITE "D18" ;
+FREQUENCY NET "clk_50m" 50.000000 MHz HOLD_MARGIN 0.200000 ns ;
+FREQUENCY NET "wb_clk" 4.290000 MHz HOLD_MARGIN 0.200000 ns ;
+FREQUENCY NET "clk_25m" 25.000000 MHz ;
+FREQUENCY NET "i_CPLD_CLK_c" 25.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

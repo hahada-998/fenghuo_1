@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\02.MB_S CPLD\V01\BM_H13DSP_S\pro\impl1\synlog\BM_H13DSP_S_impl1_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>ClkDiv_1s_1s|rDivClk_q_derived_clock</data>
+<data>100.0 MHz</data>
+<data>375.2 MHz</data>
+<data>8.292</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOP_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>99.0 MHz</data>
+<data>-0.104</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOS_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>104.0 MHz</data>
+<data>0.381</data>
+</row>
+<row>
+<data>s2p_164|sclk_derived_clock</data>
+<data>100.0 MHz</data>
+<data>363.8 MHz</data>
+<data>7.251</data>
+</row>
+<row>
+<data>timer_gen|t1us_derived_clock</data>
+<data>100.0 MHz</data>
+<data>363.8 MHz</data>
+<data>13.123</data>
+</row>
+<row>
+<data>System</data>
+<data>100.0 MHz</data>
+<data>151.4 MHz</data>
+<data>3.397</data>
+</row>
+</report_table>

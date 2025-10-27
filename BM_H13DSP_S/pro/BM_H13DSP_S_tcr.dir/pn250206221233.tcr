@@ -1,0 +1,21 @@
+#Start recording tcl command: 2/6/2025 21:21:26
+#Project Location: D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project new -name "BM_H13DSP_S" -impl "impl1" -dev LCMXO3LF-6900C-5BG400C -synthesis "synplify"
+prj_project save
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/BM_H13DSP_S_TOP.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/ClkDiv.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/ClkDivTree.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/delay.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_delay.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_detect.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/edge_detect1.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/lowpass_filter.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/pon_reset.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/synclib.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/UID_Function.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/common/timer_gen_50mhz.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/74LV165/pvt_gpi.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/bmc_i2c/i2c_slave_basic0.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/bmc_i2c/i2c_slave_bmc.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/uart/aux_uart_master.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/uart/mcio_uart_master.v"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/IIC_Update/I2C_UPDATE.ipx"
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/PLL/pll_i25M_o50M_o25M.ipx"
+prj_run Translate -impl impl1
+prj_src add "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/SGPIO_SLAVE/s2p_slave.v" "D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/02.MB_S CPLD/V01/BM_H13DSP_S/rtl/source/SGPIO_SLAVE/p2s_slave.v"
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Translate -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+prj_run Map -impl impl1
+#Stop recording: 2/6/2025 22:12:33

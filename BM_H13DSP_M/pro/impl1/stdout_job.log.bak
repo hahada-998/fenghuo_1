@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "14:05:37    23-Oct-2025",
+	"Working Directory" : "C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/impl1",
+	"Install" : "C:/studyware/lattice_diamond_3_14/synpbase"
+},
+"impl1" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "14:05:37",
+   "Runtime" : "00s",
+   "Executable Run Time" : "00s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "14:05:37",
+      "Runtime" : "00s",
+      "Executable Run Time" : "00s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "14:05:37",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "14:05:37",
+            "Runtime" : "00s",
+            "Executable Run Time" : "00s",
+            "compiler" : {
+               "executable" : "bin64/c_hdl.exe",
+               "Run Directory" : "C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "2",
+               "Has Errors" : "yes",
+               "Run Start Time" : "14:05:37",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin64/syn_nfilter.exe",
+               "Run Directory" : "C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/impl1",
+               "Run State" : "Canceled",
+               "Return Code" : "-",
+               "Has Errors" : "yes",
+               "Run Start Time" : "-",
+               "Run Time" : "01s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin64/m_gen_lattice.exe",
+            "Run Directory" : "C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/impl1",
+            "Run State" : "Canceled",
+            "Return Code" : "-",
+            "Has Errors" : "yes",
+            "Run Start Time" : "-",
+            "Run Time" : "13s  (13s UI processing)",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "-",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "fpga_mapper" : {
+            "executable" : "bin64/m_gen_lattice.exe",
+            "Run Directory" : "C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/impl1",
+            "Run State" : "Canceled",
+            "Return Code" : "-",
+            "Has Errors" : "yes",
+            "Run Start Time" : "-",
+            "Run Time" : "52s  (52s UI processing)",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

@@ -1,0 +1,99 @@
+i pll_inst.CLKOP_i
+m 0 0
+u 565 2512
+p {t:pll_inst.PLLInst_0.CLKOP}{t:pll_inst.CLKOP_inferred_clock.I[0]}{t:pll_inst.CLKOP_inferred_clock.OUT[0]}{p:pll_inst.CLKOP}{t:pll_inst.CLKOP}{t:r_ocp_smrst_n_dly_time_cnt[8:0].C}
+e ckid0_0 {t:r_ocp_smrst_n_dly_time_cnt[8:0].C} dffr
+c ckid0_0 {t:pll_inst.PLLInst_0.CLKOP} EHXPLLJ Unsupported/too complex instance on clock path
+i pll_inst.CLKOS_i
+m 0 0
+u 68 266
+p {t:pll_inst.PLLInst_0.CLKOS}{t:pll_inst.CLKOS_inferred_clock.I[0]}{t:pll_inst.CLKOS_inferred_clock.OUT[0]}{p:pll_inst.CLKOS}{t:pll_inst.CLKOS}{t:bmc_cpld_i2c_ram_u0.i_clk}{p:bmc_cpld_i2c_ram_u0.i_clk}{t:bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0].C}
+e ckid0_1 {t:bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0].C} dffr
+c ckid0_1 {t:pll_inst.PLLInst_0.CLKOS} EHXPLLJ Unsupported/too complex instance on clock path
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1
+m 0 0
+u 16 16
+n ckid0_2 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C} Clock source is invalid for GCC
+p {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT}{t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C}
+e ckid0_2 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C} lat
+d ckid0_2 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT} and Unable to find a clock in input cone
+i s2p_164_u1.sclk_i
+m 0 0
+u 2 5
+n ckid0_3 {t:s2p_164_u1.data_out_cnt[3:0].C} Derived clock on input (not legal for GCC)
+p {t:s2p_164_u1.sclk.Q[0]}{t:s2p_164_u1.sclk_derived_clock.I[0]}{t:s2p_164_u1.sclk_derived_clock.OUT[0]}{t:s2p_164_u1.data_out_cnt[3:0].C}
+e ckid0_3 {t:s2p_164_u1.data_out_cnt[3:0].C} dffr
+d ckid0_4 {t:s2p_164_u1.sclk.Q[0]} dffr Potential generated clock but with a nonconvertable driver or an unknown conversion method
+i mClkDivTree.m1mSCE.rDivClk_q_i
+m 0 0
+u 9 9
+n ckid0_5 {t:s2p_164_u1.r_data_chg_flag.C} Derived clock on input (not legal for GCC)
+p {t:mClkDivTree.m1mSCE.rDivClk_q.Q[0]}{t:mClkDivTree.m1mSCE.rDivClk_q_derived_clock.I[0]}{t:mClkDivTree.m1mSCE.rDivClk_q_derived_clock.OUT[0]}{p:mClkDivTree.m1mSCE.oDivClk}{t:mClkDivTree.m1mSCE.oDivClk}{p:mClkDivTree.o1mSCE}{t:mClkDivTree.o1mSCE}{t:s2p_164_u1.CLK_1ms}{p:s2p_164_u1.CLK_1ms}{t:s2p_164_u1.r_data_chg_flag.C}
+e ckid0_5 {t:s2p_164_u1.r_data_chg_flag.C} dffs
+d ckid0_6 {t:mClkDivTree.m1mSCE.rDivClk_q.Q[0]} dffr Potential generated clock but with a nonconvertable driver or an unknown conversion method
+i timer_gen_inst.t1us_i
+m 0 0
+u 2 2
+n ckid0_7 {t:s2p_164_u1.sclk.C} Derived clock on input (not legal for GCC)
+p {t:timer_gen_inst.t1us.Q[0]}{t:timer_gen_inst.t1us_derived_clock.I[0]}{t:timer_gen_inst.t1us_derived_clock.OUT[0]}{p:timer_gen_inst.t1us}{t:timer_gen_inst.t1us}{t:s2p_164_u1.tick}{p:s2p_164_u1.tick}{t:s2p_164_u1.sclk.C}
+e ckid0_7 {t:s2p_164_u1.sclk.C} dffr
+d ckid0_8 {t:timer_gen_inst.t1us.Q[0]} dffr Derived clock on input (not legal for GCC)
+i pll_inst.LOCK
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_RW
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[15]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[14]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[13]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[12]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[11]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[10]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[9]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[8]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[7]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[6]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[5]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[4]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[3]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[2]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[0]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[1]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_addr_hit
+m 0 0
+u 0 0
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

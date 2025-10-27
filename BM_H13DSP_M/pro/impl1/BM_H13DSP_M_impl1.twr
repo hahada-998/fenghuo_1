@@ -1,0 +1,3448 @@
+
+Loading design for application trce from file bm_h13dsp_m_impl1.ncd.
+Design name: BM_H13DSP_M
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/studyware/lattice_diamond_3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Thu Oct 23 14:13:21 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o BM_H13DSP_M_impl1.twr -gui -msgset C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/promote.xml BM_H13DSP_M_impl1.ncd BM_H13DSP_M_impl1.prf 
+Design file:     bm_h13dsp_m_impl1.ncd
+Preference file: bm_h13dsp_m_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   1.800 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i_CLK_25M_CPLD_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "wb_clk" 4.290000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 224.454ns
+         The internal maximum frequency of the following component is 115.660 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    EFB        WBCLKI         inst_i2c_update_flash_config/EFBInst_0
+
+   Delay:               8.646ns -- based on Minimum Pulse Width
+
+Report:  115.660MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 4.817ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id3_zt.res_lat  (from un1_r_p12v_discharge_r9_26 +)
+   Destination:    FF         Data in        r_switch_mode[0]  (to clk_50m +)
+
+   Delay:               8.937ns  (34.9% logic, 65.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.937ns physical path delay SLICE_1259 to SLICE_1340 meets
+     20.000ns delay constraint less
+      6.096ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 13.754ns) by 4.817ns
+
+ Physical Path Details:
+
+      Data path SLICE_1259 to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R22C19B.CLK to     R22C19B.Q0 SLICE_1259 (from un1_r_p12v_discharge_r9_26)
+ROUTE         1     1.018     R22C19B.Q0 to     R19C19B.C1 r_board_id3_zt.o3
+CTOF_DEL    ---     0.452     R19C19B.C1 to     R19C19B.F1 SLICE_2621
+ROUTE         3     0.893     R19C19B.F1 to     R19C19B.B0 r_board_id3_zt
+CTOF_DEL    ---     0.452     R19C19B.B0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     0.549     R19C19B.F0 to     R19C20B.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R19C20B.D1 to     R19C20B.F1 SLICE_2608
+ROUTE         2     1.290     R19C20B.F1 to     R21C17C.D0 inst_mcpld_to_scpld_p2s/un5_w_mcio_slot11_prsnt_n_1
+CTOF_DEL    ---     0.452     R21C17C.D0 to     R21C17C.F0 SLICE_2609
+ROUTE         3     0.667     R21C17C.F0 to     R21C17A.C0 inst_mcpld_to_scpld_p2s/N_53
+CTOF_DEL    ---     0.452     R21C17A.C0 to     R21C17A.F0 SLICE_2602
+ROUTE         1     1.399     R21C17A.F0 to     R21C20D.D0 inst_mcpld_to_scpld_p2s/N_369
+CTOF_DEL    ---     0.452     R21C20D.D0 to     R21C20D.F0 SLICE_1340
+ROUTE         1     0.000     R21C20D.F0 to    R21C20D.DI0 N_370_i (to clk_50m)
+                  --------
+                    8.937   (34.9% logic, 65.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1259:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     4.651     R15C21D.Q0 to     R22C19D.C0 pon_reset_n
+CTOF_DEL    ---     0.452     R22C19D.C0 to     R22C19D.F0 SLICE_2919
+ROUTE         2     0.548     R22C19D.F0 to    R22C19B.CLK un1_r_p12v_discharge_r9_26
+                  --------
+                   10.924   (18.2% logic, 81.8% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20D.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 4.865ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id5_zt.res_lat  (from un1_r_p12v_discharge_r9_29 +)
+   Destination:    FF         Data in        r_switch_mode[0]  (to clk_50m +)
+
+   Delay:               8.319ns  (37.5% logic, 62.5% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.319ns physical path delay SLICE_1271 to SLICE_1340 meets
+     20.000ns delay constraint less
+      6.666ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 13.184ns) by 4.865ns
+
+ Physical Path Details:
+
+      Data path SLICE_1271 to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C19D.CLK to     R21C19D.Q0 SLICE_1271 (from un1_r_p12v_discharge_r9_29)
+ROUTE         2     0.634     R21C19D.Q0 to     R19C19C.D0 r_board_id5_zt.o3
+CTOF_DEL    ---     0.452     R19C19C.D0 to     R19C19C.F0 SLICE_2593
+ROUTE         1     0.659     R19C19C.F0 to     R19C19B.C0 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6_1
+CTOF_DEL    ---     0.452     R19C19B.C0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     0.549     R19C19B.F0 to     R19C20B.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R19C20B.D1 to     R19C20B.F1 SLICE_2608
+ROUTE         2     1.290     R19C20B.F1 to     R21C17C.D0 inst_mcpld_to_scpld_p2s/un5_w_mcio_slot11_prsnt_n_1
+CTOF_DEL    ---     0.452     R21C17C.D0 to     R21C17C.F0 SLICE_2609
+ROUTE         3     0.667     R21C17C.F0 to     R21C17A.C0 inst_mcpld_to_scpld_p2s/N_53
+CTOF_DEL    ---     0.452     R21C17A.C0 to     R21C17A.F0 SLICE_2602
+ROUTE         1     1.399     R21C17A.F0 to     R21C20D.D0 inst_mcpld_to_scpld_p2s/N_369
+CTOF_DEL    ---     0.452     R21C20D.D0 to     R21C20D.F0 SLICE_1340
+ROUTE         1     0.000     R21C20D.F0 to    R21C20D.DI0 N_370_i (to clk_50m)
+                  --------
+                    8.319   (37.5% logic, 62.5% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     4.852     R15C21D.Q0 to     R21C18B.A0 pon_reset_n
+CTOF_DEL    ---     0.452     R21C18B.A0 to     R21C18B.F0 SLICE_2922
+ROUTE         2     0.917     R21C18B.F0 to    R21C19D.CLK un1_r_p12v_discharge_r9_29
+                  --------
+                   11.494   (17.3% logic, 82.7% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20D.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 4.924ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id3_zt.res_lat  (from un1_r_p12v_discharge_r9_26 +)
+   Destination:    FF         Data in        r_switch_mode[2]  (to clk_50m +)
+
+   Delay:               8.830ns  (40.5% logic, 59.5% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.830ns physical path delay SLICE_1259 to SLICE_1341 meets
+     20.000ns delay constraint less
+      6.096ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 13.754ns) by 4.924ns
+
+ Physical Path Details:
+
+      Data path SLICE_1259 to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R22C19B.CLK to     R22C19B.Q0 SLICE_1259 (from un1_r_p12v_discharge_r9_26)
+ROUTE         1     1.018     R22C19B.Q0 to     R19C19B.C1 r_board_id3_zt.o3
+CTOF_DEL    ---     0.452     R19C19B.C1 to     R19C19B.F1 SLICE_2621
+ROUTE         3     0.893     R19C19B.F1 to     R19C19B.B0 r_board_id3_zt
+CTOF_DEL    ---     0.452     R19C19B.B0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     0.549     R19C19B.F0 to     R19C20B.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R19C20B.D1 to     R19C20B.F1 SLICE_2608
+ROUTE         2     1.290     R19C20B.F1 to     R21C17C.D0 inst_mcpld_to_scpld_p2s/un5_w_mcio_slot11_prsnt_n_1
+CTOF_DEL    ---     0.452     R21C17C.D0 to     R21C17C.F0 SLICE_2609
+ROUTE         3     0.854     R21C17C.F0 to     R21C20B.D1 inst_mcpld_to_scpld_p2s/N_53
+CTOF_DEL    ---     0.452     R21C20B.D1 to     R21C20B.F1 SLICE_2011
+ROUTE         1     0.384     R21C20B.F1 to     R21C20B.C0 inst_mcpld_to_scpld_p2s/N_65_mux
+CTOF_DEL    ---     0.452     R21C20B.C0 to     R21C20B.F0 SLICE_2011
+ROUTE         1     0.269     R21C20B.F0 to     R21C20C.D0 inst_mcpld_to_scpld_p2s/N_1854_mux
+CTOF_DEL    ---     0.452     R21C20C.D0 to     R21C20C.F0 SLICE_1341
+ROUTE         1     0.000     R21C20C.F0 to    R21C20C.DI0 N_389 (to clk_50m)
+                  --------
+                    8.830   (40.5% logic, 59.5% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1259:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     4.651     R15C21D.Q0 to     R22C19D.C0 pon_reset_n
+CTOF_DEL    ---     0.452     R22C19D.C0 to     R22C19D.F0 SLICE_2919
+ROUTE         2     0.548     R22C19D.F0 to    R22C19B.CLK un1_r_p12v_discharge_r9_26
+                  --------
+                   10.924   (18.2% logic, 81.8% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20C.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 4.972ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id5_zt.res_lat  (from un1_r_p12v_discharge_r9_29 +)
+   Destination:    FF         Data in        r_switch_mode[2]  (to clk_50m +)
+
+   Delay:               8.212ns  (43.5% logic, 56.5% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.212ns physical path delay SLICE_1271 to SLICE_1341 meets
+     20.000ns delay constraint less
+      6.666ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 13.184ns) by 4.972ns
+
+ Physical Path Details:
+
+      Data path SLICE_1271 to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C19D.CLK to     R21C19D.Q0 SLICE_1271 (from un1_r_p12v_discharge_r9_29)
+ROUTE         2     0.634     R21C19D.Q0 to     R19C19C.D0 r_board_id5_zt.o3
+CTOF_DEL    ---     0.452     R19C19C.D0 to     R19C19C.F0 SLICE_2593
+ROUTE         1     0.659     R19C19C.F0 to     R19C19B.C0 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6_1
+CTOF_DEL    ---     0.452     R19C19B.C0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     0.549     R19C19B.F0 to     R19C20B.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R19C20B.D1 to     R19C20B.F1 SLICE_2608
+ROUTE         2     1.290     R19C20B.F1 to     R21C17C.D0 inst_mcpld_to_scpld_p2s/un5_w_mcio_slot11_prsnt_n_1
+CTOF_DEL    ---     0.452     R21C17C.D0 to     R21C17C.F0 SLICE_2609
+ROUTE         3     0.854     R21C17C.F0 to     R21C20B.D1 inst_mcpld_to_scpld_p2s/N_53
+CTOF_DEL    ---     0.452     R21C20B.D1 to     R21C20B.F1 SLICE_2011
+ROUTE         1     0.384     R21C20B.F1 to     R21C20B.C0 inst_mcpld_to_scpld_p2s/N_65_mux
+CTOF_DEL    ---     0.452     R21C20B.C0 to     R21C20B.F0 SLICE_2011
+ROUTE         1     0.269     R21C20B.F0 to     R21C20C.D0 inst_mcpld_to_scpld_p2s/N_1854_mux
+CTOF_DEL    ---     0.452     R21C20C.D0 to     R21C20C.F0 SLICE_1341
+ROUTE         1     0.000     R21C20C.F0 to    R21C20C.DI0 N_389 (to clk_50m)
+                  --------
+                    8.212   (43.5% logic, 56.5% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1271:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     4.852     R15C21D.Q0 to     R21C18B.A0 pon_reset_n
+CTOF_DEL    ---     0.452     R21C18B.A0 to     R21C18B.F0 SLICE_2922
+ROUTE         2     0.917     R21C18B.F0 to    R21C19D.CLK un1_r_p12v_discharge_r9_29
+                  --------
+                   11.494   (17.3% logic, 82.7% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20C.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.238ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id2_zt2.res_lat  (from un1_r_p12v_discharge_r9_53 +)
+   Destination:    FF         Data in        r_switch2_mode[2]  (to clk_50m +)
+
+   Delay:               9.591ns  (37.3% logic, 62.7% route), 8 logic levels.
+
+ Constraint Details:
+
+      9.591ns physical path delay SLICE_1256 to SLICE_1339 meets
+     20.000ns delay constraint less
+      5.021ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 14.829ns) by 5.238ns
+
+ Physical Path Details:
+
+      Data path SLICE_1256 to SLICE_1339:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R23C12B.CLK to     R23C12B.Q0 SLICE_1256 (from un1_r_p12v_discharge_r9_53)
+ROUTE         1     0.541     R23C12B.Q0 to     R22C12C.D1 r_board_id2_zt2.o3
+CTOF_DEL    ---     0.452     R22C12C.D1 to     R22C12C.F1 SLICE_1254
+ROUTE         2     1.745     R22C12C.F1 to     R17C17B.D1 r_board_id2_zt2
+CTOF_DEL    ---     0.452     R17C17B.D1 to     R17C17B.F1 SLICE_1342
+ROUTE         2     0.847     R17C17B.F1 to     R18C18C.D0 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw2_6_1
+CTOF_DEL    ---     0.452     R18C18C.D0 to     R18C18C.F0 SLICE_2016
+ROUTE         4     0.918     R18C18C.F0 to     R21C18A.D0 un5_w_u3_nc7_sw2_6
+CTOF_DEL    ---     0.452     R21C18A.D0 to     R21C18A.F0 SLICE_2610
+ROUTE         3     1.020     R21C18A.F0 to     R18C18D.D1 inst_mcpld_to_scpld_p2s/N_29
+CTOF_DEL    ---     0.452     R18C18D.D1 to     R18C18D.F1 SLICE_2012
+ROUTE         1     0.384     R18C18D.F1 to     R18C18D.C0 inst_mcpld_to_scpld_p2s/N_41_mux
+CTOF_DEL    ---     0.452     R18C18D.C0 to     R18C18D.F0 SLICE_2012
+ROUTE         1     0.563     R18C18D.F0 to     R19C18C.D0 inst_mcpld_to_scpld_p2s/N_1855_mux
+CTOF_DEL    ---     0.452     R19C18C.D0 to     R19C18C.F0 SLICE_1339
+ROUTE         1     0.000     R19C18C.F0 to    R19C18C.DI0 N_333 (to clk_50m)
+                  --------
+                    9.591   (37.3% logic, 62.7% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1256:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     3.318     R15C21D.Q0 to     R21C12B.D0 pon_reset_n
+CTOF_DEL    ---     0.452     R21C12B.D0 to     R21C12B.F0 SLICE_2905
+ROUTE         2     0.842     R21C12B.F0 to    R23C12B.CLK un1_r_p12v_discharge_r9_53
+                  --------
+                    9.885   (20.2% logic, 79.8% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1339:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R19C18C.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.269ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id2_zt.res_lat  (from un1_r_p12v_discharge_r9_34 +)
+   Destination:    FF         Data in        r_switch_mode[0]  (to clk_50m +)
+
+   Delay:               9.356ns  (33.4% logic, 66.6% route), 7 logic levels.
+
+ Constraint Details:
+
+      9.356ns physical path delay SLICE_1253 to SLICE_1340 meets
+     20.000ns delay constraint less
+      5.225ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 14.625ns) by 5.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_1253 to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C15D.CLK to     R21C15D.Q0 SLICE_1253 (from un1_r_p12v_discharge_r9_34)
+ROUTE         2     0.551     R21C15D.Q0 to     R21C15A.D1 r_board_id2_zt.o3
+CTOF_DEL    ---     0.452     R21C15A.D1 to     R21C15A.F1 SLICE_1251
+ROUTE         4     1.779     R21C15A.F1 to     R19C19B.D0 r_board_id2_zt
+CTOF_DEL    ---     0.452     R19C19B.D0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     0.549     R19C19B.F0 to     R19C20B.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R19C20B.D1 to     R19C20B.F1 SLICE_2608
+ROUTE         2     1.290     R19C20B.F1 to     R21C17C.D0 inst_mcpld_to_scpld_p2s/un5_w_mcio_slot11_prsnt_n_1
+CTOF_DEL    ---     0.452     R21C17C.D0 to     R21C17C.F0 SLICE_2609
+ROUTE         3     0.667     R21C17C.F0 to     R21C17A.C0 inst_mcpld_to_scpld_p2s/N_53
+CTOF_DEL    ---     0.452     R21C17A.C0 to     R21C17A.F0 SLICE_2602
+ROUTE         1     1.399     R21C17A.F0 to     R21C20D.D0 inst_mcpld_to_scpld_p2s/N_369
+CTOF_DEL    ---     0.452     R21C20D.D0 to     R21C20D.F0 SLICE_1340
+ROUTE         1     0.000     R21C20D.F0 to    R21C20D.DI0 N_370_i (to clk_50m)
+                  --------
+                    9.356   (33.4% logic, 66.6% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1253:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     3.405     R15C21D.Q0 to     R21C14A.C0 pon_reset_n
+CTOF_DEL    ---     0.452     R21C14A.C0 to     R21C14A.F0 SLICE_2927
+ROUTE         2     0.923     R21C14A.F0 to    R21C15D.CLK un1_r_p12v_discharge_r9_34
+                  --------
+                   10.053   (19.8% logic, 80.2% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20D.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.376ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id2_zt.res_lat  (from un1_r_p12v_discharge_r9_34 +)
+   Destination:    FF         Data in        r_switch_mode[2]  (to clk_50m +)
+
+   Delay:               9.249ns  (38.6% logic, 61.4% route), 8 logic levels.
+
+ Constraint Details:
+
+      9.249ns physical path delay SLICE_1253 to SLICE_1341 meets
+     20.000ns delay constraint less
+      5.225ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 14.625ns) by 5.376ns
+
+ Physical Path Details:
+
+      Data path SLICE_1253 to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R21C15D.CLK to     R21C15D.Q0 SLICE_1253 (from un1_r_p12v_discharge_r9_34)
+ROUTE         2     0.551     R21C15D.Q0 to     R21C15A.D1 r_board_id2_zt.o3
+CTOF_DEL    ---     0.452     R21C15A.D1 to     R21C15A.F1 SLICE_1251
+ROUTE         4     1.779     R21C15A.F1 to     R19C19B.D0 r_board_id2_zt
+CTOF_DEL    ---     0.452     R19C19B.D0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     0.549     R19C19B.F0 to     R19C20B.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R19C20B.D1 to     R19C20B.F1 SLICE_2608
+ROUTE         2     1.290     R19C20B.F1 to     R21C17C.D0 inst_mcpld_to_scpld_p2s/un5_w_mcio_slot11_prsnt_n_1
+CTOF_DEL    ---     0.452     R21C17C.D0 to     R21C17C.F0 SLICE_2609
+ROUTE         3     0.854     R21C17C.F0 to     R21C20B.D1 inst_mcpld_to_scpld_p2s/N_53
+CTOF_DEL    ---     0.452     R21C20B.D1 to     R21C20B.F1 SLICE_2011
+ROUTE         1     0.384     R21C20B.F1 to     R21C20B.C0 inst_mcpld_to_scpld_p2s/N_65_mux
+CTOF_DEL    ---     0.452     R21C20B.C0 to     R21C20B.F0 SLICE_2011
+ROUTE         1     0.269     R21C20B.F0 to     R21C20C.D0 inst_mcpld_to_scpld_p2s/N_1854_mux
+CTOF_DEL    ---     0.452     R21C20C.D0 to     R21C20C.F0 SLICE_1341
+ROUTE         1     0.000     R21C20C.F0 to    R21C20C.DI0 N_389 (to clk_50m)
+                  --------
+                    9.249   (38.6% logic, 61.4% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1253:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     3.405     R15C21D.Q0 to     R21C14A.C0 pon_reset_n
+CTOF_DEL    ---     0.452     R21C14A.C0 to     R21C14A.F0 SLICE_2927
+ROUTE         2     0.923     R21C14A.F0 to    R21C15D.CLK un1_r_p12v_discharge_r9_34
+                  --------
+                   10.053   (19.8% logic, 80.2% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20C.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.618ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id2_zt2.res_lat  (from un1_r_p12v_discharge_r9_53 +)
+   Destination:    FF         Data in        r_switch2_mode[0]  (to clk_50m +)
+
+   Delay:               9.211ns  (33.9% logic, 66.1% route), 7 logic levels.
+
+ Constraint Details:
+
+      9.211ns physical path delay SLICE_1256 to SLICE_1338 meets
+     20.000ns delay constraint less
+      5.021ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 14.829ns) by 5.618ns
+
+ Physical Path Details:
+
+      Data path SLICE_1256 to SLICE_1338:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R23C12B.CLK to     R23C12B.Q0 SLICE_1256 (from un1_r_p12v_discharge_r9_53)
+ROUTE         1     0.541     R23C12B.Q0 to     R22C12C.D1 r_board_id2_zt2.o3
+CTOF_DEL    ---     0.452     R22C12C.D1 to     R22C12C.F1 SLICE_1254
+ROUTE         2     1.745     R22C12C.F1 to     R17C17B.D1 r_board_id2_zt2
+CTOF_DEL    ---     0.452     R17C17B.D1 to     R17C17B.F1 SLICE_1342
+ROUTE         2     0.847     R17C17B.F1 to     R18C18C.D0 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw2_6_1
+CTOF_DEL    ---     0.452     R18C18C.D0 to     R18C18C.F0 SLICE_2016
+ROUTE         4     0.918     R18C18C.F0 to     R21C18A.D0 un5_w_u3_nc7_sw2_6
+CTOF_DEL    ---     0.452     R21C18A.D0 to     R21C18A.F0 SLICE_2610
+ROUTE         3     1.361     R21C18A.F0 to     R18C18B.B0 inst_mcpld_to_scpld_p2s/N_29
+CTOF_DEL    ---     0.452     R18C18B.B0 to     R18C18B.F0 SLICE_2603
+ROUTE         1     0.678     R18C18B.F0 to     R19C18B.C0 inst_mcpld_to_scpld_p2s/N_313
+CTOF_DEL    ---     0.452     R19C18B.C0 to     R19C18B.F0 SLICE_1338
+ROUTE         1     0.000     R19C18B.F0 to    R19C18B.DI0 N_314_i (to clk_50m)
+                  --------
+                    9.211   (33.9% logic, 66.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1256:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     3.318     R15C21D.Q0 to     R21C12B.D0 pon_reset_n
+CTOF_DEL    ---     0.452     R21C12B.D0 to     R21C12B.F0 SLICE_2905
+ROUTE         2     0.842     R21C12B.F0 to    R23C12B.CLK un1_r_p12v_discharge_r9_53
+                  --------
+                    9.885   (20.2% logic, 79.8% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1338:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R19C18B.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.681ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id3_zt.res_lat  (from un1_r_p12v_discharge_r9_26 +)
+   Destination:    FF         Data in        r_switch_mode[1]  (to clk_50m +)
+                   FF                        r_switch_mode[0]
+
+   Delay:               7.974ns  (27.8% logic, 72.2% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.974ns physical path delay SLICE_1259 to SLICE_1340 meets
+     20.000ns delay constraint less
+      6.096ns skew and
+      0.000ns feedback compensation and
+      0.249ns CE_SET requirement (totaling 13.655ns) by 5.681ns
+
+ Physical Path Details:
+
+      Data path SLICE_1259 to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R22C19B.CLK to     R22C19B.Q0 SLICE_1259 (from un1_r_p12v_discharge_r9_26)
+ROUTE         1     1.018     R22C19B.Q0 to     R19C19B.C1 r_board_id3_zt.o3
+CTOF_DEL    ---     0.452     R19C19B.C1 to     R19C19B.F1 SLICE_2621
+ROUTE         3     0.893     R19C19B.F1 to     R19C19B.B0 r_board_id3_zt
+CTOF_DEL    ---     0.452     R19C19B.B0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     1.036     R19C19B.F0 to     R11C19D.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R11C19D.D1 to     R11C19D.F1 SLICE_2303
+ROUTE         3     1.874     R11C19D.F1 to     R19C20B.D0 un5_w_u3_nc7_sw
+CTOF_DEL    ---     0.452     R19C20B.D0 to     R19C20B.F0 SLICE_2608
+ROUTE         2     0.936     R19C20B.F0 to     R21C20D.CE un1_w_u3_nc7_sw (to clk_50m)
+                  --------
+                    7.974   (27.8% logic, 72.2% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1259:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     4.651     R15C21D.Q0 to     R22C19D.C0 pon_reset_n
+CTOF_DEL    ---     0.452     R22C19D.C0 to     R22C19D.F0 SLICE_2919
+ROUTE         2     0.548     R22C19D.F0 to    R22C19B.CLK un1_r_p12v_discharge_r9_26
+                  --------
+                   10.924   (18.2% logic, 81.8% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1340:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20D.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.681ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id3_zt.res_lat  (from un1_r_p12v_discharge_r9_26 +)
+   Destination:    FF         Data in        r_switch_mode[2]  (to clk_50m +)
+
+   Delay:               7.974ns  (27.8% logic, 72.2% route), 5 logic levels.
+
+ Constraint Details:
+
+      7.974ns physical path delay SLICE_1259 to SLICE_1341 meets
+     20.000ns delay constraint less
+      6.096ns skew and
+      0.000ns feedback compensation and
+      0.249ns CE_SET requirement (totaling 13.655ns) by 5.681ns
+
+ Physical Path Details:
+
+      Data path SLICE_1259 to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R22C19B.CLK to     R22C19B.Q0 SLICE_1259 (from un1_r_p12v_discharge_r9_26)
+ROUTE         1     1.018     R22C19B.Q0 to     R19C19B.C1 r_board_id3_zt.o3
+CTOF_DEL    ---     0.452     R19C19B.C1 to     R19C19B.F1 SLICE_2621
+ROUTE         3     0.893     R19C19B.F1 to     R19C19B.B0 r_board_id3_zt
+CTOF_DEL    ---     0.452     R19C19B.B0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     1.036     R19C19B.F0 to     R11C19D.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R11C19D.D1 to     R11C19D.F1 SLICE_2303
+ROUTE         3     1.874     R11C19D.F1 to     R19C20B.D0 un5_w_u3_nc7_sw
+CTOF_DEL    ---     0.452     R19C20B.D0 to     R19C20B.F0 SLICE_2608
+ROUTE         2     0.936     R19C20B.F0 to     R21C20C.CE un1_w_u3_nc7_sw (to clk_50m)
+                  --------
+                    7.974   (27.8% logic, 72.2% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1259:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C21D.CLK clk_50m
+REG_DEL     ---     0.409    R15C21D.CLK to     R15C21D.Q0 SLICE_2562
+ROUTE       115     4.651     R15C21D.Q0 to     R22C19D.C0 pon_reset_n
+CTOF_DEL    ---     0.452     R22C19D.C0 to     R22C19D.F0 SLICE_2919
+ROUTE         2     0.548     R22C19D.F0 to    R22C19B.CLK un1_r_p12v_discharge_r9_26
+                  --------
+                   10.924   (18.2% logic, 81.8% route), 4 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to SLICE_1341:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R21C20C.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+Report:   65.863MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 4.450ns (weighted slack = 8.900ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_pwrgood/mInst[6].out_i[6]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              15.400ns  (32.0% logic, 68.0% route), 11 logic levels.
+
+ Constraint Details:
+
+     15.400ns physical path delay SLICE_3102 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 4.450ns
+
+ Physical Path Details:
+
+      Data path SLICE_3102 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R16C23B.CLK to     R16C23B.Q0 SLICE_3102 (from clk_50m)
+ROUTE         3     2.550     R16C23B.Q0 to     R14C25D.C1 db_i_pgd_p1_vdd_soc_0
+CTOF_DEL    ---     0.452     R14C25D.C1 to     R14C25D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.384     R14C25D.F1 to     R14C25D.C0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz_3[0]
+CTOF_DEL    ---     0.452     R14C25D.C0 to     R14C25D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.541     R14C25D.F0 to     R14C26D.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz[0]
+CTOF_DEL    ---     0.452     R14C26D.D0 to     R14C26D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.384     R14C26D.F0 to     R14C26D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452     R14C26D.C1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   15.400   (32.0% logic, 68.0% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_3102:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R16C23B.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 4.561ns (weighted slack = 9.122ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_amd_cpu_prsnt/mInst[1].out_i[1]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              15.289ns  (26.3% logic, 73.7% route), 9 logic levels.
+
+ Constraint Details:
+
+     15.289ns physical path delay SLICE_1049 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 4.561ns
+
+ Physical Path Details:
+
+      Data path SLICE_1049 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409     R9C32A.CLK to      R9C32A.Q0 SLICE_1049 (from clk_50m)
+ROUTE        20     4.268      R9C32A.Q0 to     R14C26D.C0 o_PAL_P1_PRSENT_HDT_c
+CTOF_DEL    ---     0.452     R14C26D.C0 to     R14C26D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.384     R14C26D.F0 to     R14C26D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452     R14C26D.C1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   15.289   (26.3% logic, 73.7% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1049:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to     R9C32A.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 4.953ns (weighted slack = 9.906ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_pwrgood/mInst[4].out_i[4]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              14.897ns  (33.1% logic, 66.9% route), 11 logic levels.
+
+ Constraint Details:
+
+     14.897ns physical path delay SLICE_2614 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 4.953ns
+
+ Physical Path Details:
+
+      Data path SLICE_2614 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R18C25B.CLK to     R18C25B.Q0 SLICE_2614 (from clk_50m)
+ROUTE         3     2.047     R18C25B.Q0 to     R14C25D.D1 db_i_pgd_p1_vddio
+CTOF_DEL    ---     0.452     R14C25D.D1 to     R14C25D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.384     R14C25D.F1 to     R14C25D.C0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz_3[0]
+CTOF_DEL    ---     0.452     R14C25D.C0 to     R14C25D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.541     R14C25D.F0 to     R14C26D.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz[0]
+CTOF_DEL    ---     0.452     R14C26D.D0 to     R14C26D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.384     R14C26D.F0 to     R14C26D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452     R14C26D.C1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   14.897   (33.1% logic, 66.9% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_2614:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R18C25B.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.077ns (weighted slack = 10.154ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_pwrgood/mInst[14].out_i[14]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              14.773ns  (33.4% logic, 66.6% route), 11 logic levels.
+
+ Constraint Details:
+
+     14.773ns physical path delay SLICE_2611 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 5.077ns
+
+ Physical Path Details:
+
+      Data path SLICE_2611 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R16C25D.CLK to     R16C25D.Q0 SLICE_2611 (from clk_50m)
+ROUTE         3     1.923     R16C25D.Q0 to     R14C25D.B1 db_i_pgd_p1_vddc
+CTOF_DEL    ---     0.452     R14C25D.B1 to     R14C25D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.384     R14C25D.F1 to     R14C25D.C0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz_3[0]
+CTOF_DEL    ---     0.452     R14C25D.C0 to     R14C25D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.541     R14C25D.F0 to     R14C26D.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz[0]
+CTOF_DEL    ---     0.452     R14C26D.D0 to     R14C26D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.384     R14C26D.F0 to     R14C26D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452     R14C26D.C1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   14.773   (33.4% logic, 66.6% route), 11 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_2611:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R16C25D.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.795ns (weighted slack = 11.590ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id4_zt.II_0  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[2]  (to clk_25m +)
+
+   Delay:              14.055ns  (33.3% logic, 66.7% route), 10 logic levels.
+
+ Constraint Details:
+
+     14.055ns physical path delay SLICE_1263 to bmc_cpld_i2c_ram_u0/SLICE_517 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 5.795ns
+
+ Physical Path Details:
+
+      Data path SLICE_1263 to bmc_cpld_i2c_ram_u0/SLICE_517:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R19C13A.CLK to     R19C13A.Q0 SLICE_1263 (from clk_50m)
+ROUTE         1     1.622     R19C13A.Q0 to     R19C19C.B1 r_board_id4_zt.o1
+CTOF_DEL    ---     0.452     R19C19C.B1 to     R19C19C.F1 SLICE_2593
+ROUTE         3     0.399     R19C19C.F1 to     R19C19C.C0 r_board_id4_zt
+CTOF_DEL    ---     0.452     R19C19C.C0 to     R19C19C.F0 SLICE_2593
+ROUTE         1     0.659     R19C19C.F0 to     R19C19B.C0 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6_1
+CTOF_DEL    ---     0.452     R19C19B.C0 to     R19C19B.F0 SLICE_2621
+ROUTE         2     1.036     R19C19B.F0 to     R11C19D.D1 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw_6
+CTOF_DEL    ---     0.452     R11C19D.D1 to     R11C19D.F1 SLICE_2303
+ROUTE         3     1.473     R11C19D.F1 to      R8C24C.D1 un5_w_u3_nc7_sw
+CTOOFX_DEL  ---     0.661      R8C24C.D1 to    R8C24C.OFX0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_49_i_m2_i_m2[2]/SLICE_1803
+ROUTE         1     1.393    R8C24C.OFX0 to      R9C31C.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_1063
+CTOF_DEL    ---     0.452      R9C31C.D0 to      R9C31C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_3008
+ROUTE         1     1.180      R9C31C.F0 to     R11C32D.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_0_a2_25_0[2]
+CTOF_DEL    ---     0.452     R11C32D.B0 to     R11C32D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2107
+ROUTE         1     0.269     R11C32D.F0 to     R11C32C.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_0_o3_15[2]
+CTOF_DEL    ---     0.452     R11C32C.D0 to     R11C32C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2098
+ROUTE         1     1.338     R11C32C.F0 to     R14C31C.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_0_o3_26[2]
+CTOF_DEL    ---     0.452     R14C31C.A0 to     R14C31C.F0 bmc_cpld_i2c_ram_u0/SLICE_517
+ROUTE         1     0.000     R14C31C.F0 to    R14C31C.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[2] (to clk_25m)
+                  --------
+                   14.055   (33.3% logic, 66.7% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1263:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R19C13A.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_517:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R14C31C.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.883ns (weighted slack = 11.766ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_amd_cpu_prsnt/mInst[1].out_i[1]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              13.967ns  (25.6% logic, 74.4% route), 8 logic levels.
+
+ Constraint Details:
+
+     13.967ns physical path delay SLICE_1049 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 5.883ns
+
+ Physical Path Details:
+
+      Data path SLICE_1049 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409     R9C32A.CLK to      R9C32A.Q0 SLICE_1049 (from clk_50m)
+ROUTE        20     3.782      R9C32A.Q0 to     R14C26D.D1 o_PAL_P1_PRSENT_HDT_c
+CTOF_DEL    ---     0.452     R14C26D.D1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   13.967   (25.6% logic, 74.4% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1049:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to     R9C32A.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.923ns (weighted slack = 11.846ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              pvt_gpi_MB_inst/par_data[37]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[1]  (to clk_25m +)
+
+   Delay:              13.927ns  (23.9% logic, 76.1% route), 7 logic levels.
+
+ Constraint Details:
+
+     13.927ns physical path delay SLICE_2534 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 5.923ns
+
+ Physical Path Details:
+
+      Data path SLICE_2534 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R14C18D.CLK to     R14C18D.Q0 SLICE_2534 (from clk_50m)
+ROUTE         9     1.507     R14C18D.Q0 to     R10C24B.D1 w_SW_3
+CTOF_DEL    ---     0.452     R10C24B.D1 to     R10C24B.F1 SLICE_1209
+ROUTE        24     3.608     R10C24B.F1 to     R16C24B.C1 w_keep_alive_on_fault
+CTOF_DEL    ---     0.452     R16C24B.C1 to     R16C24B.F1 SLICE_2505
+ROUTE         5     2.303     R16C24B.F1 to     R19C28D.D1 N_922
+CTOOFX_DEL  ---     0.661     R19C28D.D1 to   R19C28D.OFX0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_58_i_m2_i_m2[1]/SLICE_1810
+ROUTE         1     1.827   R19C28D.OFX0 to     R14C30A.A1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_1035
+CTOF_DEL    ---     0.452     R14C30A.A1 to     R14C30A.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2106
+ROUTE         1     0.610     R14C30A.F1 to     R14C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_29_o3_13[1]
+CTOF_DEL    ---     0.452     R14C30A.B0 to     R14C30A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2106
+ROUTE         1     0.742     R14C30A.F0 to     R12C30A.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_29_o3_20[1]
+CTOF_DEL    ---     0.452     R12C30A.C1 to     R12C30A.F1 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F1 to    R12C30A.DI1 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[1] (to clk_25m)
+                  --------
+                   13.927   (23.9% logic, 76.1% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_2534:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R14C18D.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.955ns (weighted slack = 11.910ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_pwrgood/mInst[10].out_i[10]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              13.895ns  (32.2% logic, 67.8% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.895ns physical path delay SLICE_2605 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 5.955ns
+
+ Physical Path Details:
+
+      Data path SLICE_2605 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R18C24D.CLK to     R18C24D.Q0 SLICE_2605 (from clk_50m)
+ROUTE         3     1.881     R18C24D.Q0 to     R14C25D.D0 db_i_pgd_p1_vdd_core_0
+CTOF_DEL    ---     0.452     R14C25D.D0 to     R14C25D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.541     R14C25D.F0 to     R14C26D.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz[0]
+CTOF_DEL    ---     0.452     R14C26D.D0 to     R14C26D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.384     R14C26D.F0 to     R14C26D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452     R14C26D.C1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   13.895   (32.2% logic, 67.8% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_2605:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R18C24D.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 5.962ns (weighted slack = 11.924ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              db_inst_pwrgood/mInst[8].out_i[8]  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[0]  (to clk_25m +)
+
+   Delay:              13.888ns  (32.2% logic, 67.8% route), 10 logic levels.
+
+ Constraint Details:
+
+     13.888ns physical path delay SLICE_3104 to bmc_cpld_i2c_ram_u0/SLICE_516 meets
+     20.000ns delay constraint less
+      0.000ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.850ns) by 5.962ns
+
+ Physical Path Details:
+
+      Data path SLICE_3104 to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R15C23D.CLK to     R15C23D.Q0 SLICE_3104 (from clk_50m)
+ROUTE         3     1.874     R15C23D.Q0 to     R14C25D.B0 db_i_pgd_p1_vdd_core_1
+CTOF_DEL    ---     0.452     R14C25D.B0 to     R14C25D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2220
+ROUTE         1     0.541     R14C25D.F0 to     R14C26D.D0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_13_tz[0]
+CTOF_DEL    ---     0.452     R14C26D.D0 to     R14C26D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.384     R14C26D.F0 to     R14C26D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_6[0]
+CTOF_DEL    ---     0.452     R14C26D.C1 to     R14C26D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_1984
+ROUTE         1     0.610     R14C26D.F1 to     R14C26C.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_2L1
+CTOF_DEL    ---     0.452     R14C26C.B0 to     R14C26C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2230
+ROUTE         1     1.597     R14C26C.F0 to     R12C28A.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_a2_4_N_5L7
+CTOF_DEL    ---     0.452     R12C28A.A0 to     R12C28A.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2229
+ROUTE         1     0.851     R12C28A.F0 to     R12C29D.A0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2663
+CTOF_DEL    ---     0.452     R12C29D.A0 to     R12C29D.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     0.384     R12C29D.F0 to     R12C29D.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_17[0]
+CTOF_DEL    ---     0.452     R12C29D.C1 to     R12C29D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2113
+ROUTE         1     1.473     R12C29D.F1 to     R14C32D.B1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26_N_2L1
+CTOF_DEL    ---     0.452     R14C32D.B1 to     R14C32D.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2131
+ROUTE         1     1.697     R14C32D.F1 to     R12C30A.B0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_3_o3_26[0]
+CTOF_DEL    ---     0.452     R12C30A.B0 to     R12C30A.F0 bmc_cpld_i2c_ram_u0/SLICE_516
+ROUTE         1     0.000     R12C30A.F0 to    R12C30A.DI0 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[0] (to clk_25m)
+                  --------
+                   13.888   (32.2% logic, 67.8% route), 10 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_3104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.711     LPLL.CLKOP to    R15C23D.CLK clk_50m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_516:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R12C30A.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Passed: The following path meets requirements by 6.081ns (weighted slack = 12.162ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              r_board_id2_zt2.II_0  (from clk_50m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/r_i2c_data_in[3]  (to clk_25m +)
+
+   Delay:              13.805ns  (30.7% logic, 69.3% route), 9 logic levels.
+
+ Constraint Details:
+
+     13.805ns physical path delay SLICE_1254 to bmc_cpld_i2c_ram_u0/SLICE_517 meets
+     20.000ns delay constraint less
+     -0.036ns skew and
+      0.000ns feedback compensation and
+      0.150ns DIN_SET requirement (totaling 19.886ns) by 6.081ns
+
+ Physical Path Details:
+
+      Data path SLICE_1254 to bmc_cpld_i2c_ram_u0/SLICE_517:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.409    R22C12C.CLK to     R22C12C.Q0 SLICE_1254 (from clk_50m)
+ROUTE         1     0.885     R22C12C.Q0 to     R22C12C.B1 r_board_id2_zt2.o1
+CTOF_DEL    ---     0.452     R22C12C.B1 to     R22C12C.F1 SLICE_1254
+ROUTE         2     1.745     R22C12C.F1 to     R17C17B.D1 r_board_id2_zt2
+CTOF_DEL    ---     0.452     R17C17B.D1 to     R17C17B.F1 SLICE_1342
+ROUTE         2     0.847     R17C17B.F1 to     R18C18C.D0 inst_mcpld_to_scpld_p2s/un5_w_u3_nc7_sw2_6_1
+CTOF_DEL    ---     0.452     R18C18C.D0 to     R18C18C.F0 SLICE_2016
+ROUTE         4     0.570     R18C18C.F0 to     R17C18A.D1 un5_w_u3_nc7_sw2_6
+CTOF_DEL    ---     0.452     R17C18A.D1 to     R17C18A.F1 SLICE_1284
+ROUTE         1     2.489     R17C18A.F1 to      R8C24B.A1 un5_w_u3_nc7_sw2
+CTOOFX_DEL  ---     0.661      R8C24B.A1 to    R8C24B.OFX0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_49_i_m2_i_m2[3]/SLICE_1804
+ROUTE         1     1.508    R8C24B.OFX0 to     R10C31C.C0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_1062
+CTOF_DEL    ---     0.452     R10C31C.C0 to     R10C31C.F0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2094
+ROUTE         1     0.384     R10C31C.F0 to     R10C31C.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_2776
+CTOF_DEL    ---     0.452     R10C31C.C1 to     R10C31C.F1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2094
+ROUTE         1     1.143     R10C31C.F1 to     R14C31C.C1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_i2c_data_in_94_0_o2_28_o3_19[3]
+CTOF_DEL    ---     0.452     R14C31C.C1 to     R14C31C.F1 bmc_cpld_i2c_ram_u0/SLICE_517
+ROUTE         1     0.000     R14C31C.F1 to    R14C31C.DI1 bmc_cpld_i2c_ram_u0/r_i2c_data_in_94[3] (to clk_25m)
+                  --------
+                   13.805   (30.7% logic, 69.3% route), 9 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path i_CLK_25M_CPLD to SLICE_1254:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OP_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.675     LPLL.CLKOP to    R22C12C.CLK clk_50m
+                  --------
+                    4.828   (23.4% logic, 76.6% route), 2 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path i_CLK_25M_CPLD to bmc_cpld_i2c_ram_u0/SLICE_517:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         E2.PAD to       E2.PADDI i_CLK_25M_CPLD
+ROUTE         1     2.021       E2.PADDI to      LPLL.CLKI i_CLK_25M_CPLD_c
+CLKI2OS_DE  ---     0.000      LPLL.CLKI to     LPLL.CLKOS pll_inst/PLLInst_0
+ROUTE       350     1.711     LPLL.CLKOS to    R14C31C.CLK clk_25m
+                  --------
+                    4.864   (23.3% logic, 76.7% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     LPLL.CLKFB to     LPLL.CLKOP pll_inst/PLLInst_0
+ROUTE       999     1.863     LPLL.CLKOP to     LPLL.CLKFB clk_50m
+                  --------
+                    1.863   (0.0% logic, 100.0% route), 1 logic levels.
+
+Report:   32.154MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i_CLK_25M_CPLD_c"        |             |             |
+25.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "wb_clk" 4.290000 MHz ;   |    4.290 MHz|  115.660 MHz|   0  
+                                        |             |             |
+FREQUENCY NET "clk_50m" 50.000000 MHz ; |   50.000 MHz|   65.863 MHz|   7  
+                                        |             |             |
+FREQUENCY NET "clk_25m" 25.000000 MHz ; |   25.000 MHz|   32.154 MHz|  11  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 58 clocks:
+
+Clock Domain: wb_clk   Source: inst_osch.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: w1mSCE   Source: SLICE_1622.Q0   Loads: 21
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: t1us_tick   Source: SLICE_1557.Q0   Loads: 53
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_7   Source: SLICE_2910.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_6   Source: SLICE_2909.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_5   Source: SLICE_2912.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_4   Source: SLICE_2911.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_3   Source: SLICE_2914.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_2   Source: SLICE_2913.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_1   Source: SLICE_2908.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst   Source: SLICE_2915.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1.sclk   Source: s2p_164_u1/SLICE_1344.Q0   Loads: 6
+   No transfer within this clock domain is found
+
+Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_sclo   Source: inst_i2c_update_flash_config/EFBInst_0.I2C1SCLO   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_scli   Source: io_I2C7_UPDATE_SCL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD   Loads: 115
+   No transfer within this clock domain is found
+
+Clock Domain: i_CLK_25M_CPLD_c   Source: i_CLK_25M_CPLD.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1159
+   Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 50
+
+Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS   Loads: 350
+   Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 387
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0   Loads: 4
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 38944 paths, 4 nets, and 16360 connections (82.19% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Thu Oct 23 14:13:22 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o BM_H13DSP_M_impl1.twr -gui -msgset C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/promote.xml BM_H13DSP_M_impl1.ncd BM_H13DSP_M_impl1.prf 
+Design file:     bm_h13dsp_m_impl1.ncd
+Preference file: bm_h13dsp_m_impl1.prf
+Device,speed:    LCMXO3LF-6900C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   1.800 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "i_CLK_25M_CPLD_c" 25.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "wb_clk" 4.290000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_cmucpld_p2s/sclk_r[1]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_cmucpld_p2s/sclk_r[2]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_1183 to SLICE_1191 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_1183 to SLICE_1191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R9C26D.CLK to      R9C26D.Q1 SLICE_1183 (from clk_50m)
+ROUTE         1     0.152      R9C26D.Q1 to      R9C26C.M1 inst_mcpld_to_cmucpld_p2s/sclk_r[1] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_1183:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to     R9C26D.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_1191:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to     R9C26C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_cmucpld_p2s/sclk_r[5]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_cmucpld_p2s/sclk_r[6]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_1207 to SLICE_1211 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_1207 to SLICE_1211:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R11C24A.CLK to     R11C24A.Q1 SLICE_1207 (from clk_50m)
+ROUTE         1     0.152     R11C24A.Q1 to     R11C24C.M1 inst_mcpld_to_cmucpld_p2s/sclk_r[5] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_1207:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R11C24A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_1211:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R11C24C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_scpld_p2s/sclk_r[0]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_scpld_p2s/sclk_r[1]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2509 to SLICE_2509 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2509 to SLICE_2509:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R10C25A.CLK to     R10C25A.Q0 SLICE_2509 (from clk_50m)
+ROUTE         1     0.152     R10C25A.Q0 to     R10C25A.M1 inst_mcpld_to_scpld_p2s/sclk_r[0] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2509:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R10C25A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2509:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R10C25A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_scpld_p2s/sclk_r[1]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_scpld_p2s/sclk_r[2]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2509 to SLICE_3091 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2509 to SLICE_3091:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R10C25A.CLK to     R10C25A.Q1 SLICE_2509 (from clk_50m)
+ROUTE         1     0.152     R10C25A.Q1 to     R10C25C.M0 inst_mcpld_to_scpld_p2s/sclk_r[1] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2509:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R10C25A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_3091:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R10C25C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_scpld_to_mcpld_s2p/po_r[175]  (from clk_50m +)
+   Destination:    FF         Data in        inst_scpld_to_mcpld_s2p/po[175]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_3051 to inst_scpld_to_mcpld_s2p/SLICE_2657 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_3051 to inst_scpld_to_mcpld_s2p/SLICE_2657:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R7C12C.CLK to      R7C12C.Q0 SLICE_3051 (from clk_50m)
+ROUTE         1     0.152      R7C12C.Q0 to      R7C12A.M1 inst_scpld_to_mcpld_s2p/po_r[175] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_3051:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to     R7C12C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to inst_scpld_to_mcpld_s2p/SLICE_2657:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to     R7C12A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_scpld_p2s/sclk_r[2]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_scpld_p2s/sclk_r[3]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_3091 to SLICE_3091 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_3091 to SLICE_3091:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R10C25C.CLK to     R10C25C.Q0 SLICE_3091 (from clk_50m)
+ROUTE         1     0.152     R10C25C.Q0 to     R10C25C.M1 inst_mcpld_to_scpld_p2s/sclk_r[2] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_3091:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R10C25C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_3091:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R10C25C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_cmucpld_p2s/sld_n_r[0]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_cmucpld_p2s/sld_n_r[1]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_3093 to SLICE_1215 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_3093 to SLICE_1215:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R16C25C.CLK to     R16C25C.Q1 SLICE_3093 (from clk_50m)
+ROUTE         1     0.152     R16C25C.Q1 to     R16C25A.M1 inst_mcpld_to_cmucpld_p2s/sld_n_r[0] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_3093:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R16C25C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_1215:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R16C25A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_mcpld_to_scpld_p2s/sclk_r[5]  (from clk_50m +)
+   Destination:    FF         Data in        inst_mcpld_to_scpld_p2s/sclk_r[6]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_3095 to SLICE_3095 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_3095 to SLICE_3095:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R11C21C.CLK to     R11C21C.Q0 SLICE_3095 (from clk_50m)
+ROUTE         1     0.152     R11C21C.Q0 to     R11C21C.M1 inst_mcpld_to_scpld_p2s/sclk_r[5] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_3095:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R11C21C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_3095:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R11C21C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_scpld_to_mcpld_s2p/po[58]  (from clk_50m +)
+   Destination:    FF         Data in        scpld_to_mcpld_data_filter[54]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay inst_scpld_to_mcpld_s2p/SLICE_2752 to SLICE_2301 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path inst_scpld_to_mcpld_s2p/SLICE_2752 to SLICE_2301:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R6C15C.CLK to      R6C15C.Q0 inst_scpld_to_mcpld_s2p/SLICE_2752 (from clk_50m)
+ROUTE         1     0.152      R6C15C.Q0 to      R6C15A.M0 scpld_to_mcpld_s2p_data[58] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to inst_scpld_to_mcpld_s2p/SLICE_2752:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to     R6C15C.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2301:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to     R6C15A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              inst_scpld_to_mcpld_s2p/po_r[119]  (from clk_50m +)
+   Destination:    FF         Data in        inst_scpld_to_mcpld_s2p/po[119]  (to clk_50m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay inst_scpld_to_mcpld_s2p/SLICE_2694 to inst_scpld_to_mcpld_s2p/SLICE_2715 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path inst_scpld_to_mcpld_s2p/SLICE_2694 to inst_scpld_to_mcpld_s2p/SLICE_2715:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R12C11A.CLK to     R12C11A.Q0 inst_scpld_to_mcpld_s2p/SLICE_2694 (from clk_50m)
+ROUTE         1     0.152     R12C11A.Q0 to     R12C11D.M1 inst_scpld_to_mcpld_s2p/po_r[119] (to clk_50m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to inst_scpld_to_mcpld_s2p/SLICE_2694:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R12C11A.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to inst_scpld_to_mcpld_s2p/SLICE_2715:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       999     0.698     LPLL.CLKOP to    R12C11D.CLK clk_50m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[11]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[12]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2320 to SLICE_2320 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2320 to SLICE_2320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R15C10C.CLK to     R15C10C.Q0 SLICE_2320 (from clk_25m)
+ROUTE         1     0.152     R15C10C.Q0 to     R15C10C.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[11] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R15C10C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2320:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R15C10C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[7]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[8]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2325 to SLICE_2325 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2325 to SLICE_2325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R14C8D.CLK to      R14C8D.Q0 SLICE_2325 (from clk_25m)
+ROUTE         1     0.152      R14C8D.Q0 to      R14C8D.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[7] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R14C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R14C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[8]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[9]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2325 to SLICE_2427 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2325 to SLICE_2427:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R14C8D.CLK to      R14C8D.Q1 SLICE_2325 (from clk_25m)
+ROUTE         1     0.152      R14C8D.Q1 to      R14C8C.M0 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[8] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2325:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R14C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2427:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R14C8C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[3]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[4]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2410 to SLICE_2410 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2410 to SLICE_2410:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R17C8D.CLK to      R17C8D.Q0 SLICE_2410 (from clk_25m)
+ROUTE         1     0.152      R17C8D.Q0 to      R17C8D.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[3] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2410:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R17C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2410:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R17C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[5]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[6]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2419 to SLICE_2419 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2419 to SLICE_2419:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R15C8D.CLK to      R15C8D.Q0 SLICE_2419 (from clk_25m)
+ROUTE         1     0.152      R15C8D.Q0 to      R15C8D.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[5] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2419:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R15C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2419:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to     R15C8D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[1]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[2]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2429 to SLICE_2429 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2429 to SLICE_2429:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R18C11C.CLK to     R18C11C.Q0 SLICE_2429 (from clk_25m)
+ROUTE         1     0.152     R18C11C.Q0 to     R18C11C.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[1] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2429:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R18C11C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2429:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R18C11C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[13]  (from clk_25m +)
+   Destination:    FF         Data in        bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[14]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_2443 to SLICE_2443 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_2443 to SLICE_2443:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R17C11D.CLK to     R17C11D.Q0 SLICE_2443 (from clk_25m)
+ROUTE         1     0.152     R17C11D.Q0 to     R17C11D.M1 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q[13] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to SLICE_2443:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R17C11D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to SLICE_2443:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R17C11D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[2]  (from clk_25m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[3]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2073 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2078 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2073 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2078:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R15C33D.CLK to     R15C33D.Q1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2073 (from clk_25m)
+ROUTE         1     0.152     R15C33D.Q1 to     R15C33C.M0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q_0[2] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2073:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R15C33D.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2078:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R15C33C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[13]  (from clk_25m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly[14]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R11C33A.CLK to     R11C33A.Q0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060 (from clk_25m)
+ROUTE         1     0.152     R11C33A.Q0 to     R11C33A.M1 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_r1_sda_dly_Q_0[13] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R11C33A.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2060:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R11C33A.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_data_in[4]  (from clk_25m +)
+   Destination:    FF         Data in        bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in[4]  (to clk_25m +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_496 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2836 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_496 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2836:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R16C34A.CLK to     R16C34A.Q0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_496 (from clk_25m)
+ROUTE         1     0.152     R16C34A.Q0 to     R16C34C.M0 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_data_in[4] (to clk_25m)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path pll_inst/PLLInst_0 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_496:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R16C34A.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path pll_inst/PLLInst_0 to bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2836:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       350     0.698     LPLL.CLKOS to    R16C34C.CLK clk_25m
+                  --------
+                    0.698   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "i_CLK_25M_CPLD_c"        |             |             |
+25.000000 MHz ;                         |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "wb_clk" 4.290000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY NET "clk_50m" 50.000000 MHz ; |     0.000 ns|     0.304 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk_25m" 25.000000 MHz ; |     0.000 ns|     0.304 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 58 clocks:
+
+Clock Domain: wb_clk   Source: inst_osch.OSC   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: w1mSCE   Source: SLICE_1622.Q0   Loads: 21
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: t1us_tick   Source: SLICE_1557.Q0   Loads: 53
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_7   Source: SLICE_2910.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_6   Source: SLICE_2909.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_5   Source: SLICE_2912.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_4   Source: SLICE_2911.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_3   Source: SLICE_2914.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_2   Source: SLICE_2913.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst_1   Source: SLICE_2908.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1/un1_i_rst   Source: SLICE_2915.F1   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: s2p_164_u1.sclk   Source: s2p_164_u1/SLICE_1344.Q0   Loads: 6
+   No transfer within this clock domain is found
+
+Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0   Loads: 2
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_sclo   Source: inst_i2c_update_flash_config/EFBInst_0.I2C1SCLO   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: inst_i2c_update_flash_config/i2c1_scli   Source: io_I2C7_UPDATE_SCL.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD   Loads: 115
+   No transfer within this clock domain is found
+
+Clock Domain: i_CLK_25M_CPLD_c   Source: i_CLK_25M_CPLD.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP   Loads: 1159
+   Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_55   Source: SLICE_2907.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_51   Source: SLICE_2903.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_50   Source: SLICE_2902.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_49   Source: SLICE_2901.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_48   Source: SLICE_2900.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_47   Source: SLICE_2899.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_46   Source: SLICE_2898.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_44   Source: SLICE_2896.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_38   Source: SLICE_2931.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_36   Source: SLICE_2929.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_35   Source: SLICE_2928.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_31   Source: SLICE_2924.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_30   Source: SLICE_2923.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_28   Source: SLICE_2921.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_25   Source: SLICE_2918.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_24   Source: SLICE_2917.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: pwrseq_master_inst/N_454_buf_i   Source: SLICE_1738.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: o_P0_PWR_BTN_R_N_c   Source: SLICE_2025.F0
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 1
+
+   Clock Domain: i_CPLD_ESPI_CLK_c   Source: i_CPLD_ESPI_CLK.PAD
+      Not reported because source and destination domains are unrelated.
+
+   Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk_50m" 50.000000 MHz ;   Transfers: 50
+
+Clock Domain: clk_25m   Source: pll_inst/PLLInst_0.CLKOS   Loads: 350
+   Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: un1_r_p12v_discharge_r9_54   Source: SLICE_2906.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_53   Source: SLICE_2905.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_52   Source: SLICE_2904.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_45   Source: SLICE_2897.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_43   Source: SLICE_2895.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_42   Source: SLICE_2894.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_41   Source: SLICE_2893.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_40   Source: SLICE_2892.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_37   Source: SLICE_2930.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_34   Source: SLICE_2927.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_33   Source: SLICE_2926.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_32   Source: SLICE_2925.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_29   Source: SLICE_2922.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_27   Source: SLICE_2920.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9_26   Source: SLICE_2919.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: un1_r_p12v_discharge_r9   Source: SLICE_2916.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_50m   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 387
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 16
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+   Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0
+      Covered under: FREQUENCY NET "clk_25m" 25.000000 MHz ;   Transfers: 3
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2233.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2839.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1   Source: bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2840.F0   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/SLICE_2290.F0   Loads: 8
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2851.F1   Loads: 4
+   No transfer within this clock domain is found
+
+Clock Domain: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0   Source: bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_2852.F0   Loads: 4
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 38944 paths, 4 nets, and 16356 connections (82.17% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

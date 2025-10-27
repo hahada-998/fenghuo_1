@@ -1,0 +1,44 @@
+
+fsm_encoding {1127902791} onehot
+
+fsm_state_encoding {1127902791} 00000 {00000000000000000001}
+
+fsm_state_encoding {1127902791} 00001 {00000000000000000010}
+
+fsm_state_encoding {1127902791} 00010 {00000000000000000100}
+
+fsm_state_encoding {1127902791} 00011 {00000000000000001000}
+
+fsm_state_encoding {1127902791} 00100 {00000000000000010000}
+
+fsm_state_encoding {1127902791} 00101 {00000000000000100000}
+
+fsm_state_encoding {1127902791} 00110 {00000000000001000000}
+
+fsm_state_encoding {1127902791} 00111 {00000000000010000000}
+
+fsm_state_encoding {1127902791} 01000 {00000000000100000000}
+
+fsm_state_encoding {1127902791} 01001 {00000000001000000000}
+
+fsm_state_encoding {1127902791} 01010 {00000000010000000000}
+
+fsm_state_encoding {1127902791} 01011 {00000000100000000000}
+
+fsm_state_encoding {1127902791} 01100 {00000001000000000000}
+
+fsm_state_encoding {1127902791} 01101 {00000010000000000000}
+
+fsm_state_encoding {1127902791} 01110 {00000100000000000000}
+
+fsm_state_encoding {1127902791} 01111 {00001000000000000000}
+
+fsm_state_encoding {1127902791} 10000 {00010000000000000000}
+
+fsm_state_encoding {1127902791} 10001 {00100000000000000000}
+
+fsm_state_encoding {1127902791} 10010 {01000000000000000000}
+
+fsm_state_encoding {1127902791} 10011 {10000000000000000000}
+
+fsm_registers {1127902791} {r_I2C_state[19]}  {r_I2C_state[18]}  {r_I2C_state[17]}  {r_I2C_state[16]}  {r_I2C_state[15]}  {r_I2C_state[14]}  {r_I2C_state[13]}  {r_I2C_state[12]}  {r_I2C_state[11]}  {r_I2C_state[10]}  {r_I2C_state[9]}  {r_I2C_state[8]}  {r_I2C_state[7]}  {r_I2C_state[6]}  {r_I2C_state[5]}  {r_I2C_state[4]}  {r_I2C_state[3]}  {r_I2C_state[2]}  {r_I2C_state[1]}  {r_I2C_state[0]} 

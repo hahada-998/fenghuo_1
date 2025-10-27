@@ -1,0 +1,110 @@
+@W: CL265 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1800:10:1800:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1801:10:1801:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1802:10:1802:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1803:9:1803:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1804:10:1804:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1805:10:1805:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1293:5:1293:16|Removing wire w_debug_led1, as there is no assignment to it.
+@W: CL168 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1202:48:1202:73|Removing instance edge_delay_gpu_base_pwr_gd because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[14].r_pwm_D_fan_limit[14][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[13].r_pwm_D_fan_limit[13][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[12].r_pwm_D_fan_limit[12][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[11].r_pwm_D_fan_limit[11][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[10].r_pwm_D_fan_limit[10][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[9].r_pwm_D_fan_limit[9][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[8].r_pwm_D_fan_limit[8][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[7].r_pwm_D_fan_limit[7][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[6].r_pwm_D_fan_limit[6][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[5].r_pwm_D_fan_limit[5][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[4].r_pwm_D_fan_limit[4][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[3].r_pwm_D_fan_limit[3][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[2].r_pwm_D_fan_limit[2][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[1].r_pwm_D_fan_limit[1][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1612:4:1612:9|Pruning unused register genblk1[0].r_pwm_D_fan_limit[0][10:0]. Make sure that there are no unused intermediate registers.
+@W: CL271 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":581:0:581:5|Pruning unused bits 51 to 5 of mcpld_to_swcpld_data_filter[51:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL265 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":581:0:581:5|Removing unused bit 2 of mcpld_to_swcpld_data_filter[51:0]. Either assign all bits or reduce the width of the signal.
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1212:28:1212:79|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1212:28:1212:79|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1212:28:1212:79|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1112:33:1112:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1107:33:1107:72|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":419:51:419:54|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1002:23:1002:59|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1002:23:1002:59|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":211:41:211:44|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":147:27:147:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1742:19:1742:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1741:19:1741:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL259 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1451:22:1451:34|Duplicate LOC attributes found on net
+@W: CL190 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":41:0:41:5|Optimizing register bit r_cnt_result[10] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL260 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":41:0:41:5|Pruning register bit 10 of r_cnt_result[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL190 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+

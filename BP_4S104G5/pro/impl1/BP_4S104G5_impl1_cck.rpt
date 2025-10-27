@@ -1,0 +1,376 @@
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.1
+
+Hostname: RDHZW7137
+
+Implementation : impl1
+
+# Written on Sat Feb  8 10:31:52 2025
+
+##### DESIGN INFO #######################################################
+
+Top View:                "BP_4S104G5"
+Constraint File(s):      (none)
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 0 issues in 0 out of 0 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                    Ending                                      |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                      System                                      |     10.000           |     No paths         |     No paths         |     No paths                         
+System                                      pll_i25M_o50M_o25M|CLKOS_inferred_clock     |     10.000           |     No paths         |     No paths         |     10.000                           
+System                                      pll_i25M_o50M_o25M|CLKOP_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     System                                      |     No paths         |     No paths         |     10.000           |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     pll_i25M_o50M_o25M|CLKOS_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     pll_i25M_o50M_o25M|CLKOP_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     System                                      |     10.000           |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     pll_i25M_o50M_o25M|CLKOS_inferred_clock     |     Diff grp         |     No paths         |     No paths         |     No paths                         
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     pll_i25M_o50M_o25M|CLKOP_inferred_clock     |     10.000           |     No paths         |     No paths         |     No paths                         
+===================================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:i_3V3IO_RSVD0_FFU_R
+p:i_3V3IO_RSVD1_FFU_R
+p:i_3V3IO_RSVD1_R
+p:i_3V3IO_RSVD2_FFU_R
+p:i_3V3IO_RSVD3_FFU_R
+p:i_3V3IO_RSVD3_R
+p:i_3V3IO_RSVD4_FFU_R
+p:i_3V3IO_RSVD4_R
+p:i_3V3IO_RSVD5_FFU_R
+p:i_74LV165_1_DATA_IN_R
+p:i_74LV165_DATA_IN_R
+p:i_BASE_PRSNT_N_R
+p:i_BB_RSVD_1_R
+p:i_BP1_PRSNT_N_R
+p:i_BP1_PWR_PG_R
+p:i_BP2_PRSNT_N_R
+p:i_BP2_PWR_PG_R
+p:i_BPTB_RE_DONE_R
+p:i_CPLD_CLK
+p:i_CT_P1V25_SW0_PG
+p:i_CT_P1V25_SW1_PG
+p:i_CT_P1V25_SW2_PG
+p:i_CT_P1V25_SW3_PG
+p:i_DS160_RX_ALL_DONE_N
+p:i_DS160_TX_ALL_DONE_N
+p:i_FPGA_EROT_FATALERR_N_R
+p:i_FPGA_OVERT_N_R
+p:i_GPU_BASE_FPGA_READY_R
+p:i_GPU_BASE_HMC_READY_R
+p:i_GPU_BASE_PWR_GD_R
+p:i_HMC_PRSNT_N_R
+p:i_I2C1_ALERT_N_R
+p:i_I2C2_ALERT_N_R
+p:i_I2C9_9548_CH4_ALERT
+p:i_I2C_CPLD_SCL
+p:i_MB_SGPIO_CLK
+p:i_MB_SGPIO_DATA_OUT
+p:i_MB_SGPIO_LD
+p:i_NIC_3P3V_A_PG_R
+p:i_NIC_3P3V_B_PG_R
+p:i_NIC_SGPIO_SDI_R
+p:i_NIC_SGPIO_SDO_R
+p:i_P0V8_SW0_PWRGD
+p:i_P0V8_SW1_PWRGD
+p:i_P0V8_SW2_PWRGD
+p:i_P0V8_SW3_PWRGD
+p:i_P3V3_STBY_PG
+p:i_P5V_RIGHTEAR_USB_OC
+p:i_P5V_STBY_USB_OC
+p:i_P5V_VGA_OC
+p:i_P12V_PG
+p:i_PAL_FAN1_TACH1
+p:i_PAL_FAN1_TACH2
+p:i_PAL_FAN2_TACH1
+p:i_PAL_FAN2_TACH2
+p:i_PAL_FAN3_TACH1
+p:i_PAL_FAN3_TACH2
+p:i_PAL_FAN4_TACH1
+p:i_PAL_FAN4_TACH2
+p:i_PAL_FAN5_TACH1
+p:i_PAL_FAN5_TACH2
+p:i_PAL_FAN6_TACH1
+p:i_PAL_FAN6_TACH2
+p:i_PAL_FAN7_TACH1
+p:i_PAL_FAN7_TACH2
+p:i_PAL_FAN8_TACH1
+p:i_PAL_FAN8_TACH2
+p:i_PAL_FAN9_TACH1
+p:i_PAL_FAN9_TACH2
+p:i_PAL_FAN10_TACH1
+p:i_PAL_FAN10_TACH2
+p:i_PAL_FAN11_TACH1
+p:i_PAL_FAN11_TACH2
+p:i_PAL_FAN12_TACH1
+p:i_PAL_FAN12_TACH2
+p:i_PAL_FAN13_TACH1
+p:i_PAL_FAN13_TACH2
+p:i_PAL_FAN14_TACH1
+p:i_PAL_FAN14_TACH2
+p:i_PAL_FAN15_TACH1
+p:i_PAL_FAN15_TACH2
+p:i_PAL_RAA_CFP_R
+p:i_PAL_SAS_ALL_DONE_N
+p:i_PE0_PERST_R
+p:i_PG_P1V8_PLL_R
+p:i_PG_P1V8_R
+p:i_PG_P5V0_R
+p:i_PSU0_PWROK_N
+p:i_PSU1_PWROK_N
+p:i_PSU2_PWROK_N
+p:i_PSU3_PWROK_N
+p:i_PSU4_PWROK_N
+p:i_PSU5_PWROK_N
+p:i_RETIMER1_INT_N_R
+p:i_RETIMER2_INT_N_R
+p:i_RETIMER3_INT_N_R
+p:i_RETIMER4_INT_N_R
+p:i_RETIMER5_INT_N_R
+p:i_RETIMER6_INT_N_R
+p:i_RETIMER7_INT_N_R
+p:i_RETIMER8_INT_N_R
+p:i_RSVD_PARTNER0_R
+p:i_RSVD_PARTNER1_R
+p:i_RSVD_PARTNER2_R
+p:i_RSVD_PARTNER3_R
+p:i_SMB_PSU0_ALERT_R
+p:i_SMB_PSU1_ALERT_R
+p:i_SMB_PSU2_ALERT_R
+p:i_SMB_PSU3_ALERT_R
+p:i_SMB_PSU4_ALERT_R
+p:i_SMB_PSU5_ALERT_R
+p:i_SW0_SLOT1_RST_N_R
+p:i_SW0_SLOT2_RST_N_R
+p:i_SW0_SLOT3_RST_N_R
+p:i_SW0_SLOT4_RST_N_R
+p:i_SW0_SLOT5_RST_N_R
+p:i_SW0_SLOT6_RST_N_R
+p:i_SW1_SLOT1_RST_N_R
+p:i_SW1_SLOT2_RST_N_R
+p:i_SW1_SLOT3_RST_N_R
+p:i_SW1_SLOT4_RST_N_R
+p:i_SW1_SLOT5_RST_N_R
+p:i_SW1_SLOT6_RST_N_R
+p:i_SW2_SLOT1_RST_N_R
+p:i_SW2_SLOT2_RST_N_R
+p:i_SW2_SLOT3_RST_N_R
+p:i_SW2_SLOT4_RST_N_R
+p:i_SW2_SLOT5_RST_N_R
+p:i_SW2_SLOT6_RST_N_R
+p:i_SW3_SLOT1_RST_N_R
+p:i_SW3_SLOT2_RST_N_R
+p:i_SW3_SLOT3_RST_N_R
+p:i_SW3_SLOT4_RST_N_R
+p:i_SW3_SLOT5_RST_N_R
+p:i_SW3_SLOT6_RST_N_R
+p:i_THERM_OVERT_N_R
+p:i_ict_tp100
+p:io_I2C9_CPLD_UPDATE_SCL (bidir end point)
+p:io_I2C9_CPLD_UPDATE_SCL (bidir start point)
+p:io_I2C9_CPLD_UPDATE_SDA (bidir end point)
+p:io_I2C9_CPLD_UPDATE_SDA (bidir start point)
+p:io_I2C_CPLD_SDA (bidir end point)
+p:io_I2C_CPLD_SDA (bidir start point)
+p:o_74LV165_1_CLK_R
+p:o_74LV165_1_LD_R
+p:o_74LV165_CLK_R
+p:o_74LV165_LD_R
+p:o_BP1_PWR_EN_R
+p:o_BP2_PWR_EN_R
+p:o_BPTB_EEP_WP_R
+p:o_BP_9548_RST_N_R
+p:o_BP_EEPROM_WP_R
+p:o_CT_P1V25_SW_EN
+p:o_DS160_RX_PWDN1
+p:o_DS160_RX_PWDN2
+p:o_DS160_RX_READ_EN_N
+p:o_DS160_TX_PWDN1
+p:o_DS160_TX_PWDN2
+p:o_DS160_TX_READ_EN_N
+p:o_FPGA_BOOT_EN_R
+p:o_FPGA_EROT_RECOV_N_R
+p:o_FPGA_EROT_RST_N_R
+p:o_GPU_BASE_POWER_EN_R
+p:o_GPU_BASE_STBY_EN_R
+p:o_HGX_DETECT_N_R
+p:o_I2C_RST0_N_R
+p:o_I2C_RST1_N_R
+p:o_I2C_RST2_N_R
+p:o_MB_SGPIO_DATA_IN
+p:o_NIC1_PERST_N_R
+p:o_NIC2_PERST_N_R
+p:o_NIC3_PERST_N_R
+p:o_NIC4_PERST_N_R
+p:o_NIC5_PERST_N_R
+p:o_NIC6_PERST_N_R
+p:o_NIC7_PERST_N_R
+p:o_NIC8_PERST_N_R
+p:o_NICSLOT_3P3V_EN_R
+p:o_NIC_SGPIO_CLK_R
+p:o_NIC_SGPIO_SLOAD_R
+p:o_NVLINK_REFCLK_SELECT_R
+p:o_P0V8_SW_EN
+p:o_P1V8_EN
+p:o_P1V8_PLL_EN
+p:o_P5V0_EN
+p:o_P5V_RIGHTEAR_USB_EN
+p:o_P5V_STBY_USB_EN
+p:o_P5V_VGA_EN
+p:o_PAL_DB2000_1_PWRGD
+p:o_PAL_DB2000_PWRGD
+p:o_PAL_FAN1_LED_G
+p:o_PAL_FAN1_LED_R
+p:o_PAL_FAN1_PWM
+p:o_PAL_FAN2_LED_G
+p:o_PAL_FAN2_LED_R
+p:o_PAL_FAN2_PWM
+p:o_PAL_FAN3_LED_G
+p:o_PAL_FAN3_LED_R
+p:o_PAL_FAN3_PWM
+p:o_PAL_FAN4_LED_G
+p:o_PAL_FAN4_LED_R
+p:o_PAL_FAN4_PWM
+p:o_PAL_FAN5_LED_G
+p:o_PAL_FAN5_LED_R
+p:o_PAL_FAN5_PWM
+p:o_PAL_FAN6_LED_G
+p:o_PAL_FAN6_LED_R
+p:o_PAL_FAN6_PWM
+p:o_PAL_FAN7_LED_G
+p:o_PAL_FAN7_LED_R
+p:o_PAL_FAN7_PWM
+p:o_PAL_FAN8_LED_G
+p:o_PAL_FAN8_LED_R
+p:o_PAL_FAN8_PWM
+p:o_PAL_FAN9_LED_G
+p:o_PAL_FAN9_LED_R
+p:o_PAL_FAN9_PWM
+p:o_PAL_FAN10_LED_G
+p:o_PAL_FAN10_LED_R
+p:o_PAL_FAN10_PWM
+p:o_PAL_FAN11_LED_G
+p:o_PAL_FAN11_LED_R
+p:o_PAL_FAN11_PWM
+p:o_PAL_FAN12_LED_G
+p:o_PAL_FAN12_LED_R
+p:o_PAL_FAN12_PWM
+p:o_PAL_FAN13_LED_G
+p:o_PAL_FAN13_LED_R
+p:o_PAL_FAN13_PWM
+p:o_PAL_FAN14_LED_G
+p:o_PAL_FAN14_LED_R
+p:o_PAL_FAN14_PWM
+p:o_PAL_FAN15_LED_G
+p:o_PAL_FAN15_LED_R
+p:o_PAL_FAN15_PWM
+p:o_PAL_HSC0_EN_R
+p:o_PAL_HSC0_RESTART_R
+p:o_PAL_RAA_EN_N
+p:o_PAL_RETIMER1_0P9_EN_R
+p:o_PAL_RETIMER2_0P9_EN_R
+p:o_PAL_RETIMER3_0P9_EN_R
+p:o_PAL_RETIMER4_0P9_EN_R
+p:o_PAL_RETIMER5_0P9_EN_R
+p:o_PAL_RETIMER6_0P9_EN_R
+p:o_PAL_RETIMER7_0P9_EN_R
+p:o_PAL_RETIMER8_0P9_EN_R
+p:o_PAL_SAS_PWDN_R
+p:o_PAL_USBMUX_OE_N
+p:o_PAL_USBMUX_SEL
+p:o_PSU0_PSON_R
+p:o_PSU1_PSON_R
+p:o_PSU2_PSON_R
+p:o_PSU3_PSON_R
+p:o_PSU4_PSON_R
+p:o_PSU5_PSON_R
+p:o_PWR_BRAKE_N_R
+p:o_RETIMER1_RESET_N_R
+p:o_RETIMER2_RESET_N_R
+p:o_RETIMER3_RESET_N_R
+p:o_RETIMER4_RESET_N_R
+p:o_RETIMER5_RESET_N_R
+p:o_RETIMER6_RESET_N_R
+p:o_RETIMER7_RESET_N_R
+p:o_RETIMER8_RESET_N_R
+p:o_RETIMER_1P8V_EN_R
+p:o_SLOT1_THORTTLE_R
+p:o_SLOT2_THORTTLE_R
+p:o_SLOT3_THORTTLN_R
+p:o_SLOT4_THORTTLE_R
+p:o_SLOT5_THORTTLE_R
+p:o_SLOT6_THORTTLE_R
+p:o_SLOT7_THORTTLE_R
+p:o_SLOT8_THORTTLE_R
+p:o_SMB_NIC_RST_N_R
+p:o_SW0_NVME1_RST_R
+p:o_SW0_PEX_PERST_N_R
+p:o_SW0_SPI_CS_SEL_R
+p:o_SW1_NVME1_RST_R
+p:o_SW1_PEX_PERST_N_R
+p:o_SW1_SPI_CS_SEL_R
+p:o_SW2_NVME1_RST_R
+p:o_SW2_PEX_PERST_N_R
+p:o_SW2_SPI_CS_SEL_R
+p:o_SW3_NVME1_RST_R
+p:o_SW3_PEX_PERST_N_R
+p:o_SW3_SPI_CS_SEL_R
+p:o_UBB_FPGA_PEX_RST_N_R
+p:o_UBB_PEX_RST0_N_R
+p:o_UBB_PEX_RST1_N_R
+p:o_UBB_PEX_RST2_N_R
+p:o_UBB_PEX_STRAP0_R
+p:o_UBB_PEX_STRAP1_R
+p:o_WP_HW_CTRL_N
+p:o_debug_led1
+p:o_debug_led2
+
+
+Inapplicable constraints
+************************
+
+(none)
+
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+(none)
+
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

@@ -1,0 +1,59 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":15:7:15:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":92:54:92:61|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":93:54:93:60|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":156:36:156:44|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":157:41:157:47|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":158:41:158:47|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":159:41:159:49|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":160:41:160:48|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":177:68:177:77|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v":178:63:178:71|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":268:7:268:20|Synthesizing module PGM_DEBOUNCE_N in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":297:44:297:52|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":299:49:299:55|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v":18:7:18:15|Synthesizing module s2p_slave in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\breath_led\breath_led.v":10:7:10:16|Synthesizing module breath_led in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v":9:7:9:19|Synthesizing module i2c_slave_bmc in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":2:7:2:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v":22:7:22:16|Synthesizing module BP_4S104G5 in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":596:35:596:61|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\common\Edge_Detect.v":4:7:4:17|Synthesizing module Edge_Detect in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":24:7:24:17|Synthesizing module fan_counter in library work.
+@N: CG179 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":50:22:50:33|Removing redundant assignment.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_counter.v":24:7:24:17|Synthesizing module fan_counter in library work.
+@N: CG364 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\FAN\fan_pwm_tach.v":11:7:11:18|Synthesizing module fan_pwm_tach in library work.
+@N: CL201 :"D:\Project\CNIT-K\8U SW\code\V10\4port\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+@N|Running in 64-bit mode
+

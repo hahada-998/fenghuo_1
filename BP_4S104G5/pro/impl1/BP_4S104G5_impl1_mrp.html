@@ -1,0 +1,2830 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+          Lattice Mapping Report File for Design Module 'BP_4S104G5'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA400 -s 5 -oc
+     Commercial BP_4S104G5_impl1.ngd -o BP_4S104G5_impl1_map.ncd -pr
+     BP_4S104G5_impl1.prf -mp BP_4S104G5_impl1.mrp -lpf D:/Project/CNIT-K/8U
+     SW/code/V10/4port/BP_4S104G5/pro/impl1/BP_4S104G5_impl1_synplify.lpf -lpf
+     D:/Project/CNIT-K/8U SW/code/V10/4port/BP_4S104G5/pro/BP_4S104G5.lpf -c 0
+     -gui -msgset D:/Project/CNIT-K/8U
+     SW/code/V10/4port/BP_4S104G5/pro/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA400
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  02/08/25  10:33:03
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:   2134 out of  7872 (27%)
+      PFU registers:         2066 out of  6864 (30%)
+      PIO registers:           68 out of  1008 (7%)
+   Number of SLICEs:      1995 out of  3432 (58%)
+      SLICEs as Logic/ROM:   1995 out of  3432 (58%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:        428 out of  3432 (12%)
+   Number of LUT4s:        3963 out of  6864 (58%)
+      Number used as logic LUTs:        3107
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      856
+      Number used as shift registers:     0
+   Number of PIO sites used: 292 + 4(JTAG) out of 336 (88%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  9
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: inst_osch )
+
+     Net i_CPLD_CLK_c: 1 loads, 1 rising, 0 falling (Driver: PIO i_CPLD_CLK )
+     Net clk_25m: 347 loads, 347 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     
+     Net clk_50m: 766 loads, 766 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1: 8 loads, 8 rising, 0
+     falling (Driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_0_a4 )
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 )
+     Net inst_i2c_update_flash_config/i2c1_scli: 1 loads, 1 rising, 0 falling
+     (Driver: PIO io_I2C9_CPLD_UPDATE_SCL )
+     Net genblk1[0].fan_pwm_tach_m.w_clk_1s_pos_i: 150 loads, 150 rising, 0
+     falling (Driver: genblk1[0].fan_pwm_tach_m/Edge_Detect_u1/o_signal_pos )
+   Number of Clock Enables:  302
+     Net mcpld_to_swcpld_data_filter5: 2 loads, 2 LSLICEs
+     Net edge_delay_p0v8_pg.un1_timer_cnt40_i: 1 loads, 0 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2C_RW_1_sqmuxa: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[7]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[6]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[5]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[4]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[3]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[2]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[1]: 1
+     loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [1]: 1 loads, 1 LSLICEs
+
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [0]: 1 loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[0]: 1
+     loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_211_i: 4 loads,
+     4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnte: 4
+     loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSigna
+     l_sda_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSigna
+     l_scl_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock: 4
+     loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_250_i: 4 loads,
+     4 LSLICEs
+     Net pon_reset_n: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00354: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001e5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001d4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001b4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01854: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01864: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_012b4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_data_vld_pos: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_i2c_command_tempce[0]: 4 loads, 4
+     LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_i2c_command_tempce[8]: 4 loads, 4
+     LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01294: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01284: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_012d4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_012c4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_012a4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01274: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01244: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01844: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_012f4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_012e4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01834: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01234: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01254: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00265: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01314: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00334: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00065: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01304: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01324: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00344: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_01264: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001c4: 4 loads, 4 LSLICEs
+     Net genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+
+     Net genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+
+     Net genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_resulte: 6 loads, 6
+     LSLICEs
+     Net genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_resulte: 5 loads, 5
+     LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_5: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_10: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_8: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_9: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_6: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_12: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_13: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_1: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_7: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_14: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
+     Net db_inst_fan_prsnt/out_i_0_sqmuxa_11: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_25: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_26: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_27: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_28: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_29: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_17: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_18: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_19: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_1: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
+
+     Net db_fan_tach_p/out_i_0_sqmuxa_8: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_9: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_10: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_11: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_12: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_13: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_14: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_20: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_15: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_16: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_5: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_6: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_7: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_21: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_22: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_23: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa_24: 1 loads, 1 LSLICEs
+     Net db_fan_tach_p/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net debug_led1/period_cnt8: 9 loads, 9 LSLICEs
+     Net edge_delay_pch_rsmrst_n/timer_cnte: 2 loads, 2 LSLICEs
+     Net edge_delay_pch_rsmrst_n.un1_timer_cnt62_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer2_1p8_pg/timer_cnte: 2 loads, 2 LSLICEs
+     Net edge_delay_retimer2_1p8_pg/un1_timer_cnt62_i: 1 loads, 1 LSLICEs
+     Net edge_delay_retimer1_1p8_pg/timer_cnte: 2 loads, 2 LSLICEs
+     Net edge_delay_retimer1_1p8_pg/un1_timer_cnt62_i: 1 loads, 1 LSLICEs
+     Net edge_delay_p0v8_pg/timer_cnte: 4 loads, 4 LSLICEs
+     Net edge_delay_p1v25_pg_50ms/un1_timer_cnt18_i: 1 loads, 1 LSLICEs
+     Net edge_delay_p0v8_pg_50ms.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net pvt_nic_inst/par_data_RNO[33]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_data_RNO[6]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[7]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[8]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[9]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[10]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[11]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[12]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[13]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[14]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_1[15]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[16]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[17]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[18]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[19]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[20]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace[21]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[22]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[23]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[24]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[25]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[26]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace[27]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace[28]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace[29]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[30]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[31]: 1 loads, 1 LSLICEs
+
+     Net pvt_nic_inst/par_datace_0[32]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[34]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[35]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace[36]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace[37]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/par_datace_0[38]: 1 loads, 1 LSLICEs
+     Net pvt_nic_inst/bit_idx_out44: 3 loads, 3 LSLICEs
+     Net par_datace_0[39]: 1 loads, 0 LSLICEs
+     Net pvt1_SW_inst/bit_idx_oute: 2 loads, 2 LSLICEs
+     Net pvt1_SW_inst/par_data_RNO_0[5]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_data_RNO[3]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[0]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace[1]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace[2]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace[4]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[6]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[7]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace[8]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[9]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[10]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[11]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[12]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace[13]: 1 loads, 1 LSLICEs
+     Net pvt1_SW_inst/par_datace_0[14]: 1 loads, 1 LSLICEs
+     Net par_datace_0[15]: 1 loads, 0 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[37]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[21]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[13]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[5]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[4]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[2]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_data_RNO[1]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[0]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[6]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[7]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[9]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[10]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[11]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[12]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[14]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[15]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[16]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[17]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[18]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[19]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[20]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[22]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[23]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[24]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[25]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[26]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[30]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[31]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[32]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[33]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[34]: 1 loads, 1 LSLICEs
+
+     Net pvt_SW_inst/par_datace[35]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[38]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[39]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[40]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[41]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[42]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[43]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[44]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[45]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[46]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[47]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[48]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[49]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[50]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[51]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[52]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[53]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/par_datace[54]: 1 loads, 1 LSLICEs
+     Net pvt_SW_inst/bit_idx_out12: 3 loads, 3 LSLICEs
+     Net par_datace[55]: 1 loads, 0 LSLICEs
+     Net inst_slv_to_mb_p2s/N_608_i: 4 loads, 4 LSLICEs
+     Net inst_mb_to_slv_s2p/un3_sclk_pp: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po5: 6 loads, 6 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[0]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[1]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[2]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[3]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[4]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[8]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[56]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[57]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[58]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[59]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/cnte: 4 loads, 4 LSLICEs
+     Net db_inst_psu0_pwrok_n/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net db_inst_psu0_pwrok_n/out_i_0_sqmuxa_1: 1 loads, 1 LSLICEs
+     Net db_inst_psu0_pwrok_n/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
+     Net db_inst_psu0_pwrok_n/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
+     Net db_inst_psu0_pwrok_n/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
+     Net db_inst_psu0_pwrok_n/out_i_0_sqmuxa_5: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_12: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_6: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_7: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_1: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_8: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_10: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_11: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_5: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_9: 1 loads, 1 LSLICEs
+     Net timer_gen_inst/t1us_2: 3 loads, 3 LSLICEs
+     Net timer_gen_inst/t32us_e: 8 loads, 8 LSLICEs
+     Net edge_delay_retimer8_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer7_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+
+     Net edge_delay_retimer6_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer5_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer4_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer3_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer2_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+     Net edge_delay_retimer1_0p9_pg.un1_timer_cnt18_i: 1 loads, 0 LSLICEs
+   Number of local set/reset loads for net pon_reset_n merged into GSR:  1984
+   Number of LSRs:  8
+     Net un2_w_rst: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 LSLICEs
+     Net un2_w_rst_3: 4 loads, 3 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i: 44
+     loads, 44 LSLICEs
+     Net pon_reset_inst/master_reset_n_i: 2 loads, 2 LSLICEs
+     Net pll_inst/i_P3V3_STBY_PG_c_i: 1 loads, 0 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command[0]: 233 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command[1]: 224 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command[2]: 213 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command[3]: 181 loads
+     Net t1us_tick: 126 loads
+     Net mcpld_to_swcpld_data_filter[3]: 120 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command[4]: 107 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command[5]: 88 loads
+     Net t2ms_tick: 77 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_WR: 68 loads
+
+
+
+
+   Number of warnings:  3
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: Using local reset signal 'pon_reset_n' to infer global GSR net.
+WARNING - map: In "LOCATE COMP "io_I2C9_CPLD_UPDATE_SDA" SITE "D11" ;": Current
+     SYS_CONFIG setting prohibits pin "D11" to be used as user IO. This
+     preference has been disabled.
+WARNING - map: In "LOCATE COMP "io_I2C9_CPLD_UPDATE_SCL" SITE "C11" ;": Current
+     SYS_CONFIG setting prohibits pin "C11" to be used as user IO. This
+     preference has been disabled.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
+
++---------------------+-----------+-----------+------------+
+| io_I2C_CPLD_SDA     | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_SMB_NIC_RST_N_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN1_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD_CLK          | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_I2C9_CPLD_UPDATE_SDA| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_I2C9_CPLD_UPDATE_SCL| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_ict_tp100         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_debug_led2        | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_debug_led1        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST2_N_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST1_N_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST0_N_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC3_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC1_PERST_N_R    | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_PE0_PERST_R       | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_UBB_PEX_RST2_N_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_UBB_PEX_RST1_N_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_UBB_PEX_RST0_N_R  | OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_SW3_NVME1_RST_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_NVME1_RST_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_NVME1_RST_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_NVME1_RST_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SLOT6_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SLOT5_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SLOT4_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SLOT3_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SLOT2_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SLOT1_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_SLOT6_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_SLOT5_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_SLOT4_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_SLOT3_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_SLOT2_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_SLOT1_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SLOT6_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SLOT5_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SLOT4_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SLOT3_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SLOT2_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SLOT1_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SLOT6_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SLOT5_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SLOT4_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SLOT3_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SLOT2_RST_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SLOT1_RST_N_R | INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_SW3_PEX_PERST_N_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_PEX_PERST_N_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_PEX_PERST_N_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_PEX_PERST_N_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_USBMUX_SEL    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_USBMUX_OE_N   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_DS160_RX_ALL_DONE_N| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_DS160_RX_PWDN2    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_DS160_RX_PWDN1    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_DS160_RX_READ_EN_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_DS160_TX_ALL_DONE_N| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_DS160_TX_PWDN2    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_DS160_TX_PWDN1    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_DS160_TX_READ_EN_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_SAS_ALL_DONE_N| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SAS_PWDN_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC_SGPIO_SDO_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC_SGPIO_SDI_R   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_NIC_SGPIO_SLOAD_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC_SGPIO_CLK_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_74LV165_1_DATA_IN_R| INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_74LV165_1_LD_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_74LV165_1_CLK_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_74LV165_DATA_IN_R | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_74LV165_LD_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_74LV165_CLK_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MB_SGPIO_DATA_OUT | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_MB_SGPIO_DATA_IN  | OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_MB_SGPIO_LD       | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_MB_SGPIO_CLK      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_BB_RSVD_1_R       | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD4_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD3_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD1_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD5_FFU_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD4_FFU_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD3_FFU_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD2_FFU_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD1_FFU_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_3V3IO_RSVD0_FFU_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_RSVD_PARTNER3_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_RSVD_PARTNER2_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_RSVD_PARTNER1_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_RSVD_PARTNER0_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_HMC_PRSNT_N_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BASE_PRSNT_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_GPU_BASE_STBY_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_GPU_BASE_HMC_READY_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_WP_HW_CTRL_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVLINK_REFCLK_SELECT_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_HGX_DETECT_N_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_FPGA_BOOT_EN_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_FPGA_OVERT_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_FPGA_EROT_RST_N_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_FPGA_EROT_RECOV_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_FPGA_EROT_FATALERR_N_R| INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_PWR_BRAKE_N_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_UBB_FPGA_PEX_RST_N_R| OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_UBB_PEX_STRAP1_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_UBB_PEX_STRAP0_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_THERM_OVERT_N_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_GPU_BASE_PWR_GD_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_GPU_BASE_POWER_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_GPU_BASE_FPGA_READY_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BP_EEPROM_WP_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BPTB_RE_DONE_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BPTB_EEP_WP_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BP_9548_RST_N_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BP2_PRSNT_N_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BP2_PWR_EN_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BP2_PWR_PG_R      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BP1_PWR_PG_R      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BP1_PRSNT_N_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BP1_PWR_EN_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT8_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT7_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT6_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT5_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT4_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT3_THORTTLN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT2_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SLOT1_THORTTLE_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_RETIMER8_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_RETIMER7_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
+
++---------------------+-----------+-----------+------------+
+| o_RETIMER6_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_RETIMER5_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_RETIMER4_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_RETIMER3_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_RETIMER2_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_RETIMER1_RESET_N_R| OUTPUT    | LVCMOS18  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_RETIMER8_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER7_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER6_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER5_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER4_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER3_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER2_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_RETIMER1_INT_N_R  | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC_3P3V_B_PG_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC_3P3V_A_PG_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_RETIMER_1P8V_EN_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NICSLOT_3P3V_EN_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER8_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER7_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER6_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER5_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER4_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER3_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER2_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RETIMER1_0P9_EN_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SMB_PSU5_ALERT_R  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SMB_PSU4_ALERT_R  | INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_SMB_PSU3_ALERT_R  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SMB_PSU2_ALERT_R  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SMB_PSU1_ALERT_R  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SMB_PSU0_ALERT_R  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PSU5_PSON_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PSU4_PSON_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PSU3_PSON_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PSU2_PSON_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PSU1_PSON_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PSU0_PSON_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PSU5_PWROK_N      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PSU4_PWROK_N      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PSU3_PWROK_N      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PSU2_PWROK_N      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PSU1_PWROK_N      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PSU0_PWROK_N      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P5V_STBY_USB_OC   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P5V_STBY_USB_EN   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P5V_RIGHTEAR_USB_OC| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P5V_RIGHTEAR_USB_EN| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P5V_VGA_OC        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P5V_VGA_EN        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PG_P1V8_PLL_R     | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PG_P1V8_R         | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PG_P5V0_R         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW3_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW2_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW1_PG   | INPUT     | LVCMOS33  | IN         |
+
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW0_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW3_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW2_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW1_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW0_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_PAL_DB2000_1_PWRGD| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_DB2000_PWRGD  | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_P12V_PG           | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_RAA_CFP_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CT_P1V25_SW_EN    | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_P0V8_SW_EN        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1V8_PLL_EN       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1V8_EN           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P5V0_EN           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P3V3_STBY_PG      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_PAL_RAA_EN_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_HSC0_RESTART_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_HSC0_EN_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_I2C9_9548_CH4_ALERT| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_I2C2_ALERT_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_I2C1_ALERT_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_I2C_CPLD_SCL      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN15_LED_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN15_LED_G   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN14_LED_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN14_LED_G   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN13_LED_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN13_LED_G   | OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN12_LED_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN12_LED_G   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN11_LED_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN11_LED_G   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN10_LED_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN10_LED_G   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN9_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN9_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN8_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN8_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN7_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN7_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN6_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN6_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN5_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN5_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN4_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN4_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN3_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN3_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN2_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN2_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN1_LED_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN1_LED_G    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN15_TACH1   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN15_TACH2   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN14_TACH1   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN14_TACH2   | INPUT     | LVCMOS33  | IN         |
+
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN13_TACH1   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN13_TACH2   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN12_TACH1   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN12_TACH2   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN11_TACH1   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN11_TACH2   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN10_TACH1   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN10_TACH2   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN9_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN9_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN8_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN8_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN7_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN7_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN6_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN6_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN5_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN5_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN4_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN4_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN3_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN3_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN2_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN2_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN1_TACH1    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_FAN1_TACH2    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN15_PWM     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN14_PWM     | OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN13_PWM     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN12_PWM     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN11_PWM     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN10_PWM     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN9_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN8_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN7_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN6_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN5_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN4_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN3_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_FAN2_PWM      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block edge_delay_retimer1_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer1_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer2_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer2_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer3_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer3_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer4_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer4_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer5_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer5_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer6_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer6_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer7_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer7_0p9_pg/VCC undriven or does not drive anything -
+
+     clipped.
+Block edge_delay_retimer8_0p9_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer8_0p9_pg/VCC undriven or does not drive anything -
+     clipped.
+Block pon_reset_inst/GND undriven or does not drive anything - clipped.
+Block db_power_pg/GND undriven or does not drive anything - clipped.
+Block db_power_pg/VCC undriven or does not drive anything - clipped.
+Block db_inst_psu0_pwrok_n/GND undriven or does not drive anything - clipped.
+Block db_inst_psu0_pwrok_n/VCC undriven or does not drive anything - clipped.
+Block inst_mb_to_slv_s2p/VCC undriven or does not drive anything - clipped.
+Block inst_slv_to_mb_p2s/VCC undriven or does not drive anything - clipped.
+Block pvt_SW_inst/VCC undriven or does not drive anything - clipped.
+Block pvt_SW_inst/GND undriven or does not drive anything - clipped.
+Block pvt1_SW_inst/VCC undriven or does not drive anything - clipped.
+Block pvt1_SW_inst/GND undriven or does not drive anything - clipped.
+Block pvt_nic_inst/VCC undriven or does not drive anything - clipped.
+Block pvt_nic_inst/GND undriven or does not drive anything - clipped.
+Block edge_delay_p0v8_pg_50ms/GND undriven or does not drive anything - clipped.
+     
+Block edge_delay_p0v8_pg_50ms/VCC undriven or does not drive anything - clipped.
+     
+Block edge_delay_p1v25_pg_50ms/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_p1v25_pg_50ms/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_p0v8_pg/VCC undriven or does not drive anything - clipped.
+Block edge_delay_retimer1_1p8_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer1_1p8_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer2_1p8_pg/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_retimer2_1p8_pg/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_pch_rsmrst_n/GND undriven or does not drive anything - clipped.
+     
+Block edge_delay_pch_rsmrst_n/VCC undriven or does not drive anything - clipped.
+     
+Block db_fan_tach_p/GND undriven or does not drive anything - clipped.
+Block db_fan_tach_p/VCC undriven or does not drive anything - clipped.
+Block db_inst_fan_prsnt/GND undriven or does not drive anything - clipped.
+Block db_inst_fan_prsnt/VCC undriven or does not drive anything - clipped.
+Block genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[9].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[9].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[14].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+
+     anything - clipped.
+Block genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[14].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[7].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[7].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[11].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[11].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/Edge_Detect_u0/GND undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/Edge_Detect_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/Edge_Detect_u1/GND undriven or does not drive
+     anything - clipped.
+Block genblk1[0].fan_pwm_tach_m/Edge_Detect_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[8].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[8].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+
+     anything - clipped.
+Block genblk1[2].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[2].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[12].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[12].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[5].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[5].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[3].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[3].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[13].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[13].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[4].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[4].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+
+     anything - clipped.
+Block genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[6].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[6].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[1].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[1].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[10].fan_pwm_tach_m/Edge_Detect_u2/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[10].fan_pwm_tach_m/Edge_Detect_u3/VCC undriven or does not drive
+     anything - clipped.
+Block genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/VCC undriven or does not drive
+     anything - clipped.
+Block bmc_cpld_i2c_ram/VCC undriven or does not drive anything - clipped.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/VCC undriven or does not drive anything
+     - clipped.
+Signal pon_reset_n_i was merged into signal pon_reset_n
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i
+     was merged into signal
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
+Signal r_sda_en_i was merged into signal
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en
+Signal pll_inst/GND undriven or does not drive anything - clipped.
+Signal timer_gen_inst/GND undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/GND undriven or does not drive anything - clipped.
+Signal inst_slv_to_mb_p2s/GND undriven or does not drive anything - clipped.
+Signal edge_delay_p0v8_pg/GND undriven or does not drive anything - clipped.
+Signal debug_led1/GND undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+
+Signal genblk1[14].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+
+Signal genblk1[5].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/GND undriven or does not drive anything -
+     clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/GND undriven or does not drive
+     anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/GND undriven or does not drive
+     anything - clipped.
+
+Signal inst_i2c_update_flash_config/VCC undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/GND undriven or does not drive anything -
+     clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/GND undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND undriven or
+     does not drive anything - clipped.
+Signal pll_inst/CLKINTFB undriven or does not drive anything - clipped.
+Signal pll_inst/DPHSRC undriven or does not drive anything - clipped.
+Signal pll_inst/PLLACK undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO0 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO1 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO2 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO3 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO4 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO5 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO6 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO7 undriven or does not drive anything - clipped.
+Signal pll_inst/REFCLK undriven or does not drive anything - clipped.
+Signal pll_inst/INTLOCK undriven or does not drive anything - clipped.
+Signal pll_inst/CLKOS3 undriven or does not drive anything - clipped.
+Signal pll_inst/CLKOS2 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/sec_tmr_s_0_S1[13] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/sec_tmr_s_0_COUT[13] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/usec_tmr_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/N_20 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/usec_tmr_cry_0_COUT[3] undriven or does not drive anything
+     - clipped.
+Signal timer_gen_inst/sec_tmr_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/N_19 undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/N_97 undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/cnt_s_0_S1[5] undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/cnt_s_0_COUT[5] undriven or does not drive anything -
+     clipped.
+Signal inst_slv_to_mb_p2s/cnt_cry_0_S0_0[0] undriven or does not drive anything
+     - clipped.
+Signal inst_slv_to_mb_p2s/N_1 undriven or does not drive anything - clipped.
+Signal inst_slv_to_mb_p2s/cnt_s_0_S1_0[5] undriven or does not drive anything -
+     clipped.
+Signal inst_slv_to_mb_p2s/cnt_s_0_COUT_0[5] undriven or does not drive anything
+     - clipped.
+Signal edge_delay_p0v8_pg/timer_cnt_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal edge_delay_p0v8_pg/N_1 undriven or does not drive anything - clipped.
+Signal edge_delay_p0v8_pg/timer_cnt_s_0_S1[5] undriven or does not drive
+     anything - clipped.
+Signal edge_delay_p0v8_pg/timer_cnt_s_0_COUT[5] undriven or does not drive
+     anything - clipped.
+
+Signal debug_led1/un3_period_cnt_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal debug_led1/un3_period_cnt_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal debug_led1/N_1 undriven or does not drive anything - clipped.
+Signal debug_led1/un3_period_cnt_1_s_15_0_S1 undriven or does not drive anything
+     - clipped.
+Signal debug_led1/un3_period_cnt_1_s_15_0_COUT undriven or does not drive
+     anything - clipped.
+Signal debug_led1/un1_duty_cycle_1_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal debug_led1/un1_duty_cycle_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal debug_led1/N_2 undriven or does not drive anything - clipped.
+Signal debug_led1/un1_duty_cycle_1_s_15_0_S1 undriven or does not drive anything
+     - clipped.
+Signal debug_led1/un1_duty_cycle_1_s_15_0_COUT undriven or does not drive
+     anything - clipped.
+Signal debug_led1/un1_led_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/N_3 undriven or does not drive anything - clipped.
+Signal debug_led1/un1_led_cry_1_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_1_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_3_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_3_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_5_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_5_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_7_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_7_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_9_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_11_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_11_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_13_0_S1 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_13_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_15_0_S0 undriven or does not drive anything -
+     clipped.
+Signal debug_led1/un1_led_cry_15_0_COUT undriven or does not drive anything -
+     clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1 undriven or does not
+
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0 undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT undriven or does not
+     drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1[7] undriven
+     or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_0[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1[9] undriven
+     or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_1[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_0[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_0[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_0 undriven or does
+
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_0 undriven or does
+     not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_2[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_0[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_0[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_3[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_1[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_1[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_4[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_2[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_2[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_1 undriven or does not
+     drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_1 undriven or does
+
+     not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_5[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_1[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_1[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_6[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_3[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_3[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_7[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_4[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_4[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_2 undriven or does
+     not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_8[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_2[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_2[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_9[0]
+
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_5[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_5[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_10[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_6[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_6[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_3 undriven or does not
+     drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_3 undriven or does
+     not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_11[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_3[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_3[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_12[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_7[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_7[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_13[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+
+     anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_8[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_8[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_4 undriven or does not
+     drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_4 undriven or does
+     not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_14[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_4[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_4[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_15[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_9[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_9[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_16[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_10[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_10[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+
+     clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_5 undriven or does not
+     drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_5 undriven or does
+     not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_17[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_5[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_5[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_18[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_11[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_11[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_19[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_12[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_12[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_6 undriven or does
+
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_6 undriven or does
+     not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_20[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_6[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_6[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_21[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_13[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_13[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_22[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_14[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_14[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_7 undriven or does not
+     drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_7 undriven or does
+     not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_23[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+
+     anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_7[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_7[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_24[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_15[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_15[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_25[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_16[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_16[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_8 undriven or does not
+     drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_8 undriven or does
+     not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_26[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_8[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_8[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_27[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_17[9]
+
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_17[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_28[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_18[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_18[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_9 undriven or does
+     not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_29[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_9[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_9[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_30[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_19[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_19[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_31[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_20[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_20[9]
+
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_10 undriven or does
+     not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_32[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_10[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_10[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_33[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_21[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_21[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_34[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_22[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_22[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_11 undriven or does
+
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_11 undriven or does
+     not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_35[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_11[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_11[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_36[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_23[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_23[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_37[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_24[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_24[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_12 undriven or does
+
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_12 undriven or does
+     not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_38[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_12[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_12[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_39[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_25[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_25[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_40[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_26[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_26[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S1_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_0_0_S0_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/N_1 undriven or does not drive anything -
+     clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S1_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_1_0_S0_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S1_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_3_0_S0_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S1_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_5_0_S0_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_S0_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/un4_o_pwm_out_cry_7_0_COUT_13 undriven or does
+     not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_cry_0_S0_41[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_S1_13[7]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/r_cnt_result_s_0_COUT_13[7]
+
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_cry_0_S0_42[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_S1_27[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/r_cnt_result_s_0_COUT_27[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_cry_0_S0_43[0]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/N_1 undriven or does not drive
+     anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_S1_28[9]
+     undriven or does not drive anything - clipped.
+Signal genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/r_cnt_result_s_0_COUT_28[9]
+     undriven or does not drive anything - clipped.
+Signal inst_i2c_update_flash_config/CFGSTDBY undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/CFGWAKE undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/WBCUFMIRQ undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/TCOC undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/TCINT undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/SPIIRQO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPICSNEN undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN7 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN6 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN5 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN4 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN3 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN2 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN1 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN0 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMOSIEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/SPIMOSIO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMISOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/SPIMISOO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPISCKEN undriven or does not drive anything
+
+     - clipped.
+Signal inst_i2c_update_flash_config/SPISCKO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/I2C2IRQO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/i2c1_irqo undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SDAOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SDAO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/I2C2SCLOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SCLO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO0_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO1_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO2_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO3_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO4_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO5_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO6_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO7_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO0 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO1 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO2 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO3 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO4 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLWEO undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/PLL1STBO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLL0STBO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLRSTO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLCLKO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wb_ack_o undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[0] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[1] undriven or does not drive
+
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[2] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[3] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[4] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[5] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[6] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[7] undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S1 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S0 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_1 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_s_15_0_S1 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_m_0_s_15_0_COUT undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0] undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_2 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15] undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_3 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15] undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S1 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S0 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_4 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_4_cry_14_0_COUT undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_cry_0_0_S1 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_cry_0_0_S0 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_5 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_s_15_0_S1 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un6_0_s_15_0_COUT undriven or does not
+
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cry_0
+     _S0[0] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21 undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_S
+     1[5] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_C
+     OUT[5] undriven or does not drive anything - clipped.
+Signal inst_osch_SEDSTDBY undriven or does not drive anything - clipped.
+Block pon_reset_inst/reset1_reg_RNILMDB[2] was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_RNITM
+     R7 was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIFI86 was
+     optimized away.
+Block pll_inst/GND was optimized away.
+Block timer_gen_inst/GND was optimized away.
+Block inst_mb_to_slv_s2p/GND was optimized away.
+Block inst_slv_to_mb_p2s/GND was optimized away.
+Block edge_delay_p0v8_pg/GND was optimized away.
+Block debug_led1/GND was optimized away.
+Block genblk1[9].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[9].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[14].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[14].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[7].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[7].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[11].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[11].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[0].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[0].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[8].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[8].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[2].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[2].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[12].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[12].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[5].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+
+Block genblk1[5].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[3].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[3].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[13].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[13].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[4].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[4].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[6].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[6].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[1].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[1].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block genblk1[10].fan_pwm_tach_m/GND was optimized away.
+Block genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u0/GND was optimized away.
+Block genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u1/GND was optimized away.
+Block genblk1[10].fan_pwm_tach_m/fan_pwm_cnt_u2/GND was optimized away.
+Block inst_i2c_update_flash_config/VCC was optimized away.
+Block inst_i2c_update_flash_config/GND was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/GND was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND was optimized
+     away.
+
+     
+
+
+
+<A name="mrp_pll"></A><B><U><big>PLL/DLL Summary</big></U></B>
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll_inst/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      i_CPLD_CLK_c
+  Output Clock(P):                         NODE     clk_50m
+  Output Clock(S):                         NODE     clk_25m
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk_50m
+  Reset Signal:                            NODE     pll_inst/i_P3V3_STBY_PG_c_i
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                         NODE     pll_lock
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      25.0000
+  Output Clock(P) Frequency (MHz):                  50.0000
+  Output Clock(S) Frequency (MHz):                  25.0000
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    2
+  CLKOP Divider:                                    10
+  CLKOS Divider:                                    20
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 RISING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                inst_osch
+  OSC Type:                                         OSCH
+  STDBY Input:                                      NONE
+  OSC Output:                              NODE     wb_clk
+  OSC Nominal Frequency (MHz):                      4.29
+
+
+
+<A name="mrp_efb"></A><B><U><big>Embedded Functional Block Connection Summary</big></U></B>
+
+   Desired WISHBONE clock frequency: 4.3 MHz
+   Clock source:                     wb_clk
+   Reset source:                     NONE
+   Functions mode:
+      I2C #1 (Primary) Function:     ENABLED
+      I2C #2 (Secondary) Function:   DISABLED
+      SPI Function:                  DISABLED
+      Timer/Counter Function:        DISABLED
+      Timer/Counter Mode:            WB
+      UFM Connection:                DISABLED
+      PLL0 Connection:               DISABLED
+      PLL1 Connection:               DISABLED
+   I2C Function Summary:
+   --------------------
+      I2C Component:          PRIMARY
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000001
+      General Call:           DISABLED
+      I2C Wake Up:            DISABLED
+      I2C Component:          UFM/Configuration
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000000
+   SPI Function Summary:
+   --------------------
+      None
+   Timer/Counter Function Summary:
+   ------------------------------
+      None
+   UFM Function Summary:
+   --------------------
+      UFM Utilization:        General Purpose Flash Memory
+      Available General
+      Purpose Flash Memory:   2046 Pages (2046*128 Bits)
+
+           EBR Blocks with Unique
+      Initialization Data:    0
+
+           WID		EBR Instance
+      ---		------------
+
+
+
+
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: inst_osch
+         Type: OSCH
+Instance Name: inst_i2c_update_flash_config/EFBInst_0
+         Type: EFB
+Instance Name: pll_inst/PLLInst_0
+         Type: EHXPLLJ
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The local reset signal 'pon_reset_n' of the design has been inferred as
+        Global Set Reset (GSR). The reset signal used for GSR control is
+        'pon_reset_n'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'pon_reset_n' via the local reset on the component and not the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 1 
+
+     Type and instance name of component: 
+   Register : inst_slv_to_mb_p2s/so
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 5 secs  
+   Total REAL Time: 7 secs  
+   Peak Memory Usage: 95 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
