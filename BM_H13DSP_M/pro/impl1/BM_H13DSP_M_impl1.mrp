@@ -7,28 +7,31 @@ Design Information
 
 Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA400 -s 5 -oc
      Commercial BM_H13DSP_M_impl1.ngd -o BM_H13DSP_M_impl1_map.ncd -pr
-     BM_H13DSP_M_impl1.prf -mp BM_H13DSP_M_impl1.mrp -lpf C:/CPLD/intel/fenghuo_
-     initial/BM_H13DSP_M/pro/impl1/BM_H13DSP_M_impl1_synplify.lpf -lpf
-     C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/BM_H13DSP_M.lpf -c 0 -gui
-     -msgset C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/promote.xml 
+     BM_H13DSP_M_impl1.prf -mp BM_H13DSP_M_impl1.mrp -lpf
+     D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M
+     CPLD/V01/BM_H13DSP_M/pro/impl1/BM_H13DSP_M_impl1_synplify.lpf -lpf
+     D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M
+     CPLD/V01/BM_H13DSP_M/pro/BM_H13DSP_M.lpf -c 0 -gui -msgset
+     D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M
+     CPLD/V01/BM_H13DSP_M/pro/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO3LF-6900CCABGA400
 Target Performance:   5
-Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.14.0.75.2
-Mapped on:  10/23/25  14:11:38
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  03/13/25  18:38:26
 
 Design Summary
 --------------
 
-   Number of registers:   2602 out of  7872 (33%)
-      PFU registers:         2526 out of  6864 (37%)
-      PIO registers:           76 out of  1008 (8%)
-   Number of SLICEs:      2165 out of  3432 (63%)
-      SLICEs as Logic/ROM:   2165 out of  3432 (63%)
+   Number of registers:   2600 out of  7872 (33%)
+      PFU registers:         2520 out of  6864 (37%)
+      PIO registers:           80 out of  1008 (8%)
+   Number of SLICEs:      2092 out of  3432 (61%)
+      SLICEs as Logic/ROM:   2092 out of  3432 (61%)
       SLICEs as RAM:            0 out of  2574 (0%)
       SLICEs as Carry:        196 out of  3432 (6%)
-   Number of LUT4s:        4188 out of  6864 (61%)
-      Number used as logic LUTs:        3796
+   Number of LUT4s:        4050 out of  6864 (59%)
+      Number used as logic LUTs:        3658
       Number used as distributed RAM:     0
       Number used as ripple logic:      392
       Number used as shift registers:     0
@@ -57,248 +60,253 @@ Design Summary
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  57
-     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: inst_osch )
-     Net clk_50m: 1159 loads, 1159 rising, 0 falling (Driver: pll_inst/PLLInst_0
 
                                     Page 1
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
+   Number of clocks:  57
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: inst_osch )
+     Net clk_50m: 1166 loads, 1166 rising, 0 falling (Driver: pll_inst/PLLInst_0
      )
-     Net un1_r_p12v_discharge_r9_33: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_33 )
-     Net un1_r_p12v_discharge_r9_47: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_47 )
-     Net o_P0_PWR_BTN_R_N_c: 1 loads, 1 rising, 0 falling (Driver:
-     bmc_ctl_pwrbtn_u0/o_P0_PWR_BTN_R_N )
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
-     loads, 2 rising, 0 falling (Driver:
-     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
+     Net un1_r_p12v_discharge_r5_33: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_33 )
+     Net un1_r_p12v_discharge_r5_30: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_30 )
      Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
      loads, 2 rising, 0 falling (Driver:
      bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 )
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
      Net clk_25m: 350 loads, 350 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
      
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i: 8 loads, 8
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1: 8 loads, 8
      rising, 0 falling (Driver:
-     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_0_a2_13_a2_14_a3 )
-     Net un1_r_p12v_discharge_r9_40: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_40 )
-     Net un1_r_p12v_discharge_r9_41: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_41 )
-     Net un1_r_p12v_discharge_r9_42: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_42 )
-     Net un1_r_p12v_discharge_r9_43: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_43 )
-     Net un1_r_p12v_discharge_r9_44: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_44 )
-     Net un1_r_p12v_discharge_r9_45: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_45 )
-     Net un1_r_p12v_discharge_r9_46: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_46 )
-     Net un1_r_p12v_discharge_r9_48: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_48 )
-     Net un1_r_p12v_discharge_r9_49: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_49 )
-     Net un1_r_p12v_discharge_r9_50: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_50 )
-     Net un1_r_p12v_discharge_r9_51: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_51 )
-     Net un1_r_p12v_discharge_r9_52: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_52 )
-     Net un1_r_p12v_discharge_r9_53: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_53 )
-     Net un1_r_p12v_discharge_r9_54: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_54 )
-     Net un1_r_p12v_discharge_r9_55: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r9_55 )
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_0_a2 )
+     Net o_P0_PWR_BTN_R_N_i: 1 loads, 1 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram_u0/o_P0_PWR_BTN_R_N )
+     Net un1_r_p12v_discharge_r5_40: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_40 )
+     Net un1_r_p12v_discharge_r5_41: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_41 )
+     Net un1_r_p12v_discharge_r5_42: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_42 )
+     Net un1_r_p12v_discharge_r5_43: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_43 )
+     Net un1_r_p12v_discharge_r5_44: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_44 )
+     Net un1_r_p12v_discharge_r5_45: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_45 )
+     Net un1_r_p12v_discharge_r5_46: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_46 )
+     Net un1_r_p12v_discharge_r5_47: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_47 )
+     Net un1_r_p12v_discharge_r5_48: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_48 )
+     Net un1_r_p12v_discharge_r5_49: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_49 )
+     Net un1_r_p12v_discharge_r5_50: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_50 )
+     Net un1_r_p12v_discharge_r5_51: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_51 )
+     Net un1_r_p12v_discharge_r5_52: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_52 )
+     Net un1_r_p12v_discharge_r5_53: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_53 )
+     Net un1_r_p12v_discharge_r5_54: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_54 )
+     Net un1_r_p12v_discharge_r5_55: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt2_inst/un1_r_p12v_discharge_r5_55 )
+     Net s2p_164_u1/un1_i_rst_4: 1 loads, 1 rising, 0 falling (Driver:
+     s2p_164_u1/un1_i_rst_4 )
      Net s2p_164_u1/un1_i_rst_7: 1 loads, 1 rising, 0 falling (Driver:
-     s2p_164_u1/un1_i_rst_7 )
-     Net s2p_164_u1/un1_i_rst_6: 1 loads, 1 rising, 0 falling (Driver:
-     s2p_164_u1/un1_i_rst_6 )
-     Net s2p_164_u1/un1_i_rst: 1 loads, 1 rising, 0 falling (Driver:
-     s2p_164_u1/un1_i_rst )
-     Net s2p_164_u1/un1_i_rst_3: 1 loads, 1 rising, 0 falling (Driver:
-     s2p_164_u1/un1_i_rst_3 )
 
                                     Page 2
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
+     s2p_164_u1/un1_i_rst_7 )
+     Net s2p_164_u1/un1_i_rst_6: 1 loads, 1 rising, 0 falling (Driver:
+     s2p_164_u1/un1_i_rst_6 )
+     Net s2p_164_u1/un1_i_rst_1: 1 loads, 1 rising, 0 falling (Driver:
+     s2p_164_u1/un1_i_rst_1 )
+     Net s2p_164_u1/un1_i_rst: 1 loads, 1 rising, 0 falling (Driver:
+     s2p_164_u1/un1_i_rst )
+     Net s2p_164_u1/un1_i_rst_3: 1 loads, 1 rising, 0 falling (Driver:
+     s2p_164_u1/un1_i_rst_3 )
      Net s2p_164_u1/un1_i_rst_2: 1 loads, 1 rising, 0 falling (Driver:
      s2p_164_u1/un1_i_rst_2 )
      Net s2p_164_u1/un1_i_rst_5: 1 loads, 1 rising, 0 falling (Driver:
      s2p_164_u1/un1_i_rst_5 )
-     Net s2p_164_u1/un1_i_rst_4: 1 loads, 1 rising, 0 falling (Driver:
-     s2p_164_u1/un1_i_rst_4 )
-     Net s2p_164_u1/un1_i_rst_1: 1 loads, 1 rising, 0 falling (Driver:
-     s2p_164_u1/un1_i_rst_1 )
      Net t1us_tick: 2 loads, 1 rising, 1 falling (Driver: timer_gen_inst/t1us )
      Net s2p_164_u1.sclk: 4 loads, 4 rising, 0 falling (Driver: s2p_164_u1/sclk
      )
      Net w1mSCE: 17 loads, 17 rising, 0 falling (Driver:
      mClkDivTree/m1mSCE/rDivClk_q )
-     Net un1_r_p12v_discharge_r9: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9 )
-     Net un1_r_p12v_discharge_r9_24: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_24 )
-     Net un1_r_p12v_discharge_r9_25: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_25 )
-     Net un1_r_p12v_discharge_r9_26: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_26 )
-     Net un1_r_p12v_discharge_r9_27: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_27 )
-     Net un1_r_p12v_discharge_r9_28: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_28 )
-     Net un1_r_p12v_discharge_r9_29: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_29 )
-     Net un1_r_p12v_discharge_r9_30: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_30 )
-     Net un1_r_p12v_discharge_r9_31: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_31 )
-     Net un1_r_p12v_discharge_r9_32: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_32 )
-     Net un1_r_p12v_discharge_r9_34: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_34 )
-     Net un1_r_p12v_discharge_r9_35: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_35 )
-     Net un1_r_p12v_discharge_r9_36: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_36 )
-     Net un1_r_p12v_discharge_r9_37: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_37 )
-     Net un1_r_p12v_discharge_r9_38: 1 loads, 1 rising, 0 falling (Driver:
-     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r9_38 )
-     Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i: 8 loads, 8
+     Net un1_r_p12v_discharge_r5: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5 )
+     Net un1_r_p12v_discharge_r5_24: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_24 )
+     Net un1_r_p12v_discharge_r5_25: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_25 )
+     Net un1_r_p12v_discharge_r5_26: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_26 )
+     Net un1_r_p12v_discharge_r5_27: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_27 )
+     Net un1_r_p12v_discharge_r5_28: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_28 )
+     Net un1_r_p12v_discharge_r5_29: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_29 )
+     Net un1_r_p12v_discharge_r5_31: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_31 )
+     Net un1_r_p12v_discharge_r5_32: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_32 )
+     Net un1_r_p12v_discharge_r5_34: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_34 )
+     Net un1_r_p12v_discharge_r5_35: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_35 )
+     Net un1_r_p12v_discharge_r5_36: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_36 )
+     Net un1_r_p12v_discharge_r5_37: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_37 )
+     Net un1_r_p12v_discharge_r5_38: 1 loads, 1 rising, 0 falling (Driver:
+     pvt_gpi_4u_gpu_zt_inst/un1_r_p12v_discharge_r5_38 )
+     Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1: 8 loads, 8
      rising, 0 falling (Driver:
      bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_0_a2 )
      Net
-     bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0: 2
-     loads, 2 rising, 0 falling (Driver:
+     bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0: 3
+     loads, 3 rising, 0 falling (Driver:
      bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 )
      Net
      bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0: 2
      loads, 2 rising, 0 falling (Driver:
-     bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
-     Net i_CPLD_ESPI_CLK_c: 115 loads, 103 rising, 12 falling (Driver: PIO
-     i_CPLD_ESPI_CLK )
 
                                     Page 3
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
-     Net pwrseq_master_inst/N_454_buf_i: 1 loads, 1 rising, 0 falling (Driver:
-     pwrseq_master_inst/assert_button_clr_i_o2_RNI4CMB9 )
+     bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
+     Net i_CPLD_ESPI_CLK_c: 111 loads, 99 rising, 12 falling (Driver: PIO
+     i_CPLD_ESPI_CLK )
+     Net pwrseq_master_inst/N_464_buf_i: 1 loads, 1 rising, 0 falling (Driver:
+     pwrseq_master_inst/assert_button_clr_i_o2_RNI4CMB )
      Net inst_i2c_update_flash_config/i2c1_scli: 1 loads, 1 rising, 0 falling
      (Driver: PIO io_I2C7_UPDATE_SCL )
      Net i_CLK_25M_CPLD_c: 1 loads, 1 rising, 0 falling (Driver: PIO
      i_CLK_25M_CPLD )
-   Number of Clock Enables:  536
-     Net cmu_to_mb_data_filter4: 1 loads, 1 LSLICEs
-     Net un1_timer_cnt42_i_0: 1 loads, 0 LSLICEs
+   Number of Clock Enables:  567
+     Net cmu_to_mb_data_filter5: 1 loads, 1 LSLICEs
+     Net edge_delay_rst_srst_bmc_b_n_1ms.un1_timer_cnt41_i: 1 loads, 0 LSLICEs
      Net un1_w_u3_nc7_sw2: 2 loads, 2 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/w_pwrbtn_neg: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/N_24_i: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_sysrst_evt8: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_pwron_evt8: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnte: 4 loads, 4 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnte: 4 loads, 4 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/r_pwrbtn_countere: 6 loads, 6 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_lbtn_pwrdown_evt8: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnte: 5 loads, 5 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_pwron_cnt12: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_pwrdown_cnt13: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_lbtn_pwrdown_cnt12: 1 loads, 1 LSLICEs
-     Net bmc_ctl_pwrbtn_u0/un1_r_4s_flag12_i_0: 1 loads, 1 LSLICEs
-     Net w20mSCE: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_10545: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_10505: 4 loads, 4 LSLICEs
      Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2C_RW_1_sqm
      uxa: 1 loads, 1 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00a05: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00064: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_01305: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_01055: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_008a5: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00735: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_008c5: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00785: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/N_820_i: 2 loads, 2 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00745: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00524: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00765: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00774: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_833_i: 4
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[7]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO_0[0]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     _0[0]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00775: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00764: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00744: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_006c4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_211_i: 4
      loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/N_822_i: 3 loads, 3 LSLICEs
      Net
      bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnte: 4
      loads, 4 LSLICEs
      Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSi
      gnal_sda_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSi
-     gnal_scl_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
-     Net
-     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock: 4
-     loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_4_i:
-     4 loads, 4 LSLICEs
 
                                     Page 4
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSi
+     gnal_scl_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
      Net
-     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_outce[0]: 1
-     loads, 1 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_203_i: 4
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock: 4
      loads, 4 LSLICEs
      Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_250_i: 4
      loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/un1_i_bmc_power_soft_done_2_i_0_0: 4 loads, 4
-     LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00134: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_02c05: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_006c5: 4 loads, 4 LSLICEs
      Net pon_reset_n: 5 loads, 5 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_00d15: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0.r_reg_00345: 5 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_020d5: 1 loads, 1 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/un1_r_reg_03a019_0_0: 2 loads, 2 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/un1_i_st_aux_fail_recovery_0_0_0: 3 loads, 3
+     Net bmc_cpld_i2c_ram_u0/r_reg_01304: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_01054: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_008a4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_data_vld_pos: 18 loads, 18
      LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_10535: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_10525: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/r_reg_10515: 4 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnte: 9 loads, 9
-     LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_data_vld_pos: 9 loads, 9 LSLICEs
-     
      Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_command_tempce_0[0]: 4
      loads, 4 LSLICEs
      Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_command_tempce_0[8]: 4
      loads, 4 LSLICEs
-     Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00a04: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00135: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00734: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_008c4: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_020d4: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00065: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00525: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/un1_i_st_aux_fail_recovery_0_0_a2_1_RNIQ8OI2: 3
+     loads, 3 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_10544: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_10534: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_10524: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_10514: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_10504: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/un1_r_reg_03a016_0_0: 5 loads, 5 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_02c04: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00d14: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00784: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_0053ce[0]: 2 loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/N_102: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00344: 4 loads, 4 LSLICEs
+     Net pvt_gpi_4u_gpu_zt2_inst/par_datace_1[3]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[16]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[17]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[18]: 1 loads, 1 LSLICEs
@@ -311,29 +319,29 @@ Design Summary (cont)
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[34]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[35]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[36]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt2_inst/par_datace_1[37]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[37]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[39]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt2_inst/par_datace_0[40]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt2_inst/par_datace_1[40]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt2_inst/bit_idx_oute: 4 loads, 4 LSLICEs
-     Net par_datace_0[42]: 1 loads, 0 LSLICEs
-     Net t1us_tick: 35 loads, 35 LSLICEs
-     Net w1mSCE: 2 loads, 2 LSLICEs
-     Net s2p_164_u1/data_out_cnt[3]: 1 loads, 0 LSLICEs
-     Net par_datace[1]: 1 loads, 0 LSLICEs
-     Net pvt_gpi_4u_gpu_zt_inst/par_datace[3]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt_inst/par_datace[16]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt_inst/par_datace[17]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt_inst/par_datace[18]: 1 loads, 1 LSLICEs
+     Net par_datace_1[42]: 1 loads, 0 LSLICEs
 
                                     Page 5
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
+     Net t1us_tick: 35 loads, 35 LSLICEs
+     Net w1mSCE: 2 loads, 2 LSLICEs
+     Net s2p_164_u1/data_out_cnt[3]: 1 loads, 0 LSLICEs
+     Net par_datace[1]: 1 loads, 0 LSLICEs
+     Net pvt_gpi_4u_gpu_zt_inst/par_datace_0[3]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt_inst/par_datace[16]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt_inst/par_datace[17]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt_inst/par_datace[18]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[19]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[20]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[21]: 1 loads, 1 LSLICEs
@@ -343,25 +351,26 @@ Design Summary (cont)
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[34]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[35]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[36]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt_inst/par_datace_0[37]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt_inst/par_datace[37]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/par_datace[39]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_4u_gpu_zt_inst/par_datace[40]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_4u_gpu_zt_inst/par_datace_0[40]: 1 loads, 1 LSLICEs
      Net pvt_gpi_4u_gpu_zt_inst/bit_idx_oute: 4 loads, 4 LSLICEs
-     Net par_datace[42]: 1 loads, 0 LSLICEs
-     Net edge_delay_dc_pwr_on_1s5/un1_timer_cnt86_i: 1 loads, 1 LSLICEs
-     Net edge_delay_dc_pwr_on_2s/un1_timer_cnt86_i: 1 loads, 1 LSLICEs
-     Net nmi_ctl_int/clr_nmi_delay_inst/un1_timer_cnt18_i: 1 loads, 1 LSLICEs
+     Net par_datace_0[42]: 1 loads, 0 LSLICEs
+     Net edge_delay_dc_pwr_on_1s5/un1_timer_cnt85_i: 1 loads, 1 LSLICEs
+     Net edge_delay_dc_pwr_on_2s/un1_timer_cnt85_i: 1 loads, 1 LSLICEs
+     Net nmi_ctl_int/clr_nmi_delay_inst/un1_timer_cnt18_i_0_1: 1 loads, 1
+     LSLICEs
      Net nmi_ctl_int/un1_i_clr_nmi_flg: 1 loads, 1 LSLICEs
-     Net clear_cmos_int/clr_cmos_delay_inst/un1_timer_cnt18_i_0: 1 loads, 1
+     Net clear_cmos_int/clr_cmos_delay_inst/un1_timer_cnt18_i_0_2: 1 loads, 1
      LSLICEs
      Net un1_w_bmc_ready_pos: 1 loads, 1 LSLICEs
      Net clear_cmos_int/un1_i_clr_cmos_flg: 1 loads, 1 LSLICEs
      Net edge_delay_slot_2_on_dly_10ms/timer_cnte: 4 loads, 4 LSLICEs
-     Net edge_delay_slot_2_on_dly_10ms/un1_timer_cnt64_i: 1 loads, 1 LSLICEs
+     Net edge_delay_slot_2_on_dly_10ms/un1_timer_cnt63_i: 1 loads, 1 LSLICEs
      Net edge_delay_slot_1_on_dly_10ms/timer_cnte: 4 loads, 4 LSLICEs
-     Net edge_delay_slot_1_on_dly_10ms/un1_timer_cnt64_i: 1 loads, 1 LSLICEs
+     Net edge_delay_slot_1_on_dly_10ms/un1_timer_cnt63_i: 1 loads, 1 LSLICEs
      Net edge_delay_slot_0_on_dly_10ms/timer_cnte: 4 loads, 4 LSLICEs
-     Net edge_delay_slot_0_on_dly_10ms/un1_timer_cnt64_i: 1 loads, 1 LSLICEs
+     Net edge_delay_slot_0_on_dly_10ms/un1_timer_cnt63_i: 1 loads, 1 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RN
      O[7]: 1 loads, 1 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RN
@@ -381,6 +390,16 @@ Design Summary (cont)
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2C_RW_1_sq
      muxa: 1 loads, 1 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address
+
+                                    Page 6
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
      _RNO[6]: 1 loads, 1 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address
      _RNO[5]: 1 loads, 1 LSLICEs
@@ -390,16 +409,6 @@ Design Summary (cont)
      _RNO[3]: 1 loads, 1 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address
      _RNO[2]: 1 loads, 1 LSLICEs
-
-                                    Page 6
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Design Summary (cont)
----------------------
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address
      _RNO[1]: 1 loads, 1 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address
@@ -418,62 +427,63 @@ Design Summary (cont)
      loads, 4 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_250_i: 5
      loads, 5 LSLICEs
-     Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnte: 9 loads, 9
+     Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt8: 9 loads, 9
      LSLICEs
-     Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_data_vld_pos: 9 loads, 9
+     Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnte: 9 loads, 9
      LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_command_tempce[0]: 4 loads,
      4 LSLICEs
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_command_tempce[8]: 4 loads,
      4 LSLICEs
      Net bios_cpld_i2c_ram_u0/r_reg_10065: 1 loads, 1 LSLICEs
-     Net pch_cpld_espi_ram_u1/r_reg_10064: 4 loads, 4 LSLICEs
-     Net bios_espi_link/data_trans_en_0_sqmuxa: 2 loads, 2 LSLICEs
-     Net bios_espi_link/trans_cnt4_1_sqmuxa_1: 1 loads, 1 LSLICEs
-     Net bios_espi_link/sts_trans_en_1_sqmuxa: 1 loads, 1 LSLICEs
-     Net bios_espi_link/trans_cnt6e: 3 loads, 3 LSLICEs
+     Net pch_cpld_espi_ram_u1/r_reg_10065: 4 loads, 4 LSLICEs
      Net bios_espi_link/addr_trans_en_1_sqmuxa: 1 loads, 1 LSLICEs
-     Net bios_espi_link/tar_trans_en9: 1 loads, 1 LSLICEs
+     Net bios_espi_link/trans_cnt4_1_sqmuxa_1: 2 loads, 2 LSLICEs
+     Net bios_espi_link/sts_trans_en_1_sqmuxa: 2 loads, 2 LSLICEs
+     Net bios_espi_link/trans_cnt6e: 3 loads, 3 LSLICEs
+     Net bios_espi_link/data_trans_en_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net bios_espi_link/tar_trans_en6: 1 loads, 1 LSLICEs
      Net bios_espi_link/trans_cnt5_1_sqmuxa_1: 1 loads, 1 LSLICEs
-     Net bios_espi_link/un1_state_save14_2_i: 4 loads, 4 LSLICEs
-     Net bios_espi_link/N_514_i: 1 loads, 1 LSLICEs
-     Net bios_espi_link/N_518_i: 1 loads, 1 LSLICEs
-     Net bios_espi_link/N_519_i: 1 loads, 1 LSLICEs
-     Net bios_espi_link/N_522_i: 1 loads, 1 LSLICEs
-     Net bios_espi_link/N_523_i: 1 loads, 1 LSLICEs
+     Net bios_espi_link/un1_state_save14_i: 4 loads, 4 LSLICEs
+     Net bios_espi_link/get_status_en5: 1 loads, 1 LSLICEs
+     Net bios_espi_link/un89_0: 1 loads, 1 LSLICEs
+     Net bios_espi_link/un88_0: 2 loads, 2 LSLICEs
+     Net bios_espi_link/un83_0: 1 loads, 1 LSLICEs
+     Net bios_espi_link/un87_0: 1 loads, 1 LSLICEs
      Net bios_espi_link/pch_smbus_wdata_en_1_sqmuxa: 4 loads, 4 LSLICEs
      Net bios_espi_link/un1_pch_smbus_wdata_en_1_sqmuxa: 1 loads, 1 LSLICEs
      Net bios_espi_link/pch_addrce[0]: 4 loads, 4 LSLICEs
      Net bios_espi_link/pch_addrce[8]: 4 loads, 4 LSLICEs
-     Net bios_espi_link/N_521_i: 4 loads, 4 LSLICEs
-     Net bios_espi_link/un1_state_save14_i: 4 loads, 4 LSLICEs
-     Net bios_espi_link/N_354_i: 7 loads, 7 LSLICEs
-     Net bios_espi_link/un1_state_save14_1_i: 17 loads, 17 LSLICEs
-     Net bios_espi_link/N_525_i: 1 loads, 1 LSLICEs
-     Net bios_espi_link/N_515_i: 2 loads, 2 LSLICEs
-     Net bios_espi_link/N_520_i: 1 loads, 1 LSLICEs
-     Net bios_espi_link/N_524_i: 2 loads, 2 LSLICEs
-     Net uart_master_u2/reg_par_data_out_RNO_0[0]: 1 loads, 1 LSLICEs
-     Net uart_master_u2/reg_par_data_out_RNO_0[2]: 1 loads, 1 LSLICEs
-     Net uart_master_u2/N_97_i: 1 loads, 1 LSLICEs
+     Net bios_espi_link/N_447_i: 4 loads, 4 LSLICEs
+     Net bios_espi_link/un1_state_save14_2_i: 4 loads, 4 LSLICEs
 
                                     Page 7
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
-     Net uart_master_u2/un8_i_a2[2]: 1 loads, 1 LSLICEs
+     Net bios_espi_link/data_byte_out13_i: 7 loads, 7 LSLICEs
+     Net bios_espi_link/un1_state_save14_1_i: 11 loads, 11 LSLICEs
+     Net bios_espi_link/un90_0: 1 loads, 1 LSLICEs
+     Net bios_espi_link/un82_0: 2 loads, 2 LSLICEs
+     Net bios_espi_link/un84_fc: 1 loads, 1 LSLICEs
+     Net bios_espi_link/un86_0: 2 loads, 2 LSLICEs
+     Net reg_par_data_in_dec_20_3_0_o2_RNI5RI21: 1 loads, 0 LSLICEs
+     Net uart_master_u2/reg_par_data_out_RNO_0[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_out_RNO[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/N_1561_i: 1 loads, 1 LSLICEs
+     Net uart_master_u2/N_97_i: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[1]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[3]: 1 loads, 1 LSLICEs
-     Net uart_master_u2/reg_par_data_outce_0[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce[4]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[5]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[6]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[7]: 1 loads, 1 LSLICEs
-     Net uart_master_u2/reg_par_data_outce_0[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce[8]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[9]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[10]: 1 loads, 1 LSLICEs
      Net uart_master_u2/reg_par_data_outce_0[19]: 1 loads, 1 LSLICEs
@@ -482,18 +492,17 @@ Design Summary (cont)
      Net uart_master_u2/data_counte: 3 loads, 3 LSLICEs
      Net uart_master_u2/bps_count_bite: 4 loads, 4 LSLICEs
      Net t16us_tick: 4 loads, 4 LSLICEs
-     Net reg_par_data_outce_0[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u1/reg_par_data_out_RNO[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_out_RNO[4]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_out_RNO[0]: 1 loads, 1 LSLICEs
-     Net uart_master_u1/reg_par_data_out_RNO[2]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_out_RNO[20]: 1 loads, 1 LSLICEs
-     Net uart_master_u1/N_855_i: 1 loads, 1 LSLICEs
+     Net uart_master_u1/un9_i_a2[2]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[2]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[3]: 1 loads, 1 LSLICEs
-     Net uart_master_u1/reg_par_data_outce[4]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[5]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[6]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[7]: 1 loads, 1 LSLICEs
-     Net uart_master_u1/reg_par_data_outce[8]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[9]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[10]: 1 loads, 1 LSLICEs
      Net uart_master_u1/reg_par_data_outce[19]: 1 loads, 1 LSLICEs
@@ -508,30 +517,27 @@ Design Summary (cont)
      1 LSLICEs
      Net pwrseq_slave_inst/grp_d_p1_vddcore1_fault_detect_inst/un1_fault_clear:
      1 loads, 1 LSLICEs
-     Net
-     pwrseq_slave_inst/grp_d_p1_vddcore1_en_check_inst/un1_timer_cnt18_i_0_7: 1
+     Net pwrseq_slave_inst/grp_d_p1_vddcore1_en_check_inst/un1_timer_cnt18_i: 1
      loads, 1 LSLICEs
      Net pwrseq_slave_inst/grp_d_p0_vddcore1_fault_detect_inst/un1_fault_clear:
      1 loads, 1 LSLICEs
-     Net
-     pwrseq_slave_inst/grp_d_p0_vddcore1_en_check_inst/un1_timer_cnt18_i_0_6: 1
-     loads, 1 LSLICEs
-     Net pwrseq_slave_inst/grp_d_p1_vddcore0_fault_detect_inst/un1_fault_clear:
-     1 loads, 1 LSLICEs
-     Net
-     pwrseq_slave_inst/grp_d_p1_vddcore0_en_check_inst/un1_timer_cnt18_i_0_5: 1
-     loads, 1 LSLICEs
-     Net pwrseq_slave_inst/grp_d_p0_vddcore0_fault_detect_inst/un1_fault_clear:
+     Net pwrseq_slave_inst/grp_d_p0_vddcore1_en_check_inst/un1_timer_cnt18_i: 1
 
                                     Page 8
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
+     loads, 1 LSLICEs
+     Net pwrseq_slave_inst/grp_d_p1_vddcore0_fault_detect_inst/un1_fault_clear:
+     1 loads, 1 LSLICEs
+     Net pwrseq_slave_inst/grp_d_p1_vddcore0_en_check_inst/un1_timer_cnt18_i: 1
+     loads, 1 LSLICEs
+     Net pwrseq_slave_inst/grp_d_p0_vddcore0_fault_detect_inst/un1_fault_clear:
      1 loads, 1 LSLICEs
      Net pwrseq_slave_inst/grp_d_p0_vddcore0_en_check_inst/un1_timer_cnt18_i: 1
      loads, 1 LSLICEs
@@ -547,12 +553,12 @@ Design Summary (cont)
      loads, 1 LSLICEs
      Net pwrseq_slave_inst/grp_d_p1_vddio_en_check_inst/un1_timer_cnt18_i: 1
      loads, 1 LSLICEs
-     Net pwrseq_slave_inst/grp_d_vddio_p0_fault_detect_inst/N_1427_i: 1 loads, 1
-     LSLICEs
+     Net pwrseq_slave_inst/grp_d_vddio_p0_fault_detect_inst/un1_fault_clear: 1
+     loads, 1 LSLICEs
      Net pwrseq_slave_inst/grp_d_p0_vddio_en_check_inst/un1_timer_cnt18_i: 1
      loads, 1 LSLICEs
-     Net pwrseq_slave_inst/grp_c_p1_fault_detect_inst/N_1443_i: 1 loads, 1
-     LSLICEs
+     Net pwrseq_slave_inst/grp_c_p1_fault_detect_inst/un1_fault_clear: 1 loads,
+     1 LSLICEs
      Net pwrseq_slave_inst/grp_c_p1_vdd11_en_check_inst/un1_timer_cnt18_i: 1
      loads, 1 LSLICEs
      Net pwrseq_slave_inst/grp_c_p0_fault_detect_inst/un1_fault_clear: 1 loads,
@@ -573,97 +579,108 @@ Design Summary (cont)
      loads, 1 LSLICEs
      Net pwrseq_slave_inst/grp_b_p0_18_s5_fault_detect_inst/un1_fault_clear: 1
      loads, 1 LSLICEs
-     Net pwrseq_slave_inst/grp_b_p0_18_s5_en_check_inst/un1_timer_cnt18_i_0_2: 1
+     Net pwrseq_slave_inst/grp_b_p0_18_s5_en_check_inst/un1_timer_cnt18_i: 1
      loads, 1 LSLICEs
-     Net pwrseq_slave_inst/p5v_fault_detect_inst/un1_fault_clear: 1 loads, 1
-     LSLICEs
-     Net pwrseq_slave_inst/p5v_en_check_inst/un1_timer_cnt18_i_0_1: 1 loads, 1
+     Net pwrseq_slave_inst/p5v_fault_detect_inst/N_1394_i: 1 loads, 1 LSLICEs
+     Net pwrseq_slave_inst/p5v_en_check_inst/un1_timer_cnt18_i_0_0: 1 loads, 1
      LSLICEs
      Net pwrseq_slave_inst/p5v_stby_fault_detect_inst/un1_fault_clear: 1 loads,
      1 LSLICEs
-     Net pwrseq_slave_inst/p5v_stby_en_check_inst/un1_timer_cnt18_i_0_0: 1
-     loads, 1 LSLICEs
-     Net pwrseq_slave_inst/un1_reset_i: 1 loads, 1 LSLICEs
-     Net pwrseq_slave_inst/un1_reset_1_i: 1 loads, 1 LSLICEs
-     Net pwrseq_slave_inst/un1_fault_save_en9_i: 3 loads, 3 LSLICEs
-     Net pwrseq_slave_inst/un1_fault_save_en8_1: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/sb_pch_slp4_delay_inst/un1_timer_cnt18_i: 1 loads, 1
+     Net pwrseq_slave_inst/p5v_stby_en_check_inst/un1_timer_cnt18_i: 1 loads, 1
+     LSLICEs
 
                                     Page 9
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
-     LSLICEs
-     Net pwrseq_master_inst/rt_failure_detected_RNO: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/un1_N_5_0_i: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/un1_N_5_2_i: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/un1_N_5_3_i: 1 loads, 1 LSLICEs
+     Net pwrseq_slave_inst/un1_reset_1_i: 1 loads, 1 LSLICEs
+     Net pwrseq_slave_inst/un1_reg_rsmrst_l9_7: 1 loads, 1 LSLICEs
+     Net pwrseq_slave_inst/un1_fault_save_en6_i: 3 loads, 3 LSLICEs
+     Net pwrseq_slave_inst/N_1540_i: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/sb_pch_slp4_delay_inst/un1_timer_cnt18_i_0: 1 loads,
+     1 LSLICEs
+     Net pwrseq_master_inst/ready_for_recov_RNO: 1 loads, 1 LSLICEs
      Net pwrseq_master_inst/wdt_countere: 6 loads, 6 LSLICEs
-     Net pwrseq_master_inst/N_325_i: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/N_331_i: 1 loads, 1 LSLICEs
      Net pwrseq_master_inst/statece[23]: 4 loads, 4 LSLICEs
-     Net pwrseq_master_inst/un1_ready_for_recov8_1: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/N_38: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/N_336_i: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/un1_pf_on_wait_complete8_0: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/un1_N_5_1_i: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/N_269_i: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/N_28: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/un1_wdt_counter9_i_0: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/N_344_i: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/un1_pf_on_wait_complete5_1_0: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/un1_wdt_counter9_4_i_0: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/un1_wdt_counter9_3_i_0: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/un1_wdt_counter9_1_i_0: 1 loads, 1 LSLICEs
      Net pwrseq_master_inst/un1_wdt_counter9_5_i_0: 1 loads, 1 LSLICEs
-     Net pwrseq_master_inst/dispg_watchdog_timeout_RNO: 1 loads, 1 LSLICEs
+     Net pwrseq_master_inst/un1_wdt_counter9_6_i_0: 1 loads, 1 LSLICEs
      Net pwrseq_master_inst/un1_assert_button_clr_2_i: 1 loads, 1 LSLICEs
      Net pwrseq_master_inst/un1_st_halt_power_cycle_1: 1 loads, 1 LSLICEs
-     Net Signal_Latch_THERMTRIP1/un1_rAlert8_0: 1 loads, 1 LSLICEs
-     Net Signal_Latch_THERMTRIP0/un1_rAlert8: 1 loads, 1 LSLICEs
+     Net Signal_Latch_THERMTRIP1/un1_rAlert5_0: 1 loads, 1 LSLICEs
+     Net Signal_Latch_THERMTRIP0/un1_rAlert5: 1 loads, 1 LSLICEs
      Net thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[1].inst_cpu_thermtrip_fault_
      det/un1_fault_clear: 1 loads, 1 LSLICEs
      Net thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[0].inst_cpu_thermtrip_fault_
-     det/un1_fault_clear: 1 loads, 1 LSLICEs
-     Net thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[0].inst_cpu_thermtrip_fault_
      det/un1_vrm_chklive_en: 1 loads, 1 LSLICEs
+     Net thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[0].inst_cpu_thermtrip_fault_
+     det/un1_fault_clear: 1 loads, 1 LSLICEs
      Net edge_delay_inst_cpupwrok/un1_timer_cnt18_i: 1 loads, 1 LSLICEs
-     Net system_rst_u0/lowpass_filter_U0/un1_r_data_out22: 1 loads, 1 LSLICEs
-     Net system_rst_u0/un1_r_bmc_ctl_sys_rst_cnt12: 1 loads, 1 LSLICEs
+     Net system_rst_u0/lowpass_filter_U0/un1_r_data_out16_0: 1 loads, 1 LSLICEs
+     Net w20mSCE: 4 loads, 4 LSLICEs
+     Net system_rst_u0/un1_r_bmc_ctl_sys_rst_cnt11: 1 loads, 1 LSLICEs
      Net system_rst_u0/r_bmc_ctl_sys_rst_cnte: 4 loads, 4 LSLICEs
-     Net Pwr_But_Ctrl_U0/PwrBtn_Filter/un1_r_data_out8: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/w_pwrbtn_neg: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_sysrst_evt5: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_pwron_evt5: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnte: 4 loads, 4 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnte: 4 loads, 4 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/r_pwrbtn_countere: 6 loads, 6 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_lbtn_pwrdown_evt5: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnte: 5 loads, 5 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_pwron_cnt11: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_sbtn_pwrdown_cnt9: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_lbtn_pwrdown_cnt10: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/N_1129_i: 1 loads, 1 LSLICEs
+     Net bmc_ctl_pwrbtn_u0/un1_r_4s_flag8_i_0: 1 loads, 1 LSLICEs
+     Net Pwr_But_Ctrl_U0/PwrBtn_Filter/un1_r_data_out5: 1 loads, 1 LSLICEs
      Net inst_mcpld_to_cmucpld_p2s/cnte: 4 loads, 4 LSLICEs
      Net inst_cmucpld_to_mcpld_s2p/sclk_1_sqmuxa: 1 loads, 1 LSLICEs
-     Net inst_cmucpld_to_mcpld_s2p/un12_sclk_pp: 3 loads, 3 LSLICEs
+     Net inst_cmucpld_to_mcpld_s2p/un8_sclk_pp: 3 loads, 3 LSLICEs
      Net inst_cmucpld_to_mcpld_s2p/po_rce_0[0]: 1 loads, 1 LSLICEs
      Net inst_cmucpld_to_mcpld_s2p/po14: 5 loads, 5 LSLICEs
      Net inst_cmucpld_to_mcpld_s2p/po_rce_0[2]: 1 loads, 1 LSLICEs
      Net inst_cmucpld_to_mcpld_s2p/po_rce_0[3]: 1 loads, 1 LSLICEs
-     Net inst_cmucpld_to_mcpld_s2p/po_rce_0[92]: 1 loads, 1 LSLICEs
-     Net inst_cmucpld_to_mcpld_s2p/po_rce_0[94]: 1 loads, 1 LSLICEs
-     Net inst_cmucpld_to_mcpld_s2p/po_rce_0[95]: 1 loads, 1 LSLICEs
-     Net inst_cmucpld_to_mcpld_s2p/un12_tick_pp: 4 loads, 4 LSLICEs
-     Net inst_mcpld_to_scpld_p2s/N_1434_i: 5 loads, 5 LSLICEs
-     Net un1_w_u3_nc7_sw: 2 loads, 2 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/sclk_1_sqmuxa: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[175]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[53]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[45]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[43]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[39]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[23]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[170]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_r_RNO[172]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po5: 91 loads, 91 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_rce[0]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_rce[1]: 1 loads, 1 LSLICEs
-     Net inst_scpld_to_mcpld_s2p/po_rce[2]: 1 loads, 1 LSLICEs
 
                                    Page 10
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
+     Net inst_cmucpld_to_mcpld_s2p/po_rce_0[92]: 1 loads, 1 LSLICEs
+     Net inst_cmucpld_to_mcpld_s2p/po_rce_0[94]: 1 loads, 1 LSLICEs
+     Net inst_cmucpld_to_mcpld_s2p/po_rce_0[95]: 1 loads, 1 LSLICEs
+     Net inst_cmucpld_to_mcpld_s2p/un12_tick_pp: 4 loads, 4 LSLICEs
+     Net inst_mcpld_to_scpld_p2s/N_1395_i: 5 loads, 5 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/sclk_1_sqmuxa: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[170]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[53]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[45]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[43]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[39]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[23]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_r_RNO[172]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po5: 91 loads, 91 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_rce[0]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_rce[1]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_rce[2]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[3]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[4]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[5]: 1 loads, 1 LSLICEs
@@ -703,6 +720,16 @@ Design Summary (cont)
      Net inst_scpld_to_mcpld_s2p/po_rce[41]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[42]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[44]: 1 loads, 1 LSLICEs
+
+                                   Page 11
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
      Net inst_scpld_to_mcpld_s2p/po_rce[46]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[47]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[48]: 1 loads, 1 LSLICEs
@@ -720,16 +747,6 @@ Design Summary (cont)
      Net inst_scpld_to_mcpld_s2p/po_rce[61]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[62]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[63]: 1 loads, 1 LSLICEs
-
-                                   Page 11
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Design Summary (cont)
----------------------
      Net inst_scpld_to_mcpld_s2p/po_rce[64]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[65]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[66]: 1 loads, 1 LSLICEs
@@ -769,6 +786,16 @@ Design Summary (cont)
      Net inst_scpld_to_mcpld_s2p/po_rce[100]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[101]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[102]: 1 loads, 1 LSLICEs
+
+                                   Page 12
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
      Net inst_scpld_to_mcpld_s2p/po_rce[103]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[104]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[105]: 1 loads, 1 LSLICEs
@@ -786,16 +813,6 @@ Design Summary (cont)
      Net inst_scpld_to_mcpld_s2p/po_rce[117]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[118]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[119]: 1 loads, 1 LSLICEs
-
-                                   Page 12
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Design Summary (cont)
----------------------
      Net inst_scpld_to_mcpld_s2p/po_rce[120]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[121]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[122]: 1 loads, 1 LSLICEs
@@ -835,6 +852,16 @@ Design Summary (cont)
      Net inst_scpld_to_mcpld_s2p/po_rce[156]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[157]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[158]: 1 loads, 1 LSLICEs
+
+                                   Page 13
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
      Net inst_scpld_to_mcpld_s2p/po_rce[159]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[160]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[161]: 1 loads, 1 LSLICEs
@@ -849,36 +876,59 @@ Design Summary (cont)
      Net inst_scpld_to_mcpld_s2p/po_rce[171]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[173]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[174]: 1 loads, 1 LSLICEs
+     Net inst_scpld_to_mcpld_s2p/po_rce[175]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[176]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[196]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[197]: 1 loads, 1 LSLICEs
-
-                                   Page 13
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Design Summary (cont)
----------------------
      Net inst_scpld_to_mcpld_s2p/po_rce[198]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/po_rce[199]: 1 loads, 1 LSLICEs
      Net inst_scpld_to_mcpld_s2p/un3_tick_pp: 5 loads, 5 LSLICEs
-     Net pvt_gpi_MB_inst/bit_idx_out12: 25 loads, 25 LSLICEs
+     Net pvt_gpi_MB_inst/bit_idx_out12: 4 loads, 4 LSLICEs
+     Net un2_par_data_15_4_0_o2_RNI1O1J1: 1 loads, 0 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[60]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[58]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[54]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[53]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[52]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[45]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[39]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[37]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[15]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[12]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[10]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_data_RNO[0]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[3]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[8]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[9]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[13]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[14]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[22]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_MB_inst/par_datace[37]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[27]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[38]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[40]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[41]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[42]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[43]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[44]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_MB_inst/par_datace[45]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[46]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[47]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_MB_inst/par_datace[52]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_MB_inst/par_datace[53]: 1 loads, 1 LSLICEs
-     Net pvt_gpi_MB_inst/par_datace[54]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[55]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[56]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[57]: 1 loads, 1 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[59]: 1 loads, 1 LSLICEs
      Net pvt_gpi_MB_inst/par_datace[61]: 1 loads, 1 LSLICEs
-     Net par_datace[62]: 1 loads, 0 LSLICEs
+     Net pvt_gpi_MB_inst/par_datace[62]: 1 loads, 1 LSLICEs
+
+                                   Page 14
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
+     Net un1_w_u3_nc7_sw: 2 loads, 2 LSLICEs
      Net db_p12v_droop/out_i_0_sqmuxa_1: 1 loads, 1 LSLICEs
      Net db_p12v_droop/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
      Net db_inst_amd_cpu_prsnt/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
@@ -891,7 +941,7 @@ Design Summary (cont)
      Net db_inst_pwrgood/cnt[3]3: 1 loads, 1 LSLICEs
      Net db_inst_pwrgood/cnt[2]3: 1 loads, 1 LSLICEs
      Net db_inst_pwrgood/out_i_0_sqmuxa_9: 1 loads, 1 LSLICEs
-     Net db_inst_pwrgood/cnt[1]3: 1 loads, 1 LSLICEs
+     Net db_inst_pwrgood.mInst[1].cnt[1]3: 6 loads, 1 LSLICEs
      Net db_inst_pwrgood/out_i_0_sqmuxa_10: 1 loads, 1 LSLICEs
      Net db_inst_pwrgood/out_i_0_sqmuxa_11: 1 loads, 1 LSLICEs
      Net db_inst_pwrgood/out_i_0_sqmuxa_12: 1 loads, 1 LSLICEs
@@ -918,16 +968,6 @@ Design Summary (cont)
      Net db_inst_psu/out_i_0_sqmuxa_7: 1 loads, 1 LSLICEs
      Net db_inst_psu/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
      Net db_vr_ocp_low/out_i_0_sqmuxa_1: 1 loads, 1 LSLICEs
-
-                                   Page 14
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Design Summary (cont)
----------------------
      Net db_vr_ocp_low/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
      Net db_vr_ocp_low/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
      Net db_vr_ocp_low/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
@@ -942,69 +982,85 @@ Design Summary (cont)
      Net timer_gen_inst/t32us_e: 8 loads, 8 LSLICEs
      Net timer_gen_inst/t64ms_2: 2 loads, 2 LSLICEs
      Net timer_gen_inst/t1us_2: 3 loads, 3 LSLICEs
-     Net scpld_to_mcpld_data_filter4: 87 loads, 87 LSLICEs
-   Number of local set/reset loads for net pon_reset_n merged into GSR:  1882
-   Number of LSRs:  101
-     Net un1_r_p12v_discharge_r9_62: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_33: 1 loads, 1 LSLICEs
-     Net bios_espi_link.current_state5: 77 loads, 75 LSLICEs
-     Net un1_r_p12v_discharge_r9_47: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_79: 2 loads, 2 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
-     loads, 2 LSLICEs
-     Net un2_w_rst_3: 4 loads, 3 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
-     loads, 2 LSLICEs
-     Net un2_w_rst: 5 loads, 4 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/o_i2c_start: 18 loads, 18 LSLICEs
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i:
-     42 loads, 42 LSLICEs
-     Net pon_reset_n: 3 loads, 3 LSLICEs
-     Net un1_pon_reset_n_39_i: 51 loads, 48 LSLICEs
-     Net un1_r_p12v_discharge_r9_40: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_41: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_42: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_43: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_44: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_45: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_46: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_48: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_49: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_50: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_51: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_52: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_53: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_54: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_55: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_75: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_76: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_77: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_78: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_80: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_81: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_82: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_83: 2 loads, 2 LSLICEs
+     Net scpld_to_mcpld_data_filter5: 87 loads, 87 LSLICEs
+   Number of local set/reset loads for net pon_reset_n merged into GSR:  1886
 
                                    Page 15
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Design Summary (cont)
 ---------------------
-     Net un1_r_p12v_discharge_r9_84: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_85: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_86: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_87: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_88: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_89: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_90: 2 loads, 2 LSLICEs
+   Number of LSRs:  101
+     Net un1_r_p12v_discharge_r5_62: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_33: 1 loads, 1 LSLICEs
+     Net bios_espi_link.current_state4: 79 loads, 77 LSLICEs
+     Net un1_r_p12v_discharge_r5_30: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_59: 2 loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 LSLICEs
+     Net un2_w_rst: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 LSLICEs
+     Net un2_w_rst_3: 4 loads, 3 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/o_i2c_start: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i:
+     44 loads, 44 LSLICEs
+     Net pon_reset_n: 3 loads, 3 LSLICEs
+     Net un1_pon_reset_n_39_i: 51 loads, 48 LSLICEs
+     Net un1_r_p12v_discharge_r5_40: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_41: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_42: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_43: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_44: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_45: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_46: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_47: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_48: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_49: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_50: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_51: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_52: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_53: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_54: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_55: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_75: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_76: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_77: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_78: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_79: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_80: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_81: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_82: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_83: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_84: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_85: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_86: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_87: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_88: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_89: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_90: 2 loads, 2 LSLICEs
+     Net s2p_164_u1/un1_i_rst_4: 1 loads, 1 LSLICEs
+     Net s2p_164_u1/un1_i_rst_13: 2 loads, 2 LSLICEs
      Net s2p_164_u1/un1_i_rst_7: 1 loads, 1 LSLICEs
      Net s2p_164_u1/un1_i_rst_14: 2 loads, 2 LSLICEs
      Net s2p_164_u1/un1_i_rst_6: 1 loads, 1 LSLICEs
      Net s2p_164_u1/un1_i_rst_15: 2 loads, 2 LSLICEs
+     Net s2p_164_u1/un1_i_rst_1: 1 loads, 1 LSLICEs
+
+                                   Page 16
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
+     Net s2p_164_u1/un1_i_rst_8: 2 loads, 2 LSLICEs
      Net s2p_164_u1/un1_i_rst: 1 loads, 1 LSLICEs
      Net s2p_164_u1/un1_i_rst_9: 2 loads, 2 LSLICEs
      Net s2p_164_u1/un1_i_rst_3: 1 loads, 1 LSLICEs
@@ -1013,55 +1069,39 @@ Design Summary (cont)
      Net s2p_164_u1/un1_i_rst_11: 2 loads, 2 LSLICEs
      Net s2p_164_u1/un1_i_rst_5: 1 loads, 1 LSLICEs
      Net s2p_164_u1/un1_i_rst_12: 2 loads, 2 LSLICEs
-     Net s2p_164_u1/un1_i_rst_4: 1 loads, 1 LSLICEs
-     Net s2p_164_u1/un1_i_rst_13: 2 loads, 2 LSLICEs
-     Net s2p_164_u1/un1_i_rst_1: 1 loads, 1 LSLICEs
-     Net s2p_164_u1/un1_i_rst_8: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_24: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_25: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_26: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_27: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_28: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_29: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_30: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_31: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_32: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_34: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_35: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_36: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_37: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_38: 1 loads, 1 LSLICEs
-     Net un1_r_p12v_discharge_r9_59: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_60: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_61: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_63: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_64: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_65: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_66: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_67: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_68: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_69: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_70: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_71: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_72: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_73: 2 loads, 2 LSLICEs
-     Net un1_r_p12v_discharge_r9_74: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_24: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_25: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_26: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_27: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_28: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_29: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_31: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_32: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_34: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_35: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_36: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_37: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_38: 1 loads, 1 LSLICEs
+     Net un1_r_p12v_discharge_r5_60: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_61: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_63: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_64: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_65: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_66: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_67: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_68: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_69: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_70: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_71: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_72: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_73: 2 loads, 2 LSLICEs
+     Net un1_r_p12v_discharge_r5_74: 2 loads, 2 LSLICEs
      Net un1_pon_reset_n_94_i: 3 loads, 3 LSLICEs
      Net
      bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1_0: 2
-
-                                   Page 16
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Design Summary (cont)
----------------------
      loads, 2 LSLICEs
-     Net un2_w_rst_0: 5 loads, 4 LSLICEs
+     Net un2_w_rst_0: 6 loads, 5 LSLICEs
      Net
      bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2_0: 2
      loads, 2 LSLICEs
@@ -1070,23 +1110,33 @@ Design Summary (cont)
      
      Net bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i:
      45 loads, 45 LSLICEs
-     Net bios_espi_link/pch_addr15: 25 loads, 25 LSLICEs
+     Net bios_espi_link/pch_addr16: 19 loads, 19 LSLICEs
      Net i_CPLD_ESPI_RESET_N_c: 13 loads, 13 LSLICEs
      Net un1_w_SW_1: 1 loads, 1 LSLICEs
      Net pon_reset_inst/master_reset_n_i: 2 loads, 2 LSLICEs
      Net pll_inst/i_PWRGD_P3V3_STBY_c_i: 1 loads, 0 LSLICEs
    Number of nets driven by tri-state buffers:  0
+
+                                   Page 17
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Design Summary (cont)
+---------------------
    Top 10 highest fanout non-clock nets:
      Net inst_scpld_to_mcpld_s2p/si_r[1]: 181 loads
-     Net inst_scpld_to_mcpld_s2p/un3_sclk_pp: 179 loads
-     Net pon_reset_n: 115 loads
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command[0]: 113 loads
+     Net inst_scpld_to_mcpld_s2p/un2_sclk_pp: 179 loads
+     Net bmc_cpld_i2c_ram_u0/w_i2c_command[0]: 112 loads
+     Net pon_reset_n: 112 loads
      Net t64ms_tick: 108 loads
-     Net bios_cpld_i2c_ram_u0/w_i2c_command[0]: 101 loads
-     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command[1]: 94 loads
+     Net bmc_cpld_i2c_ram_u0/w_i2c_command[1]: 93 loads
+     Net bios_cpld_i2c_ram_u0/w_i2c_command[0]: 92 loads
      Net inst_scpld_to_mcpld_s2p/po5: 91 loads
-     Net bios_cpld_i2c_ram_u0/w_i2c_command[1]: 87 loads
-     Net scpld_to_mcpld_data_filter4: 87 loads
+     Net bios_cpld_i2c_ram_u0/w_i2c_command[1]: 89 loads
+     Net scpld_to_mcpld_data_filter5: 87 loads
 
 
 
@@ -1114,16 +1164,6 @@ WARNING - map: In "LOCATE COMP "io_I2C7_UPDATE_SCL" SITE "C11" ;": Current
      SYS_CONFIG setting prohibits pin "C11" to be used as user IO. This
      preference has been disabled.
 
-
-
-
-                                   Page 17
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
 IO (PIO) Attributes
 -------------------
 
@@ -1142,6 +1182,16 @@ IO (PIO) Attributes
 | io_I2C7_UPDATE_SDA  | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | io_I2C7_UPDATE_SCL  | BIDIR     | LVCMOS33  |            |
+
+                                   Page 18
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | o_CPLD1_CPLD2_RSV2  | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1182,16 +1232,6 @@ IO (PIO) Attributes
 | i_HDT_CONN_TESTEN   | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | o_BMC_JTAG_TRST_R_N | OUTPUT    | LVCMOS33  |            |
-
-                                   Page 18
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | o_BMC_I2C9_9548_4_RST_N_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1208,6 +1248,16 @@ IO (PIO) Attributes (cont)
 | o_I3C_MUX_OE_N_R_2  | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_I3C_MUX_SEL_R_2   | OUTPUT    | LVCMOS33  |            |
+
+                                   Page 19
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | o_I3C_MUX_OE_N_R_1  | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1220,6 +1270,8 @@ IO (PIO) Attributes (cont)
 | o_PAL_I3C_MUX_EN_R_N| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_BIOS_POST_CMPLT_BMC_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SN           | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_PAL_P0_I2C5_9548_RST_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1248,16 +1300,6 @@ IO (PIO) Attributes (cont)
 | i_PGD_P1_VDD_CORE_1 | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
 | o_PAL_P1_VDD_11_SUS_EN| OUTPUT    | LVCMOS33  |            |
-
-                                   Page 19
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | o_PAL_P1_VDD_CORE_0_SOC_RST_L_N| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1272,6 +1314,16 @@ IO (PIO) Attributes (cont)
 | o_P3V_BAT_SWITCH_EN_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | i_PGD_P1_VDD_11_SUS | INPUT     | LVCMOS33  | IN         |
+
+                                   Page 20
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | o_PAL_P1_VDD_CORE_1_11_SUS_RST_L_N| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1307,23 +1359,13 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | i_PGD_P0_VDD_CORE_1 | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| o_P5V_VGA2_EN_N_R   | OUTPUT    | LVCMOS33  |            |
+| o_P5V_VGA2_EN_N_R   | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
 | i_PWRGD_P3V3_STBY   | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
 | i_PGD_P5V           | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
 | i_PGD_P0_VDD_SOC_0  | INPUT     | LVCMOS33  | IN         |
-
-                                   Page 20
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | o_PAL_P0_VDD_CORE_0_SOC_RST_L_N| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1338,6 +1380,16 @@ IO (PIO) Attributes (cont)
 | i_P0_VDDIO_OCP_N    | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
 | o_PAL_P0_VDDIO_RST_N| OUTPUT    | LVCMOS33  |            |
+
+                                   Page 21
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | i_PGD_P0_VDDC       | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1380,16 +1432,6 @@ IO (PIO) Attributes (cont)
 | i_P1_SLP_S3_N       | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | i_P1_SLP_S5_N       | INPUT     | LVCMOS33  |            |
-
-                                   Page 21
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | o_P1_KBRST_N        | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
@@ -1404,8 +1446,18 @@ IO (PIO) Attributes (cont)
 | i_P1_SMERR_N        | INPUT     | LVCMOS18  | IN         |
 +---------------------+-----------+-----------+------------+
 | i_P1_RESET_N        | INPUT     | LVCMOS18  | IN         |
+
+                                   Page 22
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
-| o_P1_PROCHOT_N      | OUTPUT    | LVCMOS18  | OUT        |
+| o_P1_PROCHOT_N      | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | i_P1_PCIE_RST_N_1   | INPUT     | LVCMOS18  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1446,16 +1498,6 @@ IO (PIO) Attributes (cont)
 | o_PAL_TPCM_BMC_DONE_R_N| OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | o_PAL_TPCM_IRQ_R_L  | OUTPUT    | LVCMOS33  |            |
-
-                                   Page 22
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | o_PAL_BIOS_DEBUG_R_N| OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
@@ -1470,6 +1512,16 @@ IO (PIO) Attributes (cont)
 | o_P0_FORCE_SELFREFRESH_R| OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | o_P0_NMI_SYNC_FLOOD_N| OUTPUT    | LVCMOS18  |            |
+
+                                   Page 23
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | o_P0_KBRST_N        | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
@@ -1512,16 +1564,6 @@ IO (PIO) Attributes (cont)
 | i_P0_CPLD_SCL       | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
 | i_P0_VDD_CORE_0_OCP_N_R| INPUT     | LVCMOS18  | IN         |
-
-                                   Page 23
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | i_PAL_P0_VDD_CORE_1_OCP_N| INPUT     | LVCMOS18  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1536,6 +1578,16 @@ IO (PIO) Attributes (cont)
 | i_P0_CPLD_SPARE_0   | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | o_P0_PCIE_WAKE_N_R  | OUTPUT    | LVCMOS18  |            |
+
+                                   Page 24
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | i_P0_PCIE_RST_N_1   | INPUT     | LVCMOS18  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1578,16 +1630,6 @@ IO (PIO) Attributes (cont)
 | i_P0_SGPIO_LD_R     | INPUT     | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | i_P0_PRSNT_N        | INPUT     | LVCMOS33  |            |
-
-                                   Page 24
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | i_P0_SP5R_R_4       | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1602,6 +1644,16 @@ IO (PIO) Attributes (cont)
 | o_P0_DIMM_GL_PCAMP_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_PD_SATA1_CONTROLLER0_R| OUTPUT    | LVCMOS33  |            |
+
+                                   Page 25
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | i_SATA1_BACKPLANE_TYPE| INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1644,16 +1696,6 @@ IO (PIO) Attributes (cont)
 | o_P0_MCIOP0C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_P0_MCIOP0C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
-
-                                   Page 25
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | io_P0_MCIOP0C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1668,6 +1710,16 @@ IO (PIO) Attributes (cont)
 | i_P0_MCIOP0A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | i_P0_MCIOP0A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
+
+                                   Page 26
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | i_P0_MCIOP0A_DATAIN_R| INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1710,16 +1762,6 @@ IO (PIO) Attributes (cont)
 | o_CPLD_ESPI_D3      | OUTPUT    | LVCMOS18  |            |
 +---------------------+-----------+-----------+------------+
 | o_CPLD_ESPI_D2      | OUTPUT    | LVCMOS18  |            |
-
-                                   Page 26
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | o_CPLD_ESPI_D1      | OUTPUT    | LVCMOS18  | OUT        |
 +---------------------+-----------+-----------+------------+
@@ -1734,6 +1776,16 @@ IO (PIO) Attributes (cont)
 | o_PAL_BMC_PERST_N_R | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_SS_PAL_LOAD_N_R   | OUTPUT    | LVCMOS33  |            |
+
+                                   Page 27
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | i_SS_PAL_DATA_IN_R  | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1763,29 +1815,19 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | o_PVT_SS_CLK_R      | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| o_CLK_DB800_3_2_OE_N_R| OUTPUT    | LVCMOS33  |            |
+| o_CLK_DB800_3_2_OE_N_R| OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| o_CLK_DB800_3_1_OE_N_R| OUTPUT    | LVCMOS33  |            |
+| o_CLK_DB800_3_1_OE_N_R| OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
 | o_FM_PLD_DB800_3_CLKS_DEV_EN_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| o_CLK_DB2000_1_2_OE_N| OUTPUT    | LVCMOS33  |            |
+| o_CLK_DB2000_1_2_OE_N| OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| o_CLK_DB2000_1_1_OE_N| OUTPUT    | LVCMOS33  |            |
+| o_CLK_DB2000_1_1_OE_N| OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
 | o_PAL_DB2000_2_PWRGD_R| OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_PAL_DB2000_1_PWRGD_R| OUTPUT    | LVCMOS33  |            |
-
-                                   Page 27
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | i_CLK_GEN_ALERT_R_N | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -1800,6 +1842,16 @@ IO (PIO) Attributes (cont)
 | o_PAL_DUAL_EN_R     | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | o_PAL_PS_OFF_R      | OUTPUT    | LVCMOS33  |            |
+
+                                   Page 28
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | i_PS1_ACFAIL_N      | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
@@ -1823,8 +1875,6 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | i_PAL_PWR_BTN_N     | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| i_CPLD_SN           | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
 | i_PAL_PEOGRAM_N     | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | i_CPLD2_JTAGEN_R    | INPUT     | LVCMOS33  |            |
@@ -1839,20 +1889,7 @@ IO (PIO) Attributes (cont)
 Removed logic
 -------------
 
-Block pll_inst/VCC undriven or does not drive anything - clipped.
 Block pon_reset_inst/GND undriven or does not drive anything - clipped.
-Block mClkDivTree/GND undriven or does not drive anything - clipped.
-
-                                   Page 28
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
-Block mClkDivTree/VCC undriven or does not drive anything - clipped.
 Block mClkDivTree/m1uSCE/GND undriven or does not drive anything - clipped.
 Block mClkDivTree/m1uSCE/VCC undriven or does not drive anything - clipped.
 Block mClkDivTree/m10uSCE/VCC undriven or does not drive anything - clipped.
@@ -1869,9 +1906,18 @@ Block db_inst_pwr_btn/GND undriven or does not drive anything - clipped.
 Block db_inst_pwr_btn/VCC undriven or does not drive anything - clipped.
 Block db_vr_ocp_low/GND undriven or does not drive anything - clipped.
 Block db_vr_ocp_low/VCC undriven or does not drive anything - clipped.
-Block db_inst_psu/GND undriven or does not drive anything - clipped.
 Block db_inst_psu/VCC undriven or does not drive anything - clipped.
-Block sync_cpu_data_low/GND undriven or does not drive anything - clipped.
+Block db_inst_psu/GND undriven or does not drive anything - clipped.
+
+                                   Page 29
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
 Block sync_cpu_data_low/VCC undriven or does not drive anything - clipped.
 Block db_cpu_thermtrip/VCC undriven or does not drive anything - clipped.
 Block db_cpu_thermtrip/GND undriven or does not drive anything - clipped.
@@ -1880,18 +1926,18 @@ Block db_inst_pwrgood/VCC undriven or does not drive anything - clipped.
 Block db_inst_amd_cpu_prsnt/VCC undriven or does not drive anything - clipped.
 Block db_p12v_droop/GND undriven or does not drive anything - clipped.
 Block db_p12v_droop/VCC undriven or does not drive anything - clipped.
-Block Edge_Detect_U1/GND undriven or does not drive anything - clipped.
 Block Edge_Detect_U1/VCC undriven or does not drive anything - clipped.
 Block pvt_gpi_MB_inst/VCC undriven or does not drive anything - clipped.
 Block inst_mcpld_to_scpld_p2s/VCC undriven or does not drive anything - clipped.
      
 Block inst_mcpld_to_cmucpld_p2s/VCC undriven or does not drive anything -
      clipped.
-Block Pwr_But_Ctrl_U0/GND undriven or does not drive anything - clipped.
-Block Pwr_But_Ctrl_U0/VCC undriven or does not drive anything - clipped.
-Block Pwr_But_Ctrl_U0/PwrBtn_Filter/GND undriven or does not drive anything -
-     clipped.
 Block Pwr_But_Ctrl_U0/PwrBtn_Filter/VCC undriven or does not drive anything -
+     clipped.
+Block bmc_ctl_pwrbtn_u0/VCC undriven or does not drive anything - clipped.
+Block bmc_ctl_pwrbtn_u0/Edge_Detect_u0/GND undriven or does not drive anything -
+     clipped.
+Block bmc_ctl_pwrbtn_u0/Edge_Detect_u0/VCC undriven or does not drive anything -
      clipped.
 Block system_rst_u0/VCC undriven or does not drive anything - clipped.
 Block system_rst_u0/lowpass_filter_U0/GND undriven or does not drive anything -
@@ -1900,128 +1946,85 @@ Block system_rst_u0/lowpass_filter_U0/VCC undriven or does not drive anything -
      clipped.
 Block Edge_Detect_U2/GND undriven or does not drive anything - clipped.
 Block Edge_Detect_U2/VCC undriven or does not drive anything - clipped.
-Block edge_delay_inst_cpupwrok/GND undriven or does not drive anything -
-     clipped.
 Block edge_delay_inst_cpupwrok/VCC undriven or does not drive anything -
      clipped.
-Block thermtrip_int/GND undriven or does not drive anything - clipped.
-Block thermtrip_int/VCC undriven or does not drive anything - clipped.
 Block thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[0].inst_cpu_thermtrip_fault_det
      /GND undriven or does not drive anything - clipped.
-
-                                   Page 29
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
 Block thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[0].inst_cpu_thermtrip_fault_det
      /VCC undriven or does not drive anything - clipped.
-Block thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[1].inst_cpu_thermtrip_fault_det
-     /GND undriven or does not drive anything - clipped.
 Block thermtrip_int/_CPU_THERMTRIP_DETECT_BLOCK_[1].inst_cpu_thermtrip_fault_det
      /VCC undriven or does not drive anything - clipped.
 Block Signal_Latch_THERMTRIP0/GND undriven or does not drive anything - clipped.
      
 Block Signal_Latch_THERMTRIP0/VCC undriven or does not drive anything - clipped.
      
-Block Signal_Latch_THERMTRIP0/Edge_Detect_0/GND undriven or does not drive
-     anything - clipped.
 Block Signal_Latch_THERMTRIP0/Edge_Detect_0/VCC undriven or does not drive
      anything - clipped.
 Block Signal_Latch_THERMTRIP1/GND undriven or does not drive anything - clipped.
      
 Block Signal_Latch_THERMTRIP1/VCC undriven or does not drive anything - clipped.
      
-Block Signal_Latch_THERMTRIP1/Edge_Detect_0/GND undriven or does not drive
-     anything - clipped.
 Block Signal_Latch_THERMTRIP1/Edge_Detect_0/VCC undriven or does not drive
      anything - clipped.
-Block cpu_module_u1/GND undriven or does not drive anything - clipped.
 Block cpu_module_u1/VCC undriven or does not drive anything - clipped.
-Block pwrseq_master_inst/Edge_Detect_U1/GND undriven or does not drive anything
-     - clipped.
 Block pwrseq_master_inst/Edge_Detect_U1/VCC undriven or does not drive anything
-     - clipped.
-Block pwrseq_master_inst/Edge_Detect_U2/GND undriven or does not drive anything
      - clipped.
 Block pwrseq_master_inst/Edge_Detect_U2/VCC undriven or does not drive anything
      - clipped.
-Block pwrseq_master_inst/sb_pch_slp4_delay_inst/GND undriven or does not drive
-     anything - clipped.
 Block pwrseq_master_inst/sb_pch_slp4_delay_inst/VCC undriven or does not drive
      anything - clipped.
 Block pwrseq_slave_inst/GND undriven or does not drive anything - clipped.
-Block pwrseq_slave_inst/p5v_stby_en_check_inst/GND undriven or does not drive
-     anything - clipped.
-Block pwrseq_slave_inst/p5v_stby_en_check_inst/VCC undriven or does not drive
-     anything - clipped.
-Block pwrseq_slave_inst/p5v_stby_fault_detect_inst/GND undriven or does not
-     drive anything - clipped.
-Block pwrseq_slave_inst/p5v_stby_fault_detect_inst/VCC undriven or does not
-     drive anything - clipped.
-Block pwrseq_slave_inst/p5v_en_check_inst/GND undriven or does not drive
-     anything - clipped.
-Block pwrseq_slave_inst/p5v_en_check_inst/VCC undriven or does not drive
-     anything - clipped.
-Block pwrseq_slave_inst/p5v_fault_detect_inst/GND undriven or does not drive
-     anything - clipped.
-Block pwrseq_slave_inst/p5v_fault_detect_inst/VCC undriven or does not drive
-     anything - clipped.
-Block pwrseq_slave_inst/grp_b_p0_18_s5_en_check_inst/GND undriven or does not
-     drive anything - clipped.
-Block pwrseq_slave_inst/grp_b_p0_18_s5_en_check_inst/VCC undriven or does not
 
                                    Page 30
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Removed logic (cont)
 --------------------
+Block pwrseq_slave_inst/p5v_stby_en_check_inst/VCC undriven or does not drive
+     anything - clipped.
+Block pwrseq_slave_inst/p5v_stby_fault_detect_inst/GND undriven or does not
+     drive anything - clipped.
+Block pwrseq_slave_inst/p5v_stby_fault_detect_inst/VCC undriven or does not
+     drive anything - clipped.
+Block pwrseq_slave_inst/p5v_en_check_inst/VCC undriven or does not drive
+     anything - clipped.
+Block pwrseq_slave_inst/p5v_fault_detect_inst/GND undriven or does not drive
+     anything - clipped.
+Block pwrseq_slave_inst/p5v_fault_detect_inst/VCC undriven or does not drive
+     anything - clipped.
+Block pwrseq_slave_inst/grp_b_p0_18_s5_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p0_18_s5_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p0_18_s5_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_b_p1_18_s5_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p1_18_s5_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p1_18_s5_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p1_18_s5_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_b_p0_33_s5_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p0_33_s5_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p0_33_s5_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p0_33_s5_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_b_p1_33_s5_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p1_33_s5_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p1_33_s5_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_b_p1_33_s5_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_c_p0_vdd11_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_c_p0_vdd11_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_c_p0_fault_detect_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_c_p0_fault_detect_inst/VCC undriven or does not
-     drive anything - clipped.
-Block pwrseq_slave_inst/grp_c_p1_vdd11_en_check_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_c_p1_vdd11_en_check_inst/VCC undriven or does not
      drive anything - clipped.
@@ -2029,41 +2032,33 @@ Block pwrseq_slave_inst/grp_c_p1_fault_detect_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_c_p1_fault_detect_inst/VCC undriven or does not
      drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p0_vddio_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddio_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_vddio_p0_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_vddio_p0_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p1_vddio_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_vddio_en_check_inst/VCC undriven or does not
+     drive anything - clipped.
 
                                    Page 31
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Removed logic (cont)
 --------------------
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_vddio_p1_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_vddio_p1_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p0_soc_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_soc_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_soc_p0_fault_detect_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_soc_p0_fault_detect_inst/VCC undriven or does not
-     drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p1_soc_en_check_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_soc_en_check_inst/VCC undriven or does not
      drive anything - clipped.
@@ -2071,32 +2066,24 @@ Block pwrseq_slave_inst/grp_d_soc_p1_fault_detect_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_soc_p1_fault_detect_inst/VCC undriven or does not
      drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p0_vddcore0_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddcore0_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddcore0_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddcore0_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p1_vddcore0_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_vddcore0_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_vddcore0_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_vddcore0_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p0_vddcore1_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddcore1_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddcore1_fault_detect_inst/GND undriven or does
      not drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p0_vddcore1_fault_detect_inst/VCC undriven or does
      not drive anything - clipped.
-Block pwrseq_slave_inst/grp_d_p1_vddcore1_en_check_inst/GND undriven or does not
-     drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_vddcore1_en_check_inst/VCC undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/grp_d_p1_vddcore1_fault_detect_inst/GND undriven or does
@@ -2106,23 +2093,11 @@ Block pwrseq_slave_inst/grp_d_p1_vddcore1_fault_detect_inst/VCC undriven or does
 Block pwrseq_slave_inst/p3v3_stby_en_check_inst/GND undriven or does not drive
      anything - clipped.
 Block pwrseq_slave_inst/p3v3_stby_en_check_inst/VCC undriven or does not drive
-
-                                   Page 32
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Block pwrseq_slave_inst/p3v3_stby_fault_detect_inst/GND undriven or does not
      drive anything - clipped.
 Block pwrseq_slave_inst/p3v3_stby_fault_detect_inst/VCC undriven or does not
      drive anything - clipped.
-Block p1v0_stby_m2_check_inst/GND undriven or does not drive anything - clipped.
-     
 Block p1v0_stby_m2_check_inst/VCC undriven or does not drive anything - clipped.
      
 Block p1v0_stby_m2_fault_detect_inst/GND undriven or does not drive anything -
@@ -2131,99 +2106,59 @@ Block p1v0_stby_m2_fault_detect_inst/VCC undriven or does not drive anything -
      clipped.
 Block error_code_int/GND undriven or does not drive anything - clipped.
 Block error_code_int/VCC undriven or does not drive anything - clipped.
-Block uart_master_u1/VCC undriven or does not drive anything - clipped.
-Block uart_master_u2/VCC undriven or does not drive anything - clipped.
-Block pch_cpld_espi_ram_u1/GND undriven or does not drive anything - clipped.
-Block pch_cpld_espi_ram_u1/VCC undriven or does not drive anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_ge3_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_ge3_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe0_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe0_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe1_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe1_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe2_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe2_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe3_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu0_pe3_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_ge1_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_ge1_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe0_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe0_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe1_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe1_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe2_alloc/GND undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe2_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block pch_cpld_espi_ram_u1/cpu1_pe3_alloc/GND undriven or does not drive
 
-                                   Page 33
+                                   Page 32
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Removed logic (cont)
 --------------------
+Block uart_master_u1/VCC undriven or does not drive anything - clipped.
+Block uart_master_u2/VCC undriven or does not drive anything - clipped.
+Block pch_cpld_espi_ram_u1/VCC undriven or does not drive anything - clipped.
+Block pch_cpld_espi_ram_u1/GND undriven or does not drive anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu0_ge3_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu0_pe0_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu0_pe1_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu0_pe2_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu0_pe3_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu1_ge1_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu1_pe0_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu1_pe1_alloc/VCC undriven or does not drive
+     anything - clipped.
+Block pch_cpld_espi_ram_u1/cpu1_pe2_alloc/VCC undriven or does not drive
      anything - clipped.
 Block pch_cpld_espi_ram_u1/cpu1_pe3_alloc/VCC undriven or does not drive
      anything - clipped.
 Block bios_cpld_i2c_ram_u0/VCC undriven or does not drive anything - clipped.
 Block bios_cpld_i2c_ram_u0/GND undriven or does not drive anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu0_ge3_alloc/GND undriven or does not drive
-     anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu0_ge3_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu0_pe0_alloc/GND undriven or does not drive
      anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu0_pe0_alloc/VCC undriven or does not drive
      anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu0_pe1_alloc/GND undriven or does not drive
-     anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu0_pe1_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu0_pe2_alloc/GND undriven or does not drive
      anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu0_pe2_alloc/VCC undriven or does not drive
      anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu0_pe3_alloc/GND undriven or does not drive
-     anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu0_pe3_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu1_ge1_alloc/GND undriven or does not drive
      anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu1_ge1_alloc/VCC undriven or does not drive
      anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu1_pe0_alloc/GND undriven or does not drive
-     anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu1_pe0_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu1_pe1_alloc/GND undriven or does not drive
      anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu1_pe1_alloc/VCC undriven or does not drive
      anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu1_pe2_alloc/GND undriven or does not drive
-     anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu1_pe2_alloc/VCC undriven or does not drive
-     anything - clipped.
-Block bios_cpld_i2c_ram_u0/cpu1_pe3_alloc/GND undriven or does not drive
      anything - clipped.
 Block bios_cpld_i2c_ram_u0/cpu1_pe3_alloc/VCC undriven or does not drive
      anything - clipped.
@@ -2237,26 +2172,22 @@ Block edge_delay_slot_1_on_dly_10ms/VCC undriven or does not drive anything -
      clipped.
 Block edge_delay_slot_2_on_dly_10ms/VCC undriven or does not drive anything -
      clipped.
-Block clear_cmos_int/GND undriven or does not drive anything - clipped.
 
-                                   Page 34
-
+                                   Page 33
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Removed logic (cont)
 --------------------
+Block clear_cmos_int/GND undriven or does not drive anything - clipped.
 Block clear_cmos_int/VCC undriven or does not drive anything - clipped.
-Block clear_cmos_int/clr_cmos_delay_inst/GND undriven or does not drive anything
-     - clipped.
 Block clear_cmos_int/clr_cmos_delay_inst/VCC undriven or does not drive anything
      - clipped.
 Block nmi_ctl_int/GND undriven or does not drive anything - clipped.
 Block nmi_ctl_int/VCC undriven or does not drive anything - clipped.
-Block nmi_ctl_int/clr_nmi_delay_inst/GND undriven or does not drive anything -
-     clipped.
 Block nmi_ctl_int/clr_nmi_delay_inst/VCC undriven or does not drive anything -
      clipped.
 Block edge_delay_dc_pwr_on_2s/GND undriven or does not drive anything - clipped.
@@ -2271,13 +2202,10 @@ Block pvt_gpi_4u_gpu_sw2_inst_u2/VCC undriven or does not drive anything -
      clipped.
 Block pvt_gpi_4u_gpu_sw2_inst_u2/GND undriven or does not drive anything -
      clipped.
-Block bmc_cpld_i2c_ram_u0/GND undriven or does not drive anything - clipped.
 Block bmc_cpld_i2c_ram_u0/VCC undriven or does not drive anything - clipped.
-Block bmc_ctl_pwrbtn_u0/VCC undriven or does not drive anything - clipped.
-Block bmc_ctl_pwrbtn_u0/Edge_Detect_u0/GND undriven or does not drive anything -
-     clipped.
-Block bmc_ctl_pwrbtn_u0/Edge_Detect_u0/VCC undriven or does not drive anything -
-     clipped.
+Block bmc_cpld_i2c_ram_u0/GND undriven or does not drive anything - clipped.
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/VCC undriven or does not drive
+     anything - clipped.
 Signal i_CPLD_ESPI_RESET_N_c_i was merged into signal i_CPLD_ESPI_RESET_N_c
 Signal pon_reset_n_i was merged into signal pon_reset_n
 Signal o_P0_RSMRST_N_c_i was merged into signal o_P0_RSMRST_N_c
@@ -2304,25 +2232,26 @@ Signal inst_i2c_update_flash_config/VCC undriven or does not drive anything -
 Signal inst_i2c_update_flash_config/GND undriven or does not drive anything -
      clipped.
 Signal db_inst_amd_cpu_prsnt/GND undriven or does not drive anything - clipped.
-
-                                   Page 35
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
 Signal pvt_gpi_MB_inst/GND undriven or does not drive anything - clipped.
 Signal inst_scpld_to_mcpld_s2p/GND undriven or does not drive anything -
      clipped.
 Signal inst_mcpld_to_scpld_p2s/GND undriven or does not drive anything -
      clipped.
 Signal inst_cmucpld_to_mcpld_s2p/GND undriven or does not drive anything -
+
+                                   Page 34
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
      clipped.
 Signal inst_mcpld_to_cmucpld_p2s/GND undriven or does not drive anything -
      clipped.
+Signal bmc_ctl_pwrbtn_u0/GND undriven or does not drive anything - clipped.
 Signal system_rst_u0/GND undriven or does not drive anything - clipped.
 Signal pwrseq_master_inst/GND undriven or does not drive anything - clipped.
 Signal uart_master_u1/GND undriven or does not drive anything - clipped.
@@ -2347,7 +2276,6 @@ Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/GND undriven or does not drive
      anything - clipped.
 Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND undriven or
      does not drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/GND undriven or does not drive anything - clipped.
 Signal pll_inst/CLKINTFB undriven or does not drive anything - clipped.
 Signal pll_inst/DPHSRC undriven or does not drive anything - clipped.
 Signal pll_inst/PLLACK undriven or does not drive anything - clipped.
@@ -2370,22 +2298,22 @@ Signal timer_gen_inst/usec_tmr_cry_0_S0[0] undriven or does not drive anything -
 Signal timer_gen_inst/N_22 undriven or does not drive anything - clipped.
 Signal timer_gen_inst/usec_tmr_cry_0_COUT[3] undriven or does not drive anything
      - clipped.
-
-                                   Page 36
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
 Signal timer_gen_inst/sec_tmr_cry_0_S0[0] undriven or does not drive anything -
      clipped.
-Signal timer_gen_inst/N_6 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/N_21 undriven or does not drive anything - clipped.
 Signal inst_i2c_update_flash_config/CFGSTDBY undriven or does not drive anything
      - clipped.
 Signal inst_i2c_update_flash_config/CFGWAKE undriven or does not drive anything
+
+                                   Page 35
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
      - clipped.
 Signal inst_i2c_update_flash_config/wbc_ufm_irq undriven or does not drive
      anything - clipped.
@@ -2436,22 +2364,22 @@ Signal inst_i2c_update_flash_config/I2C2SDAO undriven or does not drive anything
 Signal inst_i2c_update_flash_config/I2C2SCLOEN undriven or does not drive
      anything - clipped.
 Signal inst_i2c_update_flash_config/I2C2SCLO undriven or does not drive anything
-
-                                   Page 37
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
      - clipped.
 Signal inst_i2c_update_flash_config/PLLDATO0_0 undriven or does not drive
      anything - clipped.
 Signal inst_i2c_update_flash_config/PLLDATO1_0 undriven or does not drive
      anything - clipped.
 Signal inst_i2c_update_flash_config/PLLDATO2_0 undriven or does not drive
+
+                                   Page 36
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
      anything - clipped.
 Signal inst_i2c_update_flash_config/PLLDATO3_0 undriven or does not drive
      anything - clipped.
@@ -2502,29 +2430,29 @@ Signal inst_i2c_update_flash_config/wb_dat_o_1[6] undriven or does not drive
 Signal inst_i2c_update_flash_config/wb_dat_o_1[7] undriven or does not drive
      anything - clipped.
 Signal pvt_gpi_MB_inst/bit_idx_out_1_cry_0_S0[0] undriven or does not drive
-
-                                   Page 38
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Signal pvt_gpi_MB_inst/N_1 undriven or does not drive anything - clipped.
 Signal pvt_gpi_MB_inst/bit_idx_out_1_s_0_S1[5] undriven or does not drive
      anything - clipped.
 Signal pvt_gpi_MB_inst/bit_idx_out_1_s_0_COUT[5] undriven or does not drive
      anything - clipped.
-Signal inst_scpld_to_mcpld_s2p/un3_cnt_cry_0_0_S1 undriven or does not drive
+
+                                   Page 37
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
+Signal inst_scpld_to_mcpld_s2p/un5_cnt_cry_0_0_S1 undriven or does not drive
      anything - clipped.
-Signal inst_scpld_to_mcpld_s2p/un3_cnt_cry_0_0_S0 undriven or does not drive
+Signal inst_scpld_to_mcpld_s2p/un5_cnt_cry_0_0_S0 undriven or does not drive
      anything - clipped.
 Signal inst_scpld_to_mcpld_s2p/N_58 undriven or does not drive anything -
      clipped.
-Signal inst_scpld_to_mcpld_s2p/un3_cnt_cry_7_0_COUT undriven or does not drive
+Signal inst_scpld_to_mcpld_s2p/un5_cnt_cry_7_0_COUT undriven or does not drive
      anything - clipped.
 Signal inst_mcpld_to_scpld_p2s/cnt_cry_0_S0[0] undriven or does not drive
      anything - clipped.
@@ -2534,15 +2462,15 @@ Signal inst_mcpld_to_scpld_p2s/cnt_s_0_S1[7] undriven or does not drive anything
      - clipped.
 Signal inst_mcpld_to_scpld_p2s/cnt_s_0_COUT[7] undriven or does not drive
      anything - clipped.
-Signal inst_cmucpld_to_mcpld_s2p/un19_cnt_cry_0_0_S1 undriven or does not drive
+Signal inst_cmucpld_to_mcpld_s2p/un23_cnt_cry_0_0_S1 undriven or does not drive
      anything - clipped.
-Signal inst_cmucpld_to_mcpld_s2p/un19_cnt_cry_0_0_S0 undriven or does not drive
+Signal inst_cmucpld_to_mcpld_s2p/un23_cnt_cry_0_0_S0 undriven or does not drive
      anything - clipped.
 Signal inst_cmucpld_to_mcpld_s2p/N_173 undriven or does not drive anything -
      clipped.
-Signal inst_cmucpld_to_mcpld_s2p/un19_cnt_s_7_0_S1 undriven or does not drive
+Signal inst_cmucpld_to_mcpld_s2p/un23_cnt_s_7_0_S1 undriven or does not drive
      anything - clipped.
-Signal inst_cmucpld_to_mcpld_s2p/un19_cnt_s_7_0_COUT undriven or does not drive
+Signal inst_cmucpld_to_mcpld_s2p/un23_cnt_s_7_0_COUT undriven or does not drive
      anything - clipped.
 Signal inst_mcpld_to_cmucpld_p2s/cnt_cry_0_S0_0[0] undriven or does not drive
      anything - clipped.
@@ -2550,6 +2478,42 @@ Signal inst_mcpld_to_cmucpld_p2s/N_1 undriven or does not drive anything -
      clipped.
 Signal inst_mcpld_to_cmucpld_p2s/cnt_cry_0_COUT[5] undriven or does not drive
      anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/N_1 undriven or does not drive anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_S1[5] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_COUT[5] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_cry_0_S0[0] undriven or does not
+     drive anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/N_2 undriven or does not drive anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_S1[5] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_COUT[5] undriven or does not
+     drive anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/N_3 undriven or does not drive anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_S1[9] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_COUT[9] undriven or does not drive
+     anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_S0[0] undriven or does not
+     drive anything - clipped.
+Signal bmc_ctl_pwrbtn_u0/N_4 undriven or does not drive anything - clipped.
+
+                                   Page 38
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
+Signal bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_COUT[7] undriven or does not
+     drive anything - clipped.
 Signal system_rst_u0/r_bmc_ctl_sys_rst_cnt_cry_0_S0[0] undriven or does not
      drive anything - clipped.
 Signal system_rst_u0/N_1 undriven or does not drive anything - clipped.
@@ -2568,16 +2532,6 @@ Signal uart_master_u1/bps_count_bit_cry_0_S0[0] undriven or does not drive
      anything - clipped.
 Signal uart_master_u1/N_1 undriven or does not drive anything - clipped.
 Signal uart_master_u1/bps_count_bit_s_0_S1[5] undriven or does not drive
-
-                                   Page 39
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
      anything - clipped.
 Signal uart_master_u1/bps_count_bit_s_0_COUT[5] undriven or does not drive
      anything - clipped.
@@ -2598,52 +2552,53 @@ Signal uart_master_u2/data_count_cry_0_S0_0[0] undriven or does not drive
 Signal uart_master_u2/N_2 undriven or does not drive anything - clipped.
 Signal uart_master_u2/data_count_cry_0_COUT_0[3] undriven or does not drive
      anything - clipped.
-Signal bios_espi_link/oob_data_trans_en8_a_4_cry_0_0_S1 undriven or does not
+Signal bios_espi_link/oob_data_trans_en5_a_4_cry_0_0_S1 undriven or does not
      drive anything - clipped.
-Signal bios_espi_link/oob_data_trans_en8_a_4_cry_0_0_S0 undriven or does not
+Signal bios_espi_link/oob_data_trans_en5_a_4_cry_0_0_S0 undriven or does not
      drive anything - clipped.
-Signal bios_espi_link/N_94 undriven or does not drive anything - clipped.
-Signal bios_espi_link/oob_data_trans_en8_a_4_cry_7_0_COUT undriven or does not
+Signal bios_espi_link/N_90 undriven or does not drive anything - clipped.
+Signal bios_espi_link/oob_data_trans_en5_a_4_cry_7_0_COUT undriven or does not
      drive anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_1_0_S1 undriven or does not drive
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_1_0_S1 undriven or does not drive
      anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_1_0_S0 undriven or does not drive
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_1_0_S0 undriven or does not drive
      anything - clipped.
-Signal bios_espi_link/N_95 undriven or does not drive anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_9_0_S1 undriven or does not drive
+Signal bios_espi_link/N_91 undriven or does not drive anything - clipped.
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_9_0_S1 undriven or does not drive
      anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_9_0_S0 undriven or does not drive
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_9_0_S0 undriven or does not drive
      anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_21_0_S1 undriven or does not drive
-     anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_21_0_S0 undriven or does not drive
-     anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_27_0_S1 undriven or does not drive
-     anything - clipped.
-Signal bios_espi_link/vwire_rd_trans_en8_0_I_27_0_COUT undriven or does not
-     drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_cry_0_0_
-     S0 undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_1 undriven or does not drive
-     anything - clipped.
-Signal
-     bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_s_13_0_S1
-     undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_s_13_0_C
-     OUT undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0]
-     undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_2 undriven or does not drive
 
-                                   Page 40
+                                   Page 39
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Removed logic (cont)
 --------------------
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_21_0_S1 undriven or does not drive
+     anything - clipped.
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_21_0_S0 undriven or does not drive
+     anything - clipped.
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_27_0_S1 undriven or does not drive
+     anything - clipped.
+Signal bios_espi_link/vwire_rd_trans_en5_0_I_27_0_COUT undriven or does not
+     drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3 undriven or does not drive
+     anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_s_15_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_s_15_0_COUT undriven or
+     does not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0]
+     undriven or does not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4 undriven or does not drive
      anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15] undriven
      or does not drive anything - clipped.
@@ -2651,27 +2606,44 @@ Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15]
      undriven or does not drive anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0]
      undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3 undriven or does not drive
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_5 undriven or does not drive
      anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15]
      undriven or does not drive anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15]
      undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_cry_0_0_S1
-     undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_cry_0_0_S0
-     undriven or does not drive anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4 undriven or does not drive
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S0 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_6 undriven or does not drive
      anything - clipped.
-Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_s_15_0_S1
-     undriven or does not drive anything - clipped.
-Signal
-     bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_s_15_0_COUT
-     undriven or does not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_4_cry_14_0_COUT undriven or
+     does not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_7 undriven or does not drive
+     anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_s_15_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_s_15_0_COUT undriven or does
+     not drive anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_c
      ry_0_S0[0] undriven or does not drive anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21 undriven
      or does not drive anything - clipped.
+
+                                   Page 40
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s
      _0_S1[5] undriven or does not drive anything - clipped.
 Signal bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s
@@ -2700,16 +2672,6 @@ Signal edge_delay_slot_2_on_dly_10ms/timer_cnt_s_0_S1_1[5] undriven or does not
      drive anything - clipped.
 Signal edge_delay_slot_2_on_dly_10ms/timer_cnt_s_0_COUT_1[5] undriven or does
      not drive anything - clipped.
-
-                                   Page 41
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
 Signal pvt_gpi_4u_gpu_zt_inst/bit_idx_out_cry_0_S0[0] undriven or does not drive
      anything - clipped.
 Signal pvt_gpi_4u_gpu_zt_inst/N_48 undriven or does not drive anything -
@@ -2718,18 +2680,18 @@ Signal pvt_gpi_4u_gpu_zt_inst/bit_idx_out_s_0_S1[5] undriven or does not drive
      anything - clipped.
 Signal pvt_gpi_4u_gpu_zt_inst/bit_idx_out_s_0_COUT[5] undriven or does not drive
      anything - clipped.
-Signal s2p_164_u1/r_data_chg_flag6_0_I_1_0_S1 undriven or does not drive
+Signal s2p_164_u1/r_data_chg_flag5_0_I_1_0_S1 undriven or does not drive
      anything - clipped.
-Signal s2p_164_u1/r_data_chg_flag6_0_I_1_0_S0 undriven or does not drive
+Signal s2p_164_u1/r_data_chg_flag5_0_I_1_0_S0 undriven or does not drive
      anything - clipped.
 Signal s2p_164_u1/N_1 undriven or does not drive anything - clipped.
-Signal s2p_164_u1/r_data_chg_flag6_0_I_9_0_S1 undriven or does not drive
+Signal s2p_164_u1/r_data_chg_flag5_0_I_9_0_S1 undriven or does not drive
      anything - clipped.
-Signal s2p_164_u1/r_data_chg_flag6_0_I_9_0_S0 undriven or does not drive
+Signal s2p_164_u1/r_data_chg_flag5_0_I_9_0_S0 undriven or does not drive
      anything - clipped.
-Signal s2p_164_u1/r_data_chg_flag6_0_I_21_0_S0 undriven or does not drive
+Signal s2p_164_u1/r_data_chg_flag5_0_I_21_0_S0 undriven or does not drive
      anything - clipped.
-Signal s2p_164_u1/r_data_chg_flag6_0_I_21_0_COUT undriven or does not drive
+Signal s2p_164_u1/r_data_chg_flag5_0_I_21_0_COUT undriven or does not drive
      anything - clipped.
 Signal pvt_gpi_4u_gpu_zt2_inst/bit_idx_out_cry_0_S0_0[0] undriven or does not
      drive anything - clipped.
@@ -2738,20 +2700,28 @@ Signal pvt_gpi_4u_gpu_zt2_inst/N_48 undriven or does not drive anything -
 Signal pvt_gpi_4u_gpu_zt2_inst/bit_idx_out_s_0_S1_0[5] undriven or does not
      drive anything - clipped.
 Signal pvt_gpi_4u_gpu_zt2_inst/bit_idx_out_s_0_COUT_0[5] undriven or does not
+
+                                   Page 41
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+Removed logic (cont)
+--------------------
      drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0
-     _S1 undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0
-     _S0 undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_8 undriven or does not drive
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_1 undriven or does not drive
      anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_
-     S1 undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_
-     COUT undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_s_13_0_S1 undriven or does not
+     drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_s_13_0_COUT undriven or does
+     not drive anything - clipped.
 Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0_0[0]
      undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_9 undriven or does not drive
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_2 undriven or does not drive
      anything - clipped.
 Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1_0[15]
      undriven or does not drive anything - clipped.
@@ -2759,100 +2729,54 @@ Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT_0[15]
      undriven or does not drive anything - clipped.
 Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0_0[0]
      undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_10 undriven or does not drive
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3 undriven or does not drive
      anything - clipped.
 Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1_0[15]
      undriven or does not drive anything - clipped.
 Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT_0[15]
      undriven or does not drive anything - clipped.
-Signal
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_cry_0_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_cry_0_0_S0 undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4 undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_s_15_0_S1 undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_s_15_0_COUT undriven or does
+     not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cr
+     y_0_S0_0[0] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21 undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_
+     0_S1_0[5] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_
+     0_COUT_0[5] undriven or does not drive anything - clipped.
+Signal inst_osch_SEDSTDBY undriven or does not drive anything - clipped.
+Block i_CPLD_ESPI_RESET_N_pad_RNIUGV9 was optimized away.
+Block pon_reset_inst/reset1_reg_RNILMDB[2] was optimized away.
+Block pwrseq_slave_inst/reg_rsmrst_l_RNIQ67E was optimized away.
+Block bios_espi_link/io_data_out_10_.CN was optimized away.
+Block bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_R
+     NISNI5 was optimized away.
+Block bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIEP46
+     was optimized away.
+Block s2p_164_u1/o_sclk.CN was optimized away.
+Block s2p_164_u1/data_out_cnt_RNI2JOC[3] was optimized away.
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_RN
+     I1IS6 was optimized away.
 
                                    Page 42
 
 
 
 
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 Removed logic (cont)
 --------------------
-     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S1
-     undriven or does not drive anything - clipped.
-Signal
-     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S0
-     undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_11 undriven or does not drive
-     anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_14_0_
-     COUT undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S1
-     undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S0
-     undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_12 undriven or does not drive
-     anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_S1
-     undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_COUT
-     undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cr
-     y_0_S0_0[0] undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_28 undriven or
-     does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_
-     0_S1_0[5] undriven or does not drive anything - clipped.
-Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_
-     0_COUT_0[5] undriven or does not drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_cry_0_S0[0] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/N_1 undriven or does not drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_S1[5] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_COUT[5] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_cry_0_S0[0] undriven or does not
-     drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/N_2 undriven or does not drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_S1[5] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_COUT[5] undriven or does not
-     drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_cry_0_S0[0] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/N_3 undriven or does not drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_S1[9] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_COUT[9] undriven or does not drive
-     anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_S0[0] undriven or does not
-     drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/N_4 undriven or does not drive anything - clipped.
-Signal bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_COUT[7] undriven or does not
-     drive anything - clipped.
-Signal inst_osch_SEDSTDBY undriven or does not drive anything - clipped.
-Block i_CPLD_ESPI_RESET_N_pad_RNIUGVP2 was optimized away.
-Block pon_reset_inst/reset1_reg_RNILMDB6[2] was optimized away.
-
-                                   Page 43
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Removed logic (cont)
---------------------
-Block pwrseq_slave_inst/reg_rsmrst_l_RNIQ67E4 was optimized away.
-Block bios_espi_link/io_data_out_10_.CN was optimized away.
-Block bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_R
-     NISNIL5 was optimized away.
-Block bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIEP4M
-     1 was optimized away.
-Block s2p_164_u1/o_sclk.CN was optimized away.
-Block s2p_164_u1/data_out_cnt_RNI2JOS7[3] was optimized away.
-Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_RN
-     I1ISM5 was optimized away.
-Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIJLQ95
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIJLQ9
      was optimized away.
 Block pll_inst/GND was optimized away.
 Block timer_gen_inst/GND was optimized away.
@@ -2864,6 +2788,7 @@ Block inst_scpld_to_mcpld_s2p/GND was optimized away.
 Block inst_mcpld_to_scpld_p2s/GND was optimized away.
 Block inst_cmucpld_to_mcpld_s2p/GND was optimized away.
 Block inst_mcpld_to_cmucpld_p2s/GND was optimized away.
+Block bmc_ctl_pwrbtn_u0/GND was optimized away.
 Block system_rst_u0/GND was optimized away.
 Block pwrseq_master_inst/GND was optimized away.
 Block uart_master_u1/GND was optimized away.
@@ -2881,7 +2806,6 @@ Block pvt_gpi_4u_gpu_zt2_inst/GND was optimized away.
 Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/GND was optimized away.
 Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND was optimized
      away.
-Block bmc_ctl_pwrbtn_u0/GND was optimized away.
 
      
 
@@ -2898,16 +2822,6 @@ PLL 1:                                     Pin/Node Value
   Output Clock(S3):                                 NONE
   Feedback Signal:                         NODE     clk_50m
   Reset Signal:                            NODE
-
-                                   Page 44
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-PLL/DLL Summary (cont)
-----------------------
        pll_inst/i_PWRGD_P3V3_STBY_c_i
   M Divider Reset Signal:                           NONE
   C Divider Reset Signal:                           NONE
@@ -2918,6 +2832,16 @@ PLL/DLL Summary (cont)
   PLL Data bus Strobe Signal:                       NONE
   PLL Data bus Reset Signal:                        NONE
   PLL Data bus Write Enable Signal:                 NONE
+
+                                   Page 43
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
+
+PLL/DLL Summary (cont)
+----------------------
   PLL Data bus Address0:                            NONE
   PLL Data bus Address1:                            NONE
   PLL Data bus Address2:                            NONE
@@ -2964,16 +2888,6 @@ PLL/DLL Summary (cont)
   CLKOS Divider:                                    20
   CLKOS2 Divider:                                   1
   CLKOS3 Divider:                                   1
-
-                                   Page 45
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-PLL/DLL Summary (cont)
-----------------------
   Fractional N Divider:                             0
   CLKOP Desired Phase Shift(degree):                0
   CLKOP Trim Option Rising/Falling:                 RISING
@@ -2983,6 +2897,14 @@ PLL/DLL Summary (cont)
   CLKOS Trim Option Delay:                          0
   CLKOS2 Desired Phase Shift(degree):               0
   CLKOS3 Desired Phase Shift(degree):               0
+
+
+                                   Page 44
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 OSC Summary
 -----------
@@ -3030,16 +2952,6 @@ Embedded Functional Block Connection Summary
    UFM Function Summary:
    --------------------
       UFM Utilization:        General Purpose Flash Memory
-
-                                   Page 46
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-Embedded Functional Block Connection Summary (cont)
----------------------------------------------------
       Initialized UFM Pages:  1 Pages (1*128 Bits)
       Available General
       Purpose Flash Memory:   2046 Pages (2046*128 Bits)
@@ -3050,6 +2962,15 @@ Embedded Functional Block Connection Summary (cont)
            WID		EBR Instance
       ---		------------
 
+
+
+
+                                   Page 45
+
+
+
+
+Design:  BM_H13DSP_M                                   Date:  03/13/25  18:38:26
 
 ASIC Components
 ---------------
@@ -3096,16 +3017,6 @@ GSR Component:
    Register : pwrseq_master_inst/power_seq_sm[2]
    Register : pwrseq_master_inst/power_seq_sm[1]
    Register : pwrseq_master_inst/power_seq_sm[0]
-
-                                   Page 47
-
-
-
-
-Design:  BM_H13DSP_M                                   Date:  10/23/25  14:11:38
-
-GSR Usage (cont)
-----------------
    Register : pwrseq_master_inst/Edge_Detect_U1/r_signal_c
    Register : pwrseq_master_inst/Edge_Detect_U1/r_signal_d
    Register : pwrseq_master_inst/Edge_Detect_U2/r_signal_c
@@ -3115,60 +3026,17 @@ Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 5 secs  
-   Total REAL Time: 6 secs  
-   Peak Memory Usage: 101 MB
+   Total REAL Time: 8 secs  
+   Peak Memory Usage: 99 MB
         
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                   Page 48
+                                   Page 46
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
      Copyright (c) 1995 AT&T Corp.   All rights reserved.
      Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
      Copyright (c) 2001 Agere Systems   All rights reserved.
-     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
      reserved.

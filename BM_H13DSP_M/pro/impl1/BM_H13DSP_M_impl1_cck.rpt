@@ -1,18 +1,19 @@
 
-Copyright (C) 1994-2023 Synopsys, Inc.
+Copyright (C) 1994-2020 Synopsys, Inc.
 This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
 and may only be used pursuant to the terms and conditions of a written license agreement
 with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
 Synopsys software or the associated documentation is strictly prohibited.
 Tool: Synplify Pro (R)
-Build: V-2023.09L-2
-Install: C:\studyware\lattice_diamond_3_14\synpbase
-OS: Windows 10 or later
-Hostname: Z02665MJ
+Build: Q-2020.03L-SP1
+Install: D:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: RDHZW10V129
 
 Implementation : impl1
 
-# Written on Thu Oct 23 14:10:47 2025
+# Written on Thu Mar 13 18:37:03 2025
 
 ##### DESIGN INFO #######################################################
 
@@ -286,6 +287,7 @@ p:o_P0_MCIOP3A_LD_R
 p:o_P0_NMI_SYNC_FLOOD_N
 p:o_P0_PCIE_WAKE_N_R
 p:o_P0_PROCHOT_N
+p:o_P0_PWR_BTN_R_N
 p:o_P0_PWR_GOOD
 p:o_P0_RSMRST_N
 p:o_P0_SPI_CLK_STRAP

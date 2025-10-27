@@ -1,70 +1,78 @@
 Running in Lattice mode
 
-                               Synplify Pro (R) 
+Starting:    D:\lscc\diamond\3.12\synpbase\bin64\mbin\synbatch.exe
+Install:     D:\lscc\diamond\3.12\synpbase
+Hostname:    RDHZW10V129
+Date:        Thu Mar 13 17:54:55 2025
+Version:     Q-2020.03L-SP1
 
-                 Version V-2023.09L-2 for win64 - Sep 17, 2024 
-
-                    Copyright (c) 1988 - 2024 Synopsys, Inc.
-   This software and the associated documentation are proprietary to Synopsys,
- Inc. This software may only be used in accordance with the terms and conditions
- of a written license agreement with Synopsys, Inc. All other use, reproduction,
-   or distribution of this software is strictly prohibited.  Licensed Products
-     communicate with Synopsys servers for the purpose of providing software
-    updates, detecting software piracy and verifying that customers are using
-    Licensed Products in conformity with the applicable License Key for such
-  Licensed Products. Synopsys will use information gathered in connection with
-    this process to deliver software updates and pursue software pirates and
-                                   infringers.
-
- Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
-            Inclusivity and Diversity" (Refer to article 000036315 at
-                        https://solvnetplus.synopsys.com)
-
-Starting:    C:\studyware\lattice_diamond_3_14\synpbase\bin64\mbin\synbatch.exe
-Install:     C:\studyware\lattice_diamond_3_14\synpbase
-Hostname:    Z02665MJ
-Date:        Thu Oct 23 14:05:02 2025
-Version:     V-2023.09L-2
-
-Arguments:   -product synplify_base -batch BM_H13DSP_M_impl1_synplify.tcl
+Arguments:   -product synplify_pro -batch BM_H13DSP_M_impl1_synplify.tcl
 ProductType: synplify_pro
 
 
 
 
-
-log file: "C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srr"
+log file: "D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srr"
 Running: impl1 in foreground
 
 Running proj_1|impl1
 
 Running Flow: compile (Compile) on proj_1|impl1
-# Thu Oct 23 14:05:02 2025
+# Thu Mar 13 17:54:56 2025
 
 Running Flow: compile_flow (Compile Process) on proj_1|impl1
-# Thu Oct 23 14:05:02 2025
+# Thu Mar 13 17:54:56 2025
 
 Running: compiler (Compile Input) on proj_1|impl1
-# Thu Oct 23 14:05:02 2025
-compiler exited with errors
-Job failed on: proj_1|impl1
+# Thu Mar 13 17:54:56 2025
+Copied D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synwork\BM_H13DSP_M_impl1_comp.srs to D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srs
 
-Job: "compiler" terminated with error status: 2
-See log file: "C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_compiler.srr"
-# Thu Oct 23 14:05:03 2025
+compiler completed
+# Thu Mar 13 17:55:16 2025
 
-Return Code: 2
-Run Time:00h:00m:01s
+Return Code: 0
+Run Time:00h:00m:19s
+
+Running: multi_srs_gen (Multi-srs Generator) on proj_1|impl1
+# Thu Mar 13 17:55:16 2025
+
+multi_srs_gen completed
+# Thu Mar 13 17:55:16 2025
+
+Return Code: 0
+Run Time:00h:00m:00s
+Copied D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synwork\BM_H13DSP_M_impl1_mult.srs to D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srs
+Copied D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srr to D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srf
 Complete: Compile Process on proj_1|impl1
+
+Running: premap (Premap) on proj_1|impl1
+# Thu Mar 13 17:55:16 2025
+
+premap completed with warnings
+# Thu Mar 13 17:55:33 2025
+
+Return Code: 1
+Run Time:00h:00m:17s
 Complete: Compile on proj_1|impl1
+
+Running Flow: map (Map) on proj_1|impl1
+# Thu Mar 13 17:55:33 2025
+
+Running: fpga_mapper (Map & Optimize) on proj_1|impl1
+# Thu Mar 13 17:55:33 2025
+Copied D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synwork\BM_H13DSP_M_impl1_m.srm to D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srm
+
+fpga_mapper completed with warnings
+# Thu Mar 13 17:56:17 2025
+
+Return Code: 1
+Run Time:00h:00m:44s
+Complete: Map on proj_1|impl1
+Copied D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srr to D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srf
 Complete: Logic Synthesis on proj_1|impl1
-Copied C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srr to C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1.srf
-Error: At line 108 while processing "BM_H13DSP_M_impl1_synplify.tcl"
-2
 TCL script complete: "BM_H13DSP_M_impl1_synplify.tcl"
-TCL script had errors: "BM_H13DSP_M_impl1_synplify.tcl"
-exit status=9
-exit status=9
+exit status=0
+exit status=0
 Save changes for project:
-C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\proj_1.prj
+D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\proj_1.prj
 batch mode default:no

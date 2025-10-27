@@ -1,17 +1,7 @@
-//////////////////////////////////////////////////////////////////////////////////
-/*!
-    \brief      <b>Clock domain synchronization module</b>\n
-    \details    2 FFs clock domain input synchronizer\n
-    \file       ClkDivTree.v
-    \date       Oct 2, 2011
-    \brief      $RCSfile: ClkDivTree.v.rca $
-                $Date: Tue Dec 16 18:15:35 2014 $
-                $Author: $
-                $Revision: 1.5 $
-                $Aliases:  $
+/* =============================================================================================================
+模块功能：多个同步时钟使能信号生成模块（Clock Enables, CEs）
+输入的高频时钟（50 MHz）分频，生成多个低频的时钟使能信号。这些信号可以用作其他模块的触发条件.
 
-                <b>Block Diagram:</b>
-    \verbatim
         +---------------------------+
         |           .        o1uSCE |----->  
  -----> |> iClk     .       o10uSCE |----->
@@ -22,15 +12,8 @@
         |           .       o20mSCE |----->        
         +---------------------------+
                   ClkDivTree
-    \endverbatim 
-    \version    
-                20120124 \b clbernal - File creation\n
-                20130308 \b edgarara - Added comments and documentation format\n    
-    \copyright Intel Proprietary -- Copyright 2015 Intel -- All rights reserved
-*/
-//////////////////////////////////////////////////////////////////////////////////
+===============================================================================================================*/
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
 module ClkDivTree
 (
     //% Clock
@@ -55,7 +38,6 @@ module ClkDivTree
     output  o20mSCE,
     //% 1SCE Clock Enable
     output  o1SCE
-
 );  
 
 wire    w1uSCE;
@@ -78,13 +60,9 @@ assign  o10mSCE     =   w10mSCE;//2023-2-28 add
 assign  o20mSCE     =   w20mSCE;
 assign  o1SCE       =   w1SCE;
 
-//
 //% 1uS Clock divide
-//
 ClkDiv #
-(
-//    .MAX_DIV_BITS ( 2 ),    
-//    .MAX_DIV_CNT  ( 2 )     
+(    
     .MAX_DIV_BITS ( 6 ),
     .MAX_DIV_CNT  ( 49)       //49@50MHz  //24@25MHz
 
@@ -96,9 +74,7 @@ ClkDiv #
     .oDivClk            ( w1uSCE )
 );
 
-//
 //% 10uS Clock divide
-//
 ClkDiv #
 (
     .MAX_DIV_BITS ( 5 ),
@@ -110,9 +86,8 @@ ClkDiv #
     .iCE                ( w1uSCE ),
     .oDivClk            ( w10uSCE )
 );
-//
+
 //% 50uS Clock divide
-//
 ClkDiv #
 (
     .MAX_DIV_BITS ( 3 ),
@@ -124,9 +99,8 @@ ClkDiv #
     .iCE                ( w10uSCE ),
     .oDivClk            ( w50uSCE )
 );
-//
+
 //% 500uS Clock divide
-//
 ClkDiv #
 (
     .MAX_DIV_BITS       ( 4 ),
@@ -138,9 +112,8 @@ ClkDiv #
     .iCE                ( w50uSCE ),
     .oDivClk            ( w500uSCE )
 );  
-//
+
 //% 1mS Clock divide
-//
 ClkDiv #
 (
     .MAX_DIV_BITS       ( 1 ),
@@ -152,25 +125,12 @@ ClkDiv #
     .iCE                ( w500uSCE ),
     .oDivClk            ( w1mSCE )
 );  
-//
-//% 250mS Clock divide
-//
-// ClkDiv #
-// (
-    // .MAX_DIV_BITS       ( 4 ),
-    // .MAX_DIV_CNT        ( 11 )
-// )m250mSCE
-// (
-    // .iClk               ( iClk ),
-    // .iRst               ( iRst ),
-    // .iCE                ( w20mSCE ),
-    // .oDivClk            ( w250mSCE ) //2023-5-6 del
-// );
 
+//% 250mS Clock divide
 ClkDiv #
 (
     .MAX_DIV_BITS       ( 5 ),
-    .MAX_DIV_CNT        ( 24 )  //2023-5-6 add 
+    .MAX_DIV_CNT        ( 24 )  
 )m250mSCE
 (
     .iClk               ( iClk ),
@@ -179,10 +139,7 @@ ClkDiv #
     .oDivClk            ( w250mSCE )
 );
 
-
-//
 //% 1S Clock divide
-//
 ClkDiv #
 (
     .MAX_DIV_BITS       ( 3 ),
@@ -194,9 +151,8 @@ ClkDiv #
     .iCE                ( w250mSCE ),
     .oDivClk            ( w1SCE )
 );
-//
+
 //% 20mS Clock divide
-//
 ClkDiv #
 (
     .MAX_DIV_BITS       ( 5 ),
@@ -210,7 +166,6 @@ ClkDiv #
 );
 
 //% 10mS Clock divide  //2023-2-28 add
-//
 ClkDiv #
 (
     .MAX_DIV_BITS       ( 5 ),
@@ -222,9 +177,4 @@ ClkDiv #
     .iCE                ( w1mSCE ),
     .oDivClk            ( w10mSCE )
 );
-
-
-
-
-
 endmodule

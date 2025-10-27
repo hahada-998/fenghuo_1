@@ -1,190 +1,190 @@
 @N|Running in 64-bit mode
 @N|Running in 64-bit mode
-@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
-@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":3:7:3:15|Synthesizing module timer_gen in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":81:54:81:61|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":82:54:82:60|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":143:41:143:47|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":144:41:144:47|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":145:41:145:49|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":146:41:146:48|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":236:68:236:77|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":237:63:237:71|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
-@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
-@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
-@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
-@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":105:7:105:17|Synthesizing module SYNC_DATA_N in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":268:7:268:20|Synthesizing module PGM_DEBOUNCE_N in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":297:44:297:52|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":299:49:299:55|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_detect.v":9:7:9:17|Synthesizing module Edge_Detect in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":38:32:38:37|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":38:32:38:37|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":61:21:61:26|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":75:26:75:35|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":4:7:4:18|Synthesizing module Pwr_But_Ctrl in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":128:18:128:28|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":168:68:168:80|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":170:71:170:83|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":184:24:184:37|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":185:24:185:36|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":228:23:228:35|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":232:23:232:35|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":8:7:8:20|Synthesizing module bmc_ctl_pwrbtn in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":71:30:71:45|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":77:33:77:48|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":98:32:98:49|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":104:35:104:52|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":126:32:126:49|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":132:35:132:52|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":181:23:181:35|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":231:29:231:40|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":232:26:232:34|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":250:27:250:42|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":268:29:268:44|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":283:28:283:44|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":298:29:298:46|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\system_rst.v":2:7:2:16|Synthesizing module system_rst in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\system_rst.v":58:29:58:49|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\system_rst.v":64:38:64:58|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\cpu_thermtrip.v":1:7:1:19|Synthesizing module cpu_thermtrip in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectB_chklive.v":19:7:19:27|Synthesizing module fault_detectB_chklive in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Signal_Latch\Edge_Detect_SL.v":14:7:14:20|Synthesizing module Edge_Detect_SL in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":3:7:3:18|Synthesizing module Signal_Latch in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":70:25:70:37|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\cpu_module.v":1:7:1:16|Synthesizing module cpu_module in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":72:7:72:19|Synthesizing module pwrseq_master in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":750:20:750:31|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":63:7:63:18|Synthesizing module pwrseq_slave in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Power_Fault\dimm_fail_event.v":1:7:1:21|Synthesizing module dimm_fail_event in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":1:7:1:16|Synthesizing module error_code in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":66:32:66:37|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":25:7:25:17|Synthesizing module UART_MASTER in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":227:71:227:80|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":1:7:1:15|Synthesizing module espi_link in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v":2:7:2:21|Synthesizing module pcie_dync_alloc in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":2:7:2:23|Synthesizing module pch_cpld_espi_ram in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v":10:7:10:19|Synthesizing module i2c_slave_bmc in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bios_i2c\bios_cpld_i2c_ram.v":1:7:1:23|Synthesizing module bios_cpld_i2c_ram in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\cmos_clear.v":1:7:1:16|Synthesizing module clear_cmos in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\nmi_clear.v":1:7:1:15|Synthesizing module clear_nmi in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":3:7:3:13|Synthesizing module s2p_164 in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":30:19:30:28|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":109:8:109:9|Removing redundant assignment.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1:7:1:22|Synthesizing module bmc_cpld_i2c_ram in library work.
-@N: CG364 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":21:8:21:18|Synthesizing module BM_H13DSP_M in library work.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1677:34:1677:59|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1828:29:1828:49|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":2067:27:2067:37|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3141:38:3141:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3142:38:3142:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3143:38:3143:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3144:38:3144:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3145:38:3145:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3146:38:3146:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3147:38:3147:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3148:38:3148:51|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3149:38:3149:54|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3150:38:3150:54|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3151:38:3151:54|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3152:38:3152:54|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3153:38:3153:54|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3154:38:3154:54|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3155:38:3155:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3156:38:3156:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3157:38:3157:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3158:38:3158:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3159:38:3159:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3160:38:3160:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3161:38:3161:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3162:38:3162:55|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3489:39:3489:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3490:39:3490:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3491:39:3491:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3492:39:3492:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3493:39:3493:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3494:39:3494:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3495:39:3495:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3496:39:3496:53|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3497:39:3497:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3498:39:3498:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3499:39:3499:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3500:39:3500:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3501:39:3501:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3502:39:3502:56|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3503:39:3503:57|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3504:39:3504:57|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3505:39:3505:57|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3506:39:3506:57|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3507:39:3507:58|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3508:39:3508:57|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3509:39:3509:57|Removing redundant assignment.
-@N: CG179 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3510:39:3510:57|Removing redundant assignment.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":4:24:4:28|Input i_clk is unused.
-@N: CL201 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":6:12:6:21|Input i_clk_10ms is unused.
-@N: CL201 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":80:0:80:5|Trying to extract state machine for register current_state.
-@N: CL201 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":95:0:95:5|Trying to extract state machine for register curr_state.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":88:20:88:25|Input t512us is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":89:20:89:23|Input t1ms is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":90:20:90:23|Input t2ms is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":92:20:92:22|Input t1s is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":97:20:97:38|Input dc_on_wait_complete is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":98:20:98:41|Input rt_critical_fail_store is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":118:20:118:31|Input p12v_stby_pg is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":120:20:120:32|Input p12v_efuse_pg is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":121:20:121:36|Input p12v_ssd_efuse_pg is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":122:20:122:34|Input p12v_p0_dimm_pg is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":123:20:123:34|Input p12v_p1_dimm_pg is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":135:20:135:41|Input i_pwrgd_ocp0_nic_pwrgd is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":196:36:196:46|Input i_cpu_pwrok is unused.
-@N: CL201 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":739:0:739:5|Trying to extract state machine for register state.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":104:20:104:25|Input t512ms is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":105:20:105:27|Input t1s_tick is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\cpu_module.v":5:12:5:17|Input t512us is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\cpu_module.v":9:12:9:23|Input i_p0_rsmrset is unused.
-@N: CL159 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\cpu_module.v":10:12:10:23|Input i_p1_rsmrset is unused.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":3:7:3:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":81:54:81:61|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":82:54:82:60|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":143:41:143:47|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":144:41:144:47|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":145:41:145:49|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":146:41:146:48|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":236:68:236:77|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":237:63:237:71|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
+@N: CG364 :"D:\lscc\diamond\3.12\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":105:7:105:17|Synthesizing module SYNC_DATA_N in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":268:7:268:20|Synthesizing module PGM_DEBOUNCE_N in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":297:44:297:52|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":299:49:299:55|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_detect.v":9:7:9:17|Synthesizing module Edge_Detect in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":61:21:61:26|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":75:26:75:35|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":4:7:4:18|Synthesizing module Pwr_But_Ctrl in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":128:18:128:28|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":168:68:168:80|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":170:71:170:83|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":184:24:184:37|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":185:24:185:36|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":228:23:228:35|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":232:23:232:35|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":8:7:8:20|Synthesizing module bmc_ctl_pwrbtn in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":71:30:71:45|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":77:33:77:48|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":98:32:98:49|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":104:35:104:52|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":126:32:126:49|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":132:35:132:52|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":181:23:181:35|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":231:29:231:40|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":232:26:232:34|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":250:27:250:42|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":268:29:268:44|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":283:28:283:44|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":298:29:298:46|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\system_rst.v":2:7:2:16|Synthesizing module system_rst in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\system_rst.v":58:29:58:49|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\system_rst.v":64:38:64:58|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\cpu_thermtrip.v":1:7:1:19|Synthesizing module cpu_thermtrip in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectB_chklive.v":19:7:19:27|Synthesizing module fault_detectB_chklive in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Signal_Latch\Edge_Detect_SL.v":14:7:14:20|Synthesizing module Edge_Detect_SL in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":3:7:3:18|Synthesizing module Signal_Latch in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":70:25:70:37|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\cpu_module.v":1:7:1:16|Synthesizing module cpu_module in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":72:7:72:19|Synthesizing module pwrseq_master in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":750:20:750:31|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":63:7:63:18|Synthesizing module pwrseq_slave in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Power_Fault\dimm_fail_event.v":1:7:1:21|Synthesizing module dimm_fail_event in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":1:7:1:16|Synthesizing module error_code in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":66:32:66:37|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":25:7:25:17|Synthesizing module UART_MASTER in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":227:71:227:80|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":1:7:1:15|Synthesizing module espi_link in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v":2:7:2:21|Synthesizing module pcie_dync_alloc in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":2:7:2:23|Synthesizing module pch_cpld_espi_ram in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v":10:7:10:19|Synthesizing module i2c_slave_bmc in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bios_i2c\bios_cpld_i2c_ram.v":1:7:1:23|Synthesizing module bios_cpld_i2c_ram in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\cmos_clear.v":1:7:1:16|Synthesizing module clear_cmos in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\nmi_clear.v":1:7:1:15|Synthesizing module clear_nmi in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":3:7:3:13|Synthesizing module s2p_164 in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":30:19:30:28|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":109:8:109:9|Removing redundant assignment.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1:7:1:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+@N: CG364 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":21:8:21:18|Synthesizing module BM_H13DSP_M in library work.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1677:34:1677:59|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1828:29:1828:49|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":2067:27:2067:37|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3141:38:3141:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3142:38:3142:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3143:38:3143:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3144:38:3144:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3145:38:3145:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3146:38:3146:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3147:38:3147:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3148:38:3148:51|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3149:38:3149:54|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3150:38:3150:54|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3151:38:3151:54|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3152:38:3152:54|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3153:38:3153:54|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3154:38:3154:54|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3155:38:3155:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3156:38:3156:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3157:38:3157:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3158:38:3158:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3159:38:3159:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3160:38:3160:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3161:38:3161:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3162:38:3162:55|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3489:39:3489:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3490:39:3490:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3491:39:3491:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3492:39:3492:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3493:39:3493:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3494:39:3494:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3495:39:3495:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3496:39:3496:53|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3497:39:3497:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3498:39:3498:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3499:39:3499:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3500:39:3500:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3501:39:3501:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3502:39:3502:56|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3503:39:3503:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3504:39:3504:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3505:39:3505:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3506:39:3506:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3507:39:3507:58|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3508:39:3508:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3509:39:3509:57|Removing redundant assignment.
+@N: CG179 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3510:39:3510:57|Removing redundant assignment.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v":4:24:4:28|Input i_clk is unused.
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":6:12:6:21|Input i_clk_10ms is unused.
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":80:0:80:5|Trying to extract state machine for register current_state.
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":95:0:95:5|Trying to extract state machine for register curr_state.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":88:20:88:25|Input t512us is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":89:20:89:23|Input t1ms is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":90:20:90:23|Input t2ms is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":92:20:92:22|Input t1s is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":97:20:97:38|Input dc_on_wait_complete is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":98:20:98:41|Input rt_critical_fail_store is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":118:20:118:31|Input p12v_stby_pg is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":120:20:120:32|Input p12v_efuse_pg is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":121:20:121:36|Input p12v_ssd_efuse_pg is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":122:20:122:34|Input p12v_p0_dimm_pg is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":123:20:123:34|Input p12v_p1_dimm_pg is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":135:20:135:41|Input i_pwrgd_ocp0_nic_pwrgd is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":196:36:196:46|Input i_cpu_pwrok is unused.
+@N: CL201 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":739:0:739:5|Trying to extract state machine for register state.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":104:20:104:25|Input t512ms is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":105:20:105:27|Input t1s_tick is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\cpu_module.v":5:12:5:17|Input t512us is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\cpu_module.v":9:12:9:23|Input i_p0_rsmrset is unused.
+@N: CL159 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\common\cpu_module.v":10:12:10:23|Input i_p1_rsmrset is unused.
 @N|Running in 64-bit mode
 

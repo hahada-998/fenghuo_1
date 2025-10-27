@@ -2,8 +2,8 @@
 ; Setup Analysis
 Fmax_0 = - (-);
 Fmax_1 = 115.660 MHz (4.290 MHz);
-Fmax_2 = 65.863 MHz (50.000 MHz);
-Fmax_3 = 32.154 MHz (25.000 MHz);
+Fmax_2 = 72.786 MHz (50.000 MHz);
+Fmax_3 = 35.727 MHz (25.000 MHz);
 Failed = 0 (Total 4);
 Clock_ports = 9;
 Clock_nets = 58;

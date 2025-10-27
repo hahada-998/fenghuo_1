@@ -1,19 +1,19 @@
 
 //RESET
-localparam [5:0] SM_RESET_STATE				=6'h00;
+localparam [5:0] SM_RESET_STATE				=6'h00; // 初始复位状态。
 
 //GRP_A
-localparam [5:0] SM_EN_GRP_A				        =6'h01;//o_PAL_P5V_STBY_EN_R=1'b1; UID\DRMOS
-localparam [5:0] SM_RSMRST_DISABLE			=6'h02;//o_P0_RSMRST_N=1'b0;
-localparam [5:0] SM_EN_GRP_B_33_S5 			=6'h03;//o_P0_VDDC_EN_R=1'b1; o_P1_VDDC_EN_R=1'b1;
+localparam [5:0] SM_EN_GRP_A			    =6'h01; //o_PAL_P5V_STBY_EN_R=1'b1; UID\DRMOS
+localparam [5:0] SM_RSMRST_DISABLE			=6'h02; //o_P0_RSMRST_N=1'b0;
+localparam [5:0] SM_EN_GRP_B_33_S5 			=6'h03; //o_P0_VDDC_EN_R=1'b1; o_P1_VDDC_EN_R=1'b1;
 
 
-//GRP_B
-localparam [5:0] SM_EN_GRP_B_18_S5			=6'h04;//o_PAL_P0_VDD_18_STBY_EN_R=1'b1; o_P1_VDD_18_STBY_EN=1'b1;
-localparam [5:0] SM_EN_P5V_STBY				=6'h05;//o_PAL_USB_VBUS1_EN_R=1'b1; o_PAL_USB_VBUS2_EN_R=1'b1;
-localparam [5:0] SM_EN_RSMRST_RELEASE		=6'h06;//o_P0_RSMRST_N=1'b1;o_P1_RSMRST_N=1'b1;
-localparam [5:0] SM_ENABLE_S5_DEVICES		=6'h07;//passthrough
-localparam [5:0] SM_OFF_STANDBY				=6'h08;//S5 Power OK
+//GRP_B 
+localparam [5:0] SM_EN_GRP_B_18_S5			=6'h04; //o_PAL_P0_VDD_18_STBY_EN_R=1'b1; o_P1_VDD_18_STBY_EN=1'b1;
+localparam [5:0] SM_EN_P5V_STBY				=6'h05; //o_PAL_USB_VBUS1_EN_R=1'b1; o_PAL_USB_VBUS2_EN_R=1'b1;
+localparam [5:0] SM_EN_RSMRST_RELEASE		=6'h06; //o_P0_RSMRST_N=1'b1;o_P1_RSMRST_N=1'b1;
+localparam [5:0] SM_ENABLE_S5_DEVICES		=6'h07; //passthrough
+localparam [5:0] SM_OFF_STANDBY				=6'h08; //S5 Power OK
 
 //GRP_C_Early
 localparam [5:0] SM_PS_ON					=6'h09;//passthrough

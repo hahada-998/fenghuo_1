@@ -1,12 +1,12 @@
 [ START MERGED ]
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
 r_sda_en_i bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en
 pon_reset_n_i pon_reset_n
 bios_espi_link.io_data_out_10_.CN i_CPLD_ESPI_CLK_c
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
 s2p_164_u1.data_out_cnt_i[3] s2p_164_u1/data_out_cnt[3]
 s2p_164_u1.o_sclk.CN t1us_tick
-r_sda_en_0_i bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_0
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
+r_sda_en_0_i bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_0
 i_CPLD_ESPI_RESET_N_c_i i_CPLD_ESPI_RESET_N_c
 o_P0_RSMRST_N_c_i o_P0_RSMRST_N_c
 [ END MERGED ]
@@ -21,6 +21,7 @@ inst_scpld_to_mcpld_s2p/GND
 inst_mcpld_to_scpld_p2s/GND
 inst_cmucpld_to_mcpld_s2p/GND
 inst_mcpld_to_cmucpld_p2s/GND
+bmc_ctl_pwrbtn_u0/GND
 system_rst_u0/GND
 pwrseq_master_inst/GND
 uart_master_u1/GND
@@ -36,7 +37,6 @@ s2p_164_u1/GND
 pvt_gpi_4u_gpu_zt2_inst/GND
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/GND
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND
-bmc_ctl_pwrbtn_u0/GND
 pll_inst/CLKINTFB
 pll_inst/DPHSRC
 pll_inst/PLLACK
@@ -57,7 +57,7 @@ timer_gen_inst/usec_tmr_cry_0_S0[0]
 timer_gen_inst/N_22
 timer_gen_inst/usec_tmr_cry_0_COUT[3]
 timer_gen_inst/sec_tmr_cry_0_S0[0]
-timer_gen_inst/N_6
+timer_gen_inst/N_21
 inst_i2c_update_flash_config/CFGSTDBY
 inst_i2c_update_flash_config/CFGWAKE
 inst_i2c_update_flash_config/wbc_ufm_irq
@@ -116,22 +116,37 @@ pvt_gpi_MB_inst/bit_idx_out_1_cry_0_S0[0]
 pvt_gpi_MB_inst/N_1
 pvt_gpi_MB_inst/bit_idx_out_1_s_0_S1[5]
 pvt_gpi_MB_inst/bit_idx_out_1_s_0_COUT[5]
-inst_scpld_to_mcpld_s2p/un3_cnt_cry_0_0_S1
-inst_scpld_to_mcpld_s2p/un3_cnt_cry_0_0_S0
+inst_scpld_to_mcpld_s2p/un5_cnt_cry_0_0_S1
+inst_scpld_to_mcpld_s2p/un5_cnt_cry_0_0_S0
 inst_scpld_to_mcpld_s2p/N_58
-inst_scpld_to_mcpld_s2p/un3_cnt_cry_7_0_COUT
+inst_scpld_to_mcpld_s2p/un5_cnt_cry_7_0_COUT
 inst_mcpld_to_scpld_p2s/cnt_cry_0_S0[0]
 inst_mcpld_to_scpld_p2s/N_1
 inst_mcpld_to_scpld_p2s/cnt_s_0_S1[7]
 inst_mcpld_to_scpld_p2s/cnt_s_0_COUT[7]
-inst_cmucpld_to_mcpld_s2p/un19_cnt_cry_0_0_S1
-inst_cmucpld_to_mcpld_s2p/un19_cnt_cry_0_0_S0
+inst_cmucpld_to_mcpld_s2p/un23_cnt_cry_0_0_S1
+inst_cmucpld_to_mcpld_s2p/un23_cnt_cry_0_0_S0
 inst_cmucpld_to_mcpld_s2p/N_173
-inst_cmucpld_to_mcpld_s2p/un19_cnt_s_7_0_S1
-inst_cmucpld_to_mcpld_s2p/un19_cnt_s_7_0_COUT
+inst_cmucpld_to_mcpld_s2p/un23_cnt_s_7_0_S1
+inst_cmucpld_to_mcpld_s2p/un23_cnt_s_7_0_COUT
 inst_mcpld_to_cmucpld_p2s/cnt_cry_0_S0_0[0]
 inst_mcpld_to_cmucpld_p2s/N_1
 inst_mcpld_to_cmucpld_p2s/cnt_cry_0_COUT[5]
+bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_cry_0_S0[0]
+bmc_ctl_pwrbtn_u0/N_1
+bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_S1[5]
+bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_COUT[5]
+bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_cry_0_S0[0]
+bmc_ctl_pwrbtn_u0/N_2
+bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_S1[5]
+bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_COUT[5]
+bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_cry_0_S0[0]
+bmc_ctl_pwrbtn_u0/N_3
+bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_S1[9]
+bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_COUT[9]
+bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_S0[0]
+bmc_ctl_pwrbtn_u0/N_4
+bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_COUT[7]
 system_rst_u0/r_bmc_ctl_sys_rst_cnt_cry_0_S0[0]
 system_rst_u0/N_1
 system_rst_u0/r_bmc_ctl_sys_rst_cnt_s_0_S1[5]
@@ -154,36 +169,41 @@ uart_master_u2/bps_count_bit_s_0_COUT_0[5]
 uart_master_u2/data_count_cry_0_S0_0[0]
 uart_master_u2/N_2
 uart_master_u2/data_count_cry_0_COUT_0[3]
-bios_espi_link/oob_data_trans_en8_a_4_cry_0_0_S1
-bios_espi_link/oob_data_trans_en8_a_4_cry_0_0_S0
-bios_espi_link/N_94
-bios_espi_link/oob_data_trans_en8_a_4_cry_7_0_COUT
-bios_espi_link/vwire_rd_trans_en8_0_I_1_0_S1
-bios_espi_link/vwire_rd_trans_en8_0_I_1_0_S0
-bios_espi_link/N_95
-bios_espi_link/vwire_rd_trans_en8_0_I_9_0_S1
-bios_espi_link/vwire_rd_trans_en8_0_I_9_0_S0
-bios_espi_link/vwire_rd_trans_en8_0_I_21_0_S1
-bios_espi_link/vwire_rd_trans_en8_0_I_21_0_S0
-bios_espi_link/vwire_rd_trans_en8_0_I_27_0_S1
-bios_espi_link/vwire_rd_trans_en8_0_I_27_0_COUT
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_cry_0_0_S0
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_1
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_s_13_0_S1
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_s_13_0_COUT
+bios_espi_link/oob_data_trans_en5_a_4_cry_0_0_S1
+bios_espi_link/oob_data_trans_en5_a_4_cry_0_0_S0
+bios_espi_link/N_90
+bios_espi_link/oob_data_trans_en5_a_4_cry_7_0_COUT
+bios_espi_link/vwire_rd_trans_en5_0_I_1_0_S1
+bios_espi_link/vwire_rd_trans_en5_0_I_1_0_S0
+bios_espi_link/N_91
+bios_espi_link/vwire_rd_trans_en5_0_I_9_0_S1
+bios_espi_link/vwire_rd_trans_en5_0_I_9_0_S0
+bios_espi_link/vwire_rd_trans_en5_0_I_21_0_S1
+bios_espi_link/vwire_rd_trans_en5_0_I_21_0_S0
+bios_espi_link/vwire_rd_trans_en5_0_I_27_0_S1
+bios_espi_link/vwire_rd_trans_en5_0_I_27_0_COUT
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S1
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_cry_0_0_S0
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_s_15_0_S1
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_0_s_15_0_COUT
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0]
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_2
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15]
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15]
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0]
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_5
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15]
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15]
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_cry_0_0_S1
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_cry_0_0_S0
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_s_15_0_S1
-bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_3_s_15_0_COUT
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S1
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_4_cry_1_0_S0
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_6
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_4_cry_14_0_COUT
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_cry_0_0_S1
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_cry_0_0_S0
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_7
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_s_15_0_S1
+bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_0_s_15_0_COUT
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cry_0_S0[0]
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21
 bios_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_S1[5]
@@ -204,58 +224,38 @@ pvt_gpi_4u_gpu_zt_inst/bit_idx_out_cry_0_S0[0]
 pvt_gpi_4u_gpu_zt_inst/N_48
 pvt_gpi_4u_gpu_zt_inst/bit_idx_out_s_0_S1[5]
 pvt_gpi_4u_gpu_zt_inst/bit_idx_out_s_0_COUT[5]
-s2p_164_u1/r_data_chg_flag6_0_I_1_0_S1
-s2p_164_u1/r_data_chg_flag6_0_I_1_0_S0
+s2p_164_u1/r_data_chg_flag5_0_I_1_0_S1
+s2p_164_u1/r_data_chg_flag5_0_I_1_0_S0
 s2p_164_u1/N_1
-s2p_164_u1/r_data_chg_flag6_0_I_9_0_S1
-s2p_164_u1/r_data_chg_flag6_0_I_9_0_S0
-s2p_164_u1/r_data_chg_flag6_0_I_21_0_S0
-s2p_164_u1/r_data_chg_flag6_0_I_21_0_COUT
+s2p_164_u1/r_data_chg_flag5_0_I_9_0_S1
+s2p_164_u1/r_data_chg_flag5_0_I_9_0_S0
+s2p_164_u1/r_data_chg_flag5_0_I_21_0_S0
+s2p_164_u1/r_data_chg_flag5_0_I_21_0_COUT
 pvt_gpi_4u_gpu_zt2_inst/bit_idx_out_cry_0_S0_0[0]
 pvt_gpi_4u_gpu_zt2_inst/N_48
 pvt_gpi_4u_gpu_zt2_inst/bit_idx_out_s_0_S1_0[5]
 pvt_gpi_4u_gpu_zt2_inst/bit_idx_out_s_0_COUT_0[5]
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0_S1
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0_S0
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_8
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_S1
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_COUT
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_cry_0_0_S0
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_s_13_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_m_s_13_0_COUT
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0_0[0]
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_9
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_2
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1_0[15]
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT_0[15]
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0_0[0]
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_10
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1_0[15]
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT_0[15]
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S1
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S0
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_11
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_14_0_COUT
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S1
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S0
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_12
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_S1
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_COUT
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_cry_0_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_cry_0_0_S0
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_s_15_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un6_1_s_s_15_0_COUT
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cry_0_S0_0[0]
-bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_28
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_S1_0[5]
 bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_COUT_0[5]
-bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_cry_0_S0[0]
-bmc_ctl_pwrbtn_u0/N_1
-bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_S1[5]
-bmc_ctl_pwrbtn_u0/r_sbtn_pwron_cnt_s_0_COUT[5]
-bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_cry_0_S0[0]
-bmc_ctl_pwrbtn_u0/N_2
-bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_S1[5]
-bmc_ctl_pwrbtn_u0/r_sbtn_pwrdown_cnt_s_0_COUT[5]
-bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_cry_0_S0[0]
-bmc_ctl_pwrbtn_u0/N_3
-bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_S1[9]
-bmc_ctl_pwrbtn_u0/r_pwrbtn_counter_s_0_COUT[9]
-bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_S0[0]
-bmc_ctl_pwrbtn_u0/N_4
-bmc_ctl_pwrbtn_u0/r_lbtn_pwrdown_cnt_cry_0_COUT[7]
 inst_osch_SEDSTDBY
 [ END CLIPPED ]
 [ START OSC ]
@@ -263,7 +263,7 @@ wb_clk 4.29
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Thu Oct 23 14:11:43 2025
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Thu Mar 13 18:38:33 2025
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=ENABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "io_I2C7_PAL_SDA" SITE "Y9" ;
@@ -306,6 +306,7 @@ LOCATE COMP "o_I3C_MUX_OE_N_R_0" SITE "W7" ;
 LOCATE COMP "o_I3C_MUX_SEL_R_0" SITE "D7" ;
 LOCATE COMP "o_PAL_I3C_MUX_EN_R_N" SITE "B18" ;
 LOCATE COMP "o_BIOS_POST_CMPLT_BMC_N_R" SITE "A9" ;
+LOCATE COMP "i_CPLD_SN" SITE "Y19" ;
 LOCATE COMP "o_PAL_P0_I2C5_9548_RST_R" SITE "U11" ;
 LOCATE COMP "o_P0_VPP_9545_1_RST_N_R" SITE "E1" ;
 LOCATE COMP "o_P0_VPP_9545_2_RST_N_R" SITE "B3" ;
@@ -562,7 +563,6 @@ LOCATE COMP "i_PS2_DCOK_N" SITE "R5" ;
 LOCATE COMP "i_PS2_PRSNT" SITE "R4" ;
 LOCATE COMP "i_PAL_BUTTOPN_RST_N" SITE "T9" ;
 LOCATE COMP "i_PAL_PWR_BTN_N" SITE "V10" ;
-LOCATE COMP "i_CPLD_SN" SITE "Y19" ;
 LOCATE COMP "i_PAL_PEOGRAM_N" SITE "D13" ;
 LOCATE COMP "i_CPLD2_JTAGEN_R" SITE "W10" ;
 LOCATE COMP "i_CPLD_INIT_N" SITE "C17" ;

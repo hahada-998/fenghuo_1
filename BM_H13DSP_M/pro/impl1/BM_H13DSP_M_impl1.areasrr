@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 Report for cell BM_H13DSP_M.verilog
 
-Register bits: 2518 of 54912 (5%)
+Register bits: 2516 of 54912 (5%)
 Latch bits:      84
 PIC Latch:       0
 I/O cells:       302
@@ -12,29 +12,29 @@ I/O cells:       302
                                 EFB        1       100.0
                             EHXPLLJ        1       100.0
                             FD1P3AX       54       100.0
-                            FD1P3BX      223       100.0
-                            FD1P3DX     1299       100.0
+                            FD1P3BX      220       100.0
+                            FD1P3DX     1294       100.0
                             FD1S1AY       32       100.0
                              FD1S1D       52       100.0
                             FD1S3AX        4       100.0
-                            FD1S3BX      261       100.0
-                            FD1S3DX      601       100.0
+                            FD1S3BX      264       100.0
+                            FD1S3DX      600       100.0
                                 GSR        1       100.0
                                  IB      143       100.0
                            IFS1P3BX       23       100.0
                            IFS1P3DX       48       100.0
-                                INV       41       100.0
-                            L6MUX21       35       100.0
+                                INV       42       100.0
+                            L6MUX21       28       100.0
                                  OB      124       100.0
                                 OBZ       29       100.0
-                           OFS1P3BX        4       100.0
+                           OFS1P3BX        8       100.0
                            OFS1P3DX        1       100.0
-                           ORCALUT4     3711       100.0
+                           ORCALUT4     3570       100.0
                                OSCH        1       100.0
-                              PFUMX      181       100.0
+                              PFUMX      162       100.0
                                 PUR        1       100.0
-                                VHI      128       100.0
-                                VLO      128       100.0
+                                VHI      124       100.0
+                                VLO       75       100.0
 SUB MODULES 
                          ClkDivTree        1       100.0
                        ClkDiv_1s_1s        1       100.0
@@ -140,16 +140,16 @@ SUB MODULES
                pcie_dync_alloc_10_6        1       100.0
                pcie_dync_alloc_10_7        1       100.0
                pcie_dync_alloc_10_8        1       100.0
-                  pcie_dync_alloc_3        1       100.0
-                pcie_dync_alloc_3_0        1       100.0
-                pcie_dync_alloc_3_1        1       100.0
-                pcie_dync_alloc_3_2        1       100.0
-                pcie_dync_alloc_3_3        1       100.0
-                pcie_dync_alloc_3_4        1       100.0
-                pcie_dync_alloc_3_5        1       100.0
-                pcie_dync_alloc_3_6        1       100.0
-                pcie_dync_alloc_3_7        1       100.0
-                pcie_dync_alloc_3_8        1       100.0
+                  pcie_dync_alloc_8        1       100.0
+                pcie_dync_alloc_8_0        1       100.0
+                pcie_dync_alloc_8_1        1       100.0
+                pcie_dync_alloc_8_2        1       100.0
+                pcie_dync_alloc_8_3        1       100.0
+                pcie_dync_alloc_8_4        1       100.0
+                pcie_dync_alloc_8_5        1       100.0
+                pcie_dync_alloc_8_6        1       100.0
+                pcie_dync_alloc_8_7        1       100.0
+                pcie_dync_alloc_8_8        1       100.0
                  pll_i25M_o50M_o25M        1       100.0
                           pon_reset        1       100.0
            pvt_gpi_64s_63s_0s_6s_Z6        1       100.0
@@ -164,84 +164,55 @@ SUB MODULES
                          system_rst        1       100.0
                           timer_gen        1       100.0
                             
-                         TOTAL          7456           
-----------------------------------------------------------------------
-Report for cell bmc_ctl_pwrbtn.netlist
-     Instance path:  bmc_ctl_pwrbtn_u0
-                                          Cell usage:
-                               cell       count    Res Usage(%)
-                              CCU2D       19         9.7
-                            FD1P3DX       40         3.1
-                            FD1S3BX        2         0.8
-                            FD1S3DX        2         0.3
-                           ORCALUT4       42         1.1
-                                VHI        2         1.6
-                                VLO        2         1.6
-SUB MODULES 
-                      Edge_Detect_0        1       100.0
-                            
-                         TOTAL           110           
-----------------------------------------------------------------------
-Report for cell Edge_Detect_0.netlist
-  Original Cell name Edge_Detect
-     Instance path:  bmc_ctl_pwrbtn_u0.Edge_Detect_u0
-                                          Cell usage:
-                               cell       count    Res Usage(%)
-                            FD1S3BX        2         0.8
-                            FD1S3DX        2         0.3
-                           ORCALUT4        4         0.1
-                                VHI        1         0.8
-                                VLO        1         0.8
-                            
-                         TOTAL            10           
+                         TOTAL          7231           
 ----------------------------------------------------------------------
 Report for cell bmc_cpld_i2c_ram_16s.netlist
      Instance path:  bmc_cpld_i2c_ram_u0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2D       48        24.5
+                              CCU2D       39        19.9
                             FD1P3AX        7        13.0
-                            FD1P3BX      130        58.3
-                            FD1P3DX      151        11.6
+                            FD1P3BX      127        57.7
+                            FD1P3DX      154        11.9
                             FD1S1AY       16        50.0
                              FD1S1D        6        11.5
                             FD1S3AX        2        50.0
-                            FD1S3BX       46        17.6
-                            FD1S3DX       48         8.0
-                                INV       14        34.1
-                           ORCALUT4      769        20.7
-                              PFUMX       30        16.6
-                                VHI        3         2.3
-                                VLO        3         2.3
+                            FD1S3BX       49        18.6
+                            FD1S3DX       45         7.5
+                                INV       15        35.7
+                           ORCALUT4      748        21.0
+                              PFUMX       33        20.4
+                                VHI        3         2.4
+                                VLO        3         4.0
 SUB MODULES 
           i2c_slave_basic0_3s_16s_1        1       100.0
                 i2c_slave_bmc_16s_1        1       100.0
                             
-                         TOTAL          1275           
+                         TOTAL          1249           
 ----------------------------------------------------------------------
 Report for cell i2c_slave_bmc_16s_1.netlist
   Original Cell name i2c_slave_bmc_16s
      Instance path:  bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2D       48        24.5
+                              CCU2D       39        19.9
                             FD1P3AX        7        13.0
-                            FD1P3BX       24        10.8
+                            FD1P3BX       24        10.9
                             FD1P3DX       60         4.6
                             FD1S1AY       16        50.0
                              FD1S1D        6        11.5
                             FD1S3AX        2        50.0
-                            FD1S3BX       41        15.7
+                            FD1S3BX       41        15.5
                             FD1S3DX       37         6.2
-                                INV       10        24.4
-                           ORCALUT4      764        20.6
-                              PFUMX       30        16.6
+                                INV       10        23.8
+                           ORCALUT4      179         5.0
+                              PFUMX        1         0.6
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        2         2.7
 SUB MODULES 
           i2c_slave_basic0_3s_16s_1        1       100.0
                             
-                         TOTAL          1050           
+                         TOTAL           427           
 ----------------------------------------------------------------------
 Report for cell i2c_slave_basic0_3s_16s_1.netlist
   Original Cell name i2c_slave_basic0_3s_16s
@@ -253,15 +224,14 @@ Report for cell i2c_slave_basic0_3s_16s_1.netlist
                             FD1P3BX        8         3.6
                             FD1P3DX       28         2.2
                              FD1S1D        6        11.5
-                            FD1S3BX       25         9.6
+                            FD1S3BX       25         9.5
                             FD1S3DX       28         4.7
-                                INV       10        24.4
-                           ORCALUT4      708        19.1
-                              PFUMX       30        16.6
+                                INV       10        23.8
+                           ORCALUT4      103         2.9
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           856           
+                         TOTAL           221           
 ----------------------------------------------------------------------
 Report for cell pvt_gpi_64s_63s_0s_6s_Z6_1.netlist
   Original Cell name pvt_gpi_64s_63s_0s_6s_Z6
@@ -271,9 +241,9 @@ Report for cell pvt_gpi_64s_63s_0s_6s_Z6_1.netlist
                               CCU2D        4         2.0
                             FD1P3DX       22         1.7
                             FD1S3DX        2         0.3
-                           ORCALUT4       70         1.9
+                           ORCALUT4       70         2.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL           100           
 ----------------------------------------------------------------------
@@ -285,12 +255,12 @@ Report for cell s2p_164.netlist
                              FD1S1D        8        15.4
                             FD1S3BX        9         3.4
                             FD1S3DX       13         2.2
-                                INV        3         7.3
-                            L6MUX21        1         2.9
-                           ORCALUT4       35         0.9
-                              PFUMX        2         1.1
+                                INV        3         7.1
+                            L6MUX21        1         3.6
+                           ORCALUT4       35         1.0
+                              PFUMX        2         1.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            76           
 ----------------------------------------------------------------------
@@ -301,7 +271,7 @@ Report for cell pvt_gpi_8s_0_7s_0s_3s.netlist
                             FD1S3DX        5         0.8
                            ORCALUT4        8         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            15           
 ----------------------------------------------------------------------
@@ -313,9 +283,9 @@ Report for cell pvt_gpi_64s_63s_0s_6s_Z6.netlist
                               CCU2D        4         2.0
                             FD1P3DX       22         1.7
                             FD1S3DX        2         0.3
-                           ORCALUT4       70         1.9
+                           ORCALUT4       70         2.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL           100           
 ----------------------------------------------------------------------
@@ -328,7 +298,7 @@ Report for cell edge_delay_3s_0_0_0.netlist
                             FD1S3DX        3         0.5
                            ORCALUT4        6         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            12           
 ----------------------------------------------------------------------
@@ -339,11 +309,11 @@ Report for cell edge_delay_3s_0_0_1.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        1         0.1
                             FD1S3DX        3         0.5
-                           ORCALUT4        8         0.2
+                           ORCALUT4        7         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL            14           
+                         TOTAL            13           
 ----------------------------------------------------------------------
 Report for cell clear_nmi.netlist
      Instance path:  nmi_ctl_int
@@ -354,11 +324,11 @@ Report for cell clear_nmi.netlist
                                 INV        1         2.4
                            ORCALUT4        4         0.1
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        1         1.3
 SUB MODULES 
             edge_delay_2s_0_0_19_19        1       100.0
                             
-                         TOTAL            14           
+                         TOTAL            13           
 ----------------------------------------------------------------------
 Report for cell edge_delay_2s_0_0_19_19.netlist
   Original Cell name edge_delay_2s_0_0_19
@@ -369,9 +339,8 @@ Report for cell edge_delay_2s_0_0_19_19.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell clear_cmos.netlist
      Instance path:  clear_cmos_int
@@ -381,11 +350,11 @@ Report for cell clear_cmos.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        5         0.1
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        1         1.3
 SUB MODULES 
             edge_delay_2s_0_0_19_18        1       100.0
                             
-                         TOTAL            14           
+                         TOTAL            13           
 ----------------------------------------------------------------------
 Report for cell edge_delay_2s_0_0_19_18.netlist
   Original Cell name edge_delay_2s_0_0_19
@@ -396,9 +365,8 @@ Report for cell edge_delay_2s_0_0_19_18.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             9           
+                         TOTAL             8           
 ----------------------------------------------------------------------
 Report for cell edge_delay_6s_0_0_2_1.netlist
   Original Cell name edge_delay_6s_0_0_2
@@ -409,7 +377,7 @@ Report for cell edge_delay_6s_0_0_2_1.netlist
                             FD1P3DX        7         0.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            17           
 ----------------------------------------------------------------------
@@ -422,7 +390,7 @@ Report for cell edge_delay_6s_0_0_2_0.netlist
                             FD1P3DX        7         0.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            17           
 ----------------------------------------------------------------------
@@ -435,7 +403,7 @@ Report for cell edge_delay_6s_0_0_2.netlist
                             FD1P3DX        7         0.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            17           
 ----------------------------------------------------------------------
@@ -446,7 +414,7 @@ Report for cell edge_delay_1s_0_0.netlist
                             FD1S3DX        1         0.2
                            ORCALUT4        2         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             5           
 ----------------------------------------------------------------------
@@ -454,60 +422,59 @@ Report for cell bios_cpld_i2c_ram_16s.netlist
      Instance path:  bios_cpld_i2c_ram_u0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2D       39        19.9
+                              CCU2D       48        24.5
                             FD1P3AX        7        13.0
-                            FD1P3BX       25        11.2
+                            FD1P3BX       25        11.4
                             FD1P3DX       60         4.6
                             FD1S1AY       16        50.0
                              FD1S1D        6        11.5
                             FD1S3AX        2        50.0
-                            FD1S3BX       81        31.0
+                            FD1S3BX       81        30.7
                             FD1S3DX       45         7.5
-                                INV        3         7.3
-                            L6MUX21       12        34.3
-                           ORCALUT4      404        10.9
-                              PFUMX       73        40.3
-                                VHI       13        10.2
-                                VLO       13        10.2
+                                INV        3         7.1
+                            L6MUX21       15        53.6
+                           ORCALUT4      420        11.8
+                              PFUMX       59        36.4
+                                VHI       13        10.5
+                                VLO        3         4.0
 SUB MODULES 
             i2c_slave_basic0_3s_16s        1       100.0
                 i2c_slave_bmc_16s_0        1       100.0
-                  pcie_dync_alloc_3        1       100.0
-                pcie_dync_alloc_3_0        1       100.0
-                pcie_dync_alloc_3_1        1       100.0
-                pcie_dync_alloc_3_2        1       100.0
-                pcie_dync_alloc_3_3        1       100.0
-                pcie_dync_alloc_3_4        1       100.0
-                pcie_dync_alloc_3_5        1       100.0
-                pcie_dync_alloc_3_6        1       100.0
-                pcie_dync_alloc_3_7        1       100.0
-                pcie_dync_alloc_3_8        1       100.0
+                  pcie_dync_alloc_8        1       100.0
+                pcie_dync_alloc_8_0        1       100.0
+                pcie_dync_alloc_8_1        1       100.0
+                pcie_dync_alloc_8_2        1       100.0
+                pcie_dync_alloc_8_3        1       100.0
+                pcie_dync_alloc_8_4        1       100.0
+                pcie_dync_alloc_8_5        1       100.0
+                pcie_dync_alloc_8_6        1       100.0
+                pcie_dync_alloc_8_7        1       100.0
+                pcie_dync_alloc_8_8        1       100.0
                             
-                         TOTAL           811           
+                         TOTAL           815           
 ----------------------------------------------------------------------
 Report for cell i2c_slave_bmc_16s_0.netlist
   Original Cell name i2c_slave_bmc_16s
      Instance path:  bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                              CCU2D       39        19.9
+                              CCU2D       48        24.5
                             FD1P3AX        7        13.0
-                            FD1P3BX       24        10.8
+                            FD1P3BX       24        10.9
                             FD1P3DX       60         4.6
                             FD1S1AY       16        50.0
                              FD1S1D        6        11.5
                             FD1S3AX        2        50.0
-                            FD1S3BX       41        15.7
+                            FD1S3BX       41        15.5
                             FD1S3DX       37         6.2
-                                INV        3         7.3
-                           ORCALUT4      168         4.5
-                              PFUMX        1         0.6
+                                INV        3         7.1
+                           ORCALUT4      182         5.1
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        2         2.7
 SUB MODULES 
             i2c_slave_basic0_3s_16s        1       100.0
                             
-                         TOTAL           409           
+                         TOTAL           431           
 ----------------------------------------------------------------------
 Report for cell i2c_slave_basic0_3s_16s.netlist
   Original Cell name i2c_slave_basic0_3s_16s
@@ -519,124 +486,115 @@ Report for cell i2c_slave_basic0_3s_16s.netlist
                             FD1P3BX        8         3.6
                             FD1P3DX       28         2.2
                              FD1S1D        6        11.5
-                            FD1S3BX       25         9.6
+                            FD1S3BX       25         9.5
                             FD1S3DX       28         4.7
-                                INV        3         7.3
-                           ORCALUT4       97         2.6
+                                INV        3         7.1
+                           ORCALUT4       95         2.7
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           208           
+                         TOTAL           206           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_8.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_8.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu1_pe3_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_7.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_7.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu1_pe2_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_6.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_6.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu1_pe1_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_5.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_5.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu1_pe0_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_4.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_4.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu1_ge1_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_3.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_3.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu0_pe3_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_2.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_2.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu0_pe2_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_1.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_1.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu0_pe1_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3_0.netlist
-  Original Cell name pcie_dync_alloc_3
+Report for cell pcie_dync_alloc_8_0.netlist
+  Original Cell name pcie_dync_alloc_8
      Instance path:  bios_cpld_i2c_ram_u0.cpu0_pe0_alloc
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
-Report for cell pcie_dync_alloc_3.netlist
+Report for cell pcie_dync_alloc_8.netlist
   Original Cell name pcie_dync_alloc
      Instance path:  bios_cpld_i2c_ram_u0.cpu0_ge3_alloc
                                           Cell usage:
@@ -644,9 +602,8 @@ Report for cell pcie_dync_alloc_3.netlist
                             FD1S3BX        4         1.5
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             9           
 ----------------------------------------------------------------------
 Report for cell pch_cpld_espi_ram.netlist
      Instance path:  pch_cpld_espi_ram_u1
@@ -654,13 +611,13 @@ Report for cell pch_cpld_espi_ram.netlist
                                cell       count    Res Usage(%)
                             FD1P3BX        4         1.8
                             FD1P3DX        4         0.3
-                            FD1S3BX       40        15.3
+                            FD1S3BX       40        15.2
                             FD1S3DX        8         1.3
-                            L6MUX21       21        60.0
-                           ORCALUT4      175         4.7
-                              PFUMX       65        35.9
-                                VHI       11         8.6
-                                VLO       11         8.6
+                            L6MUX21       11        39.3
+                           ORCALUT4      179         5.0
+                              PFUMX       57        35.2
+                                VHI       11         8.9
+                                VLO        1         1.3
 SUB MODULES 
                  pcie_dync_alloc_10        1       100.0
                pcie_dync_alloc_10_0        1       100.0
@@ -673,7 +630,7 @@ SUB MODULES
                pcie_dync_alloc_10_7        1       100.0
                pcie_dync_alloc_10_8        1       100.0
                             
-                         TOTAL           349           
+                         TOTAL           325           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_8.netlist
   Original Cell name pcie_dync_alloc_10
@@ -682,9 +639,8 @@ Report for cell pcie_dync_alloc_10_8.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_7.netlist
   Original Cell name pcie_dync_alloc_10
@@ -693,9 +649,8 @@ Report for cell pcie_dync_alloc_10_7.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_6.netlist
   Original Cell name pcie_dync_alloc_10
@@ -704,9 +659,8 @@ Report for cell pcie_dync_alloc_10_6.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_5.netlist
   Original Cell name pcie_dync_alloc_10
@@ -715,9 +669,8 @@ Report for cell pcie_dync_alloc_10_5.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_4.netlist
   Original Cell name pcie_dync_alloc_10
@@ -726,9 +679,8 @@ Report for cell pcie_dync_alloc_10_4.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_3.netlist
   Original Cell name pcie_dync_alloc_10
@@ -737,9 +689,8 @@ Report for cell pcie_dync_alloc_10_3.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_2.netlist
   Original Cell name pcie_dync_alloc_10
@@ -748,9 +699,8 @@ Report for cell pcie_dync_alloc_10_2.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_1.netlist
   Original Cell name pcie_dync_alloc_10
@@ -759,9 +709,8 @@ Report for cell pcie_dync_alloc_10_1.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10_0.netlist
   Original Cell name pcie_dync_alloc_10
@@ -770,9 +719,8 @@ Report for cell pcie_dync_alloc_10_0.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell pcie_dync_alloc_10.netlist
   Original Cell name pcie_dync_alloc
@@ -781,26 +729,25 @@ Report for cell pcie_dync_alloc_10.netlist
                                cell       count    Res Usage(%)
                             FD1S3BX        4         1.5
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             6           
+                         TOTAL             5           
 ----------------------------------------------------------------------
 Report for cell espi_link.netlist
      Instance path:  bios_espi_link
                                           Cell usage:
                                cell       count    Res Usage(%)
                               CCU2D        9         4.6
-                            FD1P3BX       13         5.8
-                            FD1P3DX      111         8.5
-                            FD1S3BX        8         3.1
-                            FD1S3DX       64        10.6
-                                INV       10        24.4
-                           ORCALUT4      528        14.2
-                              PFUMX        2         1.1
+                            FD1P3BX       13         5.9
+                            FD1P3DX      103         8.0
+                            FD1S3BX        8         3.0
+                            FD1S3DX       66        11.0
+                                INV       10        23.8
+                           ORCALUT4      437        12.2
+                              PFUMX        1         0.6
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           747           
+                         TOTAL           649           
 ----------------------------------------------------------------------
 Report for cell UART_MASTER_Z5_1.netlist
   Original Cell name UART_MASTER_Z5
@@ -809,15 +756,15 @@ Report for cell UART_MASTER_Z5_1.netlist
                                cell       count    Res Usage(%)
                               CCU2D        7         3.6
                             FD1P3AX       13        24.1
-                            FD1P3BX        1         0.4
+                            FD1P3BX        1         0.5
                             FD1P3DX       20         1.5
                             FD1S3BX        2         0.8
                             FD1S3DX       13         2.2
-                           ORCALUT4       78         2.1
+                           ORCALUT4       71         2.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           136           
+                         TOTAL           129           
 ----------------------------------------------------------------------
 Report for cell UART_MASTER_Z5.netlist
   Original Cell name UART_MASTER_Z5
@@ -826,28 +773,28 @@ Report for cell UART_MASTER_Z5.netlist
                                cell       count    Res Usage(%)
                               CCU2D        7         3.6
                             FD1P3AX       13        24.1
-                            FD1P3BX        1         0.4
+                            FD1P3BX        1         0.5
                             FD1P3DX       20         1.5
                             FD1S3BX        2         0.8
                             FD1S3DX       13         2.2
-                           ORCALUT4       75         2.0
+                           ORCALUT4       71         2.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           133           
+                         TOTAL           129           
 ----------------------------------------------------------------------
 Report for cell error_code.netlist
      Instance path:  error_code_int
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1S3DX        5         0.8
-                            L6MUX21        1         2.9
-                           ORCALUT4       30         0.8
-                              PFUMX        4         2.2
+                            L6MUX21        1         3.6
+                           ORCALUT4       26         0.7
+                              PFUMX        5         3.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL            42           
+                         TOTAL            39           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_36.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -858,7 +805,7 @@ Report for cell fault_detectB_chklive_1s_36.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -871,9 +818,8 @@ Report for cell edge_delay_2s_0_0_19_17.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell pwrseq_slave_Z4.netlist
      Instance path:  pwrseq_slave_inst
@@ -884,9 +830,9 @@ Report for cell pwrseq_slave_Z4.netlist
                             FD1P3DX       51         3.9
                             FD1S3DX       71        11.8
                                 INV        1         2.4
-                           ORCALUT4      231         6.2
-                                VHI       35        27.3
-                                VLO       35        27.3
+                           ORCALUT4      238         6.7
+                                VHI       35        28.2
+                                VLO       19        25.3
 SUB MODULES 
                 edge_delay_2s_0_0_1        1       100.0
              edge_delay_2s_0_0_19_1        1       100.0
@@ -923,7 +869,7 @@ SUB MODULES
           fault_detectB_chklive_1s_34        1       100.0
           fault_detectB_chklive_1s_35        1       100.0
                             
-                         TOTAL           462           
+                         TOTAL           453           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_35.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -934,7 +880,7 @@ Report for cell fault_detectB_chklive_1s_35.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             8           
 ----------------------------------------------------------------------
@@ -946,7 +892,7 @@ Report for cell edge_delay_2s_0_0_1.netlist
                             FD1S3DX        3         0.5
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             8           
 ----------------------------------------------------------------------
@@ -959,7 +905,7 @@ Report for cell fault_detectB_chklive_1s_34.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -972,9 +918,8 @@ Report for cell edge_delay_2s_0_0_19_16.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_33.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -985,7 +930,7 @@ Report for cell fault_detectB_chklive_1s_33.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -998,9 +943,8 @@ Report for cell edge_delay_2s_0_0_19_15.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_32.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1011,7 +955,7 @@ Report for cell fault_detectB_chklive_1s_32.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1024,9 +968,8 @@ Report for cell edge_delay_2s_0_0_19_14.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_31.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1037,7 +980,7 @@ Report for cell fault_detectB_chklive_1s_31.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1048,11 +991,10 @@ Report for cell edge_delay_2s_0_0_19_13.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        1         0.1
                             FD1S3DX        2         0.3
-                           ORCALUT4        5         0.1
+                           ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            10           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_30.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1063,7 +1005,7 @@ Report for cell fault_detectB_chklive_1s_30.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1076,9 +1018,8 @@ Report for cell edge_delay_2s_0_0_19_12.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_29.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1089,7 +1030,7 @@ Report for cell fault_detectB_chklive_1s_29.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1102,9 +1043,8 @@ Report for cell edge_delay_2s_0_0_19_11.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_28.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1115,7 +1055,7 @@ Report for cell fault_detectB_chklive_1s_28.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1128,9 +1068,8 @@ Report for cell edge_delay_2s_0_0_19_10.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_27.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1141,7 +1080,7 @@ Report for cell fault_detectB_chklive_1s_27.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1154,9 +1093,8 @@ Report for cell edge_delay_2s_0_0_19_9.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_26.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1165,11 +1103,11 @@ Report for cell fault_detectB_chklive_1s_26.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        1         0.1
                             FD1S3DX        2         0.3
-                           ORCALUT4        4         0.1
+                           ORCALUT4        5         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL             9           
+                         TOTAL            10           
 ----------------------------------------------------------------------
 Report for cell edge_delay_2s_0_0_19_8.netlist
   Original Cell name edge_delay_2s_0_0_19
@@ -1180,9 +1118,8 @@ Report for cell edge_delay_2s_0_0_19_8.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_25.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1193,7 +1130,7 @@ Report for cell fault_detectB_chklive_1s_25.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1206,9 +1143,8 @@ Report for cell edge_delay_2s_0_0_19_7.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_24.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1219,7 +1155,7 @@ Report for cell fault_detectB_chklive_1s_24.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1232,9 +1168,8 @@ Report for cell edge_delay_2s_0_0_19_6.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_23.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1245,7 +1180,7 @@ Report for cell fault_detectB_chklive_1s_23.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1258,9 +1193,8 @@ Report for cell edge_delay_2s_0_0_19_5.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_22.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1269,11 +1203,11 @@ Report for cell fault_detectB_chklive_1s_22.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        1         0.1
                             FD1S3DX        2         0.3
-                           ORCALUT4        4         0.1
+                           ORCALUT4        6         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL             9           
+                         TOTAL            11           
 ----------------------------------------------------------------------
 Report for cell edge_delay_2s_0_0_19_4.netlist
   Original Cell name edge_delay_2s_0_0_19
@@ -1284,9 +1218,8 @@ Report for cell edge_delay_2s_0_0_19_4.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_21.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1297,7 +1230,7 @@ Report for cell fault_detectB_chklive_1s_21.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1310,9 +1243,8 @@ Report for cell edge_delay_2s_0_0_19_3.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_20.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1323,7 +1255,7 @@ Report for cell fault_detectB_chklive_1s_20.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1334,9 +1266,8 @@ Report for cell edge_delay_2s_0_0_19_2.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        1         0.1
                             FD1S3DX        2         0.3
-                           ORCALUT4        3         0.1
+                           ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
                          TOTAL             8           
 ----------------------------------------------------------------------
@@ -1349,7 +1280,7 @@ Report for cell fault_detectB_chklive_1s_19.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             9           
 ----------------------------------------------------------------------
@@ -1362,9 +1293,8 @@ Report for cell edge_delay_2s_0_0_19_1.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell pwrseq_master.netlist
      Instance path:  pwrseq_master_inst
@@ -1375,17 +1305,16 @@ Report for cell pwrseq_master.netlist
                             FD1P3BX        2         0.9
                             FD1P3DX       70         5.4
                             FD1S3DX       18         3.0
-                                INV        2         4.9
-                           ORCALUT4      202         5.4
-                              PFUMX        1         0.6
-                                VHI        4         3.1
-                                VLO        4         3.1
+                                INV        2         4.8
+                           ORCALUT4      183         5.1
+                                VHI        4         3.2
+                                VLO        1         1.3
 SUB MODULES 
                       Edge_Detect_1        1       100.0
                       Edge_Detect_2        1       100.0
              edge_delay_2s_0_0_19_0        1       100.0
                             
-                         TOTAL           318           
+                         TOTAL           295           
 ----------------------------------------------------------------------
 Report for cell edge_delay_2s_0_0_19_0.netlist
   Original Cell name edge_delay_2s_0_0_19
@@ -1396,9 +1325,8 @@ Report for cell edge_delay_2s_0_0_19_0.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell Edge_Detect_2.netlist
   Original Cell name Edge_Detect
@@ -1407,9 +1335,8 @@ Report for cell Edge_Detect_2.netlist
                                cell       count    Res Usage(%)
                             FD1S3DX        2         0.3
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             4           
+                         TOTAL             3           
 ----------------------------------------------------------------------
 Report for cell Edge_Detect_1.netlist
   Original Cell name Edge_Detect
@@ -1419,9 +1346,8 @@ Report for cell Edge_Detect_1.netlist
                             FD1S3DX        2         0.3
                                 INV        1         2.4
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             5           
+                         TOTAL             4           
 ----------------------------------------------------------------------
 Report for cell cpu_module.netlist
      Instance path:  cpu_module_u1
@@ -1430,24 +1356,23 @@ Report for cell cpu_module.netlist
                             FD1S3DX        1         0.2
                                 INV        1         2.4
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             4           
+                         TOTAL             3           
 ----------------------------------------------------------------------
 Report for cell Signal_Latch_0_1_0_0.netlist
   Original Cell name Signal_Latch_0_1_0_1
      Instance path:  Signal_Latch_THERMTRIP1
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        1         0.4
+                            FD1P3BX        1         0.5
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        1         1.3
 SUB MODULES 
                  Edge_Detect_SL_0_0        1       100.0
                             
-                         TOTAL            11           
+                         TOTAL            10           
 ----------------------------------------------------------------------
 Report for cell Edge_Detect_SL_0_0.netlist
   Original Cell name Edge_Detect_SL_0
@@ -1456,24 +1381,23 @@ Report for cell Edge_Detect_SL_0_0.netlist
                                cell       count    Res Usage(%)
                             FD1S3DX        2         0.3
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             4           
+                         TOTAL             3           
 ----------------------------------------------------------------------
 Report for cell Signal_Latch_0_1_0_1.netlist
   Original Cell name Signal_Latch_0_1_0_1
      Instance path:  Signal_Latch_THERMTRIP0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        1         0.4
+                            FD1P3BX        1         0.5
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        1         1.3
 SUB MODULES 
                    Edge_Detect_SL_0        1       100.0
                             
-                         TOTAL            11           
+                         TOTAL            10           
 ----------------------------------------------------------------------
 Report for cell Edge_Detect_SL_0.netlist
   Original Cell name Edge_Detect_SL_0
@@ -1482,9 +1406,8 @@ Report for cell Edge_Detect_SL_0.netlist
                                cell       count    Res Usage(%)
                             FD1S3DX        2         0.3
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             4           
+                         TOTAL             3           
 ----------------------------------------------------------------------
 Report for cell cpu_thermtrip.netlist
      Instance path:  thermtrip_int
@@ -1492,14 +1415,14 @@ Report for cell cpu_thermtrip.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        3         0.2
                             FD1S3DX        2         0.3
-                           ORCALUT4        8         0.2
-                                VHI        3         2.3
-                                VLO        3         2.3
+                           ORCALUT4        9         0.3
+                                VHI        2         1.6
+                                VLO        1         1.3
 SUB MODULES 
            fault_detectB_chklive_1s        1       100.0
           fault_detectB_chklive_1s_18        1       100.0
                             
-                         TOTAL            21           
+                         TOTAL            19           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s_18.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1508,11 +1431,10 @@ Report for cell fault_detectB_chklive_1s_18.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        1         0.1
                             FD1S3DX        1         0.2
-                           ORCALUT4        4         0.1
+                           ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             6           
 ----------------------------------------------------------------------
 Report for cell fault_detectB_chklive_1s.netlist
   Original Cell name fault_detectB_chklive_1s
@@ -1521,11 +1443,11 @@ Report for cell fault_detectB_chklive_1s.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        2         0.2
                             FD1S3DX        1         0.2
-                           ORCALUT4        4         0.1
+                           ORCALUT4        6         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL             9           
+                         TOTAL            11           
 ----------------------------------------------------------------------
 Report for cell edge_delay_2s_0_0_19.netlist
   Original Cell name edge_delay_2s_0_0
@@ -1536,9 +1458,8 @@ Report for cell edge_delay_2s_0_0_19.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        3         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell Edge_Detect_3.netlist
   Original Cell name Edge_Detect
@@ -1548,7 +1469,7 @@ Report for cell Edge_Detect_3.netlist
                             FD1S3BX        2         0.8
                            ORCALUT4        1         0.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             5           
 ----------------------------------------------------------------------
@@ -1557,51 +1478,78 @@ Report for cell system_rst.netlist
                                           Cell usage:
                                cell       count    Res Usage(%)
                               CCU2D        4         2.0
-                            FD1P3BX        5         2.2
+                            FD1P3BX        5         2.3
                             FD1P3DX        7         0.5
-                           ORCALUT4        7         0.2
+                           ORCALUT4        8         0.2
                                 VHI        2         1.6
-                                VLO        2         1.6
+                                VLO        2         2.7
 SUB MODULES 
           lowpass_filter_3_1_0_1_4_Z3        1       100.0
                             
-                         TOTAL            28           
+                         TOTAL            29           
 ----------------------------------------------------------------------
 Report for cell lowpass_filter_3_1_0_1_4_Z3.netlist
      Instance path:  system_rst_u0.lowpass_filter_U0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        5         2.2
-                           ORCALUT4        1         0.0
+                            FD1P3BX        5         2.3
+                           ORCALUT4        2         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL             8           
+                         TOTAL             9           
+----------------------------------------------------------------------
+Report for cell bmc_ctl_pwrbtn.netlist
+     Instance path:  bmc_ctl_pwrbtn_u0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D       19         9.7
+                            FD1P3DX       40         3.1
+                            FD1S3BX        2         0.8
+                            FD1S3DX        2         0.3
+                           ORCALUT4       40         1.1
+                                VHI        2         1.6
+                                VLO        2         2.7
+SUB MODULES 
+                      Edge_Detect_0        1       100.0
+                            
+                         TOTAL           108           
+----------------------------------------------------------------------
+Report for cell Edge_Detect_0.netlist
+  Original Cell name Edge_Detect
+     Instance path:  bmc_ctl_pwrbtn_u0.Edge_Detect_u0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3BX        2         0.8
+                            FD1S3DX        2         0.3
+                           ORCALUT4        3         0.1
+                                VHI        1         0.8
+                                VLO        1         1.3
+                            
+                         TOTAL             9           
 ----------------------------------------------------------------------
 Report for cell Pwr_But_Ctrl_4s.netlist
      Instance path:  Pwr_But_Ctrl_U0
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        5         2.2
+                            FD1P3BX        5         2.3
                            ORCALUT4        1         0.0
-                                VHI        2         1.6
-                                VLO        2         1.6
+                                VHI        1         0.8
 SUB MODULES 
           lowpass_filter_3s_1_0_1_Z2_2        1       100.0
                             
-                         TOTAL            11           
+                         TOTAL             8           
 ----------------------------------------------------------------------
 Report for cell lowpass_filter_3s_1_0_1_Z2_2.netlist
   Original Cell name lowpass_filter_3s_1_0_1_4_Z2
      Instance path:  Pwr_But_Ctrl_U0.PwrBtn_Filter
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        5         2.2
+                            FD1P3BX        5         2.3
                            ORCALUT4        1         0.0
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             8           
+                         TOTAL             7           
 ----------------------------------------------------------------------
 Report for cell p2s_slave_96s_7s.netlist
      Instance path:  inst_mcpld_to_cmucpld_p2s
@@ -1612,12 +1560,12 @@ Report for cell p2s_slave_96s_7s.netlist
                             FD1P3DX        7         0.5
                             FD1S3BX        2         0.8
                             FD1S3DX        9         1.5
-                           ORCALUT4       21         0.6
-                              PFUMX        2         1.1
+                           ORCALUT4       20         0.6
+                              PFUMX        2         1.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL            48           
+                         TOTAL            47           
 ----------------------------------------------------------------------
 Report for cell s2p_master_96s_8s.netlist
      Instance path:  inst_cmucpld_to_mcpld_s2p
@@ -1629,7 +1577,7 @@ Report for cell s2p_master_96s_8s.netlist
                             FD1S3DX        7         1.2
                            ORCALUT4       25         0.7
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            68           
 ----------------------------------------------------------------------
@@ -1642,12 +1590,12 @@ Report for cell p2s_slave_200s_8s.netlist
                             FD1P3DX        8         0.6
                             FD1S3BX        2         0.8
                             FD1S3DX        9         1.5
-                           ORCALUT4      125         3.4
-                              PFUMX        2         1.1
+                           ORCALUT4       66         1.8
+                              PFUMX        3         1.9
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           154           
+                         TOTAL            96           
 ----------------------------------------------------------------------
 Report for cell s2p_master_200s_9s.netlist
      Instance path:  inst_scpld_to_mcpld_s2p
@@ -1655,13 +1603,13 @@ Report for cell s2p_master_200s_9s.netlist
                                cell       count    Res Usage(%)
                               CCU2D        5         2.6
                             FD1P3AX        2         3.7
-                            FD1P3DX      370        28.5
+                            FD1P3DX      370        28.6
                             FD1S3DX        7         1.2
-                           ORCALUT4      321         8.6
+                           ORCALUT4      319         8.9
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           707           
+                         TOTAL           705           
 ----------------------------------------------------------------------
 Report for cell pvt_gpi_64s_63s_0s_7s_Z1.netlist
      Instance path:  pvt_gpi_MB_inst
@@ -1670,11 +1618,11 @@ Report for cell pvt_gpi_64s_63s_0s_7s_Z1.netlist
                               CCU2D        4         2.0
                             FD1P3DX       43         3.3
                             FD1S3DX        2         0.3
-                           ORCALUT4       70         1.9
+                           ORCALUT4       92         2.6
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL           121           
+                         TOTAL           143           
 ----------------------------------------------------------------------
 Report for cell Edge_Detect.netlist
   Original Cell name Edge_Detect
@@ -1683,9 +1631,8 @@ Report for cell Edge_Detect.netlist
                                cell       count    Res Usage(%)
                             FD1S3DX        1         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL             3           
+                         TOTAL             2           
 ----------------------------------------------------------------------
 Report for cell PGM_DEBOUNCE_2s_2_4s_1.netlist
      Instance path:  db_p12v_droop
@@ -1696,7 +1643,7 @@ Report for cell PGM_DEBOUNCE_2s_2_4s_1.netlist
                             FD1S3DX        4         0.7
                            ORCALUT4        8         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            19           
 ----------------------------------------------------------------------
@@ -1704,12 +1651,12 @@ Report for cell PGM_DEBOUNCE_3s_3_8s_1.netlist
      Instance path:  db_inst_amd_cpu_prsnt
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        1         0.4
+                            FD1P3BX        1         0.5
                             FD1S3BX        5         1.9
                             FD1S3DX        9         1.5
-                           ORCALUT4       20         0.5
+                           ORCALUT4       20         0.6
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            37           
 ----------------------------------------------------------------------
@@ -1720,9 +1667,9 @@ Report for cell PGM_DEBOUNCE_N_21s_3_8s_1.netlist
                             FD1P3DX       21         1.6
                             FD1S3DX       84        14.0
                                 INV        1         2.4
-                           ORCALUT4      105         2.8
+                           ORCALUT4      105         2.9
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL           213           
 ----------------------------------------------------------------------
@@ -1735,7 +1682,7 @@ Report for cell PGM_DEBOUNCE_4s_2_4s_1.netlist
                             FD1S3DX        8         1.3
                            ORCALUT4       16         0.4
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            34           
 ----------------------------------------------------------------------
@@ -1745,22 +1692,21 @@ Report for cell SYNC_DATA_N_17s.netlist
                                cell       count    Res Usage(%)
                             FD1S3DX       17         2.8
                                 VHI        1         0.8
-                                VLO        1         0.8
                             
-                         TOTAL            19           
+                         TOTAL            18           
 ----------------------------------------------------------------------
 Report for cell PGM_DEBOUNCE_10s_2_4s_1.netlist
      Instance path:  db_inst_psu
                                           Cell usage:
                                cell       count    Res Usage(%)
                             FD1P3BX       10         4.5
-                            FD1S3BX       12         4.6
+                            FD1S3BX       12         4.5
                             FD1S3DX       20         3.3
-                           ORCALUT4       40         1.1
+                           ORCALUT4       44         1.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL            84           
+                         TOTAL            88           
 ----------------------------------------------------------------------
 Report for cell PGM_DEBOUNCE_6s_2_4s_1.netlist
      Instance path:  db_vr_ocp_low
@@ -1769,9 +1715,9 @@ Report for cell PGM_DEBOUNCE_6s_2_4s_1.netlist
                             FD1P3BX        6         2.7
                             FD1S3BX        6         2.3
                             FD1S3DX       12         2.0
-                           ORCALUT4       24         0.6
+                           ORCALUT4       24         0.7
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            50           
 ----------------------------------------------------------------------
@@ -1779,12 +1725,12 @@ Report for cell PGM_DEBOUNCE_3s_2_4s_1.netlist
      Instance path:  db_inst_pwr_btn
                                           Cell usage:
                                cell       count    Res Usage(%)
-                            FD1P3BX        3         1.3
+                            FD1P3BX        3         1.4
                             FD1S3BX        3         1.1
                             FD1S3DX        6         1.0
                            ORCALUT4       12         0.3
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            26           
 ----------------------------------------------------------------------
@@ -1795,7 +1741,7 @@ Report for cell I2C_UPDATE.netlist
                                  BB        2        33.3
                                 EFB        1       100.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             5           
 ----------------------------------------------------------------------
@@ -1807,8 +1753,8 @@ Report for cell ClkDivTree.netlist
                             FD1S3DX       16         2.7
                                 INV        1         2.4
                            ORCALUT4       37         1.0
-                                VHI        7         5.5
-                                VLO        7         5.5
+                                VHI        6         4.8
+                                VLO        6         8.0
 SUB MODULES 
                        ClkDiv_1s_1s        1       100.0
                      ClkDiv_3s_4s_1        1       100.0
@@ -1817,7 +1763,7 @@ SUB MODULES
                      ClkDiv_5s_9s_1        1       100.0
                       ClkDiv_6s_49s        1       100.0
                             
-                         TOTAL            88           
+                         TOTAL            86           
 ----------------------------------------------------------------------
 Report for cell ClkDiv_5s_19s.netlist
      Instance path:  mClkDivTree.m20mSCE
@@ -1825,9 +1771,9 @@ Report for cell ClkDiv_5s_19s.netlist
                                cell       count    Res Usage(%)
                             FD1P3DX        4         0.3
                             FD1S3DX        2         0.3
-                           ORCALUT4        9         0.2
+                           ORCALUT4        9         0.3
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            17           
 ----------------------------------------------------------------------
@@ -1838,7 +1784,7 @@ Report for cell ClkDiv_1s_1s.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        2         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             6           
 ----------------------------------------------------------------------
@@ -1850,7 +1796,7 @@ Report for cell ClkDiv_4s_9s.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        6         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            13           
 ----------------------------------------------------------------------
@@ -1863,7 +1809,7 @@ Report for cell ClkDiv_3s_4s_1.netlist
                             FD1S3DX        1         0.2
                            ORCALUT4        4         0.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            10           
 ----------------------------------------------------------------------
@@ -1876,7 +1822,7 @@ Report for cell ClkDiv_5s_9s_1.netlist
                             FD1S3DX        2         0.3
                            ORCALUT4        8         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            16           
 ----------------------------------------------------------------------
@@ -1888,7 +1834,7 @@ Report for cell ClkDiv_6s_49s.netlist
                                 INV        1         2.4
                            ORCALUT4        8         0.2
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL            18           
 ----------------------------------------------------------------------
@@ -1897,15 +1843,15 @@ Report for cell timer_gen.netlist
                                           Cell usage:
                                cell       count    Res Usage(%)
                               CCU2D       11         5.6
-                            FD1P3BX        1         0.4
+                            FD1P3BX        1         0.5
                             FD1P3DX       22         1.7
                             FD1S3DX       19         3.2
                                 INV        1         2.4
-                           ORCALUT4       26         0.7
+                           ORCALUT4       41         1.1
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL            82           
+                         TOTAL            97           
 ----------------------------------------------------------------------
 Report for cell pon_reset.netlist
      Instance path:  pon_reset_inst
@@ -1915,7 +1861,7 @@ Report for cell pon_reset.netlist
                                 INV        1         2.4
                            ORCALUT4        1         0.0
                                 VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
                          TOTAL             7           
 ----------------------------------------------------------------------
@@ -1925,7 +1871,6 @@ Report for cell pll_i25M_o50M_o25M.netlist
                                cell       count    Res Usage(%)
                             EHXPLLJ        1       100.0
                                 INV        1         2.4
-                                VHI        1         0.8
-                                VLO        1         0.8
+                                VLO        1         1.3
                             
-                         TOTAL             4           
+                         TOTAL             3           

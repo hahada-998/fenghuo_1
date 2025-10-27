@@ -19,49 +19,49 @@
 // History    :
 //   Date      By          Revision  Change Description
 //=================================================================================================
-
 module edge_delay #(
-  parameter  CNTR_NBITS = 5,
-  parameter  DEF_OUTPUT = 1'b0,
-  parameter  DELAY_MODE = 1'b0) (
+    parameter integer CNTR_NBITS = 5,
+    parameter         DEF_OUTPUT = 1'b0,
+    parameter         DELAY_MODE = 1'b0
+)(
+    // 时钟/复位
+    input  wire                      clk,        // 时钟
+    input  wire                      reset,      // 异步复位（高有效）
 
-  // Clocks and resets
-  input      clk,                       // input clock
-  input      reset,                     // reset
+    // 延迟控制
+    input  wire [CNTR_NBITS-1:0]     cnt_size,   // 延迟计数阈值（以 cnt_step 为步进）
+    input  wire                      cnt_step,   // 计数步脉冲（例如 1us tick）
 
-  // Delay control
-  input      [CNTR_NBITS-1:0] cnt_size,   // delay count
-  input      cnt_step,                  // time increment (normally ticks)
-
-  // Signals
-  input      signal_in,                 // input signal
-  output reg delay_output               // signal_in delayed by cnt_size*cnt_step
+    // 信号
+    input  wire                      signal_in,  // 被延迟的输入信号
+    output reg                       delay_output// OUTPUT: 延迟后的输出（与 signal_in 相同宽度的单比特）
 );
-
+// 计数器寄存
 reg [CNTR_NBITS-1:0] timer_cnt;
 
-//------------------------------------------------------------------------------
-// Delay logic
-// - delay_output is the delayed version of signal_in by cnt_size*cnt_step.
-// - the edge delayed is based on DELAY_MODE
-// - only a single edge can be delayed. both edges cannot be delayed with in
-//   the same instance of this module.
-// - edge not specified by DELAY_MODE has no delay and reflected to delay_output
-//   immediately
-//------------------------------------------------------------------------------
+// timer_cnt 计数器逻辑（独立同步块）
+always @(posedge clk or posedge reset)begin
+    if(reset)
+        timer_cnt <= {CNTR_NBITS{1'b0}};
+    else if(signal_in == DELAY_MODE)
+        // 输入回到DELAY_MODE（被延迟方向的电平），取消计时并清零计数器
+        timer_cnt <= {CNTR_NBITS{1'b0}};
+    else if(cnt_step)
+        // 累计延时计数，直到达到 cnt_size
+        if(timer_cnt < cnt_size)
+            timer_cnt <= timer_cnt + 1'b1;
+end
+
+// delay_output 输出寄存（独立同步块，基于 timer_cnt 与 signal_in 的状态更新）
 always @(posedge clk or posedge reset) begin
-  if (reset) begin
-    timer_cnt    <= {CNTR_NBITS{1'b0}};
-    delay_output <= DEF_OUTPUT;
-  end
-  else if (signal_in == DELAY_MODE) begin
-    timer_cnt    <= {CNTR_NBITS{1'b0}};
-    delay_output <= DELAY_MODE;
-  end
-  else if (cnt_step) begin
-    timer_cnt    <= (timer_cnt != cnt_size) ? (timer_cnt + 1'b1) : timer_cnt;
-    delay_output <= (timer_cnt == cnt_size) ? ~DELAY_MODE        : delay_output;
-  end
+    if(reset)
+        delay_output <= DEF_OUTPUT;
+    else if(signal_in == DELAY_MODE)
+        // 输入回到 DELAY_MODE 时，输出立即反映该电平（无延迟方向）
+        delay_output <= DELAY_MODE;
+    else if (timer_cnt == cnt_size)
+        // 当计数器达到阈值时，把输出切换到非 DELAY_MODE（延迟完成）
+        delay_output <= ~DELAY_MODE;
 end
 
 endmodule

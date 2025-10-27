@@ -1,6 +1,3 @@
-@E: CG855 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":306:7:306:20|Duplicate module name PGM_DEBOUNCE_N
-@E: CG254 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":313:0:313:4|Redeclaration of ports. Cannot mix styles.
-@E: CG254 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":314:0:314:4|Redeclaration of ports. Cannot mix styles.
-@E: CG254 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":315:0:315:5|Redeclaration of ports. Cannot mix styles.
-@E: CS243 :"C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\rtl\source\common\synclib.v":315:20:315:23|Direction (input, output, inout) set multiple times for port dout
+@E: CG342 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\bios_cpld_i2c_ram.v":369:26:369:39|Expecting target variable, found r_espi_date_in -- possible misspelling
+@E: CS187 :"D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\rtl\source\bmc_i2c\bios_cpld_i2c_ram.v":455:0:455:8|Expecting endmodule
 

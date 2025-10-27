@@ -1,29 +1,29 @@
-@P:  Worst Slack : -3.153
-@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Frequency : 61.3 MHz
+@P:  Worst Slack : -3.235
+@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Frequency : 60.7 MHz
 @P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Requested Frequency : 100.0 MHz
-@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Period : 16.305
+@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Period : 16.470
 @P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Requested Period : 10.000
-@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Slack : -3.153
-@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_inferred_clock - Estimated Frequency : NA
-@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_inferred_clock - Estimated Period : NA
-@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_inferred_clock - Requested Period : 10.000
-@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_inferred_clock - Slack : NA
+@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Slack : -3.235
+@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_i_inferred_clock - Estimated Frequency : 561.4 MHz
+@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_i_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_i_inferred_clock - Estimated Period : 1.781
+@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_i_inferred_clock - Requested Period : 10.000
+@P:  BM_H13DSP_M|o_P0_PWR_BTN_R_N_i_inferred_clock - Slack : 8.219
 @P:  ClkDiv_1s_1s|rDivClk_q_derived_clock - Estimated Frequency : 367.0 MHz
 @P:  ClkDiv_1s_1s|rDivClk_q_derived_clock - Requested Frequency : 100.0 MHz
 @P:  ClkDiv_1s_1s|rDivClk_q_derived_clock - Estimated Period : 2.725
 @P:  ClkDiv_1s_1s|rDivClk_q_derived_clock - Requested Period : 10.000
 @P:  ClkDiv_1s_1s|rDivClk_q_derived_clock - Slack : 7.275
-@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Frequency : 109.8 MHz
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Frequency : 121.9 MHz
 @P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Period : 9.105
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Period : 8.203
 @P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Requested Period : 10.000
-@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Slack : 0.895
-@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Frequency : 101.2 MHz
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Slack : 1.797
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Frequency : 94.0 MHz
 @P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Period : 9.877
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Period : 10.640
 @P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Requested Period : 10.000
-@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Slack : 0.123
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Slack : -0.640
 @P:  s2p_164|sclk_derived_clock - Estimated Frequency : 363.8 MHz
 @P:  s2p_164|sclk_derived_clock - Requested Frequency : 100.0 MHz
 @P:  s2p_164|sclk_derived_clock - Estimated Period : 2.749
@@ -34,12 +34,12 @@
 @P:  timer_gen|t1us_derived_clock - Estimated Period : 2.749
 @P:  timer_gen|t1us_derived_clock - Requested Period : 10.000
 @P:  timer_gen|t1us_derived_clock - Slack : 13.123
-@P:  System - Estimated Frequency : 373.6 MHz
+@P:  System - Estimated Frequency : 99.6 MHz
 @P:  System - Requested Frequency : 100.0 MHz
-@P:  System - Estimated Period : 2.676
+@P:  System - Estimated Period : 10.042
 @P:  System - Requested Period : 10.000
-@P:  System - Slack : 7.324
-@P:  Total Area : 3752.0
+@P:  System - Slack : -0.042
+@P:  Total Area : 3612.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
@@ -167,4 +167,4 @@
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
-@P:  CPU Time : 0h:00m:41s
+@P:  CPU Time : 0h:00m:49s

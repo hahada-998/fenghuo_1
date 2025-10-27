@@ -45,58 +45,58 @@ set_option -resolve_multiple_driver 0
 set_option -seqshift_no_replicate 0
 
 #-- add_file options
-set_option -include_path {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/include}
-set_option -include_path {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/BM_H13DSP_M_TOP.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/PLL/pll_i25M_o50M_o25M.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/IIC_Update/I2C_UPDATE.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/74LV165/pvt_gpi.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/bmc_i2c/i2c_slave_basic0.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/bmc_i2c/i2c_slave_bmc.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/ESPI_LINK/espi_link.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/ESPI_LINK/pch_cpld_espi_ram.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/ESPI_LINK/pcie_dync_alloc.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/SGPIO_MASTER/s2p_master.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/SGPIO_MASTER/p2s_slave.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/ClkDiv.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/delay.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/ClkDivTree.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/edge_delay.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/edge_detect.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/lowpass_filter.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/pon_reset.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/synclib.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/timer_gen_50mhz.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/system_rst.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Signal_Latch/Edge_Detect_SL.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Signal_Latch/Signal_Latch.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/uart/mcio_uart_master.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Pwr_But_Ctrl/bmc_ctl_pwrbtn.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Pwr_But_Ctrl/Pwr_But_Ctrl.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/bios_i2c/bios_cpld_i2c_ram.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/nmi_clear.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/cpu_module.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/cpu_thermtrip.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Pwr_seq/pwrseq_master.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Pwr_seq/pwrseq_slave.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/cmos_clear.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/extrst_evt_count.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/genCntr.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/common/MESSAGE_CONTROL.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Power_Fault/dimm_fail_event.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Power_Fault/ERROR_CODE.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectA_chklive.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectB_chklive.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Power_Fault/Power_Fault.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/Power_Fault/Pwr_Error_Latch.v}
-add_file -verilog -vlog_std v2001 {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/rtl/source/74HC164/s2p_164.v}
+set_option -include_path {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/include}
+set_option -include_path {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/pro}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/BM_H13DSP_M_TOP.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/PLL/pll_i25M_o50M_o25M.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/IIC_Update/I2C_UPDATE.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/74LV165/pvt_gpi.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/bmc_i2c/i2c_slave_basic0.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/bmc_i2c/i2c_slave_bmc.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/ESPI_LINK/espi_link.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/ESPI_LINK/pch_cpld_espi_ram.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/ESPI_LINK/pcie_dync_alloc.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/SGPIO_MASTER/s2p_master.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/SGPIO_MASTER/p2s_slave.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/ClkDiv.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/delay.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/ClkDivTree.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/edge_delay.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/edge_detect.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/lowpass_filter.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/pon_reset.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/synclib.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/timer_gen_50mhz.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/system_rst.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Signal_Latch/Edge_Detect_SL.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Signal_Latch/Signal_Latch.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/uart/mcio_uart_master.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Pwr_But_Ctrl/bmc_ctl_pwrbtn.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Pwr_But_Ctrl/Pwr_But_Ctrl.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/bios_i2c/bios_cpld_i2c_ram.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/nmi_clear.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/cpu_module.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/cpu_thermtrip.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Pwr_seq/pwrseq_master.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Pwr_seq/pwrseq_slave.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/cmos_clear.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/extrst_evt_count.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/genCntr.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/common/MESSAGE_CONTROL.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Power_Fault/dimm_fail_event.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Power_Fault/ERROR_CODE.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectA_chklive.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectB_chklive.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Power_Fault/Power_Fault.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/Power_Fault/Pwr_Error_Latch.v}
+add_file -verilog -vlog_std v2001 {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/rtl/source/74HC164/s2p_164.v}
 
 #-- top module name
 set_option -top_module BM_H13DSP_M
 
 #-- set result format/file last
-project -result_file {C:/CPLD/intel/fenghuo_initial/BM_H13DSP_M/pro/impl1/BM_H13DSP_M_impl1.edi}
+project -result_file {D:/Work_File/CPLD_code/CPLD_DB/34.CNIT-K AMD GPU Server V200R001B01/01.MB_M CPLD/V01/BM_H13DSP_M/pro/impl1/BM_H13DSP_M_impl1.edi}
 
 #-- error message log file
 project -log_file {BM_H13DSP_M_impl1.srf}
@@ -105,4 +105,4 @@ project -log_file {BM_H13DSP_M_impl1.srf}
 
 
 #-- run Synplify with 'arrange HDL file'
-project -run
+project -run -clean

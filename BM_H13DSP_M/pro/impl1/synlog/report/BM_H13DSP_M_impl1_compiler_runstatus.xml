@@ -6,7 +6,7 @@ The file contains the job information from compiler to be displayed as part of t
 
 <job_run_status name="compiler"> 
   <report_link name="Detailed report">
-    <data>C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_compiler.srr</data>
+    <data>D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_compiler.srr</data>
     <title>Synopsys HDL Compiler</title>
   </report_link> 
   <job_status>
@@ -15,27 +15,27 @@ The file contains the job information from compiler to be displayed as part of t
 <job_info> 
 			<info name="Notes">
   <data>189</data>
-  <report_link name="more"><data>C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_compiler_notes.txt</data></report_link>
+  <report_link name="more"><data>D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_compiler_notes.txt</data></report_link>
   </info>
 			<info name="Warnings">
-  <data>182</data>
-  <report_link name="more"><data>C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_compiler_warnings.txt</data></report_link>
+  <data>181</data>
+  <report_link name="more"><data>D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_compiler_warnings.txt</data></report_link>
   </info>
 			<info name="Errors">
   <data>0</data>
-  <report_link name="more"><data>C:\CPLD\intel\fenghuo_initial\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_compiler_errors.txt</data></report_link>
+  <report_link name="more"><data>D:\Work_File\CPLD_code\CPLD_DB\34.CNIT-K AMD GPU Server V200R001B01\01.MB_M CPLD\V01\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_compiler_errors.txt</data></report_link>
   </info>
 			<info name="CPU Time">
   <data>-</data>
   </info>
 			<info name="Real Time">
-  <data>00h:00m:17s</data>
+  <data>00h:00m:01s</data>
   </info>
 			<info name="Peak Memory">
   <data>-</data>
   </info>
 			<info name="Date &amp;Time">
-  <data type="timestamp">1761199837</data>
+  <data type="timestamp">1741862209</data>
   </info>
 			</job_info>
 </job_run_status>
