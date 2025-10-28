@@ -1,128 +1,112 @@
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-// *                   C O P Y R I G H T     N O T I C E                       *
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+/* =============================================================================================================
+模块功能
+是一个 I2C 从设备模块，主要实现 I2C 协议的基本功能，包括：
 
- 
+I2C 通信协议支持：
+识别起始条件（START）和停止条件（STOP）
+处理主设备发送的从设备地址
+支持读写操作
+
+数据传输：
+接收主设备发送的数据
+根据主设备的读请求发送数据
+
+超时复位：
+如果通信超时（例如 35ms 内无有效操作），模块会自动复位
+===============================================================================================================*/
 `timescale 1ns/1ps
-
 module i2c_slave_basic0 #(
-parameter    TOTAL_STAGES = 3,
-parameter    DLY_LEN = 8            //24.18MHz,330ns
-)(      
-// generic ports
-input            wire i_clk,              // System Reset
-input            wire i_rst_n, 		
-input            wire i_1ms_clk,
-input  wire [7:0]     i_data_in,          // parallel data in
-input            wire i_addr_hit,         // when address meet, turn to high
-output reg [6:0] o_I2C_ADDR_OUT,
-output reg [7:0] o_data_out,         // parallel data out 
-output           wire o_R_W,              // read/write signal to the reg_map bloc
-output reg       o_data_vld,         // data valid from i2c 
-output           wire o_start,            // o_start of the i2c cycle
-output           wire o_stop,             // o_stop the i2c cycle
+    parameter TOTAL_STAGES = 3, // 去毛刺滤波器的采样阶段数
+    parameter DLY_LEN = 8       // 延迟长度，24.18MHz 时钟对应 330ns
+)(
+    // 通用端口
+    input  wire             i_clk,                // 系统时钟信号
+    input  wire             i_rst_n,              // 全局复位信号，低电平有效
+    input  wire             i_1ms_clk,            // 1ms 时钟信号，用于超时计数
+    input  wire [7:0]       i_data_in,            // 并行数据输入，用于写操作
+    input  wire             i_addr_hit,           // 地址匹配信号，高电平表示匹配成功
+    output reg [6:0]        o_I2C_ADDR_OUT,       // 匹配的 I2C 地址输出
+    output reg [7:0]        o_data_out,           // 并行数据输出，用于读操作
+    output wire             o_R_W,                // 读写信号，高电平表示读操作
+    output reg              o_data_vld,           // 数据有效信号，高电平表示数据有效
+    output wire             o_start,              // I2C 起始条件信号
+    output wire             o_stop,               // I2C 停止条件信号
 
-input            wire i_scl,
-inout            wire io_sda
+    // I2C 信号
+    input wire i_scl,              // I2C 时钟信号
+    inout wire io_sda              // I2C 数据线（双向）
 );
-////////////////////////////////////////////////////////////////////////////////// //
-// VariableS Declaration                                                           //
-////////////////////////////////////////////////////////////////////////////////// //
-wire w_scl_in;//scl_out;
-wire w_sda_in;
-reg  r_sda_en;
 
-reg  r_sda_data;
-reg  r_I2C_RW;
-reg  r_start;
-reg  r_stop;
+//////////////////////////////////////////////////////////////////////////////////
+// VariableS Declaration
+//////////////////////////////////////////////////////////////////////////////////
+wire w_scl_in;   // 去毛刺后的 SCL 信号
+wire w_sda_in;   // 去毛刺后的 SDA 信号
+reg  r_sda_en;   // SDA 输出使能信号
 
-wire w_rst;
-wire w_scl;
-wire w_sda;
+reg  r_sda_data; // SDA 输出数据
+reg  r_I2C_RW;   // I2C 读写信号，高电平表示读操作，低电平表示写操作
+reg  r_start;    // I2C 起始条件信号
+reg  r_stop;     // I2C 停止条件信号
 
-//scl filter start//////
-reg  r_glitchlessSignal_scl_d;
-reg  r_glitchlessSignal_scl_q;
-reg  [TOTAL_STAGES-1:0] r_sampledData_scl_d;
-reg  [TOTAL_STAGES-1:0] r_sampledData_scl_q;
-////sda filter start//////
-reg  r_glitchlessSignal_sda_d;
-reg  r_glitchlessSignal_sda_q;
-reg  [TOTAL_STAGES-1:0] r_sampledData_sda_d;
-reg  [TOTAL_STAGES-1:0] r_sampledData_sda_q;
+wire w_rst;      // 复位信号
+wire w_scl;      // 原始 SCL 信号
+wire w_sda;      // 原始 SDA 信号
 
-reg  r_sda_0;
-reg  r_sda_1;
-wire w_sda_pos;
-wire w_sda_neg;
-reg  r_scl_0;
-reg  r_scl_1;
-wire w_scl_pos;
-wire w_scl_neg;
+// SCL 去毛刺滤波器相关信号
+reg  r_glitchlessSignal_scl_d;               // SCL 去毛刺滤波器的组合逻辑信号
+reg  r_glitchlessSignal_scl_q;               // SCL 去毛刺滤波器的寄存器信号
+reg  [TOTAL_STAGES-1:0] r_sampledData_scl_d; // SCL 采样数据（组合逻辑）
+reg  [TOTAL_STAGES-1:0] r_sampledData_scl_q; // SCL 采样数据（寄存器）
 
-reg  [6:0] r_I2c_address;
-reg  [4:0] r_I2C_state;
+// SDA 去毛刺滤波器相关信号
+reg  r_glitchlessSignal_sda_d;               // SDA 去毛刺滤波器的组合逻辑信号
+reg  r_glitchlessSignal_sda_q;               // SDA 去毛刺滤波器的寄存器信号
+reg  [TOTAL_STAGES-1:0] r_sampledData_sda_d; // SDA 采样数据（组合逻辑）
+reg  [TOTAL_STAGES-1:0] r_sampledData_sda_q; // SDA 采样数据（寄存器）
 
-reg  [DLY_LEN-1:0] r_r1_sda_dly;
-wire w_r1_sda_dly ;
+reg  r_sda_0; // 延迟一级的 SDA 信号
+reg  r_sda_1; // 延迟两级的 SDA 信号
+wire w_sda_pos; // SDA 上升沿检测信号
+wire w_sda_neg; // SDA 下降沿检测信号
+reg  r_scl_0; // 延迟一级的 SCL 信号
+reg  r_scl_1; // 延迟两级的 SCL 信号
+wire w_scl_pos; // SCL 上升沿检测信号
+wire w_scl_neg; // SCL 下降沿检测信号
+
+reg  [6:0] r_I2c_address; // 接收的 I2C 地址
+reg  [4:0] r_I2C_state;   // I2C 状态机状态
+
+reg  [DLY_LEN-1:0] r_r1_sda_dly; // 用于延迟处理的 SDA 信号
+wire w_r1_sda_dly;               // 延迟后的 SDA 信号
+
 /////////////////////////////////
-//data_in lock  2019-8-22 14:49
+// data_in lock  2019-8-22 14:49
 /////////////////////////////////
-reg  r_data_in_lock;
-reg  [7:0] r_data_in;
+reg  r_data_in_lock;  // 数据输入锁存信号
+reg  [7:0] r_data_in; // 锁存的输入数据
+
 //===============================
-//timeout reset function   i_1ms_clk
+// timeout reset function   i_1ms_clk
 //===============================
-reg  [7:0] r_timeout_cnt;
-reg  r_1ms_clk_0;
-reg  r_1ms_clk_1;
-wire w_1ms_clk_pos;
-reg  r_timeout_rst_n;
-//////////////////////////////////////////////////////////////////////////////////
+reg  [7:0] r_timeout_cnt; // 超时计数器
+reg  r_1ms_clk_0;         // 延迟一级的 1ms 时钟信号
+reg  r_1ms_clk_1;         // 延迟两级的 1ms 时钟信号
+wire w_1ms_clk_pos;       // 1ms 时钟的上升沿检测信号
+reg  r_timeout_rst_n;     // 超时复位信号
 
-////////////////////////////////////////////////////////////////////////////////// //
-// Continuous assignments                                                          //
-////////////////////////////////////////////////////////////////////////////////// //
-assign w_rst     = ~(i_rst_n & r_timeout_rst_n);
-assign w_scl     = i_scl;
-assign w_sda     = io_sda;
-assign w_scl_in  = r_glitchlessSignal_scl_q;
-assign w_sda_in  = r_glitchlessSignal_sda_q;
+// 采样复位信号; 原始 SCL 信号; 原始 SDA 信号
+assign w_rst     = ~(i_rst_n & r_timeout_rst_n); 
+assign w_scl     = i_scl                       ; 
+assign w_sda     = io_sda                      ; 
 
-// assign w_scl_pos = ~r_scl_1 & r_scl_1;
-// assign w_scl_neg = r_scl_1 & ~r_scl_1;
-assign w_scl_pos = ~r_scl_0 & w_scl_in;
-assign w_scl_neg = r_scl_0 & ~w_scl_in;
-// assign w_sda_pos = !r_sda_1 & r_sda_1;  
-// assign w_sda_neg = r_sda_1 & !r_sda_1;
-assign w_sda_pos = !r_sda_0 & w_sda_in;   
-assign w_sda_neg = r_sda_0 & !w_sda_in;
-
-
-assign o_start   = r_start;
-assign o_stop    = r_stop;
-
-// assign io_sda    =  r_sda_en ? r_rSda_data_dly[DLY_LEN-1]:1'bz; //2020-8-27 22:26
-assign io_sda    =  r_sda_en ? r_sda_data:1'bz; //2020-8-27 22:26
-
-assign o_R_W     = r_I2C_RW;
-
-assign w_1ms_clk_pos = (~r_1ms_clk_0) & r_1ms_clk_1;
-//////////////////////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////////////
-// Secuencial Logic
-//////////////////////////////////////////////////////////////////////////////////
-
-//GlitchFilter start  //////////////////////////////////
-//scl filter start//////
+// 移位寄存器采样信号, 使其稳定输出
 always @(posedge i_clk or posedge w_rst)
 begin
     if(w_rst)                                                    
     begin
         r_glitchlessSignal_scl_q <=      0;                           
-        r_sampledData_scl_q     <=      {TOTAL_STAGES{w_scl}};    
+        r_sampledData_scl_q      <=      {TOTAL_STAGES{w_scl}};    
     end
     else
     begin
@@ -144,8 +128,7 @@ begin
         r_glitchlessSignal_scl_d =   1;
     end
 end
-//scl filter end////////
-////sda filter start//////
+
 always @(posedge i_clk or posedge w_rst)
 begin
     if(w_rst)                                                    
@@ -174,20 +157,26 @@ begin
     end
 end
 
-////sda filter end//////
+// 采样稳定信号 SCL 和 SDA
+assign w_scl_in  = r_glitchlessSignal_scl_q;    
+assign w_sda_in  = r_glitchlessSignal_sda_q; 
 
-//GlitchFilter end////////////////////////////////////////////////
-// always @ (posedge i_clk or posedge w_rst)	               // add delay for io_sda output
-// begin
-    // if (w_rst)
-        // r_rSda_data_dly <= {DLY_LEN{1'b1}};
-    // else 
-        // r_rSda_data_dly <= {r_rSda_data_dly[DLY_LEN-2:0],r_sda_data};
-// end
+// 采样稳定信号 SCL 和 SDA打拍
+always @ (posedge i_clk or posedge w_rst)	           		
+begin
+    if (w_rst)
+    begin
+        r_scl_0 <= 1'b0;
+        r_scl_1 <= 1'b0;
+    end
+    else
+    begin
+        r_scl_0 <= w_scl_in;
+        r_scl_1 <= r_scl_0;
+    end
+end
 
-
-
-always @ (posedge i_clk or posedge w_rst)	               // use delayed version of w_sda_in to prevent the false START			
+always @ (posedge i_clk or posedge w_rst)	            			
 begin
     if (w_rst)
     begin
@@ -201,7 +190,15 @@ begin
     end
 end
 
-always @ (posedge i_clk or posedge w_rst)	               // use delayed version of w_sda_in to prevent the false START			
+// 采样稳定信号 SCL 和 SDA 边沿检测
+assign w_scl_pos = ~r_scl_0 & w_scl_in;
+assign w_scl_neg = r_scl_0 & ~w_scl_in;
+assign w_sda_pos = !r_sda_0 & w_sda_in;   
+assign w_sda_neg = r_sda_0 & !w_sda_in;
+
+// START 和 STOP 条件检测; 
+// START: SDA 由高到低且 SCL 为高; STOP: SDA 由低到高且 SCL 为高
+always @ (posedge i_clk or posedge w_rst)	               			
 begin
     if (w_rst)
     begin
@@ -226,23 +223,11 @@ begin
     end
 end
 
-always @ (posedge i_clk or posedge w_rst)	               // use delayed version of w_sda_in to prevent the false START			
-begin
-    if (w_rst)
-    begin
-        r_scl_0 <= 1'b0;
-        r_scl_1 <= 1'b0;
-    end
-    else
-    begin
-        r_scl_0 <= w_scl_in;
-        r_scl_1 <= r_scl_0;
-    end
-end
+assign o_start   = r_start;
+assign o_stop    = r_stop;
 
-
-//==============================================================
-always @ (posedge i_clk or posedge w_rst)	               // add delay for internal SDA output
+// SDA数据延迟打拍, 延时8拍用ACK判断是否继续读数据
+always @ (posedge i_clk or posedge w_rst)	              
 begin
     if (w_rst)
         r_r1_sda_dly <= {DLY_LEN{1'b1}};
@@ -250,12 +235,74 @@ begin
         r_r1_sda_dly <= {r_r1_sda_dly[DLY_LEN-2:0],r_sda_1};
 end
 assign w_r1_sda_dly = r_r1_sda_dly[DLY_LEN-1];
-//==============================================================
 
+/* -------------------------------------------------------------------------------------------------------------
+ I2C从设备模块的核心逻辑, 主要状态如下：
+5'h00       ：空闲状态
+5'h13       ：起始条件检测
+5'h01~5'h08 ：接收从设备地址
+5'h09       ：地址匹配后发送 ACK 或 NACK
+5'h0A~5'h12 ：数据传输（读或写）
+---------------------------------------------------------------------------------------------------------------*/
+// 状态机控制 r_I2C_state
+always @(posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        r_I2C_state <= 5'b00; // 复位到空闲状态
+    else if (r_start)
+        r_I2C_state <= 5'h13; // 检测到起始条件
+    else if (r_stop)
+        r_I2C_state <= 5'h00; // 检测到停止条件
+    else
+        case (r_I2C_state)
+            5'h00: if (r_start  ) r_I2C_state <= 5'h13;
+            5'h13: if (w_scl_neg) r_I2C_state <= 5'h01;
+            5'h01: if (w_scl_neg) r_I2C_state <= 5'h02;
+            5'h02: if (w_scl_neg) r_I2C_state <= 5'h03;
+            5'h03: if (w_scl_neg) r_I2C_state <= 5'h04;
+            5'h04: if (w_scl_neg) r_I2C_state <= 5'h05;
+            5'h05: if (w_scl_neg) r_I2C_state <= 5'h06;
+            5'h06: if (w_scl_neg) r_I2C_state <= 5'h07;
+            5'h07: if (w_scl_neg) r_I2C_state <= 5'h08;
+            5'h08: if (w_scl_neg) r_I2C_state <= 5'h09;
+            5'h09: if (w_scl_neg) r_I2C_state <= (i_addr_hit ? 5'h0A : 5'h00); // 地址匹配成功进入数据传输状态，否则返回空闲状态
+            5'h0A: if (w_scl_neg) r_I2C_state <= 5'h0B;
+            5'h0B: if (w_scl_neg) r_I2C_state <= 5'h0C;
+            5'h0C: if (w_scl_neg) r_I2C_state <= 5'h0D;
+            5'h0D: if (w_scl_neg) r_I2C_state <= 5'h0E;
+            5'h0E: if (w_scl_neg) r_I2C_state <= 5'h0F;
+            5'h0F: if (w_scl_neg) r_I2C_state <= 5'h10;
+            5'h10: if (w_scl_neg) r_I2C_state <= 5'h11;
+            5'h11: if (w_scl_neg) r_I2C_state <= 5'h12;
+            5'h12: if (w_scl_neg) r_I2C_state <= (r_I2C_RW && w_r1_sda_dly ? 5'h12 : 5'h0A); // 读操作且主机发送 ACK 则继续读，否则返回数据接收状态
+            default: r_I2C_state <= 5'h00;
+        endcase
+end
 
-/////////////////////////////////
-//data_in lock  2019-8-22 14:49
-/////////////////////////////////
+// 读写信号 r_I2C_RW
+always @(posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        r_I2C_RW <= 1'b0; // 复位时默认为写操作
+    else if (r_I2C_state == 5'h08 && w_scl_neg)
+        r_I2C_RW <= w_r1_sda_dly; // 接收读写信号
+end
+
+// 控制 SDA 输出使能信号 r_sda_en
+always @(posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        r_sda_en <= 1'b0; // 复位时禁用 SDA 输出
+    else
+        case (r_I2C_state)
+            5'h09: r_sda_en <= i_addr_hit; // 地址匹配时使能 ACK
+            5'h0A: r_sda_en <= r_I2C_RW  ; // 读操作时使能 SDA 输出
+            5'h12: r_sda_en <= ~r_I2C_RW ; // 写操作时发送 ACK
+            default: r_sda_en <= 1'b0;     // 其他状态禁用 SDA 输出
+        endcase
+end
+
+// 锁存输入数据 r_data_in
 always @ (posedge i_clk or posedge w_rst)	               			
 begin
     if (w_rst)
@@ -266,349 +313,78 @@ begin
         r_data_in <= i_data_in;
 end
 
-always @ (posedge i_clk or posedge w_rst)	                			
+// 控制 SDA 输出数据 r_sda_data
+always @(posedge i_clk or posedge w_rst)
 begin
     if (w_rst)
-        o_I2C_ADDR_OUT <= 7'h0;			
-    else if (r_I2C_state == 5'h00)
-        o_I2C_ADDR_OUT <= 7'h0;
-    else if (r_I2C_state == 5'h08)
-        o_I2C_ADDR_OUT <= r_I2c_address;	
-end
-
-always @ (posedge i_clk or posedge w_rst) 		
-begin
-    if (w_rst)
-    begin
-        r_I2C_state     <= 5'b0;
-        r_sda_en        <= 1'b0;
-        r_sda_data      <= 1'b0;
-        o_data_vld      <= 1'b0;
-        r_I2C_RW        <= 1'b0;
-        o_data_out      <= 8'b0;
-        r_data_in_lock  <= 1'b0;
-    end
-    //2020-1-20 17:00  //2020-2-5 16:26
-    else if(r_start)
-        r_I2C_state <= 5'h13;	
-    else if(r_stop)
-        r_I2C_state <= 5'h00;
-	else
-        case(r_I2C_state)                                               
-        5'h00 :
-        begin
-            if (r_start)
-                r_I2C_state <= 5'h13;
-            r_sda_en        <= 1'b0;
-            r_sda_data      <= 1'b0;
-            o_data_vld      <= 1'b0;
-            r_data_in_lock  <= 1'b0;
-        end
-        5'h13 :
-        begin
-            if (w_scl_neg)
-                r_I2C_state <= 5'h01;
-            r_sda_en        <= 1'b0;
-            r_sda_data      <= 1'b0;
-            o_data_vld      <= 1'b0;
-            r_data_in_lock  <= 1'b0;
-        end
-        5'h01 :
-        begin
-            r_sda_en        <= 1'b0;
-            r_sda_data      <= 1'b0;
-            o_data_vld      <= 1'b0;
-            r_data_in_lock  <= 1'b0;
-            if (w_scl_neg)
-            begin
-                r_I2c_address[6] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h02;
-            end
-        end
-        5'h02 :
-        begin
-            r_sda_en        <= 1'b0;
-            r_sda_data      <= 1'b0;
-            o_data_vld      <= 1'b0;
-            if (w_scl_neg)
-            begin
-                r_I2c_address[5] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h03;
-            end 
-        end
-        5'h03 :
-        begin
-            r_sda_en        <= 1'b0;
-            r_sda_data      <= 1'b0;
-            o_data_vld      <= 1'b0;
-            if (w_scl_neg)
-            begin
-                r_I2c_address[4] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h04;
-            end  
-        end
-        5'h04 :
-        begin
-            r_sda_en        <= 1'b0;
-            r_sda_data      <= 1'b0;
-            o_data_vld      <= 1'b0;
-            if (w_scl_neg)
-            begin
-                r_I2c_address[3] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h05;
-            end 
-        end
-        5'h05 :
-        begin
-            if (w_scl_neg)
-            begin
-                r_I2c_address[2] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h06;
-            end 
-        end
-        5'h06 :
-        begin
-            if (w_scl_neg)
-            begin
-                r_I2c_address[1] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h07;
-            end 
-        end
-        5'h07 :
-        begin
-            if (w_scl_neg)
-            begin
-                r_I2c_address[0] <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h08;
-            end 
-        end
-        5'h08 :
-        begin
-            if (w_scl_neg)
-            begin 
-                r_I2C_RW         <= w_r1_sda_dly;
-                r_I2C_state      <= 5'h09;
-            end  
-        end
-        5'h09 :
-        begin
-            if (i_addr_hit)
-            begin //ACK
-                r_sda_data       <= 1'b0;
-                r_sda_en         <= 1'b1;
-            end
-            else
-            begin    //NACK
-                r_sda_data       <= 1'b1;
-                r_sda_en         <= 1'b0; 
-            end
-
-            if (w_scl_neg)
-                if (i_addr_hit)
-                    r_I2C_state  <= 5'h0A;
-                else
-                    r_I2C_state  <= 5'h00;    
-        end
-        5'h0A :
-        begin
-            o_data_vld <= 1'b0;
-            if (r_I2C_RW)
-            begin  //read, return MSB data 7
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[7];
-
-                r_data_in_lock   <= 1'b1;
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h0B;
-                o_data_out[7]    <= w_r1_sda_dly;
-            end
-        end
-        5'h0B :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 6
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[6];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-               r_I2C_state       <= 5'h0C;
-               o_data_out[6]     <= w_r1_sda_dly;
-            end
-        end
-        5'h0C :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 5
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[5];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h0D;
-                o_data_out[5]    <= w_r1_sda_dly;
-            end
-        end
-        5'h0D :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 4
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[4];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h0E;
-                o_data_out[4]    <= w_r1_sda_dly;
-            end
-        end
-        5'h0E :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 3
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[3];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h0F;
-                o_data_out[3]    <= w_r1_sda_dly;
-            end
-        end
-        5'h0F :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 2
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[2];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h10;
-                o_data_out[2]    <= w_r1_sda_dly;
-            end
-        end
-        5'h10 :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 1
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[1];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h11;
-                o_data_out[1]    <= w_r1_sda_dly;
-            end
-        end
-        5'h11 :
-        begin
-            if (r_I2C_RW)
-            begin  //read, return MSB data 0
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= r_data_in[0];
-            end
-            else
-            begin     //write
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-
-            if (w_scl_neg)
-            begin
-                r_I2C_state      <= 5'h12;
-                o_data_out[0]    <= w_r1_sda_dly;
-                o_data_vld       <= 1'b1;  //2020-8-27 20:33
-            end
-        end
-        5'h12 :
-        begin
-            r_data_in_lock       <= 1'b0;
-        
-            if (r_I2C_RW)
-            begin  //read, wait for ACK
-                r_sda_en         <= 1'b0;
-                r_sda_data       <= 1'b0;
-            end
-            else
-            begin     //write, send ACK
-                r_sda_en         <= 1'b1;
-                r_sda_data       <= 1'b0;
-            end
-              
-            //o_data_vld <= 1'b1;  //2020-8-27 20:36
-            if(w_scl_pos)
-                o_data_vld       <= 1'b0; 
-            else
-                o_data_vld       <= o_data_vld; 
-        	
-            if (w_scl_neg)
-                if (r_I2C_RW) 
-                    if (w_r1_sda_dly)
-                        r_I2C_state <= 5'h12;
-                    else
-                        r_I2C_state <= 5'h0A;
-                else
-                    r_I2C_state     <= 5'h0A;
-        	end
-        default:
-        begin
-		    r_data_in_lock       <= 1'b0;
-            r_I2C_state          <= 5'h00;
-            r_sda_en             <= 1'b0;
-		    r_sda_data           <= 1'b0;
-		    o_data_vld           <= 1'b0;
-		end                                     // default state
+        r_sda_data <= 1'b0; // 复位时清空 SDA 数据
+    else
+        case (r_I2C_state)
+            5'h09: r_sda_data <= ~i_addr_hit ; // 地址匹配时发送 ACK，否则发送 NACK
+            5'h0A: r_sda_data <= r_data_in[7]; // 读操作发送最高位数据
+            5'h0B: r_sda_data <= r_data_in[6];
+            5'h0C: r_sda_data <= r_data_in[5];
+            5'h0D: r_sda_data <= r_data_in[4];
+            5'h0E: r_sda_data <= r_data_in[3];
+            5'h0F: r_sda_data <= r_data_in[2];
+            5'h10: r_sda_data <= r_data_in[1];
+            5'h11: r_sda_data <= r_data_in[0]; // 读操作发送最低位数据
+            5'h12: r_sda_data <= 1'b0        ; // 写操作发送 ACK
+            default: r_sda_data <= 1'b0;
         endcase
 end
 
-//===============================
-//timeout reset function   i_1ms_clk(35ms)
-//===============================
+// 写数据完成输出有效信号 o_data_vld
+always @(posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        o_data_vld <= 1'b0; // 复位时数据无效
+    else if (r_I2C_state == 5'h12 && w_scl_neg)
+        o_data_vld <= 1'b1; // 数据接收完成时置高
+    else if (w_scl_pos)
+        o_data_vld <= 1'b0; // 数据有效信号清零
+end
+
+// 数据输出 o_data_out
+always @(posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        o_data_out <= 8'b0; // 复位时清空数据输出
+    else if (r_I2C_state >= 5'h0A && r_I2C_state <= 5'h11 && w_scl_neg)
+        o_data_out[11 - r_I2C_state] <= w_r1_sda_dly; // 接收数据位
+end
+
+// 数据输入锁存信号 r_data_in_lock
+always @(posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        r_data_in_lock <= 1'b0; // 复位时解锁数据输入
+    else if (r_I2C_state == 5'h0A)
+        r_data_in_lock <= 1'b1; // 锁存数据输入
+    else if (r_I2C_state == 5'h12)
+        r_data_in_lock <= 1'b0; // 解锁数据输入
+end
+
+
+// 控制 I2C 数据线 SDA 的输出
+assign io_sda = r_sda_en ? r_sda_data : 1'bz; // 当 r_sda_en 为高时，输出 r_sda_data，否则保持高阻态
+assign o_R_W = r_I2C_RW; // 输出当前的读写信号，高电平表示读操作，低电平表示写操作
+
+// 检测 1ms 时钟的上升沿
+assign w_1ms_clk_pos = (~r_1ms_clk_0) & r_1ms_clk_1; // 通过延迟一级和两级的时钟信号检测上升沿
+
+// 输出匹配的 I2C 地址
+always @ (posedge i_clk or posedge w_rst)
+begin
+    if (w_rst)
+        o_I2C_ADDR_OUT <= 7'h0; // 复位时清空地址输出
+    else if (r_I2C_state == 5'h00)
+        o_I2C_ADDR_OUT <= 7'h0; // 空闲状态时清空地址输出
+    else if (r_I2C_state == 5'h08)
+        o_I2C_ADDR_OUT <= r_I2c_address; // 地址接收完成后输出匹配的 I2C 地址
+end
+
+// I2C_slave 超时复位使用, 35ms超时
 always@(posedge i_clk or negedge i_rst_n)
 begin
     if(~i_rst_n)
@@ -646,13 +422,5 @@ begin
     else
         r_timeout_rst_n <= 1'b1;
 end
-////////////////////////////////////////////////////////////////////////////////// //
 
-////////////////////////////////////////////////////////////////////////////////// //
-// Submodule                                                                       //
-////////////////////////////////////////////////////////////////////////////////// //
-
-//////////////////////////////////////////////////////////////////////////////////
 endmodule
-
-//--------------------------------EOF-----------------------------------------

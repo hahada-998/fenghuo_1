@@ -3873,49 +3873,49 @@ assign  o_PAL_PVCC_HPMOS_SW_R                             =   w_FM_P12V_EN  ;//2
 
 //-------------------------------------------------------------------------------------------------
 // BMC_CPLD_I2C_RAM 模块实例化
-//-------------------------------------------------------------------------------------------------
 // 功能：
-// 1. 通过 I2C 接口与外部设备通信，支持数据的读写操作。
+// 1. 通过I2C接口与外部设备通信，支持数据的读写操作。
 // 2. 提供多个输入信号，用于传递系统状态和配置信息。
 // 3. 输出信号用于与其他模块交互，支持状态反馈和控制。
+//-------------------------------------------------------------------------------------------------
 bmc_cpld_i2c_ram #(
     .DLY_LEN(16) // 延迟长度，50MHz 时钟下约 330ns
 ) bmc_cpld_i2c_ram_u0 (
-// 时钟和复位信号
-    .i_rst_n        (pon_reset_n),       // 复位信号，低电平有效
-    .i_clk          (clk_25m),           // 时钟信号，频率为 25MHz
-    .i_1ms_clk      (t1ms_tick),         // 1ms 时钟信号
-    .i_rst_i2c_n    (1'b1),              // I2C 复位信号，始终为高电平
+    // 时钟和复位信号
+    .i_rst_n                (pon_reset_n          ), // 复位信号，低电平有效
+    .i_clk                  (clk_25m              ), // 时钟信号，频率为 25MHz
+    .i_1ms_clk              (t1ms_tick            ), // 1ms 时钟信号
+    .i_rst_i2c_n            (1'b1                 ), // I2C 复位信号，始终为高电平
 
     // I2C 接口信号
-    .i_scl          (i_I2C7_PAL_SCL),    // I2C 时钟信号
-    .io_sda         (io_I2C7_PAL_SDA),   // I2C 数据信号
+    .i_scl                  (i_I2C7_PAL_SCL       ), // I2C 时钟信号
+    .io_sda                 (io_I2C7_PAL_SDA      ), // I2C 数据信号
 
     // 系统配置信号
-    .i_product_id           (`PRODUCT_ID),              // 产品 ID，地址 0x0000
-    .i_vender_id            (`VENDER_ID),               // 厂商 ID，地址 0x0001
-    .i_board_id             ({4'b0000, w_board_id}),    // 板卡 ID，地址 0x0002
-    .i_pcb_version          ({5'b0, w_pcb_version}),    // PCB 版本号，地址 0x0003
-    .i_bom_id               ({5'b0, w_pca_version}),    // BOM ID，地址 0x0004
-    .i_cpld_version         (`CPLD_VERSION),            // CPLD 版本号，地址 0x0005
-    .o_test_reg             (),                         // 测试寄存器，地址 0x0006
-    .i_year                 (`Year),                    // 年份，地址 0x0007
-    .i_month                (`Month),                   // 月份，地址 0x0008
-    .i_day                  (`Day),                     // 日期，地址 0x0009
-    .i_nc_pin               ({7'b0, w_nc_pin}),         // 未连接引脚，地址 0x000A
-    .i_cpld_compa_version   (8'h00),                    // CPLD 兼容版本，地址 0x000B
-    .i_cpld_debug_version   (`DEBUG_VERSION),           // CPLD 调试版本，地址 0x000C
+    .i_product_id           (`PRODUCT_ID          ), // 产品 ID，地址 0x0000
+    .i_vender_id            (`VENDER_ID           ), // 厂商 ID，地址 0x0001
+    .i_board_id             ({4'b0000, w_board_id}), // 板卡 ID，地址 0x0002
+    .i_pcb_version          ({5'b0, w_pcb_version}), // PCB 版本号，地址 0x0003
+    .i_bom_id               ({5'b0, w_pca_version}), // BOM ID，地址 0x0004
+    .i_cpld_version         (`CPLD_VERSION        ), // CPLD 版本号，地址 0x0005
+    .o_test_reg             (),                      // 测试寄存器，地址 0x0006
+    .i_year                 (`Year                ), // 年份，地址 0x0007
+    .i_month                (`Month               ), // 月份，地址 0x0008
+    .i_day                  (`Day                 ), // 日期，地址 0x0009
+    .i_nc_pin               ({7'b0, w_nc_pin}     ), // 未连接引脚，地址 0x000A
+    .i_cpld_compa_version   (8'h00                ), // CPLD 兼容版本，地址 0x000B
+    .i_cpld_debug_version   (`DEBUG_VERSION       ), // CPLD 调试版本，地址 0x000C
 
     // 电源状态信号
     // PSU 状态信号，地址 0x000D
-    .i_PS1_PRSNT            (db_i_ps1_prsnt),           // PSU1 存在信号
-    .i_PS2_PRSNT            (db_i_ps2_prsnt),           // PSU2 存在信号
-    .i_PS3_PRSNT            (db_i_ps3_prsnt),           // PSU3 存在信号
-    .i_PS4_PRSNT            (db_i_ps4_prsnt),           // PSU4 存在信号
-    .i_PS1_ACFAIL           (db_i_ps1_acfail_n),        // PSU1 交流电源故障信号
-    .i_PS2_ACFAIL           (db_i_ps2_acfail_n),        // PSU2 交流电源故障信号
-    .i_PS1_DCOK             (db_i_ps1_dcok_n),          // PSU1 直流电源正常信号
-    .i_PS2_DCOK             (db_i_ps2_dcok_n),          // PSU2 直流电源正常信号
+    .i_PS1_PRSNT            (db_i_ps1_prsnt       ), // PSU1 存在信号
+    .i_PS2_PRSNT            (db_i_ps2_prsnt       ), // PSU2 存在信号
+    .i_PS3_PRSNT            (db_i_ps3_prsnt       ), // PSU3 存在信号
+    .i_PS4_PRSNT            (db_i_ps4_prsnt       ), // PSU4 存在信号
+    .i_PS1_ACFAIL           (db_i_ps1_acfail_n    ), // PSU1 交流电源故障信号
+    .i_PS2_ACFAIL           (db_i_ps2_acfail_n    ), // PSU2 交流电源故障信号
+    .i_PS1_DCOK             (db_i_ps1_dcok_n      ), // PSU1 直流电源正常信号
+    .i_PS2_DCOK             (db_i_ps2_dcok_n      ), // PSU2 直流电源正常信号
 
     // PSU 警告信号，地址 0x000E
     .i_PS1_ALERT            (db_i_ps1_smb_alert),       // PSU1 警告信号
@@ -3978,79 +3978,89 @@ bmc_cpld_i2c_ram #(
     .i_pal_p0_vdd_core_0_en_r  (w_grp_d_p0_vddcore0_en), // 核心电源 0 使能信号，地址 0x0022，bit2
     .i_pal_p0_vdd_core_1_en_r  (w_grp_d_p0_vddcore1_en), // 核心电源 1 使能信号，地址 0x0022，bit1
 
+    //CPU0 PGD --0x0023
+    .i_pwrgd_vdd_18_stby1          (db_i_pgd_p1_vdd_18_stby    ), // 1.8V 待机电源良好信号，地址 0x0023，bit7
+    .i_pwrgd_vdd_33_stby1          (db_i_pgd_p1_vddc          ), // 3.3V 待机电源良好信号，地址 0x0023，bit6
+    .i_pal_pgd_p1_vdd_core_1       (db_i_pgd_p1_vdd_core_1    ), // 核心电源良好信号 1，地址 0x0023，bit5
+    .i_pal_pgd_p1_vdd_core_0       (db_i_pgd_p1_vdd_core_0    ), // 核心电源良好信号 0，地址 0x0023，bit4
+    .i_pal_pgd_p1_vdd_soc_0        (db_i_pgd_p1_vdd_soc_0     ), // SoC 电源良好信号，地址 0x0023，bit3
+    .i_pal_pgd_p1_vddio            (db_i_pgd_p1_vddio         ), // IO 电源良好信号，地址 0x0023，bit2
+    .i_pal_pgd_p1_vdd_sus_0        (db_i_pgd_p1_vdd_11_sus    ), // SUS 电源良好信号，地址 0x0023，bit1
+
+    //CPU1 ALERT --0x0024
+    .i_p1_pwrgd_out_r              (db_i_p1_pwrgd_out         ), // 电源良好输出信号，地址 0x0024，bit7
+    .i_p1_pwrok_r                  (db_i_p1_pwrok             ), // 电源正常信号，地址 0x0024，bit6
+    .i_p1_pwr_good_r               (db_i_p0_pwrgd_out         ), // 电源良好信号，地址 0x0024，bit5
+
+    //CPU0 PWR EN --0x0025
+    .i_p1_vdd_18_stby_en           (w_grp_b_p1_18_s5_en       ), // 1.8V 待机电源使能信号，地址 0x0025，bit7
+    .i_p1_vddc_en                  (w_grp_b_p1_33_s5_en       ), // VDDC 电源使能信号，地址 0x0025，bit6
+    .i_pal_p1_vdd_11_sus_en        (w_grp_c_p1_vdd11_en       ), // 1.1V SUS 电源使能信号，地址 0x0025，bit5
+    .i_pal_p1_vddio_en_r           (w_grp_d_p1_vddio_en       ), // IO 电源使能信号，地址 0x0025，bit4
+    .i_pal_p1_vdd_soc_en           (w_grp_d_p1_soc_en         ), // SoC 电源使能信号，地址 0x0025，bit3
+    .i_pal_p1_vdd_core_0_en_r      (w_grp_d_p1_vddcore0_en    ), // 核心电源 0 使能信号，地址 0x0025，bit2
+    .i_pal_p1_vdd_core_1_en_r      (w_grp_d_p1_vddcore1_en    ), // 核心电源 1 使能信号，地址 0x0025，bit1
+
+    //CPU PRSNT --0x0030
+    .i_PAL_CPU0_PRSNT_N            (db_cpu_prsnt_n[0] & w_SW_1), // CPU0 存在信号，地址 0x0030，bit7
+    .i_PAL_CPU1_PRSNT_N            (db_cpu_prsnt_n[1] & w_SW_1), // CPU1 存在信号，地址 0x0030，bit6
+
+    //CPU ERR --0x0032
+    .i_P0_SMERR_N                  (db_i_p0_smerr_n           ), // CPU0 错误信号，地址 0x0032，bit7
+    .i_P1_SMERR_N                  (db_i_p1_smerr_n           ), // CPU1 错误信号，地址 0x0032，bit6
+
+    //CPU THERM --0x0033
+    .i_PAL_CPU0_MEMHOT_OUT_N       (                          ), //0x0033，bit7, CPU0 内存过热信号（未连接）
+    .i_PAL_CPU0_MEMTRIP_N          (                          ), //0x0033，bit6, CPU0 内存断电信号（未连接）
+    .i_PAL_CPU0_THERMTRIP_N        (db_i_p0_pwrgd_out ? wFM_CPU0_THERMTRIP_LVT3_Fault_N : 1'b1), // 0x0033，bit5, CPU0 热断电信号 
+    .i_PAL_CPU0_PROCHOT_N          (w_p0_prochot_n            ), // 0x0033，bit4, CPU0 处理器过热信号，地址 
+    .i_PAL_CPU1_MEMHOT_OUT_N       (                          ), // 0x0033，bit3, CPU1 内存过热信号（未连接） 
+    .i_PAL_CPU1_MEMTRIP_N          (                          ), // 0x0033，bit2, CPU1 内存断电信号（未连接） 
+    .i_PAL_CPU1_THERMTRIP_N        (~(db_cpu_prsnt_n[1] & w_SW_1) & db_i_p1_pwrgd_out ? wFM_CPU1_THERMTRIP_LVT3_Fault_N : 1'b1), // 0x0033，bit1, CPU1 热断电信号
+    .i_PAL_CPU1_PROCHOT_N          (w_p1_prochot_n            )  // 0x0033，bit0, CPU1 处理器过热信号
+
+
+    //pwr_flt_clr --0x0034
+    .o_bmc_clr_tmout_n            (w_bmc_clr_tmout_n), // 地址 0x0034，bit7，默认值 1
+    .o_pal_cpu0_forcepr_r         (w_cpu0_prochot),    // 地址 0x0034，bit6，默认值 0
+    .o_pal_cpu1_forcepr_r         (w_cpu1_prochot),    // 地址 0x0034，bit5，默认值 0
+    .o_clear_register             (w_clear_register),  // 地址 0x0034，bit4，默认值 0
     
-//CPU0 PGD --0x0023
-.i_pwrgd_vdd_18_stby1			(db_i_pgd_p1_vdd_18_stby	),	//addr 0x0023 bit7	 
-.i_pwrgd_vdd_33_stby1			(db_i_pgd_p1_vddc		        ),	//addr 0x0023 bit6	 
-.i_pal_pgd_p1_vdd_core_1	        (db_i_pgd_p1_vdd_core_1		),	//addr 0x0023 bit5	 
-.i_pal_pgd_p1_vdd_core_0	        (db_i_pgd_p1_vdd_core_0		),	//addr 0x0023 bit4	 
-.i_pal_pgd_p1_vdd_soc_0		        (db_i_pgd_p1_vdd_soc_0		),	//addr 0x0023 bit3	 
-.i_pal_pgd_p1_vddio			        (db_i_pgd_p1_vddio		        ),	//addr 0x0023 bit2	 
-.i_pal_pgd_p1_vdd_sus_0		        (db_i_pgd_p1_vdd_11_sus		),	//addr 0x0023 bit1	 
-//CPU1 ALERT --0x0024
-.i_p1_pwrgd_out_r				(db_i_p1_pwrgd_out		        ),	//addr 0x0024 bit7	
-.i_p1_pwrok_r				        (db_i_p1_pwrok		                ),	//addr 0x0024 bit6	
-.i_p1_pwr_good_r			        (db_i_p0_pwrgd_out			),	//addr 0x0024 bit5
-//CPU0 PWR EN --0x0025
-.i_p1_vdd_18_stby_en			(w_grp_b_p1_18_s5_en		),	//addr 0x0025 bit7	
-.i_p1_vddc_en					(w_grp_b_p1_33_s5_en		),	//addr 0x0025 bit6	
-.i_pal_p1_vdd_11_sus_en			(w_grp_c_p1_vdd11_en		),	//addr 0x0025 bit5	
-.i_pal_p1_vddio_en_r			(w_grp_d_p1_vddio_en		),	//addr 0x0025 bit4	
-.i_pal_p1_vdd_soc_en			(w_grp_d_p1_soc_en		        ),	//addr 0x0025 bit3	
-.i_pal_p1_vdd_core_0_en_r		(w_grp_d_p1_vddcore0_en		),	//addr 0x0025 bit2	
-.i_pal_p1_vdd_core_1_en_r		(w_grp_d_p1_vddcore1_en		),	//addr 0x0025 bit1	
-//CPU PRSNT --0x0030
-.i_PAL_CPU0_PRSNT_N                          (db_cpu_prsnt_n[0] & w_SW_1    ),     //addr 0x0030 bit7
-.i_PAL_CPU1_PRSNT_N                          (db_cpu_prsnt_n[1] & w_SW_1    ),     //addr 0x0030 bit6
-//CPU ERR --0x0032
-.i_P0_SMERR_N                                      (db_i_p0_smerr_n                        ),      //addr 0x0032 bit7
-.i_P1_SMERR_N                                      (db_i_p1_smerr_n                        ),      //addr 0x0032 bit6
-//CPU THERM --0x0033
-.i_PAL_CPU0_MEMHOT_OUT_N                (  )         , //addr 0x0033 bit7 
-.i_PAL_CPU0_MEMTRIP_N                      (  )         , //addr 0x0033 bit6 
-.i_PAL_CPU0_THERMTRIP_N                  (db_i_p0_pwrgd_out ? wFM_CPU0_THERMTRIP_LVT3_Fault_N :1'b1 )  , //addr 0x0033 bit5 
-.i_PAL_CPU0_PROCHOT_N                      (w_p0_prochot_n ),                                                                                      //addr 0x0033 bit4 
-.i_PAL_CPU1_MEMHOT_OUT_N                ( )         , //addr 0x0033 bit3 
-.i_PAL_CPU1_MEMTRIP_N                      ( )         , //addr 0x0033 bit2
-.i_PAL_CPU1_THERMTRIP_N                  (~(db_cpu_prsnt_n[1] & w_SW_1) & db_i_p1_pwrgd_out ? wFM_CPU1_THERMTRIP_LVT3_Fault_N :1'b1)  , //addr 0x0033 bit1
-.i_PAL_CPU1_PROCHOT_N                      (w_p1_prochot_n )             , //addr 0x0033 bit0 
+    // .o_cpu0_prochot             (w_cpu0_prochot),    // 地址 0x02a2，bit2
+    // .o_cpu1_prochot             (w_cpu1_prochot),    // 地址 0x02a9，bit2
 
 
-//pwr_flt_clr --0x0034
-.o_bmc_clr_tmout_n                            (w_bmc_clr_tmout_n)                 , //addr 0x0034 bit7  //default 1
-.o_pal_cpu0_forcepr_r                      (w_cpu0_prochot)              , //addr 0x0034 bit6  //default 0
-.o_pal_cpu1_forcepr_r                      (w_cpu1_prochot)              , //addr 0x0034 bit5  //default 0
-.o_clear_register                              (w_clear_register)                  , //addr 0x0034 bit4  //default 0
+    //pwr_flt_code --0x0035
+    .i_pwr_flt_code (w_pwr_flt_code), // 地址 0x0035，bit7-bit0，电源故障代码，默认值 8'h00
 
-// .o_cpu0_prochot						(w_cpu0_prochot					),	//addr 0x02a2 bit2 
-// .o_cpu1_prochot						(w_cpu1_prochot			                ),	//addr 0x02a9 bit2 
+    //////////////0X0036 -0X004F RESERVED FOR FUTURE USE///////////////////////////////////////////////////////////////////
+    //btn_press_flag --0x0050
+    .i_btn_press_flag        (w_btn_press_flag), // 地址 0x0050，bit7，按钮按下标志
+    .i_slps5_sts             (db_i_p0_slp_s5_n), // 地址 0x0050，bit6，S5 状态信号
+    .i_slps3_sts             (db_i_p0_slp_s3_n), // 地址 0x0050，bit5，S3 状态信号
 
-//pwr_flt_code --0x0035
-.i_pwr_flt_code                                  (w_pwr_flt_code)                    , //addr 0x0035       //default 8'h00
-//////////////0X0036 -0X004F RESERVED FOR FUTURE USE///////////////////////////////////////////////////////////////////
-//btn_press_flag --0x0050
-.i_btn_press_flag                              (w_btn_press_flag )                 , //addr 0x0050 bit7
-.i_slps5_sts                                        (db_i_p0_slp_s5_n )                 , //addr 0x0050 bit6  
-.i_slps3_sts                                        (db_i_p0_slp_s3_n )                 , //addr 0x0050 bit5  
-//btn_evt --0x0051
-.i_sbtn_pwron_evt                              (w_sbtn_pwron_evt    )               , //addr 0x0051 bit7
-.i_lbtn_pwrdown_evt                          (w_lbtn_pwrdown_evt)               , //addr 0x0051 bit6
-.i_sbtn_sysrst_evt                            (w_sbtn_sysrst_evt  )               , //addr 0x0051 bit5
-//bmc_clr_btn_evt --0x0052
-.o_bmc_clr_sbtn_n                              (w_bmc_sbtn_wc          )                , //addr 0x0052 bit7  //default 1
-.o_bmc_clr_lbtn_n                              (w_bmc_lbtn_wc          )                , //addr 0x0052 bit6  //default 1
-.o_bmc_clr_sbtn_sys_n                      (w_bmc_sbtn_sys_wc  )                , //addr 0x0052 bit5  //default 1
-//bmc_btn_ctl --0x0053
-.o_pwr_btn_lock                                  (w_bmc_pwrbtn_lock       )  		, //addr 0x0053 bit7  //default 1
-.o_bmc_power_soft_ctl                      (w_bmc_sbtn_powerdown )           , //addr 0x0053 bit6  //default 0
-.o_bmc_lbtn_pwrdown_ctl                  (w_bmc_lbtn_powerdown )           , //addr 0x0053 bit5  //default 0
-.o_bmc_sbtn_pwron_ctl                      (w_bmc_sbtn_poweron     )           , //addr 0x0053 bit4  //default 0
-.o_bmc_sbtn_sysrst_ctl                    (w_bmc_sbtn_reset_ctl )           , //addr 0x0053 bit3  //default 0
-//bmc_btn_done --0x0054
-.i_bmc_power_soft_done                    (w_bmc_sbtn_powerdown_done ) , //addr 0x0054 bit7
-.i_bmc_lbtn_pwrdown_done                (w_bmc_lbtn_powerdown_done ) , //addr 0x0054 bit6
-.i_bmc_sbtn_pwron_done                    (w_bmc_sbtn_poweron_done     ) , //addr 0x0054 bit5
-.i_bmc_sbtn_sysrst_done                  (w_bmc_ctl_sys_rst_done       ) , //addr 0x0054 bit4
+    //btn_evt --0x0051
+    .i_sbtn_pwron_evt        (w_sbtn_pwron_evt),  // 地址 0x0051，bit7，短按电源按钮事件
+    .i_lbtn_pwrdown_evt      (w_lbtn_pwrdown_evt), // 地址 0x0051，bit6，长按电源按钮事件
+    .i_sbtn_sysrst_evt       (w_sbtn_sysrst_evt),  // 地址 0x0051，bit5，短按系统复位按钮事件
+
+    //bmc_clr_btn_evt --0x0052
+    .o_bmc_clr_sbtn_n        (w_bmc_sbtn_wc),           // 地址 0x0052，bit7，清除短按按钮事件，默认值 1
+    .o_bmc_clr_lbtn_n        (w_bmc_lbtn_wc),           // 地址 0x0052，bit6，清除长按按钮事件，默认值 1
+    .o_bmc_clr_sbtn_sys_n    (w_bmc_sbtn_sys_wc),       // 地址 0x0052，bit5，清除短按系统复位按钮事件，默认值 1
+
+    //bmc_btn_ctl --0x0053
+    .o_pwr_btn_lock          (w_bmc_pwrbtn_lock),       // 地址 0x0053，bit7，电源按钮锁定，默认值 1
+    .o_bmc_power_soft_ctl    (w_bmc_sbtn_powerdown),    // 地址 0x0053，bit6，BMC 电源软控制，默认值 0
+    .o_bmc_lbtn_pwrdown_ctl  (w_bmc_lbtn_powerdown),    // 地址 0x0053，bit5，长按电源按钮控制，默认值 0
+    .o_bmc_sbtn_pwron_ctl    (w_bmc_sbtn_poweron),      // 地址 0x0053，bit4，短按电源按钮控制，默认值 0
+    .o_bmc_sbtn_sysrst_ctl   (w_bmc_sbtn_reset_ctl),    // 地址 0x0053，bit3，短按系统复位按钮控制，默认值 0
+
+    //bmc_btn_done --0x0054
+    .i_bmc_power_soft_done   (w_bmc_sbtn_powerdown_done), // 地址 0x0054，bit7，BMC 电源软控制完成信号
+    .i_bmc_lbtn_pwrdown_done (w_bmc_lbtn_powerdown_done), // 地址 0x0054，bit6，长按电源按钮完成信号
+    .i_bmc_sbtn_pwron_done   (w_bmc_sbtn_poweron_done),   // 地址 0x0054，bit5，短按电源按钮完成信号
+    .i_bmc_sbtn_sysrst_done  (w_bmc_ctl_sys_rst_done)     // 地址 0x0054，bit4，短按系统复位按钮完成信号
 
 //bmc_uid --0x0056
 .i_pal_bmcuid_button                        (db_i_pal_bmcuid_button)         , //addr 0x0056 bit7
