@@ -67,12 +67,38 @@ reg      [31:0]       io_data_out_buff;
 reg      [63:0]       state_save;
 reg      [7:0]        vwire_length,oob_data_length,oob_data_length_buff,vwire_length_buff;
 
+// 片选信号 ESPI_CS1 为低电平时，输出数据 data_byte_out 的最高位; 当片选信号无效时，输出高阻态（1'bz）
+assign  ESPI_IO_OUT = (~ESPI_CS1) ? data_byte_out[7] : 1'bz;   
 
-assign  ESPI_IO_OUT = (~ESPI_CS1) ? data_byte_out[7] : 1'bz;   //single IO mode data out 
-assign  debug_flag  = current_state;//(5'b0,get_status_en,get_config_en,set_config_en);
+// 状态寄存器调试输出
+assign  debug_flag  = current_state;
 assign  debug_flag1 = {5'b0,get_status_en,get_config_en,set_config_en};
 assign  debug_flag2 = state_save;
 
+// -------------------------------------------------------------------------------------------------------------
+// 解析 eSPI 输入的数据
+// -------------------------------------------------------------------------------------------------------------
+// 数据输入：data_byte_in
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if(!ESPI_RST || ESPI_CS1)
+        data_byte_in <= 8'h00;
+    else 
+        data_byte_in <= {data_byte_in[6:0], ESPI_IO_IN}; // 8-bit data shift
+end
+
+// PCH 地址：pch_addr
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1)
+        pch_addr <= 16'h0000;
+    else if (st_trans_en && (current_state == SHORT_RD)) begin
+        if (io_addr == 16'h1500)
+            pch_addr[7:0] <= data_byte_in[7:0];
+        else if (io_addr == 16'h1501)
+            pch_addr[15:8] <= data_byte_in[7:0];
+    end
+end
+
+// 保存最近的状态序列, 便于调试和状态回溯
 always @ (posedge ESPI_CLK or negedge ESPI_RST) begin
     if (!ESPI_RST) begin
 	    state_save[7:0]  <= IDLE;
@@ -82,59 +108,204 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST) begin
         state_save  <= {state_save[55:0],current_state};
 end
 
-
+// IO 地址：io_addr
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    data_byte_in[7:0]  <= {data_byte_in[6:0],ESPI_IO_IN};   //data read for 8 bit
-    if (!ESPI_RST) begin
-	    pch_addr           <= 16'h0000;
-	    data_byte_in       <= 8'h00;
-	    pch_smbus_wdata    <= 8'h00;
-	    pch_smbus_wdata_en <= 1'b0; //20220315
-	end
-	else if (ESPI_CS1) begin
-	    data_byte_in         <= 8'h00;
-	    io_addr              <= 16'h0000;
-	    // pch_addr_buff        <= 8'h00;
-	    oob_data_length_buff <= 8'h00;
-	    vwire_length_buff    <= 8'h00; 
-	end
-	else if (st_trans_en && (current_state == ADDR_RD))
-	    io_addr  <= {io_addr[7:0],data_byte_in[7:0]};    //date read for 16 bit of address
-	else if (st_trans_en && (current_state == DATA_RD))   
-	    io_data_in[31:0]  <= {io_data_in[23:0],data_byte_in[7:0]};  //date read for 32 bit of set config data
-    else if (st_trans_en && (current_state == SHORT_RD)) begin
-	    if(io_addr == 16'h1500) pch_addr[7:0] <= data_byte_in[7:0];
-	    else if(io_addr == 16'h1501) pch_addr[15:8] <= data_byte_in[7:0];
-	    else if(io_addr == 16'h1502) begin pch_smbus_wdata_en <= 1'b1; pch_smbus_wdata[7:0] <= data_byte_in[7:0];end //20220315
-end
-/*    else if (st_trans_en && (current_state == SHORT_RD))
-       pch_addr_buff  <= data_byte_in[7:0]; */
-	else if (st_trans_en && (current_state == OOB_LENGTH))  //data write for 16 bit of state
-	    oob_data_length_buff <= data_byte_in[7:0];
-    else if (st_trans_en && (current_state == VWIRE_LENGTH))  //data write for 16 bit of state
-        vwire_length_buff    <= data_byte_in[7:0];
-	else pch_smbus_wdata_en  <= 1'b0; // 20220315
+    if (!ESPI_RST || ESPI_CS1)
+        io_addr <= 16'h0000;
+    else if (st_trans_en && (current_state == ADDR_RD))
+        io_addr <= {io_addr[7:0], data_byte_in[7:0]}; // 16-bit address read
 end
 
-always @ (negedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin   //why negedge ESPI_CLK   20230207
-    data_byte_out   <= {data_byte_out[6:0],1'b1};    //data write for  8 bit
-    if(!ESPI_RST || ESPI_CS1) begin
-	    data_byte_out <= 8'hff; 
-	    io_data_out   <= 32'hffffffff;
-	end
-    else if (send_start) begin
-	    data_byte_out     <= io_data_out_buff[31:24];
-	    io_data_out[31:8] <= io_data_out_buff[23:0];
+// IO 数据输入：io_data_in
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) 
+        io_data_in <= 32'h00000000;
+    else if (st_trans_en && (current_state == DATA_RD))
+        io_data_in <= {io_data_in[23:0], data_byte_in[7:0]}; // 32-bit data read
+end
+
+// OOB 数据长度缓冲：oob_data_length_buff
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) 
+        oob_data_length_buff <= 8'h00;
+    else if (st_trans_en && (current_state == OOB_LENGTH))
+        oob_data_length_buff <= data_byte_in[7:0];
+end
+
+// vWire 数据长度缓冲：vwire_length_buff
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) begin
+        vwire_length_buff <= 8'h00;
+    end else if (st_trans_en && (current_state == VWIRE_LENGTH)) begin
+        vwire_length_buff <= data_byte_in[7:0];
     end
-	else if (st_trans_en && (next_state == DATA_WR)) begin  //data write for 32 bit of get config data
-        data_byte_out     <= io_data_out[31:24];
-        io_data_out       <= {io_data_out[23:0],8'hff};
+end
+
+
+
+
+// -------------------------------------------------------------------------------------------------------------
+// eSPI 输出数据
+// -------------------------------------------------------------------------------------------------------------
+// io_data_out_buff 的逻辑
+always @ (*) begin
+    io_data_out_buff = 32'hffffffff;
+    case (current_state)
+        IDLE: 
+            io_data_out_buff = 32'hffffffff;
+		
+		OPCODE, GET_CONFIGURATION, SET_CONFIGURATION, GET_STATUS, 
+		GET_VWIRE, PUT_VWIRE, PUT_OOB, GET_OOB:
+			io_data_out_buff[31:24] = 8'hff;
+	
+		OOB_TAG:begin
+		    if(st_trans_en)
+			    io_data_out_buff[31:24] = 8'hff;
+		end
+
+		OOB_LENGTH: begin
+		    if(st_trans_en) begin
+			    if(put_oob_en)
+					io_data_out_buff[31:24] = 8'hff;
+				else if(get_oob_en)
+		            io_data_out_buff[31:24] = 8'hff;
+			end 
+		end 
+	
+		OOB_MSG: begin
+		    if(oob_data_trans_en) begin
+			    if(put_oob_en)
+					io_data_out_buff[31:24] = 8'hff;
+				else if (get_oob_en) 
+					io_data_out_buff[31:16] = 16'h0403;
+			end 
+		end
+
+		VWIRE_LENGTH: begin
+		    if(st_trans_en) 
+				io_data_out_buff[31:24] = 8'hff;
+		end 
+
+		VWIRE_DATA_RD: begin
+		    if(vwire_rd_trans_en)
+				io_data_out_buff[31:24] = 8'hff;
+		end 
+		
+		PUT_IOWR_SHORT:
+		    io_data_out_buff[31:24] = 8'hff;
+
+		PUT_IORD_SHORT:
+		    io_data_out_buff[31:24] = 8'hff;
+		
+		ADDR_RD:
+		    io_data_out_buff[31:24] = 8'hff;
+			
+		DATA_RD:
+		    io_data_out_buff[31:24] = 8'hff;
+
+		SHORT_RD:
+		    io_data_out_buff[31:24] = 8'hff;
+
+		CRC_1:
+		    io_data_out_buff[31:24] = 8'hff;
+		
+		TAR: begin
+		    if(tar_trans_en)
+			    io_data_out_buff[31:24] = 8'h0f; 
+		end
+
+		RESP_WAIT:begin
+		    if(st_trans_en)
+				io_data_out_buff[31:24] = 8'h08;
+		end
+
+		RESP_ACCEPT:begin
+		    if(st_trans_en) begin
+		        if(get_config_en) begin
+					if(io_addr == 16'h0008) io_data_out_buff = 32'h0f000010;//32'h0f000c03;
+					if(io_addr == 16'h0010) io_data_out_buff = 32'h13110000;//32'h0f000c03;
+					if(io_addr == 16'h0020) io_data_out_buff = 32'h03000700;//32'h03070700;
+					if(io_addr == 16'h0030) io_data_out_buff = 32'h13010000;
+					if(io_addr == 16'h0040) io_data_out_buff = 32'h0c110000;
+				end
+				else if(set_config_en || get_status_en) begin
+			        if(io_addr == 16'h0010)
+					    io_data_out_buff[31:16] = 16'h0703;
+					else if(io_addr == 16'h0020)
+					    io_data_out_buff[31:16] = 16'h4401;
+					else 
+					    io_data_out_buff[31:16] = 16'h0c01;
+				end
+				else if (put_vwire_en) begin
+					io_data_out_buff[31:16] = 16'h0703;
+				end
+	    		else if (put_iowr_short_en) begin
+	    			io_data_out_buff[31:16] = 16'h0703;
+	    		end
+	    		else if (put_iord_short_en) begin
+	    		    io_data_out_buff[31:24] = pch_smbus_rdata[7:0];
+	    		end 	
+	    		else if (get_vwire_en) begin
+	    			io_data_out_buff[31:8] = 24'h000599;
+	    		end 
+	    		else if (put_oob_en) begin
+	    		    io_data_out_buff[31:16] = 16'h0403;
+	    		end
+	    		else if (get_oob_en) begin
+	    		    io_data_out_buff[31:8] = 24'h000599;//debug
+	    		end
+	    	end
+	    end
+
+		VWIRE_DATA_WR:begin
+		    if(vwire_wr_trans_en)
+			    io_data_out_buff[31:16] = 16'h0401;
+		end
+
+		SHORT_WR: begin
+		    if(io_wr_trans_en)
+			    io_data_out_buff[31:16] = 16'h0703;
+		end
+
+		DATA_WR:begin
+		    if(data_trans_en) 
+		        io_data_out_buff[31:16] = 16'h0401;
+		end
+		
+		STS:begin
+		    if(sts_trans_en)
+		        io_data_out_buff[31:24] = 8'hff;
+		end
+    endcase
+end
+
+// 数据输出缓冲：io_data_out
+always @ (negedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) begin
+        io_data_out <= 32'hffffffff;
+    end else if (send_start) begin
+        io_data_out[31:8] <= io_data_out_buff[23:0];
+    end else if (st_trans_en && (next_state == DATA_WR)) begin
+        io_data_out <= {io_data_out[23:0], 8'hff};
+    end else if (st_trans_en && (next_state == STS)) begin
+        io_data_out <= {io_data_out[23:0], 8'hff};
     end
-	else if (st_trans_en && (next_state == STS)) begin   //data write for 16 bit of state
-	    data_byte_out     <= io_data_out[31:24];
-	    io_data_out       <= {io_data_out[23:0],8'hff};
-	end
-end	
+end
+
+// 数据输出：data_byte_out
+always @ (negedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) begin
+        data_byte_out <= 8'hff;
+    end else if (send_start) begin
+        data_byte_out <= io_data_out_buff[31:24];
+    end else if (st_trans_en && (next_state == DATA_WR)) begin
+        data_byte_out <= io_data_out[31:24];
+    end else if (st_trans_en && (next_state == STS)) begin
+        data_byte_out <= io_data_out[31:24];
+    end else begin
+        data_byte_out <= {data_byte_out[6:0], 1'b1}; // 默认移位逻辑
+    end
+end
 	
 	
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin	
@@ -446,137 +617,7 @@ always @ (*) begin
     endcase
 end
 
-// io_data_out_buff 的逻辑
-always @ (*) begin
-    io_data_out_buff = 32'hffffffff;
-    case (current_state)
-        IDLE: 
-            io_data_out_buff = 32'hffffffff;
-		
-		OPCODE, GET_CONFIGURATION, SET_CONFIGURATION, GET_STATUS, 
-		GET_VWIRE, PUT_VWIRE, PUT_OOB, GET_OOB:
-			io_data_out_buff[31:24] = 8'hff;
-	
-		OOB_TAG:begin
-		    if(st_trans_en)
-			    io_data_out_buff[31:24] = 8'hff;
-		end
 
-		OOB_LENGTH: begin
-		    if(st_trans_en) begin
-			    if(put_oob_en)
-					io_data_out_buff[31:24] = 8'hff;
-				else if(get_oob_en)
-		            io_data_out_buff[31:24] = 8'hff;
-			end 
-		end 
-	
-		OOB_MSG: begin
-		    if(oob_data_trans_en) begin
-			    if(put_oob_en)
-					io_data_out_buff[31:24] = 8'hff;
-				else if (get_oob_en) 
-					io_data_out_buff[31:16] = 16'h0403;
-			end 
-		end
-
-		VWIRE_LENGTH: begin
-		    if(st_trans_en) 
-				io_data_out_buff[31:24] = 8'hff;
-		end 
-
-		VWIRE_DATA_RD: begin
-		    if(vwire_rd_trans_en)
-				io_data_out_buff[31:24] = 8'hff;
-		end 
-		
-		PUT_IOWR_SHORT:
-		    io_data_out_buff[31:24] = 8'hff;
-
-		PUT_IORD_SHORT:
-		    io_data_out_buff[31:24] = 8'hff;
-		
-		ADDR_RD:
-		    io_data_out_buff[31:24] = 8'hff;
-			
-		DATA_RD:
-		    io_data_out_buff[31:24] = 8'hff;
-
-		SHORT_RD:
-		    io_data_out_buff[31:24] = 8'hff;
-
-		CRC_1:
-		    io_data_out_buff[31:24] = 8'hff;
-		
-		TAR: begin
-		    if(tar_trans_en)
-			    io_data_out_buff[31:24] = 8'h0f; 
-		end
-
-		RESP_WAIT:begin
-		    if(st_trans_en)
-				io_data_out_buff[31:24] = 8'h08;
-		end
-
-		RESP_ACCEPT:begin
-		    if(st_trans_en) begin
-		        if(get_config_en) begin
-					if(io_addr == 16'h0008) io_data_out_buff = 32'h0f000010;//32'h0f000c03;
-					if(io_addr == 16'h0010) io_data_out_buff = 32'h13110000;//32'h0f000c03;
-					if(io_addr == 16'h0020) io_data_out_buff = 32'h03000700;//32'h03070700;
-					if(io_addr == 16'h0030) io_data_out_buff = 32'h13010000;
-					if(io_addr == 16'h0040) io_data_out_buff = 32'h0c110000;
-				end
-				else if(set_config_en || get_status_en) begin
-			        if(io_addr == 16'h0010)
-					    io_data_out_buff[31:16] = 16'h0703;
-					else if(io_addr == 16'h0020)
-					    io_data_out_buff[31:16] = 16'h4401;
-					else 
-					    io_data_out_buff[31:16] = 16'h0c01;
-				end
-				else if (put_vwire_en) begin
-					io_data_out_buff[31:16] = 16'h0703;
-				end
-	    		else if (put_iowr_short_en) begin
-	    			io_data_out_buff[31:16] = 16'h0703;
-	    		end
-	    		else if (put_iord_short_en) begin
-	    		    io_data_out_buff[31:24] = pch_smbus_rdata[7:0];
-	    		end 	
-	    		else if (get_vwire_en) begin
-	    			io_data_out_buff[31:8] = 24'h000599;
-	    		end 
-	    		else if (put_oob_en) begin
-	    		    io_data_out_buff[31:16] = 16'h0403;
-	    		end
-	    		else if (get_oob_en) begin
-	    		    io_data_out_buff[31:8] = 24'h000599;//debug
-	    		end
-	    	end
-	    end
-
-		VWIRE_DATA_WR:begin
-		    if(vwire_wr_trans_en)
-			    io_data_out_buff[31:16] = 16'h0401;
-		end
-
-		SHORT_WR: begin
-		    if(io_wr_trans_en)
-			    io_data_out_buff[31:16] = 16'h0703;
-		end
-
-		DATA_WR:begin
-		    if(data_trans_en) 
-		        io_data_out_buff[31:16] = 16'h0401;
-		end
-		
-		STS:begin
-		    if(sts_trans_en)
-		        io_data_out_buff[31:24] = 8'hff;
-		end
-    endcase
-end
 
 
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin	
