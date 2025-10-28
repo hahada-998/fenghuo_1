@@ -1,18 +1,23 @@
+/* =============================================================================================================
+模块功能：espi_link 是一个基于 eSPI（Enhanced Serial Peripheral Interface）协议的模块. 
+1、处理 eSPI 数据的接收、解析、状态管理以及数据发送。
+2、实现了eSPI协议的状态机，支持多种操作模式，包括配置读取、配置写入、状态获取、虚拟线（vWire）操作、OOB（Out-of-Band）消息处理。
+===============================================================================================================*/
 module espi_link(
-input      ESPI_CLK,
-input      ESPI_RST,
-input      ESPI_CS1,
-input      ESPI_IO_IN,
-output     ESPI_IO_OUT,
-//output     ALERT1,
-output   reg[15:0]    pch_addr,
-output   reg[7:0]     pch_smbus_wdata,
-input    [7:0]        pch_smbus_rdata,
-output   reg          pch_smbus_wdata_en, //20220315
-output   [7:0]        debug_flag,
-output   [7:0]        debug_flag1,
-output   [63:0]       debug_flag2
+    input      				ESPI_CLK,           // eSPI 时钟信号
+    input      				ESPI_RST,           // eSPI 复位信号（低电平有效）
+    input      				ESPI_CS1,           // eSPI 片选信号（低电平有效）
+    input      				ESPI_IO_IN,         // eSPI 数据输入
+    output     				ESPI_IO_OUT,        // eSPI 数据输出
+    output reg [15:0] 		pch_addr,   	    // PCH 地址
+    output reg [7:0]  		pch_smbus_wdata,    // SMBus 写数据
+    input      [7:0]  		pch_smbus_rdata,    // SMBus 读数据
+    output reg        		pch_smbus_wdata_en, // SMBus 写数据使能
+    output     [7:0]  		debug_flag,         // 调试标志
+    output     [7:0]  		debug_flag1,
+    output     [63:0] 		debug_flag2
 );
+
 localparam            IDLE                 = 8'h00;
 localparam            OPCODE               = 8'h01;
 localparam            GET_STATUS           = 8'h02;
@@ -77,14 +82,6 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST) begin
         state_save  <= {state_save[55:0],current_state};
 end
 
-always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1) begin
-	    current_state  <= IDLE;
-    end
-	else begin
-	    current_state  <= next_state;
-	end
-end
 
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     data_byte_in[7:0]  <= {data_byte_in[6:0],ESPI_IO_IN};   //data read for 8 bit
@@ -240,291 +237,348 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
 		io_wr_trans_en <= 1'b0;
 	end
 end	
-always @ (*) begin		
+
+// -------------------------------------------------------------------------------------------------------------
+// FSM ??这里片选信号不受rst控制吗??
+// -------------------------------------------------------------------------------------------------------------
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1)
+	    current_state  <= IDLE;
+	else 
+	    current_state  <= next_state;
+end
+
+always @ (*) begin
     next_state = current_state;
-	send_start = 1'b0;
-	crc_enable = 1'b0;
-	crc_check  = 1'b1;
-	io_data_out_buff = 32'hffffffff;
-	case(current_state)
-	    IDLE:begin
-		    crc_enable = 1'b0;
-			crc_check  = 1'b1;
-			io_data_out_buff = 32'hffffffff;
-			if(!ESPI_CS1)
-			    next_state = OPCODE;
-			end
-		OPCODE:begin
-		    io_data_out_buff[31:24] = 8'hff;
-		    if(st_trans_en) begin
-			    if(data_byte_in == 8'h21) begin
-				    next_state = GET_CONFIGURATION;
-				end
-				else if(data_byte_in == 8'h22) begin
-				    next_state = SET_CONFIGURATION;
-				end
-				else if(data_byte_in == 8'h25) begin
-				    next_state = GET_STATUS;
-				end
-				else if(data_byte_in == 8'h05) begin
-				    next_state = GET_VWIRE;
-				end
-				else if(data_byte_in == 8'h04) begin
-				    next_state = PUT_VWIRE;
-				end
-				else if(data_byte_in == 8'h06) begin
-				    next_state = PUT_OOB;
-				end
-				else if(data_byte_in == 8'h07) begin
-				    next_state = GET_OOB;
-				end
-				else if(data_byte_in == 8'h44) begin
-				    next_state = PUT_IOWR_SHORT;
-				end			
-				else if(data_byte_in == 8'h40) begin
-				    next_state = PUT_IORD_SHORT;
-				end
-				else next_state = IDLE;
-			end 
-		end
-		GET_CONFIGURATION:begin
-		    next_state = ADDR_RD;
-			io_data_out_buff[31:24] = 8'hff;
-		end
-		SET_CONFIGURATION:begin
-		    next_state = ADDR_RD;
-			io_data_out_buff[31:24] = 8'hff;
-		end
-        GET_STATUS:begin
-		    next_state = CRC_1;
-			io_data_out_buff[31:24] = 8'hff;
-		end
-		GET_VWIRE:begin
-		    next_state = CRC_1;
-			io_data_out_buff[31:24] = 8'hff;
-		end
-		PUT_VWIRE:begin
-		    next_state = VWIRE_LENGTH;
-			io_data_out_buff[31:24] = 8'hff;
-		end	
-		PUT_OOB:begin
-		    next_state = OOB_TAG;
-			io_data_out_buff[31:24] = 8'hff;
-		end	
-		GET_OOB:begin
-		    next_state = OOB_TAG;
-			io_data_out_buff[31:24] = 8'hff;
-		end	
-		OOB_TAG:begin
-		    if(st_trans_en) begin
-		        next_state = OOB_LENGTH;
-			    io_data_out_buff[31:24] = 8'hff;
-		    end	
-		end
+    case (current_state)
+        IDLE: begin
+            if (!ESPI_CS1)
+                next_state = OPCODE;
+        end
+
+        OPCODE: begin
+            if (st_trans_en) begin
+                case (data_byte_in)
+                    8'h21: next_state = GET_CONFIGURATION;
+                    8'h22: next_state = SET_CONFIGURATION;
+                    8'h25: next_state = GET_STATUS;
+                    8'h05: next_state = GET_VWIRE;
+                    8'h04: next_state = PUT_VWIRE;
+                    8'h06: next_state = PUT_OOB;
+                    8'h07: next_state = GET_OOB;
+                    8'h44: next_state = PUT_IOWR_SHORT;
+                    8'h40: next_state = PUT_IORD_SHORT;
+                    default: next_state = IDLE;
+                endcase
+            end
+        end
+
+        GET_CONFIGURATION, SET_CONFIGURATION: next_state = ADDR_RD;
+
+        GET_STATUS, GET_VWIRE: next_state = CRC_1;
+
+        PUT_VWIRE: next_state = VWIRE_LENGTH;
+
+        PUT_OOB, GET_OOB: next_state = OOB_TAG;
+
+		OOB_TAG: if(st_trans_en) next_state = OOB_LENGTH;
+
+
 		OOB_LENGTH: begin
 		    if(st_trans_en) begin
-			    if(put_oob_en) begin
+			    if(put_oob_en)
 				    next_state = OOB_MSG;
-					io_data_out_buff[31:24] = 8'hff;
-				end 
-				else if(get_oob_en) begin
+				else if(get_oob_en) 
 				    next_state = CRC_1;  
-		            io_data_out_buff[31:24] = 8'hff;
-				end
 			end 
 		end 
+
 		OOB_MSG: begin
 		    if(oob_data_trans_en) begin
-			    if(put_oob_en) begin
+			    if(put_oob_en) 
 				    next_state = CRC_1;
-					io_data_out_buff[31:24] = 8'hff;
-				end
-				else if (get_oob_en) begin
+				else if (get_oob_en)
 				    next_state = STS;
-					io_data_out_buff[31:16] = 16'h0403;
-				end
 			end 
 		end
-		VWIRE_LENGTH: begin
+
+		VWIRE_LENGTH: if(st_trans_en) next_state = VWIRE_DATA_RD;
+
+		VWIRE_DATA_RD: if(vwire_rd_trans_en) next_state = CRC_1; 
+		
+		PUT_IOWR_SHORT, PUT_IORD_SHORT: next_state = ADDR_RD;
+
+
+        ADDR_RD: begin
+            if (addr_trans_en) begin
+                if (get_config_en || put_iord_short_en)
+                    next_state = CRC_1;
+                else if (set_config_en)
+                    next_state = DATA_RD;
+                else if (put_iowr_short_en)
+                    next_state = SHORT_RD;
+            end
+        end
+
+        DATA_RD: if (data_trans_en) next_state = CRC_1;
+
+
+        SHORT_RD: if (io_rd_trans_en) next_state = CRC_1;
+
+        CRC_1: begin
+            if (st_trans_en && !crc_enable)
+                next_state = TAR;
+            else if (st_trans_en && crc_enable) begin
+                if (data_byte_in == crc_check)
+                    next_state = TAR;
+                else
+                    next_state = CRC_ERR;
+            end
+        end
+
+        TAR: if (tar_trans_en) next_state = RESP_WAIT;
+
+        RESP_WAIT: if (st_trans_en) next_state = RESP_ACCEPT;
+
+        RESP_ACCEPT: begin
+            if (get_config_en)
+                next_state = DATA_WR;
+            else if (set_config_en || get_status_en || put_vwire_en || put_iowr_short_en)
+                next_state = STS;
+            else if (put_iord_short_en)
+                next_state = SHORT_WR;
+            else if (get_vwire_en)
+                next_state = VWIRE_DATA_WR;
+            else if (put_oob_en)
+                next_state = STS;
+            else if (get_oob_en)
+                next_state = OOB_MSG;
+        end
+
+        DATA_WR: if (data_trans_en) next_state = STS;
+
+        SHORT_WR: if (io_wr_trans_en) next_state = STS;
+
+        VWIRE_DATA_WR: if (vwire_wr_trans_en) next_state = STS;
+
+        STS: if (sts_trans_en) next_state = CRC_2;
+
+        CRC_2: begin
+            if (st_trans_en && !crc_enable)
+                next_state = IDLE;
+            else if (st_trans_en && crc_enable) begin
+                if (data_byte_in == crc_check)
+                    next_state = IDLE;
+                else
+                    next_state = CRC_ERR;
+            end
+        end
+
+        default: next_state = IDLE;
+    endcase
+end
+
+// send_start 信号的逻辑
+always @ (*) begin
+    send_start = 1'b0;
+    case (current_state)
+        TAR:
+			if(tar_trans_en)
+				send_start = 1'b1;
+
+		RESP_WAIT:
+			if(st_trans_en)
+				send_start = 1'b1;
+
+		RESP_ACCEPT:
+			if(st_trans_en) begin
+		        if(get_config_en)
+					send_start = 1'b1;
+				else if(set_config_en || get_status_en)
+				    send_start = 1'b1;
+				else if(put_vwire_en)
+				    send_start = 1'b1;
+				else if (put_iowr_short_en)
+	    			send_start = 1'b1;
+	    		else if (put_iord_short_en)
+	    			send_start = 1'b1;
+	    		else if (get_vwire_en)
+	    			send_start = 1'b1;
+	    		else if (put_oob_en)
+	    			send_start = 1'b1;
+	    		else if (get_oob_en)
+	    			send_start = 1'b1;
+			end 
+
+		VWIRE_DATA_WR:
+			if(vwire_wr_trans_en)
+				send_start = 1'b1;
+
+		SHORT_WR:
+			if(io_wr_trans_en)
+				send_start = 1'b1;
+
+		DATA_WR:
+			if(data_trans_en)
+				send_start = 1'b1;
+
+		STS:
+			if(sts_trans_en)
+				send_start = 1'b1;
+
+        default: send_start = 1'b0;
+    endcase
+end
+
+// crc_enable 和 crc_check 的逻辑
+always @ (*) begin
+    crc_enable = 1'b0;
+    crc_check  = 1'b0; 
+    case (current_state)
+        IDLE: begin
+            crc_enable = 1'b0;
+            crc_check  = 1'b1; 
+        end
+        default: begin
+            crc_enable = 1'b0;
+            crc_check  = 1'b1; 
+        end
+    endcase
+end
+
+// io_data_out_buff 的逻辑
+always @ (*) begin
+    io_data_out_buff = 32'hffffffff;
+    case (current_state)
+        IDLE: 
+            io_data_out_buff = 32'hffffffff;
+		
+		OPCODE, GET_CONFIGURATION, SET_CONFIGURATION, GET_STATUS, 
+		GET_VWIRE, PUT_VWIRE, PUT_OOB, GET_OOB:
+			io_data_out_buff[31:24] = 8'hff;
+	
+		OOB_TAG:begin
+		    if(st_trans_en)
+			    io_data_out_buff[31:24] = 8'hff;
+		end
+
+		OOB_LENGTH: begin
 		    if(st_trans_en) begin
-			    next_state = VWIRE_DATA_RD;
-				io_data_out_buff[31:24] = 8'hff;
-			end
+			    if(put_oob_en)
+					io_data_out_buff[31:24] = 8'hff;
+				else if(get_oob_en)
+		            io_data_out_buff[31:24] = 8'hff;
+			end 
 		end 
-		VWIRE_DATA_RD: begin
-		    if(vwire_rd_trans_en) begin
-			    next_state = CRC_1;
+	
+		OOB_MSG: begin
+		    if(oob_data_trans_en) begin
+			    if(put_oob_en)
+					io_data_out_buff[31:24] = 8'hff;
+				else if (get_oob_en) 
+					io_data_out_buff[31:16] = 16'h0403;
+			end 
+		end
+
+		VWIRE_LENGTH: begin
+		    if(st_trans_en) 
 				io_data_out_buff[31:24] = 8'hff;
-			end
+		end 
+
+		VWIRE_DATA_RD: begin
+		    if(vwire_rd_trans_en)
+				io_data_out_buff[31:24] = 8'hff;
 		end 
 		
-		PUT_IOWR_SHORT:begin
-		    next_state = ADDR_RD;
+		PUT_IOWR_SHORT:
 		    io_data_out_buff[31:24] = 8'hff;
-		end
-		PUT_IORD_SHORT:begin
-		    next_state = ADDR_RD;
+
+		PUT_IORD_SHORT:
 		    io_data_out_buff[31:24] = 8'hff;
-		end
-		ADDR_RD: begin
+		
+		ADDR_RD:
 		    io_data_out_buff[31:24] = 8'hff;
-			if(addr_trans_en) begin
-			    if(get_config_en | put_iord_short_en) begin
-				    next_state = CRC_1;
-				end
-				else if(set_config_en) begin
-				    next_state = DATA_RD;
-				end
-				else if (put_iowr_short_en) begin
-				    next_state = SHORT_RD;
-				end
-			end
-		end
-		DATA_RD: begin
+			
+		DATA_RD:
 		    io_data_out_buff[31:24] = 8'hff;
-			if(data_trans_en) begin
-			    next_state = CRC_1;
-			end
-		end
-		SHORT_RD:begin
+
+		SHORT_RD:
 		    io_data_out_buff[31:24] = 8'hff;
-			if(io_rd_trans_en) begin
-			    next_state = CRC_1;
-/* 				if(io_addr == 16'h1500) pch_addr[7:0] = pch_addr_buff[7:0];
-				else if(io_addr == 16'h1501) pch_addr[15:8] = pch_addr_buff[7:0];
-				else if(io_addr == 16'h1502) pch_smbus_wdata[7:0] = pch_addr_buff[7:0];
-				 */
-		    end
-		end
-		CRC_1:begin
+
+		CRC_1:
 		    io_data_out_buff[31:24] = 8'hff;
-			if(st_trans_en && (!crc_enable)) begin
-			    next_state = TAR;
-			end
-			else if (st_trans_en && crc_enable) begin
-			    if(data_byte_in == crc_check) begin
-				    next_state = TAR;
-				end
-				else begin
-				    next_state = CRC_ERR; 
-				end
-			end
-		end
+		
 		TAR: begin
-		    if(tar_trans_en) begin
-			    next_state = RESP_WAIT;
-			    io_data_out_buff[31:24] = 8'h0f;
-				send_start = 1'b1;
-			end 
+		    if(tar_trans_en)
+			    io_data_out_buff[31:24] = 8'h0f; 
 		end
+
 		RESP_WAIT:begin
-		    if(st_trans_en) begin
-			    next_state = RESP_ACCEPT;
+		    if(st_trans_en)
 				io_data_out_buff[31:24] = 8'h08;
-				send_start = 1'b1;
-			end
 		end
+
 		RESP_ACCEPT:begin
 		    if(st_trans_en) begin
 		        if(get_config_en) begin
-				    next_state = DATA_WR;
 					if(io_addr == 16'h0008) io_data_out_buff = 32'h0f000010;//32'h0f000c03;
 					if(io_addr == 16'h0010) io_data_out_buff = 32'h13110000;//32'h0f000c03;
 					if(io_addr == 16'h0020) io_data_out_buff = 32'h03000700;//32'h03070700;
 					if(io_addr == 16'h0030) io_data_out_buff = 32'h13010000;
 					if(io_addr == 16'h0040) io_data_out_buff = 32'h0c110000;
-					send_start = 1'b1;
 				end
 				else if(set_config_en || get_status_en) begin
-				    next_state = STS;
 			        if(io_addr == 16'h0010)
 					    io_data_out_buff[31:16] = 16'h0703;
 					else if(io_addr == 16'h0020)
 					    io_data_out_buff[31:16] = 16'h4401;
 					else 
 					    io_data_out_buff[31:16] = 16'h0c01;
-					send_start = 1'b1;
 				end
 				else if (put_vwire_en) begin
-				    next_state = STS;
 					io_data_out_buff[31:16] = 16'h0703;
-					send_start = 1'b1;
 				end
 	    		else if (put_iowr_short_en) begin
-	    			next_state = STS;
 	    			io_data_out_buff[31:16] = 16'h0703;
-	    			send_start = 1'b1;
 	    		end
 	    		else if (put_iord_short_en) begin
-	    			next_state = SHORT_WR;
 	    		    io_data_out_buff[31:24] = pch_smbus_rdata[7:0];
-	    			send_start = 1'b1;
-	    		end 
-	    		
+	    		end 	
 	    		else if (get_vwire_en) begin
-	    		    next_state = VWIRE_DATA_WR;
 	    			io_data_out_buff[31:8] = 24'h000599;
-	    			send_start = 1'b1;
 	    		end 
 	    		else if (put_oob_en) begin
-	    		    next_state = STS;
 	    		    io_data_out_buff[31:16] = 16'h0403;
-	    			send_start = 1'b1;
 	    		end
 	    		else if (get_oob_en) begin
-	    		    next_state = OOB_MSG;
 	    		    io_data_out_buff[31:8] = 24'h000599;//debug
-	    			send_start = 1'b1;
 	    		end
 	    	end
 	    end
+
 		VWIRE_DATA_WR:begin
-		    if(vwire_wr_trans_en) begin
-			    next_state = STS;
+		    if(vwire_wr_trans_en)
 			    io_data_out_buff[31:16] = 16'h0401;
-				send_start = 1'b1;
-			end 
 		end
+
 		SHORT_WR: begin
-		    if(io_wr_trans_en) begin
-			    next_state = STS; 
+		    if(io_wr_trans_en)
 			    io_data_out_buff[31:16] = 16'h0703;
-				send_start = 1'b1;
-			end 
 		end
+
 		DATA_WR:begin
-		    if(data_trans_en) begin
-			    next_state = STS; 
+		    if(data_trans_en) 
 		        io_data_out_buff[31:16] = 16'h0401;
-				send_start = 1'b1;
-			end 
 		end
 		
 		STS:begin
-		    if(sts_trans_en) begin
-			    next_state = CRC_2;
+		    if(sts_trans_en)
 		        io_data_out_buff[31:24] = 8'hff;
-				send_start = 1'b1;
-			end
 		end
-		CRC_2: begin
-		    if(st_trans_en && (!crc_enable)) begin
-			    next_state = IDLE;
-			end
-            else if(st_trans_en && crc_enable) begin	
-			    if(data_byte_in == crc_check) begin
-				    next_state = IDLE;
-				end
-				else begin
-				    next_state = CRC_ERR;
-				end
-			end
-		end
-		default: begin
-            next_state = IDLE;
-		end
-	endcase
+    endcase
 end
+
+
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin	
 	if(!ESPI_RST || ESPI_CS1) begin
 	    get_status_en     <= 1'b0;
