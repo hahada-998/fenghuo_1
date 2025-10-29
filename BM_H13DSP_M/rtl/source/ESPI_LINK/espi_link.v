@@ -13,7 +13,8 @@ module espi_link(
     output reg [7:0]  		pch_smbus_wdata,    // SMBus 写数据
     input      [7:0]  		pch_smbus_rdata,    // SMBus 读数据
     output reg        		pch_smbus_wdata_en, // SMBus 写数据使能
-    output     [7:0]  		debug_flag,         // 调试标志
+	// 调试标志, 寄存状态机当前状态
+    output     [7:0]  		debug_flag,         
     output     [7:0]  		debug_flag1,
     output     [63:0] 		debug_flag2
 );
@@ -23,32 +24,32 @@ localparam            OPCODE               = 8'h01; // 操作码，用于指示�
 localparam            GET_STATUS           = 8'h02; // 主机往从机拉中断请求的相关事件
 localparam            GET_CONFIGURATION    = 8'h03; // 主机主动获取从机的eSPI相关配置
 localparam            SET_CONFIGURATION    = 8'h04; // 主机主动配置eSPI相关配置
-localparam            ADDR_RD              = 8'h05;
-localparam            DATA_RD              = 8'h06;
-localparam            DATA_WR              = 8'h07;
-localparam            RESP_WAIT            = 8'h08;
-localparam            RESP_ACCEPT          = 8'h09;
-localparam            STS                  = 8'h0a;
-localparam            CRC_1                = 8'h0b;
-localparam            CRC_2                = 8'h0c;
-localparam            TAR                  = 8'h0d;
-localparam            CRC_ERR              = 8'h0e;
-localparam            GET_VWIRE            = 8'h0f;
-localparam            VWIRE_DATA_WR        = 8'h10;
-localparam            VWIRE_LENGTH         = 8'h11;
-localparam            PUT_VWIRE            = 8'h12;
-localparam            VWIRE_DATA_RD        = 8'h13;
-localparam            PUT_OOB              = 8'h14;
-localparam            GET_OOB              = 8'h15;
-localparam            OOB_MSG              = 8'h16;
-localparam            OOB_TAG              = 8'h17;
-localparam            OOB_LENGTH           = 8'h18;
-localparam            OOB_DATA_RD          = 8'h19;
-localparam            OOB_DATA_WR          = 8'h1a;
-localparam            PUT_IORD_SHORT       = 8'h1b;
-localparam            PUT_IOWR_SHORT       = 8'h1c;
-localparam            SHORT_WR             = 8'h1d;
-localparam            SHORT_RD             = 8'h1e;
+localparam            ADDR_RD              = 8'h05; // 主机向从机发送地址信息，从机解析地址以确定后续操作的目标
+localparam            DATA_RD              = 8'h06; // 主机从从机读取数据
+localparam            DATA_WR              = 8'h07; // 主机向从机写入数据
+localparam            RESP_WAIT            = 8'h08; // 从机等待主机的响应信号
+localparam            RESP_ACCEPT          = 8'h09; // 从机确认主机的响应信号，并准备进入下一步操作
+localparam            STS                  = 8'h0a; // 用于传输状态信息，例如中断状态或错误状态
+localparam            CRC_1                = 8'h0b; // 用于校验数据的完整性，确保数据传输过程中没有错误
+localparam            CRC_2                = 8'h0c; // 用于校验数据的完整性，确保数据传输过程中没有错误
+localparam            TAR                  = 8'h0d; // 用于处理目标地址相关的操作
+localparam            CRC_ERR              = 8'h0e; // 表示数据校验失败，需要重新传输
+localparam            GET_VWIRE            = 8'h0f; // 主机请求从机的虚拟线（vWire）状态
+localparam            VWIRE_DATA_WR        = 8'h10; // 主机向从机写入虚拟线数据
+localparam            VWIRE_LENGTH         = 8'h11; // 用于传输虚拟线数据的长度信息
+localparam            PUT_VWIRE            = 8'h12; // 主机向从机发送虚拟线数据
+localparam            VWIRE_DATA_RD        = 8'h13; // 主机从从机读取虚拟线数据
+localparam            PUT_OOB              = 8'h14; // 主机向从机发送带外（Out-of-Band, OOB）消息
+localparam            GET_OOB              = 8'h15; // 主机请求从机的带外消息
+localparam            OOB_MSG              = 8'h16; // 用于传输带外消息的内容
+localparam            OOB_TAG              = 8'h17; // 用于标识带外消息的类型或来源
+localparam            OOB_LENGTH           = 8'h18; // 用于传输带外消息的长度信息
+localparam            OOB_DATA_RD          = 8'h19; // 主机从从机读取带外消息数据
+localparam            OOB_DATA_WR          = 8'h1a; // 主机向从机写入带外消息数据
+localparam            PUT_IORD_SHORT       = 8'h1b; // 主机向从机发送短格式的 IO 读取请求
+localparam            PUT_IOWR_SHORT       = 8'h1c; // 主机向从机发送短格式的 IO 写入请求
+localparam            SHORT_WR             = 8'h1d; // 主机向从机写入短格式数据
+localparam            SHORT_RD             = 8'h1e; // 主机从从机读取短格式数据
 reg      [3:0]        clk_cnt;//for state transfer  
 reg                   trans_cnt1;
 reg      [2:0]        trans_cnt2,trans_cnt3,trans_cnt4;
@@ -108,6 +109,14 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     end
 end
 
+// IO 地址：io_addr
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1)
+        io_addr <= 16'h0000;
+    else if (st_trans_en && (current_state == ADDR_RD))
+        io_addr <= {io_addr[7:0], data_byte_in[7:0]}; // 16-bit address read
+end
+
 // PCH 地址：pch_addr
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     if (!ESPI_RST || ESPI_CS1)
@@ -128,14 +137,6 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST) begin
     end
 	else if (current_state != state_save[7:0])
         state_save  <= {state_save[55:0],current_state};
-end
-
-// IO 地址：io_addr
-always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1)
-        io_addr <= 16'h0000;
-    else if (st_trans_en && (current_state == ADDR_RD))
-        io_addr <= {io_addr[7:0], data_byte_in[7:0]}; // 16-bit address read
 end
 
 // IO 数据输入：io_data_in
@@ -166,48 +167,41 @@ end
 // -------------------------------------------------------------------------------------------------------------
 // 控制逻辑
 // -------------------------------------------------------------------------------------------------------------
-
-// 3. 目标传输使能信号
+// 目标传输使能信号
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) 
         tar_trans_en <= 1'b0;
-    end else if ((next_state == TAR) && (clk_cnt == 4'b0001)) begin
+    else if ((next_state == TAR) && (clk_cnt == 4'b0001))
         tar_trans_en <= 1'b1;
-    end else begin
+    else 
         tar_trans_en <= 1'b0;
-    end
 end
 
-// 4. 数据传输计数器 1
+// 地址传输计数器
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) 
         trans_cnt1 <= 1'b0;
-    end else if (current_state == ADDR_RD) begin
-        if (trans_cnt1 == 1'b1) begin
-            trans_cnt1 <= 1'b0;
-        end 
-		else begin
-            trans_cnt1 <= trans_cnt1 + 1'b1;
-        end
-    end
-end
-
-// 4. 数据传输计数器 1
-always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1) begin
-        addr_trans_en <= 1'b0;
-    end 
 	else if (current_state == ADDR_RD) begin
-        if (trans_cnt1 == 1'b1) begin
-            addr_trans_en <= 1'b1; 
-        end 
-		else begin
-            addr_trans_en <= 1'b0; 
-        end
+        if (trans_cnt1 == 1'b1) 
+            trans_cnt1 <= 1'b0;
+		else 
+            trans_cnt1 <= trans_cnt1 + 1'b1;
     end
 end
 
-// 5. 数据传输计数器 2
+// 地址传输使能
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) 
+        addr_trans_en <= 1'b0;
+	else if (current_state == ADDR_RD) begin
+        if (trans_cnt1 == 1'b1)
+            addr_trans_en <= 1'b1; 
+		else
+            addr_trans_en <= 1'b0; 
+    end
+end
+
+// 数据读写传输计数器
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     if (!ESPI_RST || ESPI_CS1) begin
         trans_cnt2 <= 3'b000;

@@ -1,91 +1,91 @@
 
 module pch_cpld_espi_ram 
 (
-input wire  i_rst_n      , 
-input wire  i_clk        ,
-input wire  i_clk_10ms   ,
+input   wire                i_rst_n             , // 全局复位信号，低电平有效
+input   wire                i_clk               , // 主时钟信号
+input   wire                i_clk_10ms          , // 10ms 时钟信号，用于定时操作
 
-input    wire    [15:0]  i_espi_addr     ,	
-input    wire    [7:0]   i_espi_date_out ,
-output  wire     [7:0]   o_espi_date_in  , 
-input    wire            i_espi_wdata_en ,
+input   wire [15:0]         i_espi_addr         , // eSPI 地址信号，16 位宽
+input   wire [7:0]          i_espi_date_out     , // eSPI 数据输出信号，8 位宽
+output  wire [7:0]          o_espi_date_in      , // eSPI 数据输入信号，8 位宽
+input   wire                i_espi_wdata_en     , // eSPI 写数据使能信号，高电平有效
 
-/*ESPI RAM START*/
-input     wire     i_p0_mciog3a_cb_id0  ,  //CPU0 G3-L--J45
-input     wire     i_p0_mciog3a_cb_id1  , 
-input     wire     i_p0_mciog3c_cb_id0  ,  //CPU0 G3-H--J44
-input     wire     i_p0_mciog3c_cb_id1  ,
+/* ESPI RAM START */
+input   wire                i_p0_mciog3a_cb_id0 , // CPU0 G3-L 信号 ID0，连接到 J45
+input   wire                i_p0_mciog3a_cb_id1 , // CPU0 G3-L 信号 ID1
+input   wire                i_p0_mciog3c_cb_id0 , // CPU0 G3-H 信号 ID0，连接到 J44
+input   wire                i_p0_mciog3c_cb_id1 , // CPU0 G3-H 信号 ID1
 
-input     wire     i_p0_mciop0a_cb_id0  ,  //CPU0 PE0-L--J185
-input     wire     i_p0_mciop0a_cb_id1  , 
-input     wire     i_p0_mciop0c_cb_id0  ,  //CPU0 PE0-H--J48
-input     wire     i_p0_mciop0c_cb_id1  , 
+input   wire                i_p0_mciop0a_cb_id0, // CPU0 PE0-L 信号 ID0，连接到 J185
+input   wire                i_p0_mciop0a_cb_id1, // CPU0 PE0-L 信号 ID1
+input   wire                i_p0_mciop0c_cb_id0, // CPU0 PE0-H 信号 ID0，连接到 J48
+input   wire                i_p0_mciop0c_cb_id1, // CPU0 PE0-H 信号 ID1
  
-input     wire     i_p0_mciop1a_cb_id0  ,  //CPU0 PE1-L--J75
-input     wire     i_p0_mciop1a_cb_id1  , 
-input     wire     i_p0_mciop1c_cb_id0  ,  //CPU0 PE1-H--J76
-input     wire     i_p0_mciop1c_cb_id1  ,
+input   wire                i_p0_mciop1a_cb_id0, // CPU0 PE1-L 信号 ID0，连接到 J75
+input   wire                i_p0_mciop1a_cb_id1, // CPU0 PE1-L 信号 ID1
+input   wire                i_p0_mciop1c_cb_id0, // CPU0 PE1-H 信号 ID0，连接到 J76
+input   wire                i_p0_mciop1c_cb_id1, // CPU0 PE1-H 信号 ID1
 
-input     wire     i_p0_mciop2a_cb_id0  ,  //CPU0 PE2-L--J40
-input     wire     i_p0_mciop2a_cb_id1  , 
-input     wire     i_p0_mciop2c_cb_id0  ,  //CPU0 PE2-H--J41
-input     wire     i_p0_mciop2c_cb_id1  , 
+input   wire               i_p0_mciop2a_cb_id0, // CPU0 PE2-L 信号 ID0，连接到 J40
+input   wire               i_p0_mciop2a_cb_id1, // CPU0 PE2-L 信号 ID1
+input   wire               i_p0_mciop2c_cb_id0, // CPU0 PE2-H 信号 ID0，连接到 J41
+input   wire               i_p0_mciop2c_cb_id1, // CPU0 PE2-H 信号 ID1
  
-input     wire     i_p0_mciop3a_cb_id0     ,  //CPU0 PE3-L--J42
-input     wire     i_p0_mciop3a_cb_id1     ,
-input     wire     i_p0_mciop3c_cb_id0     ,  //CPU0 PE3-H--J43    
-input     wire     i_p0_mciop3c_cb_id1     ,   
- 
-input     wire     i_p1_mciog1a_cb_id0 ,  //CPU1 G1-L--J210 
-input     wire     i_p1_mciog1a_cb_id1 ,  
-input     wire     i_p1_mciog1c_cb_id0 ,  //CPU1 G1-H--J209
-input     wire     i_p1_mciog1c_cb_id1 ,
+input   wire               i_p0_mciop3a_cb_id0, // CPU0 PE3-L 信号 ID0，连接到 J42
+input   wire               i_p0_mciop3a_cb_id1, // CPU0 PE3-L 信号 ID1
+input   wire               i_p0_mciop3c_cb_id0, // CPU0 PE3-H 信号 ID0，连接到 J43
+input   wire               i_p0_mciop3c_cb_id1, // CPU0 PE3-H 信号 ID1
 
-input     wire     i_p1_mciop0a_cb_id0 ,  //CPU1 PE0-L--J73
-input     wire     i_p1_mciop0a_cb_id1 ,
-input     wire     i_p1_mciop0c_cb_id0 ,  //CPU1 PE0-H--J74
-input     wire     i_p1_mciop0c_cb_id1 , 
+input   wire               i_p1_mciog1a_cb_id0, // CPU1 G1-L 信号 ID0，连接到 J210
+input   wire               i_p1_mciog1a_cb_id1, // CPU1 G1-L 信号 ID1
+input   wire               i_p1_mciog1c_cb_id0, // CPU1 G1-H 信号 ID0，连接到 J209
+input   wire               i_p1_mciog1c_cb_id1, // CPU1 G1-H 信号 ID1
 
-input     wire     i_p1_mciop1a_cb_id0 ,  //CPU1 PE1-L--J204
-input     wire     i_p1_mciop1a_cb_id1 , 
-input     wire     i_p1_mciop1c_cb_id0 ,  //CPU1 PE1-H--J203
-input     wire     i_p1_mciop1c_cb_id1 , 
+input   wire               i_p1_mciop0a_cb_id0, // CPU1 PE0-L 信号 ID0，连接到 J73
+input   wire               i_p1_mciop0a_cb_id1, // CPU1 PE0-L 信号 ID1
+input   wire               i_p1_mciop0c_cb_id0, // CPU1 PE0-H 信号 ID0，连接到 J74
+input   wire               i_p1_mciop0c_cb_id1, // CPU1 PE0-H 信号 ID1
 
-input     wire     i_p1_mciop2a_cb_id0 , //CPU1 PE2-L--J205
-input     wire     i_p1_mciop2a_cb_id1 ,
-input     wire     i_p1_mciop2c_cb_id0 , //CPU1 PE2-H--J206
-input     wire     i_p1_mciop2c_cb_id1 ,
- 
-input     wire     i_p1_mciop3a_cb_id0 , //CPU1 PE3-L--J207
-input     wire     i_p1_mciop3a_cb_id1 , 
-input     wire     i_p1_mciop3c_cb_id0 , //CPU1 PE3-H--J208
-input     wire     i_p1_mciop3c_cb_id1 , 
+input   wire               i_p1_mciop1a_cb_id0, // CPU1 PE1-L 信号 ID0，连接到 J204
+input   wire               i_p1_mciop1a_cb_id1, // CPU1 PE1-L 信号 ID1
+input   wire               i_p1_mciop1c_cb_id0, // CPU1 PE1-H 信号 ID0，连接到 J203
+input   wire               i_p1_mciop1c_cb_id1, // CPU1 PE1-H 信号 ID1
 
-//////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
-input    wire     [7:0]   i_PRODUCT_LINE_C2	    ,
-input    wire     [7:0]   i_PRODUCT_GEN_ID_C3    ,
-input    wire     [7:0]   i_SERVER_ID_C5         ,
-input    wire     [7:0]   i_BOARD_ID_C6          ,
-//////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
-output    wire   [7:0]   o_test_reg             ,
+input   wire               i_p1_mciop2a_cb_id0, // CPU1 PE2-L 信号 ID0，连接到 J205
+input   wire               i_p1_mciop2a_cb_id1, // CPU1 PE2-L 信号 ID1
+input   wire               i_p1_mciop2c_cb_id0, // CPU1 PE2-H 信号 ID0，连接到 J206
+input   wire               i_p1_mciop2c_cb_id1, // CPU1 PE2-H 信号 ID1
 
+input   wire               i_p1_mciop3a_cb_id0, // CPU1 PE3-L 信号 ID0，连接到 J207
+input   wire               i_p1_mciop3a_cb_id1, // CPU1 PE3-L 信号 ID1
+input   wire               i_p1_mciop3c_cb_id0, // CPU1 PE3-H 信号 ID0，连接到 J208
+input   wire               i_p1_mciop3c_cb_id1, // CPU1 PE3-H 信号 ID1
+
+////////////////////////////////// 0x00C0-0x00D0 固定寄存器 /////////////////////////////////////////////////
+input   wire [7:0]         i_PRODUCT_LINE_C2  , // 产品线标识，地址 0x00C2
+input   wire [7:0]         i_PRODUCT_GEN_ID_C3, // 产品代号标识，地址 0x00C3
+input   wire [7:0]         i_SERVER_ID_C5     , // 服务器标识，地址 0x00C5
+input   wire [7:0]         i_BOARD_ID_C6      , // 板卡标识，地址 0x00C6
+////////////////////////////////// 0x00C0-0x00D0 固定寄存器 /////////////////////////////////////////////////
+output  wire [7:0]          o_test_reg         , // 测试寄存器输出信号
 /*ESPI RAM END */
-output   wire    [7:0]   o_espi_debug_ram_1000,   //2023-3-30 add for bios debug
-output   wire    [7:0]   o_espi_debug_ram_1001,
-output   wire    [7:0]   o_espi_debug_ram_1002,
-output   wire    [7:0]   o_espi_debug_ram_1003,
-output   wire    [7:0]   o_espi_debug_ram_1004,
-output   wire    [7:0]   o_espi_debug_ram_1005,
 
-input   wire     [7:0]   i_espi_ram_1050,
-input   wire     [7:0]   i_espi_ram_1051,
-input   wire     [7:0]   i_espi_ram_1052,
-input   wire     [7:0]   i_espi_ram_1053,
+output  wire [7:0]          o_espi_debug_ram_1000, // eSPI 调试 RAM 信号，地址 0x1000
+output  wire [7:0]          o_espi_debug_ram_1001, // eSPI 调试 RAM 信号，地址 0x1001
+output  wire [7:0]          o_espi_debug_ram_1002, // eSPI 调试 RAM 信号，地址 0x1002
+output  wire [7:0]          o_espi_debug_ram_1003, // eSPI 调试 RAM 信号，地址 0x1003
+output  wire [7:0]          o_espi_debug_ram_1004, // eSPI 调试 RAM 信号，地址 0x1004
+output  wire [7:0]          o_espi_debug_ram_1005, // eSPI 调试 RAM 信号，地址 0x1005
+
+input   wire [7:0]          i_espi_ram_1050      , // eSPI RAM 输入信号，地址 0x1050
+input   wire [7:0]          i_espi_ram_1051      , // eSPI RAM 输入信号，地址 0x1051
+input   wire [7:0]          i_espi_ram_1052      , // eSPI RAM 输入信号，地址 0x1052
+input   wire [7:0]          i_espi_ram_1053      , // eSPI RAM 输入信号，地址 0x1053
 //2024-3-5
-input    wire    [7:0]   i_espi_ram_1100,
-input    wire    [7:0]   i_espi_ram_1101,
-input    wire    [7:0]   i_espi_ram_1102,
-input    wire    [7:0]   i_espi_ram_1103,
+input wire [7:0] i_espi_ram_1100, // eSPI RAM 输入信号，地址 0x1100
+input wire [7:0] i_espi_ram_1101, // eSPI RAM 输入信号，地址 0x1101
+input wire [7:0] i_espi_ram_1102, // eSPI RAM 输入信号，地址 0x1102
+input wire [7:0] i_espi_ram_1103, // eSPI RAM 输入信号，地址 0x1103
 input    wire    [7:0]   i_espi_ram_1104,
 input    wire    [7:0]   i_espi_ram_1105,
 input    wire    [7:0]   i_espi_ram_1106,
