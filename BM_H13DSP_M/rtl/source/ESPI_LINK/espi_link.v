@@ -19,10 +19,10 @@ module espi_link(
 );
 
 localparam            IDLE                 = 8'h00;
-localparam            OPCODE               = 8'h01;
-localparam            GET_STATUS           = 8'h02;
-localparam            GET_CONFIGURATION    = 8'h03;
-localparam            SET_CONFIGURATION    = 8'h04;
+localparam            OPCODE               = 8'h01; // 操作码，用于指示主机请求的操作类型
+localparam            GET_STATUS           = 8'h02; // 主机往从机拉中断请求的相关事件
+localparam            GET_CONFIGURATION    = 8'h03; // 主机主动获取从机的eSPI相关配置
+localparam            SET_CONFIGURATION    = 8'h04; // 主机主动配置eSPI相关配置
 localparam            ADDR_RD              = 8'h05;
 localparam            DATA_RD              = 8'h06;
 localparam            DATA_WR              = 8'h07;
@@ -86,6 +86,28 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
         data_byte_in <= {data_byte_in[6:0], ESPI_IO_IN}; // 8-bit data shift
 end
 
+// 字节计数器
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) begin
+        clk_cnt <= 4'b0000;
+    end else if (clk_cnt == 4'b0111) begin
+        clk_cnt <= 4'b0000;
+    end else begin
+        clk_cnt <= clk_cnt + 1'b1;
+    end
+end
+
+// eSPI 总线协议以字节为单位, 字节传输使能
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) begin
+        st_trans_en <= 1'b0;
+    end else if (clk_cnt == 4'b0111) begin
+        st_trans_en <= 1'b1;
+    end else begin
+        st_trans_en <= 1'b0;
+    end
+end
+
 // PCH 地址：pch_addr
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     if (!ESPI_RST || ESPI_CS1)
@@ -141,27 +163,9 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     end
 end
 
-// 1. 时钟计数逻辑
-always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1) begin
-        clk_cnt <= 4'b0000;
-    end else if (clk_cnt == 4'b0111) begin
-        clk_cnt <= 4'b0000;
-    end else begin
-        clk_cnt <= clk_cnt + 1'b1;
-    end
-end
-
-// 2. 状态传输使能信号
-always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
-    if (!ESPI_RST || ESPI_CS1) begin
-        st_trans_en <= 1'b0;
-    end else if (clk_cnt == 4'b0111) begin
-        st_trans_en <= 1'b1;
-    end else begin
-        st_trans_en <= 1'b0;
-    end
-end
+// -------------------------------------------------------------------------------------------------------------
+// 控制逻辑
+// -------------------------------------------------------------------------------------------------------------
 
 // 3. 目标传输使能信号
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
@@ -181,8 +185,24 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
     end else if (current_state == ADDR_RD) begin
         if (trans_cnt1 == 1'b1) begin
             trans_cnt1 <= 1'b0;
-        end else begin
+        end 
+		else begin
             trans_cnt1 <= trans_cnt1 + 1'b1;
+        end
+    end
+end
+
+// 4. 数据传输计数器 1
+always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
+    if (!ESPI_RST || ESPI_CS1) begin
+        addr_trans_en <= 1'b0;
+    end 
+	else if (current_state == ADDR_RD) begin
+        if (trans_cnt1 == 1'b1) begin
+            addr_trans_en <= 1'b1; 
+        end 
+		else begin
+            addr_trans_en <= 1'b0; 
         end
     end
 end
@@ -288,107 +308,6 @@ always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin
         io_rd_trans_en <= 1'b0;
     end
 end
-
-always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin	
-	if(!ESPI_RST || ESPI_CS1) begin
-	    clk_cnt            <= 4'b0000;
-		st_trans_en        <= 1'b0;
-	    tar_trans_en       <= 1'b0;
-	    trans_cnt1         <= 1'b0;
-	    trans_cnt2         <= 1'b0;
-		data_trans_en      <= 1'b0;
-		trans_cnt3         <= 3'b000;
-	    trans_cnt4         <= 3'b000;
-		trans_cnt5         <= 3'b000;
-		trans_cnt6         <= 3'b000;
-		vwire_wr_trans_en  <= 1'b0;
-	    vwire_rd_trans_en  <= 1'b0;
-		oob_data_trans_en  <= 1'b0;
-		addr_trans_en      <= 1'b0;
-		sts_trans_en       <= 1'b0;
-		io_wr_trans_en     <= 1'b0;
-		io_rd_trans_en     <= 1'b0;
-	end
-	else if ((next_state == TAR) && (clk_cnt == 4'b0001)) begin
-	    tar_trans_en <= 1'b1;
-		clk_cnt      <= 4'b0000;
-	end
-	else if (clk_cnt == 4'b0111) begin
-	    st_trans_en  <= 1'b1;
-		clk_cnt      <= 4'b0000;
-	    if((current_state == DATA_RD) || (current_state == DATA_WR)) begin
-		    if (trans_cnt2 == 3'b011) begin
-			    data_trans_en <= 1'b1;
-				trans_cnt2    <= 3'b000;
-			end
-			else begin
-			    trans_cnt2    <= trans_cnt2 + 1'b1;
-				data_trans_en <= 1'b0;
-			end
-        end
-		else if (current_state == VWIRE_DATA_WR) begin
-		    if(trans_cnt4 == 3'b010) begin
-			    vwire_wr_trans_en  <= 1'b1;
-				trans_cnt4         <= 3'b000;
-			end
-		    else begin
-			    trans_cnt4         <= trans_cnt4 + 1'b1;
-				vwire_wr_trans_en  <= 1'b0;
-		    end
-		end
-		else if (current_state == VWIRE_DATA_RD) begin
-		if(trans_cnt5 == ((vwire_length_buff+1)*2-1)) begin
-		    vwire_rd_trans_en      <= 1'b1;  
-            trans_cnt5             <= 3'b000;
-		end
-		else begin
-		    trans_cnt5             <= trans_cnt5 + 1'b1;
-			vwire_rd_trans_en      <= 1'b0;
-		end
-		end
-		else if (current_state == OOB_MSG) begin
-		if(trans_cnt6 == (oob_data_length-1)) begin
-		    oob_data_trans_en      <= 1'b1;
-			trans_cnt6             <= 3'b000;
-		end
-		else begin
-		    trans_cnt6             <= trans_cnt6 + 1'b1;
-			oob_data_trans_en      <= 1'b0;
-		end
-		end
-		else if (current_state == ADDR_RD) begin
-		if(trans_cnt1 == 1'b1) begin
-		    addr_trans_en         <= 1'b1;  
-			trans_cnt1            <= 1'b0; 
-		end
-		else begin
-		    trans_cnt1            <= trans_cnt1 + 1'b1;
-			addr_trans_en         <= 1'b0; 
-		end
-		end
-		else if (current_state == STS) begin
-		if(trans_cnt3 == 3'b001) begin
-		    sts_trans_en          <= 1'b1;
-			trans_cnt3            <= 3'b000;
-	    end
-		else begin
-		    trans_cnt3            <= trans_cnt3 + 1'b1;
-		    sts_trans_en          <= 1'b0;
-		end
-		end
-		else if (current_state == SHORT_WR)
-		    io_wr_trans_en        <= 1'b1;
-		else if (current_state == SHORT_RD)
-		    io_rd_trans_en        <= 1'b1;
-	end
-	else begin
-	    clk_cnt        <= clk_cnt + 1'b1;
-		st_trans_en    <= 1'b0;
-		tar_trans_en   <= 1'b0;
-		io_rd_trans_en <= 1'b0;
-		io_wr_trans_en <= 1'b0;
-	end
-end	
 
 // -------------------------------------------------------------------------------------------------------------
 // FSM ??这里片选信号不受rst控制吗??
@@ -597,9 +516,6 @@ always @ (*) begin
         end
     endcase
 end
-
-
-
 
 always @ (posedge ESPI_CLK or negedge ESPI_RST or posedge ESPI_CS1) begin	
 	if(!ESPI_RST || ESPI_CS1) begin
