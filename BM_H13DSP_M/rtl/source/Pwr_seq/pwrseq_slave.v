@@ -61,149 +61,149 @@
 //`include "as03mb03_define.vh"
 
 module pwrseq_slave #(
-  parameter SHARED_P5V_STBY_HPMOS       = 1'b0,
-  parameter S5DEV_STUCKON_FAULT_CHK     = 1'b0,
-  parameter BOUND_SYS_PWROK             = 1'b1,
-  parameter NUM_CPU                     = 2,
-  parameter NUM_OPT_AUX                 = 0,
-  parameter NUM_S5DEV                   = 0,
-  parameter NUM_SAS                     = 0,
-  parameter NUM_HD_BP                   = 0,
-  parameter NUM_M2_BP                   = 0,
-  parameter NUM_RISER                   = 0,
-  parameter NUM_MEZZ                    = 0,
-//parameter   [NUM_CPU-1:0] HPMOS_TYPE  = 2'b10,
-//parameter [2*NUM_CPU-1:0] HPMOS_OWNER = 4'b00_00,
-  parameter FAULT_VEC_SIZE              = 40,
-  // bit location guide for mask below                      3         3         2         1
-  //                                                        9         1         3         5         7
-  parameter [FAULT_VEC_SIZE-1:0] RECOV_FAULT_MASK     = 40'b0000_1111_1111_0000_0000_0000_0000_0000_0000_0000,
-  parameter [FAULT_VEC_SIZE-1:0] LIM_RECOV_FAULT_MASK = 40'b0011_0000_0000_1111_1111_1111_1111_1111_1111_1001,
-  parameter [FAULT_VEC_SIZE-1:0] NON_RECOV_FAULT_MASK = 40'b0000_0000_0000_0000_0000_0000_0000_0000_0000_0000) (
+    parameter SHARED_P5V_STBY_HPMOS       = 1'b0; // 是否使用 P5V_STBY 作为 HPMOS 电源
+    parameter S5DEV_STUCKON_FAULT_CHK     = 1'b0; // 是否启用 S5 设备卡死故障检查
+    parameter BOUND_SYS_PWROK             = 1'b1; // 是否绑定系统电源 OK 信号
+    parameter NUM_CPU                     = 2;    // 支持的 CPU 数量
+    parameter NUM_OPT_AUX                 = 0;    // 额外辅助电源数量
+    parameter NUM_S5DEV                   = 0;    // S5 设备数量
+    parameter NUM_SAS                     = 0;    // SAS 设备数量
+    parameter NUM_HD_BP                   = 0;    // HDD 背板数量
+    parameter NUM_M2_BP                   = 0;    // M.2 背板数量
+    parameter NUM_RISER                   = 0;    // Riser 卡数量
+    parameter NUM_MEZZ                    = 0;    // Mezz 卡数量
+    //parameter   [NUM_CPU-1:0] HPMOS_TYPE  = 2'b10,
+    //parameter   [2*NUM_CPU-1:0] HPMOS_OWNER = 4'b00_00,
+    parameter FAULT_VEC_SIZE              = 40;   // 故障向量大小
+    // bit location guide for mask below                      3         3         2         1
+    //                                                        9         1         3         5         7
+    parameter [FAULT_VEC_SIZE-1:0] RECOV_FAULT_MASK     = 40'b0000_1111_1111_0000_0000_0000_0000_0000_0000_0000,
+    parameter [FAULT_VEC_SIZE-1:0] LIM_RECOV_FAULT_MASK = 40'b0011_0000_0000_1111_1111_1111_1111_1111_1111_1001,
+    parameter [FAULT_VEC_SIZE-1:0] NON_RECOV_FAULT_MASK = 40'b0000_0000_0000_0000_0000_0000_0000_0000_0000_0000) 
+    (
+    // 时钟和复位信号
+    input wire clk;                // 时钟信号
+    input wire reset;              // 复位信号
 
-//base signal  Clocks and resets
-  input     wire    clk          ,       // clock
-  input     wire    reset      ,       // reset
-  input     wire    t1us        ,       // 10ns pulse every 1us
-  input     wire    t512us    ,       // 10ns pulse every 5ms
-  input     wire    t1ms        ,       // 10ns pulse every 1ms
-  input     wire    t2ms        ,       // 10ns pulse every 2ms
-  input     wire    t64ms      ,       // 10ns pulse every 64ms
-  input     wire    t1s          ,       // 10ns pulse every 1s
+    // 定时信号
+    input wire t1us;               // 每 1us 的脉冲信号
+    input wire t512us;             // 每 512us 的脉冲信号
+    input wire t1ms;               // 每 1ms 的脉冲信号
+    input wire t2ms;               // 每 2ms 的脉冲信号
+    input wire t64ms;              // 每 64ms 的脉冲信号
+    input wire t1s;                // 每 1s 的脉冲信号
   
-  input     wire    keep_alive_on_fault ,
- //from pwrseq_master 
-  input     wire    [5:0]   power_seq_sm          ,     //current power sequencer state  
-  input     wire    dc_on_wait_complete         ,	   //in FROM MASTER
-  input     wire    rt_critical_fail_store   ,	   //in FROM MASTER
-  input     wire    fault_clear                         ,	   //in FROM MASTER 
+    // 来自 pwrseq_master 的信号
+    input wire keep_alive_on_fault;    // 故障时保持电源开启
+    input wire [5:0] power_seq_sm;     // 当前电源状态机状态
+    input wire dc_on_wait_complete;    // DC 上电等待完成信号
+    input wire rt_critical_fail_store; // 关键故障存储信号
+    input wire fault_clear;            // 故障清除信号
 
- //to pwrseq_master   
-  output    reg      pgd_so_far				    ,  
-  output    wire    s5dev_pwren_request		    ,       	
-  output    wire    s5dev_pwrdis_request	            ,           
-  output    reg      any_pwr_fault_det		    , 
-  output    wire    any_aux_vrm_fault		    ,   
-  output    reg      any_recov_fault			    ,   
-  output    reg      any_lim_recov_fault		    ,          	
-  output    reg      any_non_recov_fault		    , 
+    //to pwrseq_master   
+    output    reg      pgd_so_far				          ,  
+    output    wire     s5dev_pwren_request		    ,       	
+    output    wire     s5dev_pwrdis_request	      ,           
+    output    reg      any_pwr_fault_det		      , 
+    output    wire     any_aux_vrm_fault		      ,   
+    output    reg      any_recov_fault			      ,   
+    output    reg      any_lim_recov_fault		    ,          	
+    output    reg      any_non_recov_fault		    , 
 
- //from Power Controller PG signal   
-  input     wire    p5v_stby_pg  		        ,
-  input     wire    grp_b_p0_33_s5_pg	        ,
-  input     wire    grp_b_p1_33_s5_pg	        ,
-  input     wire    grp_b_p0_18_s5_pg	        ,
-  input     wire    grp_b_p1_18_s5_pg	        ,                
-  input     wire    p3v3_stby_pg                   ,
-  input     wire    p12v_stby_pg                   ,
+    // 电源控制器 PG 信号
+    input     wire     p5v_stby_pg;         // P5V_STBY 电源良好信号
+    input     wire     grp_b_p0_33_s5_pg;   // S5 电源良好信号 (P0 3.3V)
+    input     wire     grp_b_p1_33_s5_pg;   // S5 电源良好信号 (P1 3.3V)
+    input     wire     grp_b_p0_18_s5_pg;   // S5 电源良好信号 (P0 1.8V)
+    input     wire     grp_b_p1_18_s5_pg;   // S5 电源良好信号 (P1 1.8V)
+    input     wire     p3v3_stby_pg;        // P3V3_STBY 电源良好信号
+    input     wire     p12v_stby_pg;        // P12V_STBY 电源良好信号
+    input     wire     p12v_efuse_pg;       // P12V EFUSE 电源良好信号
+    input     wire     p12v_ssd_efuse_pg;   // P12V SSD EFUSE 电源良好信号
+    input     wire     p12v_p0_dimm_pg;     // P12V DIMM 电源良好信号 (P0)
+    input     wire     p12v_p1_dimm_pg;     // P12V DIMM 电源良好信号 (P1)
+    input     wire     p5v_pg;              // P5V 电源良好信号
+    input     wire     grp_c_p0_pg;         // GRP_C 电源良好信号 (P0)
+    input     wire     grp_c_p1_pg;         // GRP_C 电源良好信号 (P1)
+    input     wire     grp_d_vddio_p0_pg;   // GRP_D VDDIO 电源良好信号 (P0)
+    input     wire     grp_d_vddio_p1_pg;   // GRP_D VDDIO 电源良好信号 (P1)
+    input     wire     grp_d_soc_p0_pg;     // GRP_D SOC 电源良好信号 (P0)
+    input     wire     grp_d_soc_p1_pg;     // GRP_D SOC 电源良好信号 (P1)
+    input     wire     grp_d_p0_vddcore0_pg;// GRP_D VDDCORE0 电源良好信号 (P0)
+    input     wire     grp_d_p1_vddcore0_pg;// GRP_D VDDCORE0 电源良好信号 (P1)
+    input     wire     grp_d_p0_vddcore1_pg;// GRP_D VDDCORE1 电源良好信号 (P0)
+    input     wire     grp_d_p1_vddcore1_pg;// GRP_D VDDCORE1 电源良好信号 (P1)
+    input     wire     i_pwrgd_ocp0_nic_pwrgd; // OCP 电源良好信号
   
-  input     wire    p12v_efuse_pg		                ,
-  input     wire    p12v_ssd_efuse_pg	                , 
-  input     wire    p12v_p0_dimm_pg		        , 
-  input     wire    p12v_p1_dimm_pg		        ,  
-  input     wire    p5v_pg				        ,
-  input     wire    grp_c_p0_pg			        ,
-  input     wire    grp_c_p1_pg			        ,
-  input     wire    grp_d_vddio_p0_pg	                ,  
-  input     wire    grp_d_vddio_p1_pg	                ,
-  input     wire    grp_d_soc_p0_pg		        ,
-  input     wire    grp_d_soc_p1_pg		        ,  
-  input     wire    grp_d_p0_vddcore0_pg	        ,
-  input     wire    grp_d_p1_vddcore0_pg	        ,  
-  input     wire    grp_d_p0_vddcore1_pg	        ,
-  input     wire    grp_d_p1_vddcore1_pg	        ,
-  input     wire    i_pwrgd_ocp0_nic_pwrgd	,
+    // input         wire       [2:0]pcb_id                      ,
   
-  // input         wire       [2:0]pcb_id                      ,
+    // 故障检测信号
+    output    reg [5:0] pwrseq_sm_fault_det; // 故障发生时的状态机状态
+    output    wire      p5v_stby_fault_det;       // P5V_STBY 故障检测信号
+    output    wire      grp_c_p0_fault_det;       // GRP_C P0 故障检测信号
+    output    wire      grp_c_p1_fault_det;       // GRP_C P1 故障检测信号
+    output    wire      grp_d_vddio_p0_fault_det; // GRP_D VDDIO P0 故障检测信号
+    output    wire      grp_d_vddio_p1_fault_det; // GRP_D VDDIO P1 故障检测信号
+    output    wire      grp_d_soc_p0_fault_det;   // GRP_D SOC P0 故障检测信号
+    output    wire      grp_d_soc_p1_fault_det;   // GRP_D SOC P1 故障检测信号
+    output    wire      grp_d_p0_vddcore0_fault_det; // GRP_D VDDCORE0 P0 故障检测信号
+    output    wire      grp_d_p1_vddcore0_fault_det; // GRP_D VDDCORE0 P1 故障检测信号
+    output    wire      grp_d_p0_vddcore1_fault_det; // GRP_D VDDCORE1 P0 故障检测信号
+    output    wire      grp_d_p1_vddcore1_fault_det; // GRP_D VDDCORE1 P1 故障检测信号 
   
-//Fault Detect Signal  
-  output    reg      [5:0]    pwrseq_sm_fault_det	,    // SM state where fault occurred
-  output    wire    p5v_stby_fault_det			,
-  output    wire    grp_c_p0_fault_det			,
-  output    wire    grp_c_p1_fault_det			,  
-  output    wire    grp_d_vddio_p0_fault_det	        , 
-  output    wire    grp_d_vddio_p1_fault_det	        ,   
-  output    wire    grp_d_soc_p0_fault_det		,  
-  output    wire    grp_d_soc_p1_fault_det		,  
-  output    wire    grp_d_p0_vddcore0_fault_det	,
-  output    wire    grp_d_p1_vddcore0_fault_det	,  
-  output    wire    grp_d_p0_vddcore1_fault_det	,
-  output    wire    grp_d_p1_vddcore1_fault_det	,  
+    output wire grp_b_p0_33_s5_fault_det; // GRP_B P0 3.3V S5 故障检测信号
+    output wire grp_b_p1_33_s5_fault_det; // GRP_B P1 3.3V S5 故障检测信号
+    output wire grp_b_p0_18_s5_fault_det; // GRP_B P0 1.8V S5 故障检测信号
+    output wire grp_b_p1_18_s5_fault_det; // GRP_B P1 1.8V S5 故障检测信号
   
-  
-  output    wire    grp_b_p0_33_s5_fault_det	,
-  output    wire    grp_b_p1_33_s5_fault_det	,
-  output    wire    grp_b_p0_18_s5_fault_det	,
-  output    wire    grp_b_p1_18_s5_fault_det	,
-  
-  output    wire    p3v3_stby_fault_det            ,
-  // output         wire           p12v_stby_fault_det         ,  
-  output    wire    p5v_fault_det			,
-  // output		wire			p12v_efuse_fault_det		,
-  // output		wire			p12v_ssd_efuse_fault_det	,
-  // output		wire			p12v_p0_dimm_fault_det		,
-  // output		wire			p12v_p1_dimm_fault_det		, 
+    output wire p3v3_stby_fault_det;      // P3V3_STBY 故障检测信号
+    // output         wire           p12v_stby_fault_det         ,  
+    output wire p5v_fault_det;            // P5V 故障检测信号
+    // output		wire			p12v_efuse_fault_det		,
+    // output		wire			p12v_ssd_efuse_fault_det	,
+    // output		wire			p12v_p0_dimm_fault_det		,
+    // output		wire			p12v_p1_dimm_fault_det		, 
 
-  //to Power Controller Enable Pin
-  output    wire    p5v_stby_en      	        ,
-  output    wire    p5v_stby_usb_en		,
-  output    wire    grp_b_p0_33_s5_en	,
-  output    wire    grp_b_p1_33_s5_en	,
-  output    wire    grp_b_p0_18_s5_en	,
-  output    wire    grp_b_p1_18_s5_en	,
-  output    wire    power_supply_on		,
-  // output		wire		   p12_en_p0_dimm_1		,
-  // output		wire		   p12_en_p1_dimm_1		,
-  // output          wire                   p12_en_p0_dimm_2     ,
-  // output          wire                   p12_en_p1_dimm_2     ,
-  output    wire    p5v_en				,
-  output    wire    grp_c_p0_vdd11_en	,
-  output    wire    grp_c_p1_vdd11_en	,
-  output    wire    grp_d_p0_vddio_en	,
-  output    wire    grp_d_p1_vddio_en	,
-  output    wire    grp_d_p0_soc_en		,
-  output    wire    grp_d_p1_soc_en		,
-  output    wire    grp_d_p0_vddcore0_en	,
-  output    wire    grp_d_p1_vddcore0_en	,
-  output    wire    grp_d_p0_vddcore1_en	,
-  output    wire    grp_d_p1_vddcore1_en	,
-  output    wire    ocp_aux_en			,
-  output    wire    ocp_main_en			,
-  // output		wire		   usb_ponrst_r_n		,
-  // output		wire		   tpcm_reset_n			, 
+    // 电源使能信号
+    output wire p5v_stby_en;              // P5V_STBY 电源使能信号
+    output wire p5v_stby_usb_en;          // P5V_STBY USB 电源使能信号
+    output wire grp_b_p0_33_s5_en;        // GRP_B P0 3.3V S5 电源使能信号
+    output wire grp_b_p1_33_s5_en;        // GRP_B P1 3.3V S5 电源使能信号
+    output wire grp_b_p0_18_s5_en;        // GRP_B P0 1.8V S5 电源使能信号
+    output wire grp_b_p1_18_s5_en;        // GRP_B P1 1.8V S5 电源使能信号
+    output wire power_supply_on;          // 主电源使能信号
+    // output		wire		   p12_en_p0_dimm_1		,
+    // output		wire		   p12_en_p1_dimm_1		,
+    // output          wire                   p12_en_p0_dimm_2     ,
+    // output          wire                   p12_en_p1_dimm_2     ,
+    output wire p5v_en;                   // P5V 电源使能信号
+    output wire grp_c_p0_vdd11_en;        // GRP_C P0 VDD11 电源使能信号
+    output wire grp_c_p1_vdd11_en;        // GRP_C P1 VDD11 电源使能信号
+    output wire grp_d_p0_vddio_en;        // GRP_D P0 VDDIO 电源使能信号
+    output wire grp_d_p1_vddio_en;        // GRP_D P1 VDDIO 电源使能信号
+    output wire grp_d_p0_soc_en;          // GRP_D P0 SOC 电源使能信号
+    output wire grp_d_p1_soc_en;          // GRP_D P1 SOC 电源使能信号
+    output wire grp_d_p0_vddcore0_en;     // GRP_D P0 VDDCORE0 电源使能信号
+    output wire grp_d_p1_vddcore0_en;     // GRP_D P1 VDDCORE0 电源使能信号
+    output wire grp_d_p0_vddcore1_en;     // GRP_D P0 VDDCORE1 电源使能信号
+    output wire grp_d_p1_vddcore1_en;     // GRP_D P1 VDDCORE1 电源使能信号
+    output wire ocp_aux_en;               // 辅助电源使能信号
+    output wire ocp_main_en;              // 主电源使能信号
+    // output		wire		   usb_ponrst_r_n		,
+    // output		wire		   tpcm_reset_n			, 
 
-  //from CPU
-  input     wire    [NUM_CPU-1:0]   i_cpu_pwrok	, 
-  input     wire    [NUM_CPU-1:0]   i_cpu_prsnt_n    ,	
+    // CPU 信号
+    input wire [NUM_CPU-1:0] i_cpu_pwrok;    // CPU 电源 OK 信号
+    input wire [NUM_CPU-1:0] i_cpu_prsnt_n;  // CPU 存在信号
   
-  //to CPU  
-  output    wire    o_p0_pwr_good			        , //for AMD PWR_GOOD
-  output    wire    [NUM_CPU-1:0]   o_cpu_pwrok	,
-  output    wire    o_rsmrst_n				        ,
+    // 输出到 CPU 的信号
+    output wire o_p0_pwr_good;            // P0 电源良好信号
+    output wire [NUM_CPU-1:0] o_cpu_pwrok;// CPU 电源 OK 信号
+    output wire o_rsmrst_n;               // RSMRST 信号
   
-  //to system reset
-  output    reg      reached_sm_wait_powerok	
-  );
+    //to system reset
+    output    reg      reached_sm_wait_powerok	
+);
 
 //------------------------------------------------------------------------------
 // Power sequence state definition

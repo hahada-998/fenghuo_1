@@ -1,91 +1,92 @@
 
 module pch_cpld_espi_ram 
 (
-input   wire                i_rst_n             , // È«¾Ö¸´Î»ĞÅºÅ£¬µÍµçÆ½ÓĞĞ§
-input   wire                i_clk               , // Ö÷Ê±ÖÓĞÅºÅ
-input   wire                i_clk_10ms          , // 10ms Ê±ÖÓĞÅºÅ£¬ÓÃÓÚ¶¨Ê±²Ù×÷
+input   wire                i_rst_n             , // å…¨å±€å¤ä½ä¿¡å·ï¼Œä½ç”µå¹³æœ‰æ•ˆ
+input   wire                i_clk               , // æ—¶é’Ÿä¿¡å·
+input   wire                i_clk_10ms          , // 10ms æ—¶é’Ÿä¿¡å·ï¼Œç”¨äºå®šæ—¶æ§åˆ¶
 
-input   wire [15:0]         i_espi_addr         , // eSPI µØÖ·ĞÅºÅ£¬16 Î»¿í
-input   wire [7:0]          i_espi_date_out     , // eSPI Êı¾İÊä³öĞÅºÅ£¬8 Î»¿í
-output  wire [7:0]          o_espi_date_in      , // eSPI Êı¾İÊäÈëĞÅºÅ£¬8 Î»¿í
-input   wire                i_espi_wdata_en     , // eSPI Ğ´Êı¾İÊ¹ÄÜĞÅºÅ£¬¸ßµçÆ½ÓĞĞ§
+input   wire [15:0]         i_espi_addr         , // eSPI åœ°å€ä¿¡å·ï¼Œ16 ä½
+input   wire [7:0]          i_espi_date_out     , // eSPI å†™æ•°æ®ä¿¡å·ï¼Œ8 ä½
+output  wire [7:0]          o_espi_date_in      , // eSPI è¯»æ•°æ®ä¿¡å·ï¼Œ8 ä½
+input   wire                i_espi_wdata_en     , // eSPI å†™æ•°æ®ä½¿èƒ½ä¿¡å·ï¼Œé«˜ç”µå¹³æœ‰æ•ˆ
 
 /* ESPI RAM START */
-input   wire                i_p0_mciog3a_cb_id0 , // CPU0 G3-L ĞÅºÅ ID0£¬Á¬½Óµ½ J45
-input   wire                i_p0_mciog3a_cb_id1 , // CPU0 G3-L ĞÅºÅ ID1
-input   wire                i_p0_mciog3c_cb_id0 , // CPU0 G3-H ĞÅºÅ ID0£¬Á¬½Óµ½ J44
-input   wire                i_p0_mciog3c_cb_id1 , // CPU0 G3-H ĞÅºÅ ID1
+input   wire                i_p0_mciog3a_cb_id0 , // CPU0 G3-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J45
+input   wire                i_p0_mciog3a_cb_id1 , // CPU0 G3-L ä¿¡å· ID1
+input   wire                i_p0_mciog3c_cb_id0 , // CPU0 G3-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J44
+input   wire                i_p0_mciog3c_cb_id1 , // CPU0 G3-H ä¿¡å· ID1
 
-input   wire                i_p0_mciop0a_cb_id0, // CPU0 PE0-L ĞÅºÅ ID0£¬Á¬½Óµ½ J185
-input   wire                i_p0_mciop0a_cb_id1, // CPU0 PE0-L ĞÅºÅ ID1
-input   wire                i_p0_mciop0c_cb_id0, // CPU0 PE0-H ĞÅºÅ ID0£¬Á¬½Óµ½ J48
-input   wire                i_p0_mciop0c_cb_id1, // CPU0 PE0-H ĞÅºÅ ID1
+input   wire                i_p0_mciop0a_cb_id0, // CPU0 PE0-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J185
+input   wire                i_p0_mciop0a_cb_id1, // CPU0 PE0-L ä¿¡å· ID1
+input   wire                i_p0_mciop0c_cb_id0, // CPU0 PE0-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J48
+input   wire                i_p0_mciop0c_cb_id1, // CPU0 PE0-H ä¿¡å· ID1
  
-input   wire                i_p0_mciop1a_cb_id0, // CPU0 PE1-L ĞÅºÅ ID0£¬Á¬½Óµ½ J75
-input   wire                i_p0_mciop1a_cb_id1, // CPU0 PE1-L ĞÅºÅ ID1
-input   wire                i_p0_mciop1c_cb_id0, // CPU0 PE1-H ĞÅºÅ ID0£¬Á¬½Óµ½ J76
-input   wire                i_p0_mciop1c_cb_id1, // CPU0 PE1-H ĞÅºÅ ID1
+input   wire                i_p0_mciop1a_cb_id0, // CPU0 PE1-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J75
+input   wire                i_p0_mciop1a_cb_id1, // CPU0 PE1-L ä¿¡å· ID1
+input   wire                i_p0_mciop1c_cb_id0, // CPU0 PE1-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J76
+input   wire                i_p0_mciop1c_cb_id1, // CPU0 PE1-H ä¿¡å· ID1
 
-input   wire               i_p0_mciop2a_cb_id0, // CPU0 PE2-L ĞÅºÅ ID0£¬Á¬½Óµ½ J40
-input   wire               i_p0_mciop2a_cb_id1, // CPU0 PE2-L ĞÅºÅ ID1
-input   wire               i_p0_mciop2c_cb_id0, // CPU0 PE2-H ĞÅºÅ ID0£¬Á¬½Óµ½ J41
-input   wire               i_p0_mciop2c_cb_id1, // CPU0 PE2-H ĞÅºÅ ID1
+input   wire               i_p0_mciop2a_cb_id0, // CPU0 PE2-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J40
+input   wire               i_p0_mciop2a_cb_id1, // CPU0 PE2-L ä¿¡å· ID1
+input   wire               i_p0_mciop2c_cb_id0, // CPU0 PE2-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J41
+input   wire               i_p0_mciop2c_cb_id1, // CPU0 PE2-H ä¿¡å· ID1
  
-input   wire               i_p0_mciop3a_cb_id0, // CPU0 PE3-L ĞÅºÅ ID0£¬Á¬½Óµ½ J42
-input   wire               i_p0_mciop3a_cb_id1, // CPU0 PE3-L ĞÅºÅ ID1
-input   wire               i_p0_mciop3c_cb_id0, // CPU0 PE3-H ĞÅºÅ ID0£¬Á¬½Óµ½ J43
-input   wire               i_p0_mciop3c_cb_id1, // CPU0 PE3-H ĞÅºÅ ID1
+input   wire               i_p0_mciop3a_cb_id0, // CPU0 PE3-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J42
+input   wire               i_p0_mciop3a_cb_id1, // CPU0 PE3-L ä¿¡å· ID1
+input   wire               i_p0_mciop3c_cb_id0, // CPU0 PE3-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J43
+input   wire               i_p0_mciop3c_cb_id1, // CPU0 PE3-H ä¿¡å· ID1
 
-input   wire               i_p1_mciog1a_cb_id0, // CPU1 G1-L ĞÅºÅ ID0£¬Á¬½Óµ½ J210
-input   wire               i_p1_mciog1a_cb_id1, // CPU1 G1-L ĞÅºÅ ID1
-input   wire               i_p1_mciog1c_cb_id0, // CPU1 G1-H ĞÅºÅ ID0£¬Á¬½Óµ½ J209
-input   wire               i_p1_mciog1c_cb_id1, // CPU1 G1-H ĞÅºÅ ID1
+input   wire               i_p1_mciog1a_cb_id0, // CPU1 G1-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J210
+input   wire               i_p1_mciog1a_cb_id1, // CPU1 G1-L ä¿¡å· ID1
+input   wire               i_p1_mciog1c_cb_id0, // CPU1 G1-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J209
+input   wire               i_p1_mciog1c_cb_id1, // CPU1 G1-H ä¿¡å· ID1
 
-input   wire               i_p1_mciop0a_cb_id0, // CPU1 PE0-L ĞÅºÅ ID0£¬Á¬½Óµ½ J73
-input   wire               i_p1_mciop0a_cb_id1, // CPU1 PE0-L ĞÅºÅ ID1
-input   wire               i_p1_mciop0c_cb_id0, // CPU1 PE0-H ĞÅºÅ ID0£¬Á¬½Óµ½ J74
-input   wire               i_p1_mciop0c_cb_id1, // CPU1 PE0-H ĞÅºÅ ID1
+input   wire               i_p1_mciop0a_cb_id0, // CPU1 PE0-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J73
+input   wire               i_p1_mciop0a_cb_id1, // CPU1 PE0-L ä¿¡å· ID1
+input   wire               i_p1_mciop0c_cb_id0, // CPU1 PE0-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J74
+input   wire               i_p1_mciop0c_cb_id1, // CPU1 PE0-H ä¿¡å· ID1
 
-input   wire               i_p1_mciop1a_cb_id0, // CPU1 PE1-L ĞÅºÅ ID0£¬Á¬½Óµ½ J204
-input   wire               i_p1_mciop1a_cb_id1, // CPU1 PE1-L ĞÅºÅ ID1
-input   wire               i_p1_mciop1c_cb_id0, // CPU1 PE1-H ĞÅºÅ ID0£¬Á¬½Óµ½ J203
-input   wire               i_p1_mciop1c_cb_id1, // CPU1 PE1-H ĞÅºÅ ID1
+input   wire               i_p1_mciop1a_cb_id0, // CPU1 PE1-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J204
+input   wire               i_p1_mciop1a_cb_id1, // CPU1 PE1-L ä¿¡å· ID1
+input   wire               i_p1_mciop1c_cb_id0, // CPU1 PE1-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J203
+input   wire               i_p1_mciop1c_cb_id1, // CPU1 PE1-H ä¿¡å· ID1
 
-input   wire               i_p1_mciop2a_cb_id0, // CPU1 PE2-L ĞÅºÅ ID0£¬Á¬½Óµ½ J205
-input   wire               i_p1_mciop2a_cb_id1, // CPU1 PE2-L ĞÅºÅ ID1
-input   wire               i_p1_mciop2c_cb_id0, // CPU1 PE2-H ĞÅºÅ ID0£¬Á¬½Óµ½ J206
-input   wire               i_p1_mciop2c_cb_id1, // CPU1 PE2-H ĞÅºÅ ID1
+input   wire               i_p1_mciop2a_cb_id0, // CPU1 PE2-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J205
+input   wire               i_p1_mciop2a_cb_id1, // CPU1 PE2-L ä¿¡å· ID1
+input   wire               i_p1_mciop2c_cb_id0, // CPU1 PE2-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J206
+input   wire               i_p1_mciop2c_cb_id1, // CPU1 PE2-H ä¿¡å· ID1
 
-input   wire               i_p1_mciop3a_cb_id0, // CPU1 PE3-L ĞÅºÅ ID0£¬Á¬½Óµ½ J207
-input   wire               i_p1_mciop3a_cb_id1, // CPU1 PE3-L ĞÅºÅ ID1
-input   wire               i_p1_mciop3c_cb_id0, // CPU1 PE3-H ĞÅºÅ ID0£¬Á¬½Óµ½ J208
-input   wire               i_p1_mciop3c_cb_id1, // CPU1 PE3-H ĞÅºÅ ID1
+input   wire               i_p1_mciop3a_cb_id0, // CPU1 PE3-L ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J207
+input   wire               i_p1_mciop3a_cb_id1, // CPU1 PE3-L ä¿¡å· ID1
+input   wire               i_p1_mciop3c_cb_id0, // CPU1 PE3-H ä¿¡å· ID0ï¼Œè¿æ¥åˆ° J208
+input   wire               i_p1_mciop3c_cb_id1, // CPU1 PE3-H ä¿¡å· ID1
 
-////////////////////////////////// 0x00C0-0x00D0 ¹Ì¶¨¼Ä´æÆ÷ /////////////////////////////////////////////////
-input   wire [7:0]         i_PRODUCT_LINE_C2  , // ²úÆ·Ïß±êÊ¶£¬µØÖ· 0x00C2
-input   wire [7:0]         i_PRODUCT_GEN_ID_C3, // ²úÆ·´úºÅ±êÊ¶£¬µØÖ· 0x00C3
-input   wire [7:0]         i_SERVER_ID_C5     , // ·şÎñÆ÷±êÊ¶£¬µØÖ· 0x00C5
-input   wire [7:0]         i_BOARD_ID_C6      , // °å¿¨±êÊ¶£¬µØÖ· 0x00C6
-////////////////////////////////// 0x00C0-0x00D0 ¹Ì¶¨¼Ä´æÆ÷ /////////////////////////////////////////////////
-output  wire [7:0]          o_test_reg         , // ²âÊÔ¼Ä´æÆ÷Êä³öĞÅºÅ
+////////////////////////////////// 0x00C0-0x00D0 å›ºå®šå¯„å­˜å™¨ /////////////////////////////////////////////////
+input   wire [7:0]         i_PRODUCT_LINE_C2  , // äº§å“çº¿æ ‡è¯†ï¼Œåœ°å€ 0x00C2
+input   wire [7:0]         i_PRODUCT_GEN_ID_C3, // äº§å“ä»£æ•°æ ‡è¯†ï¼Œåœ°å€ 0x00C3
+input   wire [7:0]         i_SERVER_ID_C5     , // æœåŠ¡å™¨æ ‡è¯†ï¼Œåœ°å€ 0x00C5
+input   wire [7:0]         i_BOARD_ID_C6      , // æ¿å¡æ ‡è¯†ï¼Œåœ°å€ 0x00C6
+////////////////////////////////// 0x00C0-0x00D0 å›ºå®šå¯„å­˜å™¨ /////////////////////////////////////////////////
+output  wire [7:0]          o_test_reg        , // æµ‹è¯•å¯„å­˜å™¨è¾“å‡ºä¿¡å·
 /*ESPI RAM END */
 
-output  wire [7:0]          o_espi_debug_ram_1000, // eSPI µ÷ÊÔ RAM ĞÅºÅ£¬µØÖ· 0x1000
-output  wire [7:0]          o_espi_debug_ram_1001, // eSPI µ÷ÊÔ RAM ĞÅºÅ£¬µØÖ· 0x1001
-output  wire [7:0]          o_espi_debug_ram_1002, // eSPI µ÷ÊÔ RAM ĞÅºÅ£¬µØÖ· 0x1002
-output  wire [7:0]          o_espi_debug_ram_1003, // eSPI µ÷ÊÔ RAM ĞÅºÅ£¬µØÖ· 0x1003
-output  wire [7:0]          o_espi_debug_ram_1004, // eSPI µ÷ÊÔ RAM ĞÅºÅ£¬µØÖ· 0x1004
-output  wire [7:0]          o_espi_debug_ram_1005, // eSPI µ÷ÊÔ RAM ĞÅºÅ£¬µØÖ· 0x1005
+output  wire [7:0]          o_espi_debug_ram_1000, // eSPI è°ƒè¯• RAM ä¿¡å·ï¼Œåœ°å€ 0x1000
+output  wire [7:0]          o_espi_debug_ram_1001, // eSPI è°ƒè¯• RAM ä¿¡å·ï¼Œåœ°å€ 0x1001
+output  wire [7:0]          o_espi_debug_ram_1002, // eSPI è°ƒè¯• RAM ä¿¡å·ï¼Œåœ°å€ 0x1002
+output  wire [7:0]          o_espi_debug_ram_1003, // eSPI è°ƒè¯• RAM ä¿¡å·ï¼Œåœ°å€ 0x1003
+output  wire [7:0]          o_espi_debug_ram_1004, // eSPI è°ƒè¯• RAM ä¿¡å·ï¼Œåœ°å€ 0x1004
+output  wire [7:0]          o_espi_debug_ram_1005, // eSPI è°ƒè¯• RAM ä¿¡å·ï¼Œåœ°å€ 0x1005
 
-input   wire [7:0]          i_espi_ram_1050      , // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1050
-input   wire [7:0]          i_espi_ram_1051      , // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1051
-input   wire [7:0]          i_espi_ram_1052      , // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1052
-input   wire [7:0]          i_espi_ram_1053      , // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1053
+input   wire [7:0]          i_espi_ram_1050      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1050
+input   wire [7:0]          i_espi_ram_1051      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1051
+input   wire [7:0]          i_espi_ram_1052      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1052
+input   wire [7:0]          i_espi_ram_1053      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1053
 //2024-3-5
-input wire [7:0] i_espi_ram_1100, // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1100
-input wire [7:0] i_espi_ram_1101, // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1101
-input wire [7:0] i_espi_ram_1102, // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1102
-input wire [7:0] i_espi_ram_1103, // eSPI RAM ÊäÈëĞÅºÅ£¬µØÖ· 0x1103
+input   wire [7:0]          i_espi_ram_1100      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1100
+input   wire [7:0]          i_espi_ram_1101      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1101
+input   wire [7:0]          i_espi_ram_1102      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1102
+input   wire [7:0]          i_espi_ram_1103      , // eSPI RAM è¾“å…¥ä¿¡å·ï¼Œåœ°å€ 0x1103
+
 input    wire    [7:0]   i_espi_ram_1104,
 input    wire    [7:0]   i_espi_ram_1105,
 input    wire    [7:0]   i_espi_ram_1106,

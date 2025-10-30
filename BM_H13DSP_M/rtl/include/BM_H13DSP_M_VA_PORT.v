@@ -27,63 +27,70 @@ module  BM_H13DSP_M(
 // input   i_PAL_TMS                                                                   /* synthesis LOC = "D9 "*/,    //default 1 active 0           I
 // output o_PAL_TDO_R                                                               /* synthesis LOC = "E8  "*/,    //default 0 pull up en         O
 // input   i_PAL_TDI                                                                   /* synthesis LOC = "C7  "*/,    //default 1 active 0           I
-input   i_HDR_N_R                                                                   /* synthesis LOC = "W6  "*/,    //default 0 pull up en         O
-//CPLD SET
-input   i_CPLD_JTAG_EN                                                         /* synthesis LOC = "C13 "*/,    //default 1 active 0           I
-input   i_CPLD_DONE                                                               /* synthesis LOC = "A19 "*/,    //default 1 active 0           I
-input   i_CPLD_INIT_N                                                           /* synthesis LOC = "C17 "*/,    //default 1 active 0           I
-input   i_CPLD2_JTAGEN_R                                                     /* synthesis LOC = "W10 "*/,    //default 1 active 0           I
-input   i_PAL_PEOGRAM_N                                                       /* synthesis LOC = "D13 "*/,    //default 1 active 0           I
-input   i_CPLD_SN                                                                   /* synthesis LOC = "Y19  "*/,    //default 1 active 0           I
-//PWR/RST BTN
-input   i_PAL_PWR_BTN_N                                                       /* synthesis LOC = "V10 "*/,    //default 1 active 0           I
-input   i_PAL_BUTTOPN_RST_N                                               /* synthesis LOC = "T9  "*/,    //default 1 active 0           I
-//PSU
-input   i_PS2_PRSNT                                                               /* synthesis LOC = "R4  "*/,    //default 1 active 0           I
-output o_PS2_P12V_ON_R                                                       /* synthesis LOC = "P4  "*/,    //default 0 pull up en         O
-input   i_PS2_DCOK_N                                                             /* synthesis LOC = "R5  "*/,    //default 1 active 0           I
-input   i_PS2_SMB_ALERT                                                       /* synthesis LOC = "P2  "*/,    //default 1 active 0           I
-input   i_PS2_ACFAIL_N                                                         /* synthesis LOC = "T3  "*/,    //default 1 active 0           I
-input   i_PS1_PRSNT                                                               /* synthesis LOC = "M4  "*/,    //default 1 active 0           I
-output o_PS1_P12V_ON_R                                                       /* synthesis LOC = "K7  "*/,    //default 0 pull up en         O
-input   i_PS1_DCOK_N                                                             /* synthesis LOC = "N4  "*/,    //default 1 active 0           I
-input   i_PS1_SMB_ALERT                                                       /* synthesis LOC = "M5  "*/,    //default 1 active 0           I
-input   i_PS1_ACFAIL_N                                                         /* synthesis LOC = "N5  "*/,    //default 1 active 0           I
-output o_PAL_PS_OFF_R                                                         /* synthesis LOC = "C12 "*/,    //default 0 pull up en         O
-output o_PAL_DUAL_EN_R                                                       /* synthesis LOC = "G13 "*/,    //default 0 pull up en         O
-input   i_PGD_P12V_DROOP                                                     /* synthesis LOC = "M2  "*/,    //default 1 active 0           I
-input   i_PGD_P12V_STBY_DROOP                                           /* synthesis LOC = "F1  "*/,    //default 1 active 0           I
-//CLK
-input   i_CLK_25M_CPLD                                                         /* synthesis LOC = "E2  "*/,    //default 1 active 0           I
+// JTAG信号
+input   i_HDR_N_R                   /* synthesis LOC = "W6  "*/,    // JTAG头部信号，默认0，内部上拉使能
 
+// CPLD设置信号
+input   i_CPLD_JTAG_EN              /* synthesis LOC = "C13 "*/,    // 启用CPLD的JTAG接口，默认1，低电平有效
+input   i_CPLD_DONE                 /* synthesis LOC = "A19 "*/,    // CPLD初始化完成信号，默认1，低电平有效
+input   i_CPLD_INIT_N               /* synthesis LOC = "C17 "*/,    // CPLD初始化信号，默认1，低电平有效
+input   i_CPLD2_JTAGEN_R            /* synthesis LOC = "W10 "*/,    // CPLD2 JTAG使能信号，默认1，低电平有效
+input   i_PAL_PEOGRAM_N             /* synthesis LOC = "D13 "*/,    // CPLD编程信号（低有效启动编程），默认1，低电平有效
+input   i_CPLD_SN                   /* synthesis LOC = "Y19 "*/,    // CPLD 序列号信号或数据，默认1，低电平有效
 
-output o_CLK_GEN_EN_R_N                                                     /* synthesis LOC = "Y20 "*/,    //default 0 pull up en         O
-input   i_CLK_GEN_ALERT_R_N                                               /* synthesis LOC = "W15 "*/,    //default 1 active 0           I
+// 按钮信号
+input   i_PAL_PWR_BTN_N             /* synthesis LOC = "V10 "*/,    // 电源按钮信号，默认1，低电平有效
+input   i_PAL_BUTTOPN_RST_N         /* synthesis LOC = "T9  "*/,    // 复位按钮信号，默认1，低电平有效
 
+//PSU（电源信号）
+input   i_PS2_PRSNT               /* synthesis LOC = "R4  "*/,    // 电源模块2 电源存在信号，默认1，低电平有效
+output  o_PS2_P12V_ON_R           /* synthesis LOC = "P4  "*/,    // 电源模块2 12V输出使能信号，默认0，低电平有效
+input   i_PS2_DCOK_N              /* synthesis LOC = "R5  "*/,    // 电源模块2 直流正常信号，默认1，低电平有效
+input   i_PS2_SMB_ALERT           /* synthesis LOC = "P2  "*/,    // 电源模块2 SMBus警告信号，默认1，低电平有效
+input   i_PS2_ACFAIL_N            /* synthesis LOC = "T3  "*/,    // 电源模块2 交流电源故障信号，默认1，低电平有效
 
-output o_PAL_DB2000_1_PWRGD_R                                         /* synthesis LOC = "C3  "*/,    //default 0 pull up en         O
-output o_PAL_DB2000_2_PWRGD_R                                         /* synthesis LOC = "W20 "*/,    //default 0 pull up en         O
-output o_CLK_DB2000_1_1_OE_N                                           /* synthesis LOC = "G5  "*/,    //default 0 pull up en         O
-output o_CLK_DB2000_1_2_OE_N                                           /* synthesis LOC = "E3  "*/,    //default 0 pull up en         O
+input   i_PS1_PRSNT               /* synthesis LOC = "M4  "*/,    // 电源模块1 存在信号，默认1，低电平有效
+output  o_PS1_P12V_ON_R           /* synthesis LOC = "K7  "*/,    // 电源模块1 12V输出使能信号，默认0，低电平有效
+input   i_PS1_DCOK_N              /* synthesis LOC = "N4  "*/,    // 电源模块1 直流正常信号，默认1，低电平有效
+input   i_PS1_SMB_ALERT           /* synthesis LOC = "M5  "*/,    // 电源模块1 SMBus警告信号，默认1，低电平有效
+input   i_PS1_ACFAIL_N            /* synthesis LOC = "N5  "*/,    // 电源模块1 交流电源故障信号，默认1，低电平有效
 
+output  o_PAL_PS_OFF_R            /* synthesis LOC = "C12 "*/,    // 电源关闭信号，默认0，低电平有效
+output  o_PAL_DUAL_EN_R           /* synthesis LOC = "G13 "*/,    // 双电源使能信号，默认0，低电平有效
 
-output o_FM_PLD_DB800_3_CLKS_DEV_EN_R                         /* synthesis LOC = "V4  "*/,    //default 0 pull up en         O
-output o_CLK_DB800_3_1_OE_N_R                                         /* synthesis LOC = "W8  "*/,    //default 0 pull up en         O
-output o_CLK_DB800_3_2_OE_N_R                                         /* synthesis LOC = "Y3  "*/,    //default 0 pull up en         O
+input   i_PGD_P12V_DROOP          /* synthesis LOC = "M2  "*/,    // 12V电源压降信号，默认1，低电平有效
+input   i_PGD_P12V_STBY_DROOP     /* synthesis LOC = "F1  "*/,    // 12V待机电源压降信号，默认1，低电平有效
+
+//CLK（时钟信号）
+input   i_CLK_25M_CPLD            /* synthesis LOC = "E2  "*/,    // CPLD 25MHz时钟输入信号，默认1，低电平有效
+
+output  o_CLK_GEN_EN_R_N          /* synthesis LOC = "Y20 "*/,    // 时钟发生器使能信号，默认0，低电平有效
+input   i_CLK_GEN_ALERT_R_N       /* synthesis LOC = "W15 "*/,    // 时钟发生器警告信号，默认1，低电平有效
+
+output  o_PAL_DB2000_1_PWRGD_R    /* synthesis LOC = "C3  "*/,    // DB2000模块1电源良好信号，默认0，低电平有效
+output  o_PAL_DB2000_2_PWRGD_R    /* synthesis LOC = "W20 "*/,    // DB2000模块2电源良好信号，默认0，低电平有效
+output  o_CLK_DB2000_1_1_OE_N     /* synthesis LOC = "G5  "*/,    // DB2000模块1时钟1输出使能信号，默认0，低电平有效
+output  o_CLK_DB2000_1_2_OE_N     /* synthesis LOC = "E3  "*/,    // DB2000模块1时钟2输出使能信号，默认0，低电平有效
+
+output  o_FM_PLD_DB800_3_CLKS_DEV_EN_R /* synthesis LOC = "V4  "*/,    // DB800模块3时钟设备使能信号，默认0，低电平有效
+output  o_CLK_DB800_3_1_OE_N_R         /* synthesis LOC = "W8  "*/,    // DB800模块3时钟1输出使能信号，默认0，低电平有效
+output  o_CLK_DB800_3_2_OE_N_R         /* synthesis LOC = "Y3  "*/,    // DB800模块3时钟2输出使能信号，默认0，低电平有效
+
 //M<-->S SGPIO
-output o_PVT_SS_CLK_R                                                         /* synthesis LOC = "B19 "*/,    //default 0 pull up en         O
-output o_PVT_SS_LD_N_R                                                       /* synthesis LOC = "C4  "*/,    //default 0 pull up en         O
-input   i_PVT_SS_DATI                                                           /* synthesis LOC = "T10 "*/,    //default 1 active 0           I
+output o_PVT_SS_CLK_R           /* synthesis LOC = "B19 "*/,    // SGPIO主从通信的时钟信号，默认0，低电平有效
+output o_PVT_SS_LD_N_R          /* synthesis LOC = "C4  "*/,    // SGPIO主从通信的加载信号，默认0，低电平有效
+input  i_PVT_SS_DATI            /* synthesis LOC = "T10 "*/,    // SGPIO主从通信的数据输入信号，默认1，低电平有效
 
-output o_CPLD_SGPIO0_CLK_R                                               /* synthesis LOC = "Y12 "*/,    //default 0 pull up en         O
-input   i_CPLD_SGPIO0_MISO_R                                             /* synthesis LOC = "C6  "*/,    //default 1 active 0           I
-output o_CPLD_SGPIO0_LD_N_R                                             /* synthesis LOC = "Y13 "*/,    //default 0 pull up en         O
-output o_CPLD_SGPIO0_MOSI_R                                             /* synthesis LOC = "W12 "*/,    //default 0 pull up en         O
+output o_CPLD_SGPIO0_CLK_R      /* synthesis LOC = "Y12 "*/,    // CPLD的SGPIO0时钟信号，默认0，低电平有效
+input  i_CPLD_SGPIO0_MISO_R     /* synthesis LOC = "C6  "*/,    // CPLD的SGPIO0数据输入信号（MISO），默认1，低电平有效
+output o_CPLD_SGPIO0_LD_N_R     /* synthesis LOC = "Y13 "*/,    // CPLD的SGPIO0加载信号，默认0，低电平有效
+output o_CPLD_SGPIO0_MOSI_R     /* synthesis LOC = "W12 "*/,    // CPLD的SGPIO0数据输出信号（MOSI），默认0，低电平有效
 
-output o_CPLD_SGPIO1_CLK_R                                               /* synthesis LOC = "W13 "*/,    //default 0 pull up en         O
-input   i_CPLD_SGPIO1_MISO_R                                             /* synthesis LOC = "A3  "*/,    //default 1 active 0           I
-output o_CPLD_SGPIO1_LD_N_R                                             /* synthesis LOC = "Y11 "*/,    //default 0 pull up en         O
-output o_CPLD_SGPIO1_MOSI_R                                             /* synthesis LOC = "Y14 "*/,    //default 0 pull up en         O
+output o_CPLD_SGPIO1_CLK_R      /* synthesis LOC = "W13 "*/,    // CPLD的SGPIO1时钟信号，默认0，低电平有效
+input  i_CPLD_SGPIO1_MISO_R     /* synthesis LOC = "A3  "*/,    // CPLD的SGPIO1数据输入信号（MISO），默认1，低电平有效
+output o_CPLD_SGPIO1_LD_N_R     /* synthesis LOC = "Y11 "*/,    // CPLD的SGPIO1加载信号，默认0，低电平有效
+output o_CPLD_SGPIO1_MOSI_R     /* synthesis LOC = "Y14 "*/,    // CPLD的SGPIO1数据输出信号（MOSI），默认0，低电平有效
+
 //BMC   BIOS
 inout   io_I2C7_UPDATE_SDA                                                 /* synthesis LOC = "D11 "*/,    //default 1 active 0           I
 inout   io_I2C7_UPDATE_SCL                                                 /* synthesis LOC = "C11 "*/,    //default 1 active 0           I
