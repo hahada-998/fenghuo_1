@@ -259,7 +259,7 @@ logic                                        efuse_critical_fail_en             
 //reg  vcore_critical_fail_en;
 logic                                        wait_steady_pwrok_fail_en          ;
 logic                                        rt_critical_fail_check             ;
-logic                                        rt_normal_pwr_down		              ;
+logic                                        rt_normal_pwr_down		            ;
 logic                                        rt_thermtrip_pwr_down	            ;
 logic                                        rsmrst_release_trans_en            ;
 
@@ -274,317 +274,320 @@ always @(posedge clk) begin
 end
 
 always @(*) begin
-    case(state)
-        // 0x00: 状态解释？？？
-        SM_RESET_STATE:begin 
-            if(power_seq_sm_fb == SM_OFF_STANDBY && (mux_sel == 1'b0))
-                state_ns = SM_OFF_STANDBY     ; 
-            else if(power_seq_sm_fb == SM_STEADY_PWROK && (mux_sel == 1'b0))
-                state_ns = SM_STEADY_PWROK    ; 
-            else
-                state_ns = SM_EN_GRP_A        ; 
-        end
-
-        // 0x01: 状态解释？？？
-        SM_EN_GRP_A:begin
-            if(grp_a_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL   ;
-            else if(grp_a_state_trans_en)
-                state_ns = SM_RSMRST_DISABLE  ;
-        end
-
-        // 0x02: 状态解释？？？
-        SM_RSMRST_DISABLE:begin 
-            if(pwron_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL   ;
-            else if(pwrup_state_trans_en)
-                state_ns = SM_EN_GRP_B_33_S5  ;
-        end
-
-        // 0x03: 状态解释？？？
-        SM_EN_GRP_B_33_S5: begin   
-            if(grp_b_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL   ;
-            else if(grp_b_state_trans_en)
-                state_ns = SM_EN_GRP_B_18_S5  ;
-        end
-
-        // 0x04: 状态解释？？？
-        SM_EN_GRP_B_18_S5:begin   
-            if(grp_b_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL   ;	
-            else if(grp_b_state_trans_en)
-                state_ns = SM_EN_P5V_STBY     ;
-        end
-	
-        // 0x05: 状态解释？？？
-        SM_EN_P5V_STBY:begin          
-            if(grp_b_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL     ;
-            else if(grp_b_state_trans_en)
-                state_ns = SM_EN_RSMRST_RELEASE ;
-        end
-	
-        // 0x06: 状态解释？？？ 
-        SM_EN_RSMRST_RELEASE:begin   
-            if (rsmrst_release_fail_en)
-                state_ns = SM_CRITICAL_FAIL     ;
-            else if(rsmrst_release_trans_en) 
-                state_ns = SM_OFF_STANDBY       ;
-        end	
-
-        // 0x07: 状态解释？？？
-        SM_ENABLE_S5_DEVICES: begin
-            if (pwron_critical_fail_en)
-                // - Fault detected while trying to turn on S5 device.
-                // - Non-BL/BT, go to Disable S5 device.
-                state_ns = SM_DISABLE_S5_DEVICES;
-            else if (pwrup_state_trans_en)
-                state_ns = SM_OFF_STANDBY       ;
-        end
-
-        // 0x08: 状态解释？？？
-        SM_OFF_STANDBY: begin
-            if (any_pwr_fault_det & ~keep_alive_on_fault) 
-                // Fault detected. Using new STBY flag for standby failure.
-                state_ns = SM_CRITICAL_FAIL     ;
-            else if (s5dev_pwrdis_request) 
-                // S5 device disable request or request to shutdown e-fuse (BL only)
-                state_ns = SM_DISABLE_S5_DEVICES;
-            else if (s5dev_pwren_request && s5_devices_on_wait_complete)
-                // S5 device enable request
-                state_ns = SM_ENABLE_S5_DEVICES ;
-            else if (turn_system_on && dc_on_wait_complete) 
-                //add bmc_ready_out_n
-                // Let's power on. Note that if miss_turn_on_window is asserted, there's
-                // no need to wait for dc_on_wait_complete since we just went through
-                // SM_MISS_TURNON which is long enough wait time for the next power up.
-                state_ns = SM_PS_ON             ;
-        end
-
-        // 0x09: 状态解释？？？
-        SM_PS_ON: begin
-            if (psu_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL     ;
-            else if (psu_watchdog_timeout && pgd_so_far)
-                state_ns = SM_EN_TELEM          ;
-        end
-
-        // 0x0A: 状态解释？？？
-        SM_EN_TELEM: begin
-            // - Enable telemetry rails (P3V3_PWM_CTRL and PVCC_HPMOS).
-            // - BL, skipped since telemetry rails are enabled during ??
-            // if (pwron_critical_fail_en) begin
-            //  state_ns = SM_CRITICAL_FAIL;
-            //  po_failure_detected_set = 1'b1;
-            // end
-            //else if (pwrup_state_trans_en) begin
-            state_ns = SM_EN_MAIN_EFUSE         ;
-        end
-
-        // 0x0B: 状态解释？？？
-        SM_EN_MAIN_EFUSE: begin
-            if (efuse_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL     ;
-            else if (efuse_watchdog_timeout && pgd_so_far)
-                state_ns = SM_EN_GRP_ATX        ;
-
-        end
-
-        // 0x0C: 状态解释？？？
-        SM_EN_GRP_ATX: begin
-            if (pwron_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL    ;
-            else if (pwrup_state_trans_en)
-                state_ns = SM_EN_GRP_C         ;
-        end
-
-        // 0x0D: 状态解释？？？
-        SM_EN_GRP_C: begin
-            if (pwron_critical_fail_en)
-                state_ns = SM_CRITICAL_FAIL     ;
-            else if (pwrup_state_trans_en)
-                state_ns = SM_EN_GRP_D_VDDIO    ;
-        end
-
-
-        // 0x0E: 状态解释？？？
-        SM_EN_GRP_D_VDDIO: begin
-            if (pwron_critical_fail_en) begin
-                // Skipped if no_vppen is set
-                state_ns = SM_CRITICAL_FAIL;
-                po_failure_detected_set = 1'b1;
-            end
-            else if (pwrup_state_trans_en) begin
-                state_ns = SM_EN_GRP_D_SOC;
-            end
-        end
-
-        // 0x0F: 状态解释？？？
-        SM_EN_GRP_D_SOC: begin
-            if (pwron_critical_fail_en) begin
-                state_ns = SM_CRITICAL_FAIL;
-                po_failure_detected_set = 1'b1;
-            end
-            else if (pwrup_state_trans_en) begin
-                state_ns = SM_EN_GRP_D_VDDCORE0;
-            end
-        end
-
-        // 0x10: 状态解释？？？
-        SM_EN_GRP_D_VDDCORE0: begin
-            if (pwron_critical_fail_en) begin
-                state_ns = SM_CRITICAL_FAIL;
-                po_failure_detected_set = 1'b1;
-            end
-            else if (pwrup_state_trans_en) begin
-                state_ns = SM_EN_GRP_D_VDDCORE1;
-            end
-        end
-
-        // 0x11: 状态解释？？？
-        SM_EN_GRP_D_VDDCORE1: begin
-            if (pwron_critical_fail_en) begin
-                state_ns = SM_CRITICAL_FAIL;
-                po_failure_detected_set = 1'b1;
-            end
-            else if (pwrup_state_trans_en) begin
-                state_ns = SM_EN_PGOOD_RELEASE;
-            end
-        end
-
-        // 0x12: 状态解释？？？
-        SM_EN_PGOOD_RELEASE: begin
-            if (pwron_critical_fail_en) begin
-                state_ns = SM_CRITICAL_FAIL;
-                po_failure_detected_set = 1'b1;
-            end
-            else if (pwrup_state_trans_en) begin
-                state_ns = SM_WAIT_POWEROK;
-            end
-        end
-
-        // 0x19: 状态解释？？？
-        SM_WAIT_POWEROK: begin
-            if (wait_steady_pwrok_fail_en) begin
-                state_ns = SM_CRITICAL_FAIL;
-                po_failure_detected_set = 1'b1;
-            end
-            else if (pwrup_state_trans_en && pgd_so_far) begin
-                state_ns = SM_STEADY_PWROK;
-            end
-        end
-
-        // 0x20: 状态解释？？？
-        SM_STEADY_PWROK: begin
-            if (rt_critical_fail_store && !pgood_rst_mask)
-                state_ns = SM_CRITICAL_FAIL;
-            else if(rt_thermtrip_pwr_down) 
-                state_ns = SM_CRITICAL_FAIL;
-            else if(rt_normal_pwr_down)
-                state_ns = SM_DISABLE_PWRGD; 
-        end
-
-        // 0x34: 状态解释？？？
-        SM_CRITICAL_FAIL: begin
-            state_ns = SM_DISABLE_PWRGD;
-        end
-
-        // 0x21 -> 0x2F: 关断序列（按顺序）
-        SM_DISABLE_PWRGD: begin
-            if (dispg_watchdog_timeout)
-                state_ns = SM_DISABLE_GRP_D_VDDCORE1;
-        end
-
-        // 0x22: 状态解释？？？
-        SM_DISABLE_GRP_D_VDDCORE1: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_GRP_D_VDDCORE0;
-        end
-
-        // 0x23: 状态解释？？？
-        SM_DISABLE_GRP_D_VDDCORE0: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_GRP_D_SOC;
-        end
-
-        // 0x24: 状态解释？？？
-        SM_DISABLE_GRP_D_SOC: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_GRP_D_VDDIO;
-        end
-
-        // 0x25: 状态解释？？？
-        SM_DISABLE_GRP_D_VDDIO: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_GRP_C;
-        end
-
-        // 0x26: 状态解释？？？
-        SM_DISABLE_GRP_C: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_GRP_ATX;
-        end
-
-        // 0x27: 状态解释？？？
-        SM_DISABLE_GRP_ATX: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_MAIN_EFUSE;
-        end
-
-        //  0x28: 状态解释？？？
-        SM_DISABLE_MAIN_EFUSE: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_TELEM;
-            off_state = 1'b0;
-        end
-
-        //  0x29: 状态解释？？？
-        SM_DISABLE_TELEM: begin
-            if (pdn_watchdog_timeout)
-                state_ns = SM_DISABLE_PS_ON;
-        end
-
-        //  0x2A: 状态解释？？？
-        SM_DISABLE_PS_ON: begin
-            if (pdn_watchdog_timeout)
-                state_ns = ((any_pwr_fault_det & ~keep_alive_on_fault) || (cpu_thermtrip_fault_det)) ? SM_DISABLE_S5_DEVICES : SM_OFF_STANDBY;
-        end
-
-        // 0x2B: 状态解释？？？
-        SM_DISABLE_S5_DEVICES: begin
-            if (pdn_watchdog_timeout) begin
-                if (any_pwr_fault_det)
-                    state_ns = SM_HALT_POWER_CYCLE;
-                else if (|cpu_thermtrip_fault_det)
-                    state_ns = SM_RESET_STATE;
+    if (reset)
+        state_ns = SM_RESET_STATE ;
+    else begin
+        case(state)
+            // 0x00: 状态解释？？？
+            SM_RESET_STATE:begin 
+                if(power_seq_sm_fb == SM_OFF_STANDBY && (mux_sel == 1'b0))
+                    state_ns = SM_OFF_STANDBY     ; 
+                else if(power_seq_sm_fb == SM_STEADY_PWROK && (mux_sel == 1'b0))
+                    state_ns = SM_STEADY_PWROK    ; 
                 else
-                    state_ns = SM_OFF_STANDBY;
+                    state_ns = SM_EN_GRP_A    ; 
             end
-        end
 
-        // 0x2C: 状态解释？？？
-        SM_HALT_POWER_CYCLE: begin
-            if (ready_for_recov && !any_non_recov_fault) begin
-                if (!lim_recov_retry_max)
-                    if ((assert_power_button && (allow_recovery || ~any_lim_recov_fault)) ||
-                        (assert_physical_button && !allow_recovery && any_lim_recov_fault) || bmc_clr_stby_tmout_n) begin
-                            state_ns = SM_AUX_FAIL_RECOVERY;
-                    end
+            // 0x01: 状态解释？？？
+            SM_EN_GRP_A:begin
+                if(grp_a_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL   ;
+                else if(grp_a_state_trans_en)
+                    state_ns = SM_RSMRST_DISABLE  ;
             end
-        end
 
-        // 0x2D: 状态解释？？？
-        SM_AUX_FAIL_RECOVERY: begin
-            if (~cmu_fault_clear)
-                state_ns = SM_RSMRST_DISABLE;
-        end
+            // 0x02: 状态解释？？？
+            SM_RSMRST_DISABLE:begin 
+                if(pwron_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL   ;
+                else if(pwrup_state_trans_en)
+                    state_ns = SM_EN_GRP_B_33_S5  ;
+            end
+
+            // 0x03: 状态解释？？？
+            SM_EN_GRP_B_33_S5: begin   
+                if(grp_b_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL   ;
+                else if(grp_b_state_trans_en)
+                    state_ns = SM_EN_GRP_B_18_S5  ;
+            end
+
+            // 0x04: 状态解释？？？
+            SM_EN_GRP_B_18_S5:begin   
+                if(grp_b_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL   ;	
+                else if(grp_b_state_trans_en)
+                    state_ns = SM_EN_P5V_STBY     ;
+            end
 	
-        // 其他状态转换逻辑...
-        default: begin
-            state_ns = SM_RESET_STATE; // 默认回到初始状态
-        end
-    endcase
+            // 0x05: 状态解释？？？
+            SM_EN_P5V_STBY:begin          
+                if(grp_b_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL     ;
+                else if(grp_b_state_trans_en)
+                    state_ns = SM_EN_RSMRST_RELEASE ;
+            end
+	
+            // 0x06: 状态解释？？？ 
+            SM_EN_RSMRST_RELEASE:begin   
+                if (rsmrst_release_fail_en)
+                    state_ns = SM_CRITICAL_FAIL     ;
+                else if(rsmrst_release_trans_en) 
+                    state_ns = SM_OFF_STANDBY       ;
+            end	
+
+            // 0x07: 状态解释？？？
+            SM_ENABLE_S5_DEVICES: begin
+                if (pwron_critical_fail_en)
+                    // - Fault detected while trying to turn on S5 device.
+                    // - Non-BL/BT, go to Disable S5 device.
+                    state_ns = SM_DISABLE_S5_DEVICES;
+                else if (pwrup_state_trans_en)
+                    state_ns = SM_OFF_STANDBY       ;
+            end
+
+            // 0x08: 状态解释？？？
+            SM_OFF_STANDBY: begin
+                if (any_pwr_fault_det & ~keep_alive_on_fault) 
+                    // Fault detected. Using new STBY flag for standby failure.
+                    state_ns = SM_CRITICAL_FAIL     ;
+                else if (s5dev_pwrdis_request) 
+                    // S5 device disable request or request to shutdown e-fuse (BL only)
+                    state_ns = SM_DISABLE_S5_DEVICES;
+                else if (s5dev_pwren_request && s5_devices_on_wait_complete)
+                    // S5 device enable request
+                    state_ns = SM_ENABLE_S5_DEVICES ;
+                else if (turn_system_on && dc_on_wait_complete) 
+                    //add bmc_ready_out_n
+                    // Let's power on. Note that if miss_turn_on_window is asserted, there's
+                    // no need to wait for dc_on_wait_complete since we just went through
+                    // SM_MISS_TURNON which is long enough wait time for the next power up.
+                    state_ns = SM_PS_ON             ;
+            end
+
+            // 0x09: 状态解释？？？
+            SM_PS_ON: begin
+                if (psu_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL     ;
+                else if (psu_watchdog_timeout && pgd_so_far)
+                    state_ns = SM_EN_TELEM          ;
+            end
+
+            // 0x0A: 状态解释？？？
+            SM_EN_TELEM: begin
+                // - Enable telemetry rails (P3V3_PWM_CTRL and PVCC_HPMOS).
+                // - BL, skipped since telemetry rails are enabled during ??
+                // if (pwron_critical_fail_en) begin
+                //  state_ns = SM_CRITICAL_FAIL;
+                //  po_failure_detected_set = 1'b1;
+                // end
+                //else if (pwrup_state_trans_en) begin
+                state_ns = SM_EN_MAIN_EFUSE         ;
+            end
+
+            // 0x0B: 状态解释？？？
+            SM_EN_MAIN_EFUSE: begin
+                if (efuse_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL     ;
+                else if (efuse_watchdog_timeout && pgd_so_far)
+                    state_ns = SM_EN_GRP_ATX        ;
+            end
+
+            // 0x0C: 状态解释？？？
+            SM_EN_GRP_ATX: begin
+                if (pwron_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL    ;
+                else if (pwrup_state_trans_en)
+                    state_ns = SM_EN_GRP_C         ;
+            end
+
+            // 0x0D: 状态解释？？？
+            SM_EN_GRP_C: begin
+                if (pwron_critical_fail_en)
+                    state_ns = SM_CRITICAL_FAIL     ;
+                else if (pwrup_state_trans_en)
+                    state_ns = SM_EN_GRP_D_VDDIO    ;
+            end
+
+
+            // 0x0E: 状态解释？？？
+            SM_EN_GRP_D_VDDIO: begin
+                if (pwron_critical_fail_en) begin
+                    // Skipped if no_vppen is set
+                    state_ns = SM_CRITICAL_FAIL;
+                    po_failure_detected_set = 1'b1;
+                end
+                else if (pwrup_state_trans_en) begin
+                    state_ns = SM_EN_GRP_D_SOC;
+                end
+            end
+
+            // 0x0F: 状态解释？？？
+            SM_EN_GRP_D_SOC: begin
+                if (pwron_critical_fail_en) begin
+                    state_ns = SM_CRITICAL_FAIL;
+                    po_failure_detected_set = 1'b1;
+                end
+                else if (pwrup_state_trans_en) begin
+                    state_ns = SM_EN_GRP_D_VDDCORE0;
+                end
+            end
+
+            // 0x10: 状态解释？？？
+            SM_EN_GRP_D_VDDCORE0: begin
+                if (pwron_critical_fail_en) begin
+                    state_ns = SM_CRITICAL_FAIL;
+                    po_failure_detected_set = 1'b1;
+                end
+                else if (pwrup_state_trans_en) begin
+                    state_ns = SM_EN_GRP_D_VDDCORE1;
+                end
+            end
+
+            // 0x11: 状态解释？？？
+            SM_EN_GRP_D_VDDCORE1: begin
+                if (pwron_critical_fail_en) begin
+                    state_ns = SM_CRITICAL_FAIL;
+                    po_failure_detected_set = 1'b1;
+                end
+                else if (pwrup_state_trans_en) begin
+                    state_ns = SM_EN_PGOOD_RELEASE;
+                end
+            end
+
+            // 0x12: 状态解释？？？
+            SM_EN_PGOOD_RELEASE: begin
+                if (pwron_critical_fail_en) begin
+                    state_ns = SM_CRITICAL_FAIL;
+                    po_failure_detected_set = 1'b1;
+                end
+                else if (pwrup_state_trans_en) begin
+                    state_ns = SM_WAIT_POWEROK;
+                end
+            end
+
+            // 0x19: 状态解释？？？
+            SM_WAIT_POWEROK: begin
+                if (wait_steady_pwrok_fail_en) begin
+                    state_ns = SM_CRITICAL_FAIL;
+                    po_failure_detected_set = 1'b1;
+                end
+                else if (pwrup_state_trans_en && pgd_so_far) begin
+                    state_ns = SM_STEADY_PWROK;
+                end
+            end
+
+            // 0x20: 状态解释？？？
+            SM_STEADY_PWROK: begin
+                if (rt_critical_fail_store && !pgood_rst_mask)
+                    state_ns = SM_CRITICAL_FAIL;
+                else if(rt_thermtrip_pwr_down) 
+                    state_ns = SM_CRITICAL_FAIL;
+                else if(rt_normal_pwr_down)
+                    state_ns = SM_DISABLE_PWRGD; 
+            end
+
+            // 0x34: 状态解释？？？
+            SM_CRITICAL_FAIL: begin
+                state_ns = SM_DISABLE_PWRGD;
+            end
+
+            // 0x21 -> 0x2F: 关断序列（按顺序）
+            SM_DISABLE_PWRGD: begin
+                if (dispg_watchdog_timeout)
+                    state_ns = SM_DISABLE_GRP_D_VDDCORE1;
+            end
+
+            // 0x22: 状态解释？？？
+            SM_DISABLE_GRP_D_VDDCORE1: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_GRP_D_VDDCORE0;
+            end
+
+            // 0x23: 状态解释？？？
+            SM_DISABLE_GRP_D_VDDCORE0: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_GRP_D_SOC;
+            end
+
+            // 0x24: 状态解释？？？
+            SM_DISABLE_GRP_D_SOC: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_GRP_D_VDDIO;
+            end
+
+            // 0x25: 状态解释？？？
+            SM_DISABLE_GRP_D_VDDIO: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_GRP_C;
+            end
+
+            // 0x26: 状态解释？？？
+            SM_DISABLE_GRP_C: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_GRP_ATX;
+            end
+
+            // 0x27: 状态解释？？？
+            SM_DISABLE_GRP_ATX: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_MAIN_EFUSE;
+            end
+
+            //  0x28: 状态解释？？？
+            SM_DISABLE_MAIN_EFUSE: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_TELEM;
+                off_state = 1'b0;
+            end
+
+            //  0x29: 状态解释？？？
+            SM_DISABLE_TELEM: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = SM_DISABLE_PS_ON;
+            end
+
+            //  0x2A: 状态解释？？？
+            SM_DISABLE_PS_ON: begin
+                if (pdn_watchdog_timeout)
+                    state_ns = ((any_pwr_fault_det & ~keep_alive_on_fault) || (cpu_thermtrip_fault_det)) ? SM_DISABLE_S5_DEVICES : SM_OFF_STANDBY;
+            end
+
+            // 0x2B: 状态解释？？？
+            SM_DISABLE_S5_DEVICES: begin
+                if (pdn_watchdog_timeout) begin
+                    if (any_pwr_fault_det)
+                        state_ns = SM_HALT_POWER_CYCLE;
+                    else if (|cpu_thermtrip_fault_det)
+                        state_ns = SM_RESET_STATE;
+                    else
+                        state_ns = SM_OFF_STANDBY;
+                end
+            end
+
+            // 0x2C: 状态解释？？？
+            SM_HALT_POWER_CYCLE: begin
+                if (ready_for_recov && !any_non_recov_fault) begin
+                    if (!lim_recov_retry_max)
+                        if ((assert_power_button && (allow_recovery || ~any_lim_recov_fault)) ||
+                            (assert_physical_button && !allow_recovery && any_lim_recov_fault) || bmc_clr_stby_tmout_n) begin
+                                state_ns = SM_AUX_FAIL_RECOVERY;
+                        end
+                end
+            end
+
+            // 0x2D: 状态解释？？？
+            SM_AUX_FAIL_RECOVERY: begin
+                if (~cmu_fault_clear)
+                    state_ns = SM_RSMRST_DISABLE;
+            end
+    
+            // 其他状态转换逻辑...
+            default: begin
+                state_ns = SM_RESET_STATE; // 默认回到初始状态
+            end
+        endcase
+    end 
 end 
 
 /* ------------------------------------------------------------------------------------------------------------
