@@ -1180,31 +1180,32 @@ fault_detectB_chklive #(.NUMBER_OF_VRM(1)) p3v3_stby_fault_detect_inst (
 
 // 故障向量（fault_vec）：按位映射各电源通道的故障状态（1=对应通道故障，0=正常）
 // 位序规则：从待机电源→主电源→CPU分组电源→扩展电源，覆盖所有关键供电通道
-assign fault_vec[0]   = p5v_stby_fault_det         ; // 位0：5V待机电源故障（系统最基础待机电源）
-assign fault_vec[1]   = 1'b0;//p5v_stby_usb0_fault_det   ; // 位1：5V待机USB0电源故障（预留，当前未启用）
-assign fault_vec[2]   = 1'b0;//p5v_stby_usb1_fault_det   ; // 位2：5V待机USB1电源故障（预留，当前未启用）
-assign fault_vec[3]   = 1'b0;                          // 位3：预留（用于扩展新电源通道）
-assign fault_vec[4]   = p5v_fault_det             ; // 位4：5V主电源故障（为IO设备、小功率外设供电）
-assign fault_vec[5]   = 1'b0;//p12v_efuse_fault_det       ; // 位5：12V主EFUSE故障（预留，EFUSE是过流保护元件）
-assign fault_vec[6]   = 1'b0;//p12v_ssd_efuse_fault_det   ; // 位6：12V SSD EFUSE故障（预留，SSD专用供电保护）
-assign fault_vec[7]   = 1'b0;//p12v_p0_dimm_fault_det     ; // 位7：P0 CPU内存（DIMM）12V故障（预留）
-assign fault_vec[8]   = 1'b0;//p12v_p1_dimm_fault_det     ; // 位8：P1 CPU内存（DIMM）12V故障（预留）
-assign fault_vec[9]   = grp_b_p0_18_s5_fault_det   ; // 位9：P0 CPU B组1.8V S5电源故障（CPU休眠唤醒供电）
-assign fault_vec[10]  = grp_b_p1_18_s5_fault_det   ; // 位10：P1 CPU B组1.8V S5电源故障
-assign fault_vec[11]  = grp_b_p0_33_s5_fault_det   ; // 位11：P0 CPU B组3.3V S5电源故障
-assign fault_vec[12]  = grp_b_p1_33_s5_fault_det   ; // 位12：P1 CPU B组3.3V S5电源故障
-assign fault_vec[13]  = grp_c_p0_fault_det         ; // 位13：P0 CPU C组电源故障（如1.1V SUS供电）
-assign fault_vec[14]  = grp_c_p1_fault_det         ; // 位14：P1 CPU C组电源故障
-assign fault_vec[15]  = grp_d_vddio_p0_fault_det   ; // 位15：P0 CPU D组IO电源故障（如1.05V VDDIO）
-assign fault_vec[16]  = grp_d_vddio_p1_fault_det   ; // 位16：P1 CPU D组IO电源故障
-assign fault_vec[17]  = grp_d_soc_p0_fault_det     ; // 位17：P0 CPU D组SOC电源故障（如0.8V VDDSOC）
-assign fault_vec[18]  = grp_d_soc_p1_fault_det     ; // 位18：P1 CPU D组SOC电源故障
-assign fault_vec[19]  = grp_d_p0_vddcore0_fault_det; // 位19：P0 CPU D组核心0电源故障（如0.9V VDDCORE，核心供电）
-assign fault_vec[20]  = grp_d_p1_vddcore0_fault_det; // 位20：P1 CPU D组核心0电源故障
-assign fault_vec[21]  = grp_d_p0_vddcore1_fault_det; // 位21：P0 CPU D组核心1电源故障
-assign fault_vec[22]  = grp_d_p1_vddcore1_fault_det; // 位22：P1 CPU D组核心1电源故障
-assign fault_vec[23]  = p3v3_stby_fault_det        ; // 位23：3.3V待机电源故障（辅助待机供电）
-assign fault_vec[24]  = 1'b0;//p12v_stby_fault_det        ; // 位24：12V待机电源故障（预留）
+assign fault_vec[0]    = p5v_stby_fault_det         ; // 位0：5V待机电源故障（系统最基础待机电源）
+assign fault_vec[1]    = 1'b0;//p5v_stby_usb0_fault_det   ; // 位1：5V待机USB0电源故障（预留，当前未启用）
+assign fault_vec[2]    = 1'b0;//p5v_stby_usb1_fault_det   ; // 位2：5V待机USB1电源故障（预留，当前未启用）
+assign fault_vec[3]    = 1'b0;                          // 位3：预留（用于扩展新电源通道）
+assign fault_vec[4]    = p5v_fault_det             ; // 位4：5V主电源故障（为IO设备、小功率外设供电）
+assign fault_vec[5]    = 1'b0;//p12v_efuse_fault_det       ; // 位5：12V主EFUSE故障（预留，EFUSE是过流保护元件）
+assign fault_vec[6]    = 1'b0;//p12v_ssd_efuse_fault_det   ; // 位6：12V SSD EFUSE故障（预留，SSD专用供电保护）
+assign fault_vec[7]    = 1'b0;//p12v_p0_dimm_fault_det     ; // 位7：P0 CPU内存（DIMM）12V故障（预留）
+assign fault_vec[8]    = 1'b0;//p12v_p1_dimm_fault_det     ; // 位8：P1 CPU内存（DIMM）12V故障（预留）
+assign fault_vec[9]    = grp_b_p0_18_s5_fault_det   ; // 位9：P0 CPU B组1.8V S5电源故障（CPU休眠唤醒供电）
+assign fault_vec[10]   = grp_b_p1_18_s5_fault_det   ; // 位10：P1 CPU B组1.8V S5电源故障
+assign fault_vec[11]   = grp_b_p0_33_s5_fault_det   ; // 位11：P0 CPU B组3.3V S5电源故障
+assign fault_vec[12]   = grp_b_p1_33_s5_fault_det   ; // 位12：P1 CPU B组3.3V S5电源故障
+assign fault_vec[13]   = grp_c_p0_fault_det         ; // 位13：P0 CPU C组电源故障（如1.1V SUS供电）
+assign fault_vec[14]   = grp_c_p1_fault_det         ; // 位14：P1 CPU C组电源故障
+assign fault_vec[15]   = grp_d_vddio_p0_fault_det   ; // 位15：P0 CPU D组IO电源故障（如1.05V VDDIO）
+assign fault_vec[16]   = grp_d_vddio_p1_fault_det   ; // 位16：P1 CPU D组IO电源故障
+assign fault_vec[17]   = grp_d_soc_p0_fault_det     ; // 位17：P0 CPU D组SOC电源故障（如0.8V VDDSOC）
+assign fault_vec[18]   = grp_d_soc_p1_fault_det     ; // 位18：P1 CPU D组SOC电源故障
+assign fault_vec[19]   = grp_d_p0_vddcore0_fault_det; // 位19：P0 CPU D组核心0电源故障（如0.9V VDDCORE，核心供电）
+assign fault_vec[20]   = grp_d_p1_vddcore0_fault_det; // 位20：P1 CPU D组核心0电源故障
+assign fault_vec[21]   = grp_d_p0_vddcore1_fault_det; // 位21：P0 CPU D组核心1电源故障
+assign fault_vec[22]   = grp_d_p1_vddcore1_fault_det; // 位22：P1 CPU D组核心1电源故障
+assign fault_vec[23]   = p3v3_stby_fault_det        ; // 位23：3.3V待机电源故障（辅助待机供电）
+assign fault_vec[24]   = 1'b0;//p12v_stby_fault_det        ; // 位24：12V待机电源故障（预留）
+assign fault_vec[39:25]= 0;   // Reserved for future power rails
 
 
 

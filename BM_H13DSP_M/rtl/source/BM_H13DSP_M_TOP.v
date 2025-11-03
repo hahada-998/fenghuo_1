@@ -1170,15 +1170,15 @@ PGM_DEBOUNCE_N #(.SIGCNT(21), .NBITS(2'b11), .ENABLE(1'b1)) db_inst_pwrgood (
   .rst_n		(pon_reset_n),                // 复位信号，低电平有效
   .timer_tick	(1'b1),                     // 定时信号，始终为高电平
   .din({
-             i_P1V8_STBY_PG,              // 输入信号1：1.8V待机电源良好信号
-             i_PWRGD_P3V3_STBY,           // 输入信号2：3.3V待机电源良好信号
-             i_PG_P5V_STBY,               // 输入信号3：5V待机电源良好信号
-             i_PGD_P0_VDD_18_STBY,        // 输入信号4：P0 1.8V待机电源良好信号
-             i_PGD_P1_VDD_18_STBY,        // 输入信号5：P1 1.8V待机电源良好信号
-             i_PGD_P0_VDDC,               // 输入信号6：P0核心电压电源良好信号
-             i_PGD_P1_VDDC,               // 输入信号7：P1核心电压电源良好信号
-             i_PGD_P0_VDD_11_SUS,         // 输入信号8：P0 1.1V挂起电源良好信号
-             i_PGD_P1_VDD_11_SUS,         // 输入信号9：P1 1.1V挂起电源良好信号
+             i_P1V8_STBY_PG,              // 输入信号1 ：1.8V待机电源良好信号
+             i_PWRGD_P3V3_STBY,           // 输入信号2 ：3.3V待机电源良好信号
+             i_PG_P5V_STBY,               // 输入信号3 ：5V待机电源良好信号
+             i_PGD_P0_VDD_18_STBY,        // 输入信号4 ：P0 1.8V待机电源良好信号
+             i_PGD_P1_VDD_18_STBY,        // 输入信号5 ：P1 1.8V待机电源良好信号
+             i_PGD_P0_VDDC,               // 输入信号6 ：P0核心电压电源良好信号
+             i_PGD_P1_VDDC,               // 输入信号7 ：P1核心电压电源良好信号
+             i_PGD_P0_VDD_11_SUS,         // 输入信号8 ：P0 1.1V挂起电源良好信号
+             i_PGD_P1_VDD_11_SUS,         // 输入信号9 ：P1 1.1V挂起电源良好信号
              i_PGD_P0_VDD_CORE_0,         // 输入信号10：P0核心电压0电源良好信号
              i_PGD_P1_VDD_CORE_0,         // 输入信号11：P1核心电压0电源良好信号
              i_PGD_P0_VDD_CORE_1,         // 输入信号12：P0核心电压1电源良好信号

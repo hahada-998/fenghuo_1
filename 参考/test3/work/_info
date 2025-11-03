@@ -7,7 +7,21 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
+R0
+R1
 Z2 !s12c _opt1
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
 R1
 R2
 R1
@@ -32,196 +46,196 @@ R1
 cModel Technology
 Z3 dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test2
 T_opt
-!s110 1761897647
-Vb=CDeb8Y5@cS`=G7mRNoM1
+!s110 1762161074
+VDeiBYNZZ9zW<Hmi@aoW^S3
 Z4 04 9 4 work pwrseq_tb fast 0
-=3-6805cabd4893-69046caf-c4-4074
+=1-6805cabd4893-690871b2-b9-7e98
 R1
-!s12f OEM25U40 
-Z5 !s12b OEM100
-Z6 !s124 OEM100
-Z7 !s135 nogc
+Z5 !s12f OEM25U40 
+Z6 !s12b OEM100
+Z7 !s124 OEM100
+Z8 !s135 nogc
 o-quiet -auto_acc_if_foreign -work work +acc
-Z8 tCvgOpt 0
+Z9 tCvgOpt 0
 n@_opt
-Z9 OL;O;2024.2;79
+Z10 OL;O;2024.2;79
 T_opt1
-!s110 1761897291
-VAlc1;=4:E2;aH<Jz7`2NB3
+!s110 1761903477
+VBik`LDHE9<GjfbQ>i>^cj1
 R4
-=1-6805cabd4893-69046b4a-3a5-74f8
+=1-6805cabd4893-69048374-30b-7b24
 R1
-!s12f OEM25U41 
 R5
 R6
 R7
-o-quiet -auto_acc_if_foreign -work work
 R8
-n@_opt1
+o-quiet -auto_acc_if_foreign -work work
 R9
+n@_opt1
+R10
 R3
 vedge_delay
 2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
-Z10 !s110 1761897642
+Z11 !s110 1762161066
 !i10b 1
 !s100 =z6Vm5?zUVg_68dEMQ_QP2
 I=e;X8?>Ec[GRfmo4[Of2k3
-Z11 dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3
+Z12 dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3
 w1669777000
 8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
 FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
-!i122 84
+!i122 121
 L0 23 45
-Z12 VDg1SIo80bB@j0V0VzS_@n1
-Z13 OL;L;2024.2;79
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2024.2;79
 r1
 !s85 0
 31
-Z14 !s108 1761897642.000000
+Z15 !s108 1762161066.000000
 !s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v|
 !i113 0
-Z15 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R8
+Z16 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
 vEdge_Detect
 2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
-R10
+R11
 !i10b 1
 !s100 WXLf7e93^7?fUm2RE33m43
 IO2[jMNG5nU[k2LEF:j`O90
-R11
+R12
 w1669967036
 8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
 FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
-!i122 85
+!i122 122
 L0 9 68
-R12
 R13
+R14
 r1
 !s85 0
 31
-R14
+R15
 !s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v|
 !i113 0
-R15
-R8
+R16
+R9
 n@edge_@detect
 vfault_detectB_chklive
 2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
-R10
+R11
 !i10b 1
 !s100 VA4c5XaQS[NDXTbS;=<@J2
 IPeF?HZK5a<;mP76Uk2HaL1
-R11
+R12
 w1669776856
 8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
 FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
-!i122 86
+!i122 123
 L0 19 62
-R12
 R13
+R14
 r1
 !s85 0
 31
-R14
+R15
 !s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v|
 !i113 0
-R15
-R8
+R16
+R9
 nfault_detect@b_chklive
 vpwrseq_master
 2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v
-R10
+R11
 !i10b 1
 !s100 AWzj8VQ9>O=i@FE9?36n40
 Im;iD`?]YiFfKj4^EdA;;M2
-R11
+R12
 w1761893022
 8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v
 FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v
-!i122 81
+!i122 118
 L0 71 1272
-R12
 R13
+R14
 r1
 !s85 0
 31
-R14
+R15
 !s107 pwrseq_define.v|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v|
 !i113 0
-R15
-R8
+R16
+R9
 vpwrseq_slave
 2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v
-R10
-!i10b 1
-!s100 CL<CE5kf`4CVm6YS7;M2`0
-I;5[8]g10>7SIN`1KkM14G1
 R11
-w1761893561
+!i10b 1
+!s100 581k9bn;<Y^7]?74AYB8m3
+IbFa^Od[k^Hh7HST75R7dX1
+R12
+w1762160037
 8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v
 FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v
-!i122 82
-L0 63 1236
-R12
+!i122 119
+L0 63 1237
 R13
+R14
 r1
 !s85 0
 31
-R14
+R15
 !s107 pwrseq_define.v|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v|
 !i113 0
-R15
-R8
+R16
+R9
 vpwrseq_tb
-2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_tb.sv
+2C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R10
-!i10b 1
-!s100 oUOoS;TWdNQBglY_7_OlG0
-IcAELD1b7baRW[`5E4;Soa0
-S1
 R11
-w1761897638
-8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_tb.sv
-FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_tb.sv
-!i122 83
-L0 2 624
+!i10b 1
+!s100 hfJ=l<OYgeZaC[h^^mo_f1
+I@EDkR3G08JT]BhH?@CdJC2
+S1
 R12
+w1762161035
+8C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
+FC:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
+!i122 120
+L0 2 637
 R13
+R14
 r1
 !s85 0
 31
-R14
-!s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_tb.sv|
+R15
+!s107 C:\\CPLD\\intel\\fenghuo_xule\\BM_H13DSP_M\\BM_H13DSP_M\\sim\\testcase\\test3\\pwrseq_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv|
 !i113 0
 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R8
+R9
 vtimer_gen
 2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
-R10
+!s110 1762161067
 !i10b 1
 !s100 :R[QP8lIYe^e4mf24N?4S2
 I18m:FVMXQOdAYiCz6X<Sn0
-R11
+R12
 w1757489244
 8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
 FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
-!i122 87
+!i122 124
 L0 3 244
-R12
 R13
+R14
 r1
 !s85 0
 31
-R14
+!s108 1762161067.000000
 !s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v|
 !i113 0
-R15
-R8
+R16
+R9

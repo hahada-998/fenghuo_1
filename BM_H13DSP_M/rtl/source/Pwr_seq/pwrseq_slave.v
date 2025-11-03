@@ -1169,44 +1169,45 @@ fault_detectB_chklive #(.NUMBER_OF_VRM(1)) p3v3_stby_fault_detect_inst (
   // .vrm_fault        (p12v_stby_fault_det               )  //out
 // );
 
-assign fault_vec[0]   = p5v_stby_fault_det         ;
-assign fault_vec[1]   = 1'b0;//p5v_stby_usb0_fault_det   ; 
-assign fault_vec[2]   = 1'b0;//p5v_stby_usb1_fault_det   ; 
-assign fault_vec[3]   = 1'b0;
-assign fault_vec[4]   = p5v_fault_det             ;
-assign fault_vec[5]   = 1'b0;//p12v_efuse_fault_det       ;  
-assign fault_vec[6]   = 1'b0;//p12v_ssd_efuse_fault_det   ;
-assign fault_vec[7]   = 1'b0;//p12v_p0_dimm_fault_det     ;
-assign fault_vec[8]   = 1'b0;//p12v_p1_dimm_fault_det     ;
-assign fault_vec[9]   = grp_b_p0_18_s5_fault_det   ;
-assign fault_vec[10]  = grp_b_p1_18_s5_fault_det   ;
-assign fault_vec[11]  = grp_b_p0_33_s5_fault_det   ;
-assign fault_vec[12]  = grp_b_p1_33_s5_fault_det   ;
-assign fault_vec[13]  = grp_c_p0_fault_det         ;
-assign fault_vec[14]  = grp_c_p1_fault_det         ;
-assign fault_vec[15]  = grp_d_vddio_p0_fault_det   ;
-assign fault_vec[16]  = grp_d_vddio_p1_fault_det   ;
-assign fault_vec[17]  = grp_d_soc_p0_fault_det     ;   
-assign fault_vec[18]  = grp_d_soc_p1_fault_det     ;
-assign fault_vec[19]  = grp_d_p0_vddcore0_fault_det;
-assign fault_vec[20]  = grp_d_p1_vddcore0_fault_det;
-assign fault_vec[21]  = grp_d_p0_vddcore1_fault_det;
-assign fault_vec[22]  = grp_d_p1_vddcore1_fault_det;
-assign fault_vec[23]  = p3v3_stby_fault_det        ;		
-assign fault_vec[24]  = 1'b0;//p12v_stby_fault_det        ;		
+assign fault_vec[0]    = p5v_stby_fault_det         ;
+assign fault_vec[1]    = 1'b0;//p5v_stby_usb0_fault_det   ; 
+assign fault_vec[2]    = 1'b0;//p5v_stby_usb1_fault_det   ; 
+assign fault_vec[3]    = 1'b0;
+assign fault_vec[4]    = p5v_fault_det             ;
+assign fault_vec[5]    = 1'b0;//p12v_efuse_fault_det       ;  
+assign fault_vec[6]    = 1'b0;//p12v_ssd_efuse_fault_det   ;
+assign fault_vec[7]    = 1'b0;//p12v_p0_dimm_fault_det     ;
+assign fault_vec[8]    = 1'b0;//p12v_p1_dimm_fault_det     ;
+assign fault_vec[9]    = grp_b_p0_18_s5_fault_det   ;
+assign fault_vec[10]   = grp_b_p1_18_s5_fault_det   ;
+assign fault_vec[11]   = grp_b_p0_33_s5_fault_det   ;
+assign fault_vec[12]   = grp_b_p1_33_s5_fault_det   ;
+assign fault_vec[13]   = grp_c_p0_fault_det         ;
+assign fault_vec[14]   = grp_c_p1_fault_det         ;
+assign fault_vec[15]   = grp_d_vddio_p0_fault_det   ;
+assign fault_vec[16]   = grp_d_vddio_p1_fault_det   ;
+assign fault_vec[17]   = grp_d_soc_p0_fault_det     ;   
+assign fault_vec[18]   = grp_d_soc_p1_fault_det     ;
+assign fault_vec[19]   = grp_d_p0_vddcore0_fault_det;
+assign fault_vec[20]   = grp_d_p1_vddcore0_fault_det;
+assign fault_vec[21]   = grp_d_p0_vddcore1_fault_det;
+assign fault_vec[22]   = grp_d_p1_vddcore1_fault_det;
+assign fault_vec[23]   = p3v3_stby_fault_det        ;		
+assign fault_vec[24]   = 1'b0;//p12v_stby_fault_det        ;	
+assign fault_vec[39:25]= 0;   // Reserved for future power rails
 
 
 genvar i;
 // Mask each fault with the corresponding bits
 generate    
     for (i = 0; i < FAULT_VEC_SIZE; i = i + 1) begin : _fault_vec_block_
-        assign any_recov_fault_vec[i]         = fault_vec[i] & RECOV_FAULT_MASK[i];
+        assign any_recov_fault_vec[i]     = fault_vec[i] & RECOV_FAULT_MASK[i];
         assign any_lim_recov_fault_vec[i] = fault_vec[i] & LIM_RECOV_FAULT_MASK[i];
         assign any_non_recov_fault_vec[i] = fault_vec[i] & NON_RECOV_FAULT_MASK[i];
     end
 endgenerate
 
-assign any_recov_fault_c         = |any_recov_fault_vec;
+assign any_recov_fault_c     = |any_recov_fault_vec;
 assign any_lim_recov_fault_c = |any_lim_recov_fault_vec;
 assign any_non_recov_fault_c = |any_non_recov_fault_vec;
 
@@ -1218,8 +1219,8 @@ always @(posedge clk or posedge reset) begin
     any_non_recov_fault <= 1'b0;
   end
   else begin
-    any_pwr_fault_det     <= any_recov_fault_c | any_lim_recov_fault_c | any_non_recov_fault_c;
-    any_recov_fault         <= any_recov_fault_c;
+    any_pwr_fault_det   <= any_recov_fault_c | any_lim_recov_fault_c | any_non_recov_fault_c;
+    any_recov_fault     <= any_recov_fault_c;
     any_lim_recov_fault <= any_lim_recov_fault_c;
     any_non_recov_fault <= any_non_recov_fault_c;
   end
