@@ -82,13 +82,13 @@ module pwrseq_slave #(
     parameter [FAULT_VEC_SIZE-1:0] NON_RECOV_FAULT_MASK = 40'b0000_0000_0000_0000_0000_0000_0000_0000_0000_0000) 
     (
     // 时钟和复位信号
-    input wire clk;                // 时钟信号
-    input wire reset;              // 复位信号
+    input wire clk                ;                // 时钟信号
+    input wire reset              ;              // 复位信号
 
     // 定时信号
-    input wire t1us;               // 每 1us 的脉冲信号
-    input wire t512us;             // 每 512us 的脉冲信号
-    input wire t1ms;               // 每 1ms 的脉冲信号
+    input wire t1us               ;               // 每 1us 的脉冲信号
+    input wire t512us             ;             // 每 512us 的脉冲信号
+    input wire t1ms               ;               // 每 1ms 的脉冲信号
     input wire t2ms;               // 每 2ms 的脉冲信号
     input wire t64ms;              // 每 64ms 的脉冲信号
     input wire t1s;                // 每 1s 的脉冲信号
