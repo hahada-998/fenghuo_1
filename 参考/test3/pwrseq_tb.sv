@@ -196,46 +196,49 @@ logic   db_i_p1_pwrgd_out;
 logic   db_cpu_prsnt_n_arry; // placeholder if needed
 
 // ----- outputs from pwrseq_slave (enable signals + fault detects) -----
-logic   w_p5v_stby_en;
-logic   w_p5v_stby_usb_en;
-logic   w_grp_b_p0_33_s5_en;
-logic   w_grp_b_p1_33_s5_en;
-logic   w_grp_b_p0_18_s5_en;
-logic   w_grp_b_p1_18_s5_en;
-logic   w_p12_en;
-logic   w_p5v_en;
-logic   w_grp_c_p0_vdd11_en;
-logic   w_grp_c_p1_vdd11_en;
-logic   w_grp_d_p0_vddio_en;
-logic   w_grp_d_p1_vddio_en;
-logic   w_grp_d_p0_soc_en;
-logic   w_grp_d_p1_soc_en;
-logic   w_grp_d_p0_vddcore0_en;
-logic   w_grp_d_p1_vddcore0_en;
-logic   w_grp_d_p0_vddcore1_en;
-logic   w_grp_d_p1_vddcore1_en;
-logic   w_ocp_aux_en;
-logic   w_ocp_main_en;
+logic                     w_p5v_stby_en;
+logic                     w_p5v_stby_usb_en;
+logic                     w_grp_b_p0_33_s5_en;
+logic                     w_grp_b_p1_33_s5_en;
+logic                     w_grp_b_p0_18_s5_en;
+logic                     w_grp_b_p1_18_s5_en;
+logic                     w_p12_en;
+logic                     w_p5v_en;
+logic                     w_grp_c_p0_vdd11_en;
+logic                     w_grp_c_p1_vdd11_en;
+logic                     w_grp_d_p0_vddio_en;
+logic                     w_grp_d_p1_vddio_en;
+logic                     w_grp_d_p0_soc_en;
+logic                     w_grp_d_p1_soc_en;
+logic                     w_grp_d_p0_vddcore0_en;
+logic                     w_grp_d_p1_vddcore0_en;
+logic                     w_grp_d_p0_vddcore1_en;
+logic                     w_grp_d_p1_vddcore1_en;
+logic                     w_ocp_aux_en;
+logic                     w_ocp_main_en;
 
 // ----- fault detect outputs from slave (observables) -----
-logic   w_pwrseq_sm_fault_det;
-logic   w_p5v_stby_fault_det;
-logic   w_grp_c_p0_fault_det;
-logic   w_grp_c_p1_fault_det;
-logic   w_grp_d_vddio_p0_fault_det;
-logic   w_grp_d_vddio_p1_fault_det;
-logic   w_grp_d_p0_soc_fault_det;
-logic   w_grp_d_p1_soc_fault_det;
-logic   w_grp_d_p0_vddcore0_fault_det;
-logic   w_grp_d_p1_vddcore0_fault_det;
-logic   w_grp_d_p0_vddcore1_fault_det;
-logic   w_grp_d_p1_vddcore1_fault_det;
-logic   w_grp_b_p0_33_s5_fault_det;
-logic   w_grp_b_p1_33_s5_fault_det;
-logic   w_grp_b_p0_18_s5_fault_det;
-logic   w_grp_b_p1_18_s5_fault_det;
-logic   w_p3v3_stby_fault_det;
-logic   w_p5v_fault_det;
+logic                     w_pwrseq_sm_fault_det;
+logic                     w_p5v_stby_fault_det;
+logic                     w_grp_c_p0_fault_det;
+logic                     w_grp_c_p1_fault_det;
+logic                     w_grp_d_vddio_p0_fault_det;
+logic                     w_grp_d_vddio_p1_fault_det;
+logic                     w_grp_d_p0_soc_fault_det;
+logic                     w_grp_d_p1_soc_fault_det;
+logic                     w_grp_d_p0_vddcore0_fault_det;
+logic                     w_grp_d_p1_vddcore0_fault_det;
+logic                     w_grp_d_p0_vddcore1_fault_det;
+logic                     w_grp_d_p1_vddcore1_fault_det;
+logic                     w_grp_b_p0_33_s5_fault_det;
+logic                     w_grp_b_p1_33_s5_fault_det;
+logic                     w_grp_b_p0_18_s5_fault_det;
+logic                     w_grp_b_p1_18_s5_fault_det;
+logic                     w_p3v3_stby_fault_det;
+logic                     w_p5v_fault_det;
+
+logic   [1:0]             w_cpu_pwrok	    ;  //from CPU PWROK
+logic   [1:0]             db_cpu_prsnt_n  ;  //db_cpu_prsnt_n
 
 // -------------------------------------------------------------------------
 // 测试场景：按键上电、观察 master/slave 协同的状态机跳转
@@ -261,6 +264,9 @@ initial begin
     xr_ps_en                = 1       ;
     interlock_broken        = 0       ;
 
+    w_cpu_pwrok	            = 2'b11	  ;	//from CPU PWROK
+    db_cpu_prsnt_n          = 2'b00	  ;	//from CPU PWROK
+
     // 等待模块上电初始化
     #700;
 
@@ -285,8 +291,8 @@ initial begin
     sys_sw_in_n = 0;
     #100 sys_sw_in_n = 1;
 
-    // 等待关闭完成
-    #500000;
+    // 等待关闭完成   
+  #500000;
 
     $display("%0t: simulation finished", $time);
     #100 $finish;
@@ -404,7 +410,7 @@ end
     .grp_b_p1_33_s5_pg(db_i_pgd_p1_vddc),
     .i_pwrgd_ocp0_nic_pwrgd(1'b0),
     .i_cpu_pwrok({db_i_p1_pwrgd_out, db_i_p0_pwrgd_out}),
-    .i_cpu_prsnt_n({1'b1, 1'b1}),
+    .i_cpu_prsnt_n({1'b0, 1'b0}),
 
     // outputs: enables
     .p5v_stby_en(w_p5v_stby_en),
@@ -446,7 +452,13 @@ end
     .grp_b_p0_18_s5_fault_det(w_grp_b_p0_18_s5_fault_det),
     .grp_b_p1_18_s5_fault_det(w_grp_b_p1_18_s5_fault_det),
     .p3v3_stby_fault_det(w_p3v3_stby_fault_det),
-    .p5v_fault_det(w_p5v_fault_det)
+    .p5v_fault_det(w_p5v_fault_det),
+
+    //to CPU
+    .o_p0_pwr_good				        (w_cpu_pwr_good				  ),	//for AMD BSP PWR_GOOD
+    .o_cpu_pwrok					        (o_cpu_pwrok				    ),	//for VR SVI RST
+    .o_rsmrst_n					          (w_rsmrst_n					    ),	//to CPU RSMRST#
+    .reached_sm_wait_powerok		  ( )
   );
 
   // -------------------------------------------------------------------------
@@ -454,26 +466,27 @@ end
   // 观察 slave 的 enable 输出，当上电使能置位时，若延时后设置对应 PG 为 1，推动时序继续
   // -------------------------------------------------------------------------
   initial begin
-    // 初始化 PG 信号为 0（无电源好）
-    db_i_pwrgd_p3v3_stby = 0;
-    db_i_pgd_p0_vdd_18_stby = 0;
-    db_i_pgd_p1_vdd_18_stby = 0;
-    db_i_pgd_p0_vddc = 0;
-    db_i_pgd_p1_vddc = 0;
-    db_i_pgd_p0_vdd_11_sus = 0;
-    db_i_pgd_p1_vdd_11_sus = 0;
-    db_i_pgd_p0_vddio = 0;
-    db_i_pgd_p1_vddio = 0;
-    db_i_pgd_p0_vdd_soc_0 = 0;
-    db_i_pgd_p1_vdd_soc_0 = 0;
-    db_i_pgd_p0_vdd_core_0 = 0;
-    db_i_pgd_p1_vdd_core_0 = 0;
-    db_i_pgd_p0_vdd_core_1 = 0;
-    db_i_pgd_p1_vdd_core_1 = 0;
-    db_i_p0_pwrgd_out = 0;
-    db_i_p1_pwrgd_out = 0;
+    // 初始化 PG 信号为 0（加上电源外部所有信号良好）
+    db_i_pwrgd_p3v3_stby    = 1'b1;
+    db_i_pgd_p0_vdd_18_stby = 1'b1;
+    db_i_pgd_p1_vdd_18_stby = 1'b1;
+    db_i_pgd_p0_vddc        = 1'b1;
+    db_i_pgd_p1_vddc        = 1'b1;
+    db_i_pgd_p0_vdd_11_sus  = 1'b1;
+    db_i_pgd_p1_vdd_11_sus  = 1'b1;
+    db_i_pgd_p0_vddio       = 1'b1;
+    db_i_pgd_p1_vddio       = 1'b1;
+    db_i_pgd_p0_vdd_soc_0   = 1'b1;
+    db_i_pgd_p1_vdd_soc_0   = 1'b1;
+    db_i_pgd_p0_vdd_core_0  = 1'b1;
+    db_i_pgd_p1_vdd_core_0  = 1'b1;
+    db_i_pgd_p0_vdd_core_1  = 1'b1;
+    db_i_pgd_p1_vdd_core_1  = 1'b1;
+    db_i_p0_pwrgd_out       = 1'b1;
+    db_i_p1_pwrgd_out       = 1'b1;
   end
 
+  /*
   // 当待机电源使能（p5v_stby_en）上升后，在延时后产生待机 PG
   always @(posedge w_p5v_stby_en) begin
     // 模拟电源上电稳定延时
@@ -520,6 +533,7 @@ end
     db_i_p0_pwrgd_out <= 0;
     db_i_p1_pwrgd_out <= 0;
   end
+  */
 
  
 

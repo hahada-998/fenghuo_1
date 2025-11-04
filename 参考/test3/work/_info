@@ -13,6 +13,8 @@ R0
 R1
 R0
 R1
+R0
+R1
 Z2 !s12c _opt1
 R1
 R0
@@ -46,10 +48,10 @@ R1
 cModel Technology
 Z3 dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test2
 T_opt
-!s110 1762161074
-VDeiBYNZZ9zW<Hmi@aoW^S3
+!s110 1762240058
+VbVb6z7iE`jCYXARS8B<Ej3
 Z4 04 9 4 work pwrseq_tb fast 0
-=1-6805cabd4893-690871b2-b9-7e98
+=1-6805cabd4893-6909a639-21d-9840
 R1
 Z5 !s12f OEM25U40 
 Z6 !s12b OEM100
@@ -194,23 +196,23 @@ R9
 vpwrseq_tb
 2C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R11
+!s110 1762240053
 !i10b 1
-!s100 hfJ=l<OYgeZaC[h^^mo_f1
-I@EDkR3G08JT]BhH?@CdJC2
+!s100 >f8;HAM<N43AdOY]JHa5N0
+IAXdf@1QbO<8Q1m93h_==Z1
 S1
 R12
-w1762161035
+w1762240043
 8C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
 FC:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
-!i122 120
-L0 2 637
+!i122 125
+L0 2 651
 R13
 R14
 r1
 !s85 0
 31
-R15
+!s108 1762240053.000000
 !s107 C:\\CPLD\\intel\\fenghuo_xule\\BM_H13DSP_M\\BM_H13DSP_M\\sim\\testcase\\test3\\pwrseq_tb.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv|
 !i113 0

@@ -2325,7 +2325,7 @@ pwrseq_slave #(
 
 //from CPU
   .i_cpu_pwrok					(w_cpu_pwrok				),	//from CPU PWROK
-  .i_cpu_prsnt_n				        (db_cpu_prsnt_n				),  //db_cpu_prsnt_n
+  .i_cpu_prsnt_n				(db_cpu_prsnt_n				),  //db_cpu_prsnt_n
 
 //to CPU
   .o_p0_pwr_good				        (w_cpu_pwr_good				),	//for AMD BSP PWR_GOOD
