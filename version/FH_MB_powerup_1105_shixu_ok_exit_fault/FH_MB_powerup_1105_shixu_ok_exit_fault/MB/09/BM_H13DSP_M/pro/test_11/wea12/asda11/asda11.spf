@@ -1,0 +1,50 @@
+<BaliSimProject version="1.3" path="test_11/wea12" stage="0" language="-1" name="asda11" simType="Active-HDL">
+    <Source worklib="work" path="../rtl/source/bmc_i2c/i2c_slave_basic0.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/bmc_i2c/i2c_slave_bmc.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/74LV165/pvt_gpi.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/edge_delay.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/nmi_clear.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/cmos_clear.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/ESPI_LINK/pcie_dync_alloc.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/bios_i2c/bios_cpld_i2c_ram.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/ESPI_LINK/pch_cpld_espi_ram.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/ESPI_LINK/espi_link.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/uart/mcio_uart_master.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Power_Fault/ERROR_CODE.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Power_Fault/fault_detectB_chklive.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Power_Fault/dimm_fail_event.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Pwr_seq/pwrseq_slave.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/edge_detect.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Pwr_seq/pwrseq_master.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/cpu_module.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Signal_Latch/Edge_Detect_SL.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Signal_Latch/Signal_Latch.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/cpu_thermtrip.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/lowpass_filter.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/system_rst.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Pwr_But_Ctrl/bmc_ctl_pwrbtn.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Pwr_But_Ctrl/Pwr_But_Ctrl.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/SGPIO_MASTER/p2s_slave.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/SGPIO_MASTER/s2p_master.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/synclib.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/IIC_Update/I2C_UPDATE.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="../rtl/source/common/ClkDiv.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/ClkDivTree.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/timer_gen_50mhz.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/pon_reset.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/PLL/pll_i25M_o50M_o25M.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="../rtl/source/BM_H13DSP_M_TOP.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/delay.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/extrst_evt_count.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/genCntr.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/common/MESSAGE_CONTROL.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Power_Fault/fault_detectA_chklive.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Power_Fault/Pwr_Error_Latch.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/Power_Fault/Power_Fault.v" type="VERILOG" include="../rtl/include"/>
+    <Source worklib="work" path="../rtl/source/74HC164/s2p_164.v" type="VERILOG" include="../rtl/include"/>
+    <SimLib value="pmi_work ovi_machxo3l"/>
+    <GlbInc value="&quot;../rtl/include&quot;"/>
+    <Macro value=""/>
+    <TopModule instance="" language="VERILOG" name="BM_H13DSP_M"/>
+</BaliSimProject>

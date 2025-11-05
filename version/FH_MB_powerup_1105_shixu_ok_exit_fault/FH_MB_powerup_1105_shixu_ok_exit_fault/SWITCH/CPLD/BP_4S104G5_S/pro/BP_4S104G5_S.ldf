@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="BP_4S104G5_S" device="LCMXO2-2000HC-4BG256C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="WDT" top="BP_4S104G5_S"/>
+        <Source name="../rtl/source/BP_4S104G5_S_TOP.v" type="Verilog" type_short="Verilog" syn_sim="SynOnly">
+            <Options top_module="BP_4S104G5_S"/>
+        </Source>
+        <Source name="../rtl/source/common/ClkDiv.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/ClkDivTree.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/PLL/pll_i25M_o50M_o25M.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/I2C_UPDATE/I2C_UPDATE.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/bmc_i2c/i2c_slave_basic0.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/bmc_i2c/i2c_slave_bmc.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/SGPIO_SLAVE/p2s_slave.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/SGPIO_SLAVE/s2p_slave.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/edge_delay.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/lowpass_filter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/pon_reset.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/synclib.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/timer_gen_50mhz.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/74LV165/pvt_gpi.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/FAN/fan_pwm_tach.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/FAN/fan_counter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/Edge_Detect.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/breath_led/breath_led.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/Bmc_Power_seq/ac_bmc_pwrseq_fsm.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/FAN/WDT.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/I2C_UPDATE/I2C_UPDATE.edn" type="EDIF" type_short="EDIF">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/I2C_UPDATE/I2C_UPDATE.lpc" type="LPC_Module" type_short="LPC">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/I2C_UPDATE/I2C_UPDATE.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/PLL/pll_i25M_o50M_o25M.edn" type="EDIF" type_short="EDIF">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/PLL/pll_i25M_o50M_o25M.lpc" type="LPC_Module" type_short="LPC">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/PLL/pll_i25M_o50M_o25M.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/uart/old/uart_master.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="BP_4S104G5_S.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="BP_4S104G5_S1.sty"/>
+</BaliProject>

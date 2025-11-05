@@ -1,0 +1,979 @@
+PAD Specification File
+***************************
+
+PART TYPE:        LCMXO3LF-6900C
+Performance Grade:      5
+PACKAGE:          CABGA400
+Package Status:                     Final          Version 1.17
+
+Mon Nov 03 16:27:56 2025
+
+Pinout by Port Name:
++-------------------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
+| Port Name                     | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                     |
++-------------------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
+| i_BOARD_ID0                   | N1/4     | LVCMOS33_IN   | PL17A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_BOARD_ID1                   | L1/4     | LVCMOS33_IN   | PL12A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_BOARD_ID2                   | K1/4     | LVCMOS33_IN   | PL11B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_BOARD_ID3                   | J1/4     | LVCMOS33_IN   | PL10B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_BREAK_DET1_DO_N             | J6/5     | LVCMOS33_IN   | PL8C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_BREAK_DET_DO_N              | F17/1    | LVCMOS33_IN   | PR5B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CLK_PAL2_IN_25M             | U1/3     | LVCMOS33_IN   | PL22A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD2_DONE                  | A19/0    | LVCMOS33_IN   | PT36D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD2_HOLD_N_R              | K18/1    | LVCMOS33_IN   | PR11D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD2_INIT_N                | C17/0    | LVCMOS33_IN   | PT36C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD2_PROGRAM_N             | D13/0    | LVCMOS33_IN   | PT27D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD2_SN                    | Y20/2    | LVCMOS33_IN   | PB38A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD_SGPIO0_CLK             | L20/1    | LVCMOS33_IN   | PR15B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD_SGPIO0_LD_N            | M20/1    | LVCMOS33_IN   | PR16A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD_SGPIO0_MOSI            | M19/1    | LVCMOS33_IN   | PR16B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD_SGPIO1_CLK             | N20/1    | LVCMOS33_IN   | PR17B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD_SGPIO1_LD_N            | L19/1    | LVCMOS33_IN   | PR15A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_CPLD_SGPIO1_MOSI            | P20/1    | LVCMOS33_IN   | PR18C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_HDR_PAL2_N                  | B9/0     | LVCMOS33_IN   | PT17A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_I2C2_PAL2_SCL               | A18/0    | LVCMOS33_IN   | PT34A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_JTAG_BMC_TRST_R             | G10/0    | LVCMOS33_IN   | PT18C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_LEAKAGE_DET1_DO_N           | K7/4     | LVCMOS33_IN   | PL11D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_LEAKAGE_DET_DO_N            | C16/0    | LVCMOS33_IN   | PT33B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_LEAKAGE_PRSNT1_N            | J5/5     | LVCMOS33_IN   | PL8D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_LEAKAGE_PRSNT_N             | D14/0    | LVCMOS33_IN   | PT32D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3A_CB_ID0_R         | F18/1    | LVCMOS33_IN   | PR6B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3A_CB_ID1_R         | G17/1    | LVCMOS33_IN   | PR6C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3A_NVME0_PRSNT_N_R  | C12/0    | LVCMOS33_IN   | PT26D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3A_NVME1_PRSNT_N_R  | E17/1    | LVCMOS33_IN   | PR3B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3A_WAKE_N_R         | G19/1    | LVCMOS33_IN   | PR8A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3C_CB_ID0_R         | C19/1    | LVCMOS33_IN   | PR3A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3C_CB_ID1_R         | C14/0    | LVCMOS33_IN   | PT32C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3C_NVME0_PRSNT_N_R  | D6/0     | LVCMOS33_IN   | PT11C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3C_NVME1_PRSNT_N_R  | E19/1    | LVCMOS33_IN   | PR5D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOG3C_WAKE_N_R         | D19/1    | LVCMOS33_IN   | PR5A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0A_CB_ID0_R         | W2/2     | LVCMOS33_IN   | PB6A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0A_CB_ID1_R         | W4/2     | LVCMOS33_IN   | PB9A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0A_DATAIN           | Y3/2     | LVCMOS33_IN   | PB7B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0A_NVME0_PRSNT_N_R  | Y4/2     | LVCMOS33_IN   | PB9B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0A_NVME1_PRSNT_N_R  | W5/2     | LVCMOS33_IN   | PB10A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0A_WAKE_N_R         | Y2/2     | LVCMOS33_IN   | PB6B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0C_CB_ID0_R         | Y6/2     | LVCMOS33_IN   | PB12B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0C_CB_ID1_R         | Y8/2     | LVCMOS33_IN   | PB15B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0C_NVME0_PRSNT_N_R  | W9/2     | LVCMOS33_IN   | PB16A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0C_NVME1_PRSNT_N_R  | V17/1    | LVCMOS33_IN   | PR25D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP0C_WAKE_N_R         | W7/2     | LVCMOS33_IN   | PB13A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1A_CB_ID0_R         | Y10/2    | LVCMOS33_IN   | PB18A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1A_CB_ID1_R         | W13/2    | LVCMOS33_IN   | PB26B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1A_NVME0_PRSNT_N_R  | Y13/2    | LVCMOS33_IN   | PB26A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1A_NVME1_PRSNT_N_R  | Y12/2    | LVCMOS33_IN   | PB23A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1A_WAKE_N_R         | W11/2    | LVCMOS33_IN   | PB21B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1C_CB_ID0_R         | W15/2    | LVCMOS33_IN   | PB29B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1C_CB_ID1_R         | Y17/2    | LVCMOS33_IN   | PB32A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1C_NVME0_PRSNT_N_R  | Y18/2    | LVCMOS33_IN   | PB35A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1C_NVME1_PRSNT_N_R  | Y19/2    | LVCMOS33_IN   | PB37A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP1C_WAKE_N_R         | Y15/2    | LVCMOS33_IN   | PB29A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2A_CB_ID0_R         | R16/1    | LVCMOS33_IN   | PR24D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2A_CB_ID1_R         | P16/1    | LVCMOS33_IN   | PR23B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2A_NVME0_PRSNT_N_R  | R13/2    | LVCMOS33_IN   | PB32D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2A_NVME1_PRSNT_N_R  | P12/2    | LVCMOS33_IN   | PB29C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2A_WAKE_N_R         | R8/2     | LVCMOS33_IN   | PB9D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2C_CB_ID0_R         | D10/0    | LVCMOS33_IN   | PT21C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2C_CB_ID1_R         | C10/0    | LVCMOS33_IN   | PT21D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2C_NVME0_PRSNT_N_R  | E6/0     | LVCMOS33_IN   | PT10C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2C_NVME1_PRSNT_N_R  | D7/0     | LVCMOS33_IN   | PT12D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP2C_WAKE_N_R         | D8/0     | LVCMOS33_IN   | PT16C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3A_CB_ID0_R         | P10/2    | LVCMOS33_IN   | PB16C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3A_CB_ID1_R         | P11/2    | LVCMOS33_IN   | PB23C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3A_NVME0_PRSNT_N_R  | J18/1    | LVCMOS33_IN   | PR10A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3A_NVME1_PRSNT_N_R  | K19/1    | LVCMOS33_IN   | PR12A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3A_WAKE_N_R         | L17/1    | LVCMOS33_IN   | PR12D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3C_CB_ID0_R         | R10/2    | LVCMOS33_IN   | PB16D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3C_CB_ID1_R         | T9/2     | LVCMOS33_IN   | PB15D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3C_NVME0_PRSNT_N_R  | N17/1    | LVCMOS33_IN   | PR18B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3C_NVME1_PRSNT_N_R  | T17/1    | LVCMOS33_IN   | PR25B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P0_MCIOP3C_WAKE_N_R         | N18/1    | LVCMOS33_IN   | PR18A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1A_CB_ID0_R         | N15/1    | LVCMOS33_IN   | PR23C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1A_CB_ID1_R         | P9/2     | LVCMOS33_IN   | PB12C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1A_NVME0_PRSNT_N_R  | P15/1    | LVCMOS33_IN   | PR24C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1A_NVME1_PRSNT_N_R  | T10/2    | LVCMOS33_IN   | PB21D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1A_WAKE_N_R         | M7/3     | LVCMOS33_IN   | PL18D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1C_CB_ID0_R         | R15/2    | LVCMOS33_IN   | PB38D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1C_CB_ID1_R         | R14/2    | LVCMOS33_IN   | PB37D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1C_NVME0_PRSNT_N_R  | R5/3     | LVCMOS33_IN   | PL25B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1C_NVME1_PRSNT_N_R  | P5/3     | LVCMOS33_IN   | PL24C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOG1C_WAKE_N_R         | R6/2     | LVCMOS33_IN   | PB4C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0A_CB_ID0_R         | H6/5     | LVCMOS33_IN   | PL5C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0A_CB_ID1_R         | C6/0     | LVCMOS33_IN   | PT12C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0A_NVME0_PRSNT_N_R  | T6/2     | LVCMOS33_IN   | PB4D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0A_NVME1_PRSNT_N_R  | R4/3     | LVCMOS33_IN   | PL22D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0A_WAKE_N_R         | R3/3     | LVCMOS33_IN   | PL22C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0C_CB_ID0_R         | P4/3     | LVCMOS33_IN   | PL19B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0C_CB_ID1_R         | M6/3     | LVCMOS33_IN   | PL18C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0C_NVME0_PRSNT_N_R  | K6/4     | LVCMOS33_IN   | PL11C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0C_NVME1_PRSNT_N_R  | C4/5     | LVCMOS33_IN   | PL2A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP0C_WAKE_N_R         | E4/5     | LVCMOS33_IN   | PL3C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1A_CB_ID0_R         | M4/4     | LVCMOS33_IN   | PL15D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1A_CB_ID1_R         | N4/3     | LVCMOS33_IN   | PL18B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1A_NVME0_PRSNT_N_R  | D2/5     | LVCMOS33_IN   | PL4A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1A_NVME1_PRSNT_N_R  | C2/5     | LVCMOS33_IN   | PL3A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1A_WAKE_N_R         | C3/5     | LVCMOS33_IN   | PL2B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1C_CB_ID0_R         | L7/4     | LVCMOS33_IN   | PL16D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1C_CB_ID1_R         | L6/4     | LVCMOS33_IN   | PL16C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1C_NVME0_PRSNT_N_R  | M5/4     | LVCMOS33_IN   | PL16B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1C_NVME1_PRSNT_N_R  | G4/5     | LVCMOS33_IN   | PL7A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP1C_WAKE_N_R         | F4/5     | LVCMOS33_IN   | PL5A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2A_CB_ID0_R         | V3/3     | LVCMOS33_IN   | PL24A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2A_CB_ID1_R         | J3/5     | LVCMOS33_IN   | PL9D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2A_NVME0_PRSNT_N_R  | H2/5     | LVCMOS33_IN   | PL9A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2A_NVME1_PRSNT_N_R  | R2/3     | LVCMOS33_IN   | PL19D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2A_WAKE_N_R         | V2/3     | LVCMOS33_IN   | PL23D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2C_CB_ID0_R         | U6/2     | LVCMOS33_IN   | PB7D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2C_CB_ID1_R         | L2/4     | LVCMOS33_IN   | PL12B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2C_NVME0_PRSNT_N_R  | K4/4     | LVCMOS33_IN   | PL10D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2C_NVME1_PRSNT_N_R  | U4/3     | LVCMOS33_IN   | PL25C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP2C_WAKE_N_R         | U5/3     | LVCMOS33_IN   | PL25D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3A_CB_ID0_R         | N2/4     | LVCMOS33_IN   | PL17B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3A_CB_ID1_R         | T8/2     | LVCMOS33_IN   | PB10D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3A_NVME0_PRSNT_N_R  | F8/0     | LVCMOS33_IN   | PT13D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3A_NVME1_PRSNT_N_R  | L3/4     | LVCMOS33_IN   | PL12C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3A_WAKE_N_R         | M3/4     | LVCMOS33_IN   | PL15C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3C_CB_ID0_R         | R1/3     | LVCMOS33_IN   | PL19C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3C_CB_ID1_R         | V10/2    | LVCMOS33_IN   | PB18D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3C_NVME0_PRSNT_N_R  | E7/0     | LVCMOS33_IN   | PT11D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3C_NVME1_PRSNT_N_R  | N3/3     | LVCMOS33_IN   | PL18A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP3C_WAKE_N_R         | P2/4     | LVCMOS33_IN   | PL17D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_P1_MCIOP4A_NVME0_PRSNT_N_R  | L5/4     | LVCMOS33_IN   | PL16A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_NODE1_TYPE              | F16/1    | LVCMOS33_IN   | PR3C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_P12V_CPU0_DIMM_GOK      | U12/2    | LVCMOS33_IN   | PB28C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_P12V_CPU0_DIMM_OC       | V13/2    | LVCMOS33_IN   | PB26D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_P12V_CPU1_DIMM_GOK      | J19/1    | LVCMOS33_IN   | PR11A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_P12V_CPU1_DIMM_OC       | K16/1    | LVCMOS33_IN   | PR12C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_PCH_INTRUDER            | F12/0    | LVCMOS33_IN   | PT28D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_PE_WAKE_N               | B20/1    | LVCMOS33_IN   | PR4A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_SLIMSAS1_PRSNT_N        | E14/0    | LVCMOS33_IN   | PT34C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_TMP1_ALERT_N            | G11/0    | LVCMOS33_IN   | PT25C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_TMP2_ALERT_N            | F5/5     | LVCMOS33_IN   | PL4C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_TMP3_ALERT_N            | F10/0    | LVCMOS33_IN   | PT18D |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PAL_TMP4_ALERT_N            | F7/0     | LVCMOS33_IN   | PT9D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCA_REVISION_0              | E1/5     | LVCMOS33_IN   | PL6B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCA_REVISION_1              | D1/5     | LVCMOS33_IN   | PL4B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCA_REVISION_2              | C1/5     | LVCMOS33_IN   | PL3B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCB_REVISION_0              | H1/5     | LVCMOS33_IN   | PL9B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCB_REVISION_1              | G1/5     | LVCMOS33_IN   | PL8B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCB_REVISION_2              | F1/5     | LVCMOS33_IN   | PL6D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PCH_INTRUDER_CABLE_INST_R_N | D16/0    | LVCMOS33_IN   | PT35B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_PWRGD_SYS_PWROK_R           | G9/0     | LVCMOS33_IN   | PT15C |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SMB_CPU0_ALERT_N_R          | B12/0    | LVCMOS33_IN   | PT22B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_1                        | A2/0     | LVCMOS33_IN   | PT10B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_3                        | A3/0     | LVCMOS33_IN   | PT11B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_4                        | B4/0     | LVCMOS33_IN   | PT12A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_5                        | A4/0     | LVCMOS33_IN   | PT12B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_6                        | B5/0     | LVCMOS33_IN   | PT13A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_7                        | A5/0     | LVCMOS33_IN   | PT13B |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| i_SW_8                        | B6/0     | LVCMOS33_IN   | PT14A |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| io_I2C2_2_UPDATE_SCL          | C11/0    | LVCMOS33_BIDI | PT22C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_I2C2_2_UPDATE_SDA          | D11/0    | LVCMOS33_BIDI | PT22D |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_I2C2_PAL2_SDA              | B18/0    | LVCMOS33_BIDI | PT34B |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOG3A_PWR_EN_R        | F19/1    | LVCMOS33_BIDI | PR7A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOG3C_PWR_EN_R        | B19/0    | LVCMOS33_BIDI | PT36A |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP0A_PWR_EN_R        | W1/2     | LVCMOS33_BIDI | PB4A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP0C_PWR_EN_R        | Y5/2     | LVCMOS33_BIDI | PB10B |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP1A_PWR_EN_R        | Y9/2     | LVCMOS33_BIDI | PB16B |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP1C_PWR_EN_R        | W14/2    | LVCMOS33_BIDI | PB28B |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP2A_PWR_EN_R        | L14/1    | LVCMOS33_BIDI | PR15C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP2C_PWR_EN_R        | B8/0     | LVCMOS33_BIDI | PT16A |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP3A_PWR_EN_R        | P17/1    | LVCMOS33_BIDI | PR22B |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P0_MCIOP3C_PWR_EN_R        | T16/2    | LVCMOS33_BIDI | PB38C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOG1A_PWR_EN_R        | T13/2    | LVCMOS33_BIDI | PB31D |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOG1C_PWR_EN_R        | R9/2     | LVCMOS33_BIDI | PB12D |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP0A_PWR_EN_R        | T5/3     | LVCMOS33_BIDI | PL25A |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP0C_PWR_EN_R        | D5/0     | LVCMOS33_BIDI | PT10D |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP1A_PWR_EN_R        | J4/5     | LVCMOS33_BIDI | PL9C  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP1C_PWR_EN_R        | E2/5     | LVCMOS33_BIDI | PL6A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP2A_PWR_EN_R        | H3/5     | LVCMOS33_BIDI | PL7C  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP2C_PWR_EN_R        | K5/4     | LVCMOS33_BIDI | PL10C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP3A_PWR_EN_R        | V8/2     | LVCMOS33_BIDI | PB13C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| io_P1_MCIOP3C_PWR_EN_R        | U10/2    | LVCMOS33_BIDI | PB18C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| o_BIOS_FLASH_RESET_R_N        | A11/0    | LVCMOS33_OUT  | PT21B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_DB2000_2_1_OE_N         | P1/4     | LVCMOS33_OUT  | PL17C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_DB2000_2_2_OE_N         | A1/0     | LVCMOS33_OUT  | PT9B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_FDEC_R              | A16/0    | LVCMOS33_OUT  | PT28A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_FINC_R              | T20/1    | LVCMOS33_OUT  | PR21C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_I2C_SEL_R           | A17/0    | LVCMOS33_OUT  | PT32A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_INTR_N_R            | A13/0    | LVCMOS33_OUT  | PT25A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_LOL_N_R             | U20/1    | LVCMOS33_OUT  | PR22A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_OE_N_R              | A15/0    | LVCMOS33_OUT  | PT27A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CLK_GEN_RST_N_R             | A14/0    | LVCMOS33_OUT  | PT26A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CPLD1_CPLD2_RSV1_R          | W20/2    | LVCMOS33_OUT  | PB38B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CPLD2_JTAGEN                | C13/0    | LVCMOS33_OUT  | PT27C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CPLD_SGPIO0_MISO            | R20/1    | LVCMOS33_OUT  | PR19B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_CPLD_SGPIO1_MISO            | T19/1    | LVCMOS33_OUT  | PR21D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED1_N                      | K20/1    | LVCMOS33_OUT  | PR12B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED2_N                      | C20/1    | LVCMOS33_OUT  | PR4B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED3_N                      | D20/1    | LVCMOS33_OUT  | PR5C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED4_N                      | E20/1    | LVCMOS33_OUT  | PR6D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED5_N                      | J20/1    | LVCMOS33_OUT  | PR11B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED6_N                      | H20/1    | LVCMOS33_OUT  | PR9D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED7_N                      | G20/1    | LVCMOS33_OUT  | PR8D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_LED8_N                      | F20/1    | LVCMOS33_OUT  | PR7B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_M2_GPIO6_R                  | M15/1    | LVCMOS33_OUT  | PR19C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_M2_GPIO7_R                  | M16/1    | LVCMOS33_OUT  | PR17C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_I2C5_9617_EN             | A6/0     | LVCMOS33_OUT  | PT14B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOG3A_GPU_THROTTLE_N_R | D18/1    | LVCMOS33_OUT  | PR3D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOG3A_PERST_N_R        | D12/0    | LVCMOS33_OUT  | PT26C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOG3A_RSV_R            | H18/1    | LVCMOS33_OUT  | PR9A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOG3C_GPU_THROTTLE_N_R | D17/1    | LVCMOS33_OUT  | PR2A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOG3C_PERST_N_R        | F11/0    | LVCMOS33_OUT  | PT25D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOG3C_RSV_R            | C18/1    | LVCMOS33_OUT  | PR2B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0A_CLK              | U17/1    | LVCMOS33_OUT  | PR25C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0A_GPU_THROTTLE_N_R | Y1/2     | LVCMOS33_OUT  | PB4B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0A_LD               | U18/1    | LVCMOS33_OUT  | PR24B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0A_PERST_N_R        | T7/2     | LVCMOS33_OUT  | PB10C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0A_RSV_R            | W3/2     | LVCMOS33_OUT  | PB7A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0C_GPU_THROTTLE_N_R | W6/2     | LVCMOS33_OUT  | PB12A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0C_PERST_N_R        | W8/2     | LVCMOS33_OUT  | PB15A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP0C_RSV_R            | Y7/2     | LVCMOS33_OUT  | PB13B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP1A_GPU_THROTTLE_N_R | W10/2    | LVCMOS33_OUT  | PB18B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP1A_PERST_N_R        | W12/2    | LVCMOS33_OUT  | PB23B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP1A_RSV_R            | Y11/2    | LVCMOS33_OUT  | PB21A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP1C_GPU_THROTTLE_N_R | Y14/2    | LVCMOS33_OUT  | PB28A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP1C_PERST_N_R        | Y16/2    | LVCMOS33_OUT  | PB31A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP1C_RSV_R            | W16/2    | LVCMOS33_OUT  | PB31B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP2A_GPU_THROTTLE_N_R | N16/1    | LVCMOS33_OUT  | PR21A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP2A_PERST_N_R        | K17/1    | LVCMOS33_OUT  | PR11C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP2A_RSV_R            | R11/2    | LVCMOS33_OUT  | PB23D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP2C_GPU_THROTTLE_N_R | A8/0     | LVCMOS33_OUT  | PT16B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP2C_PERST_N_R        | F6/5     | LVCMOS33_OUT  | PL2C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP2C_RSV_R            | F9/0     | LVCMOS33_OUT  | PT15D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP3A_GPU_THROTTLE_N_R | T18/1    | LVCMOS33_OUT  | PR22C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP3A_PERST_N_R        | R17/1    | LVCMOS33_OUT  | PR24A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP3A_RSV_R            | M18/1    | LVCMOS33_OUT  | PR16D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP3C_GPU_THROTTLE_N_R | U15/2    | LVCMOS33_OUT  | PB35D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP3C_PERST_N_R        | U14/2    | LVCMOS33_OUT  | PB34B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP3C_RSV_R            | P18/1    | LVCMOS33_OUT  | PR19A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_MCIOP4A_PERST_N_R        | H7/5     | LVCMOS33_OUT  | PL5D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P0_SPI_TPM_CS_N_3V3         | C15/0    | LVCMOS33_OUT  | PT33A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P12V_DISCHARGE_R            | L16/1    | LVCMOS33_OUT  | PR16C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOG1A_GPU_THROTTLE_N_R | T12/2    | LVCMOS33_OUT  | PB31C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOG1A_PERST_N_R        | P8/2     | LVCMOS33_OUT  | PB9C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOG1A_RSV_R            | R12/2    | LVCMOS33_OUT  | PB29D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOG1C_GPU_THROTTLE_N_R | P6/3     | LVCMOS33_OUT  | PL24D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOG1C_PERST_N_R        | N5/3     | LVCMOS33_OUT  | PL21C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOG1C_RSV_R            | N6/3     | LVCMOS33_OUT  | PL21D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP0A_GPU_THROTTLE_N_R | T4/3     | LVCMOS33_OUT  | PL23B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP0A_PERST_N_R        | R7/2     | LVCMOS33_OUT  | PB6D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP0A_RSV_R            | T3/3     | LVCMOS33_OUT  | PL23A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP0C_GPU_THROTTLE_N_R | N14/1    | LVCMOS33_OUT  | PR23D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP0C_PERST_N_R        | P13/2    | LVCMOS33_OUT  | PB32C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP0C_RSV_R            | P14/2    | LVCMOS33_OUT  | PB37C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP1A_GPU_THROTTLE_N_R | E3/5     | LVCMOS33_OUT  | PL3D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP1A_PERST_N_R        | B2/0     | LVCMOS33_OUT  | PT10A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP1A_RSV_R            | F3/5     | LVCMOS33_OUT  | PL5B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP1C_GPU_THROTTLE_N_R | F2/5     | LVCMOS33_OUT  | PL6C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP1C_PERST_N_R        | H4/5     | LVCMOS33_OUT  | PL7D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP1C_RSV_R            | G2/5     | LVCMOS33_OUT  | PL8A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP2A_GPU_THROTTLE_N_R | G3/5     | LVCMOS33_OUT  | PL7B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP2A_PERST_N_R        | J2/4     | LVCMOS33_OUT  | PL10A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP2A_RSV_R            | V4/3     | LVCMOS33_OUT  | PL24B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP2C_GPU_THROTTLE_N_R | K2/4     | LVCMOS33_OUT  | PL11A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP2C_PERST_N_R        | L4/4     | LVCMOS33_OUT  | PL12D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP2C_RSV_R            | V6/2     | LVCMOS33_OUT  | PB7C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP3A_GPU_THROTTLE_N_R | U9/2     | LVCMOS33_OUT  | PB13D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP3A_PERST_N_R        | V9/2     | LVCMOS33_OUT  | PB15C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP3A_RSV_R            | M2/4     | LVCMOS33_OUT  | PL15B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP3C_GPU_THROTTLE_N_R | U11/2    | LVCMOS33_OUT  | PB21C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP3C_PERST_N_R        | T11/2    | LVCMOS33_OUT  | PB28D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP3C_RSV_R            | P3/3     | LVCMOS33_OUT  | PL19A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_P1_MCIOP4A_PERST_N_R        | G5/5     | LVCMOS33_OUT  | PL4D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_PAL_P12V_CPU0_DIMM_ON       | V12/2    | LVCMOS33_OUT  | PB26C |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_PAL_P12V_CPU1_DIMM_ON       | M17/1    | LVCMOS33_OUT  | PR17A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_PAL_SPI1_BMC_HOLD           | H19/1    | LVCMOS33_OUT  | PR9B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_PAL_SPI_BIOS_UPDATA_EN      | J16/1    | LVCMOS33_OUT  | PR10B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_PCIE_SATA_RST_N             | V19/1    | LVCMOS33_OUT  | PR25A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_PCIE_SATA_WAKE_R_N          | L15/1    | LVCMOS33_OUT  | PR15D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_RST_I2C1_MUX_N_R            | B1/0     | LVCMOS33_OUT  | PT9A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_RST_I2C2_MUX_N_R            | B17/0    | LVCMOS33_OUT  | PT32B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_RST_I2C3_MUX_N_R            | A20/0    | LVCMOS33_OUT  | PT36B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SATA1_RSV                   | F14/0    | LVCMOS33_OUT  | PT35D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SMB_PEHP_CPU0_OCP_ALERT     | V16/2    | LVCMOS33_OUT  | PB34D |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SMB_PEHP_CPU1_OCP_ALERT     | M1/4     | LVCMOS33_OUT  | PL15A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SW_BIOS_FLASH_SPI_S_R       | A10/0    | LVCMOS33_OUT  | PT18B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SW_BIOS_QSPI_S_R            | A12/0    | LVCMOS33_OUT  | PT22A |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SW_BIOS_SPI_OE              | A9/0     | LVCMOS33_OUT  | PT17B |           |           | DRIVE:8mA SLEW:SLOW                            |
+| o_SW_QSPI_OE_R                | B16/0    | LVCMOS33_OUT  | PT28B |           |           | DRIVE:8mA SLEW:SLOW                            |
++-------------------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
+
+Vccio by Bank:
++------+-------+
+| Bank | Vccio |
++------+-------+
+| 0    | 3.3V  |
+| 1    | 3.3V  |
+| 2    | 3.3V  |
+| 3    | 3.3V  |
+| 4    | 3.3V  |
+| 5    | 3.3V  |
++------+-------+
+
+Vref by Bank:
++------+-----+-----------------+---------+
+| Vref | Pin | Bank # / Vref # | Load(s) |
++------+-----+-----------------+---------+
++------+-----+-----------------+---------+
+
+Pinout by Pin Number:
++----------+-------------------------------+------------+---------------+-------+----------------+-----------+-----------+
+| Pin/Bank | Pin Info                      | Preference | Buffer Type   | Site  | Dual Function  | PG Enable | BC Enable |
++----------+-------------------------------+------------+---------------+-------+----------------+-----------+-----------+
+| A1/0     | o_CLK_DB2000_2_2_OE_N         | LOCATED    | LVCMOS33_OUT  | PT9B  |                |           |           |
+| A2/0     | i_SW_1                        | LOCATED    | LVCMOS33_IN   | PT10B |                |           |           |
+| A3/0     | i_SW_3                        | LOCATED    | LVCMOS33_IN   | PT11B |                |           |           |
+| A4/0     | i_SW_5                        | LOCATED    | LVCMOS33_IN   | PT12B |                |           |           |
+| A5/0     | i_SW_7                        | LOCATED    | LVCMOS33_IN   | PT13B |                |           |           |
+| A6/0     | o_P0_I2C5_9617_EN             | LOCATED    | LVCMOS33_OUT  | PT14B |                |           |           |
+| A7/0     |     unused, PULL:DOWN         |            |               | PT15B |                |           |           |
+| A8/0     | o_P0_MCIOP2C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PT16B |                |           |           |
+| A9/0     | o_SW_BIOS_SPI_OE              | LOCATED    | LVCMOS33_OUT  | PT17B |                |           |           |
+| A10/0    | o_SW_BIOS_FLASH_SPI_S_R       | LOCATED    | LVCMOS33_OUT  | PT18B | PCLKC0_1       |           |           |
+| A11/0    | o_BIOS_FLASH_RESET_R_N        | LOCATED    | LVCMOS33_OUT  | PT21B |                |           |           |
+| A12/0    | o_SW_BIOS_QSPI_S_R            | LOCATED    | LVCMOS33_OUT  | PT22A |                |           |           |
+| A13/0    | o_CLK_GEN_INTR_N_R            | LOCATED    | LVCMOS33_OUT  | PT25A |                |           |           |
+| A14/0    | o_CLK_GEN_RST_N_R             | LOCATED    | LVCMOS33_OUT  | PT26A |                |           |           |
+| A15/0    | o_CLK_GEN_OE_N_R              | LOCATED    | LVCMOS33_OUT  | PT27A |                |           |           |
+| A16/0    | o_CLK_GEN_FDEC_R              | LOCATED    | LVCMOS33_OUT  | PT28A |                |           |           |
+| A17/0    | o_CLK_GEN_I2C_SEL_R           | LOCATED    | LVCMOS33_OUT  | PT32A |                |           |           |
+| A18/0    | i_I2C2_PAL2_SCL               | LOCATED    | LVCMOS33_IN   | PT34A |                |           |           |
+| A19/0    | i_CPLD2_DONE                  | LOCATED    | LVCMOS33_IN   | PT36D | DONE           |           |           |
+| A20/0    | o_RST_I2C3_MUX_N_R            | LOCATED    | LVCMOS33_OUT  | PT36B |                |           |           |
+| B1/0     | o_RST_I2C1_MUX_N_R            | LOCATED    | LVCMOS33_OUT  | PT9A  |                |           |           |
+| B2/0     | o_P1_MCIOP1A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PT10A |                |           |           |
+| B3/0     |     unused, PULL:DOWN         |            |               | PT11A |                |           |           |
+| B4/0     | i_SW_4                        | LOCATED    | LVCMOS33_IN   | PT12A |                |           |           |
+| B5/0     | i_SW_6                        | LOCATED    | LVCMOS33_IN   | PT13A |                |           |           |
+| B6/0     | i_SW_8                        | LOCATED    | LVCMOS33_IN   | PT14A |                |           |           |
+| B7/0     |     unused, PULL:DOWN         |            |               | PT15A |                |           |           |
+| B8/0     | io_P0_MCIOP2C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PT16A |                |           |           |
+| B9/0     | i_HDR_PAL2_N                  | LOCATED    | LVCMOS33_IN   | PT17A |                |           |           |
+| B10/0    |     unused, PULL:DOWN         |            |               | PT18A | PCLKT0_1       |           |           |
+| B11/0    |     unused, PULL:DOWN         |            |               | PT21A |                |           |           |
+| B12/0    | i_SMB_CPU0_ALERT_N_R          | LOCATED    | LVCMOS33_IN   | PT22B |                |           |           |
+| B13/0    |     unused, PULL:DOWN         |            |               | PT25B |                |           |           |
+| B14/0    |     unused, PULL:DOWN         |            |               | PT26B |                |           |           |
+| B15/0    |     unused, PULL:DOWN         |            |               | PT27B |                |           |           |
+| B16/0    | o_SW_QSPI_OE_R                | LOCATED    | LVCMOS33_OUT  | PT28B |                |           |           |
+| B17/0    | o_RST_I2C2_MUX_N_R            | LOCATED    | LVCMOS33_OUT  | PT32B |                |           |           |
+| B18/0    | io_I2C2_PAL2_SDA              | LOCATED    | LVCMOS33_BIDI | PT34B |                |           |           |
+| B19/0    | io_P0_MCIOG3C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PT36A |                |           |           |
+| B20/1    | i_PAL_PE_WAKE_N               | LOCATED    | LVCMOS33_IN   | PR4A  |                |           |           |
+| C1/5     | i_PCA_REVISION_2              | LOCATED    | LVCMOS33_IN   | PL3B  | L_GPLLC_FB     |           |           |
+| C2/5     | i_P1_MCIOP1A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL3A  | L_GPLLT_FB     |           |           |
+| C3/5     | i_P1_MCIOP1A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL2B  |                |           |           |
+| C4/5     | i_P1_MCIOP0C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL2A  |                |           |           |
+| C6/0     | i_P1_MCIOP0A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PT12C |                |           |           |
+| C7/0     | Reserved: sysCONFIG           |            |               | PT14D | TDI            |           |           |
+| C8/0     |     unused, PULL:DOWN         |            |               | PT16D |                |           |           |
+| C9/0     | Reserved: sysCONFIG           |            |               | PT17C | TCK            |           |           |
+| C10/0    | i_P0_MCIOP2C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PT21D |                |           |           |
+| C11/0    | io_I2C2_2_UPDATE_SCL          |            | LVCMOS33_BIDI | PT22C | SCL/PCLKT0_0   |           |           |
+| C12/0    | i_P0_MCIOG3A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PT26D |                |           |           |
+| C13/0    | o_CPLD2_JTAGEN                | LOCATED    | LVCMOS33_OUT  | PT27C | JTAGENB        |           |           |
+| C14/0    | i_P0_MCIOG3C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PT32C |                |           |           |
+| C15/0    | o_P0_SPI_TPM_CS_N_3V3         | LOCATED    | LVCMOS33_OUT  | PT33A |                |           |           |
+| C16/0    | i_LEAKAGE_DET_DO_N            | LOCATED    | LVCMOS33_IN   | PT33B |                |           |           |
+| C17/0    | i_CPLD2_INIT_N                | LOCATED    | LVCMOS33_IN   | PT36C | INITN          |           |           |
+| C18/1    | o_P0_MCIOG3C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PR2B  | R_GPLLC_FB/DQ0 |           |           |
+| C19/1    | i_P0_MCIOG3C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PR3A  | R_GPLLT_IN/DQ0 |           |           |
+| C20/1    | o_LED2_N                      | LOCATED    | LVCMOS33_OUT  | PR4B  |                |           |           |
+| D1/5     | i_PCA_REVISION_1              | LOCATED    | LVCMOS33_IN   | PL4B  | L_GPLLC_IN     |           |           |
+| D2/5     | i_P1_MCIOP1A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL4A  | L_GPLLT_IN     |           |           |
+| D5/0     | io_P1_MCIOP0C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PT10D |                |           |           |
+| D6/0     | i_P0_MCIOG3C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PT11C |                |           |           |
+| D7/0     | i_P0_MCIOP2C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PT12D |                |           |           |
+| D8/0     | i_P0_MCIOP2C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PT16C |                |           |           |
+| D9/0     | Reserved: sysCONFIG           |            |               | PT17D | TMS            |           |           |
+| D10/0    | i_P0_MCIOP2C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PT21C |                |           |           |
+| D11/0    | io_I2C2_2_UPDATE_SDA          |            | LVCMOS33_BIDI | PT22D | SDA/PCLKC0_0   |           |           |
+| D12/0    | o_P0_MCIOG3A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PT26C |                |           |           |
+| D13/0    | i_CPLD2_PROGRAM_N             | LOCATED    | LVCMOS33_IN   | PT27D | PROGRAMN       |           |           |
+| D14/0    | i_LEAKAGE_PRSNT_N             | LOCATED    | LVCMOS33_IN   | PT32D |                |           |           |
+| D15/0    |     unused, PULL:DOWN         |            |               | PT34D |                |           |           |
+| D16/0    | i_PCH_INTRUDER_CABLE_INST_R_N | LOCATED    | LVCMOS33_IN   | PT35B |                |           |           |
+| D17/1    | o_P0_MCIOG3C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PR2A  | R_GPLLT_FB/DQ0 |           |           |
+| D18/1    | o_P0_MCIOG3A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PR3D  |                |           |           |
+| D19/1    | i_P0_MCIOG3C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PR5A  | DQ0            |           |           |
+| D20/1    | o_LED3_N                      | LOCATED    | LVCMOS33_OUT  | PR5C  |                |           |           |
+| E1/5     | i_PCA_REVISION_0              | LOCATED    | LVCMOS33_IN   | PL6B  | PCLKC5_0       |           |           |
+| E2/5     | io_P1_MCIOP1C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PL6A  | PCLKT5_0       |           |           |
+| E3/5     | o_P1_MCIOP1A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PL3D  |                |           |           |
+| E4/5     | i_P1_MCIOP0C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL3C  |                |           |           |
+| E6/0     | i_P0_MCIOP2C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PT10C |                |           |           |
+| E7/0     | i_P1_MCIOP3C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PT11D |                |           |           |
+| E8/0     | Reserved: sysCONFIG           |            |               | PT14C | TDO            |           |           |
+| E14/0    | i_PAL_SLIMSAS1_PRSNT_N        | LOCATED    | LVCMOS33_IN   | PT34C |                |           |           |
+| E15/0    |     unused, PULL:DOWN         |            |               | PT35A |                |           |           |
+| E17/1    | i_P0_MCIOG3A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR3B  | R_GPLLC_IN/DQ0 |           |           |
+| E19/1    | i_P0_MCIOG3C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR5D  |                |           |           |
+| E20/1    | o_LED4_N                      | LOCATED    | LVCMOS33_OUT  | PR6D  |                |           |           |
+| F1/5     | i_PCB_REVISION_2              | LOCATED    | LVCMOS33_IN   | PL6D  |                |           |           |
+| F2/5     | o_P1_MCIOP1C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PL6C  |                |           |           |
+| F3/5     | o_P1_MCIOP1A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL5B  |                |           |           |
+| F4/5     | i_P1_MCIOP1C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL5A  |                |           |           |
+| F5/5     | i_PAL_TMP2_ALERT_N            | LOCATED    | LVCMOS33_IN   | PL4C  |                |           |           |
+| F6/5     | o_P0_MCIOP2C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL2C  |                |           |           |
+| F7/0     | i_PAL_TMP4_ALERT_N            | LOCATED    | LVCMOS33_IN   | PT9D  |                |           |           |
+| F8/0     | i_P1_MCIOP3A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PT13D |                |           |           |
+| F9/0     | o_P0_MCIOP2C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PT15D |                |           |           |
+| F10/0    | i_PAL_TMP3_ALERT_N            | LOCATED    | LVCMOS33_IN   | PT18D |                |           |           |
+| F11/0    | o_P0_MCIOG3C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PT25D |                |           |           |
+| F12/0    | i_PAL_PCH_INTRUDER            | LOCATED    | LVCMOS33_IN   | PT28D |                |           |           |
+| F13/0    |     unused, PULL:DOWN         |            |               | PT33D |                |           |           |
+| F14/0    | o_SATA1_RSV                   | LOCATED    | LVCMOS33_OUT  | PT35D |                |           |           |
+| F15/1    |     unused, PULL:DOWN         |            |               | PR2C  |                |           |           |
+| F16/1    | i_PAL_NODE1_TYPE              | LOCATED    | LVCMOS33_IN   | PR3C  |                |           |           |
+| F17/1    | i_BREAK_DET_DO_N              | LOCATED    | LVCMOS33_IN   | PR5B  | DQ0            |           |           |
+| F18/1    | i_P0_MCIOG3A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PR6B  |                |           |           |
+| F19/1    | io_P0_MCIOG3A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PR7A  | DQ0            |           |           |
+| F20/1    | o_LED8_N                      | LOCATED    | LVCMOS33_OUT  | PR7B  | DQ0            |           |           |
+| G1/5     | i_PCB_REVISION_1              | LOCATED    | LVCMOS33_IN   | PL8B  |                |           |           |
+| G2/5     | o_P1_MCIOP1C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL8A  |                |           |           |
+| G3/5     | o_P1_MCIOP2A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PL7B  |                |           |           |
+| G4/5     | i_P1_MCIOP1C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL7A  |                |           |           |
+| G5/5     | o_P1_MCIOP4A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL4D  |                |           |           |
+| G6/5     |     unused, PULL:DOWN         |            |               | PL2D  |                |           |           |
+| G7/0     |     unused, PULL:DOWN         |            |               | PT9C  |                |           |           |
+| G8/0     |     unused, PULL:DOWN         |            |               | PT13C |                |           |           |
+| G9/0     | i_PWRGD_SYS_PWROK_R           | LOCATED    | LVCMOS33_IN   | PT15C |                |           |           |
+| G10/0    | i_JTAG_BMC_TRST_R             | LOCATED    | LVCMOS33_IN   | PT18C |                |           |           |
+| G11/0    | i_PAL_TMP1_ALERT_N            | LOCATED    | LVCMOS33_IN   | PT25C |                |           |           |
+| G12/0    |     unused, PULL:DOWN         |            |               | PT28C |                |           |           |
+| G13/0    |     unused, PULL:DOWN         |            |               | PT33C |                |           |           |
+| G14/0    |     unused, PULL:DOWN         |            |               | PT35C |                |           |           |
+| G15/1    |     unused, PULL:DOWN         |            |               | PR2D  |                |           |           |
+| G16/1    |     unused, PULL:DOWN         |            |               | PR6A  |                |           |           |
+| G17/1    | i_P0_MCIOG3A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PR6C  |                |           |           |
+| G19/1    | i_P0_MCIOG3A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PR8A  |                |           |           |
+| G20/1    | o_LED7_N                      | LOCATED    | LVCMOS33_OUT  | PR8D  |                |           |           |
+| H1/5     | i_PCB_REVISION_0              | LOCATED    | LVCMOS33_IN   | PL9B  |                |           |           |
+| H2/5     | i_P1_MCIOP2A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL9A  |                |           |           |
+| H3/5     | io_P1_MCIOP2A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PL7C  |                |           |           |
+| H4/5     | o_P1_MCIOP1C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL7D  |                |           |           |
+| H6/5     | i_P1_MCIOP0A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL5C  |                |           |           |
+| H7/5     | o_P0_MCIOP4A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL5D  |                |           |           |
+| H14/1    |     unused, PULL:DOWN         |            |               | PR4C  |                |           |           |
+| H15/1    |     unused, PULL:DOWN         |            |               | PR4D  |                |           |           |
+| H16/1    |     unused, PULL:DOWN         |            |               | PR8C  |                |           |           |
+| H17/1    |     unused, PULL:DOWN         |            |               | PR8B  |                |           |           |
+| H18/1    | o_P0_MCIOG3A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PR9A  | DQ0            |           |           |
+| H19/1    | o_PAL_SPI1_BMC_HOLD           | LOCATED    | LVCMOS33_OUT  | PR9B  | DQ0            |           |           |
+| H20/1    | o_LED6_N                      | LOCATED    | LVCMOS33_OUT  | PR9D  |                |           |           |
+| J1/4     | i_BOARD_ID3                   | LOCATED    | LVCMOS33_IN   | PL10B |                |           |           |
+| J2/4     | o_P1_MCIOP2A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL10A |                |           |           |
+| J3/5     | i_P1_MCIOP2A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PL9D  |                |           |           |
+| J4/5     | io_P1_MCIOP1A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PL9C  |                |           |           |
+| J5/5     | i_LEAKAGE_PRSNT1_N            | LOCATED    | LVCMOS33_IN   | PL8D  |                |           |           |
+| J6/5     | i_BREAK_DET1_DO_N             | LOCATED    | LVCMOS33_IN   | PL8C  |                |           |           |
+| J14/1    |     unused, PULL:DOWN         |            |               | PR7C  |                |           |           |
+| J15/1    |     unused, PULL:DOWN         |            |               | PR7D  |                |           |           |
+| J16/1    | o_PAL_SPI_BIOS_UPDATA_EN      | LOCATED    | LVCMOS33_OUT  | PR10B |                |           |           |
+| J17/1    |     unused, PULL:DOWN         |            |               | PR9C  |                |           |           |
+| J18/1    | i_P0_MCIOP3A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR10A |                |           |           |
+| J19/1    | i_PAL_P12V_CPU1_DIMM_GOK      | LOCATED    | LVCMOS33_IN   | PR11A | DQS0           |           |           |
+| J20/1    | o_LED5_N                      | LOCATED    | LVCMOS33_OUT  | PR11B | DQS0N          |           |           |
+| K1/4     | i_BOARD_ID2                   | LOCATED    | LVCMOS33_IN   | PL11B |                |           |           |
+| K2/4     | o_P1_MCIOP2C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PL11A |                |           |           |
+| K4/4     | i_P1_MCIOP2C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL10D |                |           |           |
+| K5/4     | io_P1_MCIOP2C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PL10C |                |           |           |
+| K6/4     | i_P1_MCIOP0C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL11C |                |           |           |
+| K7/4     | i_LEAKAGE_DET1_DO_N           | LOCATED    | LVCMOS33_IN   | PL11D |                |           |           |
+| K14/1    |     unused, PULL:DOWN         |            |               | PR10C |                |           |           |
+| K15/1    |     unused, PULL:DOWN         |            |               | PR10D |                |           |           |
+| K16/1    | i_PAL_P12V_CPU1_DIMM_OC       | LOCATED    | LVCMOS33_IN   | PR12C |                |           |           |
+| K17/1    | o_P0_MCIOP2A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PR11C |                |           |           |
+| K18/1    | i_CPLD2_HOLD_N_R              | LOCATED    | LVCMOS33_IN   | PR11D |                |           |           |
+| K19/1    | i_P0_MCIOP3A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR12A | PCLKT1_0/DQ0   |           |           |
+| K20/1    | o_LED1_N                      | LOCATED    | LVCMOS33_OUT  | PR12B | PCLKC1_0/DQ0   |           |           |
+| L1/4     | i_BOARD_ID1                   | LOCATED    | LVCMOS33_IN   | PL12A | PCLKT4_0       |           |           |
+| L2/4     | i_P1_MCIOP2C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PL12B | PCLKC4_0       |           |           |
+| L3/4     | i_P1_MCIOP3A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL12C |                |           |           |
+| L4/4     | o_P1_MCIOP2C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL12D |                |           |           |
+| L5/4     | i_P1_MCIOP4A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL16A |                |           |           |
+| L6/4     | i_P1_MCIOP1C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PL16C |                |           |           |
+| L7/4     | i_P1_MCIOP1C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL16D |                |           |           |
+| L14/1    | io_P0_MCIOP2A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PR15C |                |           |           |
+| L15/1    | o_PCIE_SATA_WAKE_R_N          | LOCATED    | LVCMOS33_OUT  | PR15D |                |           |           |
+| L16/1    | o_P12V_DISCHARGE_R            | LOCATED    | LVCMOS33_OUT  | PR16C |                |           |           |
+| L17/1    | i_P0_MCIOP3A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PR12D |                |           |           |
+| L19/1    | i_CPLD_SGPIO1_LD_N            | LOCATED    | LVCMOS33_IN   | PR15A |                |           |           |
+| L20/1    | i_CPLD_SGPIO0_CLK             | LOCATED    | LVCMOS33_IN   | PR15B |                |           |           |
+| M1/4     | o_SMB_PEHP_CPU1_OCP_ALERT     | LOCATED    | LVCMOS33_OUT  | PL15A |                |           |           |
+| M2/4     | o_P1_MCIOP3A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL15B |                |           |           |
+| M3/4     | i_P1_MCIOP3A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL15C |                |           |           |
+| M4/4     | i_P1_MCIOP1A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL15D |                |           |           |
+| M5/4     | i_P1_MCIOP1C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL16B |                |           |           |
+| M6/3     | i_P1_MCIOP0C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PL18C |                |           |           |
+| M7/3     | i_P1_MCIOG1A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL18D |                |           |           |
+| M14/1    |     unused, PULL:DOWN         |            |               | PR19D | DQ1            |           |           |
+| M15/1    | o_M2_GPIO6_R                  | LOCATED    | LVCMOS33_OUT  | PR19C | DQ1            |           |           |
+| M16/1    | o_M2_GPIO7_R                  | LOCATED    | LVCMOS33_OUT  | PR17C |                |           |           |
+| M17/1    | o_PAL_P12V_CPU1_DIMM_ON       | LOCATED    | LVCMOS33_OUT  | PR17A | DQ1            |           |           |
+| M18/1    | o_P0_MCIOP3A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PR16D |                |           |           |
+| M19/1    | i_CPLD_SGPIO0_MOSI            | LOCATED    | LVCMOS33_IN   | PR16B | DQS1N          |           |           |
+| M20/1    | i_CPLD_SGPIO0_LD_N            | LOCATED    | LVCMOS33_IN   | PR16A | DQS1           |           |           |
+| N1/4     | i_BOARD_ID0                   | LOCATED    | LVCMOS33_IN   | PL17A |                |           |           |
+| N2/4     | i_P1_MCIOP3A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL17B |                |           |           |
+| N3/3     | i_P1_MCIOP3C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL18A |                |           |           |
+| N4/3     | i_P1_MCIOP1A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PL18B |                |           |           |
+| N5/3     | o_P1_MCIOG1C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PL21C |                |           |           |
+| N6/3     | o_P1_MCIOG1C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL21D |                |           |           |
+| N14/1    | o_P1_MCIOP0C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PR23D |                |           |           |
+| N15/1    | i_P1_MCIOG1A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PR23C |                |           |           |
+| N16/1    | o_P0_MCIOP2A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PR21A | DQ1            |           |           |
+| N17/1    | i_P0_MCIOP3C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR18B | DQ1            |           |           |
+| N18/1    | i_P0_MCIOP3C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PR18A | DQ1            |           |           |
+| N19/1    |     unused, PULL:DOWN         |            |               | PR17D |                |           |           |
+| N20/1    | i_CPLD_SGPIO1_CLK             | LOCATED    | LVCMOS33_IN   | PR17B | DQ1            |           |           |
+| P1/4     | o_CLK_DB2000_2_1_OE_N         | LOCATED    | LVCMOS33_OUT  | PL17C |                |           |           |
+| P2/4     | i_P1_MCIOP3C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL17D |                |           |           |
+| P3/3     | o_P1_MCIOP3C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL19A |                |           |           |
+| P4/3     | i_P1_MCIOP0C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL19B |                |           |           |
+| P5/3     | i_P1_MCIOG1C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL24C |                |           |           |
+| P6/3     | o_P1_MCIOG1C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PL24D |                |           |           |
+| P7/2     |     unused, PULL:DOWN         |            |               | PB6C  |                |           |           |
+| P8/2     | o_P1_MCIOG1A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB9C  |                |           |           |
+| P9/2     | i_P1_MCIOG1A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB12C |                |           |           |
+| P10/2    | i_P0_MCIOP3A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB16C |                |           |           |
+| P11/2    | i_P0_MCIOP3A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB23C |                |           |           |
+| P12/2    | i_P0_MCIOP2A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB29C |                |           |           |
+| P13/2    | o_P1_MCIOP0C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB32C |                |           |           |
+| P14/2    | o_P1_MCIOP0C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB37C |                |           |           |
+| P15/1    | i_P1_MCIOG1A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR24C |                |           |           |
+| P16/1    | i_P0_MCIOP2A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PR23B | DQ1            |           |           |
+| P17/1    | io_P0_MCIOP3A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PR22B |                |           |           |
+| P18/1    | o_P0_MCIOP3C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PR19A |                |           |           |
+| P19/1    |     unused, PULL:DOWN         |            |               | PR18D |                |           |           |
+| P20/1    | i_CPLD_SGPIO1_MOSI            | LOCATED    | LVCMOS33_IN   | PR18C |                |           |           |
+| R1/3     | i_P1_MCIOP3C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL19C |                |           |           |
+| R2/3     | i_P1_MCIOP2A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL19D |                |           |           |
+| R3/3     | i_P1_MCIOP0A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL22C |                |           |           |
+| R4/3     | i_P1_MCIOP0A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL22D |                |           |           |
+| R5/3     | i_P1_MCIOG1C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL25B |                |           |           |
+| R6/2     | i_P1_MCIOG1C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PB4C  |                |           |           |
+| R7/2     | o_P1_MCIOP0A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB6D  |                |           |           |
+| R8/2     | i_P0_MCIOP2A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PB9D  |                |           |           |
+| R9/2     | io_P1_MCIOG1C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB12D |                |           |           |
+| R10/2    | i_P0_MCIOP3C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB16D |                |           |           |
+| R11/2    | o_P0_MCIOP2A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB23D |                |           |           |
+| R12/2    | o_P1_MCIOG1A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB29D |                |           |           |
+| R13/2    | i_P0_MCIOP2A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB32D |                |           |           |
+| R14/2    | i_P1_MCIOG1C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB37D |                |           |           |
+| R15/2    | i_P1_MCIOG1C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB38D |                |           |           |
+| R16/1    | i_P0_MCIOP2A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PR24D |                |           |           |
+| R17/1    | o_P0_MCIOP3A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PR24A | DQ1            |           |           |
+| R19/1    |     unused, PULL:DOWN         |            |               | PR21B | DQ1            |           |           |
+| R20/1    | o_CPLD_SGPIO0_MISO            | LOCATED    | LVCMOS33_OUT  | PR19B |                |           |           |
+| T1/3     |     unused, PULL:DOWN         |            |               | PL21A |                |           |           |
+| T2/3     |     unused, PULL:DOWN         |            |               | PL21B |                |           |           |
+| T3/3     | o_P1_MCIOP0A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL23A |                |           |           |
+| T4/3     | o_P1_MCIOP0A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PL23B |                |           |           |
+| T5/3     | io_P1_MCIOP0A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PL25A |                |           |           |
+| T6/2     | i_P1_MCIOP0A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB4D  |                |           |           |
+| T7/2     | o_P0_MCIOP0A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB10C |                |           |           |
+| T8/2     | i_P1_MCIOP3A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB10D |                |           |           |
+| T9/2     | i_P0_MCIOP3C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB15D |                |           |           |
+| T10/2    | i_P1_MCIOG1A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB21D |                |           |           |
+| T11/2    | o_P1_MCIOP3C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB28D |                |           |           |
+| T12/2    | o_P1_MCIOG1A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB31C |                |           |           |
+| T13/2    | io_P1_MCIOG1A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB31D |                |           |           |
+| T14/2    |     unused, PULL:DOWN         |            |               | PB35C |                |           |           |
+| T16/2    | io_P0_MCIOP3C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB38C |                |           |           |
+| T17/1    | i_P0_MCIOP3C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR25B |                |           |           |
+| T18/1    | o_P0_MCIOP3A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PR22C |                |           |           |
+| T19/1    | o_CPLD_SGPIO1_MISO            | LOCATED    | LVCMOS33_OUT  | PR21D |                |           |           |
+| T20/1    | o_CLK_GEN_FINC_R              | LOCATED    | LVCMOS33_OUT  | PR21C |                |           |           |
+| U1/3     | i_CLK_PAL2_IN_25M             | LOCATED    | LVCMOS33_IN   | PL22A | PCLKT3_0       |           |           |
+| U2/3     |     unused, PULL:DOWN         |            |               | PL22B | PCLKC3_0       |           |           |
+| U4/3     | i_P1_MCIOP2C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PL25C |                |           |           |
+| U5/3     | i_P1_MCIOP2C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL25D |                |           |           |
+| U6/2     | i_P1_MCIOP2C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB7D  |                |           |           |
+| U9/2     | o_P1_MCIOP3A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB13D |                |           |           |
+| U10/2    | io_P1_MCIOP3C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB18C |                |           |           |
+| U11/2    | o_P1_MCIOP3C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB21C |                |           |           |
+| U12/2    | i_PAL_P12V_CPU0_DIMM_GOK      | LOCATED    | LVCMOS33_IN   | PB28C |                |           |           |
+| U14/2    | o_P0_MCIOP3C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB34B |                |           |           |
+| U15/2    | o_P0_MCIOP3C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB35D |                |           |           |
+| U17/1    | o_P0_MCIOP0A_CLK              | LOCATED    | LVCMOS33_OUT  | PR25C |                |           |           |
+| U18/1    | o_P0_MCIOP0A_LD               | LOCATED    | LVCMOS33_OUT  | PR24B | DQ1            |           |           |
+| U19/1    |     unused, PULL:DOWN         |            |               | PR22D |                |           |           |
+| U20/1    | o_CLK_GEN_LOL_N_R             | LOCATED    | LVCMOS33_OUT  | PR22A |                |           |           |
+| V1/3     |     unused, PULL:DOWN         |            |               | PL23C |                |           |           |
+| V2/3     | i_P1_MCIOP2A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PL23D |                |           |           |
+| V3/3     | i_P1_MCIOP2A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PL24A |                |           |           |
+| V4/3     | o_P1_MCIOP2A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PL24B |                |           |           |
+| V6/2     | o_P1_MCIOP2C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB7C  |                |           |           |
+| V8/2     | io_P1_MCIOP3A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB13C |                |           |           |
+| V9/2     | o_P1_MCIOP3A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB15C |                |           |           |
+| V10/2    | i_P1_MCIOP3C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB18D |                |           |           |
+| V12/2    | o_PAL_P12V_CPU0_DIMM_ON       | LOCATED    | LVCMOS33_OUT  | PB26C |                |           |           |
+| V13/2    | i_PAL_P12V_CPU0_DIMM_OC       | LOCATED    | LVCMOS33_IN   | PB26D |                |           |           |
+| V14/2    |     unused, PULL:DOWN         |            |               | PB34A |                |           |           |
+| V15/2    |     unused, PULL:DOWN         |            |               | PB34C |                |           |           |
+| V16/2    | o_SMB_PEHP_CPU0_OCP_ALERT     | LOCATED    | LVCMOS33_OUT  | PB34D |                |           |           |
+| V17/1    | i_P0_MCIOP0C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PR25D |                |           |           |
+| V19/1    | o_PCIE_SATA_RST_N             | LOCATED    | LVCMOS33_OUT  | PR25A |                |           |           |
+| V20/1    |     unused, PULL:DOWN         |            |               | PR23A | DQ1            |           |           |
+| W1/2     | io_P0_MCIOP0A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB4A  |                |           |           |
+| W2/2     | i_P0_MCIOP0A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB6A  | CSSPIN         |           |           |
+| W3/2     | o_P0_MCIOP0A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB7A  |                |           |           |
+| W4/2     | i_P0_MCIOP0A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB9A  |                |           |           |
+| W5/2     | i_P0_MCIOP0A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB10A |                |           |           |
+| W6/2     | o_P0_MCIOP0C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB12A | MCLK/CCLK      |           |           |
+| W7/2     | i_P0_MCIOP0C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PB13A |                |           |           |
+| W8/2     | o_P0_MCIOP0C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB15A |                |           |           |
+| W9/2     | i_P0_MCIOP0C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB16A | PCLKT2_0       |           |           |
+| W10/2    | o_P0_MCIOP1A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB18B |                |           |           |
+| W11/2    | i_P0_MCIOP1A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PB21B |                |           |           |
+| W12/2    | o_P0_MCIOP1A_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB23B | PCLKC2_1       |           |           |
+| W13/2    | i_P0_MCIOP1A_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB26B |                |           |           |
+| W14/2    | io_P0_MCIOP1C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB28B |                |           |           |
+| W15/2    | i_P0_MCIOP1C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB29B |                |           |           |
+| W16/2    | o_P0_MCIOP1C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB31B |                |           |           |
+| W17/2    |     unused, PULL:DOWN         |            |               | PB32B |                |           |           |
+| W18/2    |     unused, PULL:DOWN         |            |               | PB35B |                |           |           |
+| W19/2    |     unused, PULL:DOWN         |            |               | PB37B |                |           |           |
+| W20/2    | o_CPLD1_CPLD2_RSV1_R          | LOCATED    | LVCMOS33_OUT  | PB38B | SI/SISPI       |           |           |
+| Y1/2     | o_P0_MCIOP0A_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB4B  |                |           |           |
+| Y2/2     | i_P0_MCIOP0A_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PB6B  |                |           |           |
+| Y3/2     | i_P0_MCIOP0A_DATAIN           | LOCATED    | LVCMOS33_IN   | PB7B  |                |           |           |
+| Y4/2     | i_P0_MCIOP0A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB9B  |                |           |           |
+| Y5/2     | io_P0_MCIOP0C_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB10B |                |           |           |
+| Y6/2     | i_P0_MCIOP0C_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB12B | SO/SPISO       |           |           |
+| Y7/2     | o_P0_MCIOP0C_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB13B |                |           |           |
+| Y8/2     | i_P0_MCIOP0C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB15B |                |           |           |
+| Y9/2     | io_P0_MCIOP1A_PWR_EN_R        | LOCATED    | LVCMOS33_BIDI | PB16B | PCLKC2_0       |           |           |
+| Y10/2    | i_P0_MCIOP1A_CB_ID0_R         | LOCATED    | LVCMOS33_IN   | PB18A |                |           |           |
+| Y11/2    | o_P0_MCIOP1A_RSV_R            | LOCATED    | LVCMOS33_OUT  | PB21A |                |           |           |
+| Y12/2    | i_P0_MCIOP1A_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB23A | PCLKT2_1       |           |           |
+| Y13/2    | i_P0_MCIOP1A_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB26A |                |           |           |
+| Y14/2    | o_P0_MCIOP1C_GPU_THROTTLE_N_R | LOCATED    | LVCMOS33_OUT  | PB28A |                |           |           |
+| Y15/2    | i_P0_MCIOP1C_WAKE_N_R         | LOCATED    | LVCMOS33_IN   | PB29A |                |           |           |
+| Y16/2    | o_P0_MCIOP1C_PERST_N_R        | LOCATED    | LVCMOS33_OUT  | PB31A |                |           |           |
+| Y17/2    | i_P0_MCIOP1C_CB_ID1_R         | LOCATED    | LVCMOS33_IN   | PB32A |                |           |           |
+| Y18/2    | i_P0_MCIOP1C_NVME0_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB35A |                |           |           |
+| Y19/2    | i_P0_MCIOP1C_NVME1_PRSNT_N_R  | LOCATED    | LVCMOS33_IN   | PB37A |                |           |           |
+| Y20/2    | i_CPLD2_SN                    | LOCATED    | LVCMOS33_IN   | PB38A | SN             |           |           |
++----------+-------------------------------+------------+---------------+-------+----------------+-----------+-----------+
+
+sysCONFIG Pins:
++----------+-------------------------------------+--------------------+----------+---------------+-------------------+
+| Pad Name | sysCONFIG Pin Name                  | sysCONFIG Settings | Pin/Bank | Buffer Type   | Config Pull Mode  |
++----------+-------------------------------------+--------------------+----------+---------------+-------------------+
+| PT22D    | SDA/IO3/MD3/ATB_FORCE/PCLKC0_0/TDOT | I2C_PORT=ENABLE    | D11/0    | LVCMOS33_BIDI | NO pull up/down   |
+| PT22C    | SCL/IO2/MD2/ATB_SENSE/PCLKT0_0      | I2C_PORT=ENABLE    | C11/0    | LVCMOS33_BIDI | NO pull up/down   |
+| PT17D    | TMS                                 | JTAG_PORT=ENABLE   | D9/0     |               | PULLUP            |
+| PT17C    | TCK/TEST_CLK                        | JTAG_PORT=ENABLE   | C9/0     |               | NO pull up/down   |
+| PT14D    | TDI/MD7                             | JTAG_PORT=ENABLE   | C7/0     |               | PULLUP            |
+| PT14C    | TDO                                 | JTAG_PORT=ENABLE   | E8/0     |               | PULLUP            |
++----------+-------------------------------------+--------------------+----------+---------------+-------------------+
+
+Dedicated sysCONFIG Pins:
+
+
+List of All Pins' Locate Preferences Based on Final Placement After PAR 
+to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
+
+LOCATE  COMP  "i_BOARD_ID0"  SITE  "N1";
+LOCATE  COMP  "i_BOARD_ID1"  SITE  "L1";
+LOCATE  COMP  "i_BOARD_ID2"  SITE  "K1";
+LOCATE  COMP  "i_BOARD_ID3"  SITE  "J1";
+LOCATE  COMP  "i_BREAK_DET1_DO_N"  SITE  "J6";
+LOCATE  COMP  "i_BREAK_DET_DO_N"  SITE  "F17";
+LOCATE  COMP  "i_CLK_PAL2_IN_25M"  SITE  "U1";
+LOCATE  COMP  "i_CPLD2_DONE"  SITE  "A19";
+LOCATE  COMP  "i_CPLD2_HOLD_N_R"  SITE  "K18";
+LOCATE  COMP  "i_CPLD2_INIT_N"  SITE  "C17";
+LOCATE  COMP  "i_CPLD2_PROGRAM_N"  SITE  "D13";
+LOCATE  COMP  "i_CPLD2_SN"  SITE  "Y20";
+LOCATE  COMP  "i_CPLD_SGPIO0_CLK"  SITE  "L20";
+LOCATE  COMP  "i_CPLD_SGPIO0_LD_N"  SITE  "M20";
+LOCATE  COMP  "i_CPLD_SGPIO0_MOSI"  SITE  "M19";
+LOCATE  COMP  "i_CPLD_SGPIO1_CLK"  SITE  "N20";
+LOCATE  COMP  "i_CPLD_SGPIO1_LD_N"  SITE  "L19";
+LOCATE  COMP  "i_CPLD_SGPIO1_MOSI"  SITE  "P20";
+LOCATE  COMP  "i_HDR_PAL2_N"  SITE  "B9";
+LOCATE  COMP  "i_I2C2_PAL2_SCL"  SITE  "A18";
+LOCATE  COMP  "i_JTAG_BMC_TRST_R"  SITE  "G10";
+LOCATE  COMP  "i_LEAKAGE_DET1_DO_N"  SITE  "K7";
+LOCATE  COMP  "i_LEAKAGE_DET_DO_N"  SITE  "C16";
+LOCATE  COMP  "i_LEAKAGE_PRSNT1_N"  SITE  "J5";
+LOCATE  COMP  "i_LEAKAGE_PRSNT_N"  SITE  "D14";
+LOCATE  COMP  "i_P0_MCIOG3A_CB_ID0_R"  SITE  "F18";
+LOCATE  COMP  "i_P0_MCIOG3A_CB_ID1_R"  SITE  "G17";
+LOCATE  COMP  "i_P0_MCIOG3A_NVME0_PRSNT_N_R"  SITE  "C12";
+LOCATE  COMP  "i_P0_MCIOG3A_NVME1_PRSNT_N_R"  SITE  "E17";
+LOCATE  COMP  "i_P0_MCIOG3A_WAKE_N_R"  SITE  "G19";
+LOCATE  COMP  "i_P0_MCIOG3C_CB_ID0_R"  SITE  "C19";
+LOCATE  COMP  "i_P0_MCIOG3C_CB_ID1_R"  SITE  "C14";
+LOCATE  COMP  "i_P0_MCIOG3C_NVME0_PRSNT_N_R"  SITE  "D6";
+LOCATE  COMP  "i_P0_MCIOG3C_NVME1_PRSNT_N_R"  SITE  "E19";
+LOCATE  COMP  "i_P0_MCIOG3C_WAKE_N_R"  SITE  "D19";
+LOCATE  COMP  "i_P0_MCIOP0A_CB_ID0_R"  SITE  "W2";
+LOCATE  COMP  "i_P0_MCIOP0A_CB_ID1_R"  SITE  "W4";
+LOCATE  COMP  "i_P0_MCIOP0A_DATAIN"  SITE  "Y3";
+LOCATE  COMP  "i_P0_MCIOP0A_NVME0_PRSNT_N_R"  SITE  "Y4";
+LOCATE  COMP  "i_P0_MCIOP0A_NVME1_PRSNT_N_R"  SITE  "W5";
+LOCATE  COMP  "i_P0_MCIOP0A_WAKE_N_R"  SITE  "Y2";
+LOCATE  COMP  "i_P0_MCIOP0C_CB_ID0_R"  SITE  "Y6";
+LOCATE  COMP  "i_P0_MCIOP0C_CB_ID1_R"  SITE  "Y8";
+LOCATE  COMP  "i_P0_MCIOP0C_NVME0_PRSNT_N_R"  SITE  "W9";
+LOCATE  COMP  "i_P0_MCIOP0C_NVME1_PRSNT_N_R"  SITE  "V17";
+LOCATE  COMP  "i_P0_MCIOP0C_WAKE_N_R"  SITE  "W7";
+LOCATE  COMP  "i_P0_MCIOP1A_CB_ID0_R"  SITE  "Y10";
+LOCATE  COMP  "i_P0_MCIOP1A_CB_ID1_R"  SITE  "W13";
+LOCATE  COMP  "i_P0_MCIOP1A_NVME0_PRSNT_N_R"  SITE  "Y13";
+LOCATE  COMP  "i_P0_MCIOP1A_NVME1_PRSNT_N_R"  SITE  "Y12";
+LOCATE  COMP  "i_P0_MCIOP1A_WAKE_N_R"  SITE  "W11";
+LOCATE  COMP  "i_P0_MCIOP1C_CB_ID0_R"  SITE  "W15";
+LOCATE  COMP  "i_P0_MCIOP1C_CB_ID1_R"  SITE  "Y17";
+LOCATE  COMP  "i_P0_MCIOP1C_NVME0_PRSNT_N_R"  SITE  "Y18";
+LOCATE  COMP  "i_P0_MCIOP1C_NVME1_PRSNT_N_R"  SITE  "Y19";
+LOCATE  COMP  "i_P0_MCIOP1C_WAKE_N_R"  SITE  "Y15";
+LOCATE  COMP  "i_P0_MCIOP2A_CB_ID0_R"  SITE  "R16";
+LOCATE  COMP  "i_P0_MCIOP2A_CB_ID1_R"  SITE  "P16";
+LOCATE  COMP  "i_P0_MCIOP2A_NVME0_PRSNT_N_R"  SITE  "R13";
+LOCATE  COMP  "i_P0_MCIOP2A_NVME1_PRSNT_N_R"  SITE  "P12";
+LOCATE  COMP  "i_P0_MCIOP2A_WAKE_N_R"  SITE  "R8";
+LOCATE  COMP  "i_P0_MCIOP2C_CB_ID0_R"  SITE  "D10";
+LOCATE  COMP  "i_P0_MCIOP2C_CB_ID1_R"  SITE  "C10";
+LOCATE  COMP  "i_P0_MCIOP2C_NVME0_PRSNT_N_R"  SITE  "E6";
+LOCATE  COMP  "i_P0_MCIOP2C_NVME1_PRSNT_N_R"  SITE  "D7";
+LOCATE  COMP  "i_P0_MCIOP2C_WAKE_N_R"  SITE  "D8";
+LOCATE  COMP  "i_P0_MCIOP3A_CB_ID0_R"  SITE  "P10";
+LOCATE  COMP  "i_P0_MCIOP3A_CB_ID1_R"  SITE  "P11";
+LOCATE  COMP  "i_P0_MCIOP3A_NVME0_PRSNT_N_R"  SITE  "J18";
+LOCATE  COMP  "i_P0_MCIOP3A_NVME1_PRSNT_N_R"  SITE  "K19";
+LOCATE  COMP  "i_P0_MCIOP3A_WAKE_N_R"  SITE  "L17";
+LOCATE  COMP  "i_P0_MCIOP3C_CB_ID0_R"  SITE  "R10";
+LOCATE  COMP  "i_P0_MCIOP3C_CB_ID1_R"  SITE  "T9";
+LOCATE  COMP  "i_P0_MCIOP3C_NVME0_PRSNT_N_R"  SITE  "N17";
+LOCATE  COMP  "i_P0_MCIOP3C_NVME1_PRSNT_N_R"  SITE  "T17";
+LOCATE  COMP  "i_P0_MCIOP3C_WAKE_N_R"  SITE  "N18";
+LOCATE  COMP  "i_P1_MCIOG1A_CB_ID0_R"  SITE  "N15";
+LOCATE  COMP  "i_P1_MCIOG1A_CB_ID1_R"  SITE  "P9";
+LOCATE  COMP  "i_P1_MCIOG1A_NVME0_PRSNT_N_R"  SITE  "P15";
+LOCATE  COMP  "i_P1_MCIOG1A_NVME1_PRSNT_N_R"  SITE  "T10";
+LOCATE  COMP  "i_P1_MCIOG1A_WAKE_N_R"  SITE  "M7";
+LOCATE  COMP  "i_P1_MCIOG1C_CB_ID0_R"  SITE  "R15";
+LOCATE  COMP  "i_P1_MCIOG1C_CB_ID1_R"  SITE  "R14";
+LOCATE  COMP  "i_P1_MCIOG1C_NVME0_PRSNT_N_R"  SITE  "R5";
+LOCATE  COMP  "i_P1_MCIOG1C_NVME1_PRSNT_N_R"  SITE  "P5";
+LOCATE  COMP  "i_P1_MCIOG1C_WAKE_N_R"  SITE  "R6";
+LOCATE  COMP  "i_P1_MCIOP0A_CB_ID0_R"  SITE  "H6";
+LOCATE  COMP  "i_P1_MCIOP0A_CB_ID1_R"  SITE  "C6";
+LOCATE  COMP  "i_P1_MCIOP0A_NVME0_PRSNT_N_R"  SITE  "T6";
+LOCATE  COMP  "i_P1_MCIOP0A_NVME1_PRSNT_N_R"  SITE  "R4";
+LOCATE  COMP  "i_P1_MCIOP0A_WAKE_N_R"  SITE  "R3";
+LOCATE  COMP  "i_P1_MCIOP0C_CB_ID0_R"  SITE  "P4";
+LOCATE  COMP  "i_P1_MCIOP0C_CB_ID1_R"  SITE  "M6";
+LOCATE  COMP  "i_P1_MCIOP0C_NVME0_PRSNT_N_R"  SITE  "K6";
+LOCATE  COMP  "i_P1_MCIOP0C_NVME1_PRSNT_N_R"  SITE  "C4";
+LOCATE  COMP  "i_P1_MCIOP0C_WAKE_N_R"  SITE  "E4";
+LOCATE  COMP  "i_P1_MCIOP1A_CB_ID0_R"  SITE  "M4";
+LOCATE  COMP  "i_P1_MCIOP1A_CB_ID1_R"  SITE  "N4";
+LOCATE  COMP  "i_P1_MCIOP1A_NVME0_PRSNT_N_R"  SITE  "D2";
+LOCATE  COMP  "i_P1_MCIOP1A_NVME1_PRSNT_N_R"  SITE  "C2";
+LOCATE  COMP  "i_P1_MCIOP1A_WAKE_N_R"  SITE  "C3";
+LOCATE  COMP  "i_P1_MCIOP1C_CB_ID0_R"  SITE  "L7";
+LOCATE  COMP  "i_P1_MCIOP1C_CB_ID1_R"  SITE  "L6";
+LOCATE  COMP  "i_P1_MCIOP1C_NVME0_PRSNT_N_R"  SITE  "M5";
+LOCATE  COMP  "i_P1_MCIOP1C_NVME1_PRSNT_N_R"  SITE  "G4";
+LOCATE  COMP  "i_P1_MCIOP1C_WAKE_N_R"  SITE  "F4";
+LOCATE  COMP  "i_P1_MCIOP2A_CB_ID0_R"  SITE  "V3";
+LOCATE  COMP  "i_P1_MCIOP2A_CB_ID1_R"  SITE  "J3";
+LOCATE  COMP  "i_P1_MCIOP2A_NVME0_PRSNT_N_R"  SITE  "H2";
+LOCATE  COMP  "i_P1_MCIOP2A_NVME1_PRSNT_N_R"  SITE  "R2";
+LOCATE  COMP  "i_P1_MCIOP2A_WAKE_N_R"  SITE  "V2";
+LOCATE  COMP  "i_P1_MCIOP2C_CB_ID0_R"  SITE  "U6";
+LOCATE  COMP  "i_P1_MCIOP2C_CB_ID1_R"  SITE  "L2";
+LOCATE  COMP  "i_P1_MCIOP2C_NVME0_PRSNT_N_R"  SITE  "K4";
+LOCATE  COMP  "i_P1_MCIOP2C_NVME1_PRSNT_N_R"  SITE  "U4";
+LOCATE  COMP  "i_P1_MCIOP2C_WAKE_N_R"  SITE  "U5";
+LOCATE  COMP  "i_P1_MCIOP3A_CB_ID0_R"  SITE  "N2";
+LOCATE  COMP  "i_P1_MCIOP3A_CB_ID1_R"  SITE  "T8";
+LOCATE  COMP  "i_P1_MCIOP3A_NVME0_PRSNT_N_R"  SITE  "F8";
+LOCATE  COMP  "i_P1_MCIOP3A_NVME1_PRSNT_N_R"  SITE  "L3";
+LOCATE  COMP  "i_P1_MCIOP3A_WAKE_N_R"  SITE  "M3";
+LOCATE  COMP  "i_P1_MCIOP3C_CB_ID0_R"  SITE  "R1";
+LOCATE  COMP  "i_P1_MCIOP3C_CB_ID1_R"  SITE  "V10";
+LOCATE  COMP  "i_P1_MCIOP3C_NVME0_PRSNT_N_R"  SITE  "E7";
+LOCATE  COMP  "i_P1_MCIOP3C_NVME1_PRSNT_N_R"  SITE  "N3";
+LOCATE  COMP  "i_P1_MCIOP3C_WAKE_N_R"  SITE  "P2";
+LOCATE  COMP  "i_P1_MCIOP4A_NVME0_PRSNT_N_R"  SITE  "L5";
+LOCATE  COMP  "i_PAL_NODE1_TYPE"  SITE  "F16";
+LOCATE  COMP  "i_PAL_P12V_CPU0_DIMM_GOK"  SITE  "U12";
+LOCATE  COMP  "i_PAL_P12V_CPU0_DIMM_OC"  SITE  "V13";
+LOCATE  COMP  "i_PAL_P12V_CPU1_DIMM_GOK"  SITE  "J19";
+LOCATE  COMP  "i_PAL_P12V_CPU1_DIMM_OC"  SITE  "K16";
+LOCATE  COMP  "i_PAL_PCH_INTRUDER"  SITE  "F12";
+LOCATE  COMP  "i_PAL_PE_WAKE_N"  SITE  "B20";
+LOCATE  COMP  "i_PAL_SLIMSAS1_PRSNT_N"  SITE  "E14";
+LOCATE  COMP  "i_PAL_TMP1_ALERT_N"  SITE  "G11";
+LOCATE  COMP  "i_PAL_TMP2_ALERT_N"  SITE  "F5";
+LOCATE  COMP  "i_PAL_TMP3_ALERT_N"  SITE  "F10";
+LOCATE  COMP  "i_PAL_TMP4_ALERT_N"  SITE  "F7";
+LOCATE  COMP  "i_PCA_REVISION_0"  SITE  "E1";
+LOCATE  COMP  "i_PCA_REVISION_1"  SITE  "D1";
+LOCATE  COMP  "i_PCA_REVISION_2"  SITE  "C1";
+LOCATE  COMP  "i_PCB_REVISION_0"  SITE  "H1";
+LOCATE  COMP  "i_PCB_REVISION_1"  SITE  "G1";
+LOCATE  COMP  "i_PCB_REVISION_2"  SITE  "F1";
+LOCATE  COMP  "i_PCH_INTRUDER_CABLE_INST_R_N"  SITE  "D16";
+LOCATE  COMP  "i_PWRGD_SYS_PWROK_R"  SITE  "G9";
+LOCATE  COMP  "i_SMB_CPU0_ALERT_N_R"  SITE  "B12";
+LOCATE  COMP  "i_SW_1"  SITE  "A2";
+LOCATE  COMP  "i_SW_3"  SITE  "A3";
+LOCATE  COMP  "i_SW_4"  SITE  "B4";
+LOCATE  COMP  "i_SW_5"  SITE  "A4";
+LOCATE  COMP  "i_SW_6"  SITE  "B5";
+LOCATE  COMP  "i_SW_7"  SITE  "A5";
+LOCATE  COMP  "i_SW_8"  SITE  "B6";
+LOCATE  COMP  "io_I2C2_2_UPDATE_SCL"  SITE  "C11";
+LOCATE  COMP  "io_I2C2_2_UPDATE_SDA"  SITE  "D11";
+LOCATE  COMP  "io_I2C2_PAL2_SDA"  SITE  "B18";
+LOCATE  COMP  "io_P0_MCIOG3A_PWR_EN_R"  SITE  "F19";
+LOCATE  COMP  "io_P0_MCIOG3C_PWR_EN_R"  SITE  "B19";
+LOCATE  COMP  "io_P0_MCIOP0A_PWR_EN_R"  SITE  "W1";
+LOCATE  COMP  "io_P0_MCIOP0C_PWR_EN_R"  SITE  "Y5";
+LOCATE  COMP  "io_P0_MCIOP1A_PWR_EN_R"  SITE  "Y9";
+LOCATE  COMP  "io_P0_MCIOP1C_PWR_EN_R"  SITE  "W14";
+LOCATE  COMP  "io_P0_MCIOP2A_PWR_EN_R"  SITE  "L14";
+LOCATE  COMP  "io_P0_MCIOP2C_PWR_EN_R"  SITE  "B8";
+LOCATE  COMP  "io_P0_MCIOP3A_PWR_EN_R"  SITE  "P17";
+LOCATE  COMP  "io_P0_MCIOP3C_PWR_EN_R"  SITE  "T16";
+LOCATE  COMP  "io_P1_MCIOG1A_PWR_EN_R"  SITE  "T13";
+LOCATE  COMP  "io_P1_MCIOG1C_PWR_EN_R"  SITE  "R9";
+LOCATE  COMP  "io_P1_MCIOP0A_PWR_EN_R"  SITE  "T5";
+LOCATE  COMP  "io_P1_MCIOP0C_PWR_EN_R"  SITE  "D5";
+LOCATE  COMP  "io_P1_MCIOP1A_PWR_EN_R"  SITE  "J4";
+LOCATE  COMP  "io_P1_MCIOP1C_PWR_EN_R"  SITE  "E2";
+LOCATE  COMP  "io_P1_MCIOP2A_PWR_EN_R"  SITE  "H3";
+LOCATE  COMP  "io_P1_MCIOP2C_PWR_EN_R"  SITE  "K5";
+LOCATE  COMP  "io_P1_MCIOP3A_PWR_EN_R"  SITE  "V8";
+LOCATE  COMP  "io_P1_MCIOP3C_PWR_EN_R"  SITE  "U10";
+LOCATE  COMP  "o_BIOS_FLASH_RESET_R_N"  SITE  "A11";
+LOCATE  COMP  "o_CLK_DB2000_2_1_OE_N"  SITE  "P1";
+LOCATE  COMP  "o_CLK_DB2000_2_2_OE_N"  SITE  "A1";
+LOCATE  COMP  "o_CLK_GEN_FDEC_R"  SITE  "A16";
+LOCATE  COMP  "o_CLK_GEN_FINC_R"  SITE  "T20";
+LOCATE  COMP  "o_CLK_GEN_I2C_SEL_R"  SITE  "A17";
+LOCATE  COMP  "o_CLK_GEN_INTR_N_R"  SITE  "A13";
+LOCATE  COMP  "o_CLK_GEN_LOL_N_R"  SITE  "U20";
+LOCATE  COMP  "o_CLK_GEN_OE_N_R"  SITE  "A15";
+LOCATE  COMP  "o_CLK_GEN_RST_N_R"  SITE  "A14";
+LOCATE  COMP  "o_CPLD1_CPLD2_RSV1_R"  SITE  "W20";
+LOCATE  COMP  "o_CPLD2_JTAGEN"  SITE  "C13";
+LOCATE  COMP  "o_CPLD_SGPIO0_MISO"  SITE  "R20";
+LOCATE  COMP  "o_CPLD_SGPIO1_MISO"  SITE  "T19";
+LOCATE  COMP  "o_LED1_N"  SITE  "K20";
+LOCATE  COMP  "o_LED2_N"  SITE  "C20";
+LOCATE  COMP  "o_LED3_N"  SITE  "D20";
+LOCATE  COMP  "o_LED4_N"  SITE  "E20";
+LOCATE  COMP  "o_LED5_N"  SITE  "J20";
+LOCATE  COMP  "o_LED6_N"  SITE  "H20";
+LOCATE  COMP  "o_LED7_N"  SITE  "G20";
+LOCATE  COMP  "o_LED8_N"  SITE  "F20";
+LOCATE  COMP  "o_M2_GPIO6_R"  SITE  "M15";
+LOCATE  COMP  "o_M2_GPIO7_R"  SITE  "M16";
+LOCATE  COMP  "o_P0_I2C5_9617_EN"  SITE  "A6";
+LOCATE  COMP  "o_P0_MCIOG3A_GPU_THROTTLE_N_R"  SITE  "D18";
+LOCATE  COMP  "o_P0_MCIOG3A_PERST_N_R"  SITE  "D12";
+LOCATE  COMP  "o_P0_MCIOG3A_RSV_R"  SITE  "H18";
+LOCATE  COMP  "o_P0_MCIOG3C_GPU_THROTTLE_N_R"  SITE  "D17";
+LOCATE  COMP  "o_P0_MCIOG3C_PERST_N_R"  SITE  "F11";
+LOCATE  COMP  "o_P0_MCIOG3C_RSV_R"  SITE  "C18";
+LOCATE  COMP  "o_P0_MCIOP0A_CLK"  SITE  "U17";
+LOCATE  COMP  "o_P0_MCIOP0A_GPU_THROTTLE_N_R"  SITE  "Y1";
+LOCATE  COMP  "o_P0_MCIOP0A_LD"  SITE  "U18";
+LOCATE  COMP  "o_P0_MCIOP0A_PERST_N_R"  SITE  "T7";
+LOCATE  COMP  "o_P0_MCIOP0A_RSV_R"  SITE  "W3";
+LOCATE  COMP  "o_P0_MCIOP0C_GPU_THROTTLE_N_R"  SITE  "W6";
+LOCATE  COMP  "o_P0_MCIOP0C_PERST_N_R"  SITE  "W8";
+LOCATE  COMP  "o_P0_MCIOP0C_RSV_R"  SITE  "Y7";
+LOCATE  COMP  "o_P0_MCIOP1A_GPU_THROTTLE_N_R"  SITE  "W10";
+LOCATE  COMP  "o_P0_MCIOP1A_PERST_N_R"  SITE  "W12";
+LOCATE  COMP  "o_P0_MCIOP1A_RSV_R"  SITE  "Y11";
+LOCATE  COMP  "o_P0_MCIOP1C_GPU_THROTTLE_N_R"  SITE  "Y14";
+LOCATE  COMP  "o_P0_MCIOP1C_PERST_N_R"  SITE  "Y16";
+LOCATE  COMP  "o_P0_MCIOP1C_RSV_R"  SITE  "W16";
+LOCATE  COMP  "o_P0_MCIOP2A_GPU_THROTTLE_N_R"  SITE  "N16";
+LOCATE  COMP  "o_P0_MCIOP2A_PERST_N_R"  SITE  "K17";
+LOCATE  COMP  "o_P0_MCIOP2A_RSV_R"  SITE  "R11";
+LOCATE  COMP  "o_P0_MCIOP2C_GPU_THROTTLE_N_R"  SITE  "A8";
+LOCATE  COMP  "o_P0_MCIOP2C_PERST_N_R"  SITE  "F6";
+LOCATE  COMP  "o_P0_MCIOP2C_RSV_R"  SITE  "F9";
+LOCATE  COMP  "o_P0_MCIOP3A_GPU_THROTTLE_N_R"  SITE  "T18";
+LOCATE  COMP  "o_P0_MCIOP3A_PERST_N_R"  SITE  "R17";
+LOCATE  COMP  "o_P0_MCIOP3A_RSV_R"  SITE  "M18";
+LOCATE  COMP  "o_P0_MCIOP3C_GPU_THROTTLE_N_R"  SITE  "U15";
+LOCATE  COMP  "o_P0_MCIOP3C_PERST_N_R"  SITE  "U14";
+LOCATE  COMP  "o_P0_MCIOP3C_RSV_R"  SITE  "P18";
+LOCATE  COMP  "o_P0_MCIOP4A_PERST_N_R"  SITE  "H7";
+LOCATE  COMP  "o_P0_SPI_TPM_CS_N_3V3"  SITE  "C15";
+LOCATE  COMP  "o_P12V_DISCHARGE_R"  SITE  "L16";
+LOCATE  COMP  "o_P1_MCIOG1A_GPU_THROTTLE_N_R"  SITE  "T12";
+LOCATE  COMP  "o_P1_MCIOG1A_PERST_N_R"  SITE  "P8";
+LOCATE  COMP  "o_P1_MCIOG1A_RSV_R"  SITE  "R12";
+LOCATE  COMP  "o_P1_MCIOG1C_GPU_THROTTLE_N_R"  SITE  "P6";
+LOCATE  COMP  "o_P1_MCIOG1C_PERST_N_R"  SITE  "N5";
+LOCATE  COMP  "o_P1_MCIOG1C_RSV_R"  SITE  "N6";
+LOCATE  COMP  "o_P1_MCIOP0A_GPU_THROTTLE_N_R"  SITE  "T4";
+LOCATE  COMP  "o_P1_MCIOP0A_PERST_N_R"  SITE  "R7";
+LOCATE  COMP  "o_P1_MCIOP0A_RSV_R"  SITE  "T3";
+LOCATE  COMP  "o_P1_MCIOP0C_GPU_THROTTLE_N_R"  SITE  "N14";
+LOCATE  COMP  "o_P1_MCIOP0C_PERST_N_R"  SITE  "P13";
+LOCATE  COMP  "o_P1_MCIOP0C_RSV_R"  SITE  "P14";
+LOCATE  COMP  "o_P1_MCIOP1A_GPU_THROTTLE_N_R"  SITE  "E3";
+LOCATE  COMP  "o_P1_MCIOP1A_PERST_N_R"  SITE  "B2";
+LOCATE  COMP  "o_P1_MCIOP1A_RSV_R"  SITE  "F3";
+LOCATE  COMP  "o_P1_MCIOP1C_GPU_THROTTLE_N_R"  SITE  "F2";
+LOCATE  COMP  "o_P1_MCIOP1C_PERST_N_R"  SITE  "H4";
+LOCATE  COMP  "o_P1_MCIOP1C_RSV_R"  SITE  "G2";
+LOCATE  COMP  "o_P1_MCIOP2A_GPU_THROTTLE_N_R"  SITE  "G3";
+LOCATE  COMP  "o_P1_MCIOP2A_PERST_N_R"  SITE  "J2";
+LOCATE  COMP  "o_P1_MCIOP2A_RSV_R"  SITE  "V4";
+LOCATE  COMP  "o_P1_MCIOP2C_GPU_THROTTLE_N_R"  SITE  "K2";
+LOCATE  COMP  "o_P1_MCIOP2C_PERST_N_R"  SITE  "L4";
+LOCATE  COMP  "o_P1_MCIOP2C_RSV_R"  SITE  "V6";
+LOCATE  COMP  "o_P1_MCIOP3A_GPU_THROTTLE_N_R"  SITE  "U9";
+LOCATE  COMP  "o_P1_MCIOP3A_PERST_N_R"  SITE  "V9";
+LOCATE  COMP  "o_P1_MCIOP3A_RSV_R"  SITE  "M2";
+LOCATE  COMP  "o_P1_MCIOP3C_GPU_THROTTLE_N_R"  SITE  "U11";
+LOCATE  COMP  "o_P1_MCIOP3C_PERST_N_R"  SITE  "T11";
+LOCATE  COMP  "o_P1_MCIOP3C_RSV_R"  SITE  "P3";
+LOCATE  COMP  "o_P1_MCIOP4A_PERST_N_R"  SITE  "G5";
+LOCATE  COMP  "o_PAL_P12V_CPU0_DIMM_ON"  SITE  "V12";
+LOCATE  COMP  "o_PAL_P12V_CPU1_DIMM_ON"  SITE  "M17";
+LOCATE  COMP  "o_PAL_SPI1_BMC_HOLD"  SITE  "H19";
+LOCATE  COMP  "o_PAL_SPI_BIOS_UPDATA_EN"  SITE  "J16";
+LOCATE  COMP  "o_PCIE_SATA_RST_N"  SITE  "V19";
+LOCATE  COMP  "o_PCIE_SATA_WAKE_R_N"  SITE  "L15";
+LOCATE  COMP  "o_RST_I2C1_MUX_N_R"  SITE  "B1";
+LOCATE  COMP  "o_RST_I2C2_MUX_N_R"  SITE  "B17";
+LOCATE  COMP  "o_RST_I2C3_MUX_N_R"  SITE  "A20";
+LOCATE  COMP  "o_SATA1_RSV"  SITE  "F14";
+LOCATE  COMP  "o_SMB_PEHP_CPU0_OCP_ALERT"  SITE  "V16";
+LOCATE  COMP  "o_SMB_PEHP_CPU1_OCP_ALERT"  SITE  "M1";
+LOCATE  COMP  "o_SW_BIOS_FLASH_SPI_S_R"  SITE  "A10";
+LOCATE  COMP  "o_SW_BIOS_QSPI_S_R"  SITE  "A12";
+LOCATE  COMP  "o_SW_BIOS_SPI_OE"  SITE  "A9";
+LOCATE  COMP  "o_SW_QSPI_OE_R"  SITE  "B16";
+
+#PLL
+LOCATE  COMP  "pll_inst/PLLInst_0"  SITE  "LPLL" ;
+
+
+
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Nov 03 16:28:20 2025
+

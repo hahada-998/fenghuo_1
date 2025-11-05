@@ -1,0 +1,59 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD_RSV6_R (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD_RSV6_R (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD_RSV5_R (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD_RSV5_R (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD_RSV4_R (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD_RSV4_R (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD_RSV3_R (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD_RSV3_R (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD_RSV2_R (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD_RSV2_R (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD_RSV1_R (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD_RSV1_R (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD2_LED3_N (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD2_LED3_N (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bp_4s104g5_s_top.v":979:25:979:28|Tristate driver o_CPLD2_LED2_N (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD2_LED2_N (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Found counter in view:work.BP_4S104G5_S(verilog) instance timer_gen_inst.usec_tmr[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Found counter in view:work.BP_4S104G5_S(verilog) instance timer_gen_inst.sec_tmr[14:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\sgpio_slave\p2s_slave.v":69:0:69:5|Found counter in view:work.p2s_slave_60s_6s(verilog) instance cnt[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_15(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_15(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_14(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_14(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_13(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_13(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_12(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_12(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_11(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_11(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_10(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_10(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_9(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_9(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_8(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_8(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_7(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_7(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_6(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_6(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_5(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_5(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_4(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_4(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_3(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_3(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_2(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_2(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_1(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_1(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":200:0:200:5|Found counter in view:work.UART_MASTER_Z2_0(verilog) instance data_count[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\uart\old\uart_master.v":188:0:188:5|Found counter in view:work.UART_MASTER_Z2_0(verilog) instance bps_count_bit[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bmc_i2c\i2c_slave_bmc.v":112:0:112:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_write_byte_cnt[15:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bmc_i2c\i2c_slave_bmc.v":102:0:102:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_read_byte_cnt[15:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Found counter in view:work.i2c_slave_basic0_3s_16s(verilog) instance r_timeout_cnt[5:0] 
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Removing sequential instance timer_gen_inst.sec_tmr[14] (in view: work.BP_4S104G5_S(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Removing sequential instance timer_gen_inst.sec_tmr[13] (in view: work.BP_4S104G5_S(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Removing sequential instance timer_gen_inst.sec_tmr[12] (in view: work.BP_4S104G5_S(verilog)) because it does not drive other instances.
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\../include\bp_4s104g5_va_s_port.v":37:8:37:21|Tristate driver o_CPLD2_LED2_N_obuft.un1[0] (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD2_LED2_N (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5_s\rtl\source\../include\bp_4s104g5_va_s_port.v":38:8:38:21|Tristate driver o_CPLD2_LED3_N_obuft.un1[0] (in view: work.BP_4S104G5_S(verilog)) on net o_CPLD2_LED3_N (in view: work.BP_4S104G5_S(verilog)) has its enable tied to GND.
+@N: FX1056 |Writing EDF file: D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\pro\impl1\BP_4S104G5_S_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

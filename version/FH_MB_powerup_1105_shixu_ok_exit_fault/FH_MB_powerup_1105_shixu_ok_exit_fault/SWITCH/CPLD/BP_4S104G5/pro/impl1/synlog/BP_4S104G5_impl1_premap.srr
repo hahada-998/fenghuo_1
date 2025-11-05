@@ -1,0 +1,220 @@
+# Fri Oct 31 16:45:11 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3_14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202309lat, Build 191R, Built Sep 17 2024 10:38:50, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 197MB)
+
+@A: MF827 |No constraint file specified.
+@L: D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\BP_4S104G5_impl1_scck.rpt 
+See clock summary report "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\BP_4S104G5_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 196MB peak: 197MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 196MB peak: 197MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 208MB peak: 208MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 208MB peak: 210MB)
+
+NConnInternalConnection caching is on
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 258MB peak: 259MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 258MB peak: 259MB)
+
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":385:19:385:30|Tristate driver o_fan1_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan1_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":403:19:403:30|Tristate driver o_fan1_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan1_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":386:19:386:30|Tristate driver o_fan2_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan2_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":404:19:404:30|Tristate driver o_fan2_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan2_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":387:19:387:30|Tristate driver o_fan3_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan3_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":405:19:405:30|Tristate driver o_fan3_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan3_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":388:19:388:30|Tristate driver o_fan4_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan4_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":406:19:406:30|Tristate driver o_fan4_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan4_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":389:19:389:30|Tristate driver o_fan5_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan5_led_g (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":407:19:407:30|Tristate driver o_fan5_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) on net o_fan5_led_r (in view: work.bmc_cpld_i2c_ram_16s(verilog)) has its enable tied to GND.
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 259MB peak: 259MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 259MB peak: 259MB)
+
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\pon_reset.v":76:0:76:5|Removing sequential instance pon_reset_db_n (in view: work.pon_reset(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\pon_reset.v":61:0:61:5|Removing sequential instance pgd_aux_system_sasd (in view: work.pon_reset(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":57:2:57:7|Removing sequential instance t40ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":57:2:57:7|Removing sequential instance t160ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t2us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t16us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t128us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t512us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t16ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t32ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t64ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t256ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\synclib.v":284:4:284:9|Removing sequential instance mInst\[3\]\.out_i[3] (in view: work.PGM_DEBOUNCE_N_14s_3_8s_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\pon_reset.v":61:0:61:5|Removing sequential instance pgd_aux_system_reg (in view: work.pon_reset(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\synclib.v":284:4:284:9|Removing sequential instance mInst\[3\]\.cnt\[3\][2:0] (in view: work.PGM_DEBOUNCE_N_14s_3_8s_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\synclib.v":284:4:284:9|Removing sequential instance mInst\[3\]\.nxt_s1[3] (in view: work.PGM_DEBOUNCE_N_14s_3_8s_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\synclib.v":284:4:284:9|Removing sequential instance mInst\[3\]\.nxt[3] (in view: work.PGM_DEBOUNCE_N_14s_3_8s_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":170:0:170:5|Removing sequential instance clk_2p5hz (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":144:0:144:5|Removing sequential instance clk_4hz (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":144:0:144:5|Removing sequential instance clk_1hz (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":144:0:144:5|Removing sequential instance clk_0p5hz (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t32us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":170:0:170:5|Removing sequential instance t200ms_tmr[2:0] (in view: work.timer_gen(verilog)) of type view:PrimLib.dffpatre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t512ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t128ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":98:0:98:5|Removing sequential instance t1s (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":47:2:47:7|Removing sequential instance cnt20ns[2:0] (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":57:2:57:7|Removing sequential instance t80ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":144:0:144:5|Removing sequential instance clk_16khz (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":144:0:144:5|Removing sequential instance clk_6m25 (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+Encoding state machine r_I2C_state[19:0] (in view: work.i2c_slave_basic0_3s_16s(verilog))
+original code -> new code
+   00000 -> 00000000000000000001
+   00001 -> 00000000000000000010
+   00010 -> 00000000000000000100
+   00011 -> 00000000000000001000
+   00100 -> 00000000000000010000
+   00101 -> 00000000000000100000
+   00110 -> 00000000000001000000
+   00111 -> 00000000000010000000
+   01000 -> 00000000000100000000
+   01001 -> 00000000001000000000
+   01010 -> 00000000010000000000
+   01011 -> 00000000100000000000
+   01100 -> 00000001000000000000
+   01101 -> 00000010000000000000
+   01110 -> 00000100000000000000
+   01111 -> 00001000000000000000
+   10000 -> 00010000000000000000
+   10001 -> 00100000000000000000
+   10010 -> 01000000000000000000
+   10011 -> 10000000000000000000
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 265MB)
+
+
+mixed edge conversion for GCC is OFF
+@W: BZ204 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\pll\pll_i25m_o50m_o25m.v":67:12:67:20|GCC unable to propagate clocks through gate pll_inst.PLLInst_0; all outputs will be treated as enables regardless of whether any inputs are clocks
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data pll_inst.CLKOP; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data pll_inst.CLKOS; this will likely lead to failure to convert
+@N: MF578 |Incompatible asynchronous control logic preventing generated clock conversion.
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1; this will likely lead to failure to convert
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+@W: BZ101 |Potential glitch can occur at the output of 1 instances  
+@N: MT611 :|Automatically generated clock i2c_slave_bmc_16s|w_i2c_command_1_inferred_clock is not used and is being removed
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 265MB peak: 266MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=240 on top level netlist BP_4S104G5 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 266MB peak: 266MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                       Requested     Requested     Clock        Clock          Clock
+Level     Clock                                       Frequency     Period        Type         Group          Load 
+-------------------------------------------------------------------------------------------------------------------
+0 -       pll_i25M_o50M_o25M|CLKOP_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     284  
+                                                                                                                   
+0 -       pll_i25M_o50M_o25M|CLKOS_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     232  
+===================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                            Clock     Source                                Clock Pin                              Non-clock Pin     Non-clock Pin
+Clock                                       Load      Pin                                   Seq Example                            Seq Example       Comb Example 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     284       pll_inst.PLLInst_0.CLKOP(EHXPLLJ)     scpld_to_mcpld_data_filter[1].C        -                 -            
+                                                                                                                                                                  
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     232       pll_inst.PLLInst_0.CLKOS(EHXPLLJ)     bmc_cpld_i2c_ram.r_reg_0006[7:0].C     -                 -            
+==================================================================================================================================================================
+
+@W: MT531 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_bmc.v":132:25:132:109|Found signal identified as System clock which controls 16 sequential elements including bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15].  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT529 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\pon_reset.v":43:0:43:5|Found inferred clock pll_i25M_o50M_o25M|CLKOP_inferred_clock which controls 284 sequential elements including pon_reset_inst.reset2_reg[2:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Found inferred clock pll_i25M_o50M_o25M|CLKOS_inferred_clock which controls 232 sequential elements including bmc_cpld_i2c_ram.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_state[19]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+3 gated/generated clock tree(s) driving 532 clock pin(s) of sequential element(s)
+0 instances converted, 532 sequential instances remain driven by gated/generated clocks
+
+============================================================================================ Gated/Generated Clocks =============================================================================================
+Clock Tree ID     Driving Element                                           Drive Element Type     Unconverted Fanout     Sample Instance                                         Explanation                    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       pll_inst.PLLInst_0.CLKOS                                  EHXPLLJ                232                    bmc_cpld_i2c_ram.r_i2c_data_in[7:0]                     Clock source is invalid for GCC
+@KP:ckid0_3       bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command_1.OUT     and                    16                     bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC
+@KP:ckid0_5       pll_inst.PLLInst_0.CLKOP                                  EHXPLLJ                284                    scpld_to_mcpld_data_filter[15:14]                       Clock source is invalid for GCC
+=================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 266MB peak: 266MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 266MB peak: 267MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 267MB peak: 267MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 180MB peak: 268MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Fri Oct 31 16:45:14 2025
+
+###########################################################]

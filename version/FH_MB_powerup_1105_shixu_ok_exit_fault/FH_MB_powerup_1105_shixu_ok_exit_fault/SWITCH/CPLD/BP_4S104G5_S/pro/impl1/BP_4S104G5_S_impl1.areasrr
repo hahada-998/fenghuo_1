@@ -1,0 +1,444 @@
+----------------------------------------------------------------------
+Report for cell BP_4S104G5_S.verilog
+
+Register bits: 734 of 2112 (35%)
+Latch bits:      22
+PIC Latch:       0
+I/O cells:       143
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB       19       100.0
+                              CCU2D      174       100.0
+                                EFB        1       100.0
+                            EHXPLLJ        1       100.0
+                            FD1P3AX        8       100.0
+                            FD1P3BX       68       100.0
+                            FD1P3DX      303       100.0
+                            FD1S1AY       16       100.0
+                             FD1S1D        6       100.0
+                            FD1S3AX        2       100.0
+                            FD1S3BX       75       100.0
+                            FD1S3DX      274       100.0
+                                GSR        1       100.0
+                                 IB      107       100.0
+                           IFS1P3BX        1       100.0
+                           IFS1P3DX        3       100.0
+                                INV       13       100.0
+                                 OB        9       100.0
+                                OBZ        8       100.0
+                           ORCALUT4     1003       100.0
+                               OSCH        1       100.0
+                              PFUMX       20       100.0
+                                PUR        1       100.0
+                                VHI       25       100.0
+                                VLO       25       100.0
+SUB MODULES 
+                         I2C_UPDATE        1       100.0
+                  UART_MASTER_Z2_30        1       100.0
+                UART_MASTER_Z2_30_0        1       100.0
+                UART_MASTER_Z2_30_1        1       100.0
+               UART_MASTER_Z2_30_10        1       100.0
+               UART_MASTER_Z2_30_11        1       100.0
+               UART_MASTER_Z2_30_12        1       100.0
+               UART_MASTER_Z2_30_13        1       100.0
+               UART_MASTER_Z2_30_14        1       100.0
+                UART_MASTER_Z2_30_2        1       100.0
+                UART_MASTER_Z2_30_3        1       100.0
+                UART_MASTER_Z2_30_4        1       100.0
+                UART_MASTER_Z2_30_5        1       100.0
+                UART_MASTER_Z2_30_6        1       100.0
+                UART_MASTER_Z2_30_7        1       100.0
+                UART_MASTER_Z2_30_8        1       100.0
+                UART_MASTER_Z2_30_9        1       100.0
+               bmc_cpld_i2c_ram_16s        1       100.0
+            i2c_slave_basic0_3s_16s        1       100.0
+                  i2c_slave_bmc_16s        1       100.0
+                   p2s_slave_60s_6s        1       100.0
+                 pll_i25M_o50M_o25M        1       100.0
+                          pon_reset        1       100.0
+                          timer_gen        1       100.0
+                            
+                         TOTAL          2188           
+----------------------------------------------------------------------
+Report for cell bmc_cpld_i2c_ram_16s.netlist
+     Instance path:  bmc_cpld_i2c_ram_u0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D       48        27.6
+                            FD1P3AX        7        87.5
+                            FD1P3BX       52        76.5
+                            FD1P3DX       88        29.0
+                            FD1S1AY       16       100.0
+                             FD1S1D        6       100.0
+                            FD1S3AX        2       100.0
+                            FD1S3BX       42        56.0
+                            FD1S3DX       45        16.4
+                                INV       10        76.9
+                           ORCALUT4      301        30.0
+                              PFUMX       20       100.0
+                                VHI        3        12.0
+                                VLO        3        12.0
+SUB MODULES 
+            i2c_slave_basic0_3s_16s        1       100.0
+                  i2c_slave_bmc_16s        1       100.0
+                            
+                         TOTAL           645           
+----------------------------------------------------------------------
+Report for cell i2c_slave_bmc_16s.netlist
+     Instance path:  bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D       48        27.6
+                            FD1P3AX        7        87.5
+                            FD1P3BX       24        35.3
+                            FD1P3DX       60        19.8
+                            FD1S1AY       16       100.0
+                             FD1S1D        6       100.0
+                            FD1S3AX        2       100.0
+                            FD1S3BX       42        56.0
+                            FD1S3DX       37        13.5
+                                INV       10        76.9
+                           ORCALUT4      162        16.2
+                                VHI        2         8.0
+                                VLO        2         8.0
+SUB MODULES 
+            i2c_slave_basic0_3s_16s        1       100.0
+                            
+                         TOTAL           419           
+----------------------------------------------------------------------
+Report for cell i2c_slave_basic0_3s_16s.netlist
+     Instance path:  bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.i2c_slave_basic0_u0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        4         2.3
+                            FD1P3AX        7        87.5
+                            FD1P3BX        8        11.8
+                            FD1P3DX       28         9.2
+                             FD1S1D        6       100.0
+                            FD1S3BX       26        34.7
+                            FD1S3DX       28        10.2
+                                INV       10        76.9
+                           ORCALUT4       95         9.5
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL           214           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_14.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u15
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_13.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u14
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_12.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u13
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_11.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u12
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_10.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u11
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_9.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u10
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_8.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u9
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_7.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u8
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_6.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u7
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_5.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u6
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_4.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u5
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_3.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u4
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_2.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u3
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_1.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u2
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30_0.netlist
+  Original Cell name UART_MASTER_Z2_30
+     Instance path:  uart_master_u1
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell UART_MASTER_Z2_30.netlist
+  Original Cell name UART_MASTER_Z2
+     Instance path:  uart_master_u0
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        7         4.0
+                            FD1P3BX        1         1.5
+                            FD1P3DX       12         4.0
+                            FD1S3BX        2         2.7
+                            FD1S3DX       13         4.7
+                           ORCALUT4       42         4.2
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            79           
+----------------------------------------------------------------------
+Report for cell p2s_slave_60s_6s.netlist
+     Instance path:  p2s_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D        4         2.3
+                            FD1P3AX        1        12.5
+                            FD1P3DX        6         2.0
+                            FD1S3BX        1         1.3
+                            FD1S3DX        8         2.9
+                           ORCALUT4       11         1.1
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            33           
+----------------------------------------------------------------------
+Report for cell I2C_UPDATE.netlist
+     Instance path:  inst_i2c_update_flash_config
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB        2        10.5
+                                EFB        1       100.0
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL             5           
+----------------------------------------------------------------------
+Report for cell timer_gen.netlist
+     Instance path:  timer_gen_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2D       10         5.7
+                            FD1P3DX       17         5.6
+                            FD1S3DX       10         3.6
+                                INV        1         7.7
+                           ORCALUT4       18         1.8
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL            58           
+----------------------------------------------------------------------
+Report for cell pon_reset.netlist
+     Instance path:  pon_reset_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            FD1S3DX        3         1.1
+                                INV        1         7.7
+                           ORCALUT4        1         0.1
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL             7           
+----------------------------------------------------------------------
+Report for cell pll_i25M_o50M_o25M.netlist
+     Instance path:  pll_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLJ        1       100.0
+                                INV        1         7.7
+                                VHI        1         4.0
+                                VLO        1         4.0
+                            
+                         TOTAL             4           

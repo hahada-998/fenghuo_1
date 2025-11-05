@@ -1,0 +1,408 @@
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:7:125:23|Net o_SMB_NIC_RST_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:7:129:26|Net o_PAL_HSC0_RESTART_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":271:7:271:26|Net o_RETIMER1_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":272:7:272:26|Net o_RETIMER2_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":273:7:273:26|Net o_RETIMER3_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":274:7:274:26|Net o_RETIMER4_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":275:7:275:26|Net o_RETIMER5_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":276:7:276:26|Net o_RETIMER6_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":277:7:277:26|Net o_RETIMER7_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":278:7:278:26|Net o_RETIMER8_RESET_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":309:7:309:20|Net o_I2C_RST2_N_R is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":310:7:310:20|Net o_I2C_RST3_N_R is not declared.
+@W: CG921 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":386:5:386:16|w_p12v_pg_db is already declared in this scope.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":558:7:558:24|Net w_P0V8_SW1_ALERT_N is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":559:7:559:24|Net w_P0V8_SW1_FAULT_N is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":630:7:630:18|Net o_debug_led2 is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":718:8:718:25|Net w_P0V8_SW1_VRHOT_N is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":728:8:728:23|Net w_SW1_CLKREQ_N_R is not declared.
+@W: CG921 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1260:4:1260:21|r_sw0_spi_cs_sel_r is already declared in this scope.
+@W: CG921 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1261:4:1261:21|r_sw1_spi_cs_sel_r is already declared in this scope.
+@W: CG921 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1262:4:1262:21|r_sw2_spi_cs_sel_r is already declared in this scope.
+@W: CG921 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1263:4:1263:21|r_sw3_spi_cs_sel_r is already declared in this scope.
+@W: CL265 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@W: CL118 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v":132:25:132:109|Latch generated from always block for signal w_i2c_command[15:0]; possible missing assignment in an if or case statement.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":269:19:269:32|Removing wire o_pwm_bmc_fan1, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":270:19:270:32|Removing wire o_pwm_bmc_fan2, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":271:19:271:32|Removing wire o_pwm_bmc_fan3, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":272:19:272:32|Removing wire o_pwm_bmc_fan4, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":273:19:273:32|Removing wire o_pwm_bmc_fan5, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":274:19:274:32|Removing wire o_pwm_bmc_fan6, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":275:19:275:32|Removing wire o_pwm_bmc_fan7, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":276:19:276:32|Removing wire o_pwm_bmc_fan8, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":277:19:277:32|Removing wire o_pwm_bmc_fan9, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":278:19:278:33|Removing wire o_pwm_bmc_fan10, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":279:19:279:33|Removing wire o_pwm_bmc_fan11, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":280:19:280:33|Removing wire o_pwm_bmc_fan12, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":281:19:281:33|Removing wire o_pwm_bmc_fan13, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":282:19:282:33|Removing wire o_pwm_bmc_fan14, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":283:19:283:33|Removing wire o_pwm_bmc_fan15, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":284:19:284:33|Removing wire o_pwm_bmc_fan16, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":385:19:385:30|Removing wire o_fan1_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":386:19:386:30|Removing wire o_fan2_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":387:19:387:30|Removing wire o_fan3_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":388:19:388:30|Removing wire o_fan4_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":389:19:389:30|Removing wire o_fan5_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":390:19:390:30|Removing wire o_fan6_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":391:19:391:30|Removing wire o_fan7_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":392:19:392:30|Removing wire o_fan8_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":394:19:394:30|Removing wire o_fan9_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":395:19:395:31|Removing wire o_fan10_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":396:19:396:31|Removing wire o_fan11_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":397:19:397:31|Removing wire o_fan12_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":398:19:398:31|Removing wire o_fan13_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":399:19:399:31|Removing wire o_fan14_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":400:19:400:31|Removing wire o_fan15_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":401:19:401:31|Removing wire o_fan16_led_g, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":403:19:403:30|Removing wire o_fan1_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":404:19:404:30|Removing wire o_fan2_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":405:19:405:30|Removing wire o_fan3_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":406:19:406:30|Removing wire o_fan4_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":407:19:407:30|Removing wire o_fan5_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":408:19:408:30|Removing wire o_fan6_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":409:19:409:30|Removing wire o_fan7_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":410:19:410:30|Removing wire o_fan8_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":412:19:412:30|Removing wire o_fan9_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":413:19:413:31|Removing wire o_fan10_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":414:19:414:31|Removing wire o_fan11_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":415:19:415:31|Removing wire o_fan12_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":416:19:416:31|Removing wire o_fan13_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":417:19:417:31|Removing wire o_fan14_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":418:19:418:31|Removing wire o_fan15_led_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":419:19:419:31|Removing wire o_fan16_led_r, as there is no assignment to it.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":269:19:269:32|*Output o_pwm_bmc_fan1 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":270:19:270:32|*Output o_pwm_bmc_fan2 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":271:19:271:32|*Output o_pwm_bmc_fan3 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":272:19:272:32|*Output o_pwm_bmc_fan4 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":273:19:273:32|*Output o_pwm_bmc_fan5 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":274:19:274:32|*Output o_pwm_bmc_fan6 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":275:19:275:32|*Output o_pwm_bmc_fan7 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":276:19:276:32|*Output o_pwm_bmc_fan8 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":277:19:277:32|*Output o_pwm_bmc_fan9 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":278:19:278:33|*Output o_pwm_bmc_fan10 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":279:19:279:33|*Output o_pwm_bmc_fan11 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":280:19:280:33|*Output o_pwm_bmc_fan12 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":281:19:281:33|*Output o_pwm_bmc_fan13 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":282:19:282:33|*Output o_pwm_bmc_fan14 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":283:19:283:33|*Output o_pwm_bmc_fan15 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":284:19:284:33|*Output o_pwm_bmc_fan16 has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":385:19:385:30|*Output o_fan1_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":386:19:386:30|*Output o_fan2_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":387:19:387:30|*Output o_fan3_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":388:19:388:30|*Output o_fan4_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":389:19:389:30|*Output o_fan5_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":390:19:390:30|*Output o_fan6_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":391:19:391:30|*Output o_fan7_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":392:19:392:30|*Output o_fan8_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":394:19:394:30|*Output o_fan9_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":395:19:395:31|*Output o_fan10_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":396:19:396:31|*Output o_fan11_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":397:19:397:31|*Output o_fan12_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":398:19:398:31|*Output o_fan13_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":399:19:399:31|*Output o_fan14_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":400:19:400:31|*Output o_fan15_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":401:19:401:31|*Output o_fan16_led_g has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":403:19:403:30|*Output o_fan1_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":404:19:404:30|*Output o_fan2_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":405:19:405:30|*Output o_fan3_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":406:19:406:30|*Output o_fan4_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":407:19:407:30|*Output o_fan5_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":408:19:408:30|*Output o_fan6_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":409:19:409:30|*Output o_fan7_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":410:19:410:30|*Output o_fan8_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":412:19:412:30|*Output o_fan9_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":413:19:413:31|*Output o_fan10_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":414:19:414:31|*Output o_fan11_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":415:19:415:31|*Output o_fan12_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":416:19:416:31|*Output o_fan13_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":417:19:417:31|*Output o_fan14_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":418:19:418:31|*Output o_fan15_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":419:19:419:31|*Output o_fan16_led_r has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1568:10:1568:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1569:10:1569:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1570:10:1570:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1571:9:1571:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1572:10:1572:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1573:10:1573:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_PAL_SAS_ALL_DONE_N on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_DS160_TX_ALL_DONE_N on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_DS160_RX_ALL_DONE_N on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan0_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan11_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan12_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan13_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan14_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan15_present_n on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan11_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan11_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan12_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan12_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan13_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan13_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan14_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan14_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan15_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan15_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan16_tach0_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan16_tach1_reg on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan1_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan2_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan3_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan4_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan5_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan6_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan7_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan8_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan9_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan10_tach1_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan11_tach0_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan11_tach0_real_l on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1610:1:1610:16|Input i_fan11_tach1_real_h on instance bmc_cpld_i2c_ram is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v":118:8:118:21|Removing wire o_I2C_RST2_R_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v":119:8:119:21|Removing wire o_I2C_RST3_R_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":135:5:135:21|Removing wire w_RETIMER1_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":136:5:136:21|Removing wire w_RETIMER2_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":137:5:137:21|Removing wire w_RETIMER3_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":138:5:138:21|Removing wire w_RETIMER4_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":139:5:139:21|Removing wire w_RETIMER5_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":140:5:140:21|Removing wire w_RETIMER6_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":141:5:141:21|Removing wire w_RETIMER7_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":142:5:142:21|Removing wire w_RETIMER8_0P9_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":497:5:497:25|Removing wire w_cpld_pch_rsmrst_n_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":498:5:498:19|Removing wire w_bmc_active0_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":636:10:636:22|Removing wire pvti_ss_count, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":639:5:639:23|Removing wire w_PAL_FAN14_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":640:5:640:22|Removing wire w_PAL_FAN5_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":642:5:642:23|Removing wire w_PAL_FAN10_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":643:5:643:22|Removing wire w_PAL_FAN4_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":644:5:644:22|Removing wire w_PAL_FAN9_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":645:5:645:23|Removing wire w_PAL_FAN15_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":648:5:648:23|Removing wire w_PAL_FAN13_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":649:5:649:22|Removing wire w_PAL_FAN1_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":650:5:650:22|Removing wire w_PAL_FAN6_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":651:5:651:23|Removing wire w_PAL_FAN11_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":652:5:652:23|Removing wire w_PAL_FAN12_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":653:5:653:22|Removing wire w_PAL_FAN7_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":654:5:654:22|Removing wire w_PAL_FAN2_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":658:5:658:22|Removing wire w_PAL_FAN3_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":659:5:659:22|Removing wire w_PAL_FAN8_PRSNT_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":660:5:660:22|Removing wire w_NICBOX_PRSNT_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":662:5:662:18|Removing wire w_PSU2_PRSNT_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":663:5:663:18|Removing wire w_PSU1_PRSNT_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":664:5:664:18|Removing wire w_PSU0_PRSNT_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":667:5:667:13|Removing wire w_HSC0_PG, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":668:5:668:16|Removing wire w_HSC0_FAULT, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":669:5:669:18|Removing wire w_HSC0_GPIO1_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":670:5:670:18|Removing wire w_HSC0_GPIO2_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":671:5:671:18|Removing wire w_PSU3_PRSNT_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":672:5:672:18|Removing wire w_PSU4_PRSNT_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":673:5:673:18|Removing wire w_PSU5_PRSNT_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":679:5:679:21|Removing wire w_MCIO21A_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":680:5:680:21|Removing wire w_MCIO21C_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":681:5:681:21|Removing wire w_MCIO22A_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":682:5:682:21|Removing wire w_MCIO22C_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":684:5:684:21|Removing wire w_MCIO01C_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":685:5:685:21|Removing wire w_MCIO01A_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":689:5:689:21|Removing wire w_MCIO02A_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":690:5:690:21|Removing wire w_MCIO02C_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":691:5:691:20|Removing wire w_BPTB_PRSNT_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":693:5:693:21|Removing wire w_MCIO31C_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":694:5:694:21|Removing wire w_MCIO32A_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":695:5:695:21|Removing wire w_MCIO32C_CFG_N_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":696:5:696:21|Removing wire w_MCIO31A_CFG_N_R, as there is no assignment to it.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v":118:8:118:21|*Output o_I2C_RST2_R_N has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v":119:8:119:21|*Output o_I2C_RST3_R_N has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1237:11:1237:20|Removing instance debug_led1 because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1130:48:1130:70|Removing instance edge_delay_pch_rsmrst_n because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1101:48:1101:73|Removing instance edge_delay_retimer2_1p8_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1092:48:1092:73|Removing instance edge_delay_retimer1_1p8_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":262:48:262:73|Removing instance edge_delay_retimer8_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":252:48:252:73|Removing instance edge_delay_retimer7_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":242:48:242:73|Removing instance edge_delay_retimer6_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":232:48:232:73|Removing instance edge_delay_retimer5_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":222:48:222:73|Removing instance edge_delay_retimer4_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":212:48:212:73|Removing instance edge_delay_retimer3_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":202:48:202:73|Removing instance edge_delay_retimer2_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":192:48:192:73|Removing instance edge_delay_retimer1_0p9_pg because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1340:0:1340:5|Pruning unused register r_sw3_spi_cs_sel_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1318:0:1318:5|Pruning unused register r_sw2_spi_cs_sel_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1296:0:1296:5|Pruning unused register r_sw1_spi_cs_sel_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1273:0:1273:5|Pruning unused register r_sw0_spi_cs_sel_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":570:0:570:5|Pruning unused register mb_sgpio_fail. Make sure that there are no unused intermediate registers.
+@W: CL271 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":570:0:570:5|Pruning unused bits 51 to 16 of scpld_to_mcpld_data_filter[51:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":570:0:570:5|Pruning unused bits 13 to 2 of scpld_to_mcpld_data_filter[51:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL265 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":570:0:570:5|Removing unused bit 0 of scpld_to_mcpld_data_filter[51:0]. Either assign all bits or reduce the width of the signal.
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:30:129:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:30:129:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:30:129:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:30:129:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:30:129:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":129:30:129:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":271:58:271:61|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":271:58:271:61|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":271:58:271:61|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":271:58:271:61|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1005:24:1005:51|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1209:25:1209:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1209:25:1209:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1207:25:1207:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1207:25:1207:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1205:25:1205:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1205:25:1205:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1203:25:1203:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1203:25:1203:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1201:25:1201:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1201:25:1201:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1199:25:1199:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1199:25:1199:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1197:25:1197:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1197:25:1197:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1195:25:1195:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1195:25:1195:65|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":125:27:125:30|Duplicate LOC attributes found on net
+@W: CL177 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1340:0:1340:5|Sharing sequential element r_sw3_spi_cs_sel_err_flag and merging r_sw0_spi_cs_sel_err_flag. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL177 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1318:0:1318:5|Sharing sequential element r_sw2_spi_cs_sel_err_flag and merging r_sw0_spi_cs_sel_err_flag. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL177 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1296:0:1296:5|Sharing sequential element r_sw1_spi_cs_sel_err_flag and merging r_sw0_spi_cs_sel_err_flag. Add a syn_preserve attribute to the element to prevent sharing.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1601:21:1601:86|*Input un1_w_BOARD_ID0[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1600:21:1600:55|*Input un1_w_PCB_ID0[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1599:21:1599:55|*Input un1_w_PCA_ID0[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1605:25:1605:110|*Input un1_w_NIC_BOARD_ID0[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":1604:25:1604:83|*Input un1_w_NIC_PCB_VER_ID0[7:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v":690:5:690:21|*Input w_MCIO02C_CFG_N_R to expression [dffr] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL190 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+

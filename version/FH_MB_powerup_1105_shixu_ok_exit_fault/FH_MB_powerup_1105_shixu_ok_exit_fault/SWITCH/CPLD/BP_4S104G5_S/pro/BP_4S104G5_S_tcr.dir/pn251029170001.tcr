@@ -1,0 +1,7 @@
+#Start recording tcl command: 10/29/2025 16:01:43
+#Project Location: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro; Project name: BP_4S104G5_S
+prj_project open "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/BP_4S104G5_S.ldf"
+prj_run Export -impl impl1
+prj_dev set -part LCMXO2-2000HC-4BG256C
+prj_run Export -impl impl1
+#Stop recording: 10/29/2025 17:00:01

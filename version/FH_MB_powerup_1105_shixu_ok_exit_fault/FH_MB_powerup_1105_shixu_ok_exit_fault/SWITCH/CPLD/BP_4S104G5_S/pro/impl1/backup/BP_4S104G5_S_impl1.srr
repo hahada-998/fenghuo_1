@@ -1,0 +1,101 @@
+#Build: Synplify Pro (R) V-2023.09L-2, Build 349R, Sep 17 2024
+#install: C:\lscc\diamond\3.14\synpbase
+#OS: Windows 10 or later
+#Hostname: X02567XL
+
+# Wed Oct 29 10:22:38 2025
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3.14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3.14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo3lf.v" (library work)
+@I::"C:\lscc\diamond\3.14\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.14\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\74LV165\pvt_gpi.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" (library work)
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":251:7:251:29|Net o_sw_bios_flash_spi_s_r is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":252:7:252:24|Net o_sw_bios_qspi_s_r is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":253:7:253:22|Net o_sw_bios_spi_oe is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":254:7:254:20|Net o_sw_qspi_oe_r is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":255:7:255:28|Net o_bios_flash_reset_r_n is not declared.
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_bmc.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\include\BP_4S104G5_VA_S_port.v" (library work)
+@E: CS187 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\include\BP_4S104G5_VA_S_port.v":258:1:258:1|Expecting endmodule
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\Bmc_Power_seq\ac_bmc_pwrseq_fsm.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\breath_led\breath_led.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\edge_delay.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\Edge_Detect.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\lowpass_filter.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\pon_reset.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\synclib.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\WDT.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\fan_counter.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\fan_pwm_tach.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\WDT.v" (library work)
+@W: CG679 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\WDT.v":16:7:16:9|Previous module with same name WDT
+@N: CG1223 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\WDT.v":27:7:27:9|Setting "set_option -allow_duplicate_modules 1" in project file allows duplicate modules
+@E: CG855 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\WDT.v":27:7:27:9|Duplicate module name WDT
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE.v" (library work)
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE.v":10:27:10:38|Ignoring property NGD_DRC_MASK
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE_tmpl.v" (library work)
+@E: CS219 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE_tmpl.v":6:0:6:9|Expecting one of the keywords module, primitive or macromodule
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v" (library work)
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:70:8:81|Ignoring property NGD_DRC_MASK
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":81:26:81:44|Ignoring property FREQUENCY_PIN_CLKOS
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":82:26:82:44|Ignoring property FREQUENCY_PIN_CLKOP
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":83:26:83:43|Ignoring property FREQUENCY_PIN_CLKI
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":84:26:84:36|Ignoring property ICP_CURRENT
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":85:26:85:37|Ignoring property LPF_RESISTOR
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M_tmpl.v" (library work)
+@E: CS219 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M_tmpl.v":6:0:6:17|Expecting one of the keywords module, primitive or macromodule
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v" (library work)
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":26:14:26:25|Ignoring property syn_preserve
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v" (library work)
+@W: CS133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":26:14:26:25|Ignoring property syn_preserve
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\uart_slave.v" (library work)
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\uart_slave.v":48:7:48:17|Net ser_data_in is not declared.
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v" (library work)
+@E: Can't open file BP_4S104G5_VA_S_port.v
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Oct 29 10:22:38 2025
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Oct 29 10:22:38 2025
+
+###########################################################]

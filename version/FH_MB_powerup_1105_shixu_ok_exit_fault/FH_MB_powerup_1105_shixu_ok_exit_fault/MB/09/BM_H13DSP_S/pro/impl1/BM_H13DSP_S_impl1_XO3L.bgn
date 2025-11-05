@@ -1,0 +1,28 @@
+BITGEN: Bitstream Generator Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Oct 29 17:56:06 2025
+
+
+Command: bitgen -g RamCfg:Reset -path D:/ODM MB SWITCH/MB/09/BM_H13DSP_S/pro -g MIGRATION:ON -w -gui -msgset D:/ODM MB SWITCH/MB/09/BM_H13DSP_S/pro/promote.xml BM_H13DSP_S_impl1.ncd BM_H13DSP_S_impl1_XO3L.bit BM_H13DSP_S_impl1.prf 
+
+Loading design for application Bitgen from file BM_H13DSP_S_impl1.ncd.
+Design name: BM_H13DSP_S
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application Bitgen from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3.14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from BM_H13DSP_S_impl1.prf.
+INFO -  SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00f.acd ###
+INFO -  SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK
+ERROR - When MachXO3LF design is migrated to MachXO3L, UFM can not be supported.

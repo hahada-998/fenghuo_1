@@ -1,0 +1,12 @@
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":91:1:91:6|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":106:1:106:7|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":120:1:120:7|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":134:1:134:8|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":148:1:148:6|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":174:1:174:8|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":190:1:190:5|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":204:1:204:7|Reference to undefined module ClkDiv
+@E: CG389 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":218:1:218:7|Reference to undefined module ClkDiv
+@E: Could not find specified top level BP_4S104G5_S (library: work, cell: BP_4S104G5_S)
+@E::Error while linking, aborting.
+

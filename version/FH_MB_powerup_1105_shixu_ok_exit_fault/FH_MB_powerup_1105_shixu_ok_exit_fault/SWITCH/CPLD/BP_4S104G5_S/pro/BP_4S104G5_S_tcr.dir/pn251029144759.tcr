@@ -1,0 +1,7 @@
+#Start recording tcl command: 10/29/2025 14:24:59
+#Project Location: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro; Project name: BP_4S104G5_S
+prj_project open "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/BP_4S104G5_S.ldf"
+prj_run Synthesis -impl impl1
+prj_src remove "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/rtl/source/uart/uart_slave.v"
+prj_src add "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/rtl/source/uart/old/uart_master.v"
+#Stop recording: 10/29/2025 14:47:59

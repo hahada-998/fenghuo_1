@@ -1,0 +1,18 @@
+#List of actual used RTLs.
+
+File                                                                                   Type     IN_PROJECT/INCLUDED/LIBRARY
+
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\include\BP_4S104G5_VA_port.v"          verilog                        INCLUDED
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\breath_led\breath_led.v"        verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v"     verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_bmc.v"        verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\bmc_i2c\i2c_slave_basic0.v"     verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\I2C_UPDATE\I2C_UPDATE.v"        verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\common\edge_delay.v"            verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\SGPIO_SLAVE\p2s_slave.v"        verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\SGPIO_SLAVE\s2p_slave.v"        verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\common\synclib.v"               verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\common\timer_gen_50mhz.v"       verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\common\pon_reset.v"             verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\PLL\pll_i25M_o50M_o25M.v"       verilog                      IN PROJECT
+"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\rtl\source\BP_4S104G5_TOP.v"               verilog                      IN PROJECT

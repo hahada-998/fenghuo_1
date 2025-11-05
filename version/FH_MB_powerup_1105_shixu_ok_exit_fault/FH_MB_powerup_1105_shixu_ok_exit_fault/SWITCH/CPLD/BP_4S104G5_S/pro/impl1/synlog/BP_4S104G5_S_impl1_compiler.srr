@@ -1,0 +1,491 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3.14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3.14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v" (library work)
+@I::"C:\lscc\diamond\3.14\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.14\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v" (library work)
+@I:"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" (library work)
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":250:7:250:29|Net o_sw_bios_flash_spi_s_r is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":251:7:251:24|Net o_sw_bios_qspi_s_r is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":252:7:252:22|Net o_sw_bios_spi_oe is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":253:7:253:20|Net o_sw_qspi_oe_r is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":254:7:254:28|Net o_bios_flash_reset_r_n is not declared.
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_bmc.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\edge_delay.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\lowpass_filter.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\pon_reset.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\synclib.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\74LV165\pvt_gpi.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\fan_pwm_tach.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\fan_counter.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\Edge_Detect.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\breath_led\breath_led.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\Bmc_Power_seq\ac_bmc_pwrseq_fsm.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\WDT.v" (library work)
+@I::"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v" (library work)
+@W: CG1337 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":55:7:55:17|Net ser_data_in is not declared.
+Verilog syntax check successful!
+Options changed - recompiling
+Selecting top level module BP_4S104G5_S
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":39:32:39:37|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":65:32:65:37|Removing redundant assignment.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1124:7:1124:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1730:7:1730:13|Synthesizing module EHXPLLJ in library work.
+Running optimization stage 1 on EHXPLLJ .......
+Finished optimization stage 1 on EHXPLLJ (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+Running optimization stage 1 on pll_i25M_o50M_o25M .......
+Finished optimization stage 1 on pll_i25M_o50M_o25M (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+Running optimization stage 1 on pon_reset .......
+Finished optimization stage 1 on pon_reset (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":15:7:15:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":93:54:93:61|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":94:54:94:60|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":157:36:157:44|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":158:41:158:47|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":159:41:159:47|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":160:41:160:49|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":161:41:161:48|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":179:68:179:77|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":180:63:180:71|Removing redundant assignment.
+Running optimization stage 1 on timer_gen .......
+Finished optimization stage 1 on timer_gen (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000110
+	MAX_DIV_CNT=32'b00000000000000000000000000110001
+   Generated name = ClkDiv_6s_49s
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
+Running optimization stage 1 on ClkDiv_6s_49s .......
+Finished optimization stage 1 on ClkDiv_6s_49s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000001001
+   Generated name = ClkDiv_5s_9s
+Running optimization stage 1 on ClkDiv_5s_9s .......
+Finished optimization stage 1 on ClkDiv_5s_9s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000011
+	MAX_DIV_CNT=32'b00000000000000000000000000000100
+   Generated name = ClkDiv_3s_4s
+Running optimization stage 1 on ClkDiv_3s_4s .......
+Finished optimization stage 1 on ClkDiv_3s_4s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000100
+	MAX_DIV_CNT=32'b00000000000000000000000000001001
+   Generated name = ClkDiv_4s_9s
+Running optimization stage 1 on ClkDiv_4s_9s .......
+Finished optimization stage 1 on ClkDiv_4s_9s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000001
+	MAX_DIV_CNT=32'b00000000000000000000000000000001
+   Generated name = ClkDiv_1s_1s
+Running optimization stage 1 on ClkDiv_1s_1s .......
+Finished optimization stage 1 on ClkDiv_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000011000
+   Generated name = ClkDiv_5s_24s
+Running optimization stage 1 on ClkDiv_5s_24s .......
+Finished optimization stage 1 on ClkDiv_5s_24s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000010011
+   Generated name = ClkDiv_5s_19s
+Running optimization stage 1 on ClkDiv_5s_19s .......
+Finished optimization stage 1 on ClkDiv_5s_19s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
+Running optimization stage 1 on ClkDivTree .......
+Finished optimization stage 1 on ClkDivTree (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1793:7:1793:10|Synthesizing module OSCH in library work.
+Running optimization stage 1 on OSCH .......
+Finished optimization stage 1 on OSCH (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1120:7:1120:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":82:7:82:8|Synthesizing module BB in library work.
+Running optimization stage 1 on BB .......
+Finished optimization stage 1 on BB (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1800:7:1800:9|Synthesizing module EFB in library work.
+Running optimization stage 1 on EFB .......
+Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+Running optimization stage 1 on I2C_UPDATE .......
+Finished optimization stage 1 on I2C_UPDATE (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":18:7:18:15|Synthesizing module s2p_slave in library work.
+
+	NBIT=32'b00000000000000000000000000111100
+	DEFAULT_STATE=64'b0000000000000000000000000000000000000000000000000000000000000000
+	WCNT=32'b00000000000000000000000000000110
+   Generated name = s2p_slave_60s_6s_Z1
+Running optimization stage 1 on s2p_slave_60s_6s_Z1 .......
+Finished optimization stage 1 on s2p_slave_60s_6s_Z1 (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+
+	NBIT=32'b00000000000000000000000000111100
+	WCNT=32'b00000000000000000000000000000110
+   Generated name = p2s_slave_60s_6s
+Running optimization stage 1 on p2s_slave_60s_6s .......
+@W: CL265 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@A: CL282 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":69:0:69:5|Feedback mux created for signal so. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on p2s_slave_60s_6s (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":25:7:25:17|Synthesizing module UART_MASTER in library work.
+
+	NBIT_IN=32'b00000000000000000000000000010000
+	NBIT_OUT=32'b00000000000000000000000000010000
+	BPS_COUNT_NUM=32'b00000000000000000000000000110000
+	START_COUNT_NUM=32'b00000000000000000000000000011000
+	NBIT_IN6=32'b00000000000000000000000000010110
+	NBIT_OUT6=32'b00000000000000000000000000010110
+	WCNT=32'b00000000000000000000000000000101
+	BPS_CNT=32'b00000000000000000000000000000110
+	WAIT_T=5'b00011
+	IDLE=3'b000
+	START=3'b001
+	DATA_OUT=3'b010
+	WAIT=3'b011
+	RESTART=3'b100
+	DATA_IN=3'b101
+   Generated name = UART_MASTER_Z2
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":226:71:226:80|Removing redundant assignment.
+Running optimization stage 1 on UART_MASTER_Z2 .......
+@A: CL282 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":200:0:200:5|Feedback mux created for signal reg_par_data_out[21:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on UART_MASTER_Z2 (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+
+	TOTAL_STAGES=32'b00000000000000000000000000000011
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_basic0_3s_16s
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+Running optimization stage 1 on i2c_slave_basic0_3s_16s .......
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@A: CL291 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":120:0:120:5|Register r_sampledData_scl_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":149:0:149:5|Register r_sampledData_sda_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL282 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Feedback mux created for signal r_I2c_address[6:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on i2c_slave_basic0_3s_16s (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":9:7:9:19|Synthesizing module i2c_slave_bmc in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_bmc_16s
+Running optimization stage 1 on i2c_slave_bmc_16s .......
+@W: CL118 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":132:25:132:109|Latch generated from always block for signal w_i2c_command[15:0]; possible missing assignment in an if or case statement.
+Finished optimization stage 1 on i2c_slave_bmc_16s (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":5:7:5:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = bmc_cpld_i2c_ram_16s
+@W: CG133 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":230:10:230:19|Object r_reg_0024 is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on bmc_cpld_i2c_ram_16s .......
+Finished optimization stage 1 on bmc_cpld_i2c_ram_16s (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":22:7:22:18|Synthesizing module BP_4S104G5_S in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":525:34:525:59|Removing redundant assignment.
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":185:10:185:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":186:10:186:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":187:10:187:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":188:9:188:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":189:10:189:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":190:10:190:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CS263 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":1034:29:1034:41|Port-width mismatch for port o_uid_led_ctl. The port definition is 8 bits, but the actual port connection bit width is 1. Adjust either the definition or the instantiation of this port.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":41:5:41:12|Removing wire clk_2p5m, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":55:5:55:14|Removing wire t16ms_tick, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|Removing wire w_PWRGD_P12V, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":463:5:463:16|Removing wire w_pch_slp5_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":474:12:474:26|Removing wire s2p_from_master, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":475:12:475:24|Removing wire p2s_to_master, as there is no assignment to it.
+Running optimization stage 1 on BP_4S104G5_S .......
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":532:23:532:30|Removing instance s2p_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":157:11:157:21|Removing instance mClkDivTree because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":509:0:509:5|Pruning unused register mcpld_to_scpld_data_filter[51:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":509:0:509:5|Pruning unused register mb_sgpio_fail. Make sure that there are no unused intermediate registers.
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":979:25:979:28|Duplicate LOC attributes found on net
+Finished optimization stage 1 on BP_4S104G5_S (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+Running optimization stage 2 on BP_4S104G5_S .......
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":622:34:622:136|*Input w_mb_to_bp_mcio01a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":623:34:623:136|*Input w_mb_to_bp_mcio01c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":624:34:624:136|*Input w_mb_to_bp_mcio02a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":625:34:625:136|*Input w_mb_to_bp_mcio02c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":626:34:626:136|*Input w_mb_to_bp_mcio11a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":627:34:627:136|*Input w_mb_to_bp_mcio11c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":628:34:628:136|*Input w_mb_to_bp_mcio12a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":629:34:629:136|*Input w_mb_to_bp_mcio12c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":630:34:630:136|*Input w_mb_to_bp_mcio21a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":631:34:631:136|*Input w_mb_to_bp_mcio21c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":632:34:632:136|*Input w_mb_to_bp_mcio22a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":633:34:633:136|*Input w_mb_to_bp_mcio22c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":634:34:634:136|*Input w_mb_to_bp_mcio31a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":635:34:635:136|*Input w_mb_to_bp_mcio31c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":636:34:636:136|*Input w_mb_to_bp_mcio32a_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":637:34:637:136|*Input w_mb_to_bp_mcio32c_data[15:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":462:5:462:16|*Input w_PWRGD_P12V to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":52:8:52:28|Input i_SCPLD_SGPIO_DATA_IN is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":164:8:164:23|Input i_NVME1_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":165:8:165:23|Input i_NVME1_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":166:8:166:23|Input i_NVME2_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":167:8:167:23|Input i_NVME2_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":168:8:168:23|Input i_NVME3_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":169:8:169:23|Input i_NVME3_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":170:8:170:23|Input i_NVME4_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":171:8:171:23|Input i_NVME4_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":182:8:182:23|Input i_NPU1A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":183:8:183:23|Input i_NPU1C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":184:8:184:23|Input i_NPU2A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":185:8:185:23|Input i_NPU2C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":186:8:186:23|Input i_NPU3A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":187:8:187:23|Input i_NPU3C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":188:8:188:23|Input i_NPU4A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":189:8:189:23|Input i_NPU4C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":190:8:190:23|Input i_NPU5A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":191:8:191:23|Input i_NPU5C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":192:8:192:23|Input i_NPU6A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":193:8:193:23|Input i_NPU6C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":194:8:194:23|Input i_NPU7A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":195:8:195:23|Input i_NPU7C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":196:8:196:23|Input i_NPU8A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":197:8:197:23|Input i_NPU8C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":203:8:203:23|Input i_NIC1A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":204:8:204:23|Input i_NIC1A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":205:8:205:23|Input i_NIC1C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":206:8:206:23|Input i_NIC1C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":207:8:207:23|Input i_NIC2A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":208:8:208:23|Input i_NIC2A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":209:8:209:23|Input i_NIC2C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":210:8:210:23|Input i_NIC2C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":211:8:211:23|Input i_NIC3A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":212:8:212:23|Input i_NIC3A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":213:8:213:23|Input i_NIC3C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":214:8:214:23|Input i_NIC3C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":215:8:215:23|Input i_NIC4A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":216:8:216:23|Input i_NIC4A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":217:8:217:23|Input i_NIC4C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":218:8:218:23|Input i_NIC4C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":219:8:219:23|Input i_NIC5A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":220:8:220:23|Input i_NIC5A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":221:8:221:23|Input i_NIC5C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":222:8:222:23|Input i_NIC5C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":223:8:223:23|Input i_NIC6A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":224:8:224:23|Input i_NIC6A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":225:8:225:23|Input i_NIC6C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":226:8:226:23|Input i_NIC6C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":227:8:227:23|Input i_NIC7A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":228:8:228:23|Input i_NIC7A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":229:8:229:23|Input i_NIC7C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":230:8:230:23|Input i_NIC7C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":231:8:231:23|Input i_NIC8A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":232:8:232:23|Input i_NIC8A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":233:8:233:23|Input i_NIC8C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":234:8:234:23|Input i_NIC8C_CB_ID1_R is unused.
+Finished optimization stage 2 on BP_4S104G5_S (CPU Time 0h:00m:00s, Memory Used current: 97MB peak: 98MB)
+Running optimization stage 2 on bmc_cpld_i2c_ram_16s .......
+Finished optimization stage 2 on bmc_cpld_i2c_ram_16s (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 109MB)
+Running optimization stage 2 on i2c_slave_bmc_16s .......
+Finished optimization stage 2 on i2c_slave_bmc_16s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 109MB)
+Running optimization stage 2 on i2c_slave_basic0_3s_16s .......
+@W: CL190 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+Extracted state machine for register r_I2C_state
+State machine has 20 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+   10010
+   10011
+Finished optimization stage 2 on i2c_slave_basic0_3s_16s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on UART_MASTER_Z2 .......
+@N: CL201 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":94:0:94:5|Trying to extract state machine for register curr_state.
+Extracted state machine for register curr_state
+State machine has 6 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+Finished optimization stage 2 on UART_MASTER_Z2 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on p2s_slave_60s_6s .......
+Finished optimization stage 2 on p2s_slave_60s_6s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on s2p_slave_60s_6s_Z1 .......
+Finished optimization stage 2 on s2p_slave_60s_6s_Z1 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on I2C_UPDATE .......
+Finished optimization stage 2 on I2C_UPDATE (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on EFB .......
+Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on BB .......
+Finished optimization stage 2 on BB (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on OSCH .......
+Finished optimization stage 2 on OSCH (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDivTree .......
+Finished optimization stage 2 on ClkDivTree (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_5s_19s .......
+Finished optimization stage 2 on ClkDiv_5s_19s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_5s_24s .......
+Finished optimization stage 2 on ClkDiv_5s_24s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_1s_1s .......
+Finished optimization stage 2 on ClkDiv_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_4s_9s .......
+Finished optimization stage 2 on ClkDiv_4s_9s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_3s_4s .......
+Finished optimization stage 2 on ClkDiv_3s_4s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_5s_9s .......
+Finished optimization stage 2 on ClkDiv_5s_9s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_6s_49s .......
+Finished optimization stage 2 on ClkDiv_6s_49s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on timer_gen .......
+Finished optimization stage 2 on timer_gen (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on pon_reset .......
+Finished optimization stage 2 on pon_reset (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on pll_i25M_o50M_o25M .......
+Finished optimization stage 2 on pll_i25M_o50M_o25M (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on EHXPLLJ .......
+Finished optimization stage 2 on EHXPLLJ (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+Running optimization stage 2 on VLO .......
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 109MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\pro\impl1\synwork\layer0.duruntime
+
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 99MB peak: 109MB)
+
+Process took 0h:00m:06s realtime, 0h:00m:06s cputime
+
+Process completed successfully.
+# Wed Oct 29 16:09:17 2025
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3.14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+@N|Running in 64-bit mode
+File D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\pro\impl1\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 92MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Oct 29 16:09:17 2025
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\pro\impl1\synwork\BP_4S104G5_S_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 21MB peak: 22MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:07s cputime
+
+Process completed successfully.
+# Wed Oct 29 16:09:18 2025
+
+###########################################################]

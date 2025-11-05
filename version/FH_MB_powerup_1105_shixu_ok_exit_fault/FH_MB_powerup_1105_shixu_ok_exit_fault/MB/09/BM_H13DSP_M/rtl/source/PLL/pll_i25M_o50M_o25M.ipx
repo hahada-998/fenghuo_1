@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="pll_i25M_o50M_o25M" module="PLL" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2025 02 09 16:50:45.448" version="5.8" type="Module" synthesis="synplify" source_format="Verilog">
+  <Package>
+		<File name="pll_i25M_o50M_o25M.lpc" type="lpc" modified="2025 02 09 16:50:43.069"/>
+		<File name="pll_i25M_o50M_o25M.v" type="top_level_verilog" modified="2025 02 09 16:50:43.165"/>
+		<File name="pll_i25M_o50M_o25M_tmpl.v" type="template_verilog" modified="2025 02 09 16:50:43.179"/>
+  </Package>
+</DiamondModule>

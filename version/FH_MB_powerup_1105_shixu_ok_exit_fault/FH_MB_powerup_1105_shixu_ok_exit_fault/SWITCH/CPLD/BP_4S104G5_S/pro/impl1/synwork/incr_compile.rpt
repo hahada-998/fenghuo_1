@@ -1,0 +1,94 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3.14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+Modified Files: 2
+FID:  path (prevtimestamp, timestamp)
+30       C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v (N/A, 2024-09-17 14:02:13)
+0        C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo3lf.v (2024-09-17 14:02:13, N/A)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 1
+MID:  lib.cell.view
+32       work.UART_MASTER.verilog may have changed because the following files changed:
+                        C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo3lf.v (2024-09-17 14:02:13, N/A) <-- Error finding FID for 'C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo3lf.v' in FDep file
+
+*******************************************************************
+Unmodified files: 28
+FID:  path (timestamp)
+1        C:\lscc\diamond\3.14\synpbase\lib\lucent\pmi_def.v (2024-09-24 07:33:10)
+2        C:\lscc\diamond\3.14\synpbase\lib\vlog\hypermods.v (2024-09-24 07:33:35)
+3        C:\lscc\diamond\3.14\synpbase\lib\vlog\scemi_objects.v (2024-09-24 07:33:35)
+4        C:\lscc\diamond\3.14\synpbase\lib\vlog\scemi_pipes.svh (2024-09-24 07:33:35)
+5        D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include/BP_4S104G5_VA_S_port.v (2025-10-29 15:11:15)
+6        D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\74LV165\pvt_gpi.v (2022-12-01 22:01:12)
+7        D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v (2025-10-29 15:35:26)
+8        D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\Bmc_Power_seq\ac_bmc_pwrseq_fsm.v (2025-10-29 13:58:24)
+9        D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\WDT.v (2022-12-11 17:00:07)
+10       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\fan_counter.v (2021-02-10 09:29:55)
+11       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\FAN\fan_pwm_tach.v (2024-04-22 17:42:13)
+12       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE.v (2025-10-29 14:18:27)
+13       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v (2022-11-08 17:13:04)
+14       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v (2025-09-03 15:48:41)
+15       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v (2025-09-03 15:48:43)
+16       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (2025-10-29 11:15:39)
+17       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v (2022-09-09 17:01:11)
+18       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_bmc.v (2022-09-09 17:01:31)
+19       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\breath_led\breath_led.v (2024-05-16 16:30:28)
+29       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v (2022-06-16 20:16:55)
+28       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v (2023-05-13 14:15:57)
+20       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\Edge_Detect.v (2022-12-01 22:01:13)
+21       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\edge_delay.v (2022-09-09 13:45:53)
+22       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\lowpass_filter.v (2022-09-13 13:55:57)
+23       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\pon_reset.v (2022-09-13 11:35:16)
+24       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\synclib.v (2022-09-13 11:22:51)
+25       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v (2025-09-10 15:28:15)
+27       D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v (2025-10-29 14:47:43)
+
+*******************************************************************
+Unchanged modules: 33
+MID:  lib.cell.view
+0        work.BP_4S104G5_S.verilog
+1        work.BREAK_COMBI.verilog
+2        work.BREAK_COMBI_N.verilog
+34       work.ClkDiv.verilog
+33       work.ClkDivTree.verilog
+3        work.Edge_Detect.verilog
+4        work.I2C_UPDATE.verilog
+5        work.ISOLATE_COMBI.verilog
+6        work.PGM_DEBOUNCE.verilog
+7        work.PGM_DEBOUNCE_GPO_N.verilog
+8        work.PGM_DEBOUNCE_N.verilog
+9        work.STABLE.verilog
+10       work.SYNC_DATA.verilog
+11       work.SYNC_DATA_N.verilog
+12       work.SYNC_RESET_AASD.verilog
+13       work.SYNC_RESET_N_AASD.verilog
+14       work.SYNC_RESET_SASD.verilog
+16       work.WDT.verilog
+17       work.ac_bmc_pwrseq_fsm.verilog
+18       work.bmc_cpld_i2c_ram.verilog
+19       work.breath_led.verilog
+20       work.edge_delay.verilog
+21       work.fan_counter.verilog
+22       work.fan_pwm_tach.verilog
+23       work.i2c_slave_basic0.verilog
+24       work.i2c_slave_bmc.verilog
+25       work.lowpass_filter.verilog
+26       work.p2s_slave.verilog
+27       work.pll_i25M_o50M_o25M.verilog
+28       work.pon_reset.verilog
+29       work.pvt_gpi.verilog
+30       work.s2p_slave.verilog
+31       work.timer_gen.verilog

@@ -1,0 +1,757 @@
+# Fri Oct 31 16:45:14 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3_14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202309lat, Build 191R, Built Sep 17 2024 10:38:50, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 181MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 183MB peak: 197MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 183MB peak: 197MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 197MB peak: 197MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 199MB peak: 201MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 255MB peak: 255MB)
+
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_SW3_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) on net o_SW3_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_SW2_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) on net o_SW2_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_SW1_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) on net o_SW1_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_SW0_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) on net o_SW0_PAL_SPI_SEL_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_NIC8C_RSV_R (in view: work.BP_4S104G5(verilog)) on net o_NIC8C_RSV_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_NIC8A_RSV_R (in view: work.BP_4S104G5(verilog)) on net o_NIC8A_RSV_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_NIC7C_RSV_R (in view: work.BP_4S104G5(verilog)) on net o_NIC7C_RSV_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_NIC7A_RSV_R (in view: work.BP_4S104G5(verilog)) on net o_NIC7A_RSV_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_NIC6C_RSV_R (in view: work.BP_4S104G5(verilog)) on net o_NIC6C_RSV_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bp_4s104g5_top.v":125:27:125:30|Tristate driver o_NIC6A_RSV_R (in view: work.BP_4S104G5(verilog)) on net o_NIC6A_RSV_R (in view: work.BP_4S104G5(verilog)) has its enable tied to GND.
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Net io_sda has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_bmc.v":9:7:9:19|Net io_sda has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":2:7:2:22|Net io_sda has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD1_LED0_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD1_LED1_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD_RSV1 has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD_RSV2 has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD_RSV3 has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD_RSV4 has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD_RSV5 has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_CPLD_RSV6 has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW0_SDB_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW1_SDB_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW2_SDB_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW3_SDB_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW0_UART_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW1_UART_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW2_UART_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_SW3_UART_RX_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_BMC_SW_UART_RX0_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO01A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO01C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO02A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO02C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO11A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO11C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO12A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO12C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO21A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO21C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO22A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO22C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO31A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO31C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO32A_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_MCIO32C_CB_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net io_I2C1_CPLD1_REG_SDA has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_I2C_RST0_R_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_I2C_RST1_R_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_I2C_RST2_R_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_I2C_RST3_R_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_I2C_RST4_7_R_N has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME1_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME2_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME3_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME4_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME1_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME2_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME3_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NVME4_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU1A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU1C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU2A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU2C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU3A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU3C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU4A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU4C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU5A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU5C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU6A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU6C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU7A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU7C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU8A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU8C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU1A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU1C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU2A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU2C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU3A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU3C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU4A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU4C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU5A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU5C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU6A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU6C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU7A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU7C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU8A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NPU8C_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC1A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC1C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC2A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC2C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC3A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC3C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC4A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC4C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC5A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC5C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC6A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC6C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC7A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC7C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC8A_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC8C_POWER_EN_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC1A_RSV_R has multiple drivers .
+@W: BN161 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\include\bp_4s104g5_va_port.v":22:7:22:16|Net o_NIC1C_RSV_R has multiple drivers .
+
+Only the first 100 messages of id 'BN161' are reported. To see all messages use 'report_messages -log D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synlog\BP_4S104G5_impl1_fpga_mapper.srr -id BN161' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN161} -count unlimited' in the Tcl shell.
+@W: BN132 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\pon_reset.v":43:0:43:5|Removing sequential instance pon_reset_inst.reset2_reg[2:0] because it is equivalent to instance pon_reset_inst.reset1_reg[2:0]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 260MB peak: 260MB)
+
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Found counter in view:work.BP_4S104G5(verilog) instance timer_gen_inst.usec_tmr[4:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Found counter in view:work.BP_4S104G5(verilog) instance timer_gen_inst.sec_tmr[14:0] 
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[55] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[54] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[53] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[52] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[51] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[50] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[49] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[48] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[47] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[46] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[45] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[44] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[43] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[42] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[41] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[40] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[39] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[38] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[37] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[36] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[35] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[34] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[33] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[32] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[31] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[30] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[29] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[28] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[27] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[26] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[25] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[24] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[23] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[22] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[21] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[20] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[17] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[16] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[15] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[14] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[13] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[12] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[11] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[10] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[9] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[8] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[7] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[6] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":90:2:90:7|Removing sequential instance po_r[4] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[55] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[54] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[53] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[52] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[51] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[50] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[49] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[48] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[47] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[46] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[45] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[44] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[43] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[42] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[41] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[40] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[39] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[38] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[37] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[36] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[35] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[34] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[33] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[32] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[31] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[30] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[29] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[28] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[27] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[26] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[25] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[24] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[23] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[22] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[21] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[20] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[17] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[16] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[15] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[14] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[13] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[12] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[11] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[10] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[9] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[8] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[7] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[6] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":98:2:98:7|Removing sequential instance po[4] (in view: work.s2p_slave_60s_6s_Z1(verilog)) because it does not drive other instances.
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\s2p_slave.v":80:2:80:7|Found counter in view:work.s2p_slave_60s_6s_Z1(verilog) instance cnt[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\sgpio_slave\p2s_slave.v":69:0:69:5|Found counter in view:work.p2s_slave_60s_6s(verilog) instance cnt[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\edge_delay.v":52:0:52:5|Found counter in view:work.edge_delay_6s_0_0(verilog) instance timer_cnt[5:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_bmc.v":112:0:112:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_write_byte_cnt[15:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_bmc.v":102:0:102:5|Found counter in view:work.i2c_slave_bmc_16s(verilog) instance r_read_byte_cnt[15:0] 
+@N: MO231 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Found counter in view:work.i2c_slave_basic0_3s_16s(verilog) instance r_timeout_cnt[5:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 263MB peak: 263MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 270MB peak: 270MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 271MB peak: 277MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 272MB peak: 277MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 272MB peak: 277MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 272MB peak: 277MB)
+
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Removing sequential instance timer_gen_inst.sec_tmr[14] (in view: work.BP_4S104G5(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\common\timer_gen_50mhz.v":82:0:82:5|Removing sequential instance timer_gen_inst.sec_tmr[13] (in view: work.BP_4S104G5(verilog)) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synlog\BP_4S104G5_impl1_fpga_mapper.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+
+Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 272MB peak: 277MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 311MB peak: 311MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:03s		     0.93ns		 568 /       390
+   2		0h:00m:03s		     0.93ns		 552 /       390
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 311MB peak: 312MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 312MB peak: 312MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 312MB peak: 312MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 312MB peak: 313MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 255MB peak: 313MB)
+
+Writing Analyst data base D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 311MB peak: 313MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\BP_4S104G5_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@W: BW150 :|Clock i2c_slave_bmc_16s|w_i2c_command_1_inferred_clock in set_clock_groups command cannot be found and will not be forward annotated
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 319MB peak: 319MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 319MB peak: 320MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 316MB peak: 320MB)
+
+@W: MT246 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\i2c_update\i2c_update.v":91:8:91:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"d:\odm mb switch\switch\cpld\bp_4s104g5\rtl\source\pll\pll_i25m_o50m_o25m.v":67:12:67:20|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock pll_i25M_o50M_o25M|CLKOP_inferred_clock with period 10.00ns. Please declare a user-defined clock on net pll_inst.clk_50m.
+@W: MT420 |Found inferred clock pll_i25M_o50M_o25M|CLKOS_inferred_clock with period 10.00ns. Please declare a user-defined clock on net pll_inst.clk_25m.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Fri Oct 31 16:45:19 2025
+#
+
+
+Top view:               BP_4S104G5
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 0.491
+
+                                            Requested     Estimated     Requested     Estimated               Clock        Clock          
+Starting Clock                              Frequency     Frequency     Period        Period        Slack     Type         Group          
+------------------------------------------------------------------------------------------------------------------------------------------
+pll_i25M_o50M_o25M|CLKOP_inferred_clock     100.0 MHz     168.7 MHz     10.000        5.929         4.071     inferred     (multiple)     
+pll_i25M_o50M_o25M|CLKOS_inferred_clock     100.0 MHz     105.2 MHz     10.000        9.509         0.491     inferred     (multiple)     
+System                                      100.0 MHz     373.6 MHz     10.000        2.676         7.324     system       system_clkgroup
+==========================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                            |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                 Ending                                   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                   System                                   |  10.000      7.324  |  No paths    -      |  No paths    -      |  No paths    -    
+System                                   pll_i25M_o50M_o25M|CLKOS_inferred_clock  |  10.000      1.320  |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock  pll_i25M_o50M_o25M|CLKOP_inferred_clock  |  10.000      4.071  |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOP_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock  |  Diff grp    -      |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  System                                   |  10.000      8.923  |  No paths    -      |  No paths    -      |  No paths    -    
+pll_i25M_o50M_o25M|CLKOS_inferred_clock  pll_i25M_o50M_o25M|CLKOS_inferred_clock  |  10.000      0.491  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: pll_i25M_o50M_o25M|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                        Starting                                                                                               Arrival          
+Instance                                Reference                                   Type         Pin     Net                                   Time        Slack
+                                        Clock                                                                                                                   
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+db_power_pg.mInst\[8\]\.out_i[8]        pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX      Q       w_p0v8_sw3_pwrgd_db                   1.180       4.071
+db_power_pg.mInst\[9\]\.out_i[9]        pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX      Q       w_p0v8_sw2_pwrgd_db                   1.180       4.071
+db_power_pg.mInst\[10\]\.out_i[10]      pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX      Q       w_p0v8_sw1_pwrgd_db                   1.180       4.071
+db_power_pg.mInst\[11\]\.out_i[11]      pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX      Q       w_p0v8_sw0_pwrgd_db                   1.180       4.071
+db_power_pg_mInst\[0\]\.nxt_s1io[0]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     IFS1P3DX     Q       db_power_pg.mInst\[0\]\.nxt_s1[0]     1.044       4.994
+db_power_pg_mInst\[1\]\.nxt_s1io[1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     IFS1P3DX     Q       db_power_pg.mInst\[1\]\.nxt_s1[1]     1.044       4.994
+db_power_pg_mInst\[2\]\.nxt_s1io[2]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     IFS1P3DX     Q       db_power_pg.mInst\[2\]\.nxt_s1[2]     1.044       4.994
+db_power_pg_mInst\[4\]\.nxt_s1io[4]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     IFS1P3DX     Q       db_power_pg.mInst\[4\]\.nxt_s1[4]     1.044       4.994
+db_power_pg_mInst\[5\]\.nxt_s1io[5]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     IFS1P3DX     Q       db_power_pg.mInst\[5\]\.nxt_s1[5]     1.044       4.994
+db_power_pg_mInst\[6\]\.nxt_s1io[6]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     IFS1P3DX     Q       db_power_pg.mInst\[6\]\.nxt_s1[6]     1.044       4.994
+================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                        Starting                                                                           Required          
+Instance                                Reference                                   Type        Pin     Net                Time         Slack
+                                        Clock                                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------
+edge_delay_p0v8_pg.timer_cnt[5]         pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       timer_cnt_s[5]     9.894        4.071
+edge_delay_p0v8_pg.timer_cnt[3]         pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       timer_cnt_s[3]     9.894        4.213
+edge_delay_p0v8_pg.timer_cnt[4]         pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       timer_cnt_s[4]     9.894        4.213
+edge_delay_p0v8_pg.timer_cnt[1]         pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       timer_cnt_s[1]     9.894        4.356
+edge_delay_p0v8_pg.timer_cnt[2]         pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1P3DX     D       timer_cnt_s[2]     9.894        4.356
+db_power_pg.mInst\[0\]\.cnt\[0\][1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       cnt\[0\]_4[1]      10.089       4.994
+db_power_pg.mInst\[0\]\.cnt\[0\][2]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       cnt\[0\]_4[2]      10.089       4.994
+db_power_pg.mInst\[1\]\.cnt\[1\][1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       cnt\[1\]_3[1]      10.089       4.994
+db_power_pg.mInst\[1\]\.cnt\[1\][2]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       cnt\[1\]_3[2]      10.089       4.994
+db_power_pg.mInst\[2\]\.cnt\[2\][1]     pll_i25M_o50M_o25M|CLKOP_inferred_clock     FD1S3DX     D       cnt\[2\]_3[1]      10.089       4.994
+=============================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         9.894
+
+    - Propagation time:                      5.824
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 4.071
+
+    Number of logic level(s):                5
+    Starting point:                          db_power_pg.mInst\[8\]\.out_i[8] / Q
+    Ending point:                            edge_delay_p0v8_pg.timer_cnt[5] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOP_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                      Pin      Pin               Arrival     No. of    
+Name                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------
+db_power_pg.mInst\[8\]\.out_i[8]                       FD1P3DX      Q        Out     1.180     1.180 r     -         
+w_p0v8_sw3_pwrgd_db                                    Net          -        -       -         -           5         
+edge_delay_p0v8_pg.un1_w_p0v8_sw0_pwrgd_db_1_i_0_i     ORCALUT4     A        In      0.000     1.180 r     -         
+edge_delay_p0v8_pg.un1_w_p0v8_sw0_pwrgd_db_1_i_0_i     ORCALUT4     Z        Out     1.265     2.445 r     -         
+un1_w_p0v8_sw0_pwrgd_db_1_i_0_i                        Net          -        -       -         -           8         
+edge_delay_p0v8_pg.timer_cnt_cry_0[0]                  CCU2D        A1       In      0.000     2.445 r     -         
+edge_delay_p0v8_pg.timer_cnt_cry_0[0]                  CCU2D        COUT     Out     1.544     3.989 r     -         
+timer_cnt_cry[0]                                       Net          -        -       -         -           1         
+edge_delay_p0v8_pg.timer_cnt_cry_0[1]                  CCU2D        CIN      In      0.000     3.989 r     -         
+edge_delay_p0v8_pg.timer_cnt_cry_0[1]                  CCU2D        COUT     Out     0.143     4.132 r     -         
+timer_cnt_cry[2]                                       Net          -        -       -         -           1         
+edge_delay_p0v8_pg.timer_cnt_cry_0[3]                  CCU2D        CIN      In      0.000     4.132 r     -         
+edge_delay_p0v8_pg.timer_cnt_cry_0[3]                  CCU2D        COUT     Out     0.143     4.275 r     -         
+timer_cnt_cry[4]                                       Net          -        -       -         -           1         
+edge_delay_p0v8_pg.timer_cnt_s_0[5]                    CCU2D        CIN      In      0.000     4.275 r     -         
+edge_delay_p0v8_pg.timer_cnt_s_0[5]                    CCU2D        S0       Out     1.549     5.824 r     -         
+timer_cnt_s[5]                                         Net          -        -       -         -           1         
+edge_delay_p0v8_pg.timer_cnt[5]                        FD1P3DX      D        In      0.000     5.824 r     -         
+=====================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: pll_i25M_o50M_o25M|CLKOS_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                                   Starting                                                                                Arrival          
+Instance                                                           Reference                                   Type        Pin     Net                     Time        Slack
+                                                                   Clock                                                                                                    
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[1]        1.352       0.491
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[5]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[5]      1.321       0.521
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[8]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[8]      0.972       0.582
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[9]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[9]      0.972       0.582
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[14]                pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[14]     0.972       0.582
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[2]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[2]        1.299       0.799
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[0]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[0]        1.296       0.803
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[4]                 pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command[4]        1.280       0.819
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_RW     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1P3DX     Q       w_WR                    1.392       1.036
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[12]                pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     Q       w_i2c_command_0[12]     1.044       1.567
+============================================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                        Starting                                                                                         Required          
+Instance                                                Reference                                   Type        Pin     Net                              Time         Slack
+                                                        Clock                                                                                                              
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.r_i2c_data_in[6]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_155[6]             10.089       0.491
+bmc_cpld_i2c_ram.r_i2c_data_in[7]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_155[7]             10.089       0.491
+bmc_cpld_i2c_ram.r_i2c_data_in[4]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_155[4]             10.089       0.582
+bmc_cpld_i2c_ram.r_i2c_data_in[5]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_155[5]             10.089       0.582
+bmc_cpld_i2c_ram.r_i2c_data_in[0]                       pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3DX     D       r_i2c_data_in_155[0]             10.089       0.758
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un1_r_i2c_command_temp_1[15]     10.089       1.036
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[13]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un1_r_i2c_command_temp_1[13]     10.089       1.179
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[14]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un1_r_i2c_command_temp_1[14]     10.089       1.179
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[11]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un1_r_i2c_command_temp_1[11]     10.089       1.322
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[12]     pll_i25M_o50M_o25M|CLKOS_inferred_clock     FD1S3BX     D       un1_r_i2c_command_temp_1[12]     10.089       1.322
+===========================================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      9.598
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     0.491
+
+    Number of logic level(s):                8
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1] / Q
+    Ending point:                            bmc_cpld_i2c_ram.r_i2c_data_in[7] / D
+    The start point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                      Pin      Pin               Arrival     No. of    
+Name                                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[1]     FD1S3BX      Q        Out     1.352     1.352 r     -         
+w_i2c_command[1]                                       Net          -        -       -         -           49        
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_a2_7[6]      ORCALUT4     A        In      0.000     1.352 r     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_a2_7[6]      ORCALUT4     Z        Out     1.273     2.625 f     -         
+N_354                                                  Net          -        -       -         -           9         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_a2_0[6]      ORCALUT4     A        In      0.000     2.625 f     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_a2_0[6]      ORCALUT4     Z        Out     1.273     3.897 f     -         
+N_374                                                  Net          -        -       -         -           9         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_a3_19[7]     ORCALUT4     A        In      0.000     3.897 f     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_a3_19[7]     ORCALUT4     Z        Out     1.017     4.914 f     -         
+N_251                                                  Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_0[7]         ORCALUT4     A        In      0.000     4.914 f     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_0[7]         ORCALUT4     Z        Out     1.017     5.931 f     -         
+r_i2c_data_in_155_0_iv_0_0[7]                          Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_3_1[7]       ORCALUT4     C        In      0.000     5.931 f     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_3_1[7]       ORCALUT4     Z        Out     1.017     6.948 r     -         
+r_i2c_data_in_155_0_iv_0_3_1[7]                        Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_3[7]         ORCALUT4     C        In      0.000     6.948 r     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_3[7]         ORCALUT4     Z        Out     1.017     7.965 f     -         
+r_i2c_data_in_155_0_iv_0_3[7]                          Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_15[7]        ORCALUT4     B        In      0.000     7.965 f     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0_15[7]        ORCALUT4     Z        Out     1.017     8.981 f     -         
+r_i2c_data_in_155_0_iv_0_15[7]                         Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0[7]           ORCALUT4     C        In      0.000     8.981 f     -         
+bmc_cpld_i2c_ram.r_i2c_data_in_155_0_iv_0[7]           ORCALUT4     Z        Out     0.617     9.598 f     -         
+r_i2c_data_in_155[7]                                   Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.r_i2c_data_in[7]                      FD1S3DX      D        In      0.000     9.598 f     -         
+=====================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                        Starting                                                  Arrival          
+Instance                                                Reference     Type        Pin     Net                     Time        Slack
+                                                        Clock                                                                      
+-----------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[1]      System        FD1S1AY     Q       w_i2c_command_0[1]      1.108       1.320
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[2]      System        FD1S1AY     Q       w_i2c_command_0[2]      1.044       1.527
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[3]      System        FD1S1AY     Q       w_i2c_command_0[3]      1.044       1.527
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[4]      System        FD1S1AY     Q       w_i2c_command_0[4]      1.044       1.670
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[5]      System        FD1S1AY     Q       w_i2c_command[5]        1.044       1.670
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[6]      System        FD1S1AY     Q       w_i2c_command[6]        1.044       1.813
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[7]      System        FD1S1AY     Q       w_i2c_command[7]        1.044       1.813
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[8]      System        FD1S1AY     Q       w_i2c_command[8]        1.044       1.956
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[9]      System        FD1S1AY     Q       w_i2c_command[9]        1.044       1.956
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[10]     System        FD1S1AY     Q       w_i2c_command_0[10]     1.044       2.098
+===================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                                        Starting                                                           Required          
+Instance                                                Reference     Type        Pin     Net                              Time         Slack
+                                                        Clock                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]     System        FD1S3BX     D       un1_r_i2c_command_temp_1[15]     10.089       1.320
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[13]     System        FD1S3BX     D       un1_r_i2c_command_temp_1[13]     10.089       1.463
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[14]     System        FD1S3BX     D       un1_r_i2c_command_temp_1[14]     10.089       1.463
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[11]     System        FD1S3BX     D       un1_r_i2c_command_temp_1[11]     10.089       1.606
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[12]     System        FD1S3BX     D       un1_r_i2c_command_temp_1[12]     10.089       1.606
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[9]      System        FD1S3BX     D       un1_r_i2c_command_temp_1[9]      10.089       1.749
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[10]     System        FD1S3BX     D       un1_r_i2c_command_temp_1[10]     10.089       1.749
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[7]      System        FD1S3BX     D       un1_r_i2c_command_temp_1[7]      10.089       1.892
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[8]      System        FD1S3BX     D       un1_r_i2c_command_temp_1[8]      10.089       1.892
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[5]      System        FD1S3BX     D       un1_r_i2c_command_temp_1[5]      10.089       2.034
+=============================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      8.768
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 1.320
+
+    Number of logic level(s):                11
+    Starting point:                          bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[1] / Q
+    Ending point:                            bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15] / D
+    The start point is clocked by            System [rising] on pin CK
+    The end   point is clocked by            pll_i25M_o50M_o25M|CLKOS_inferred_clock [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                                                                        Pin      Pin               Arrival     No. of    
+Name                                                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------------------
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.w_i2c_command[1]                       FD1S1AY      Q        Out     1.108     1.108 r     -         
+w_i2c_command_0[1]                                                       Net          -        -       -         -           3         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_4_cry_1_0     CCU2D        A1       In      0.000     1.108 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_4_cry_1_0     CCU2D        COUT     Out     1.544     2.652 r     -         
+un1_r_i2c_command_temp_0_4_cry_1                                         Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_4_cry_2_0     CCU2D        CIN      In      0.000     2.652 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_4_cry_2_0     CCU2D        S0       Out     1.549     4.201 r     -         
+un1_r_i2c_command_temp_0_4[2]                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_1_0       CCU2D        A1       In      0.000     4.201 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_1_0       CCU2D        COUT     Out     1.544     5.746 r     -         
+un1_r_i2c_command_temp_0_cry_2                                           Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_3_0       CCU2D        CIN      In      0.000     5.746 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_3_0       CCU2D        COUT     Out     0.143     5.889 r     -         
+un1_r_i2c_command_temp_0_cry_4                                           Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_5_0       CCU2D        CIN      In      0.000     5.889 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_5_0       CCU2D        COUT     Out     0.143     6.031 r     -         
+un1_r_i2c_command_temp_0_cry_6                                           Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_7_0       CCU2D        CIN      In      0.000     6.031 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_7_0       CCU2D        COUT     Out     0.143     6.174 r     -         
+un1_r_i2c_command_temp_0_cry_8                                           Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_9_0       CCU2D        CIN      In      0.000     6.174 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_9_0       CCU2D        COUT     Out     0.143     6.317 r     -         
+un1_r_i2c_command_temp_0_cry_10                                          Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_11_0      CCU2D        CIN      In      0.000     6.317 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_11_0      CCU2D        COUT     Out     0.143     6.460 r     -         
+un1_r_i2c_command_temp_0_cry_12                                          Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_13_0      CCU2D        CIN      In      0.000     6.460 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_cry_13_0      CCU2D        COUT     Out     0.143     6.603 r     -         
+un1_r_i2c_command_temp_0_cry_14                                          Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_s_15_0        CCU2D        CIN      In      0.000     6.603 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_0_s_15_0        CCU2D        S0       Out     1.549     8.152 r     -         
+un1_r_i2c_command_temp_10[15]                                            Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_1_m[15]         ORCALUT4     B        In      0.000     8.152 r     -         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.un1_r_i2c_command_temp_1_m[15]         ORCALUT4     Z        Out     0.617     8.768 r     -         
+un1_r_i2c_command_temp_1[15]                                             Net          -        -       -         -           1         
+bmc_cpld_i2c_ram.i2c_slave_bmc_u0.r_i2c_command[15]                      FD1S3BX      D        In      0.000     8.768 r     -         
+=======================================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 317MB peak: 320MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 317MB peak: 320MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo3lf_6900c-5
+
+Register bits: 412 of 54912 (1%)
+Latch bits:      22
+PIC Latch:       0
+I/O cells:       326
+
+
+Details:
+BB:             3
+CCU2D:          67
+EFB:            1
+EHXPLLJ:        1
+FD1P3AX:        8
+FD1P3BX:        36
+FD1P3DX:        173
+FD1S1AY:        16
+FD1S1D:         6
+FD1S3AX:        2
+FD1S3BX:        45
+FD1S3DX:        129
+GSR:            1
+IB:             122
+IFS1P3BX:       1
+IFS1P3DX:       17
+INV:            13
+OB:             87
+OBZ:            114
+OFS1P3DX:       1
+ORCALUT4:       544
+OSCH:           1
+PFUMX:          1
+PUR:            1
+VHI:            14
+VLO:            14
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 137MB peak: 320MB)
+
+Process took 0h:00m:05s realtime, 0h:00m:05s cputime
+# Fri Oct 31 16:45:20 2025
+
+###########################################################]

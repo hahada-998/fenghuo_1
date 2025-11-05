@@ -1,0 +1,5 @@
+#Start recording tcl command: 10/25/2025 14:55:25
+#Project Location: D:/ODM MB SWITCH/MB/09/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/ODM MB SWITCH/MB/09/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Synthesis -impl impl1
+#Stop recording: 10/25/2025 14:56:40

@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "16:09:27    29-Oct-2025",
+	"Working Directory" : "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/impl1",
+	"Install" : "C:/lscc/diamond/3.14/synpbase"
+},
+"impl1" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "16:09:10",
+   "Runtime" : "17s",
+   "Executable Run Time" : "16s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "16:09:10",
+      "Runtime" : "17s",
+      "Executable Run Time" : "16s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "16:09:10",
+         "Runtime" : "11s",
+         "Executable Run Time" : "10s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "16:09:10",
+            "Runtime" : "09s",
+            "Executable Run Time" : "08s",
+            "compiler" : {
+               "executable" : "bin64/c_hdl.exe",
+               "Run Directory" : "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "16:09:10",
+               "Run Time" : "09s",
+               "Exe Run Time" : "08s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin64/syn_nfilter.exe",
+               "Run Directory" : "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "16:09:19",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin64/m_gen_lattice.exe",
+            "Run Directory" : "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/impl1",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "16:09:19",
+            "Run Time" : "02s",
+            "Exe Run Time" : "02s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "16:09:21",
+         "Runtime" : "06s",
+         "Executable Run Time" : "06s",
+         "fpga_mapper" : {
+            "executable" : "bin64/m_gen_lattice.exe",
+            "Run Directory" : "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/impl1",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Has Errors" : "no",
+            "Run Start Time" : "16:09:21",
+            "Run Time" : "06s",
+            "Exe Run Time" : "06s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

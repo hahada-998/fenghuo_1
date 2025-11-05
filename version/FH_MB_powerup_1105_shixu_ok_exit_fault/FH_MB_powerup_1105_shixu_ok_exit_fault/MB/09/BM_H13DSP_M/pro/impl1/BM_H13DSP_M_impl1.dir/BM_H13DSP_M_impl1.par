@@ -1,0 +1,28 @@
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Nov 05 21:00:05 2025
+
+C:/lscc/diamond/3_14/ispfpga\bin\nt64\par -f BM_H13DSP_M_impl1.p2t
+BM_H13DSP_M_impl1_map.ncd BM_H13DSP_M_impl1.dir BM_H13DSP_M_impl1.prf -gui
+-msgset
+D:/FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc/MB/09/BM_H13DSP_M/pro/promote.xml
+
+
+Preference file: BM_H13DSP_M_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            8.298        0            0.304        0            40           Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 40 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

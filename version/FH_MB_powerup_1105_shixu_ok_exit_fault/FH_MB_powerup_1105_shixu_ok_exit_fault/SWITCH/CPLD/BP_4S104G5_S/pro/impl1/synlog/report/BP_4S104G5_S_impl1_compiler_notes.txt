@@ -1,0 +1,106 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":39:32:39:37|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":65:32:65:37|Removing redundant assignment.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1124:7:1124:9|Synthesizing module VLO in library work.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1730:7:1730:13|Synthesizing module EHXPLLJ in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":15:7:15:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":93:54:93:61|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":94:54:94:60|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":157:36:157:44|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":158:41:158:47|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":159:41:159:47|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":160:41:160:49|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":161:41:161:48|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":179:68:179:77|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\timer_gen_50mhz.v":180:63:180:71|Removing redundant assignment.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1793:7:1793:10|Synthesizing module OSCH in library work.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1120:7:1120:9|Synthesizing module VHI in library work.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":82:7:82:8|Synthesizing module BB in library work.
+@N: CG364 :"C:\lscc\diamond\3.14\synpbase\lib\lucent\machxo2.v":1800:7:1800:9|Synthesizing module EFB in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\I2C_UPDATE\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":18:7:18:15|Synthesizing module s2p_slave in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":25:7:25:17|Synthesizing module UART_MASTER in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":226:71:226:80|Removing redundant assignment.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":9:7:9:19|Synthesizing module i2c_slave_bmc in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":5:7:5:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+@N: CG364 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":22:7:22:18|Synthesizing module BP_4S104G5_S in library work.
+@N: CG179 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\BP_4S104G5_S_TOP.v":525:34:525:59|Removing redundant assignment.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":52:8:52:28|Input i_SCPLD_SGPIO_DATA_IN is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":164:8:164:23|Input i_NVME1_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":165:8:165:23|Input i_NVME1_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":166:8:166:23|Input i_NVME2_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":167:8:167:23|Input i_NVME2_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":168:8:168:23|Input i_NVME3_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":169:8:169:23|Input i_NVME3_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":170:8:170:23|Input i_NVME4_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":171:8:171:23|Input i_NVME4_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":182:8:182:23|Input i_NPU1A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":183:8:183:23|Input i_NPU1C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":184:8:184:23|Input i_NPU2A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":185:8:185:23|Input i_NPU2C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":186:8:186:23|Input i_NPU3A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":187:8:187:23|Input i_NPU3C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":188:8:188:23|Input i_NPU4A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":189:8:189:23|Input i_NPU4C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":190:8:190:23|Input i_NPU5A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":191:8:191:23|Input i_NPU5C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":192:8:192:23|Input i_NPU6A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":193:8:193:23|Input i_NPU6C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":194:8:194:23|Input i_NPU7A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":195:8:195:23|Input i_NPU7C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":196:8:196:23|Input i_NPU8A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":197:8:197:23|Input i_NPU8C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":203:8:203:23|Input i_NIC1A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":204:8:204:23|Input i_NIC1A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":205:8:205:23|Input i_NIC1C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":206:8:206:23|Input i_NIC1C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":207:8:207:23|Input i_NIC2A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":208:8:208:23|Input i_NIC2A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":209:8:209:23|Input i_NIC2C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":210:8:210:23|Input i_NIC2C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":211:8:211:23|Input i_NIC3A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":212:8:212:23|Input i_NIC3A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":213:8:213:23|Input i_NIC3C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":214:8:214:23|Input i_NIC3C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":215:8:215:23|Input i_NIC4A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":216:8:216:23|Input i_NIC4A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":217:8:217:23|Input i_NIC4C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":218:8:218:23|Input i_NIC4C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":219:8:219:23|Input i_NIC5A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":220:8:220:23|Input i_NIC5A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":221:8:221:23|Input i_NIC5C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":222:8:222:23|Input i_NIC5C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":223:8:223:23|Input i_NIC6A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":224:8:224:23|Input i_NIC6A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":225:8:225:23|Input i_NIC6C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":226:8:226:23|Input i_NIC6C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":227:8:227:23|Input i_NIC7A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":228:8:228:23|Input i_NIC7A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":229:8:229:23|Input i_NIC7C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":230:8:230:23|Input i_NIC7C_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":231:8:231:23|Input i_NIC8A_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":232:8:232:23|Input i_NIC8A_CB_ID1_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":233:8:233:23|Input i_NIC8C_CB_ID0_R is unused.
+@N: CL159 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\../include\BP_4S104G5_VA_S_port.v":234:8:234:23|Input i_NIC8C_CB_ID1_R is unused.
+@N: CL201 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+@N: CL201 :"D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5_S\rtl\source\uart\old\uart_master.v":94:0:94:5|Trying to extract state machine for register curr_state.
+@N|Running in 64-bit mode
+

@@ -1,0 +1,1 @@
+C:/lscc/diamond/3.10_x64/bin/nt64/moduleparser.exe -PROJ asda11 -I D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/pro/../rtl/include -pf C:/lscc/diamond/3.10_x64/cae_library/synthesis/vhdl/machxo3l.vhd -lib machxo3l -pkg C:/lscc/diamond/3.10_x64/cae_library/vhdl_packages/vdbs -lst D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/pro/test_11/wea12/asda11/source_files.lst

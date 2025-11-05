@@ -1,0 +1,1 @@
+C:/studyware/lattice_diamond_3_14/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 786432 work.pwrseq_tb -quiet -auto_acc_if_foreign -work work -allow_unnamed -o _opt1 -id 1-6805cabd4893-69048374-30b-7b24 +__design_bin_path+C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3

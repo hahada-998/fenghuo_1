@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>BM_H13DSP_M|i_CPLD_ESPI_CLK</data>
+<data>100.0 MHz</data>
+<data>58.9 MHz</data>
+<data>-3.493</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOP_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>121.1 MHz</data>
+<data>1.744</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOS_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>94.6 MHz</data>
+<data>-0.570</data>
+</row>
+<row>
+<data>pwrseq_slave_Z3|reg_pwr_btn_l_derived_clock</data>
+<data>100.0 MHz</data>
+<data>601.6 MHz</data>
+<data>8.338</data>
+</row>
+<row>
+<data>System</data>
+<data>100.0 MHz</data>
+<data>373.6 MHz</data>
+<data>7.324</data>
+</row>
+</report_table>

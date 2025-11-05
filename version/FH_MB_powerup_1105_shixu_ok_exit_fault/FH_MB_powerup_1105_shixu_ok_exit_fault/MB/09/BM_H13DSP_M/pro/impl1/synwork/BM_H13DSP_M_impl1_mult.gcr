@@ -1,0 +1,179 @@
+i pll_inst.CLKOS_i
+m 0 0
+u 149 595
+n ckid0_0 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_state[19].C} Clock source is invalid for GCC
+p {t:pll_inst.PLLInst_0.CLKOS}{t:pll_inst.CLKOS_inferred_clock.I[0]}{t:pll_inst.CLKOS_inferred_clock.OUT[0]}{p:pll_inst.CLKOS}{t:pll_inst.CLKOS}{t:bmc_cpld_i2c_ram_u0.i_clk}{p:bmc_cpld_i2c_ram_u0.i_clk}{t:bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0].C}
+e ckid0_1 {t:bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0].C} dffr
+d ckid0_2 {t:pll_inst.PLLInst_0.CLKOS} EHXPLLJ Clock source is invalid for GCC
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1_i
+m 0 0
+u 16 16
+n ckid0_3 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C} Clock source is invalid for GCC
+p {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT}{t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C}
+e ckid0_3 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C} lat
+d ckid0_3 {t:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT} and Unable to find a clock in input cone
+i pll_inst.CLKOP_i
+m 0 0
+u 343 1569
+n ckid0_4 {t:pvt_gpi_4u_gpu_zt2_inst.bit_idx_out[5:0].C} Clock source is invalid for GCC
+p {t:pll_inst.PLLInst_0.CLKOP}{t:pll_inst.CLKOP_inferred_clock.I[0]}{t:pll_inst.CLKOP_inferred_clock.OUT[0]}{p:pll_inst.CLKOP}{t:pll_inst.CLKOP}{t:r_switch2_mode[2:0].C}
+e ckid0_5 {t:r_switch2_mode[2:0].C} dffse
+d ckid0_6 {t:pll_inst.PLLInst_0.CLKOP} EHXPLLJ Clock source is invalid for GCC
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1_i
+m 0 0
+u 16 16
+n ckid0_7 {t:bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C} Clock source is invalid for GCC
+p {t:bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT}{t:bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C}
+e ckid0_7 {t:bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15].C} lat
+d ckid0_7 {t:bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT} and Unable to find a clock in input cone
+i i_CPLD_ESPI_CLK
+m 0 0
+u 68 176
+p {p:i_CPLD_ESPI_CLK}{t:bios_espi_link.ESPI_CLK}{p:bios_espi_link.ESPI_CLK}{t:bios_espi_link.current_state[31].C}
+e ckid0_8 {t:bios_espi_link.current_state[31].C} dffr
+c ckid0_8 {p:i_CPLD_ESPI_CLK} port Unsupported/too complex instance on clock path
+i pwrseq_master_inst.fault_clear_ns_uclk
+m 0 0
+u 1 1
+n ckid0_9 {t:pwrseq_master_inst.cmu_fault_clear.C} Clock source is invalid for GCC
+p {t:pwrseq_master_inst.fault_clear_ns_0_uclk.OUT}{t:pwrseq_master_inst.cmu_fault_clear.C}
+e ckid0_9 {t:pwrseq_master_inst.cmu_fault_clear.C} dffr
+d ckid0_9 {t:pwrseq_master_inst.fault_clear_ns_0_uclk.OUT} or Clock source is invalid for GCC
+i pwrseq_slave_inst.reg_pwr_btn_l_i
+m 0 0
+u 2 2
+n ckid0_10 {t:cpu_module_u1.r_p0_slp_s5_n.C} Derived clock on input (not legal for GCC)
+p {t:pwrseq_slave_inst.reg_pwr_btn_l.Q[0]}{t:pwrseq_slave_inst.reg_pwr_btn_l_derived_clock.I[0]}{t:pwrseq_slave_inst.reg_pwr_btn_l_derived_clock.OUT[0]}{p:pwrseq_slave_inst.reg_pwr_btn_l}{t:pwrseq_slave_inst.reg_pwr_btn_l}{t:un1_o_P1_PWR_BTN_N.I[0]}{t:un1_o_P1_PWR_BTN_N.OUT[0]}{t:cpu_module_u1.i_p0_pwr_btn_n}{p:cpu_module_u1.i_p0_pwr_btn_n}{t:cpu_module_u1.un1_i_p0_pwr_btn_n.I[0]}{t:cpu_module_u1.un1_i_p0_pwr_btn_n.OUT[0]}{t:cpu_module_u1.r_p0_slp_s5_n.C}
+e ckid0_10 {t:cpu_module_u1.r_p0_slp_s5_n.C} dffr
+d ckid0_11 {t:pwrseq_slave_inst.reg_pwr_btn_l.Q[0]} dffe Derived clock on input (not legal for GCC)
+i pll_inst.LOCK
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_RW
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[15]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[14]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[13]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[12]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[11]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[10]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[9]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[8]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[7]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[6]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[5]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[4]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[3]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[2]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[0]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[1]
+m 0 0
+u 0 0
+i bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_addr_hit
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.i2c_slave_basic0_u0.r_I2C_RW
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[15]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[14]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[13]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[12]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[11]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[10]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[9]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[8]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[7]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[6]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[5]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[4]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[3]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[2]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[0]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_write_byte_cnt[1]
+m 0 0
+u 0 0
+i bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.r_addr_hit
+m 0 0
+u 0 0
+i pwrseq_master_inst.state[33]
+m 0 0
+u 0 0
+i pwrseq_master_inst.dc_on_wait_complete
+m 0 0
+u 0 0
+i pwrseq_master_inst.turn_system_on
+m 0 0
+u 0 0
+i pwrseq_slave_inst.reg_s5dev_pwren_request
+m 0 0
+u 0 0
+i pwrseq_master_inst.s5_devices_on_wait_complete
+m 0 0
+u 0 0
+i pwrseq_master_inst.state[8]
+m 0 0
+u 0 0
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

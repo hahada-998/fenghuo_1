@@ -1,0 +1,27 @@
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+0 non-gated/non-generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+3 gated/generated clock tree(s) driving 2034 clock pin(s) of sequential element(s)
+0 instances converted, 2034 sequential instances remain driven by gated/generated clocks
+
+=============================================================================================== Gated/Generated Clocks ================================================================================================
+Clock Tree ID     Driving Element                                              Drive Element Type     Unconverted Fanout     Sample Instance                                            Explanation                    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       pll_inst.PLLInst_0.CLKOS                                     EHXPLLJ                258                    bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0]                     Clock source is invalid for GCC
+@KP:ckid0_3       bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT     and                    16                     bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC
+@KP:ckid0_5       pll_inst.PLLInst_0.CLKOP                                     EHXPLLJ                1760                   mcpld_to_scpld_data_filter[26:19]                          Clock source is invalid for GCC
+=======================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+

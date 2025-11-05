@@ -1,0 +1,132 @@
+@W: CG1337 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1086:8:1086:27|Net w_p0_mciop0a_slot_id is not declared.
+@W: CG1337 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1087:8:1087:27|Net w_p0_mciop0c_slot_id is not declared.
+@W: CL265 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@W: CL118 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":133:25:133:109|Latch generated from always block for signal w_i2c_command[15:0]; possible missing assignment in an if or case statement.
+@W: CG133 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":326:10:326:19|Object r_reg_0011 is declared but not assigned. Either assign a value or remove the declaration.
+@W: CL271 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":701:0:701:5|Pruning unused bits 7 to 2 of r_reg_000d[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":187:10:187:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":188:10:188:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":189:10:189:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":190:9:190:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":191:10:191:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":192:10:192:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_ocp1_prsnt_n on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_CPU1_PGD_PVCCD on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_PGD_PVNN_MAIN_CPU1 on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_PGD_PVPP_HBM_CPU1 on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":317:7:317:23|Removing wire o_PCIE_SATA_RST_N, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":378:7:378:26|Removing wire o_CPLD1_CPLD2_RSV1_R, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":43:5:43:12|Removing wire clk_2p5m, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":57:5:57:14|Removing wire t16ms_tick, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":241:8:241:21|Removing wire db_i_ps1_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":242:8:242:22|Removing wire db_i_ps1_dcok_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":243:8:243:25|Removing wire db_i_ps1_smb_alert, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":244:8:244:24|Removing wire db_i_ps1_acfail_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":245:8:245:21|Removing wire db_i_ps2_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":246:8:246:22|Removing wire db_i_ps2_dcok_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":247:8:247:25|Removing wire db_i_ps2_smb_alert, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":248:8:248:24|Removing wire db_i_ps2_acfail_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":249:8:249:21|Removing wire db_i_ps3_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":250:8:250:21|Removing wire db_i_ps4_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":251:8:251:26|Removing wire db_i_pal_ocp1_pwrgd, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":252:8:252:24|Removing wire db_i_pal_ocp1_pgd, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":253:8:253:23|Removing wire db_i_uid_sw_in_n, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":256:8:256:27|Removing wire w_PWRGD_P12V_PS3_PS4, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":258:8:258:23|Removing wire w_PS3_PS4_ACFAIL, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":325:8:325:23|Removing wire w_p12v_slot_3_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":326:8:326:23|Removing wire w_p12v_slot_4_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":327:8:327:23|Removing wire w_p12v_slot_5_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":328:8:328:23|Removing wire w_p12v_slot_6_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":329:8:329:23|Removing wire w_p12v_slot_7_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":330:8:330:23|Removing wire w_p12v_slot_8_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":331:8:331:23|Removing wire w_p12v_slot_9_on, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":332:8:332:25|Removing wire w_p12v_slot_3_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":333:8:333:25|Removing wire w_p12v_slot_4_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":334:8:334:25|Removing wire w_p12v_slot_5_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":335:8:335:25|Removing wire w_p12v_slot_6_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":336:8:336:25|Removing wire w_p12v_slot_7_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":337:8:337:25|Removing wire w_p12v_slot_8_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":338:8:338:25|Removing wire w_p12v_slot_9_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":346:8:346:30|Removing wire w_pal_ocp1_mainpwr_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":347:8:347:29|Removing wire w_pal_ocp1_auxpwr_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":348:8:348:22|Removing wire w_ps3_p12v_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":349:8:349:22|Removing wire w_ps4_p12v_on_r, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":517:10:517:22|Removing wire pvti_ss_count, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":627:15:627:23|Removing wire w_bf_type, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":842:8:842:13|Removing wire w_SW_1, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":844:8:844:13|Removing wire w_SW_3, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":845:8:845:13|Removing wire w_SW_4, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":846:8:846:13|Removing wire w_SW_5, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":847:8:847:13|Removing wire w_SW_6, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":848:8:848:13|Removing wire w_SW_7, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":849:8:849:13|Removing wire w_SW_8, as there is no assignment to it.
+@W: CG360 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|Removing wire w_ocp1_prsnt_invert, as there is no assignment to it.
+@W: CL318 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":317:7:317:23|*Output o_PCIE_SATA_RST_N has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":378:7:378:26|*Output o_CPLD1_CPLD2_RSV1_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1904:48:1904:76|Removing instance edge_delay_slot_9_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1896:48:1896:76|Removing instance edge_delay_slot_8_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1888:48:1888:76|Removing instance edge_delay_slot_7_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1880:48:1880:76|Removing instance edge_delay_slot_6_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1871:48:1871:76|Removing instance edge_delay_slot_5_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1862:48:1862:76|Removing instance edge_delay_slot_4_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1853:48:1853:76|Removing instance edge_delay_slot_3_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":159:11:159:21|Removing instance mClkDivTree because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1765:0:1765:5|Pruning unused register r_pal_mb_switch_en_n_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1765:0:1765:5|Pruning unused register r_pal_biosrom_io11. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1706:0:1706:5|Pruning unused register r_led_pwrbtn_gr. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1706:0:1706:5|Pruning unused register r_led_pwrbtn_amb. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1664:0:1664:5|Pruning unused register r_pal_led_hel_red_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1664:0:1664:5|Pruning unused register r_pal_led_hel_gr_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1608:0:1608:5|Pruning unused register r_BMC_UID_CPLD_N. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1608:0:1608:5|Pruning unused register r_uid_led_ctl[7:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused register mb_sgpio_fail. Make sure that there are no unused intermediate registers.
+@W: CL271 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 191 to 27 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 18 to 17 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 15 to 13 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 11 to 9 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL265 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Removing unused bit 7 of mcpld_to_scpld_data_filter[191:0]. Either assign all bits or reduce the width of the signal.
+@W: CL271 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 5 to 2 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL265 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Removing unused bit 0 of mcpld_to_scpld_data_filter[191:0]. Either assign all bits or reduce the width of the signal.
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":94:21:94:24|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":124:41:124:41|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":124:41:124:41|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":94:21:94:24|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL156 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":622:13:622:35|*Input scpld_to_mcpld_p2s_data[199:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":253:8:253:23|*Input db_i_uid_sw_in_n to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|*Input w_ocp1_prsnt_invert to expression [or] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|*Input w_ocp1_prsnt_invert to expression [mux] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|*Input w_ocp1_prsnt_invert to expression [mux] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL190 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\ODM MB SWITCH_002_powerup_for_test\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+

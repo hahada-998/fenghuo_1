@@ -1,0 +1,253 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt1
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test2
+T_opt
+!s110 1762344019
+VS^5N3gofkdN6fo_2@`QZG2
+Z4 04 9 4 work pwrseq_tb fast 0
+=1-6805cabd4893-690b3c52-2f4-afb8
+R1
+Z5 !s12f OEM25U40 
+Z6 !s12b OEM100
+Z7 !s124 OEM100
+Z8 !s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z9 tCvgOpt 0
+n@_opt
+Z10 OL;O;2024.2;79
+T_opt1
+!s110 1761903477
+VBik`LDHE9<GjfbQ>i>^cj1
+R4
+=1-6805cabd4893-69048374-30b-7b24
+R1
+R5
+R6
+R7
+R8
+o-quiet -auto_acc_if_foreign -work work
+R9
+n@_opt1
+R10
+R3
+vedge_delay
+2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
+Z11 !s110 1762161066
+!i10b 1
+!s100 =z6Vm5?zUVg_68dEMQ_QP2
+I=e;X8?>Ec[GRfmo4[Of2k3
+Z12 dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3
+w1669777000
+8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
+FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
+!i122 121
+L0 23 45
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z15 !s108 1762161066.000000
+!s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v|
+!i113 0
+Z16 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+vEdge_Detect
+2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
+R11
+!i10b 1
+!s100 WXLf7e93^7?fUm2RE33m43
+IO2[jMNG5nU[k2LEF:j`O90
+R12
+w1669967036
+8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
+FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
+!i122 122
+L0 9 68
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v|
+!i113 0
+R16
+R9
+n@edge_@detect
+vfault_detectB_chklive
+2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
+R11
+!i10b 1
+!s100 VA4c5XaQS[NDXTbS;=<@J2
+IPeF?HZK5a<;mP76Uk2HaL1
+R12
+w1669776856
+8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
+FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
+!i122 123
+L0 19 62
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v|
+!i113 0
+R16
+R9
+nfault_detect@b_chklive
+vpwrseq_master
+2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v
+Z17 !s110 1762344001
+!i10b 1
+!s100 Ha:0:6]]fd1nPSYJkzC2J1
+INz^De04?H]FY=?fbJLMcO1
+R12
+w1762335245
+8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v
+FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v
+!i122 131
+L0 71 1313
+R13
+R14
+r1
+!s85 0
+31
+Z18 !s108 1762344001.000000
+!s107 pwrseq_define.v|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_master.v|
+!i113 0
+R16
+R9
+vpwrseq_slave
+2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v
+R17
+!i10b 1
+!s100 6KA[UG;g>P7TUPkGZ`H4o1
+IzEXF3><`EZM51ZJNNamGh2
+R12
+w1762343989
+8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v
+FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v
+!i122 132
+L0 63 1245
+R13
+R14
+r1
+!s85 0
+31
+R18
+!s107 pwrseq_define.v|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_slave.v|
+!i113 0
+R16
+R9
+vpwrseq_tb
+2C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1762329430
+!i10b 1
+!s100 DkBa8QSgHSUJd@lhnf^If1
+I0JZbMcH>L[82K24?iV<mW2
+S1
+R12
+w1762329407
+8C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
+FC:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv
+!i122 130
+L0 2 652
+R13
+R14
+r1
+!s85 0
+31
+!s108 1762329430.000000
+!s107 C:\\CPLD\\intel\\fenghuo_xule\\BM_H13DSP_M\\BM_H13DSP_M\\sim\\testcase\\test3\\pwrseq_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
+vtimer_gen
+2C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
+!s110 1762161067
+!i10b 1
+!s100 :R[QP8lIYe^e4mf24N?4S2
+I18m:FVMXQOdAYiCz6X<Sn0
+R12
+w1757489244
+8C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
+FC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
+!i122 124
+L0 3 244
+R13
+R14
+r1
+!s85 0
+31
+!s108 1762161067.000000
+!s107 C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v|
+!i113 0
+R16
+R9

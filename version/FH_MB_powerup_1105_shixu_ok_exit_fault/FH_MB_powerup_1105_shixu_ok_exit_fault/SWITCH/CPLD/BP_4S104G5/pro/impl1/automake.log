@@ -1,0 +1,3415 @@
+
+edif2ngd  -l "MachXO3LF" -d LCMXO3LF-6900C -path "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/impl1" -path "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro"   "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/impl1/BP_4S104G5_impl1.edi" "BP_4S104G5_impl1.ngo"   
+edif2ngd:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DLY_LEN"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="TOTAL_STAGES"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="TOTAL_STAGES"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DLY_LEN"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DLY_LEN"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DLY_LEN"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DLY_LEN"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DELAY_MODE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DEF_OUTPUT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="CNTR_NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DELAY_MODE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DEF_OUTPUT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="CNTR_NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DELAY_MODE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DEF_OUTPUT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="CNTR_NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NBIT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DEFAULT_STATE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NBIT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NDELAY"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="SIGCNT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="SIGCNT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NBIT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="NBIT"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="CNTR_NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DELAY_MODE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="CNTR_NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DELAY_MODE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="CNTR_NBITS"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DELAY_MODE"  />
+    <postMsg mid="1121028" type="Warning" dynamic="1" navigation="0" arg0="DLY_LEN"  />
+Writing the design to BP_4S104G5_impl1.ngo...
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 16 MB
+
+
+ngdbuild  -a "MachXO3LF" -d LCMXO3LF-6900C  -p "C:/lscc/diamond/3_14/ispfpga/xo3c00f/data"  -p "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/impl1" -p "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro"  "BP_4S104G5_impl1.ngo" "BP_4S104G5_impl1.ngd"  	
+ngdbuild:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Reading 'BP_4S104G5_impl1.ngo' ...
+Loading NGL library 'C:/lscc/diamond/3_14/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3_14/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3_14/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3_14/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="inst_osch_SEDSTDBY" arg2="inst_osch_SEDSTDBY"  />
+    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="1"  />
+
+Design Results:
+   1417 blocks expanded
+Complete the first expansion.
+Writing 'BP_4S104G5_impl1.ngd' ...
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 24 MB
+
+
+map -a "MachXO3LF" -p LCMXO3LF-6900C -t CABGA400 -s 5 -oc Commercial   "BP_4S104G5_impl1.ngd" -o "BP_4S104G5_impl1_map.ncd" -pr "BP_4S104G5_impl1.prf" -mp "BP_4S104G5_impl1.mrp" -lpf "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/impl1/BP_4S104G5_impl1_synplify.lpf" -lpf "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf"  -c 0           
+map:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: BP_4S104G5_impl1.ngd
+   Picdevice="LCMXO3LF-6900C"
+
+   Pictype="CABGA400"
+
+   Picspeed=5
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO3LF-6900CCABGA400, Performance used: 5.
+
+Loading device for application baspr from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+    <postMsg mid="1100523" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(17): Semantic error in &quot;FREQUENCY NET &quot;i_CPLD_CLK_c&quot; 25.000000 MHz ;&quot;: " arg1="i_CPLD_CLK_c matches no clock nets in the design. " arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="17"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(13): Semantic error in &quot;IOBUF PORT &quot;io_I2C9_CPLD_UPDATE_SCL&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 ;&quot;: " arg1="io_I2C9_CPLD_UPDATE_SCL" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="13"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(14): Semantic error in &quot;IOBUF PORT &quot;io_I2C9_CPLD_UPDATE_SDA&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 ;&quot;: " arg1="io_I2C9_CPLD_UPDATE_SDA" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="14"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(15): Semantic error in &quot;IOBUF PORT &quot;io_I2C_CPLD_SDA&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 ;&quot;: " arg1="io_I2C_CPLD_SDA" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="15"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(18): Semantic error in &quot;IOBUF PORT &quot;o_PAL_USBMUX_OE_N&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="o_PAL_USBMUX_OE_N" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="18"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(19): Semantic error in &quot;IOBUF PORT &quot;o_PAL_USBMUX_SEL&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="o_PAL_USBMUX_SEL" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="19"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(20): Semantic error in &quot;IOBUF PORT &quot;o_UBB_PEX_STRAP0_R&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="o_UBB_PEX_STRAP0_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="20"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(21): Semantic error in &quot;IOBUF PORT &quot;o_UBB_PEX_STRAP1_R&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="o_UBB_PEX_STRAP1_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="21"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(22): Semantic error in &quot;IOBUF PORT &quot;o_FPGA_BOOT_EN_R&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="o_FPGA_BOOT_EN_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="22"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(23): Semantic error in &quot;IOBUF PORT &quot;o_NVLINK_REFCLK_SELECT_R&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: " arg1="o_NVLINK_REFCLK_SELECT_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="23"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(24): Semantic error in &quot;IOBUF PORT &quot;o_WP_HW_CTRL_N&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 ;&quot;: " arg1="o_WP_HW_CTRL_N" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="24"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(25): Semantic error in &quot;IOBUF PORT &quot;o_GPU_BASE_STBY_EN_R&quot; OPENDRAIN=ON IO_TYPE=LVCMOS33 ;&quot;: " arg1="o_GPU_BASE_STBY_EN_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="25"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(26): Semantic error in &quot;IOBUF PORT &quot;i_3V3IO_RSVD0_FFU_R&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="i_3V3IO_RSVD0_FFU_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="26"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(27): Semantic error in &quot;IOBUF PORT &quot;i_3V3IO_RSVD1_FFU_R&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="i_3V3IO_RSVD1_FFU_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="27"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(28): Semantic error in &quot;IOBUF PORT &quot;i_3V3IO_RSVD2_FFU_R&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="i_3V3IO_RSVD2_FFU_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="28"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(29): Semantic error in &quot;IOBUF PORT &quot;i_3V3IO_RSVD3_FFU_R&quot; PULLMODE=UP IO_TYPE=LVCMOS33 ;&quot;: " arg1="i_3V3IO_RSVD3_FFU_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="29"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(30): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER1_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER1_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="30"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(31): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER2_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER2_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="31"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(32): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER3_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER3_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="32"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(33): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER4_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER4_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="33"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(34): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER5_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER5_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="34"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(35): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER6_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER6_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="35"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(36): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER7_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER7_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="36"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(37): Semantic error in &quot;IOBUF PORT &quot;i_RETIMER8_INT_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="i_RETIMER8_INT_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="37"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(38): Semantic error in &quot;IOBUF PORT &quot;o_NIC1_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC1_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="38"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(39): Semantic error in &quot;IOBUF PORT &quot;o_NIC2_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC2_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="39"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(40): Semantic error in &quot;IOBUF PORT &quot;o_NIC3_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC3_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="40"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(41): Semantic error in &quot;IOBUF PORT &quot;o_NIC4_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC4_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="41"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(42): Semantic error in &quot;IOBUF PORT &quot;o_NIC5_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC5_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="42"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(43): Semantic error in &quot;IOBUF PORT &quot;o_NIC6_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC6_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="43"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(44): Semantic error in &quot;IOBUF PORT &quot;o_NIC7_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC7_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="44"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(45): Semantic error in &quot;IOBUF PORT &quot;o_NIC8_PERST_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_NIC8_PERST_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="45"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(46): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER1_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER1_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="46"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(47): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER2_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER2_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="47"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(48): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER3_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER3_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="48"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(49): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER4_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER4_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="49"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(50): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER5_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER5_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="50"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(51): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER6_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER6_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="51"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(52): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER7_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER7_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="52"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(53): Semantic error in &quot;IOBUF PORT &quot;o_RETIMER8_RESET_N_R&quot; IO_TYPE=LVCMOS18 PULLMODE=NONE ;&quot;: " arg1="o_RETIMER8_RESET_N_R" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="53"  />
+    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(54): Semantic error in &quot;IOBUF PORT &quot;i_ict_tp100&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: " arg1="i_ict_tp100" arg2="D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf" arg3="54"  />
+Package Status:                     Final          Version 1.17.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+2 CCU2 constant inputs absorbed.
+
+    <postMsg mid="51001030" type="Warning" dynamic="1" navigation="0" arg0="pon_reset_n"  />
+
+
+
+Design Summary:
+   Number of registers:    434 out of  7872 (6%)
+      PFU registers:          415 out of  6864 (6%)
+      PIO registers:           19 out of  1008 (2%)
+   Number of SLICEs:       354 out of  3432 (10%)
+      SLICEs as Logic/ROM:    354 out of  3432 (10%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:         67 out of  3432 (2%)
+   Number of LUT4s:        696 out of  6864 (10%)
+      Number used as logic LUTs:        562
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      134
+      Number used as shift registers:     0
+   Number of PIO sites used: 326 + 4(JTAG) out of 336 (98%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  8
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: inst_osch )
+     Net i_CPLD1_CLK_c: 1 loads, 1 rising, 0 falling (Driver: PIO i_CPLD1_CLK )
+     Net clk_50m: 118 loads, 118 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     Net clk_25m: 137 loads, 137 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_i: 8 loads, 8 rising, 0 falling (Driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_0_a2 )
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 3 loads, 3 rising, 0 falling (Driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2 loads, 2 rising, 0 falling (Driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 )
+     Net inst_i2c_update_flash_config/i2c1_scli: 1 loads, 1 rising, 0 falling (Driver: PIO io_I2C1_CPLD1_UPDATE_SCL )
+   Number of Clock Enables:  67
+     Net scpld_to_mcpld_data_filter4: 2 loads, 2 LSLICEs
+     Net N_59: 1 loads, 0 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00064: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2C_RW_1_sqmuxa: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[7]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO[0]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[0]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_211_i: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnte: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSignal_sda_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSignal_scl_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_250_i: 4 loads, 4 LSLICEs
+     Net pon_reset_n: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/w_data_vld_pos: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_i2c_command_tempce[0]: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_i2c_command_tempce[8]: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00354: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00345: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00335: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001d5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001c5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001b5: 4 loads, 4 LSLICEs
+     Net edge_delay_p0v8_pg/timer_cnte: 4 loads, 4 LSLICEs
+     Net edge_delay_p0v8_pg/N_43: 1 loads, 1 LSLICEs
+     Net edge_delay_p1v25_pg_50ms/N_51: 1 loads, 1 LSLICEs
+     Net inst_slv_to_mb_p2s/cnte: 4 loads, 4 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[0]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po5: 6 loads, 6 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[1]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[2]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[3]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[5]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[18]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[19]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[56]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[57]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[58]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[59]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/cnte: 4 loads, 4 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_13: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_8: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_9: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_5: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_11: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_6: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_7: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_12: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_10: 1 loads, 1 LSLICEs
+     Net timer_gen_inst/t32us_e: 4 loads, 4 LSLICEs
+     Net timer_gen_inst/t1us_2: 3 loads, 3 LSLICEs
+   Number of local set/reset loads for net pon_reset_n merged into GSR:  284
+   Number of LSRs:  8
+     Net un2_w_rst: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2 loads, 2 LSLICEs
+     Net un2_w_rst_3: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2 loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i: 44 loads, 44 LSLICEs
+     Net pon_reset_inst/master_reset_n_i: 2 loads, 2 LSLICEs
+     Net pll_inst/i_P3V3_STBY_PG_c_i: 1 loads, 0 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net bmc_cpld_i2c_ram/w_WR: 74 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[1]: 50 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i: 44 loads
+     Net o_NPU1A_RST_R_N_c: 44 loads
+     Net t1us_tick: 39 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[5]: 34 loads
+     Net bmc_cpld_i2c_ram/r_i2c_data_in_155_0_iv_0_a2_7[3]: 31 loads
+     Net bmc_cpld_i2c_ram/r_i2c_data_in_155_0_iv_0_a2_0[6]: 27 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[2]: 27 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[0]: 26 loads
+    <postMsg mid="1103805" type="Warning" dynamic="2" navigation="0" arg0="In &quot;LOCATE COMP &quot;io_I2C1_CPLD1_UPDATE_SDA&quot; SITE &quot;D11&quot; ;&quot;: " arg1="D11"  />
+    <postMsg mid="1103805" type="Warning" dynamic="2" navigation="0" arg0="In &quot;LOCATE COMP &quot;io_I2C1_CPLD1_UPDATE_SCL&quot; SITE &quot;C11&quot; ;&quot;: " arg1="C11"  />
+ 
+
+   Number of warnings:  44
+   Number of errors:    0
+
+
+
+Total CPU Time: 1 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 73 MB
+
+Dumping design to file BP_4S104G5_impl1_map.ncd.
+
+trce -f "BP_4S104G5_impl1.mt" -o "BP_4S104G5_impl1.tw1" "BP_4S104G5_impl1_map.ncd" "BP_4S104G5_impl1.prf"
+trce:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file bp_4s104g5_impl1_map.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Fri Oct 31 16:47:00 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BP_4S104G5_impl1.tw1 -gui -msgset D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/promote.xml BP_4S104G5_impl1_map.ncd BP_4S104G5_impl1.prf 
+Design file:     bp_4s104g5_impl1_map.ncd
+Preference file: bp_4s104g5_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   1.800 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 8075 paths, 4 nets, and 3000 connections (90.85% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Fri Oct 31 16:47:00 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o BP_4S104G5_impl1.tw1 -gui -msgset D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/promote.xml BP_4S104G5_impl1_map.ncd BP_4S104G5_impl1.prf 
+Design file:     bp_4s104g5_impl1_map.ncd
+Preference file: bp_4s104g5_impl1.prf
+Device,speed:    LCMXO3LF-6900C,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   1.800 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 8075 paths, 4 nets, and 3025 connections (91.61% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 75 MB
+
+
+mpartrce -p "BP_4S104G5_impl1.p2t" -f "BP_4S104G5_impl1.p3t" -tf "BP_4S104G5_impl1.pt" "BP_4S104G5_impl1_map.ncd" "BP_4S104G5_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "BP_4S104G5_impl1_map.ncd"
+Fri Oct 31 16:47:01 2025
+
+PAR: Place And Route Diamond (64-bit) 3.14.0.75.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/promote.xml" -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 BP_4S104G5_impl1_map.ncd BP_4S104G5_impl1.dir/5_1.ncd BP_4S104G5_impl1.prf
+Preference file: BP_4S104G5_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file BP_4S104G5_impl1_map.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application par from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)  326+4(JTAG)/336     98% used
+                 326+4(JTAG)/336     98% bonded
+   IOLOGIC           19/336           5% used
+
+   SLICE            354/3432         10% used
+
+   GSR                1/1           100% used
+   OSC                1/1           100% used
+   PLL                1/2            50% used
+   EFB                1/1           100% used
+
+
+Number of Signals: 1295
+Number of Connections: 3302
+
+Pin Constraint Summary:
+   324 out of 326 pins locked (99% locked).
+
+The following 2 signals are selected to use the primary clock routing resources:
+    clk_50m (driver: pll_inst/PLLInst_0, clk load #: 117)
+    clk_25m (driver: pll_inst/PLLInst_0, clk load #: 137)
+
+
+The following 4 signals are selected to use the secondary clock routing resources:
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i (driver: SLICE_295, clk load #: 0, sr load #: 44, ce load #: 0)
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start (driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_118, clk load #: 0, sr load #: 18, ce load #: 0)
+    bmc_cpld_i2c_ram/w_data_vld_pos (driver: SLICE_480, clk load #: 0, sr load #: 0, ce load #: 18)
+    bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_i (driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/SLICE_334, clk load #: 8, sr load #: 0, ce load #: 0)
+
+Signal pon_reset_n is selected as Global Set/Reset.
+Starting Placer Phase 0.
+..........
+Finished Placer Phase 0.  REAL time: 3 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 360418.
+Finished Placer Phase 1.  REAL time: 6 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  359282
+Finished Placer Phase 2.  REAL time: 6 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  PLL        : 1 out of 2 (50%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "clk_50m" from CLKOP on comp "pll_inst/PLLInst_0" on PLL site "LPLL", clk load = 117
+  PRIMARY "clk_25m" from CLKOS on comp "pll_inst/PLLInst_0" on PLL site "LPLL", clk load = 137
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i" from F1 on comp "SLICE_295" on site "R14C20D", clk load = 0, ce load = 0, sr load = 44
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start" from Q0 on comp "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/SLICE_118" on site "R14C20C", clk load = 0, ce load = 0, sr load = 18
+  SECONDARY "bmc_cpld_i2c_ram/w_data_vld_pos" from F0 on comp "SLICE_480" on site "R14C18B", clk load = 0, ce load = 18, sr load = 0
+  SECONDARY "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_i" from F0 on comp "bmc_cpld_i2c_ram/i2c_slave_bmc_u0/SLICE_334" on site "R14C20B", clk load = 8, ce load = 0, sr load = 0
+
+  PRIMARY  : 2 out of 8 (25%)
+  SECONDARY: 4 out of 8 (50%)
+
+Edge Clocks:
+  No edge clock selected.
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   326 + 4(JTAG) out of 336 (98.2%) PIO sites used.
+   326 + 4(JTAG) out of 336 (98.2%) bonded PIO sites used.
+   Number of PIO comps: 326; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 78 / 84 ( 92%) | 3.3V       | -         |
+| 1        | 83 / 84 ( 98%) | 3.3V       | -         |
+| 2        | 81 / 84 ( 96%) | 3.3V       | -         |
+| 3        | 28 / 28 (100%) | 1.8V       | -         |
+| 4        | 24 / 24 (100%) | 3.3V       | -         |
+| 5        | 32 / 32 (100%) | 3.3V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 6 secs 
+
+Dumping design to file BP_4S104G5_impl1.dir/5_1.ncd.
+
+0 connections routed; 3302 unrouted.
+Starting router resource preassignment
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=wb_clk loads=1 clock_loads=1&#xA;   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 loads=5 clock_loads=3&#xA;   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 loads=4 clock_loads=2"  />
+
+Completed router resource preassignment. Real time: 39 secs 
+
+Start NBR router at 16:47:40 10/31/25
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 16:47:40 10/31/25
+
+Start NBR section for initial routing at 16:47:41 10/31/25
+Level 1, iteration 1
+0(0.00%) conflict; 2637(79.86%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.340ns/0.000ns; real time: 40 secs 
+Level 4, iteration 1
+162(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.940ns/0.000ns; real time: 41 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 16:47:42 10/31/25
+Level 4, iteration 1
+90(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.940ns/0.000ns; real time: 41 secs 
+Level 4, iteration 2
+49(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 41 secs 
+Level 4, iteration 3
+22(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 41 secs 
+Level 4, iteration 4
+13(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 41 secs 
+Level 4, iteration 5
+11(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 6
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 7
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 8
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 9
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 10
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 11
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 12
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+Level 4, iteration 13
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 42 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 16:47:43 10/31/25
+
+Start NBR section for re-routing at 16:47:44 10/31/25
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.908ns/0.000ns; real time: 43 secs 
+
+Start NBR section for post-routing at 16:47:44 10/31/25
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 10.908ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=wb_clk loads=1 clock_loads=1&#xA;   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 loads=5 clock_loads=3&#xA;   Signal=bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 loads=4 clock_loads=2"  />
+
+Total CPU time 43 secs 
+Total REAL time: 44 secs 
+Completely routed.
+End of route.  3302 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file BP_4S104G5_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 10.908
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.104
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 43 secs 
+Total REAL time to completion: 45 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "BP_4S104G5_impl1.pt" -o "BP_4S104G5_impl1.twr" "BP_4S104G5_impl1.ncd" "BP_4S104G5_impl1.prf"
+trce:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file bp_4s104g5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application trce from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.14.0.75.2
+Fri Oct 31 16:47:46 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o BP_4S104G5_impl1.twr -gui -msgset D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/promote.xml BP_4S104G5_impl1.ncd BP_4S104G5_impl1.prf 
+Design file:     bp_4s104g5_impl1.ncd
+Preference file: bp_4s104g5_impl1.prf
+Device,speed:    LCMXO3LF-6900C,5
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   1.800 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 8075 paths, 4 nets, and 3026 connections (91.64% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.14.0.75.2
+Fri Oct 31 16:47:46 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o BP_4S104G5_impl1.twr -gui -msgset D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/promote.xml BP_4S104G5_impl1.ncd BP_4S104G5_impl1.prf 
+Design file:     bp_4s104g5_impl1.ncd
+Preference file: bp_4s104g5_impl1.prf
+Device,speed:    LCMXO3LF-6900C,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   1.800 V (Bank 3, defined by PAR)
+                   3.300 V (Bank 4, defined by PAR)
+                   3.300 V (Bank 5, defined by PAR)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 8075 paths, 4 nets, and 3024 connections (91.58% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 75 MB
+
+
+iotiming  "BP_4S104G5_impl1.ncd" "BP_4S104G5_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.14.0.75.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file bp_4s104g5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application iotiming from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Running Performance Grade: 5
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file bp_4s104g5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 6
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file bp_4s104g5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: M
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+ibisgen "BP_4S104G5_impl1.pad" "C:/lscc/diamond/3_14/cae_library/ibis/machxo3l.ibs"   
+IBIS Models Generator: Lattice Diamond (64-bit) 3.14.0.75.2
+
+Fri Oct 31 16:47:50 2025
+
+Comp: i_BASE0_VPP_INT_N_R
+ Site: W5
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_BASE1_VPP_INT_N_R
+ Site: A7
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_BASE2_VPP_INT_N_R
+ Site: B7
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_BASE3_VPP_INT_N_R
+ Site: D15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_BMC_SW_UART_TX0_R
+ Site: T10
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_CLK
+ Site: B10
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_DONE
+ Site: A19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_HDR_R
+ Site: C12
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_INIT_N
+ Site: C17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_JTAGEN
+ Site: C13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_PROGRAM_N
+ Site: D13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CPLD1_PULLUP_SN
+ Site: Y20
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CT_P1V25_SW0_PG
+ Site: R19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CT_P1V25_SW1_PG
+ Site: G9
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CT_P1V25_SW2_PG
+ Site: M18
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_CT_P1V25_SW3_PG
+ Site: K19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_I2C1_CPLD1_REG_SCL
+ Site: A11
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MB_VPP0_ALT_R_N
+ Site: U19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MB_VPP1_ALT_R_N
+ Site: J3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MB_VPP2_ALT_R_N
+ Site: J6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MB_VPP3_ALT_R_N
+ Site: H18
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO01A_ALERT_R_N
+ Site: R2
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_MCIO01C_ALERT_R_N
+ Site: J17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO11A_ALERT_R_N
+ Site: P1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO11C_ALERT_R_N
+ Site: L1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO21A_ALERT_R_N
+ Site: M3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO21C_ALERT_R_N
+ Site: F16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO31A_ALERT_R_N
+ Site: V13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCIO31C_ALERT_R_N
+ Site: F14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCPLD_SGPIO_CLK
+ Site: A13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCPLD_SGPIO_DATA_OUT
+ Site: B18
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_MCPLD_SGPIO_LD
+ Site: A14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC1A_PRSNT0_R_N
+ Site: R8
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC1A_PRSNT1_R_N
+ Site: Y19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC1C_PRSNT0_R_N
+ Site: P10
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC1C_PRSNT1_R_N
+ Site: W18
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC1_4_WAKE_R_N
+ Site: P15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC2A_PRSNT0_R_N
+ Site: T6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC2A_PRSNT1_R_N
+ Site: W20
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC2C_PRSNT0_R_N
+ Site: T9
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC2C_PRSNT1_R_N
+ Site: W19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC3A_PRSNT0_R_N
+ Site: R14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC3A_PRSNT1_R_N
+ Site: N14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC3C_PRSNT0_R_N
+ Site: P9
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC3C_PRSNT1_R_N
+ Site: P16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC4A_PRSNT0_R_N
+ Site: U5
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_NIC4A_PRSNT1_R_N
+ Site: P18
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC4C_PRSNT0_R_N
+ Site: U4
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_NIC4C_PRSNT1_R_N
+ Site: N20
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC5A_PRSNT0_R_N
+ Site: B1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC5A_PRSNT1_R_N
+ Site: K6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC5C_PRSNT0_R_N
+ Site: F2
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC5C_PRSNT1_R_N
+ Site: E3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC5_8_WAKE_R_N
+ Site: P8
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC6A_PRSNT0_R_N
+ Site: M7
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_NIC6A_PRSNT1_R_N
+ Site: M14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC6C_PRSNT0_R_N
+ Site: D1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC6C_PRSNT1_R_N
+ Site: J5
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC7A_PRSNT0_R_N
+ Site: N15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC7A_PRSNT1_R_N
+ Site: N17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC7C_PRSNT0_R_N
+ Site: K17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC7C_PRSNT1_R_N
+ Site: V16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NIC8A_PRSNT0_R_N
+ Site: M6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_NIC8A_PRSNT1_R_N
+ Site: N5
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_NIC8C_PRSNT0_R_N
+ Site: V1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_NIC8C_PRSNT1_R_N
+ Site: N16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NPU1_4_WAKE_R_N
+ Site: T11
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NPU5_8_WAKE_R_N
+ Site: H19
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME1_ALERT_R_N
+ Site: L16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME1_PRSNT0_R_N
+ Site: U15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME1_PRSNT1_R_N
+ Site: L17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME2_ALERT_R_N
+ Site: L4
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME2_PRSNT0_R_N
+ Site: J4
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME2_PRSNT1_R_N
+ Site: L3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME3_ALERT_R_N
+ Site: E15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_NVME4_ALERT_R_N
+ Site: G14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW0_ALERT_N
+ Site: J16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW0_FAULT_N
+ Site: V12
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW0_PWRGD
+ Site: T16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW0_VRHOT_N
+ Site: V14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW1_PWRGD
+ Site: H3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW1_VRHOT_N
+ Site: H4
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW2_ALERT_N
+ Site: J14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW2_FAULT_N
+ Site: F13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW2_PWRGD
+ Site: A10
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW2_VRHOT_N
+ Site: H14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW3_ALERT_N
+ Site: F15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW3_FAULT_N
+ Site: G17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW3_PWRGD
+ Site: F17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P0V8_SW3_VRHOT_N
+ Site: G16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P12V_SNS_ALERT
+ Site: Y3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_P3V3_STBY_PG
+ Site: T13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PAL_P12V_OC
+ Site: T4
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_PAL_P12V_PG
+ Site: R7
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PAL_P12V_STBY_FLTB
+ Site: U14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PAL_P12V_STBY_PG
+ Site: U17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PAL_SW_GPU_PRSNT_R_N
+ Site: W12
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PAL_SW_PWR_PG
+ Site: Y12
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PG_P1V8_PLL_R
+ Site: T17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PG_P1V8_R
+ Site: T18
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_PG_P5V0_R
+ Site: U2
+ Type: IN
+ IO_TYPE=LVCMOS33 
+-----------------------
+Comp: i_SPI_RESET_R_N
+ Site: W15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW0_CLKREQ_N_R
+ Site: W10
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW0_NIC_ALERT_R_N
+ Site: Y15
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW0_SDB_TX_R
+ Site: P14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW0_UART_TX_R
+ Site: Y8
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW1_CLKREQ_N_R
+ Site: H2
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW1_NIC_ALERT_R_N
+ Site: Y4
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW1_SDB_TX_R
+ Site: C14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW1_UART_TX_R
+ Site: A9
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW2_CLKREQ_N_R
+ Site: D5
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW2_NIC_ALERT_R_N
+ Site: A6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW2_SDB_TX_R
+ Site: D17
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW2_UART_TX_R
+ Site: B6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW3_CLKREQ_N_R
+ Site: B2
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW3_NIC_ALERT_R_N
+ Site: D7
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW3_SDB_TX_R
+ Site: A20
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_SW3_UART_TX_R
+ Site: B20
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_TEMP_ALERT_0_R
+ Site: G1
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_TEMP_ALERT_1_R
+ Site: B16
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_TEMP_ALERT_2_R
+ Site: B11
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: i_TEMP_ALERT_3_R
+ Site: R6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: io_I2C1_CPLD1_REG_SDA
+ Site: A12
+ Type: BIDI
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: io_I2C1_CPLD1_UPDATE_SCL
+ Site: C11
+ Type: BIDI
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: io_I2C1_CPLD1_UPDATE_SDA
+ Site: D11
+ Type: BIDI
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: o_BMC_SW_UART_RX0_R
+ Site: Y11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD1_LED0_N
+ Site: W3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD1_LED1_N
+ Site: Y2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD_RSV1
+ Site: B13
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD_RSV2
+ Site: A17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD_RSV3
+ Site: B12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD_RSV4
+ Site: B14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD_RSV5
+ Site: A18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CPLD_RSV6
+ Site: B17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_CT_P1V25_SW_EN_R
+ Site: W7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_I2C_RST0_R_N
+ Site: A8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_I2C_RST1_R_N
+ Site: C8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_I2C_RST2_R_N
+ Site: W6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_I2C_RST3_R_N
+ Site: C6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_I2C_RST4_7_R_N
+ Site: Y17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO01A_CB_RSV_R
+ Site: M16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO01A_PE_RST_R_N
+ Site: U18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO01C_CB_RSV_R
+ Site: L15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO01C_PE_RST_R_N
+ Site: W2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO02A_CB_RSV_R
+ Site: R4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO02A_PE_RST_R_N
+ Site: Y1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO02C_CB_RSV_R
+ Site: H17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO11A_CB_RSV_R
+ Site: K4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO11A_PE_RST_R_N
+ Site: K2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO11C_CB_RSV_R
+ Site: K1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO11C_PE_RST_R_N
+ Site: N3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO12A_CB_RSV_R
+ Site: P3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO12A_PE_RST_R_N
+ Site: T2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO12C_CB_RSV_R
+ Site: M2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO21A_CB_RSV_R
+ Site: K7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO21A_PE_RST_R_N
+ Site: H7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO21C_CB_RSV_R
+ Site: L7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO21C_PE_RST_R_N
+ Site: D8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO22A_CB_RSV_R
+ Site: P2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO22A_PE_RST_R_N
+ Site: N2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO22C_CB_RSV_R
+ Site: G15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO31A_CB_RSV_R
+ Site: J18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO31A_PE_RST_R_N
+ Site: M20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO31C_CB_RSV_R
+ Site: K20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO31C_PE_RST_R_N
+ Site: K16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO32A_CB_RSV_R
+ Site: V19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO32A_PE_RST_R_N
+ Site: M17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCIO32C_CB_RSV_R
+ Site: J15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_MCPLD_SGPIO_DATA_IN
+ Site: A16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC1A_POWER_EN_R
+ Site: R16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC1A_RST_R_N
+ Site: R15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC1A_RSV_R
+ Site: Y18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC1C_POWER_EN_R
+ Site: T14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC1C_RST_R_N
+ Site: R11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC1C_RSV_R
+ Site: W17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC2A_POWER_EN_R
+ Site: R13
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC2A_RST_R_N
+ Site: P11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC2A_RSV_R
+ Site: V20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC2C_POWER_EN_R
+ Site: R12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC2C_RST_R_N
+ Site: R10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC2C_RSV_R
+ Site: T19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC3A_POWER_EN_R
+ Site: W1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC3A_RST_R_N
+ Site: P13
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC3A_RSV_R
+ Site: U12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC3C_POWER_EN_R
+ Site: P12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC3C_RST_R_N
+ Site: U9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC3C_RSV_R
+ Site: R17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC4A_POWER_EN_R
+ Site: T8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC4A_RST_R_N
+ Site: U6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC4A_RSV_R
+ Site: N19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC4C_POWER_EN_R
+ Site: T7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC4C_RST_R_N
+ Site: T3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC4C_RSV_R
+ Site: P20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC5A_POWER_EN_R
+ Site: D2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC5A_RST_R_N
+ Site: F7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC5A_RSV_R
+ Site: K5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC5C_POWER_EN_R
+ Site: G6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC5C_RST_R_N
+ Site: E1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC5C_RSV_R
+ Site: H6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC6A_POWER_EN_R
+ Site: P7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC6A_RST_R_N
+ Site: P6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC6A_RSV_R
+ Site: R9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC6C_POWER_EN_R
+ Site: L5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC6C_RST_R_N
+ Site: G5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC6C_RSV_R
+ Site: C1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC7A_POWER_EN_R
+ Site: M15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC7A_RST_R_N
+ Site: L14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC7A_RSV_R
+ Site: V17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC7C_POWER_EN_R
+ Site: R3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC7C_RST_R_N
+ Site: V10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC7C_RSV_R
+ Site: P17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC8A_POWER_EN_R
+ Site: C2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC8A_RST_R_N
+ Site: L6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC8A_RSV_R
+ Site: M5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC8C_POWER_EN_R
+ Site: R1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC8C_RST_R_N
+ Site: V9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NIC8C_RSV_R
+ Site: V15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU1A_POWER_EN_R
+ Site: U1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU1A_RST_R_N
+ Site: P19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU1A_RSV_R
+ Site: R20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU1C_POWER_EN_R
+ Site: T1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU1C_RST_R_N
+ Site: T20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU1C_RSV_R
+ Site: R5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU2A_POWER_EN_R
+ Site: V4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU2A_RST_R_N
+ Site: V3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU2A_RSV_R
+ Site: V2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU2C_POWER_EN_R
+ Site: U10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU2C_RST_R_N
+ Site: V8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU2C_RSV_R
+ Site: V6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU3A_POWER_EN_R
+ Site: F8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU3A_RST_R_N
+ Site: E2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU3A_RSV_R
+ Site: E7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU3C_POWER_EN_R
+ Site: G12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU3C_RST_R_N
+ Site: F4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU3C_RSV_R
+ Site: G11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU4A_POWER_EN_R
+ Site: G10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU4A_RST_R_N
+ Site: F3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU4A_RSV_R
+ Site: F6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU4C_POWER_EN_R
+ Site: E6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU4C_RST_R_N
+ Site: G4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU4C_RSV_R
+ Site: F5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU5A_POWER_EN_R
+ Site: F12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU5A_RST_R_N
+ Site: D18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU5A_RSV_R
+ Site: F19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU5C_POWER_EN_R
+ Site: N6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU5C_RST_R_N
+ Site: G7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU5C_RSV_R
+ Site: P5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU6A_POWER_EN_R
+ Site: D16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU6A_RST_R_N
+ Site: G8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU6A_RSV_R
+ Site: G19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU6C_POWER_EN_R
+ Site: C19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU6C_RST_R_N
+ Site: G13
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU6C_RSV_R
+ Site: J19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU7A_POWER_EN_R
+ Site: M19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU7A_RST_R_N
+ Site: N18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU7A_RSV_R
+ Site: E20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU7C_POWER_EN_R
+ Site: G20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU7C_RST_R_N
+ Site: F20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU7C_RSV_R
+ Site: H20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU8A_POWER_EN_R
+ Site: L19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU8A_RST_R_N
+ Site: E19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU8A_RSV_R
+ Site: L20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU8C_POWER_EN_R
+ Site: F18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU8C_RST_R_N
+ Site: E17
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NPU8C_RSV_R
+ Site: D19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME1_POWER_EN_R
+ Site: U20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME1_RST_R_N
+ Site: K18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME1_RSV_R
+ Site: H16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME2_POWER_EN_R
+ Site: M1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME2_RST_R_N
+ Site: L2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME2_RSV_R
+ Site: N1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME3_POWER_EN_R
+ Site: D12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME3_RST_R_N
+ Site: E14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME3_RSV_R
+ Site: F11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME4_POWER_EN_R
+ Site: K14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME4_RST_R_N
+ Site: K15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_NVME4_RSV_R
+ Site: H15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_P0V8_SW_EN_R
+ Site: F10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_P1V8_EN_R
+ Site: W16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_P1V8_PLL_EN_R
+ Site: Y16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_P5V0_EN_R
+ Site: Y5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_DB2000_PWRGD0
+ Site: W8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_DB2000_PWRGD1
+ Site: G2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_DB2000_PWRGD2
+ Site: A2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_DB2000_PWRGD3
+ Site: B9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_P12V_EN_R
+ Site: Y14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_RST_SW0_3_NIC_VPP1_N_R
+ Site: Y13
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_RST_SW0_VPP2_N_R
+ Site: Y7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_RST_SW1_VPP2_N_R
+ Site: F1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_RST_SW2_VPP2_N_R
+ Site: P4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_RST_SW3_VPP2_N_R
+ Site: D6
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SPI_CSCLK_S0_R
+ Site: B3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SPI_CSCLK_S1_R
+ Site: B5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SPI_MISOMOSI_S0_R
+ Site: A3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SPI_MISOMOSI_S1_R
+ Site: C4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SW0_3_VPP_S0_R
+ Site: D10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SW0_3_VPP_S1_R
+ Site: D14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_PAL_SW_PWR_EN_R
+ Site: T5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_MCIO2_CLK_OE_N_R
+ Site: W9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_NPU_CLK_OE_N_R
+ Site: Y9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_PAL_SPI_SEL_R
+ Site: Y10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_PEX_PERST_R_N
+ Site: W13
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_SDB_RX_R
+ Site: T12
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_SPI_CS_SEL_R
+ Site: W14
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW0_UART_RX_R
+ Site: W4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_MCIO2_CLK_OE_N_R
+ Site: J2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_NPU_CLK_OE_N_R
+ Site: H1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_PAL_SPI_SEL_R
+ Site: A5
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_PEX_PERST_R_N
+ Site: J1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_SDB_RX_R
+ Site: C15
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_SPI_CS_SEL_R
+ Site: A4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW1_UART_RX_R
+ Site: C3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_MCIO2_CLK_OE_N_R
+ Site: B4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_NPU_CLK_OE_N_R
+ Site: A1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_PAL_SPI_SEL_R
+ Site: G3
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_PEX_PERST_R_N
+ Site: E4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_SDB_RX_R
+ Site: C18
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_SPI_CS_SEL_R
+ Site: M4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW2_UART_RX_R
+ Site: N4
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=12mA 
+ OPENDRAIN=ON 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_MCIO2_CLK_OE_N_R
+ Site: B8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_NPU_CLK_OE_N_R
+ Site: C10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_PAL_SPI_SEL_R
+ Site: C20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_PEX_PERST_R_N
+ Site: F9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_SDB_RX_R
+ Site: B19
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_SPI_CS_SEL_R
+ Site: D20
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Comp: o_SW3_UART_RX_R
+ Site: C16
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ SLEW=SLOW 
+-----------------------
+Created design models.
+
+
+Generating: D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\IBIS\BP_4S104G5_impl1.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+
+ldbanno "BP_4S104G5_impl1.ncd" -n Verilog  -o "BP_4S104G5_impl1_vo.vo"         -w -neg
+ldbanno: version Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a Verilog netlist using the orca library type based on the BP_4S104G5_impl1 design file.
+
+
+Loading design for application ldbanno from file BP_4S104G5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application ldbanno from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Converting design BP_4S104G5_impl1.ncd into .ldb format.
+Loading preferences from bp_4s104g5_impl1.prf.
+Writing Verilog netlist to file BP_4S104G5_impl1_vo.vo
+Writing SDF timing to file BP_4S104G5_impl1_vo.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 77 MB
+
+ldbanno "BP_4S104G5_impl1.ncd" -n VHDL -o "BP_4S104G5_impl1_vho.vho"         -w -neg 
+ldbanno: version Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+Writing a VHDL netlist using the orca library type based on the BP_4S104G5_impl1 design file.
+
+
+Loading design for application ldbanno from file BP_4S104G5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application ldbanno from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+Converting design BP_4S104G5_impl1.ncd into .ldb format.
+Loading preferences from bp_4s104g5_impl1.prf.
+Writing VHDL netlist to file BP_4S104G5_impl1_vho.vho
+Writing SDF timing to file BP_4S104G5_impl1_vho.sdf
+    <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 76 MB
+
+tmcheck -par "BP_4S104G5_impl1.par" 
+
+bitgen -f "BP_4S104G5_impl1.t2b" -w "BP_4S104G5_impl1.ncd"  "BP_4S104G5_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file BP_4S104G5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application Bitgen from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from BP_4S104G5_impl1.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00f.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 DUALBOOTGOLDEN  |                     INTERNAL**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "BP_4S104G5_impl1.bit".
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 295 MB
+
+tmcheck -par "BP_4S104G5_impl1.par" 
+
+bitgen -f "BP_4S104G5_impl1.t2b" -w "BP_4S104G5_impl1.ncd"  -jedec "BP_4S104G5_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.14.0.75.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file BP_4S104G5_impl1.ncd.
+Design name: BP_4S104G5
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO3LF-6900C
+Package:     CABGA400
+Performance: 5
+Loading device for application Bitgen from file 'xo3c6900.nph' in environment: C:/lscc/diamond/3_14/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status:   Final          Version 37.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from BP_4S104G5_impl1.prf.
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo3c00f.acd ###"  />
+    <postMsg mid="1009992" type="Info"    dynamic="1" navigation="0" arg0=" SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK"  />
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 DUALBOOTGOLDEN  |                     INTERNAL**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "BP_4S104G5_impl1.jed".
+ 
+===========
+UFM Summary.
+===========
+UFM Size:        2046 Pages (128*2046 Bits).
+UFM Utilization: General Purpose Flash Memory.
+ 
+Available General Purpose Flash Memory: 2046 Pages (Page 0 to Page 2045).
+Initialized UFM Pages:                     0 Page.
+ 
+=========
+Padding summary
+=========
+Padded 1162112 bits for this design
+
+
+Total CPU Time: 2 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 294 MB

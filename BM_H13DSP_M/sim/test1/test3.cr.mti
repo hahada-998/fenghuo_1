@@ -1,0 +1,42 @@
+C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_tb.sv {1 {vlog -work work -vopt -sv -stats=none {C:\CPLD\intel\fenghuo_xule\BM_H13DSP_M\BM_H13DSP_M\sim\testcase\test3\pwrseq_tb.sv}
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module pwrseq_tb
+
+Top level modules:
+	pwrseq_tb
+
+} {} {}} C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/fault_detectB_chklive.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module fault_detectB_chklive
+
+Top level modules:
+	fault_detectB_chklive
+
+} {} {}} C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_delay.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module edge_delay
+
+Top level modules:
+	edge_delay
+
+} {} {}} C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/BM_H13DSP_M_define.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/BM_H13DSP_M_define.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+
+} {} {}} C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_define.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/pwrseq_define.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+
+} {} {}} C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/timer_gen_50mhz.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module timer_gen
+
+Top level modules:
+	timer_gen
+
+} {} {}} C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3/edge_detect.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module Edge_Detect
+
+Top level modules:
+	Edge_Detect
+
+} {} {}}

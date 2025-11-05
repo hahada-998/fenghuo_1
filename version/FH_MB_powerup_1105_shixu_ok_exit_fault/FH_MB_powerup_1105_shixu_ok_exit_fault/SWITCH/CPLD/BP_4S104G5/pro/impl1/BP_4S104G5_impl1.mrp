@@ -1,0 +1,1788 @@
+
+          Lattice Mapping Report File for Design Module 'BP_4S104G5'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA400 -s 5 -oc
+     Commercial BP_4S104G5_impl1.ngd -o BP_4S104G5_impl1_map.ncd -pr
+     BP_4S104G5_impl1.prf -mp BP_4S104G5_impl1.mrp -lpf D:/ODM MB
+     SWITCH/SWITCH/CPLD/BP_4S104G5/pro/impl1/BP_4S104G5_impl1_synplify.lpf -lpf
+     D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf -c 0 -gui
+     -msgset D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA400
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  10/31/25  16:46:57
+
+Design Summary
+--------------
+
+   Number of registers:    434 out of  7872 (6%)
+      PFU registers:          415 out of  6864 (6%)
+      PIO registers:           19 out of  1008 (2%)
+   Number of SLICEs:       354 out of  3432 (10%)
+      SLICEs as Logic/ROM:    354 out of  3432 (10%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:         67 out of  3432 (2%)
+   Number of LUT4s:        696 out of  6864 (10%)
+      Number used as logic LUTs:        562
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      134
+      Number used as shift registers:     0
+   Number of PIO sites used: 326 + 4(JTAG) out of 336 (98%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  8
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: inst_osch )
+     Net i_CPLD1_CLK_c: 1 loads, 1 rising, 0 falling (Driver: PIO i_CPLD1_CLK )
+
+                                    Page 1
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Design Summary (cont)
+---------------------
+     Net clk_50m: 118 loads, 118 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     
+     Net clk_25m: 137 loads, 137 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_i: 8 loads, 8 rising,
+     0 falling (Driver: bmc_cpld_i2c_ram/i2c_slave_bmc_u0/w_i2c_command_1_0_a2 )
+     
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 3
+     loads, 3 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 )
+     Net inst_i2c_update_flash_config/i2c1_scli: 1 loads, 1 rising, 0 falling
+     (Driver: PIO io_I2C1_CPLD1_UPDATE_SCL )
+   Number of Clock Enables:  67
+     Net scpld_to_mcpld_data_filter4: 2 loads, 2 LSLICEs
+     Net N_59: 1 loads, 0 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00064: 4 loads, 4 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2C_RW_1_sqmuxa: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[7]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[6]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[5]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[4]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[3]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[2]: 1
+     loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[1]: 1
+     loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+     [1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_RNO
+
+                                    Page 2
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Design Summary (cont)
+---------------------
+     [0]: 1 loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO[0]: 1
+     loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_211_i: 4 loads,
+     4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnte: 4
+     loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSigna
+     l_sda_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSigna
+     l_scl_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock: 4
+     loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_250_i: 4 loads,
+     4 LSLICEs
+     Net pon_reset_n: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram/w_data_vld_pos: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_i2c_command_tempce[0]: 4 loads, 4
+     LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_i2c_command_tempce[8]: 4 loads, 4
+     LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00354: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00345: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_00335: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001d5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001c5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/r_reg_001b5: 4 loads, 4 LSLICEs
+     Net edge_delay_p0v8_pg/timer_cnte: 4 loads, 4 LSLICEs
+     Net edge_delay_p0v8_pg/N_43: 1 loads, 1 LSLICEs
+     Net edge_delay_p1v25_pg_50ms/N_51: 1 loads, 1 LSLICEs
+     Net inst_slv_to_mb_p2s/cnte: 4 loads, 4 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[0]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po5: 6 loads, 6 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[1]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[2]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[3]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[5]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[18]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[19]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[56]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[57]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[58]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[59]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/cnte: 4 loads, 4 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_13: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_2: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_3: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_8: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_9: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_4: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_5: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_11: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_6: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_7: 1 loads, 1 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Design Summary (cont)
+---------------------
+     Net db_power_pg/out_i_0_sqmuxa_12: 1 loads, 1 LSLICEs
+     Net db_power_pg/out_i_0_sqmuxa_10: 1 loads, 1 LSLICEs
+     Net timer_gen_inst/t32us_e: 4 loads, 4 LSLICEs
+     Net timer_gen_inst/t1us_2: 3 loads, 3 LSLICEs
+   Number of local set/reset loads for net pon_reset_n merged into GSR:  284
+   Number of LSRs:  8
+     Net un2_w_rst: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 LSLICEs
+     Net un2_w_rst_3: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/o_i2c_start: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i: 44
+     loads, 44 LSLICEs
+     Net pon_reset_inst/master_reset_n_i: 2 loads, 2 LSLICEs
+     Net pll_inst/i_P3V3_STBY_PG_c_i: 1 loads, 0 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net bmc_cpld_i2c_ram/w_WR: 74 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[1]: 50 loads
+     Net bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i: 44
+     loads
+     Net o_NPU1A_RST_R_N_c: 44 loads
+     Net t1us_tick: 39 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[5]: 34 loads
+     Net bmc_cpld_i2c_ram/r_i2c_data_in_155_0_iv_0_a2_7[3]: 31 loads
+     Net bmc_cpld_i2c_ram/r_i2c_data_in_155_0_iv_0_a2_0[6]: 27 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[2]: 27 loads
+     Net bmc_cpld_i2c_ram/w_i2c_command[0]: 26 loads
+
+
+
+
+   Number of warnings:  44
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(17):
+     Semantic error in "FREQUENCY NET "i_CPLD_CLK_c" 25.000000 MHz ;":
+     i_CPLD_CLK_c matches no clock nets in the design.  This preference has been
+     disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(13):
+     Semantic error in "IOBUF PORT "io_I2C9_CPLD_UPDATE_SCL" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "io_I2C9_CPLD_UPDATE_SCL" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(14):
+     Semantic error in "IOBUF PORT "io_I2C9_CPLD_UPDATE_SDA" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "io_I2C9_CPLD_UPDATE_SDA" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(15):
+     Semantic error in "IOBUF PORT "io_I2C_CPLD_SDA" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "io_I2C_CPLD_SDA" does not exist in the design.
+
+                                    Page 4
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(18):
+     Semantic error in "IOBUF PORT "o_PAL_USBMUX_OE_N" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "o_PAL_USBMUX_OE_N" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(19):
+     Semantic error in "IOBUF PORT "o_PAL_USBMUX_SEL" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "o_PAL_USBMUX_SEL" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(20):
+     Semantic error in "IOBUF PORT "o_UBB_PEX_STRAP0_R" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Port "o_UBB_PEX_STRAP0_R" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(21):
+     Semantic error in "IOBUF PORT "o_UBB_PEX_STRAP1_R" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Port "o_UBB_PEX_STRAP1_R" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(22):
+     Semantic error in "IOBUF PORT "o_FPGA_BOOT_EN_R" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Port "o_FPGA_BOOT_EN_R" does not exist
+     in the design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(23):
+     Semantic error in "IOBUF PORT "o_NVLINK_REFCLK_SELECT_R" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Port "o_NVLINK_REFCLK_SELECT_R" does not
+     exist in the design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(24):
+     Semantic error in "IOBUF PORT "o_WP_HW_CTRL_N" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "o_WP_HW_CTRL_N" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(25):
+     Semantic error in "IOBUF PORT "o_GPU_BASE_STBY_EN_R" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "o_GPU_BASE_STBY_EN_R" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(26):
+     Semantic error in "IOBUF PORT "i_3V3IO_RSVD0_FFU_R" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "i_3V3IO_RSVD0_FFU_R" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(27):
+     Semantic error in "IOBUF PORT "i_3V3IO_RSVD1_FFU_R" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "i_3V3IO_RSVD1_FFU_R" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(28):
+     Semantic error in "IOBUF PORT "i_3V3IO_RSVD2_FFU_R" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "i_3V3IO_RSVD2_FFU_R" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(29):
+     Semantic error in "IOBUF PORT "i_3V3IO_RSVD3_FFU_R" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "i_3V3IO_RSVD3_FFU_R" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(30):
+     Semantic error in "IOBUF PORT "i_RETIMER1_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER1_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(31):
+     Semantic error in "IOBUF PORT "i_RETIMER2_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER2_INT_N_R" does not exist in the design.
+
+                                    Page 5
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(32):
+     Semantic error in "IOBUF PORT "i_RETIMER3_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER3_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(33):
+     Semantic error in "IOBUF PORT "i_RETIMER4_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER4_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(34):
+     Semantic error in "IOBUF PORT "i_RETIMER5_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER5_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(35):
+     Semantic error in "IOBUF PORT "i_RETIMER6_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER6_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(36):
+     Semantic error in "IOBUF PORT "i_RETIMER7_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER7_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(37):
+     Semantic error in "IOBUF PORT "i_RETIMER8_INT_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "i_RETIMER8_INT_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(38):
+     Semantic error in "IOBUF PORT "o_NIC1_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC1_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(39):
+     Semantic error in "IOBUF PORT "o_NIC2_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC2_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(40):
+     Semantic error in "IOBUF PORT "o_NIC3_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC3_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(41):
+     Semantic error in "IOBUF PORT "o_NIC4_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC4_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(42):
+     Semantic error in "IOBUF PORT "o_NIC5_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC5_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(43):
+     Semantic error in "IOBUF PORT "o_NIC6_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC6_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(44):
+     Semantic error in "IOBUF PORT "o_NIC7_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC7_PERST_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(45):
+     Semantic error in "IOBUF PORT "o_NIC8_PERST_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_NIC8_PERST_N_R" does not exist in the design.
+
+                                    Page 6
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(46):
+     Semantic error in "IOBUF PORT "o_RETIMER1_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER1_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(47):
+     Semantic error in "IOBUF PORT "o_RETIMER2_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER2_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(48):
+     Semantic error in "IOBUF PORT "o_RETIMER3_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER3_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(49):
+     Semantic error in "IOBUF PORT "o_RETIMER4_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER4_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(50):
+     Semantic error in "IOBUF PORT "o_RETIMER5_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER5_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(51):
+     Semantic error in "IOBUF PORT "o_RETIMER6_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER6_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(52):
+     Semantic error in "IOBUF PORT "o_RETIMER7_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER7_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(53):
+     Semantic error in "IOBUF PORT "o_RETIMER8_RESET_N_R" IO_TYPE=LVCMOS18
+     PULLMODE=NONE ;": Port "o_RETIMER8_RESET_N_R" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro/BP_4S104G5.lpf(54):
+     Semantic error in "IOBUF PORT "i_ict_tp100" PULLMODE=DOWN IO_TYPE=LVCMOS33
+     ;": Port "i_ict_tp100" does not exist in the design. This preference has
+     been disabled.
+WARNING - map: Using local reset signal 'pon_reset_n' to infer global GSR net.
+WARNING - map: In "LOCATE COMP "io_I2C1_CPLD1_UPDATE_SDA" SITE "D11" ;": Current
+     SYS_CONFIG setting prohibits pin "D11" to be used as user IO. This
+     preference has been disabled.
+WARNING - map: In "LOCATE COMP "io_I2C1_CPLD1_UPDATE_SCL" SITE "C11" ;": Current
+     SYS_CONFIG setting prohibits pin "C11" to be used as user IO. This
+     preference has been disabled.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| io_I2C1_CPLD1_REG_SDA| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_CPLD1_LED0_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 7
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| o_MCIO01A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_CLK         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_I2C1_CPLD1_UPDATE_SDA| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_I2C1_CPLD1_UPDATE_SCL| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_TEMP_ALERT_3_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_TEMP_ALERT_2_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_TEMP_ALERT_1_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_TEMP_ALERT_0_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BASE3_VPP_INT_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BASE2_VPP_INT_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BASE1_VPP_INT_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BASE0_VPP_INT_N_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SPI_MISOMOSI_S1_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SPI_MISOMOSI_S0_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SPI_CSCLK_S1_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SPI_CSCLK_S0_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SPI_RESET_R_N     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RST_SW3_VPP2_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RST_SW2_VPP2_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RST_SW1_VPP2_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RST_SW0_VPP2_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_RST_SW0_3_NIC_VPP1_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_NIC_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_NIC_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_NIC_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_NIC_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_CLKREQ_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_CLKREQ_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 8
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| i_SW1_CLKREQ_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_CLKREQ_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_MCIO2_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_MCIO2_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_MCIO2_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_MCIO2_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_NPU_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_NPU_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_NPU_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_NPU_CLK_OE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SW0_3_VPP_S1_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SW0_3_VPP_S0_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_SPI_CS_SEL_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_PAL_SPI_SEL_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_PAL_SPI_SEL_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_PAL_SPI_SEL_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_PAL_SPI_SEL_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW3_FAULT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW2_FAULT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW0_FAULT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW3_VRHOT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW2_VRHOT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW1_VRHOT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW0_VRHOT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW3_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 9
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| i_P0V8_SW2_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW0_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_SW_GPU_PRSNT_R_N| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_SW_PWR_PG     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0V8_SW_EN_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_PEX_PERST_R_N | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_PEX_PERST_R_N | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_PEX_PERST_R_N | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_PEX_PERST_R_N | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC8C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC8C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC8A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC8A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC7C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC7C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC7A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC7A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC6C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC6C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC6A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC6A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC5C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC5C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC5A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC5A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC4C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC4C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC4A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 10
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| i_NIC4A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC3C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC3C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC3A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC3A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC2C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC2C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC2A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC2A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC1C_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC1C_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC1A_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC1A_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC3C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC3A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC1C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 11
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| o_NIC1A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC3C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC3A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC1C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC1A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC8A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC7A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC6A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC5A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC4A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC3C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 12
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| o_NIC3A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC2A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC1C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NIC1A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC5_8_WAKE_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NIC1_4_WAKE_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU8C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU8A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU7C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU7A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU6C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU6A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU5C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU5A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU4C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU4A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU3C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU3A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU2C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU2A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU1C_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU1A_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU8C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU8A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU7C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU7A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU6C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 13
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| o_NPU6A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU5C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU5A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU4C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU4A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU3C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU3A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU2C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU2A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU1C_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU1A_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU8C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU8A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU7C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU7A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU6C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU6A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU5C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU5A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU4C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU4A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU3C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU3A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU2C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU2A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU1C_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NPU1A_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NPU5_8_WAKE_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 14
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| i_NPU1_4_WAKE_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCPLD_SGPIO_DATA_OUT| INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_MCPLD_SGPIO_DATA_IN| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCPLD_SGPIO_LD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_MCPLD_SGPIO_CLK   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_NVME4_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME3_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME2_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME1_POWER_EN_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME4_ALERT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME3_ALERT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME2_ALERT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME1_ALERT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME2_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME2_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME1_PRSNT1_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_NVME1_PRSNT0_R_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME4_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME3_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME2_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME1_RST_R_N     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME4_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME3_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME2_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_NVME1_RSV_R       | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MB_VPP3_ALT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MB_VPP2_ALT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MB_VPP1_ALT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 15
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| i_MB_VPP0_ALT_R_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1V8_PLL_EN_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P5V0_EN_R         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1V8_EN_R         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW3_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW2_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW1_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_CT_P1V25_SW0_PG   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_PAL_DB2000_PWRGD3 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_DB2000_PWRGD2 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_DB2000_PWRGD1 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_DB2000_PWRGD0 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SW_PWR_EN_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CT_P1V25_SW_EN_R  | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_PG_P1V8_PLL_R     | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PG_P5V0_R         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PG_P1V8_R         | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW3_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW2_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW1_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P0V8_SW0_PWRGD    | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_PAL_P12V_EN_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P12V_SNS_ALERT    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_OC       | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_STBY_FLTB| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_STBY_PG  | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_PG       | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_P3V3_STBY_PG      | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+
+                                   Page 16
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| o_I2C_RST4_7_R_N    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST3_R_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST2_R_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST1_R_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_I2C_RST0_R_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_I2C1_CPLD1_REG_SCL| INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_MCIO31C_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO31A_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO21C_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO21A_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO11C_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO11A_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO01C_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_MCIO01A_ALERT_R_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO32C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO32A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO31C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO31A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO22C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO22A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO21C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO21A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO12C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO12A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO11C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO11A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO02C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO02A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 17
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| o_MCIO01C_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO01A_CB_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO32A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO31C_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO31A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO22A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO21C_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO21A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO12A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO11C_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO11A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO02A_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_MCIO01C_PE_RST_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BMC_SW_UART_TX0_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BMC_SW_UART_RX0_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_UART_RX_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_UART_RX_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_UART_RX_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_UART_RX_R     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_UART_TX_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW2_UART_TX_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_UART_TX_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_UART_TX_R     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW3_SDB_RX_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW2_SDB_RX_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW1_SDB_RX_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW0_SDB_RX_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW3_SDB_TX_R      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 18
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+IO (PIO) Attributes (cont)
+--------------------------
+| i_SW2_SDB_TX_R      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW1_SDB_TX_R      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW0_SDB_TX_R      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD_RSV6         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD_RSV5         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD_RSV4         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD_RSV3         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD_RSV2         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD_RSV1         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD1_LED1_N      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_PULLUP_SN   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_DONE        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_INIT_N      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_PROGRAM_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_JTAGEN      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD1_HDR_R       | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block pll_inst/VCC undriven or does not drive anything - clipped.
+Block pon_reset_inst/GND undriven or does not drive anything - clipped.
+Block db_power_pg/GND undriven or does not drive anything - clipped.
+Block db_power_pg/VCC undriven or does not drive anything - clipped.
+Block inst_mb_to_slv_s2p/VCC undriven or does not drive anything - clipped.
+Block inst_slv_to_mb_p2s/VCC undriven or does not drive anything - clipped.
+Block edge_delay_p0v8_pg_50ms/GND undriven or does not drive anything - clipped.
+     
+Block edge_delay_p0v8_pg_50ms/VCC undriven or does not drive anything - clipped.
+     
+Block edge_delay_p1v25_pg_50ms/GND undriven or does not drive anything -
+     clipped.
+Block edge_delay_p1v25_pg_50ms/VCC undriven or does not drive anything -
+     clipped.
+Block edge_delay_p0v8_pg/VCC undriven or does not drive anything - clipped.
+Block bmc_cpld_i2c_ram/VCC undriven or does not drive anything - clipped.
+Block bmc_cpld_i2c_ram/GND undriven or does not drive anything - clipped.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/VCC undriven or does not drive anything
+     - clipped.
+Signal pon_reset_n_i was merged into signal pon_reset_n
+
+                                   Page 19
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Removed logic (cont)
+--------------------
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i
+     was merged into signal
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
+Signal r_sda_en_i was merged into signal
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en
+Signal pll_inst/GND undriven or does not drive anything - clipped.
+Signal timer_gen_inst/GND undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/GND undriven or does not drive anything - clipped.
+Signal inst_slv_to_mb_p2s/GND undriven or does not drive anything - clipped.
+Signal edge_delay_p0v8_pg/GND undriven or does not drive anything - clipped.
+Signal inst_i2c_update_flash_config/VCC undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/GND undriven or does not drive anything -
+     clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/GND undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND undriven or
+     does not drive anything - clipped.
+Signal pll_inst/CLKINTFB undriven or does not drive anything - clipped.
+Signal pll_inst/DPHSRC undriven or does not drive anything - clipped.
+Signal pll_inst/PLLACK undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO0 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO1 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO2 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO3 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO4 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO5 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO6 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO7 undriven or does not drive anything - clipped.
+Signal pll_inst/REFCLK undriven or does not drive anything - clipped.
+Signal pll_inst/INTLOCK undriven or does not drive anything - clipped.
+Signal pll_inst/CLKOS3 undriven or does not drive anything - clipped.
+Signal pll_inst/CLKOS2 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/sec_tmr_s_0_S1[5] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/sec_tmr_s_0_COUT[5] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/usec_tmr_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/N_29 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/usec_tmr_cry_0_COUT[3] undriven or does not drive anything
+     - clipped.
+Signal timer_gen_inst/sec_tmr_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/N_28 undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/N_99 undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/cnt_s_0_S1[5] undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/cnt_s_0_COUT[5] undriven or does not drive anything -
+     clipped.
+Signal inst_slv_to_mb_p2s/cnt_cry_0_S0_0[0] undriven or does not drive anything
+     - clipped.
+Signal inst_slv_to_mb_p2s/N_1 undriven or does not drive anything - clipped.
+Signal inst_slv_to_mb_p2s/cnt_s_0_S1_0[5] undriven or does not drive anything -
+
+                                   Page 20
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal inst_slv_to_mb_p2s/cnt_s_0_COUT_0[5] undriven or does not drive anything
+     - clipped.
+Signal edge_delay_p0v8_pg/timer_cnt_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal edge_delay_p0v8_pg/N_1 undriven or does not drive anything - clipped.
+Signal edge_delay_p0v8_pg/timer_cnt_s_0_S1[5] undriven or does not drive
+     anything - clipped.
+Signal edge_delay_p0v8_pg/timer_cnt_s_0_COUT[5] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/CFGSTDBY undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/CFGWAKE undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/WBCUFMIRQ undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/TCOC undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/TCINT undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/SPIIRQO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPICSNEN undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN7 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN6 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN5 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN4 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN3 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN2 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN1 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN0 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMOSIEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/SPIMOSIO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMISOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/SPIMISOO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPISCKEN undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPISCKO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/I2C2IRQO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/i2c1_irqo undriven or does not drive
+     anything - clipped.
+
+                                   Page 21
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Removed logic (cont)
+--------------------
+Signal inst_i2c_update_flash_config/I2C2SDAOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SDAO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/I2C2SCLOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SCLO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO0_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO1_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO2_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO3_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO4_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO5_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO6_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO7_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO0 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO1 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO2 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO3 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO4 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLWEO undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/PLL1STBO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLL0STBO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLRSTO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLCLKO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wb_ack_o undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[0] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[1] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[2] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[3] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[4] undriven or does not drive
+     anything - clipped.
+
+                                   Page 22
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Removed logic (cont)
+--------------------
+Signal inst_i2c_update_flash_config/wb_dat_o_1[5] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[6] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[7] undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_3 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_S1
+     undriven or does not drive anything - clipped.
+Signal
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0] undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_4 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15] undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_5 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15] undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S1
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_6 undriven or does not drive anything
+     - clipped.
+Signal
+     bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_14_0_COUT
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/N_7 undriven or does not drive anything
+     - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_S1
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cry_0
+     _S0[0] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21 undriven or
+     does not drive anything - clipped.
+
+                                   Page 23
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Removed logic (cont)
+--------------------
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_S
+     1[5] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_C
+     OUT[5] undriven or does not drive anything - clipped.
+Signal inst_osch_SEDSTDBY undriven or does not drive anything - clipped.
+Block pon_reset_inst/reset1_reg_RNILMDB6[2] was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_RNITM
+     RN7 was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIFI8M6
+     was optimized away.
+Block pll_inst/GND was optimized away.
+Block timer_gen_inst/GND was optimized away.
+Block inst_mb_to_slv_s2p/GND was optimized away.
+Block inst_slv_to_mb_p2s/GND was optimized away.
+Block edge_delay_p0v8_pg/GND was optimized away.
+Block inst_i2c_update_flash_config/VCC was optimized away.
+Block inst_i2c_update_flash_config/GND was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/GND was optimized away.
+Block bmc_cpld_i2c_ram/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND was optimized
+     away.
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll_inst/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      i_CPLD1_CLK_c
+  Output Clock(P):                         NODE     clk_50m
+  Output Clock(S):                         NODE     clk_25m
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk_50m
+  Reset Signal:                            NODE     pll_inst/i_P3V3_STBY_PG_c_i
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                         NODE     pll_lock
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+
+                                   Page 24
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+PLL/DLL Summary (cont)
+----------------------
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      25.0000
+  Output Clock(P) Frequency (MHz):                  50.0000
+  Output Clock(S) Frequency (MHz):                  25.0000
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    2
+  CLKOP Divider:                                    10
+  CLKOS Divider:                                    20
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 RISING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                inst_osch
+  OSC Type:                                         OSCH
+  STDBY Input:                                      NONE
+  OSC Output:                              NODE     wb_clk
+  OSC Nominal Frequency (MHz):                      4.29
+
+
+
+                                   Page 25
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+Embedded Functional Block Connection Summary
+--------------------------------------------
+
+   Desired WISHBONE clock frequency: 4.3 MHz
+   Clock source:                     wb_clk
+   Reset source:                     NONE
+   Functions mode:
+      I2C #1 (Primary) Function:     ENABLED
+      I2C #2 (Secondary) Function:   DISABLED
+      SPI Function:                  DISABLED
+      Timer/Counter Function:        DISABLED
+      Timer/Counter Mode:            WB
+      UFM Connection:                DISABLED
+      PLL0 Connection:               DISABLED
+      PLL1 Connection:               DISABLED
+   I2C Function Summary:
+   --------------------
+      I2C Component:          PRIMARY
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000001
+      General Call:           DISABLED
+      I2C Wake Up:            DISABLED
+      I2C Component:          UFM/Configuration
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000000
+   SPI Function Summary:
+   --------------------
+      None
+   Timer/Counter Function Summary:
+   ------------------------------
+      None
+   UFM Function Summary:
+   --------------------
+      UFM Utilization:        General Purpose Flash Memory
+      Available General
+      Purpose Flash Memory:   2046 Pages (2046*128 Bits)
+
+           EBR Blocks with Unique
+      Initialization Data:    0
+
+           WID		EBR Instance
+      ---		------------
+
+
+ASIC Components
+---------------
+
+Instance Name: inst_osch
+         Type: OSCH
+Instance Name: inst_i2c_update_flash_config/EFBInst_0
+         Type: EFB
+Instance Name: pll_inst/PLLInst_0
+         Type: EHXPLLJ
+
+
+
+
+                                   Page 26
+
+
+
+
+Design:  BP_4S104G5                                    Date:  10/31/25  16:46:57
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'pon_reset_n' of the design has been inferred as
+        Global Set Reset (GSR). The reset signal used for GSR control is
+        'pon_reset_n'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'pon_reset_n' via the local reset on the component and not the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 1 
+
+     Type and instance name of component: 
+   Register : inst_slv_to_mb_p2s/so
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 73 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 27
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.

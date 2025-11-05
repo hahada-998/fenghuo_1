@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5/pro"  

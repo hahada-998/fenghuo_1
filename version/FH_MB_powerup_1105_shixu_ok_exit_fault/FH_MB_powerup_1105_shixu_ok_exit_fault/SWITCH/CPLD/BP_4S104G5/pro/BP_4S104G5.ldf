@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="BP_4S104G5" device="LCMXO3LF-6900C-5BG400C" default_implementation="impl1">
+    <Options/>
+    <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
+        <Options def_top="fan_pwm_tach">
+            <Option name="include path" value="../rtl/include"/>
+            <Option name="top" value="BP_4S104G5"/>
+        </Options>
+        <Source name="../rtl/source/BP_4S104G5_TOP.v" type="Verilog" type_short="Verilog">
+            <Options top_module="BP_4S104G5"/>
+        </Source>
+        <Source name="../rtl/source/PLL/pll_i25M_o50M_o25M.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/I2C_UPDATE/I2C_UPDATE.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/bmc_i2c/i2c_slave_basic0.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/bmc_i2c/i2c_slave_bmc.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/SGPIO_SLAVE/p2s_slave.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/SGPIO_SLAVE/s2p_slave.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/edge_delay.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/lowpass_filter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/pon_reset.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/synclib.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/timer_gen_50mhz.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/74LV165/pvt_gpi.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/FAN/fan_pwm_tach.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/FAN/fan_counter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/common/Edge_Detect.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="../rtl/source/breath_led/breath_led.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="BP_4S104G5.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="BP_4S104G51.sty"/>
+</BaliProject>

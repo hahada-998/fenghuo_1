@@ -1,0 +1,17 @@
+BM_H13DSP_M,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/BM_H13DSP_M_TOP.v
+delay,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/delay.v
+SYNC_RESET_N_AASD,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+SYNC_RESET_AASD,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+SYNC_RESET_SASD,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+SYNC_DATA,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+STABLE,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+BREAK_COMBI_N,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+BREAK_COMBI,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+ISOLATE_COMBI,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+PGM_DEBOUNCE_GPO_N,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v
+extrst_evt_count,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/extrst_evt_count.v
+genCntr,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/genCntr.v
+MESSAGE_CONTROL,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/common/MESSAGE_CONTROL.v
+fault_detectA_chklive,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectA_chklive.v
+Power_Fault,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/Power_Fault.v
+s2p_164,/,D:/ODM MB SWITCH/MB/09/BM_H13DSP_M/rtl/source/74HC164/s2p_164.v
