@@ -701,27 +701,31 @@ fault_detectB_chklive #(
 //------------------------------------------------------------------------------
 wire p5v_en_check;
 
-edge_delay #(.CNTR_NBITS(2)) p5v_en_check_inst (
-  .clk           (clk),
-  .reset         (reset),
-  .cnt_size      (2'b10),
-  .cnt_step      (t64ms),
-  .signal_in     (p5v_en),
-  .delay_output  (p5v_en_check)
+edge_delay #(
+    .CNTR_NBITS(2)
+) p5v_en_check_inst (
+    .clk                  (clk                              ),
+    .reset                (reset                            ),
+    .cnt_size             (2'b10                            ),
+    .cnt_step             (t64ms                            ),
+    .signal_in            (p5v_en                           ),
+    .delay_output         (p5v_en_check                     )
 );
 
-fault_detectB_chklive #(.NUMBER_OF_VRM(1)) p5v_fault_detect_inst (
-  .clk              (clk),								//in
-  .reset            (reset),							//in
-  .vrm_enable       (p5v_en && p5v_en_check),			//in
-  .vrm_pgood        (p5v_pg),							//in
-  .vrm_chklive_en   (p5v_en_check),					//in
-  .vrm_chklive_dis  (~p5v_en_check),					//in
-  .critical_fail    (st_critical_fail),					//in
-  .fault_clear      (fault_clear),						//in
-  .lock             (any_pwr_fault_det),				//in
-  .any_vrm_fault    (),									//out
-  .vrm_fault        (p5v_fault_det)					//out
+fault_detectB_chklive #(
+    .NUMBER_OF_VRM(1)
+) p5v_fault_detect_inst (
+    .clk                  (clk                              ),//in
+    .reset                (reset                            ),//in
+    .vrm_enable           (p5v_en && p5v_en_check           ),//in
+    .vrm_pgood            (p5v_pg                           ),//in
+    .vrm_chklive_en       (p5v_en_check                     ),//in
+    .vrm_chklive_dis      (~p5v_en_check                    ),//in
+    .critical_fail        (st_critical_fail                 ),//in
+    .fault_clear          (fault_clear                      ),//in
+    .lock                 (any_pwr_fault_det                ),//in
+    .any_vrm_fault        (aux_fault                        ),//out
+    .vrm_fault            (p5v_fault_det                    )	//out
 );
 
 //------------------------------------------------------------------------------
@@ -826,27 +830,31 @@ fault_detectB_chklive #(.NUMBER_OF_VRM(1)) p5v_fault_detect_inst (
 //------------------------------------------------------------------------------
 wire grp_b_p0_18_s5_en_check;
 
-edge_delay #(.CNTR_NBITS(2)) grp_b_p0_18_s5_en_check_inst (
-  .clk           (clk),
-  .reset         (reset),
-  .cnt_size      (2'b10),
-  .cnt_step      (t64ms),
-  .signal_in     (grp_b_p0_18_s5_en),
-  .delay_output  (grp_b_p0_18_s5_en_check)
+edge_delay #(
+    .CNTR_NBITS(2)
+) grp_b_p0_18_s5_en_check_inst (
+    .clk              (clk                             ),
+    .reset            (reset                           ),
+    .cnt_size         (2'b10                           ),
+    .cnt_step         (t64ms                           ),
+    .signal_in        (grp_b_p0_18_s5_en               ),
+    .delay_output     (grp_b_p0_18_s5_en_check         )
 );
 
-fault_detectB_chklive #(.NUMBER_OF_VRM(1)) grp_b_p0_18_s5_fault_detect_inst (
-  .clk              (clk),								//in
-  .reset            (reset),							//in
-  .vrm_enable       (grp_b_p0_18_s5_en && grp_b_p0_18_s5_en_check),	//in
-  .vrm_pgood        (grp_b_p0_18_s5_pg),						//in
-  .vrm_chklive_en   (grp_b_p0_18_s5_en_check),					//in
-  .vrm_chklive_dis  (~grp_b_p0_18_s5_en_check),					//in
-  .critical_fail    (st_critical_fail),					//in
-  .fault_clear      (fault_clear),						//in
-  .lock             (any_pwr_fault_det),				//in
-  .any_vrm_fault    (),									//out
-  .vrm_fault        (grp_b_p0_18_s5_fault_det)			//out
+fault_detectB_chklive #(
+    .NUMBER_OF_VRM(1)
+) grp_b_p0_18_s5_fault_detect_inst (
+    .clk              (clk                                          ),								//in
+    .reset            (reset                                        ),							//in
+    .vrm_enable       (grp_b_p0_18_s5_en && grp_b_p0_18_s5_en_check ),	//in
+    .vrm_pgood        (grp_b_p0_18_s5_pg                            ),						//in
+    .vrm_chklive_en   (grp_b_p0_18_s5_en_check                      ),					//in
+    .vrm_chklive_dis  (~grp_b_p0_18_s5_en_check                     ),					//in
+    .critical_fail    (st_critical_fail                             ),					//in
+    .fault_clear      (fault_clear                                  ),						//in
+    .lock             (any_pwr_fault_det                            ),				//in
+    .any_vrm_fault    (                                             ),									//out
+    .vrm_fault        (grp_b_p0_18_s5_fault_det                     )			//out
 );
 
 wire grp_b_p1_18_s5_en_check;
