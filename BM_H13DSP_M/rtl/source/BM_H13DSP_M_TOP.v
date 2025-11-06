@@ -104,12 +104,13 @@ wire                    pgd_aux_system_sasd;         // 辅助系统电源良好
 wire                    pgd_aux_bmc;                 // BMC辅助电源良好信号
 wire                    done_booting_delayed = 1'b1; // 延迟的启动完成信号，固定为高电平
 
-assign pgd_aux_bmc = 1'b1; // 将BMC辅助电源良好信号固定为高电平
+assign                  pgd_aux_bmc          = 1'b1; // 将BMC辅助电源良好信号固定为高电平
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //For db_inst_amd_cpu_prsnt
 //--------------------------------------------------------------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 wire    [1:0]           db_cpu_prsnt_n                            ; // 最终对外使用的 CPU 在位信号（低电平有效）
 wire    [1:0]           db_cpu_prsnt_n_db                         ; // 来自去抖模块的原始输出（中间信号）
 wire                    db_i_p0_spd_host_ctrl_n                   ;
@@ -163,10 +164,65 @@ wire                    db_i_p1_pcie_rst_n_0                      ; // P1 PCIe �
 wire                    db_i_p1_pcie_rst_n_1                      ; // P1 PCIe 复位信号（低电平有效，次级）
 wire                    db_i_p0_bios_post_stage_r_n               ; // P0 BIOS 启动阶段信号（低电平有效），指示 BIOS 启动进度
 
+=======
+wire    [1:0]           db_cpu_prsnt_n			                ; // 最终对外使用的 CPU 在位信号（低电平有效）
+wire    [1:0]           db_cpu_prsnt_n_db                   ; // 来自去抖模块的原始输出（中间信号）  
+wire                    db_i_p0_spd_host_ctrl_n             ; //主机控制相关的输入信号 
+
+
+// 本地拨码开关模拟寄存器（仅顶层内部使用，硬件测试时可在约束或测试固件里赋值/映射）
+// 说明：拨码低有效 (0 = 强制“在位”), 默认不覆盖（override = 1'b0）
+reg     [1:0]           r_dip_cpu_prsnt_n        = 2'b00    ; // 默认均为 1 -> 表示“不在位”
+reg                     r_dip_cpu_prsnt_override = 1'b1     ; // 1 = 使用拨码覆盖，0 = 使用真实去抖信号
+reg                     r_cpu_pwrbtn_force_n     = 1'b0     ; // CPU 电源按钮强制信号，低电平有效，默认不强制
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------
+// For cpu_module_u1:Assume the CPU is Present CPU 
+// 模块使能与电源状态信号
+// 这类信号用于检测 CPU 模块的电源状态（如各电源轨是否稳定）、模块使能状态以及部件存在性
+// 是 CPU 模块正常工作的基础状态监测与控制信号。
+--------------------------------------------------------------------------------------------------------------------------------------------------*/
+wire                    w_cpu_module_en_n		                ; // CPU 模块使能（低电平有效），控制 CPU 模块是否使能
+wire                    w_cpu_module_p0_pwrok	              ; // CPU 模块 P0 电源好信号，指示 P0 电源轨稳定
+wire                    w_cpu_module_p1_pwrok	              ; // CPU 模块 P1 电源好信号，指示 P1 电源轨稳定
+wire                    w_cpu_module_p0_pwrgdout	          ; // CPU 模块 P0 电源好输出，用于级联或反馈 P0 电源状态
+wire                    w_cpu_module_p1_pwrgdout	          ; // CPU 模块 P1 电源好输出，用于级联或反馈 P1 电源状态
+wire                    w_cpu_module_p0_slp_s3_n	          ; // CPU 模块的P0睡眠信号，S3状态（低有效）
+wire                    w_cpu_module_p0_slp_s5_n	          ; // CPU 模块的P0睡眠信号，S5状态（低有效）
+wire                    w_cpu_module_p0_prsnt_n	            ; // CPU 模块 P0 存在检测（低电平有效），检测 P0 相关部件是否存在
+wire                    w_cpu_module_p1_prsnt_n	            ; // CPU 模块 P1 存在检测（低电平有效），检测 P1 相关部件是否存在
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------
+// for sync_cpu_data_low
+// 数据同步与 PCIe 复位信号
+// 主要用于跨时钟域的信号同步（如电源好、复位信号），确保信号在不同时钟域间传输时的稳定性
+// 同时包含 PCIe 接口的复位控制与 BIOS 启动阶段的监测信号。
+--------------------------------------------------------------------------------------------------------------------------------------------------*/
+wire                    db_i_p0_slp_s3_n	                  ; // P0 睡眠 S3 状态（低电平有效），同步后的信号 
+wire                    db_i_p0_slp_s5_n	                  ; // P0 睡眠 S5 状态（低电平有效），同步后的信号
+wire                    db_i_p1_slp_s3_n	                  ; // P1 睡眠 S3 状态（低电平有效），同步后的信号 
+wire                    db_i_p1_slp_s5_n	                  ; // P1 睡眠 S5 状态（低电平有效），同步后的信号
+wire                    db_i_p0_pwrok		                    ; // P0 电源好信号（同步后），确保跨时钟域时的稳定性
+wire                    db_i_p1_pwrok		                    ; // P1 电源好信号（同步后），确保跨时钟域时的稳定性
+wire                    db_i_p0_reset_n	                    ; // P0 复位信号（低电平有效，同步后），用于 P0 模块复位
+wire                    db_i_p1_reset_n	                    ; // P1 复位信号（低电平有效，同步后），用于 P0 模块复位
+wire                    db_i_p0_pwrgd_out	                  ; // P0 电源好输出（同步后）
+wire                    db_i_p1_pwrgd_out	                  ; // P1 电源好输出（同步后）
+wire                    db_i_p0_smerr_n	                    ; // P0 严重错误（低电平有效，未使用）
+wire                    db_i_p1_smerr_n	                    ; // P1 严重错误（低电平有效，未使用）
+
+wire                    db_i_fm_cpu_smerr_lvc3_n_r	        ; 
+
+wire                    db_i_p0_pcie_rst_n_0                ; // P0 PCIe 复位信号（低电平有效，初始级）
+wire                    db_i_p0_pcie_rst_n_1                ; // P0 PCIe 复位信号（低电平有效，次级）
+wire                    db_i_p1_pcie_rst_n_0                ; // P1 PCIe 复位信号（低电平有效，初始级）
+wire                    db_i_p1_pcie_rst_n_1                ; // P1 PCIe 复位信号（低电平有效，次级）
+wire                    db_i_p0_bios_post_stage_r_n         ; // P0 BIOS 启动阶段信号（低电平有效），指示 BIOS 启动进度
+>>>>>>> e195096c027b929d0adc57e9f44ea3efe77971d6
 //btn
-wire    db_i_pal_pwr_btn_n	  ;
-wire    db_i_pal_ext_rst_n	  ;
-wire    db_i_pal_bmcuid_button;
+wire                    db_i_pal_pwr_btn_n	                ;
+wire                    db_i_pal_ext_rst_n	                ;
+wire                    db_i_pal_bmcuid_button              ;
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for db_vr_ocp_low
 //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1426,7 +1482,32 @@ pvt_gpi #(
 );
 
 
+// S CPLD ---> M CPLD
+// 说明：s2p_master 为“串行到并行（Serial-to-Parallel）”主设备，
+// master 产生串行时钟(sclk)和加载信号(sld_n)，从 S CPLD 的 MISO 读取 NBIT=200 位串行数据，
+// 在完成一帧后输出并行数据 (po) 给 M CPLD 内部逻辑使用。
+s2p_master #(.NBIT(200)) inst_scpld_to_mcpld_s2p(//96
+    .clk          (clk_50m                 ), // 时钟，驱动移位和采样（50MHz）
+    .rst          (~pon_reset_n            ), // 复位（连接 ~pon_reset_n，说明模块内部可能是主动高复位）
+    .tick         (t1us_tick               ), // 时序参考脉冲（1us tick），用于定时/计数
+    .si           (i_CPLD_SGPIO0_MISO_R    ), // Serial Input（来自 S_CPLD 的 MISO）
+    .po           (scpld_to_mcpld_s2p_data ), // Parallel Output（N-bit 并行数据，向上游使用）
+    .sld_n        (w_cpld_sgpio0_ld_n_r    ), // 输出：并行加载/帧边界信号（低有效）
+    .sclk         (w_cpld_sgpio0_clk_r     )  // 输出：串行时钟，驱动外部 slave 的数据采样/移位
+);
 
+// M CPLD ---> S CPLD
+// 说明：p2s_slave 为“并行到串行（Parallel-to-Serial）”从设备，
+// 接收内部并行数据(pi)，在收到 sld_n/sclk 时序控制下把数据序列化并通过 so 输出（MOSI）到 S CPLD。
+// 注意 sld_n 与 sclk 由上面的 s2p_master 产生，两模块共享同一对时序线（主产生， 从使用）。
+p2s_slave #(.NBIT(200)) inst_mcpld_to_scpld_p2s(//96
+    .clk          (clk_50m                   ), // 时钟，用于内部逻辑/同步
+    .rst          (~pon_reset_n              ), // 复位（同上）
+    .pi           (mcpld_to_scpld_p2s_data   ), // Parallel Input（要发送给 S_CPLD 的 N-bit 并行数据）
+    .so           (w_cpld_sgpio0_mosi_r      ), // Serial Output（序列化后作为 MOSI 发出）
+    .sld_n        (w_cpld_sgpio0_ld_n_r      ), // 串行装载/帧起止（由 master 驱动，为输入）
+    .sclk         (w_cpld_sgpio0_clk_r       )  // 串行时钟（由 master 提供，为输入）
+);
 //-------------------------------------------------------------------------------------------------
 //M_CPLD TO S_CPLD SGPIO    START
 //-------------------------------------------------------------------------------------------------
@@ -1743,26 +1824,7 @@ always@(posedge clk_50m or negedge pon_reset_n)
 			end
 
 end
-//S CPLD ---> M CPLD
-s2p_master #(.NBIT(200)) inst_scpld_to_mcpld_s2p(//96
-  .clk  (clk_50m					), //in
-  .rst  (~pon_reset_n				), //in
-  .tick (t1us_tick					), //in
-  .si   (i_CPLD_SGPIO0_MISO_R		), //in   //SGPIO_MISO  Serial Signal input
-  .po   (scpld_to_mcpld_s2p_data	), //out  //Parallel Signal output
-  .sld_n(w_cpld_sgpio0_ld_n_r	), //out  //SGPIO_LOAD
-  .sclk (w_cpld_sgpio0_clk_r 	)  //out  //SGPIO_CLK
-);
 
-//M CPLD  ---> S CPLD
-p2s_slave #(.NBIT(200)) inst_mcpld_to_scpld_p2s(//96
-	.clk  (clk_50m					    ),//in
-	.rst  (~pon_reset_n				    ),//in
-	.pi   (mcpld_to_scpld_p2s_data	    ),//in   //Parallel Signal input
-	.so   (w_cpld_sgpio0_mosi_r 	),//out  //SGPIO_MOSI Serial Signal output
-	.sld_n(w_cpld_sgpio0_ld_n_r		),//in   //SGPIO_LOAD
-	.sclk (w_cpld_sgpio0_clk_r		) //in   //SGPIO_CLK
-);
 //-------------------------------------------------------------------------------------------------
 //M_CPLD TO S_CPLD SGPIO    END
 //-------------------------------------------------------------------------------------------------
@@ -1941,6 +2003,7 @@ wire    w_sbtn_sysrst_evt         ; // sbtn for rst event     push down for 500m
 wire    w_btn_press_flag          ;
 wire    w_pal_pwrbtn_n_r          ;
 
+// Pwr_But_Ctrl 模块实例化：电源按钮控制模块实例化，用于处理电源按钮的各种控制逻辑（电源按钮基础控制模块）
 Pwr_But_Ctrl #(
 .PWRBTN_LONG                  (4)
 )Pwr_But_Ctrl_U0
@@ -4053,14 +4116,15 @@ assign  o_PAL_PVCC_HPMOS_SW_R                             =   w_FM_P12V_EN  ;//2
 
 //-------------------------------------------------------------------------------------------------
 // BMC_CPLD_I2C_RAM 模块实例化
+//-------------------------------------------------------------------------------------------------
 // 功能：
-// 1. 通过I2C接口与外部设备通信，支持数据的读写操作。
+// 1. 通过 I2C 接口与外部设备通信，支持数据的读写操作。
 // 2. 提供多个输入信号，用于传递系统状态和配置信息。
 // 3. 输出信号用于与其他模块交互，支持状态反馈和控制。
-//-------------------------------------------------------------------------------------------------
 bmc_cpld_i2c_ram #(
     .DLY_LEN(16) // 延迟长度，50MHz 时钟下约 330ns
 ) bmc_cpld_i2c_ram_u0 (
+<<<<<<< HEAD
     // 时钟和复位信号
     .i_rst_n                        (pon_reset_n                      ), // 复位信号，低电平有效
     .i_clk                          (clk_25m                          ), // 时钟信号，频率为 25MHz
@@ -4107,6 +4171,43 @@ v
     .i_DUAL_EN                      (w_pal_dual_en_r                  ), // 双电源使能信号
     .i_P12V_DROOP                   (db_i_pgd_p12v_droop              ), // 12V 电压下跌信号
     .i_P12V_STBY_DROOP              (db_i_pgd_p12v_stby_droop         ), // 12V 待机电压下跌信号
+=======
+// 时钟和复位信号
+    .i_rst_n        (pon_reset_n),       // 复位信号，低电平有效
+    .i_clk          (clk_25m),           // 时钟信号，频率为 25MHz
+    .i_1ms_clk      (t1ms_tick),         // 1ms 时钟信号
+    .i_rst_i2c_n    (1'b1),              // I2C 复位信号，始终为高电平
+
+    // I2C 接口信号
+    .i_scl          (i_I2C7_PAL_SCL),    // I2C 时钟信号
+    .io_sda         (io_I2C7_PAL_SDA),   // I2C 数据信号
+
+    // 系统配置信号
+    .i_product_id           (`PRODUCT_ID),              // 产品 ID，地址 0x0000
+    .i_vender_id            (`VENDER_ID),               // 厂商 ID，地址 0x0001
+    .i_board_id             ({4'b0000, w_board_id}),    // 板卡 ID，地址 0x0002
+    .i_pcb_version          ({5'b0, w_pcb_version}),    // PCB 版本号，地址 0x0003
+    .i_bom_id               ({5'b0, w_pca_version}),    // BOM ID，地址 0x0004
+    .i_cpld_version         (`CPLD_VERSION),            // CPLD 版本号，地址 0x0005
+    .o_test_reg             (),                         // 测试寄存器，地址 0x0006
+    .i_year                 (`Year),                    // 年份，地址 0x0007
+    .i_month                (`Month),                   // 月份，地址 0x0008
+    .i_day                  (`Day),                     // 日期，地址 0x0009
+    .i_nc_pin               ({7'b0, w_nc_pin}),         // 未连接引脚，地址 0x000A
+    .i_cpld_compa_version   (8'h00),                    // CPLD 兼容版本，地址 0x000B
+    .i_cpld_debug_version   (`DEBUG_VERSION),           // CPLD 调试版本，地址 0x000C
+
+    // 电源状态信号
+    // PSU 状态信号，地址 0x000D
+    .i_PS1_PRSNT            (db_i_ps1_prsnt),           // PSU1 存在信号
+    .i_PS2_PRSNT            (db_i_ps2_prsnt),           // PSU2 存在信号
+    .i_PS3_PRSNT            (db_i_ps3_prsnt),           // PSU3 存在信号
+    .i_PS4_PRSNT            (db_i_ps4_prsnt),           // PSU4 存在信号
+    .i_PS1_ACFAIL           (db_i_ps1_acfail_n),        // PSU1 交流电源故障信号
+    .i_PS2_ACFAIL           (db_i_ps2_acfail_n),        // PSU2 交流电源故障信号
+    .i_PS1_DCOK             (db_i_ps1_dcok_n),          // PSU1 直流电源正常信号
+    .i_PS2_DCOK             (db_i_ps2_dcok_n),          // PSU2 直流电源正常信号
+>>>>>>> e195096c027b929d0adc57e9f44ea3efe77971d6
 
     // PSU（电源）状态信号，--0x000F
     .i_P12V_DISCHARGE               (w_p12v_discharge_r               ), // 12v的放电控制信号
@@ -4139,6 +4240,7 @@ v
     // BMC JTAG 多路复用选择信号，控制 BMC JTAG 多路复用器的通道, --0x0013
     .o_BMC_JTAG_MUX_S               (w_bmc_jtag_mux_s                 ), // BMC JTAG 多路复用选择信号，地址 0x0013，bit7，默认值 1
 
+<<<<<<< HEAD
     // 电源状态信号（逻辑输入），--0x0020
     .i_pwrgd_vdd_33_stby0           (db_i_pgd_p0_vddc                 ), // 地址 0x0020 bit7, 3.3V 待机电源良好信号
     .i_pwrgd_vdd_18_stby0           (db_i_pgd_p0_vdd_18_stby          ), // 地址 0x0020 bit6, 1.8V 待机电源良好信号
@@ -4239,6 +4341,108 @@ v
     .o_bmc_clr_sbtn_n               (w_bmc_sbtn_wc                    ), // 地址 0x0052，bit7，BMC清除软开机事件（0=清除）
     .o_bmc_clr_lbtn_n               (w_bmc_lbtn_wc                    ), // 地址 0x0052，bit6，BMC清除硬关机事件（0=清除）
     .o_bmc_clr_sbtn_sys_n           (w_bmc_sbtn_sys_wc                ), // 地址 0x0052，bit5，BMC清除软复位事件（0=清除）
+=======
+    //CPU0 PGD --0x0020
+    .i_pwrgd_vdd_33_stby0      (db_i_pgd_p0_vddc      ),  // 3.3V 待机电源良好信号，地址 0x0020，bit7
+    .i_pwrgd_vdd_18_stby0      (db_i_pgd_p0_vdd_18_stby), // 1.8V 待机电源良好信号，地址 0x0020，bit6
+    .i_pal_pgd_p0_vdd_core_1   (db_i_pgd_p0_vdd_core_1),  // 核心电源良好信号 1，地址 0x0020，bit5
+    .i_pal_pgd_p0_vdd_core_0   (db_i_pgd_p0_vdd_core_0),  // 核心电源良好信号 0，地址 0x0020，bit4
+    .i_pal_pgd_p0_vdd_soc_0    (db_i_pgd_p0_vdd_soc_0 ),  // SoC 电源良好信号，地址 0x0020，bit3
+    .i_pal_pgd_p0_vddio        (db_i_pgd_p0_vddio     ),  // IO 电源良好信号，地址 0x0020，bit2
+    .i_pal_pgd_p0_vdd_sus_0    (db_i_pgd_p0_vdd_11_sus),  // SUS 电源良好信号，地址 0x0020，bit1
+    .i_pal_cpu_sys_pwrok       (w_cpu_sys_pwrok       ),  // CPU 系统电源良好信号，地址 0x0020，bit0
+
+    //CPU0 ALERT --0x0021
+    .i_p0_pwrgd_out_r          (db_i_p0_pwrgd_out     ), // addr 0x0021 bit7 电源良好输出信号
+    .i_p0_pwrok_r              (db_i_p0_pwrok         ), // addr 0x0021 bit6 电源正常信号
+    .i_p0_pwr_good_r           (w_cpu_pwr_good        ), // addr 0x0021 bit5 电源良好信号
+
+    //CPU0 PWR EN --0x0022
+    .i_p0_vddc_en              (w_grp_b_p0_33_s5_en   ), // addr 0x0022 bit7 VDDC 电源使能信号
+    .i_p0_vdd_18_stby_en       (w_grp_b_p0_18_s5_en   ), // addr 0x0022 bit6 1.8V 待机电源使能信号
+    .i_pal_p0_vdd_11_sus_en    (w_grp_c_p0_vdd11_en   ), // addr 0x0022 bit5 1.1V SUS 电源使能信号
+    .i_pal_p0_vddio_en_r       (w_grp_d_p0_vddio_en   ), // addr 0x0022 bit4 IO 电源使能信号
+    .i_pal_p0_vdd_soc_en       (w_grp_d_p0_soc_en     ), // addr 0x0022 bit3 SoC 电源使能信号
+    .i_pal_p0_vdd_core_0_en_r  (w_grp_d_p0_vddcore0_en), // addr 0x0022 bit2 核心电源 0 使能信号
+    .i_pal_p0_vdd_core_1_en_r  (w_grp_d_p0_vddcore1_en), // addr 0x0022 bit1 核心电源 1 使能信号
+
+    
+    //CPU0 PGD --0x0023
+    .i_pwrgd_vdd_18_stby1      (db_i_pgd_p1_vdd_18_stby), // addr 0x0023 bit7 VDDC 电源使能。
+    .i_pwrgd_vdd_33_stby1      (db_i_pgd_p1_vddc       ), // addr 0x0023 bit6 1.8V 待机电源使能
+    .i_pal_pgd_p1_vdd_core_1   (db_i_pgd_p1_vdd_core_1 ), // addr 0x0023 bit5 1.1V SUS 电源使能
+    .i_pal_pgd_p1_vdd_core_0   (db_i_pgd_p1_vdd_core_0 ), // addr 0x0023 bit4 IO 电源使能
+    .i_pal_pgd_p1_vdd_soc_0    (db_i_pgd_p1_vdd_soc_0  ), // addr 0x0023 bit3 SoC 电源使能
+    .i_pal_pgd_p1_vddio        (db_i_pgd_p1_vddio      ), // addr 0x0023 bit2 核心电源 0 使能
+    .i_pal_pgd_p1_vdd_sus_0    (db_i_pgd_p1_vdd_11_sus ), // addr 0x0023 bit1 核心电源 1 使能
+
+    //CPU1 ALERT --0x0024
+    .i_p1_pwrgd_out_r				   (db_i_p1_pwrgd_out		   ),	//addr 0x0024 bit7 CPU1 电源良好输出信号
+    .i_p1_pwrok_r				       (db_i_p1_pwrok		       ),	//addr 0x0024 bit6 CPU1 电源就绪信号
+    .i_p1_pwr_good_r			     (db_i_p0_pwrgd_out			 ),	//addr 0x0024 bit5 CPU1 电源状态良好信号
+
+    //CPU0 PWR EN --0x0025
+    .i_p1_vdd_18_stby_en       (w_grp_b_p1_18_s5_en    ), // addr 0x0025 bit7 1.8V 待机电源使能
+    .i_p1_vddc_en              (w_grp_b_p1_33_s5_en    ), // addr 0x0025 bit6 3.3V 电源使能
+    .i_pal_p1_vdd_11_sus_en    (w_grp_c_p1_vdd11_en    ), // addr 0x0025 bit5 1.1V SUS 电源使能
+    .i_pal_p1_vddio_en_r       (w_grp_d_p1_vddio_en    ), // addr 0x0025 bit4 IO 电源使能
+    .i_pal_p1_vdd_soc_en       (w_grp_d_p1_soc_en      ), // addr 0x0025 bit3 SoC 电源使能
+    .i_pal_p1_vdd_core_0_en_r  (w_grp_d_p1_vddcore0_en ), // addr 0x0025 bit2 核心电源 0 使能
+    .i_pal_p1_vdd_core_1_en_r  (w_grp_d_p1_vddcore1_en ), // addr 0x0025 bit1 核心电源 1 使能
+	
+//CPU PRSNT --0x0030
+.i_PAL_CPU0_PRSNT_N                          (db_cpu_prsnt_n[0] & w_SW_1    ),     //addr 0x0030 bit7
+.i_PAL_CPU1_PRSNT_N                          (db_cpu_prsnt_n[1] & w_SW_1    ),     //addr 0x0030 bit6
+//CPU ERR --0x0032
+.i_P0_SMERR_N                                      (db_i_p0_smerr_n                        ),      //addr 0x0032 bit7
+.i_P1_SMERR_N                                      (db_i_p1_smerr_n                        ),      //addr 0x0032 bit6
+//CPU THERM --0x0033
+.i_PAL_CPU0_MEMHOT_OUT_N                (  )         , //addr 0x0033 bit7 
+.i_PAL_CPU0_MEMTRIP_N                      (  )         , //addr 0x0033 bit6 
+.i_PAL_CPU0_THERMTRIP_N                  (db_i_p0_pwrgd_out ? wFM_CPU0_THERMTRIP_LVT3_Fault_N :1'b1 )  , //addr 0x0033 bit5 
+.i_PAL_CPU0_PROCHOT_N                      (w_p0_prochot_n ),                                                                                      //addr 0x0033 bit4 
+.i_PAL_CPU1_MEMHOT_OUT_N                ( )         , //addr 0x0033 bit3 
+.i_PAL_CPU1_MEMTRIP_N                      ( )         , //addr 0x0033 bit2
+.i_PAL_CPU1_THERMTRIP_N                  (~(db_cpu_prsnt_n[1] & w_SW_1) & db_i_p1_pwrgd_out ? wFM_CPU1_THERMTRIP_LVT3_Fault_N :1'b1)  , //addr 0x0033 bit1
+.i_PAL_CPU1_PROCHOT_N                      (w_p1_prochot_n )             , //addr 0x0033 bit0 
+
+
+//pwr_flt_clr --0x0034
+.o_bmc_clr_tmout_n                            (w_bmc_clr_tmout_n)                 , //addr 0x0034 bit7  //default 1
+.o_pal_cpu0_forcepr_r                      (w_cpu0_prochot)              , //addr 0x0034 bit6  //default 0
+.o_pal_cpu1_forcepr_r                      (w_cpu1_prochot)              , //addr 0x0034 bit5  //default 0
+.o_clear_register                              (w_clear_register)                  , //addr 0x0034 bit4  //default 0
+
+// .o_cpu0_prochot						(w_cpu0_prochot					),	//addr 0x02a2 bit2 
+// .o_cpu1_prochot						(w_cpu1_prochot			                ),	//addr 0x02a9 bit2 
+
+//pwr_flt_code --0x0035
+.i_pwr_flt_code                                  (w_pwr_flt_code)                    , //addr 0x0035       //default 8'h00
+//////////////0X0036 -0X004F RESERVED FOR FUTURE USE///////////////////////////////////////////////////////////////////
+//btn_press_flag --0x0050
+.i_btn_press_flag                              (w_btn_press_flag )                 , //addr 0x0050 bit7
+.i_slps5_sts                                        (db_i_p0_slp_s5_n )                 , //addr 0x0050 bit6  
+.i_slps3_sts                                        (db_i_p0_slp_s3_n )                 , //addr 0x0050 bit5  
+//btn_evt --0x0051
+.i_sbtn_pwron_evt                              (w_sbtn_pwron_evt    )               , //addr 0x0051 bit7
+.i_lbtn_pwrdown_evt                          (w_lbtn_pwrdown_evt)               , //addr 0x0051 bit6
+.i_sbtn_sysrst_evt                            (w_sbtn_sysrst_evt  )               , //addr 0x0051 bit5
+//bmc_clr_btn_evt --0x0052
+.o_bmc_clr_sbtn_n                              (w_bmc_sbtn_wc          )                , //addr 0x0052 bit7  //default 1
+.o_bmc_clr_lbtn_n                              (w_bmc_lbtn_wc          )                , //addr 0x0052 bit6  //default 1
+.o_bmc_clr_sbtn_sys_n                      (w_bmc_sbtn_sys_wc  )                , //addr 0x0052 bit5  //default 1
+//bmc_btn_ctl --0x0053
+.o_pwr_btn_lock                                  (w_bmc_pwrbtn_lock       )  		, //addr 0x0053 bit7  //default 1
+.o_bmc_power_soft_ctl                      (w_bmc_sbtn_powerdown )           , //addr 0x0053 bit6  //default 0
+.o_bmc_lbtn_pwrdown_ctl                  (w_bmc_lbtn_powerdown )           , //addr 0x0053 bit5  //default 0
+.o_bmc_sbtn_pwron_ctl                      (w_bmc_sbtn_poweron     )           , //addr 0x0053 bit4  //default 0
+.o_bmc_sbtn_sysrst_ctl                    (w_bmc_sbtn_reset_ctl )           , //addr 0x0053 bit3  //default 0
+//bmc_btn_done --0x0054
+.i_bmc_power_soft_done                    (w_bmc_sbtn_powerdown_done ) , //addr 0x0054 bit7
+.i_bmc_lbtn_pwrdown_done                (w_bmc_lbtn_powerdown_done ) , //addr 0x0054 bit6
+.i_bmc_sbtn_pwron_done                    (w_bmc_sbtn_poweron_done     ) , //addr 0x0054 bit5
+.i_bmc_sbtn_sysrst_done                  (w_bmc_ctl_sys_rst_done       ) , //addr 0x0054 bit4
+>>>>>>> e195096c027b929d0adc57e9f44ea3efe77971d6
 
     // bmc_btn_ctl --0x0053
     .o_pwr_btn_lock                 (w_bmc_pwrbtn_lock                ), // 地址 0x0053，bit7，BMC 电源按钮锁定信号，BMC 控制，置 0 禁用物理按钮，置 1 启用
