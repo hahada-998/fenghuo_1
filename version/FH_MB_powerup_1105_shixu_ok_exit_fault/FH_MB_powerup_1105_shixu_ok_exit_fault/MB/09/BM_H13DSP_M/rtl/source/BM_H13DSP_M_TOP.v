@@ -313,11 +313,11 @@ reg     r_cpu_pwrbtn_force_n = 1'b0;    // CPU 电源按钮强制信号，低电
 //这类信号用于检测 CPU 模块的电源状态（如各电源轨是否稳定）、模块使能状态以及部件存在性
 //是 CPU 模块正常工作的基础状态监测与控制信号。
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire        w_cpu_module_en_n;       		// CPU 模块使能（低电平有效），控制 CPU 模块是否使能
-wire        w_cpu_module_p0_pwrok;    		// CPU 模块 P0 电源好信号，指示 P0 电源轨稳定
-wire        w_cpu_module_p1_pwrok;    		// CPU 模块 P1 电源好信号，指示 P1 电源轨稳定
-wire        w_cpu_module_p0_pwrgdout; 		// CPU 模块 P0 电源好输出，用于级联或反馈 P0 电源状态
-wire        w_cpu_module_p1_pwrgdout; 		// CPU 模块 P1 电源好输出，用于级联或反馈 P1 电源状态
+wire        w_cpu_module_en_n;       	// CPU 模块使能（低电平有效），控制 CPU 模块是否使能
+wire        w_cpu_module_p0_pwrok;    // CPU 模块 P0 电源好信号，指示 P0 电源轨稳定
+wire        w_cpu_module_p1_pwrok;    // CPU 模块 P1 电源好信号，指示 P1 电源轨稳定
+wire        w_cpu_module_p0_pwrgdout; // CPU 模块 P0 电源好输出，用于级联或反馈 P0 电源状态
+wire        w_cpu_module_p1_pwrgdout; // CPU 模块 P1 电源好输出，用于级联或反馈 P1 电源状态
 wire    	w_cpu_module_p0_slp_s3_n	;	// CPU 模块的P0睡眠信号，S3状态（低有效）
 wire    	w_cpu_module_p0_slp_s5_n	;	// CPU 模块的P0睡眠信号，S5状态（低有效）
 wire    	w_cpu_module_p0_prsnt_n	;		// CPU 模块 P0 存在检测（低电平有效），检测 P0 相关部件是否存在
@@ -331,8 +331,8 @@ wire    db_i_p0_slp_s3_n	 ; 	// P0 睡眠 S3 状态（低电平有效），同�
 wire    db_i_p0_slp_s5_n	 ;	// P0 睡眠 S5 状态（低电平有效），同步后的信号
 wire    db_i_p1_slp_s3_n	 ; 	// P1 睡眠 S3 状态（低电平有效），同步后的信号
 wire    db_i_p1_slp_s5_n	 ;	// P1 睡眠 S5 状态（低电平有效），同步后的信号
-wire    db_i_p0_pwrok		 ;	// P0 电源好信号（同步后），确保跨时钟域时的稳定性
-wire    db_i_p1_pwrok		 ;	// P1 电源好信号（同步后），确保跨时钟域时的稳定性
+wire    db_i_p0_pwrok		 ;	  // P0 电源好信号（同步后），确保跨时钟域时的稳定性
+wire    db_i_p1_pwrok		 ;	  // P1 电源好信号（同步后），确保跨时钟域时的稳定性
 wire    db_i_p0_reset_n	 ;		// P0 复位信号（低电平有效，同步后），用于 P0 模块复位
 wire    db_i_p1_reset_n	 ;		// P1 复位信号（低电平有效，同步后），用于 P0 模块复位
 wire    db_i_p0_pwrgd_out	 ;	// P0 电源好输出（同步后）
@@ -698,12 +698,12 @@ wire    w_cpld_sgpio1_mosi_r;
 wire    w_PAL_OCP1_PRSNT_B3_N;//2025-03-06 add	平台级 OCP1 B3 位置存在信号（低电平有效），检测平台级 OCP1 在 B3 位置是否存在
 
 wire    w_BREAK_DET_DO_N      ;	// 断裂检测 D0 信号（低电平有效），用于检测 D0 相关的断裂情况
-wire    w_LEAKAGE0_PRSNT_N  ;	// 泄漏存在 0 信号（低电平有效），检测是否存在泄漏（第 0 路相关
-wire    w_LEAKAGE_DET_DO_N  ;	// 泄漏检测 D0 信号（低电平有效），用于检测 D0 相关的泄漏情况
+wire    w_LEAKAGE0_PRSNT_N  ;	  // 泄漏存在 0 信号（低电平有效），检测是否存在泄漏（第 0 路相关
+wire    w_LEAKAGE_DET_DO_N  ;	  // 泄漏检测 D0 信号（低电平有效），用于检测 D0 相关的泄漏情况
 wire    w_BREAK_DET1_DO_N    ;	// 断裂检测 1 D0 信号（低电平有效），检测 D0 相关的另一路断裂情况
-wire    w_LEAKAGE_PRSNT1_N  ;	// 泄漏存在 1 信号（低电平有效），检测是否存在泄漏（第 1 路相关）
-wire    w_LEAKAGE_DET1_DO_N;	// 泄漏检测 1 D0 信号（低电平有效），用于检测 D0 相关的另一路泄漏情况
-wire    [1:0]   w_bf_type;		// BF 类型信号（2 位宽），用于标识 BF（可能是某种模块或功能）的类型
+wire    w_LEAKAGE_PRSNT1_N  ;	  // 泄漏存在 1 信号（低电平有效），检测是否存在泄漏（第 1 路相关）
+wire    w_LEAKAGE_DET1_DO_N;	  // 泄漏检测 1 D0 信号（低电平有效），用于检测 D0 相关的另一路泄漏情况
+wire    [1:0]   w_bf_type;		  // BF 类型信号（2 位宽），用于标识 BF（可能是某种模块或功能）的类型
 //-------------------------------------------------------------------------------------------------
 //Switch1 & ZT1 BOARD Switch1 & ZTI BOARD 相关信号
 //-------------------------------------------------------------------------------------------------
@@ -3270,10 +3270,10 @@ pch_cpld_espi_ram  pch_cpld_espi_ram_u1
 
 //////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
  // 主板固定配置输入（芯片级配置，缓存到固定地址 0x00C0-0x00D0）
-    .i_PRODUCT_LINE_C2	        (`PRODUCT_LINE_C2  ),     // 输入：产品系列 ID（如 R6900 G5，宏定义，固定值）
-    .i_PRODUCT_GEN_ID_C3            (`PRODUCT_GEN_ID_C3),    // 输入：产品世代 ID（如 G5 世代，宏定义，固定值）
-    .i_SERVER_ID_C5                      ( w_server_id_c5    ), // 输入：服务器 ID（之前定义，区分不同背板配置，如 0x41/0x60）
-    .i_BOARD_ID_C6                        (`BOARD_ID_C6      ),   // 输入：主板 ID（区分不同主板版本，如 Rev A/B，宏定义）
+    .i_PRODUCT_LINE_C2	        (`PRODUCT_LINE_C2  ),   // 输入：产品系列 ID（如 R6900 G5，宏定义，固定值）
+    .i_PRODUCT_GEN_ID_C3        (`PRODUCT_GEN_ID_C3),   // 输入：产品世代 ID（如 G5 世代，宏定义，固定值）
+    .i_SERVER_ID_C5             ( w_server_id_c5    ),  // 输入：服务器 ID（之前定义，区分不同背板配置，如 0x41/0x60）
+    .i_BOARD_ID_C6              (`BOARD_ID_C6      ),   // 输入：主板 ID（区分不同主板版本，如 Rev A/B，宏定义）
 //////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////pcie dync alloc end 0x1000-0x1005/////////////////////////
@@ -3354,9 +3354,9 @@ bios_cpld_i2c_ram #(
 (
 // 基础时钟与复位：模块运行的时序基准与初始化控制
 .i_rst_n		(pon_reset_n	),  // 输入：全局复位（高电平有效，复位时清空所有缓存、重置 I2C 状态机）
-.i_clk			(clk_25m		),  // 输入：CPLD 系统时钟（25MHz，I2C 时序生成与缓存更新的基准）
-.i_1ms_clk		(t1ms_tick		),  // 输入：1ms 时钟使能（周期性更新硬件状态缓存，每 1ms 刷新一次，平衡实时性与功耗）
-.i_rst_i2c_n	(1'b1			),  // 输入：I2C 单独复位（固定为 1'b1，当前设计复用全局复位，预留单独复位功能）
+.i_clk			(clk_25m		),    // 输入：CPLD 系统时钟（25MHz，I2C 时序生成与缓存更新的基准）
+.i_1ms_clk		(t1ms_tick		),// 输入：1ms 时钟使能（周期性更新硬件状态缓存，每 1ms 刷新一次，平衡实时性与功耗）
+.i_rst_i2c_n	(1'b1			),    // 输入：I2C 单独复位（固定为 1'b1，当前设计复用全局复位，预留单独复位功能）
 
 // I2C 物理层信号：BIOS 与 CPLD 之间的硬件连接
 .i_scl			(i_P0_CPLD_SCL	),  // 输入：I2C 时钟信号（由 BIOS 生成，控制 I2C 通信速率，如 400kHz）
@@ -3430,7 +3430,7 @@ bios_cpld_i2c_ram #(
     .o_espi_debug_ram_1003     (w_bios_debug_ram_1003),  // 输出：地址 0x1003 缓存值（P0 MCIOP0C 槽状态）
     .o_espi_debug_ram_1004     (w_bios_debug_ram_1004),  // 输出：地址 0x1004 缓存值（P0 MCIOP1A 槽状态）
     .o_espi_debug_ram_1005     (w_bios_debug_ram_1005),  // 输出：地址 0x1005 缓存值（P0 MCIOP1C 槽状态）
-    .o_test_reg                           (w_bios_debug_ram_1006), // 输出：地址 0x1006 测试值（BIOS 写测试数据后读回，验证 I2C 通信）
+    .o_test_reg                (w_bios_debug_ram_1006),  // 输出：地址 0x1006 测试值（BIOS 写测试数据后读回，验证 I2C 通信）
 
     // 模式切换配置输入：BIOS 下发的模式控制指令，CPLD 读取后执行对应硬件动作
     .i_switch_mode              (r_switch_mode        ) ,  // 输入：模式切换控制（地址 0x1010）
