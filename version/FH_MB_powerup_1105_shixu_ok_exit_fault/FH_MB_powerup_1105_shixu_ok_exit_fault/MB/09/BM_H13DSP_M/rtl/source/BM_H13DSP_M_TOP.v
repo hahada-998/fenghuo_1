@@ -357,18 +357,18 @@ wire    db_i_fm_pwrbtn_out_n	  ; // 系统最终电源控制信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 wire    db_i_p0_vdd_core_0_ocp_n_r	;		// P0 核心电压 0 过流保护（低电平有效，同步后）
 wire    db_i_pal_p0_vdd_core_1_ocp_n	;	// P0 核心电压 1 过流保护（低电平有效，平台级）
-wire    db_i_p0_vddio_ocp_n			;		// P0 IO 电压过流保护（低电平有效）
+wire    db_i_p0_vddio_ocp_n			;		    // P0 IO 电压过流保护（低电平有效）
 wire    db_i_p1_vdd_core_0_ocp_n_r	;		// P1 核心电压 0 过流保护（低电平有效，同步后）
 wire    db_i_pal_p1_vdd_core_1_ocp_n	;	// P1 核心电压 1 过流保护（低电平有效，平台级）
-wire    db_i_p1_vddio_ocp_n			;		// 全局 VDD 过流保护（低电平有效，平台级）
+wire    db_i_p1_vddio_ocp_n			;		    // 全局 VDD 过流保护（低电平有效，平台级）
 //psu
 //wire    db_i_ps1_prsnt                    ;	// PSU1 存在检测
-//wire    db_i_ps1_dcok_n                  ;	// PSU1 对接状态（低电平有效
-//wire    db_i_ps1_smb_alert            ;		// PSU1 SMBus 告警
-//wire    db_i_ps1_acfail_n              ;	// PSU1 交流故障（低电平有效）
+//wire    db_i_ps1_dcok_n                   ;	// PSU1 对接状态（低电平有效
+//wire    db_i_ps1_smb_alert                ;		// PSU1 SMBus 告警
+//wire    db_i_ps1_acfail_n                 ;	// PSU1 交流故障（低电平有效）
 //wire    db_i_ps2_prsnt                    ;	// PSU2 存在检测（低电平有效）
-//wire    db_i_ps2_dcok_n                  ;	// PSU2 对接状态（低电平有效）
-//wire    db_i_ps2_smb_alert            ;		// PSU2 SMBus 告警
+//wire    db_i_ps2_dcok_n                   ;	// PSU2 对接状态（低电平有效）
+//wire    db_i_ps2_smb_alert                ;		// PSU2 SMBus 告警
 //wire    db_i_ps2_acfail_n              ;	// PSU2 交流故障（低电平有效）
 //wire    db_i_ps3_prsnt                    ;	// PSU3 存在检测
 //wire    db_i_ps4_prsnt                    ; // PSU4 存在检测
@@ -383,7 +383,7 @@ wire    db_i_p1_vr_i2c_alert_n		;	// P1电压调节模块（VR）I2C 告警（�
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for db_inst_pwrgood VR（电压调节模块）与电源好（PWRGD）相关信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    db_i_pg_p12v_ssd_efuse		= 1'b1	;	 // P12V SSD 电子熔断器电源好信号，指示 P12V SSD 电源轨电子熔断器状态正常
+wire    db_i_pg_p12v_ssd_efuse		= 1'b1	;// P12V SSD 电子熔断器电源好信号，指示 P12V SSD 电源轨电子熔断器状态正常
 wire    db_i_p1v8_stby_pg			    = 1'b1  ;//01	 // P1V8 待机电源好信号（//01 为注释，标记序号），指示 P1V8 待机电源轨稳定
 wire    db_i_pwrgd_p3v3_stby		  = 1'b1  ;//02	3.3V 待机电源好信号，指示 3.3V 待机电源轨稳定
 wire    db_i_pg_p5v_stby				  = 1'b1  ;//03	3.3V 待机电源好信号，指示 5V 待机电源轨稳定
@@ -418,76 +418,76 @@ wire    [1:0]   cpu_thermtrip_fault_det		;		// CPU 热跳闸故障检测（2位�
 wire    w_cpu0_thermaltrip_clr			;		// CPU0 热跳闸清除信号，用于清除 CPU0 的热跳闸状态
 wire    w_cpu1_thermaltrip_clr			;		// CPU1 热跳闸清除信号，用于清除 CPU1 的热跳闸状态
 wire    w_cpupwrok_rise_dly2ms			;		// CPU 电源好上升沿延迟 2 毫秒信号，控制 CPU 电源好上升沿的 2 毫秒延迟
-wire    [1:0]   w_cpu_thermtrip_event			;// CPU 热跳闸事件（2位），标记 CPU 热跳闸事件的发生
-wire    w_cpu0_prochot					;		 // CPU0 热节流信号，CPU0 温度过高时的节流控制
-wire    w_cpu1_prochot					;		 // CPU1 热节流信号，CPU1 温度过高时的节流控制
-wire    w_force_allpwron_ctl			;		 // 强制所有电源开启控制信号，强制开启所有电源轨
+wire    [1:0]   w_cpu_thermtrip_event	 ;// CPU 热跳闸事件（2位），标记 CPU 热跳闸事件的发生
+wire    w_cpu0_prochot					;		    // CPU0 热节流信号，CPU0 温度过高时的节流控制
+wire    w_cpu1_prochot					;		    // CPU1 热节流信号，CPU1 温度过高时的节流控制
+wire    w_force_allpwron_ctl			;		  // 强制所有电源开启控制信号，强制开启所有电源轨
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for pwrseq_master_inst 电源序列与故障告警相关信号
 //围绕电源序列状态机（控制电源按序开启 / 关闭）和故障管理，涵盖电源状态监测、故障检测与恢复
 //错误码清除等功能，是电源系统有序工作与故障处理的核心信号组。
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    [5:0]   w_power_seq_sm			;	// 电源序列状态机（6位），表示当前电源序列执行的状态
-wire    w_st_reset_state				;	// 复位状态，指示系统处于复位阶段
-wire    w_st_off_standby				;	// 关机待机状态，系统处于关机但待机的状态
-wire    w_st_steady_pwrok				;	// 稳定电源好状态，所有电源轨均稳定
-wire    w_st_halt_power_cycle			;	// 电源周期暂停状态，电源循环被暂停
-wire    w_st_aux_fail_recovery			;	// 辅助故障恢复状态，辅助电源故障后的恢复阶段
-wire    w_st_disable_grp_d_vddio		;	// 禁用 D 组 VDDIO 状态，控制 D 组 IO 电压禁用
-wire    w_st_critical_fail				;	// 禁用 D 组 VDDIO 状态，控制 D 组 IO 电压禁用
-wire    w_force_pwrbtn_n				;	// 严重故障状态，系统出现严重故障
-wire    w_pgd_raw						;	// 原始电源好信号，未经过处理的电源好指示
-wire    w_s5dev_aux_pwren_request		;	// S5 设备辅助电源使能请求，请求使能 S5 设备的辅助电源
-wire    w_s5dev_aux_pwrdis_request		;	// S5 设备辅助电源禁用请求，请求禁用 S5 设备的辅助电源
-wire    w_pgd_so_far					;	// 目前电源好信号，阶段性的电源好指示
-wire    w_any_pwr_fault_det				;	// 任意电源故障检测，检测到任意电源故障
-wire    w_any_lim_recov_fault			;	// 任意有限恢复故障，可有限恢复的故障
-wire    w_any_non_recov_fault			;	// 任意不可恢复故障，无法自动恢复的故障
-wire    w_any_recov_fault				;	// 任意不可恢复故障，无法自动恢复的故障
-wire    w_dc_on_wait_complete			;	//out, TO SLAVE, DC 上电等待完成，DC 电源上电等待阶段完成
-wire    w_rt_critical_fail_store		;	// 运行时严重故障存储，存储运行时的严重故障信息
-wire    w_fault_clear					;	// 故障清除，用于清除故障状态
-wire    w_cmu_fault_clear				;	// CMU（电源管理单元）故障清除，清除 CMU 相关故障
-wire    w_power_fault					;	// 电源故障检测到，检测到电源故障
-wire    w_stby_failure_detected			;	// 电源故障检测到，检测到电源故障
-wire    w_stb_pwron_tmout_fail_clr		;	// 待机上电超时故障清除，清除待机上电超时故障
-wire    w_stb_pwrdown_ukwn_fail_clr		;	// 待机下电未知故障清除，清除待机下电时的未知故障
-wire    w_poweron_tmout_fail_clr		;	// 待机下电未知故障清除，清除待机下电时的未知故障
-wire    w_dc_failure_detected			;	// DC 故障检测到，检测到 DC 电源故障
-wire    w_rt_failure_detected			;	// 运行时故障检测到，检测到运行时故障
-wire    w_cpld_latch_sys_off			;	// CPLD 锁存系统关机，CPLD 锁存系统关机状态
-wire    w_turn_on_wait					;	// 开机等待，系统处于开机等待阶段
+wire    [5:0]   w_power_seq_sm			  ;	// 电源序列状态机（6位），表示当前电源序列执行的状态
+wire    w_st_reset_state				      ;	// 复位状态，指示系统处于复位阶段
+wire    w_st_off_standby				      ;	// 关机待机状态，系统处于关机但待机的状态
+wire    w_st_steady_pwrok				      ;	// 稳定电源好状态，所有电源轨均稳定
+wire    w_st_halt_power_cycle			    ;	// 电源周期暂停状态，电源循环被暂停
+wire    w_st_aux_fail_recovery			  ;	// 辅助故障恢复状态，辅助电源故障后的恢复阶段
+wire    w_st_disable_grp_d_vddio		  ;	// 禁用 D 组 VDDIO 状态，控制 D 组 IO 电压禁用
+wire    w_st_critical_fail				    ;	// 禁用 D 组 VDDIO 状态，控制 D 组 IO 电压禁用
+wire    w_force_pwrbtn_n				      ;	// 严重故障状态，系统出现严重故障
+wire    w_pgd_raw						          ;	// 原始电源好信号，未经过处理的电源好指示
+wire    w_s5dev_aux_pwren_request		  ;	// S5 设备辅助电源使能请求，请求使能 S5 设备的辅助电源
+wire    w_s5dev_aux_pwrdis_request	  ;	// S5 设备辅助电源禁用请求，请求禁用 S5 设备的辅助电源
+wire    w_pgd_so_far					        ;	// 目前电源好信号，阶段性的电源好指示
+wire    w_any_pwr_fault_det				    ;	// 任意电源故障检测，检测到任意电源故障
+wire    w_any_lim_recov_fault			    ;	// 任意有限恢复故障，可有限恢复的故障
+wire    w_any_non_recov_fault			    ;	// 任意不可恢复故障，无法自动恢复的故障
+wire    w_any_recov_fault				      ;	// 任意不可恢复故障，无法自动恢复的故障
+wire    w_dc_on_wait_complete			    ;	//out, TO SLAVE, DC 上电等待完成，DC 电源上电等待阶段完成
+wire    w_rt_critical_fail_store		  ;	// 运行时严重故障存储，存储运行时的严重故障信息
+wire    w_fault_clear					        ;	// 故障清除，用于清除故障状态
+wire    w_cmu_fault_clear				      ;	// CMU（电源管理单元）故障清除，清除 CMU 相关故障
+wire    w_power_fault					        ;	// 电源故障检测到，检测到电源故障
+wire    w_stby_failure_detected			  ;	// 电源故障检测到，检测到电源故障
+wire    w_stb_pwron_tmout_fail_clr	  ;	// 待机上电超时故障清除，清除待机上电超时故障
+wire    w_stb_pwrdown_ukwn_fail_clr	  ;	// 待机下电未知故障清除，清除待机下电时的未知故障
+wire    w_poweron_tmout_fail_clr		  ;	// 待机下电未知故障清除，清除待机下电时的未知故障
+wire    w_dc_failure_detected			    ;	// DC 故障检测到，检测到 DC 电源故障
+wire    w_rt_failure_detected			    ;	// 运行时故障检测到，检测到运行时故障
+wire    w_cpld_latch_sys_off			    ;	// CPLD 锁存系统关机，CPLD 锁存系统关机状态
+wire    w_turn_on_wait					      ;	// 开机等待，系统处于开机等待阶段
 wire    w_power_on_fail_err_code_clr	;	// 开机失败错误码清除，清除开机失败的错误码
-wire    w_power_down_fail_err_code_clr	;	// 关机失败错误码清除，清除关机失败的错误码
-wire    w_keep_alive_on_fault			;	// 故障时保持运行，故障发生时保持系统运行
+wire    w_power_down_fail_err_code_clr;	// 关机失败错误码清除，清除关机失败的错误码
+wire    w_keep_alive_on_fault			    ;	// 故障时保持运行，故障发生时保持系统运行
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for pwrseq_slave_inst
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    w_all_power_pg			        ;	// 所有电源好信号，指示所有电源轨均稳定
-wire    w_all_stby_power_pg			    ;	 // 所有待机电源好信号，指示所有待机电源轨均稳定
-wire    w_all_main_power_pg			    ;	// 所有主电源好信号，指示所有主电源轨均稳定
-wire    w_any_aux_vrm_fault			    ;	// 任意辅助 VR 故障，检测到任意辅助电压调节模块故障
-wire    w_cpu_sys_pwrok					;	// CPU 系统电源好信号，指示 CPU 系统电源轨稳定
-wire    w_p5v_stby_en 					;	// 5V 待机使能信号，使能 5V 待机电源
-wire    w_p5v_stby_usb_en				;	// 5V 待机 USB 使能信号，使能 5V 待机 USB 供电
-wire    w_grp_b_p0_33_s5_en				;	// B 组 P0 3.3V S5 使能信号，使能 B 组 P0 3.3V S5 电源
-wire    w_grp_b_p1_33_s5_en				;	// B 组 P1 3.3V S5 使能信号，使能 B 组 P1 3.3V S5 电源
-wire    w_grp_b_p0_18_s5_en				;
-wire    w_grp_b_p1_18_s5_en				;
-wire    w_p12_en						;	// P12V 使能信号，使能 P12V 电源
-wire    w_p5v_en						;	// P5V 使能信号，使能 P5V 电源
-wire    w_grp_c_p0_vdd11_en				;	// C 组 P0 VDD11 使能信号，使能 C 组 P0 VDD11 电源
-wire    w_grp_c_p1_vdd11_en				;	// C 组 P1 VDD11 使能信号，使能 C 组 P1 VDD11 电源
-wire    w_grp_d_p0_vddio_en				;
-wire    w_grp_d_p1_vddio_en				;
-wire    w_grp_d_p0_soc_en				;	// D 组 P0 SOC 使能信号，使能 D 组 P0 SOC 电源
-wire    w_grp_d_p1_soc_en				;
-wire    w_grp_d_p0_vddcore0_en			;	// D 组 P0 核心电压 0 使能信号，使能 D 组 P0 核心电压 0 电源
-wire    w_grp_d_p1_vddcore0_en			;	// D 组 P1 核心电压 0 使能信号，使能 D 组 P1 核心电压 0 电源
-wire    w_grp_d_p0_vddcore1_en			;
-wire    w_grp_d_p1_vddcore1_en			;
+wire    w_all_power_pg			          ;	// 所有电源好信号，指示所有电源轨均稳定
+wire    w_all_stby_power_pg			      ;	// 所有待机电源好信号，指示所有待机电源轨均稳定
+wire    w_all_main_power_pg			      ;	// 所有主电源好信号，指示所有主电源轨均稳定
+wire    w_any_aux_vrm_fault			      ;	// 任意辅助 VR 故障，检测到任意辅助电压调节模块故障
+wire    w_cpu_sys_pwrok					      ;	// CPU 系统电源好信号，指示 CPU 系统电源轨稳定
+wire    w_p5v_stby_en 					      ;	// 5V 待机使能信号，使能 5V 待机电源
+wire    w_p5v_stby_usb_en				      ;	// 5V 待机 USB 使能信号，使能 5V 待机 USB 供电
+wire    w_grp_b_p0_33_s5_en				    ;	// B 组 P0 3.3V S5 使能信号，使能 B 组 P0 3.3V S5 电源
+wire    w_grp_b_p1_33_s5_en				    ;	// B 组 P1 3.3V S5 使能信号，使能 B 组 P1 3.3V S5 电源
+wire    w_grp_b_p0_18_s5_en				    ;
+wire    w_grp_b_p1_18_s5_en				    ;
+wire    w_p12_en						          ;	// P12V 使能信号，使能 P12V 电源
+wire    w_p5v_en						          ;	// P5V 使能信号，使能 P5V 电源
+wire    w_grp_c_p0_vdd11_en				    ;	// C 组 P0 VDD11 使能信号，使能 C 组 P0 VDD11 电源
+wire    w_grp_c_p1_vdd11_en				    ;	// C 组 P1 VDD11 使能信号，使能 C 组 P1 VDD11 电源
+wire    w_grp_d_p0_vddio_en				    ;
+wire    w_grp_d_p1_vddio_en				    ;
+wire    w_grp_d_p0_soc_en				      ;	// D 组 P0 SOC 使能信号，使能 D 组 P0 SOC 电源
+wire    w_grp_d_p1_soc_en				      ;
+wire    w_grp_d_p0_vddcore0_en			  ;	// D 组 P0 核心电压 0 使能信号，使能 D 组 P0 核心电压 0 电源
+wire    w_grp_d_p1_vddcore0_en			  ;	// D 组 P1 核心电压 0 使能信号，使能 D 组 P1 核心电压 0 电源
+wire    w_grp_d_p0_vddcore1_en			  ;
+wire    w_grp_d_p1_vddcore1_en			  ;
 wire    [5:0]   w_pwrseq_sm_fault_det	;	// 电源序列状态机故障检测（6位），检测电源序列状态机相关故障
 wire    w_p5v_stby_fault_det			;	// 5V 待机故障检测，检测 5V 待机电源故障
 wire    w_grp_c_p0_fault_det			;	 // C 组 P0 故障检测，检测 C 组 P0 电源故障
