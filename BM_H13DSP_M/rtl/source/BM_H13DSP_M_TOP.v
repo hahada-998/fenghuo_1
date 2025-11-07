@@ -106,6 +106,125 @@ wire                    done_booting_delayed = 1'b1; // 延迟的启动完成信
 
 assign                  pgd_aux_bmc          = 1'b1; // 将BMC辅助电源良好信号固定为高电平
 
+//-------------------------------------------------------------------------------------------------
+// PLL功能模块例化（锁相环时钟生成）
+// 功能：
+// 1. 输入25MHz时钟信号（i_CLK_25M_CPLD），通过PLL模块生成两个输出时钟：
+//    - 50MHz时钟信号（clk_50m）
+//    - 25MHz时钟信号（clk_25m）
+// 2. 输出PLL锁定信号（pll_lock），用于指示时钟稳定状态。
+//-------------------------------------------------------------------------------------------------
+pll_i25M_o50M_o25M pll_inst(
+  .CLKI     (i_CLK_25M_CPLD         ), // 输入时钟信号，频率为25MHz
+  .RST      (~i_PWRGD_P3V3_STBY     ), // 复位信号，低电平有效
+  .CLKOP    (clk_50m                ), // 输出50MHz时钟信号
+  .CLKOS    (clk_25m                ), // 输出25MHz时钟信号
+  // .CLKOS2 (clk_2p5m               ), // 未使用的2.5MHz时钟信号
+  .LOCK     (pll_lock               )  // 输出PLL锁定信号
+);
+
+//-------------------------------------------------------------------------------------------------
+// 电源复位模块（Power-On Reset）
+// 功能：
+// 1. 生成系统的电源复位信号（pon_reset_n），基于电源良好信号（pgd_p3v3_stby）和PLL锁定信号（pll_lock）。
+// 2. 提供去抖动后的复位信号（pon_reset_db_n）。
+// 3. 生成辅助系统电源良好信号（pgd_aux_system）及其SASD版本（pgd_aux_system_sasd）。
+//-------------------------------------------------------------------------------------------------
+pon_reset pon_reset_inst(
+  .clk                  (clk_50m                ), // 输入时钟信号，频率为50MHz
+  .pll_lock             (pll_lock               ), // 输入PLL锁定信号
+  .pgd_p3v3_stby        (i_PWRGD_P3V3_STBY      ), // 输入3.3V电源良好信号
+  .pgd_aux_gmt          (pgd_aux_bmc            ), // 输入BMC辅助电源良好信号
+  .done_booting         (1'b1                   ), // 固定高电平，表示启动完成
+  .done_booting_delayed (done_booting_delayed   ), // 延迟的启动完成信号
+  .pon_reset_n          (pon_reset_n            ), // 输出电源复位信号
+  .pon_reset_db_n       (pon_reset_db_n         ), // 输出去抖动后的电源复位信号
+  .pgd_aux_system       (pgd_aux_system         ), // 输出辅助系统电源良好信号
+  .pgd_aux_system_sasd  (pgd_aux_system_sasd    ), // 输出SASD版本的辅助系统电源良好信号
+  .cpld_ready           (                        )  // 未使用的CPLD准备信号
+);
+
+// ------------------------------------------------------------------------------------------------------------
+// 时钟生成模块，能够基于输入时钟生成多种定时信号和慢速时钟信号
+//--------------------------------------------------------------------------------------------------------------
+timer_gen timer_gen_inst(
+  .clk               (clk_50m          ), // 输入时钟信号，频率为 50 MHz
+  .reset             (~pon_reset_n    ), // 异步复位信号，低电平有效
+  .t40ns             (t40ns_tick      ), // 40 纳秒脉冲
+  .t80ns             (),                 // 80 纳秒脉冲（未使用）
+  .t160ns            (),                 // 160 纳秒脉冲（未使用）
+  .t1us              (t1us_tick       ), // 1 微秒脉冲
+  .t2us              (t2us_tick       ), // 2 微秒脉冲
+  .t16us             (t16us_tick      ), // 16 微秒脉冲
+  .t32us             (t32us_tick      ), // 32 微秒脉冲
+  .t128us            (t128us_tick     ), // 128 微秒脉冲
+  .t512us            (t512us_tick     ), // 512 微秒脉冲
+  .t1ms              (t1ms_tick       ), // 1 毫秒脉冲
+  .t2ms              (t2ms_tick       ), // 2 毫秒脉冲
+  .t16ms             (),                 // 16 毫秒脉冲（未使用）
+  .t32ms             (t32ms_tick      ), // 32 毫秒脉冲
+  .t64ms             (t64ms_tick      ), // 64 毫秒脉冲
+  .t128ms            (t128ms_tick     ), // 128 毫秒脉冲
+  .t256ms            (t256ms_tick     ), // 256 毫秒脉冲
+  .t512ms            (t512ms_tick     ), // 512 毫秒脉冲
+  .t1s               (t1s_tick        ), // 1 秒脉冲
+  .clk_1hz           (t1hz_clk        ), // 1 Hz 时钟信号
+  .clk_2p5hz         (t2p5hz_clk      ), // 2.5 Hz 时钟信号
+  .clk_4hz           (t4hz_clk        ), // 4 Hz 时钟信号
+  .clk_16khz         (t16khz_clk      ), // 16 kHz 时钟信号
+  .clk_6m25          (t6m25_clk       ), // 6.25 MHz 时钟信号
+  .clk_16m6          (t16m6_clk       )  // 16.6 MHz 时钟信号
+);
+
+// ------------------------------------------------------------------------------------------------------------
+// 生成多个同步时钟使能信号（Clock Enables, CEs) 10uS, 50uS, 500uS, 1mS, 20mS and 250mS
+//--------------------------------------------------------------------------------------------------------------
+ClkDivTree mClkDivTree (
+    .iClk           ( clk_50m            ), // 输入时钟信号，频率为50 MHz
+    .iRst           ( ~pon_reset_n       ), // 异步复位信号，低电平有效
+    .o1uSCE         ( w1uSCE             ), // 输出1微秒时钟使能信号
+    .o10uSCE        ( w10uSCE            ), // 输出10微秒时钟使能信号
+    .o50uSCE        ( w50uSCE            ), // 输出50微秒时钟使能信号
+    .o500uSCE       ( w500uSCE           ), // 输出500微秒时钟使能信号
+    .o1mSCE         ( w1mSCE             ), // 输出1毫秒时钟使能信号
+    .o250mSCE       ( w250mSCE           ), // 输出250毫秒时钟使能信号
+    .o10mSCE        ( w10mSCE            ), // 输出10毫秒时钟使能信号
+    .o20mSCE        ( w20mSCE            ), // 输出20毫秒时钟使能信号
+    .o1SCE          ( w1SCE              )  // 输出1秒时钟使能信号
+);
+
+// -------------------------------------------------------------------------------------------------------------
+// 内部振荡器（未使用）
+//--------------------------------------------------------------------------------------------------------------
+wire wb_clk;
+defparam inst_osch.NOM_FREQ = "4.29";
+OSCH inst_osch(
+    .STDBY      (1'b0       ), // 输入，控制振荡器是否进入待机模式
+    .OSC        (wb_clk     ), // 输出，振荡器生成的时钟信号
+    .SEDSTDBY   (           )  // 输出，振荡器进入待机模式的状态信号（未使用）
+);
+
+// -------------------------------------------------------------------------------------------------------------
+// I2C_UPDATE模块实例化
+// 功能：
+// 1. 通过I2C接口与外部设备（如Flash存储器）通信。
+// 2. 支持Wishbone总线协议，用于主控与I2C外设之间的数据传输和配置更新。
+// -------------------------------------------------------------------------------------------------------------
+I2C_UPDATE inst_i2c_update_flash_config(
+    .wb_clk_i    (wb_clk                ), // Wishbone 时钟信号，输入
+    .wb_rst_i    (                      ), // Wishbone 复位信号，未使用
+    .wb_cyc_i    (                      ), // Wishbone 总线周期信号，未使用
+    .wb_stb_i    (                      ), // Wishbone 选通信号，未使用
+    .wb_we_i     (                      ), // Wishbone 写使能信号，未使用
+    .wb_adr_i    (                      ), // Wishbone 地址信号，未使用
+    .wb_dat_i    (                      ), // Wishbone 数据输入信号，未使用
+    .wb_dat_o    (                      ), // Wishbone 数据输出信号，未使用
+    .wb_ack_o    (                      ), // Wishbone 应答信号，未使用
+    .i2c1_irqo   (                      ), // I2C 中断信号，未使用
+    .wbc_ufm_irq (                      ), // 用户闪存中断信号，未使用
+    .i2c1_scl    (io_I2C7_UPDATE_SCL    ), // I2C 时钟信号，与外部设备连接
+    .i2c1_sda    (io_I2C7_UPDATE_SDA    )  // I2C 数据信号，与外部设备连接
+);
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //For db_inst_amd_cpu_prsnt
@@ -294,7 +413,8 @@ wire                    w_power_down_fail_err_code_clr	; // 关机失败错误�
 wire                    w_keep_alive_on_fault			      ; // 故障时保持运行，故障发生时保持系统运行
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for pwrseq_slave_inst
+// for pwrseq_slave_inst
+// 各电源上电使能相关信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 wire                    w_all_power_pg			            ; // 所有电源好信号，指示所有电源轨均稳定
 wire                    w_all_stby_power_pg			        ; // 所有待机电源好信号，指示所有待机电源轨均稳定
@@ -305,818 +425,640 @@ wire                    w_p5v_stby_en 					        ; // 5V 待机使能信号，
 wire                    w_p5v_stby_usb_en				        ; // 5V 待机 USB 使能信号，使能 5V 待机 USB 供电	
 wire                    w_grp_b_p0_33_s5_en				      ; // B 组 P0 3.3V S5 使能信号，使能 B 组 P0 3.3V S5 电源
 wire                    w_grp_b_p1_33_s5_en				      ; // B 组 P1 3.3V S5 使能信号，使能 B 组 P1 3.3V S5 电源
-wire                    w_grp_b_p0_18_s5_en				      ;
-wire                    w_grp_b_p1_18_s5_en				      ;
+wire                    w_grp_b_p0_18_s5_en				      ; // B 组 P0 1.8V S5 使能信号，使能 B 组 P0 1.8V S5 电源
+wire                    w_grp_b_p1_18_s5_en				      ; // B 组 P1 1.8V S5 使能信号，使能 B 组 P1 1.8V S5 电源
 wire                    w_p12_en							          ; // P12V 使能信号，使能 P12V 电源     
 wire                    w_p5v_en						            ; // P5V 使能信号，使能 P5V 电源
 wire                    w_grp_c_p0_vdd11_en				      ; // C 组 P0 VDD11 使能信号，使能 C 组 P0 VDD11 电源
 wire                    w_grp_c_p1_vdd11_en				      ; // C 组 P1 VDD11 使能信号，使能 C 组 P1 VDD11 电源
-wire                    w_grp_d_p0_vddio_en				      ;
-wire                    w_grp_d_p1_vddio_en				      ;
-wire                    w_grp_d_p0_soc_en				        ;
-wire                    w_grp_d_p1_soc_en				        ;
-wire                    w_grp_d_p0_vddcore0_en			    ;
-wire                    w_grp_d_p1_vddcore0_en			    ;
-wire                    w_grp_d_p0_vddcore1_en			    ;
-wire                    w_grp_d_p1_vddcore1_en			    ;
-wire    [5:0]           w_pwrseq_sm_fault_det		        ;
-wire                    w_p5v_stby_fault_det				    ;
-wire                    w_grp_c_p0_fault_det				    ;
-wire                    w_grp_d_vddio_p0_fault_det		  ;
-wire                    w_grp_d_soc_p0_fault_det			  ;
-wire                    w_grp_d_p0_vddcore0_fault_det	  ;
-wire                    w_grp_d_p0_vddcore1_fault_det	  ;
-wire                    w_grp_c_p1_fault_det				    ;
-wire                    w_grp_d_vddio_p1_fault_det		  ;
-wire                    w_grp_d_soc_p1_fault_det			  ;
-wire                    w_grp_d_p1_vddcore0_fault_det	  ;
-wire                    w_grp_d_p1_vddcore1_fault_det	  ;
-wire                    w_grp_b_p0_33_s5_fault_det		  ;
-wire                    w_grp_b_p0_18_s5_fault_det		  ;
-wire                    w_p3v3_stby_fault_det			      ;	
-wire                    w_p1v0_stby_m2_fault_det			  ;	
-wire                    w_p5v_fault_det					        ;
-wire    [1:0]           w_cpu_pwrok					            ;
-wire                    w_cpu_pwr_good					        ;
-wire                    w_cpu1_pwr_good					        ;
-wire    [1:0]           o_cpu_pwrok					            ;
-wire                    w_rsmrst_n						          ;
-wire                    w_pal_rst_rtc  				          ;
+wire                    w_grp_d_p0_vddio_en				      ; // D 组 P0 VDDIO 使能信号，使能 D 组 P0 VDDIO 电源
+wire                    w_grp_d_p1_vddio_en				      ; // D 组 P1 VDDIO 使能信号，使能 D 组 P1 VDDIO 电源
+wire                    w_grp_d_p0_soc_en				        ; // D 组 P0 SOC 使能信号，使能 D 组 P0 SOC 电源
+wire                    w_grp_d_p1_soc_en				        ; // D 组 P1 SOC 使能信号，使能 D 组 P1 SOC 电源
+wire                    w_grp_d_p0_vddcore0_en			    ; // D 组 P0 核心电压 0 使能信号，使能 D 组 P0 核心电压 0 电源
+wire                    w_grp_d_p1_vddcore0_en			    ; // D 组 P1 核心电压 0 使能信号，使能 D 组 P1 核心电压 0 电源
+wire                    w_grp_d_p0_vddcore1_en			    ; // D 组 P0 核心电压 1 使能信号，使能 D 组 P0 核心电压 1 电源
+wire                    w_grp_d_p1_vddcore1_en			    ; // D 组 P1 核心电压 1 使能信号，使能 D 组 P1 核心电压 1 电源
+wire    [5:0]           w_pwrseq_sm_fault_det		        ; // 电源序列状态机故障检测（6位），检测电源序列状态机相关故障
+wire                    w_p5v_stby_fault_det				    ; // 5V 待机故障检测，检测 5V 待机电源故障
+wire                    w_grp_c_p0_fault_det				    ; // C 组 P0 故障检测，检测 C 组 P0 电源故障
+wire                    w_grp_d_vddio_p0_fault_det		  ; // D 组 VDDIO P0 故障检测，检测 D 组 VDDIO P0 电源故障
+wire                    w_grp_d_soc_p0_fault_det			  ; // D 组 SOC P0 故障检测，检测 D 组 SOC P0 电源故障
+wire                    w_grp_d_p0_vddcore0_fault_det	  ; // D 组 P0 核心电压 0 故障检测，检测 D 组 P0 核心电压 0 电源故障
+wire                    w_grp_d_p0_vddcore1_fault_det	  ; // D 组 P0 核心电压 1 故障检测，检测 D 组 P0 核心电压 1 电源故障
+wire                    w_grp_c_p1_fault_det				    ; // C 组 P1 故障检测，检测 C 组 P1 电源故障
+wire                    w_grp_d_vddio_p1_fault_det		  ; // D 组 VDDIO P1 故障检测，检测 D 组 VDDIO P1 电源故障
+wire                    w_grp_d_soc_p1_fault_det			  ; // D 组 SOC P1 故障检测，检测 D 组 SOC P1 电源故障
+wire                    w_grp_d_p1_vddcore0_fault_det	  ; // D 组 P1 核心电压 0 故障检测，检测 D 组 P1 核心电压 0 电源故障
+wire                    w_grp_d_p1_vddcore1_fault_det	  ; // D 组 P1 核心电压 1 故障检测，检测 D 组 P1 核心电压 1 电源故障
+wire                    w_grp_b_p0_33_s5_fault_det		  ; // B 组 P0 3.3V S5 故障检测，检测 B 组 P0 3.3V S5 电源故障 
+wire                    w_grp_b_p1_33_s5_fault_det		  ; // B 组 P1 3.3V S5 故障检测，检测 B 组 P1 3.3V S5 电源故障
+wire                    w_grp_b_p0_18_s5_fault_det		  ; // B 组 P0 1.8V S5 故障检测，检测 B 组 P0 1.8V S5 电源故障
+wire                    w_grp_b_p1_18_s5_fault_det		  ; // B 组 P1 1.8V S5 故障检测，检测 B 组 P1 1.8V S5 电源故障
+wire                    w_p3v3_stby_fault_det			      ; // 3.3V 待机故障检测，检测 3.3V 待机电源故障
+wire                    w_p1v0_stby_m2_fault_det			  ; // 1v 待机 M2 故障检测，检测 1v 待机 M2 电源故障
+wire                    w_p5v_fault_det					        ; // 5V 故障检测，检测 5V 电源故障
+wire    [1:0]           w_cpu_pwrok					            ; // CPU 电源好信号（2位），指示 CPU 电源轨稳定
+wire                    w_cpu_pwr_good					        ; // CPU0 电源好信号，指示 CPU0 电源轨稳定
+wire                    w_cpu1_pwr_good					        ; // CPU1 电源好信号，指示 CPU1 电源轨稳定
+wire    [1:0]           o_cpu_pwrok					            ; // CPU 电源好输出（2位），对外输出 CPU 电源好状态
+wire                    w_rsmrst_n						          ; // CPU 电源好输出（2位），对外输出 CPU 电源好状态
+wire                    w_pal_rst_rtc  				          ; // 平台复位 RTC（低电平有效，同步后），用于复位 RTC 模块
  
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for bmc clear 
+// for bmc clear 
+// 要用于 BMC（基板管理控制器）相关的清除操作（如 CMOS 清除）、NMI 控制，以及系统错误码的
+// 存储（掉电、超时错误码）和 BMC 待机故障检测，是系统管理与故障诊断的重要信号。
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    w_clr_cmos_done_rst		;
-wire    w_clr_cmos_flg			;
-wire    w_clr_cmos_done		;
-wire    w_bmc_nmi_ctl			;
-wire    w_bmc_nmi_ctl_done		;
-wire    w_bmc_nmi_ctl_rst		;
-wire    w_p0_nmi_sync_flood_n	;
-wire    w_p1_nmi_sync_flood_n	;
-wire    w_rtc_senor_sw			;
-wire    w_ctl_scaled_bat_test_en_r;
-wire    w_sys_debug_mode		;
+wire                    w_clr_cmos_done_rst		          ; // CMOS 清除完成复位信号，CMOS 清除完成后的复位控制
+wire                    w_clr_cmos_flg			            ; // CMOS 清除标志，标记 CMOS 清除操作的状态
+wire                    w_clr_cmos_done		              ; // CMOS 清除完成信号，指示 CMOS 清除操作完成
+wire                    w_bmc_nmi_ctl			              ; // BMC NMI 控制信号，BMC 不可屏蔽中断控制
+wire                    w_bmc_nmi_ctl_done		          ; // BMC NMI 控制完成信号，指示 BMC NMI 控制操作完成
+wire                    w_bmc_nmi_ctl_rst		            ; // BMC NMI 控制复位信号，复位 BMC NMI 控制状态
+wire                    w_p0_nmi_sync_flood_n           ; // P0 NMI 同步泛洪（低电平有效），P0 NMI 同步相关信号
+wire                    w_p1_nmi_sync_flood_n           ; // P1 NMI 同步泛洪（低电平有效），P1 NMI 同步相关信号
+wire                    w_rtc_senor_sw			            ; // RTC 传感器切换信号，控制 RTC 传感器的切换
+// wire                    w_ctl_scaled_bat_test_en_r      ; // 控制缩放电池测试使能（同步后），使能缩放后的电池测试
+wire                    w_sys_debug_mode		            ; // 系统调试模式信号，使能系统调试模式
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for error code add 
+// for error code add 
+// 错误码存储与故障检测相关信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    [7:0]   r_pwrdrop_code			;
-wire    [7:0]   r_timeout_code			;
-wire    w_bmc_stby_failure_detected		;
+wire    [7:0]           r_pwrdrop_code			            ; // 掉电错误码（8位，寄存器型），存储掉电相关的错误码
+wire    [7:0]           r_timeout_code			            ; // 超时错误码（8位，寄存器型），存储超时相关的错误码
+wire                    w_bmc_stby_failure_detected		  ; // BMC 待机故障检测到，检测到 BMC 待机阶段的故障
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for PCIe Rst
+// for PCIe Rst
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    w_pcie_genz_rst_n_r			;
+wire                    w_pcie_genz_rst_n_r			        ; // PCIe Gen-Z 复位（低电平有效，同步后），控制 PCIe Gen-Z 接口复位
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for Moc Rst
+// for Moc Rst
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    w_sm_steady_pwrok_state		;
-wire    w_p0_prochot_n				;
-wire    w_p1_prochot_n				;
+wire                    w_sm_steady_pwrok_state		      ; // 稳定电源好状态机状态，状态机中稳定电源好的状态
+wire                    w_p0_prochot_n				          ; // P0 热节流（低电平有效），P0 温度过高时的节流控
+wire                    w_p1_prochot_n				          ; // P1 热节流（低电平有效），P1 温度过高时的节流控
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for sgpio
+// for sgpio
+// 涵盖 PCIe、I2C/I3C 等接口的复位与使能控制，以及 EEPROM 写保护、热节流、USB/TPM 复位等功能
+// 是各类外设接口正常工作与控制的信号保障。
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    w_uid_btn_n				;	
-wire    w_eeprom_wp					; //disable write-protect 1:enable write-protect 0:disable write-protect
-wire    w_ocp_aux_en					;
-wire    w_ocp_main_en				;
-wire    w_i3c_mux_en					; 
-wire    w_i3c_remote_cs					; 
-wire    w_bmc_i2c5_9548_rst_n		;
-wire    w_bmc_i2c9_9548_1_rst_n		;
-wire    w_bmc_i2c9_9548_2_rst_n		;
-wire    w_bmc_i2c9_9548_3_rst_n		;
-wire    w_bmc_i2c9_9548_4_rst_n		;
-wire    w_p0_vpp_9545_1_rst_n		;
-wire    w_p0_vpp_9545_2_rst_n		;
-wire    w_p12v_stby_fault_det		;
-wire    w_usb_ponrst_r_n				;
-wire    w_tpcm_reset_n_reg			;
-wire    w_jtag_cpld_bmc_ntrst_reg	;
-wire    w_dimm_alarm_flag			;
+wire                    w_uid_btn_n				              ; // UID 按钮（低电平有效），用户标识按钮输入 
+wire                    w_eeprom_wp					            ; // disable write-protect 1:enable write-protect 0:disable write-protect  EEPROM 写保护，控制 EEPROM 是否可写  
+wire                    w_ocp_aux_en					          ; // 辅助过流保护使能，使能辅助过流保护功能 
+wire                    w_ocp_main_en				            ; // 主过流保护使能，使能主过流保护功能 
+wire                    w_i3c_mux_en					          ; // I3C 多路复用使能，使能 I3C 多路复用器  
+wire                    w_i3c_remote_cs					        ; // I3C 远程片选，I3C 接口的远程片选信号  
+wire                    w_bmc_i2c5_9548_rst_n		        ; // BMC I2C9（9548 芯片）复位（低电平有效），复位 BMC 的 I2C9 接口 
+
+wire                    w_bmc_i2c9_9548_1_rst_n		      ; // BMC I2C4 通道1复位（低电平有效）
+wire                    w_bmc_i2c9_9548_2_rst_n		      ; // BMC I2C4 通道2复位（低电平有效）
+wire                    w_bmc_i2c9_9548_3_rst_n		      ; // BMC I2C4 通道3复位（低电平有效）
+wire                    w_bmc_i2c9_9548_4_rst_n		      ; // BMC I2C4 通道4复位（低电平有效）
+
+wire                    w_p0_vpp_9545_1_rst_n		        ; // P0 VPP（9548 芯片）通道1复位（低电平有效)
+wire                    w_p0_vpp_9545_2_rst_n		        ; // P0 VPP（9548 芯片）通道2复位（低电平有效)
+wire                    w_p0_vpp_9545_3_rst_n		        ; // P0 VPP（9548 芯片）通道1复位（低电平有效)
+wire                    w_p0_vpp_9545_4_rst_n		        ; // P0 VPP（9548 芯片）通道2复位（低电平有效)
+wire                    w_p0_vpp_9545_5_rst_n		        ; // P0 VPP（9548 芯片）通道1复位（低电平有效)
+wire                    w_p0_vpp_9545_6_rst_n		        ; // P0 VPP（9548 芯片）通道1复位（低电平有效)
+
+wire                    w_p12v_stby_fault_det		        ; // P12V 待机故障检测，检测 P12V 待机电源故障
+wire                    w_usb_ponrst_r_n				        ; // USB 上电复位（低电平有效，同步后），USB 接口的上电复位
+wire                    w_tpcm_reset_n_reg			        ; // TPM 复位（低电平有效，寄存器同步后），TPM 模块的复位
+wire                    w_jtag_cpld_bmc_ntrst_reg	      ; // JTAG CPLD BMC 测试复位（寄存器同步后），JTAG 接口相关的测试复位
+wire                    w_dimm_alarm_flag			          ; // DIMM 告警标志，DIMM（内存）的告警指示
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-//for hitless 
+// for hitless 
+// 热插拔与板卡识别信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-reg      [5:0]  r_power_seq_sm_fb			;	
-wire    w_mux_sel						;	
-wire    w_p0_sys_reset_r_n				;
-wire    w_p0_kbrst_n						; 	
-wire    w_p1_kbrst_n						; 	
-wire    w_bmc_jtag_trst_r_n			;
-// wire    w_pal_i3c_mux_en_r_n			;
-wire    w_p0_pcie_wake_n_r			;
-wire    w_p1_pcie_wake_n_r			;	
-wire    w_pal_p0_vdd_core_0_soc_rst_l_n	;
-wire    w_pal_p1_vdd_core_0_soc_rst_l_n	;
-wire    w_pal_p0_vdd_core_1_11_sus_rst_l_n	;
-wire    w_p1_vdd_core_1_11_sus_rst_l_n;
-wire    w_pal_p0_vddio_rst_n				;
-wire    w_p1_vddio_rst_l_n;
+reg      [5:0]          r_power_seq_sm_fb			              ; // 电源序列状态机反馈（6位，寄存器型），电源序列状态机的反馈信号	
+wire                    w_mux_sel						                ; // 多路复用选择，选择多路复用器的通道	
+wire                    w_p0_sys_reset_r_n				          ; // P0 系统复位（低电平有效，同步后），P0 系统的复位
+wire                    w_p0_kbrst_n						            ; // P0 键盘复位（低电平有效），P0 键盘接口的复位 	
+wire                    w_p1_kbrst_n						            ; // P1 键盘复位（低电平有效），P1 键盘接口的复位 	
+wire                    w_bmc_jtag_trst_r_n			            ; // BMC JTAG 测试复位（低电平有效，同步后），BMC JTAG 接口的测试复位
+// wire                 w_pal_i3c_mux_en_r_n			          ; // 平台级 I3C 多路复用使能（低电平有效，同步后），平台级 I3C 多路复用使能
+wire                    w_p0_pcie_wake_n_r			            ; // P0 PCIe 唤醒（低电平有效，同步后），P0 PCIe 接口的唤醒
+wire                    w_p1_pcie_wake_n_r			            ; // P1 PCIe 唤醒（低电平有效，同步后），P1 PCIe 接口的唤醒	
+wire                    w_pal_p0_vdd_core_0_soc_rst_l_n	    ; // 平台级 P0 核心电压 0 SOC 复位（低电平有效，同步后）
+wire                    w_pal_p1_vdd_core_0_soc_rst_l_n	    ; // 平台级 P1 核心电压 0 SOC 复位（低电平有效，同步后）
+wire                    w_pal_p0_vdd_core_1_11_sus_rst_l_n	; // 平台级 P0 核心电压 1/11V 待机复位（低电平有效，同步后）
+wire                    w_p1_vdd_core_1_11_sus_rst_l_n      ; 		
+wire                    w_pal_p0_vddio_rst_n				        ; // 平台级 P0 IO 电压复位（低电平有效），平台级 P0 IO 电压的复位
+wire                    w_p1_vddio_rst_l_n                  ; // P1 IO 电压复位（低电平有效，同步后），P1 IO 电压的复位
 
-wire    [7:0]   w_p0_mciop0a_slot_id;
-wire    [7:0]   w_p0_mciop0c_slot_id;
-wire    [7:0]   w_p0_mciop1a_slot_id;//0
-wire    [7:0]   w_p0_mciop1c_slot_id;//1
-wire    [7:0]   w_p0_mciop2a_slot_id;//2
-wire    [7:0]   w_p0_mciop2c_slot_id;//3
-wire    [7:0]   w_p0_mciop3a_slot_id;//4
-wire    [7:0]   w_p0_mciop3c_slot_id;//5
-wire    [7:0]   w_p0_mciog3a_slot_id;//6
-wire    [7:0]   w_p0_mciog3c_slot_id;//7
-wire    [7:0]   w_p1_mciop0a_slot_id;//10
-wire    [7:0]   w_p1_mciop0c_slot_id;//11
-wire    [7:0]   w_p1_mciop1a_slot_id;//12
-wire    [7:0]   w_p1_mciop1c_slot_id;//13
-wire    [7:0]   w_p1_mciop2a_slot_id;//14
-wire    [7:0]   w_p1_mciop2c_slot_id;//15
-wire    [7:0]   w_p1_mciop3a_slot_id;//16
-wire    [7:0]   w_p1_mciop3c_slot_id;//17
-wire    [7:0]   w_p1_mciog1a_slot_id;//8
-wire    [7:0]   w_p1_mciog1c_slot_id;//9
+wire    [7:0]           w_p0_mciop0a_slot_id                ; // P0 MCIOP0A 槽位 ID（8位），标识 P0 MCIOP0A 槽位
+wire    [7:0]           w_p0_mciop0c_slot_id                ; // P0 MCIOP0C 槽位 ID（8位），标识 P0 MCIOP0C 槽位
+wire    [7:0]           w_p0_mciop1a_slot_id                ; // 0 // P0 MCIOP1A 槽位 ID（8位），标识 P0 MCIOP1A 槽位
+wire    [7:0]           w_p0_mciop1c_slot_id                ; // 1 // P0 MCIOP1C 槽位 ID（8位），标识 P0 MCIOP1C 槽位
+wire    [7:0]           w_p0_mciop2a_slot_id                ; // 2
+wire    [7:0]           w_p0_mciop2c_slot_id                ; // 3
+wire    [7:0]           w_p0_mciop3a_slot_id                ; // 4
+wire    [7:0]           w_p0_mciop3c_slot_id                ; // 5
+wire    [7:0]           w_p0_mciog3a_slot_id                ; // 6
+wire    [7:0]           w_p0_mciog3c_slot_id                ; // 7
+wire    [7:0]           w_p1_mciop0a_slot_id                ; // 10
+wire    [7:0]           w_p1_mciop0c_slot_id                ; // 11
+wire    [7:0]           w_p1_mciop1a_slot_id                ; // 12
+wire    [7:0]           w_p1_mciop1c_slot_id                ; // 13
+wire    [7:0]           w_p1_mciop2a_slot_id                ; // 14
+wire    [7:0]           w_p1_mciop2c_slot_id                ; // 15
+wire    [7:0]           w_p1_mciop3a_slot_id                ; // 16
+wire    [7:0]           w_p1_mciop3c_slot_id                ; // 17
+wire    [7:0]           w_p1_mciog1a_slot_id                ; // 8
+wire    [7:0]           w_p1_mciog1c_slot_id                ; // 9
 
-wire db_i_pwr_btn_cpld_n_r				;	//PWR BUTTON 
-wire w_bmc_sbtn_reset_ctl			;
+// wire                   db_i_pwr_btn_cpld_n_r			          ;	//PWR BUTTON 电源按钮 CPLD 信号（低电平有效，同步后），电源按钮经 CPLD 处理后的信号（//PWR BUTTON 为注释，说明是电源按钮）
+reg                     db_i_fm_pwrbtn_out_n_r              ; // 系统最终电源控制信号
+wire                    db_i_fm_rstbtn_out_n_r              ; // 按钮输出复位信号
+wire                    w_bmc_sbtn_reset_ctl		            ;	// BMC小按钮复位控制，BMC小按钮的复位控制
+
 //DATA from S_CPLD (U247)
-wire    [3:0]   w_board_id;
-wire    [2:0]   w_pcb_version;
-wire    [2:0]   w_pca_version;
-wire    w_P1_MCIOP0A_CB_ID0_R;
-wire    w_P1_MCIOP0A_CB_ID1_R;
-wire    w_P1_MCIOP0C_CB_ID0_R;
-wire    w_P1_MCIOP0C_CB_ID1_R;
-wire    w_P1_MCIOP1A_CB_ID0_R;
-wire    w_P1_MCIOP1A_CB_ID1_R;
-wire    w_P1_MCIOP1C_CB_ID0_R;
-wire    w_P1_MCIOP1C_CB_ID1_R;
-wire    w_P1_MCIOP2A_CB_ID0_R;
-wire    w_P1_MCIOP2A_CB_ID1_R;
-wire    w_P1_MCIOP2C_CB_ID0_R;
-wire    w_P1_MCIOP2C_CB_ID1_R;
+wire    [3:0]           w_board_id                          ; // 板卡 ID（4位），标识板卡的型号或配置                 
+wire    [2:0]           w_pcb_version                       ; // PCB 版本（3位），标识 PCB 的版本                 
+wire    [2:0]           w_pca_version                       ; // PCA 版本（3位），标识 PCA 的版本                 
+// wire    w_P1_MCIOP0A_CB_ID0_R; // P1 MCIOP0A CB ID0（同步后），P1 MCIOP0A CB 的 ID0 信号
+// wire    w_P1_MCIOP0A_CB_ID1_R; // P1 MCIOP0A CB ID1（同步后），P1 MCIOP0A CB 的 ID1 信号
+// wire    w_P1_MCIOP0C_CB_ID0_R;
+// wire    w_P1_MCIOP0C_CB_ID1_R;
+// wire    w_P1_MCIOP1A_CB_ID0_R;
+// wire    w_P1_MCIOP1A_CB_ID1_R;
+// wire    w_P1_MCIOP1C_CB_ID0_R;
+// wire    w_P1_MCIOP1C_CB_ID1_R;
+// wire    w_P1_MCIOP2A_CB_ID0_R;
+// wire    w_P1_MCIOP2A_CB_ID1_R;
+// wire    w_P1_MCIOP2C_CB_ID0_R;
+// wire    w_P1_MCIOP2C_CB_ID1_R;
 
-wire    w_bmc_extrst_uid;
-wire    w_usb2_lcd_oc_n;
-wire    w_usb_inner_overcur3;
+wire                    w_bmc_extrst_uid                    ; // BMC 外部复位 UUID 信号，与 BMC 外部复位及 UUID 相关
+wire                    w_usb2_lcd_oc_n                     ; // USB2 LCD 过流信号（低电平有效），指示 USB2 LCD 过流状态
+// wire                    w_usb_inner_overcur3                ; // USB 内部过流 3 信号，指示 USB 内部过流状态（第 3 路）
 
-wire    w_PAL_BP1_PRSNT_N;
-wire    w_PAL_BP2_PRSNT_N;
-wire    w_PAL_BP3_PRSNT_N;
-wire    w_PAL_BP4_PRSNT_N;
-wire    w_PAL_BP5_PRSNT_N;
-wire    w_PAL_BP8_PRSNT_N;
-wire    w_uid_sw_in_n;
-wire    w_ps1_p12v_on_r;
-wire    w_ps2_p12v_on_r;
-wire    w_FM_P12V_EN;
-wire    w_PWRGD_P12V_PS3_PS4;
-wire    w_PWRGD_P12V;
-wire    w_PS3_PS4_ACFAIL;
-wire    w_pal_ps_off_r;
-wire    w_pal_dual_en_r;
-wire    w_clk_gen_en_r_n;
-wire    w_pal_db2000_1_pwrgd_r;
-wire    w_pal_db2000_2_pwrgd_r;
-wire    w_clk_db2000_1_1_oe_n;
-wire    w_clk_db2000_1_2_oe_n;
-wire    w_fm_pld_db800_3_clks_dev_en_r;
-wire    w_clk_db800_3_1_oe_n_r;
-wire    w_clk_db800_3_2_oe_n_r;
-wire    w_pal_bmc_srst_n_r;
-wire    w_p12v_slot_0_on;
-wire    w_p12v_slot_1_on;
-wire    w_p12v_slot_2_on;
-wire    w_slot_0_on_dly_10ms;
-wire    w_slot_1_on_dly_10ms;
-wire    w_slot_2_on_dly_10ms;
-wire    w_p12v_slot_0_on_r;
-wire    w_p12v_slot_1_on_r;
-wire    w_p12v_slot_2_on_r;
-wire    w_p0_mciop0a_gpu_throttle_n_r;
-wire    w_p0_mciop0c_gpu_throttle_n_r;
-wire    w_p0_pcie_wake_n;
-wire    w_p1_pcie_wake_n;
-wire    [7:0]   w_led_control;
-wire    w_p5v_vga2_en_n_r;
-wire    w_pal_p5v_en_r;
-wire    w_pal_bmc_aux_pgd;
-wire    w_p1v0_stby_m2_en;
+wire                    w_PAL_BP1_PRSNT_N                   ; // 平台级 BP1 存在信号（低电平有效），检测平台级 BP1 是否存在
+wire                    w_PAL_BP2_PRSNT_N                   ;
+wire                    w_PAL_BP3_PRSNT_N                   ;
+wire                    w_PAL_BP4_PRSNT_N                   ;
+wire                    w_PAL_BP5_PRSNT_N                   ;
+wire                    w_PAL_BP8_PRSNT_N                   ;
+wire                    w_uid_sw_in_n                       ; // UUID 开关输入信号（低电平有效），UUID 开关的输入状态
+wire                    w_ps1_p12v_on_r                     ; // PS1 P12V 使能信号（同步后），控制 PS1 P12V 的使能
+wire                    w_ps2_p12v_on_r                     ;
+wire                    w_FM_P12V_EN                        ; // FM F12V 使能信号，控制 FM F12V 的使能
+wire                    w_PWRGD_P12V_PS3_PS4                ; // F12V PS3/PS4 电源好信号，指示 F12V PS3/PS4 电源轨稳定
+wire                    w_PWRGD_P12V                        ; // F12V 电源好信号，指示 F12V 电源轨稳定
+wire                    w_PS3_PS4_ACFAIL                    ; // PS3/PS4 交流故障信号，指示 PS3/PS4 交流输入故障
+wire                    w_pal_ps_off_r                      ; // 平台级电源模块关闭信号（同步后），控制平台级电源模块关闭
+wire                    w_pal_dual_en_r                     ; // 平台级双路使能信号（同步后），控制平台级双路功能使能
+wire                    w_clk_gen_en_r_n                    ; // 时钟生成使能信号（同步后，低电平有效），控制时钟生成使能
+wire                    w_pal_db2000_1_pwrgd_r              ; // 平台级 DB2000_1 电源好信号（同步后），指示平台级 DB2000_1 电源轨稳定
+wire                    w_pal_db2000_2_pwrgd_r              ; // 平台级 DB2000_2 电源好信号（同步后），指示平台级 DB2000_2 电源轨稳定
+wire                    w_clk_db2000_1_1_oe_n               ; // DB2000_1 时钟输出使能信号（低电平有效），控制 DB2000_1 时钟输出使能
+wire                    w_clk_db2000_1_2_oe_n               ; // DB2000_1 时钟输出使能信号（低电平有效），控制 DB2000_1 时钟输出使能
+wire                    w_fm_pld_db800_3_clks_dev_en_r      ; // FM PID DB800 3 时钟设备使能信号（同步后），控制 FM PID DB800 3 时钟设备使能
+wire                    w_clk_db800_3_1_oe_n_r              ; // DB800_3_1 时钟输出使能信号（同步后，低电平有效），控制 DB800_3_1 时钟输出使能
+wire                    w_clk_db800_3_2_oe_n_r              ;
+wire                    w_pal_bmc_srst_n_r                  ; // 平台级 BMC 复位信号（同步后，低电平有效），控制平台级 BMC 复位 
+wire                    w_p12v_slot_0_on                    ; // P12V 槽位 0 使能信号，控制 P12V 槽位 0 的使能
+wire                    w_p12v_slot_1_on                    ; // P12V 槽位 1 使能信号，控制 P12V 槽位 1 的使能
+wire                    w_p12v_slot_2_on                    ; // P12V 槽位 2 使能信号，控制 P12V 槽位 2 的使能
+wire                    w_slot_0_on_dly_10ms                ; // 槽位 0 延时 10ms 使能信号，槽位 0 延时 10ms 后使能
+wire                    w_slot_1_on_dly_10ms                ; // 槽位 1 延时 10ms 使能信号，槽位 1 延时 10ms 后使能
+wire                    w_slot_2_on_dly_10ms                ; // 槽位 2 延时 10ms 使能信号，槽位 2 延时 10ms 后使能
+wire                    w_p12v_slot_0_on_r                  ; // P12V 槽位 0 使能信号（同步后），控制 P12V 槽位 0 的使能
+wire                    w_p12v_slot_1_on_r                  ; // P12V 槽位 1 使能信号（同步后），控制 P12V 槽位 1 的使能
+wire                    w_p12v_slot_2_on_r                  ; // P12V 槽位 2 使能信号（同步后），控制 P12V 槽位 2 的使能
+wire                    w_p0_mciop0a_gpu_throttle_n_r       ; // P0 MCIOP0A GPU 降额信号（同步后，低电平有效），控制 P0 MCIOP0A GPU 降额
+wire                    w_p0_mciop0c_gpu_throttle_n_r       ; // P0 MCIOP0C GPU 降额信号（同步后，低电平有效），控制 P0 MCIOP0C GPU 降额
+wire                    w_p0_pcie_wake_n                    ; // P0 PCIE 唤醒信号（低电平有效），P0 PCIE 唤醒控制
+wire                    w_p1_pcie_wake_n                    ; // P1 PCIE 唤醒信号（低电平有效），P1 PCIE 唤醒控制
+wire    [7:0]           w_led_control                       ; // LED 控制信号（8 位），控制 8 个 LED 的状态
 
-wire    w_cpld_sgpio0_clk_r;
-wire    w_cpld_sgpio0_ld_n_r;
-wire    w_cpld_sgpio0_mosi_r;
-wire    w_cpld_sgpio1_clk_r;
-wire    w_cpld_sgpio1_ld_n_r;
-wire    w_cpld_sgpio1_mosi_r;
-wire    w_PAL_OCP1_PRSNT_B3_N;//2025-03-06 add
+wire                    w_p5v_vga2_en_n_r                   ; // 5V VGA2 使能信号（同步后，低电平有效），控制 5V VGA2 的使能
+wire                    w_pal_p5v_en_r                      ; // 5V VGA2 使能信号（同步后，低电平有效），控制 5V VGA2 的使能
 
-wire    w_BREAK_DET_DO_N      ;
-wire    w_LEAKAGE0_PRSNT_N  ;
-wire    w_LEAKAGE_DET_DO_N  ;
-wire    w_BREAK_DET1_DO_N    ;
-wire    w_LEAKAGE_PRSNT1_N  ;
-wire    w_LEAKAGE_DET1_DO_N;
-wire    [1:0]   w_bf_type;
+wire                    w_pal_bmc_aux_pgd                   ; // 平台级 BMC 辅助电源好信号，指示平台级 BMC 辅助电源轨稳定
+wire                    w_p1v0_stby_m2_en                   ; // P1V0 待机 M2 使能信号，控制 P1V0 待机 M2 的使能
+
+wire                    w_cpld_sgpio0_clk_r                 ; // CPLD SGPIO0 时钟信号（同步后），CPLD SGPIO0 的时钟
+wire                    w_cpld_sgpio0_ld_n_r                ; // CPLD SGPIO0 装载信号（同步后，低电平有效），CPLD SGPIO0 的装载控制
+wire                    w_cpld_sgpio0_mosi_r                ; // CPLD SGPIO0 MOSI 信号（同步后），CPLD SGPIO0 的 MOSI 数据
+wire                    w_cpld_sgpio1_clk_r                 ;
+wire                    w_cpld_sgpio1_ld_n_r                ;
+wire                    w_cpld_sgpio1_mosi_r                ;
+wire                    w_PAL_OCP1_PRSNT_B3_N               ; // 平台级 OCP1 B3 位置存在信号（低电平有效），检测平台级 OCP1 在 B3 位置是否存在 2025-03-06 add
+
+wire                    w_BREAK_DET_DO_N                    ; // 断裂检测 D0 信号（低电平有效），用于检测 D0 相关的断裂情况
+wire                    w_LEAKAGE0_PRSNT_N                  ; // 泄漏存在 0 信号（低电平有效），检测是否存在泄漏（第 0 路相关
+wire                    w_LEAKAGE_DET_DO_N                  ; // 泄漏检测 D0 信号（低电平有效），用于检测 D0 相关的泄漏情况
+wire                    w_BREAK_DET1_DO_N                   ; // 断裂检测 1 D0 信号（低电平有效），检测 D0 相关的另一路断裂情况
+wire                    w_LEAKAGE_PRSNT1_N                  ; // 泄漏存在 1 信号（低电平有效），检测是否存在泄漏（第 1 路相关）
+wire                    w_LEAKAGE_DET1_DO_N                 ; // 泄漏检测 1 D0 信号（低电平有效），用于检测 D0 相关的另一路泄漏情况
+wire    [1:0]           w_bf_type                           ; // BF 类型信号（2 位宽），用于标识 BF（可能是某种模块或功能）的类型
+
 //-------------------------------------------------------------------------------------------------
-//Switch1 & ZT1 BOARD
+//Switch1 & ZT1 BOARD Switch1 & ZTI BOARD 相关信号
 //-------------------------------------------------------------------------------------------------
-wire w_tpm431_alert_n_sw       ; //u7
-wire w_ina3221_pwr_alert_sw    ; //u7
-wire w_pal_3v3_pgd1_r_sw       ; //u7
-wire w_pal_3v3_pgd2_r_sw       ; //u7
-wire w_pal_3v3_pgd3_r_sw       ; //u7
-wire w_pal_3v3_pgd4_r_sw       ; //u7
-wire w_pal_3v3_pgd5_r_sw       ; //u7
-wire w_u3_nc7_sw               ; //u7
+wire                    w_tpm431_alert_n_sw                 ; //u7 TPM431 告警信号（低电平有效，Switch 相关）
+wire                    w_ina3221_pwr_alert_sw              ; //u7 INA3221 电源告警信号（Switch 相关）
+wire                    w_pal_3v3_pgd1_r_sw                 ; //u7 平台级 3.3V 电源好 1 信号（同步后，Switch 相关），平台级 3.3V 电源轨 1 的稳定状态（Swit
+wire                    w_pal_3v3_pgd2_r_sw                 ; //u7
+wire                    w_pal_3v3_pgd3_r_sw                 ; //u7
+wire                    w_pal_3v3_pgd4_r_sw                 ; //u7
+wire                    w_pal_3v3_pgd5_r_sw                 ; //u7
+wire                    w_u3_nc7_sw                         ; //u7 U3 引脚 NC7 信号（Switch 相关），U3 引脚 NC7 的状态（Switch 场景下，实际可能未连接，用
 
-wire w_slot1_prsnt_n_sw        ; //u9
-wire w_slot2_prsnt_n_sw        ; //u9
-wire w_slot3_prsnt_n_sw        ; //u9
-wire w_slot4_prsnt_n_sw        ; //u9
-wire w_slot5_prsnt_n_sw        ; //u9
-wire w_slot6_prsnt_n_sw        ; //u9
-wire w_slot7_prsnt_n_sw        ; //u9
-wire w_slot8_prsnt_n_sw        ; //u9
+wire                    w_slot1_prsnt_n_sw                  ; //u9SW 系列 slot1 存在检测
+wire                    w_slot2_prsnt_n_sw                  ; //u9
+wire                    w_slot3_prsnt_n_sw                  ; //u9
+wire                    w_slot4_prsnt_n_sw                  ; //u9
+wire                    w_slot5_prsnt_n_sw                  ; //u9
+wire                    w_slot6_prsnt_n_sw                  ; //u9
+wire                    w_slot7_prsnt_n_sw                  ; //u9
+wire                    w_slot8_prsnt_n_sw                  ; //u9
 
-wire w_slot9_prsnt_n_sw        ; //u10
-wire w_slot10_prsnt_n_sw       ; //u10
-wire w_slot11_prsnt_n_sw       ; //u10
-wire w_slot12_prsnt_n_sw       ; //u10
-wire w_slot13_prsnt_n_sw       ; //u10
-wire w_mcio1_prsnt_n_sw        ; //u10
-wire w_mcio2_prsnt_n_sw        ; //u10
-wire w_mcio3_prsnt_n_sw        ; //u10
+wire                    w_slot9_prsnt_n_sw                  ; //u10
+wire                    w_slot10_prsnt_n_sw                 ; //u10
+wire                    w_slot11_prsnt_n_sw                 ; //u10
+wire                    w_slot12_prsnt_n_sw                 ; //u10
+wire                    w_slot13_prsnt_n_sw                 ; //u10
+wire                    w_mcio1_prsnt_n_sw                  ; //u10 SW 系列 mcio1 存在检测
+wire                    w_mcio2_prsnt_n_sw                  ; //u10
+wire                    w_mcio3_prsnt_n_sw                  ; //u10
 
-wire w_mcio4_prsnt_n_sw        ; //u38
-wire w_mcio5_prsnt_n_sw        ; //u38
-wire w_mcio6_prsnt_n_sw        ; //u38
-wire w_mcio7_prsnt_n_sw        ; //u38
-wire w_mcio8_prsnt_n_sw        ; //u38
-wire w_mcio9_prsnt_n_sw        ; //u38
-wire w_mcio10_prsnt_n_sw       ; //u38
-wire w_mcio11_prsnt_n_sw       ; //u38
+wire                    w_mcio4_prsnt_n_sw                  ; //u38
+wire                    w_mcio5_prsnt_n_sw                  ; //u38
+wire                    w_mcio6_prsnt_n_sw                  ; //u38
+wire                    w_mcio7_prsnt_n_sw                  ; //u38
+wire                    w_mcio8_prsnt_n_sw                  ; //u38
+wire                    w_mcio9_prsnt_n_sw                  ; //u38
+wire                    w_mcio10_prsnt_n_sw                 ; //u38
+wire                    w_mcio11_prsnt_n_sw                 ; //u38
 
-wire w_mcio12_prsnt_n_sw       ; //u5
-wire w_mcio13_prsnt_n_sw       ; //u5
-wire w_pcb_version2_sw         ; //u5
-wire w_pcb_version1_sw         ; //u5
-wire w_pcb_version0_sw         ; //u5
-wire w_pca_version2_sw         ; //u5
-wire w_pca_version1_sw         ; //u5
-wire w_pca_version0_sw         ; //u5
+wire                    w_mcio12_prsnt_n_sw                 ; //u5
+wire                    w_mcio13_prsnt_n_sw                 ; //u5
+wire                    w_pcb_version2_sw                   ; //u5 SW 系列 PCB 版本 2 检测
+wire                    w_pcb_version1_sw                   ; //u5 SW 系列 PCB 版本 1 检测
+wire                    w_pcb_version0_sw                   ; //u5 SW 系列 PCB 版本 0 检测
+wire                    w_pca_version2_sw                   ; //u5
+wire                    w_pca_version1_sw                   ; //u5
+wire                    w_pca_version0_sw                   ; //u5
 
-wire w_board_id0_sw            ;  //u6
-wire w_board_id1_sw            ;  //u6
-wire w_board_id2_sw            ;  //u6
-wire w_board_id3_sw            ;  //u6
-wire w_board_id4_sw            ;  //u6
-wire w_board_id5_sw            ;  //u6
-wire w_board_id6_sw            ;  //u6
-wire w_board_id7_sw            ;  //u6
+wire                    w_board_id0_sw                      ;  //u6
+wire                    w_board_id1_sw                      ;  //u6
+wire                    w_board_id2_sw                      ;  //u6
+wire                    w_board_id3_sw                      ;  //u6
+wire                    w_board_id4_sw                      ;  //u6
+wire                    w_board_id5_sw                      ;  //u6
+wire                    w_board_id6_sw                      ;  //u6
+wire                    w_board_id7_sw                      ;  //u6
 
-wire w_ct_p1v25_sw0_pg_sw      ; //u41
-wire w_ct_p1v25_sw1_pg_sw      ; //u41
-wire w_p0v8_sw0_pwrgd_sw       ; //u41
-wire w_p0v8_sw1_pwrgd_sw       ; //u41
-wire w_slot1_wake_n_sw         ; //u41
-wire w_slot2_wake_n_sw         ; //u41
-wire w_slot3_wake_n_sw         ; //u41
-wire w_slot4_wake_n_sw         ; //u41
+wire                    w_ct_p1v25_sw0_pg_sw                ; //u41
+wire                    w_ct_p1v25_sw1_pg_sw                ; //u41
+wire                    w_p0v8_sw0_pwrgd_sw                 ; //u41
+wire                    w_p0v8_sw1_pwrgd_sw                 ; //u41
+wire                    w_slot1_wake_n_sw                   ; //u41
+wire                    w_slot2_wake_n_sw                   ; //u41
+wire                    w_slot3_wake_n_sw                   ; //u41
+wire                    w_slot4_wake_n_sw                   ; //u41
 
-wire w_slot5_wake_n_sw         ; //u44
-wire w_slot6_wake_n_sw         ; //u44
-wire w_slot7_wake_n_sw         ; //u44
-wire w_slot8_wake_n_sw         ; //u44
-wire w_slot9_wake_n_sw         ; //u44
-wire w_slot10_wake_n_sw        ; //u44
-wire w_slot11_wake_n_sw        ; //u44
-wire w_slot12_wake_n_sw        ; //u44
+wire                    w_slot5_wake_n_sw                   ; //u44
+wire                    w_slot6_wake_n_sw                   ; //u44
+wire                    w_slot7_wake_n_sw                   ; //u44
+wire                    w_slot8_wake_n_sw                   ; //u44
+wire                    w_slot9_wake_n_sw                   ; //u44
+wire                    w_slot10_wake_n_sw                  ; //u44
+wire                    w_slot11_wake_n_sw                  ; //u44
+wire                    w_slot12_wake_n_sw                  ; //u44
 
-// wire w_pal_p12v_drop_sw            ; //u40
-// wire w_pg_p5v0_r_sw                ; //u40
-// wire w_pg_p1v8_r_sw                ; //u40
-// wire w_pg_p1v8_pll_r_sw            ; //u40
-// wire w_db2000_pwrgd0_sw            ; //u40
-// wire w_db2000_pwrgd1_sw            ; //u40
-// wire w_mcio_slot13_prsnt_n_1_sw    ; //u40
-// wire w_u40_nc7_sw                  ; //u40
-//zt
-wire w_tpm431_alert_n_zt       ;//u3
-wire w_ina3221_pwr_alert_zt    ;//u3
-wire w_pal_3v3_pgd1_r_zt       ;//u3
-wire w_pal_3v3_pgd2_r_zt       ;//u3
-wire w_pal_3v3_pgd3_r_zt       ;//u3
-wire w_pal_3v3_pgd4_r_zt       ;//u3
-wire w_pal_3v3_pgd5_r_zt       ;//u3
-wire w_u3_nc7_zt               ;//u3
+// wire                 w_pal_p12v_drop_sw                  ; //u40
+// wire                 w_pg_p5v0_r_sw                      ; //u40
+// wire                 w_pg_p1v8_r_sw                      ; //u40
+// wire                 w_pg_p1v8_pll_r_sw                  ; //u40
+// wire                 w_db2000_pwrgd0_sw                  ; //u40
+// wire                 w_db2000_pwrgd1_sw                  ; //u40
+// wire                 w_mcio_slot13_prsnt_n_1_sw          ; //u40
+// wire                 w_u40_nc7_sw                        ; //u40
 
-wire w_slot1_prsnt_n_zt        ;//u7
-wire w_slot2_prsnt_n_zt        ;//u7
-wire w_slot3_prsnt_n_zt        ;//u7
-wire w_slot4_prsnt_n_zt        ;//u7
-wire w_slot5_prsnt_n_zt        ;//u7
-wire w_slot6_prsnt_n_zt        ;//u7
-wire w_slot7_prsnt_n_zt        ;//u7
-wire w_slot8_prsnt_n_zt        ;//u7
+// zt
+// 用于检测 ZT 系列板卡上各个槽位（如 slot9-slot13）、MCIO 设备（如 mcio1-mcio13）是否存在
+// 以及板卡的版本（PCB/PCA 版本）、板卡 ID 等信息，是板卡硬件配置识别与管理的基础信号。
+wire                    w_tpm431_alert_n_zt                 ;//u3
+wire                    w_ina3221_pwr_alert_zt              ;//u3
+wire                    w_pal_3v3_pgd1_r_zt                 ;//u3
+wire                    w_pal_3v3_pgd2_r_zt                 ;//u3
+wire                    w_pal_3v3_pgd3_r_zt                 ;//u3
+wire                    w_pal_3v3_pgd4_r_zt                 ;//u3
+wire                    w_pal_3v3_pgd5_r_zt                 ;//u3
+wire                    w_u3_nc7_zt                         ;//u3
+
+wire                    w_slot1_prsnt_n_zt                  ;//u7
+wire                    w_slot2_prsnt_n_zt                  ;//u7
+wire                    w_slot3_prsnt_n_zt                  ;//u7
+wire                    w_slot4_prsnt_n_zt                  ;//u7
+wire                    w_slot5_prsnt_n_zt                  ;//u7
+wire                    w_slot6_prsnt_n_zt                  ;//u7
+wire                    w_slot7_prsnt_n_zt                  ;//u7
+wire                    w_slot8_prsnt_n_zt                  ;//u7
 //in ZT BOARD                           
-wire w_slot9_prsnt_n_zt        ;//u8    
-wire w_slot10_prsnt_n_zt       ;//u8    
-wire w_slot11_prsnt_n_zt       ;//u8    
-wire w_slot12_prsnt_n_zt       ;//u8    
-wire w_slot13_prsnt_n_zt       ;//u8    
-wire w_mcio1_prsnt_n_zt        ;//u8    
-wire w_mcio2_prsnt_n_zt        ;//u8    
-wire w_mcio3_prsnt_n_zt        ;//u8    
+wire                    w_slot9_prsnt_n_zt                  ;//u8    
+wire                    w_slot10_prsnt_n_zt                 ;//u8    
+wire                    w_slot11_prsnt_n_zt                 ;//u8    
+wire                    w_slot12_prsnt_n_zt                 ;//u8    
+wire                    w_slot13_prsnt_n_zt                 ;//u8    
+wire                    w_mcio1_prsnt_n_zt                  ;//u8    
+wire                    w_mcio2_prsnt_n_zt                  ;//u8    
+wire                    w_mcio3_prsnt_n_zt                  ;//u8    
 
-wire w_mcio4_prsnt_n_zt        ;//u4    
-wire w_mcio5_prsnt_n_zt        ;//u4    
-wire w_mcio6_prsnt_n_zt        ;//u4    
-wire w_mcio7_prsnt_n_zt        ;//u4    
-wire w_mcio8_prsnt_n_zt        ;//u4    
-wire w_mcio9_prsnt_n_zt        ;//u4    
-wire w_mcio10_prsnt_n_zt       ;//u4    
-wire w_mcio11_prsnt_n_zt       ;//u4    
+wire                    w_mcio4_prsnt_n_zt                  ;//u4    
+wire                    w_mcio5_prsnt_n_zt                  ;//u4    
+wire                    w_mcio6_prsnt_n_zt                  ;//u4    
+wire                    w_mcio7_prsnt_n_zt                  ;//u4    
+wire                    w_mcio8_prsnt_n_zt                  ;//u4    
+wire                    w_mcio9_prsnt_n_zt                  ;//u4    
+wire                    w_mcio10_prsnt_n_zt                 ;//u4    
+wire                    w_mcio11_prsnt_n_zt                 ;//u4    
 
-wire w_mcio12_prsnt_n_zt       ;//u5    
-wire w_mcio13_prsnt_n_zt       ;//u5    
-wire w_pcb_version2_zt         ;//u5    
-wire w_pcb_version1_zt         ;//u5    
-wire w_pcb_version0_zt         ;//u5    
-wire w_pca_version2_zt         ;//u5    
-wire w_pca_version1_zt         ;//u5    
-wire w_pca_version0_zt         ;//u5    
+wire                    w_mcio12_prsnt_n_zt                 ;//u5    
+wire                    w_mcio13_prsnt_n_zt                 ;//u5    
+wire                    w_pcb_version2_zt                   ;//u5 ZT 系列 PCB 版本 2 检测    
+wire                    w_pcb_version1_zt                   ;//u5 ZT 系列 PCB 版本 1 检测    
+wire                    w_pcb_version0_zt                   ;//u5 ZT 系列 PCB 版本 0 检测     
+wire                    w_pca_version2_zt                   ;//u5    
+wire                    w_pca_version1_zt                   ;//u5    
+wire                    w_pca_version0_zt                   ;//u5    
  
-wire w_board_id0_zt            ;//u6    
-wire w_board_id1_zt            ;//u6    
-wire w_board_id2_zt            ;//u6    
-wire w_board_id3_zt            ;//u6    
-wire w_board_id4_zt            ;//u6    
-wire w_board_id5_zt            ;//u6    
-wire w_board_id6_zt            ;//u6    
-wire w_board_id7_zt            ;//u6    
+wire                    w_board_id0_zt                      ;//u6 ZT 系列板卡 ID0 检测（//u6 为注释，说明对应硬件标识）    
+wire                    w_board_id1_zt                      ;//u6 ZT 系列板卡 ID1 检测    
+wire                    w_board_id2_zt                      ;//u6    
+wire                    w_board_id3_zt                      ;//u6    
+wire                    w_board_id4_zt                      ;//u6    
+wire                    w_board_id5_zt                      ;//u6    
+wire                    w_board_id6_zt                      ;//u6    
+wire                    w_board_id7_zt                      ;//u6    
   
-wire w_mcio1_prsnt_n_1_zt      ;//u18   
-wire w_mcio2_prsnt_n_1_zt      ;//u18   
-wire w_mcio3_prsnt_n_1_zt      ;//u18   
-wire w_mcio4_prsnt_n_1_zt      ;//u18   
-wire w_mcio5_prsnt_n_1_zt      ;//u18   
-wire w_mcio7_prsnt_n_1_zt      ;//u18   
-wire w_mcio9_prsnt_n_1_zt      ;//u18   
-wire w_mcio10_prsnt_n_1_zt     ;//u18   
+wire                    w_mcio1_prsnt_n_1_zt                ;//u18 ZT 系列 mcio1 存在检测  
+wire                    w_mcio2_prsnt_n_1_zt                ;//u18   
+wire                    w_mcio3_prsnt_n_1_zt                ;//u18   
+wire                    w_mcio4_prsnt_n_1_zt                ;//u18   
+wire                    w_mcio5_prsnt_n_1_zt                ;//u18   
+wire                    w_mcio7_prsnt_n_1_zt                ;//u18   
+wire                    w_mcio9_prsnt_n_1_zt                ;//u18   
+wire                    w_mcio10_prsnt_n_1_zt               ;//u18   
 
-wire w_mcio11_prsnt_n_1_zt     ;//u19   
-wire w_mcio12_prsnt_n_1_zt     ;//u19   
-wire w_u19_nc2_zt              ;//u19   
-wire w_u19_nc3_zt              ;//u19   
-wire w_u19_nc4_zt              ;//u19   
-wire w_u19_nc5_zt              ;//u19   
-wire w_u19_nc6_zt              ;//u19   
-wire w_u19_nc7_zt              ;//u19   
+wire                    w_mcio11_prsnt_n_1_zt               ;//u19   
+wire                    w_mcio12_prsnt_n_1_zt               ;//u19   
+wire                    w_u19_nc2_zt                        ;//u19  U19 引脚 NC2（未连接）检测   
+wire                    w_u19_nc3_zt                        ;//u19  U19 引脚 NC3（未连接）检测   
+wire                    w_u19_nc4_zt                        ;//u19   
+wire                    w_u19_nc5_zt                        ;//u19   
+wire                    w_u19_nc6_zt                        ;//u19   
+wire                    w_u19_nc7_zt                        ;//u19   
 
-wire [5:0]pvti_zt_count;
-wire w_pwr_on_dly2s;
-wire w_pwr_on_dly1s5;  
-wire [2:0]pvti_sw_u2_count1;
+wire    [5:0]           pvti_zt_count                       ;
+wire                    w_pwr_on_dly2s                      ;
+wire                    w_pwr_on_dly1s5                     ;  
+wire    [2:0]           pvti_sw_u2_count1                   ;
 
-reg r_board_id0_zt     ;
-reg r_board_id1_zt     ;
-reg r_board_id2_zt     ;
-reg r_board_id3_zt     ;
-reg r_board_id4_zt     ;
-reg r_board_id5_zt     ;
-reg r_board_id6_zt     ;
-reg r_board_id7_zt     ;
+reg                     r_board_id0_zt                      ; // 锁存 ZT 板卡 ID0 状态
+reg                     r_board_id1_zt                      ; // 锁存 ZT 板卡 ID1 状态
+reg                     r_board_id2_zt                      ;
+reg                     r_board_id3_zt                      ;
+reg                     r_board_id4_zt                      ;
+reg                     r_board_id5_zt                      ;
+reg                     r_board_id6_zt                      ;
+reg                     r_board_id7_zt                      ;
 
-reg r_pcb_version2_zt  ;
-reg r_pcb_version1_zt  ;
-reg r_pcb_version0_zt  ;
-reg r_pca_version2_zt  ;
-reg r_pca_version1_zt  ;
-reg r_pca_version0_zt  ;
+reg                     r_pcb_version2_zt                   ; // 锁存 ZT PCB 版本 2 状态
+reg                     r_pcb_version1_zt                   ; // 锁存 ZT PCB 版本 1 状态
+reg                     r_pcb_version0_zt                   ;
+reg                     r_pca_version2_zt                   ;
+reg                     r_pca_version1_zt                   ;
+reg                     r_pca_version0_zt                   ;
 
-reg r_mcio9_prsnt_n_zt ;
-reg r_mcio7_prsnt_n_zt ;
-reg r_mcio3_prsnt_n_zt ;
-reg r_mcio1_prsnt_n_zt ;
+reg                     r_mcio9_prsnt_n_zt                  ; // 锁存 ZT mcio9 存在状态（低电平有效）
+reg                     r_mcio7_prsnt_n_zt                  ;
+reg                     r_mcio3_prsnt_n_zt                  ;
+reg                     r_mcio1_prsnt_n_zt                  ;
 
-reg r_mcio10_prsnt_n_zt ; //2024-9-24
-reg r_mcio8_prsnt_n_zt  ; //2024-9-24
-reg r_mcio6_prsnt_n_zt  ; //2024-9-24
-reg r_mcio4_prsnt_n_zt  ; //2024-9-24
-reg r_zt_board_prsnt_n      ;
-reg     [7:0]   r_switch_mode;
+reg                     r_mcio10_prsnt_n_zt                 ; //2024-9-24
+reg                     r_mcio8_prsnt_n_zt                  ; //2024-9-24
+reg                     r_mcio6_prsnt_n_zt                  ; //2024-9-24
+reg                     r_mcio4_prsnt_n_zt                  ; //2024-9-24
+reg                     r_zt_board_prsnt_n                  ; // 锁存 ZT 板卡存在状态（低电平有效）
+reg     [7:0]           r_switch_mode                       ; // 切换模式（8位），用于控制不同的切换模式配置
 
-wire [7:0]   w_zt_board_id;
-wire [7:0]   w_sw_board_id;
-wire    w_zt_board_prsnt_n;
+wire    [7:0]           w_zt_board_id                       ;
+wire    [7:0]           w_sw_board_id                       ;
+wire                    w_zt_board_prsnt_n                  ;
 
-wire w_mcio_slot11_prsnt_n_1 ;
-wire w_mcio_slot9_prsnt_n    ;
-wire w_mcio_slot9_prsnt_n_1  ;
-wire w_mcio_slot11_prsnt_n   ;
-wire w_mcio_slot13_prsnt_n_1 ;
+wire                    w_mcio_slot11_prsnt_n_1             ;
+wire                    w_mcio_slot9_prsnt_n                ;
+wire                    w_mcio_slot9_prsnt_n_1              ;
+wire                    w_mcio_slot11_prsnt_n               ;
+wire                    w_mcio_slot13_prsnt_n_1             ;
 
 //-------------------------------------------------------------------------------------------------
 //Switch2 & ZT2 BOARD
 //-------------------------------------------------------------------------------------------------
-wire    w_tpm431_alert_n_sw2       ; //u7
-wire    w_ina3221_pwr_alert_sw2    ; //u7
-wire    w_pal_3v3_pgd1_r_sw2       ; //u7
-wire    w_pal_3v3_pgd2_r_sw2       ; //u7
-wire    w_pal_3v3_pgd3_r_sw2       ; //u7
-wire    w_pal_3v3_pgd4_r_sw2       ; //u7
-wire    w_pal_3v3_pgd5_r_sw2       ; //u7
-wire    w_u3_nc7_sw2               ; //u7
+wire                    w_tpm431_alert_n_sw2                ; //u7
+wire                    w_ina3221_pwr_alert_sw2             ; //u7
+wire                    w_pal_3v3_pgd1_r_sw2                ; //u7
+wire                    w_pal_3v3_pgd2_r_sw2                ; //u7
+wire                    w_pal_3v3_pgd3_r_sw2                ; //u7
+wire                    w_pal_3v3_pgd4_r_sw2                ; //u7
+wire                    w_pal_3v3_pgd5_r_sw2                ; //u7
+wire                    w_u3_nc7_sw2                        ; //u7
 
-wire    w_slot1_prsnt_n_sw2        ; //u9
-wire    w_slot2_prsnt_n_sw2        ; //u9
-wire    w_slot3_prsnt_n_sw2        ; //u9
-wire    w_slot4_prsnt_n_sw2        ; //u9
-wire    w_slot5_prsnt_n_sw2        ; //u9
-wire    w_slot6_prsnt_n_sw2        ; //u9
-wire    w_slot7_prsnt_n_sw2        ; //u9
-wire    w_slot8_prsnt_n_sw2        ; //u9
+wire                    w_slot1_prsnt_n_sw2                 ; //u9
+wire                    w_slot2_prsnt_n_sw2                 ; //u9
+wire                    w_slot3_prsnt_n_sw2                 ; //u9
+wire                    w_slot4_prsnt_n_sw2                 ; //u9
+wire                    w_slot5_prsnt_n_sw2                 ; //u9
+wire                    w_slot6_prsnt_n_sw2                 ; //u9
+wire                    w_slot7_prsnt_n_sw2                 ; //u9
+wire                    w_slot8_prsnt_n_sw2                 ; //u9
 
-wire    w_slot9_prsnt_n_sw2        ; //u10
-wire    w_slot10_prsnt_n_sw2       ; //u10
-wire    w_slot11_prsnt_n_sw2       ; //u10
-wire    w_slot12_prsnt_n_sw2       ; //u10
-wire    w_slot13_prsnt_n_sw2       ; //u10
-wire    w_mcio1_prsnt_n_sw2        ; //u10
-wire    w_mcio2_prsnt_n_sw2        ; //u10
-wire    w_mcio3_prsnt_n_sw2        ; //u10
+wire                    w_slot9_prsnt_n_sw2                 ; //u10
+wire                    w_slot10_prsnt_n_sw2                ; //u10
+wire                    w_slot11_prsnt_n_sw2                ; //u10
+wire                    w_slot12_prsnt_n_sw2                ; //u10
+wire                    w_slot13_prsnt_n_sw2                ; //u10
+wire                    w_mcio1_prsnt_n_sw2                 ; //u10
+wire                    w_mcio2_prsnt_n_sw2                 ; //u10
+wire                    w_mcio3_prsnt_n_sw2                 ; //u10
 
-wire    w_mcio4_prsnt_n_sw2        ; //u38
-wire    w_mcio5_prsnt_n_sw2        ; //u38
-wire    w_mcio6_prsnt_n_sw2        ; //u38
-wire    w_mcio7_prsnt_n_sw2        ; //u38
-wire    w_mcio8_prsnt_n_sw2        ; //u38
-wire    w_mcio9_prsnt_n_sw2        ; //u38
-wire    w_mcio10_prsnt_n_sw2       ; //u38
-wire    w_mcio11_prsnt_n_sw2       ; //u38
+wire                    w_mcio4_prsnt_n_sw2                 ; //u38
+wire                    w_mcio5_prsnt_n_sw2                 ; //u38
+wire                    w_mcio6_prsnt_n_sw2                 ; //u38
+wire                    w_mcio7_prsnt_n_sw2                 ; //u38
+wire                    w_mcio8_prsnt_n_sw2                 ; //u38
+wire                    w_mcio9_prsnt_n_sw2                 ; //u38
+wire                    w_mcio10_prsnt_n_sw2                ; //u38
+wire                    w_mcio11_prsnt_n_sw2                ; //u38
 
-wire    w_mcio12_prsnt_n_sw2       ; //u5
-wire    w_mcio13_prsnt_n_sw2       ; //u5
-wire    w_pcb_version2_sw2         ; //u5
-wire    w_pcb_version1_sw2         ; //u5
-wire    w_pcb_version0_sw2         ; //u5
-wire    w_pca_version2_sw2         ; //u5
-wire    w_pca_version1_sw2         ; //u5
-wire    w_pca_version0_sw2         ; //u5
+wire                    w_mcio12_prsnt_n_sw2                ; //u5
+wire                    w_mcio13_prsnt_n_sw2                ; //u5
+wire                    w_pcb_version2_sw2                  ; //u5
+wire                    w_pcb_version1_sw2                  ; //u5
+wire                    w_pcb_version0_sw2                  ; //u5
+wire                    w_pca_version2_sw2                  ; //u5
+wire                    w_pca_version1_sw2                  ; //u5
+wire                    w_pca_version0_sw2                  ; //u5
 
-wire    w_board_id0_sw2            ;  //u6
-wire    w_board_id1_sw2            ;  //u6
-wire    w_board_id2_sw2            ;  //u6
-wire    w_board_id3_sw2            ;  //u6
-wire    w_board_id4_sw2            ;  //u6
-wire    w_board_id5_sw2            ;  //u6
-wire    w_board_id6_sw2            ;  //u6
-wire    w_board_id7_sw2            ;  //u6
+wire                    w_board_id0_sw2                     ;  //u6
+wire                    w_board_id1_sw2                     ;  //u6
+wire                    w_board_id2_sw2                     ;  //u6
+wire                    w_board_id3_sw2                     ;  //u6
+wire                    w_board_id4_sw2                     ;  //u6
+wire                    w_board_id5_sw2                     ;  //u6
+wire                    w_board_id6_sw2                     ;  //u6
+wire                    w_board_id7_sw2                     ;  //u6
 
-wire    w_ct_p1v25_sw0_pg_sw2      ; //u41
-wire    w_ct_p1v25_sw1_pg_sw2      ; //u41
-wire    w_p0v8_sw0_pwrgd_sw2       ; //u41
-wire    w_p0v8_sw1_pwrgd_sw2       ; //u41
-wire    w_slot1_wake_n_sw2         ; //u41
-wire    w_slot2_wake_n_sw2         ; //u41
-wire    w_slot3_wake_n_sw2         ; //u41
-wire    w_slot4_wake_n_sw2         ; //u41
+wire                    w_ct_p1v25_sw0_pg_sw2               ; //u41
+wire                    w_ct_p1v25_sw1_pg_sw2               ; //u41
+wire                    w_p0v8_sw0_pwrgd_sw2                ; //u41
+wire                    w_p0v8_sw1_pwrgd_sw2                ; //u41
+wire                    w_slot1_wake_n_sw2                  ; //u41
+wire                    w_slot2_wake_n_sw2                  ; //u41
+wire                    w_slot3_wake_n_sw2                  ; //u41
+wire                    w_slot4_wake_n_sw2                  ; //u41
 
-wire    w_slot5_wake_n_sw2         ; //u44
-wire    w_slot6_wake_n_sw2         ; //u44
-wire    w_slot7_wake_n_sw2         ; //u44
-wire    w_slot8_wake_n_sw2         ; //u44
-wire    w_slot9_wake_n_sw2         ; //u44
-wire    w_slot10_wake_n_sw2        ; //u44
-wire    w_slot11_wake_n_sw2        ; //u44
-wire    w_slot12_wake_n_sw2        ; //u44
+wire                    w_slot5_wake_n_sw2                  ; //u44
+wire                    w_slot6_wake_n_sw2                  ; //u44
+wire                    w_slot7_wake_n_sw2                  ; //u44
+wire                    w_slot8_wake_n_sw2                  ; //u44
+wire                    w_slot9_wake_n_sw2                  ; //u44
+wire                    w_slot10_wake_n_sw2                 ; //u44
+wire                    w_slot11_wake_n_sw2                 ; //u44
+wire                    w_slot12_wake_n_sw2                 ; //u44
 
-wire    w_pal_p12v_drop_sw2            ; //u40
-wire    w_pg_p5v0_r_sw2                ; //u40
-wire    w_pg_p1v8_r_sw2                ; //u40
-wire    w_pg_p1v8_pll_r_sw2            ; //u40
-wire    w_db2000_pwrgd0_sw2            ; //u40
-wire    w_db2000_pwrgd1_sw2            ; //u40
-wire    w_mcio_slot13_prsnt_n_1_sw2    ; //u40
-wire    w_u40_nc7_sw2                  ; //u40
+wire                    w_pal_p12v_drop_sw2                 ; //u40
+wire                    w_pg_p5v0_r_sw2                     ; //u40
+wire                    w_pg_p1v8_r_sw2                     ; //u40
+wire                    w_pg_p1v8_pll_r_sw2                 ; //u40
+wire                    w_db2000_pwrgd0_sw2                 ; //u40
+wire                    w_db2000_pwrgd1_sw2                 ; //u40
+wire                    w_mcio_slot13_prsnt_n_1_sw2         ; //u40
+wire                    w_u40_nc7_sw2                       ; //u40
+
 //zt2
-wire    w_tpm431_alert_n_zt2       ;//u3
-wire    w_ina3221_pwr_alert_zt2    ;//u3
-wire    w_pal_3v3_pgd1_r_zt2       ;//u3
-wire    w_pal_3v3_pgd2_r_zt2       ;//u3
-wire    w_pal_3v3_pgd3_r_zt2       ;//u3
-wire    w_pal_3v3_pgd4_r_zt2       ;//u3
-wire    w_pal_3v3_pgd5_r_zt2       ;//u3
-wire    w_u3_nc7_zt2               ;//u3
+wire                    w_tpm431_alert_n_zt2                ;//u3 ZT2 系列 TPM431 告警（低电平有效)
+wire                    w_ina3221_pwr_alert_zt2             ;//u3 ZT2 系列 INA3221 电源告警
+wire                    w_pal_3v3_pgd1_r_zt2                ;//u3 ZT2 系列平台级 3.3V PGD1 信号
+wire                    w_pal_3v3_pgd2_r_zt2                ;//u3
+wire                    w_pal_3v3_pgd3_r_zt2                ;//u3
+wire                    w_pal_3v3_pgd4_r_zt2                ;//u3
+wire                    w_pal_3v3_pgd5_r_zt2                ;//u3
+wire                    w_u3_nc7_zt2                        ;//u3 U3 引脚 NC7（未连接）检测
 
-wire    w_slot1_prsnt_n_zt2        ;//u7
-wire    w_slot2_prsnt_n_zt2        ;//u7
-wire    w_slot3_prsnt_n_zt2        ;//u7
-wire    w_slot4_prsnt_n_zt2        ;//u7
-wire    w_slot5_prsnt_n_zt2        ;//u7
-wire    w_slot6_prsnt_n_zt2        ;//u7
-wire    w_slot7_prsnt_n_zt2        ;//u7
-wire    w_slot8_prsnt_n_zt2        ;//u7
+wire                    w_slot1_prsnt_n_zt2                 ;//u7 ZT2 系列 slot1 存在检测
+wire                    w_slot2_prsnt_n_zt2                 ;//u7 ZT2 系列 slot2 存在检测
+wire                    w_slot3_prsnt_n_zt2                 ;//u7
+wire                    w_slot4_prsnt_n_zt2                 ;//u7
+wire                    w_slot5_prsnt_n_zt2                 ;//u7
+wire                    w_slot6_prsnt_n_zt2                 ;//u7
+wire                    w_slot7_prsnt_n_zt2                 ;//u7
+wire                    w_slot8_prsnt_n_zt2                 ;//u7
 //in ZT BOARD                           
-wire    w_slot9_prsnt_n_zt2        ;//u8    
-wire    w_slot10_prsnt_n_zt2       ;//u8    
-wire    w_slot11_prsnt_n_zt2       ;//u8    
-wire    w_slot12_prsnt_n_zt2       ;//u8    
-wire    w_slot13_prsnt_n_zt2       ;//u8    
-wire    w_mcio1_prsnt_n_zt2        ;//u8    
-wire    w_mcio2_prsnt_n_zt2        ;//u8    
-wire    w_mcio3_prsnt_n_zt2        ;//u8 
+wire                    w_slot9_prsnt_n_zt2                 ;//u8    
+wire                    w_slot10_prsnt_n_zt2                ;//u8    
+wire                    w_slot11_prsnt_n_zt2                ;//u8    
+wire                    w_slot12_prsnt_n_zt2                ;//u8    
+wire                    w_slot13_prsnt_n_zt2                ;//u8    
+wire                    w_mcio1_prsnt_n_zt2                 ;//u8  ZT2 系列 mcio1 存在检测   
+wire                    w_mcio2_prsnt_n_zt2                 ;//u8  ZT2 系列 mcio2 存在检测   
+wire                    w_mcio3_prsnt_n_zt2                 ;//u8 
    
-wire    w_mcio4_prsnt_n_zt2        ;//u4    
-wire    w_mcio5_prsnt_n_zt2        ;//u4    
-wire    w_mcio6_prsnt_n_zt2        ;//u4    
-wire    w_mcio7_prsnt_n_zt2        ;//u4    
-wire    w_mcio8_prsnt_n_zt2        ;//u4    
-wire    w_mcio9_prsnt_n_zt2        ;//u4    
-wire    w_mcio10_prsnt_n_zt2       ;//u4    
-wire    w_mcio11_prsnt_n_zt2       ;//u4 
+wire                    w_mcio4_prsnt_n_zt2                 ;//u4    
+wire                    w_mcio5_prsnt_n_zt2                 ;//u4    
+wire                    w_mcio6_prsnt_n_zt2                 ;//u4    
+wire                    w_mcio7_prsnt_n_zt2                 ;//u4    
+wire                    w_mcio8_prsnt_n_zt2                 ;//u4    
+wire                    w_mcio9_prsnt_n_zt2                 ;//u4    
+wire                    w_mcio10_prsnt_n_zt2                ;//u4    
+wire                    w_mcio11_prsnt_n_zt2                ;//u4 
    
-wire    w_mcio12_prsnt_n_zt2       ;//u5    
-wire    w_mcio13_prsnt_n_zt2       ;//u5    
-wire    w_pcb_version2_zt2         ;//u5    
-wire    w_pcb_version1_zt2         ;//u5    
-wire    w_pcb_version0_zt2         ;//u5    
-wire    w_pca_version2_zt2         ;//u5    
-wire    w_pca_version1_zt2         ;//u5    
-wire    w_pca_version0_zt2         ;//u5  
+wire                    w_mcio12_prsnt_n_zt2                ;//u5    
+wire                    w_mcio13_prsnt_n_zt2                ;//u5    
+wire                    w_pcb_version2_zt2                  ;//u5  ZT2 系列 PCB 版本 2 检测   
+wire                    w_pcb_version1_zt2                  ;//u5  ZT2 系列 PCB 版本 1 检测   
+wire                    w_pcb_version0_zt2                  ;//u5    
+wire                    w_pca_version2_zt2                  ;//u5    
+wire                    w_pca_version1_zt2                  ;//u5    
+wire                    w_pca_version0_zt2                  ;//u5  
   
-wire    w_board_id0_zt2            ;//u6    
-wire    w_board_id1_zt2            ;//u6    
-wire    w_board_id2_zt2            ;//u6    
-wire    w_board_id3_zt2            ;//u6    
-wire    w_board_id4_zt2            ;//u6    
-wire    w_board_id5_zt2            ;//u6    
-wire    w_board_id6_zt2            ;//u6    
-wire    w_board_id7_zt2            ;//u6   
+wire                    w_board_id0_zt2                     ;//u6  ZT2 系列板卡 ID0 检测    
+wire                    w_board_id1_zt2                     ;//u6  ZT2 系列板卡 ID1 检测    
+wire                    w_board_id2_zt2                     ;//u6    
+wire                    w_board_id3_zt2                     ;//u6    
+wire                    w_board_id4_zt2                     ;//u6    
+wire                    w_board_id5_zt2                     ;//u6    
+wire                    w_board_id6_zt2                     ;//u6    
+wire                    w_board_id7_zt2                     ;//u6   
   
-wire    w_mcio1_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio2_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio3_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio4_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio5_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio7_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio9_prsnt_n_1_zt2      ;//u18   
-wire    w_mcio10_prsnt_n_1_zt2     ;//u18 
+wire                    w_mcio1_prsnt_n_1_zt2               ;//u18  ZT2 系列 mcio1 存在检测  
+wire                    w_mcio2_prsnt_n_1_zt2               ;//u18  ZT2 系列 mcio2 存在检测  
+wire                    w_mcio3_prsnt_n_1_zt2               ;//u18   
+wire                    w_mcio4_prsnt_n_1_zt2               ;//u18   
+wire                    w_mcio5_prsnt_n_1_zt2               ;//u18   
+wire                    w_mcio7_prsnt_n_1_zt2               ;//u18   
+wire                    w_mcio9_prsnt_n_1_zt2               ;//u18   
+wire                    w_mcio10_prsnt_n_1_zt2              ;//u18 
   
-wire    w_mcio11_prsnt_n_1_zt2     ;//u19   
-wire    w_mcio12_prsnt_n_1_zt2     ;//u19   
-wire    w_u19_nc2_zt2              ;//u19   
-wire    w_u19_nc3_zt2              ;//u19   
-wire    w_u19_nc4_zt2              ;//u19   
-wire    w_u19_nc5_zt2              ;//u19   
-wire    w_u19_nc6_zt2              ;//u19   
-wire    w_u19_nc7_zt2              ;//u19   
+wire                    w_mcio11_prsnt_n_1_zt2              ;//u19   
+wire                    w_mcio12_prsnt_n_1_zt2              ;//u19   
+wire                    w_u19_nc2_zt2                       ;//u19   
+wire                    w_u19_nc3_zt2                       ;//u19   
+wire                    w_u19_nc4_zt2                       ;//u19   
+wire                    w_u19_nc5_zt2                       ;//u19   
+wire                    w_u19_nc6_zt2                       ;//u19   
+wire                    w_u19_nc7_zt2                       ;//u19   
 
-reg      r_board_id0_zt2     ;
-reg      r_board_id1_zt2     ;
-reg      r_board_id2_zt2     ;
-reg      r_board_id3_zt2     ;
-reg      r_board_id4_zt2     ;
-reg      r_board_id5_zt2     ;
-reg      r_board_id6_zt2     ;
-reg      r_board_id7_zt2     ;
-reg      r_pcb_version2_zt2  ;
-reg      r_pcb_version1_zt2  ;
-reg      r_pcb_version0_zt2  ;
-reg      r_pca_version2_zt2  ;
-reg      r_pca_version1_zt2  ;
-reg      r_pca_version0_zt2  ;
-reg      r_mcio9_prsnt_n_zt2 ;
-reg      r_mcio7_prsnt_n_zt2 ;
-reg      r_mcio3_prsnt_n_zt2 ;
-reg      r_mcio1_prsnt_n_zt2 ;
-reg      r_mcio10_prsnt_n_zt2 ; //2024-9-24
-reg      r_mcio8_prsnt_n_zt2  ; //2024-9-24
-reg      r_mcio6_prsnt_n_zt2  ; //2024-9-24
-reg      r_mcio4_prsnt_n_zt2  ; //2024-9-24
+reg                     r_board_id0_zt2                     ;
+reg                     r_board_id1_zt2                     ;
+reg                     r_board_id2_zt2                     ;
+reg                     r_board_id3_zt2                     ;
+reg                     r_board_id4_zt2                     ;
+reg                     r_board_id5_zt2                     ;
+reg                     r_board_id6_zt2                     ;
+reg                     r_board_id7_zt2                     ;
+reg                     r_pcb_version2_zt2                  ;
+reg                     r_pcb_version1_zt2                  ;
+reg                     r_pcb_version0_zt2                  ;
+reg                     r_pca_version2_zt2                  ;
+reg                     r_pca_version1_zt2                  ;
+reg                     r_pca_version0_zt2                  ;
+reg                     r_mcio9_prsnt_n_zt2                 ;
+reg                     r_mcio7_prsnt_n_zt2                 ;
+reg                     r_mcio3_prsnt_n_zt2                 ;
+reg                     r_mcio1_prsnt_n_zt2                 ;
+reg                     r_mcio10_prsnt_n_zt2                ; //2024-9-24
+reg                     r_mcio8_prsnt_n_zt2                 ; //2024-9-24
+reg                     r_mcio6_prsnt_n_zt2                 ; //2024-9-24
+reg                     r_mcio4_prsnt_n_zt2                 ; //2024-9-24
 
-wire    w_zt2_mcio_slot11_prsnt_n_1 ;
-wire    w_zt2_mcio_slot9_prsnt_n    ;
-wire    w_zt2_mcio_slot9_prsnt_n_1  ;
-wire    w_zt2_mcio_slot11_prsnt_n   ;
-wire    w_zt2_mcio_slot13_prsnt_n_1 ;
-wire    [5:0]   pvti_zt2_count;
-wire    [2:0]   pvti_sw2_u2_count1;
-wire    [7:0]   w_zt2_board_id;
-wire    [7:0]   w_sw2_board_id;
-reg      [7:0]   r_switch2_mode;
-reg      r_zt2_board_prsnt_n      ;
-wire    w_zt2_board_prsnt_n;
+wire                    w_zt2_mcio_slot11_prsnt_n_1         ; // ZT2 系列 mcio slot11 存在检测（次级，低电平有效）
+wire                    w_zt2_mcio_slot9_prsnt_n            ; // ZT2 系列 mcio slot9 存在检测
+wire                    w_zt2_mcio_slot9_prsnt_n_1          ; // ZT2 系列 mcio slot9 存在检测（次级，低电平有效)
+wire                    w_zt2_mcio_slot11_prsnt_n           ;
+wire                    w_zt2_mcio_slot13_prsnt_n_1         ;
 
-wire    w_bmc_jtag_mux_s;
+wire    [5:0]           pvti_zt2_count                      ; // PVTI ZT2 计数（6位），用于 PVTI ZT2 相关的计数逻辑
+wire    [2:0]           pvti_sw2_u2_count1                  ; // PVTI ZT2 计数（6位），用于 PVTI ZT2 相关的计数逻辑
+wire    [7:0]           w_zt2_board_id                      ; // ZT2 系列板卡 ID（8位），标识 ZT2 板卡的型号或配置
+wire    [7:0]           w_sw2_board_id                      ; // SW2 系列板卡 ID（8位），标识 SW2 板卡的型号或配置
+reg     [7:0]           r_switch2_mode                      ; // 切换模式 2（8位，寄存器型），用于控制切换模式 2 的配置
+reg                     r_zt2_board_prsnt_n                 ; // 锁存 ZT2 板卡存在状态（低电平有效）
+wire                    w_zt2_board_prsnt_n                 ; // ZT2 板卡存在检测（低电平有效）
 
-
-wire    w_pgd_p12v_droop_neg;
-reg     r_p12v_discharge_r;
-wire    w_p12v_discharge_r;
-
-//SN74LV165     PVT_DATA
-//U152_DATA
-wire    w_P0_MCIOP0C_CB_ID1_R;
-wire    w_P0_MCIOP0C_CB_ID0_R;
-wire    w_P0_MCIOP0A_CB_ID1_R;
-wire    w_P0_MCIOP0A_CB_ID0_R;
-wire    w_P0_MCIOP1C_CB_ID1_R;
-wire    w_P0_MCIOP1C_CB_ID0_R;
-wire    w_P0_MCIOP1A_CB_ID1_R;
-wire    w_P0_MCIOP1A_CB_ID0_R;
-//U153_DATA
-wire    w_P0_MCIOP2A_CB_ID0_R;
-wire    w_P0_MCIOP2A_CB_ID1_R;
-wire    w_P0_MCIOP2C_CB_ID0_R;
-wire    w_P0_MCIOP2C_CB_ID1_R;
-wire    w_P0_MCIOP3C_CB_ID1_R;
-wire    w_P0_MCIOP3C_CB_ID0_R;
-wire    w_P0_MCIOP3A_CB_ID1_R;
-wire    w_P0_MCIOP3A_CB_ID0_R;
-//U154_DATA
-wire    w_P1_MCIOG1A_CB_ID0_R;
-wire    w_P1_MCIOG1A_CB_ID1_R;
-wire    w_P1_MCIOG1C_CB_ID0_R;
-wire    w_P1_MCIOG1C_CB_ID1_R;
-wire    w_P0_MCIOG3A_CB_ID0_R;
-wire    w_P0_MCIOG3A_CB_ID1_R;
-wire    w_P0_MCIOG3C_CB_ID0_R;
-wire    w_P0_MCIOG3C_CB_ID1_R;
-//U155_DATA
-wire    w_SW_1;
-wire    w_SW_2;
-wire    w_SW_3;
-wire    w_SW_4;
-wire    w_SW_5;
-wire    w_SW_6;
-wire    w_SW_7;
-wire    w_SW_8;
-//U156_DATA
-wire    w_PAL_BP4_AUX_PG;
-wire    w_PAL_STBY_FAN_SHTDN;
-wire    w_PG_P12V_SLOT_9;
-wire    w_PG_P12V_SLOT_7;
-wire    w_PAL_BP6_PRSNT_N;
-wire    w_P1_MCIOP4A_CB_ID1_R;
-wire    w_PG_P12V_SLOT_3;
-wire    w_PAL_OCP1_HP_BUTTON_N;
-//U157_DATA
-wire    w_PG_P12V_SLOT_6;
-wire    w_FAN_PRSNT_R;
-wire    w_PAL_SLIMSAS1_PRSNT_N;
-wire    w_NODE1_TYPE;
-wire    w_PAL_MEN_CPU_SHTDN;
-wire    w_PAL_S5_CPU_SHTDN;
-wire    w_U157_NC_G;
-wire    w_U157_NC_H;
-//U158_DATA
-wire    w_P1_MCIOP3C_CB_ID1_R;
-wire    w_P1_MCIOP3C_CB_ID0_R;
-wire    w_P1_MCIOP3A_CB_ID1_R;
-wire    w_P1_MCIOP3A_CB_ID0_R;
-wire    w_OCP1_CABLE_PRSNT_R ;
-wire    w_PAL_OCP1_PRSNT_B1_N;
-wire    w_PAL_OCP1_PRSNT_B2_N;
-wire    w_PAL_OCP1_PRSNT_B0_N;
-//U159_DATA
-wire    w_U159_NC_A;
-wire    w_U159_NC_B;
-wire    w_U159_NC_C;
-wire    w_U159_NC_D;
-wire    w_PAL_M2_0_PRSNT_N;
-wire    w_NCSI_PRSNT_N;
-wire    w_BMC_CARD_PRSNT_N;
-wire    w_PAL_M2_1_PRSNT_N;
-
-wire [6:0]pvti_ss_count;
-
-
-wire    w_ocp_prsnt_n;
-
-//-------------------------------------------------------------------------------------------------
-// PLL功能模块例化（锁相环时钟生成）
-// 功能：
-// 1. 输入25MHz时钟信号（i_CLK_25M_CPLD），通过PLL模块生成两个输出时钟：
-//    - 50MHz时钟信号（clk_50m）
-//    - 25MHz时钟信号（clk_25m）
-// 2. 输出PLL锁定信号（pll_lock），用于指示时钟稳定状态。
-//-------------------------------------------------------------------------------------------------
-pll_i25M_o50M_o25M pll_inst(
-  .CLKI     (i_CLK_25M_CPLD         ), // 输入时钟信号，频率为25MHz
-  .RST      (~i_PWRGD_P3V3_STBY     ), // 复位信号，低电平有效
-  .CLKOP    (clk_50m                ), // 输出50MHz时钟信号
-  .CLKOS    (clk_25m                ), // 输出25MHz时钟信号
-  // .CLKOS2 (clk_2p5m               ), // 未使用的2.5MHz时钟信号
-  .LOCK     (pll_lock               )  // 输出PLL锁定信号
-);
-
-//-------------------------------------------------------------------------------------------------
-// 电源复位模块（Power-On Reset）
-// 功能：
-// 1. 生成系统的电源复位信号（pon_reset_n），基于电源良好信号（pgd_p3v3_stby）和PLL锁定信号（pll_lock）。
-// 2. 提供去抖动后的复位信号（pon_reset_db_n）。
-// 3. 生成辅助系统电源良好信号（pgd_aux_system）及其SASD版本（pgd_aux_system_sasd）。
-//-------------------------------------------------------------------------------------------------
-pon_reset pon_reset_inst(
-  .clk                  (clk_50m                ), // 输入时钟信号，频率为50MHz
-  .pll_lock             (pll_lock               ), // 输入PLL锁定信号
-  .pgd_p3v3_stby        (i_PWRGD_P3V3_STBY      ), // 输入3.3V电源良好信号
-  .pgd_aux_gmt          (pgd_aux_bmc            ), // 输入BMC辅助电源良好信号
-  .done_booting         (1'b1                   ), // 固定高电平，表示启动完成
-  .done_booting_delayed (done_booting_delayed   ), // 延迟的启动完成信号
-  .pon_reset_n          (pon_reset_n            ), // 输出电源复位信号
-  .pon_reset_db_n       (pon_reset_db_n         ), // 输出去抖动后的电源复位信号
-  .pgd_aux_system       (pgd_aux_system         ), // 输出辅助系统电源良好信号
-  .pgd_aux_system_sasd  (pgd_aux_system_sasd    ), // 输出SASD版本的辅助系统电源良好信号
-  .cpld_ready           (                        )  // 未使用的CPLD准备信号
-);
-
-// ------------------------------------------------------------------------------------------------------------
-// 时钟生成模块，能够基于输入时钟生成多种定时信号和慢速时钟信号
-//--------------------------------------------------------------------------------------------------------------
-timer_gen timer_gen_inst(
-  .clk               (clk_50m          ), // 输入时钟信号，频率为 50 MHz
-  .reset             (~pon_reset_n    ), // 异步复位信号，低电平有效
-  .t40ns             (t40ns_tick      ), // 40 纳秒脉冲
-  .t80ns             (),                 // 80 纳秒脉冲（未使用）
-  .t160ns            (),                 // 160 纳秒脉冲（未使用）
-  .t1us              (t1us_tick       ), // 1 微秒脉冲
-  .t2us              (t2us_tick       ), // 2 微秒脉冲
-  .t16us             (t16us_tick      ), // 16 微秒脉冲
-  .t32us             (t32us_tick      ), // 32 微秒脉冲
-  .t128us            (t128us_tick     ), // 128 微秒脉冲
-  .t512us            (t512us_tick     ), // 512 微秒脉冲
-  .t1ms              (t1ms_tick       ), // 1 毫秒脉冲
-  .t2ms              (t2ms_tick       ), // 2 毫秒脉冲
-  .t16ms             (),                 // 16 毫秒脉冲（未使用）
-  .t32ms             (t32ms_tick      ), // 32 毫秒脉冲
-  .t64ms             (t64ms_tick      ), // 64 毫秒脉冲
-  .t128ms            (t128ms_tick     ), // 128 毫秒脉冲
-  .t256ms            (t256ms_tick     ), // 256 毫秒脉冲
-  .t512ms            (t512ms_tick     ), // 512 毫秒脉冲
-  .t1s               (t1s_tick        ), // 1 秒脉冲
-  .clk_1hz           (t1hz_clk        ), // 1 Hz 时钟信号
-  .clk_2p5hz         (t2p5hz_clk      ), // 2.5 Hz 时钟信号
-  .clk_4hz           (t4hz_clk        ), // 4 Hz 时钟信号
-  .clk_16khz         (t16khz_clk      ), // 16 kHz 时钟信号
-  .clk_6m25          (t6m25_clk       ), // 6.25 MHz 时钟信号
-  .clk_16m6          (t16m6_clk       )  // 16.6 MHz 时钟信号
-);
-
-// ------------------------------------------------------------------------------------------------------------
-// 生成多个同步时钟使能信号（Clock Enables, CEs) 10uS, 50uS, 500uS, 1mS, 20mS and 250mS
-//--------------------------------------------------------------------------------------------------------------
-ClkDivTree mClkDivTree (
-    .iClk           ( clk_50m            ), // 输入时钟信号，频率为50 MHz
-    .iRst           ( ~pon_reset_n       ), // 异步复位信号，低电平有效
-    .o1uSCE         ( w1uSCE             ), // 输出1微秒时钟使能信号
-    .o10uSCE        ( w10uSCE            ), // 输出10微秒时钟使能信号
-    .o50uSCE        ( w50uSCE            ), // 输出50微秒时钟使能信号
-    .o500uSCE       ( w500uSCE           ), // 输出500微秒时钟使能信号
-    .o1mSCE         ( w1mSCE             ), // 输出1毫秒时钟使能信号
-    .o250mSCE       ( w250mSCE           ), // 输出250毫秒时钟使能信号
-    .o10mSCE        ( w10mSCE            ), // 输出10毫秒时钟使能信号
-    .o20mSCE        ( w20mSCE            ), // 输出20毫秒时钟使能信号
-    .o1SCE          ( w1SCE              )  // 输出1秒时钟使能信号
-);
-
-// -------------------------------------------------------------------------------------------------------------
-// 内部振荡器（未使用）
-//--------------------------------------------------------------------------------------------------------------
-wire wb_clk;
-defparam inst_osch.NOM_FREQ = "4.29";
-OSCH inst_osch(
-    .STDBY      (1'b0       ), // 输入，控制振荡器是否进入待机模式
-    .OSC        (wb_clk     ), // 输出，振荡器生成的时钟信号
-    .SEDSTDBY   (           )  // 输出，振荡器进入待机模式的状态信号（未使用）
-);
-
-// -------------------------------------------------------------------------------------------------------------
-// I2C_UPDATE模块实例化
-// 功能：
-// 1. 通过I2C接口与外部设备（如Flash存储器）通信。
-// 2. 支持Wishbone总线协议，用于主控与I2C外设之间的数据传输和配置更新。
-// -------------------------------------------------------------------------------------------------------------
-I2C_UPDATE inst_i2c_update_flash_config(
-    .wb_clk_i    (wb_clk                ), // Wishbone 时钟信号，输入
-    .wb_rst_i    (                      ), // Wishbone 复位信号，未使用
-    .wb_cyc_i    (                      ), // Wishbone 总线周期信号，未使用
-    .wb_stb_i    (                      ), // Wishbone 选通信号，未使用
-    .wb_we_i     (                      ), // Wishbone 写使能信号，未使用
-    .wb_adr_i    (                      ), // Wishbone 地址信号，未使用
-    .wb_dat_i    (                      ), // Wishbone 数据输入信号，未使用
-    .wb_dat_o    (                      ), // Wishbone 数据输出信号，未使用
-    .wb_ack_o    (                      ), // Wishbone 应答信号，未使用
-    .i2c1_irqo   (                      ), // I2C 中断信号，未使用
-    .wbc_ufm_irq (                      ), // 用户闪存中断信号，未使用
-    .i2c1_scl    (io_I2C7_UPDATE_SCL    ), // I2C 时钟信号，与外部设备连接
-    .i2c1_sda    (io_I2C7_UPDATE_SDA    )  // I2C 数据信号，与外部设备连接
-);
-										   
+wire                    w_bmc_jtag_mux_s                    ;	// BMC JTAG 多路复用选择信号，控制 BMC JTAG 多路复用器的通道
+								   
 // -------------------------------------------------------------------------------------------------------------
 // PGM_DEBOUNCE模块实例化
 // 功能：
@@ -1135,14 +1077,16 @@ PGM_DEBOUNCE #(
     .rst(~pon_reset_n),                 // 复位信号，低电平有效
     .timer_tick(t32ms_tick),            // 定时信号，32ms周期
     .din({
-          i_PAL_PWR_BTN_N,              // 输入信号1：电源按钮信号
-          i_PAL_BUTTOPN_RST_N,          // 输入信号2：外部复位按钮信号
-          i_PAL_BMCUID_BUTTON           // 输入信号3：BMC UID按钮信号
+          i_FM_RSTBTN_OUT_N_R
+          //i_PAL_PWR_BTN_N,              // 输入信号1：电源按钮信号
+          //i_PAL_BUTTOPN_RST_N,          // 输入信号2：外部复位按钮信号
+          //i_PAL_BMCUID_BUTTON           // 输入信号3：BMC UID按钮信号
         }),
     .dout({
-          db_i_pwr_btn_cpld_n_r,        // 输出信号1：去抖动后的电源按钮信号
-          db_i_pal_ext_rst_n,           // 输出信号2：去抖动后的外部复位按钮信号
-          db_i_pal_bmcuid_button        // 输出信号3：去抖动后的BMC UID按钮信号
+          db_i_fm_rstbtn_out_n_r
+          //db_i_pwr_btn_cpld_n_r,        // 输出信号1：去抖动后的电源按钮信号
+          //db_i_pal_ext_rst_n,           // 输出信号2：去抖动后的外部复位按钮信号
+          //db_i_pal_bmcuid_button        // 输出信号3：去抖动后的BMC UID按钮信号
         }) 
 );
 
@@ -1260,7 +1204,7 @@ SYNC_DATA_N #(.SIGCNT(18)) sync_cpu_data_low (
 	  		      })      
 );
 
-//cpu thermtrip Signal DEBOUNCE	CPU 热跳闸信号消抖模块 对 CPU 热跳闸相关信号进行消抖处理，确保热跳闸信号稳定，避免因抖动导致误触发热保护													
+// cpu thermtrip Signal DEBOUNCE	CPU 热跳闸信号消抖模块 对 CPU 热跳闸相关信号进行消抖处理，确保热跳闸信号稳定，避免因抖动导致误触发热保护													
 PGM_DEBOUNCE #(
     .SIGCNT(4), 
     .NBITS(2'b10), 
@@ -1284,6 +1228,7 @@ PGM_DEBOUNCE #(
 );
 
 // PGD电源良好信号进行去抖动处理，确保信号稳定
+/*
 PGM_DEBOUNCE_N #(
     .SIGCNT(21), 
     .NBITS(2'b11), 
@@ -1310,9 +1255,9 @@ PGM_DEBOUNCE_N #(
         i_PGD_P1_VDD_SOC_0,          // 输入信号15：P1 SOC电压电源良好信号
         i_PGD_P0_VDDIO,              // 输入信号16：P0 IO电压电源良好信号
         i_PGD_P1_VDDIO,              // 输入信号17：P1 IO电压电源良好信号
-        i_PGD_P3V3_STBY_B,           // 输入信号18：备用3.3V待机电源良好信号
-        i_PGD_P1V2_STBY,             // 输入信号19：1.2V待机电源良好信号
-        i_PGD_P5V,                   // 输入信号20：5V电源良好信号
+        // i_PGD_P3V3_STBY_B,           // 输入信号18：备用3.3V待机电源良好信号
+        // i_PGD_P1V2_STBY,             // 输入信号19：1.2V待机电源良好信号
+        // i_PGD_P5V,                   // 输入信号20：5V电源良好信号
         i_PG_P1V0_STBY_M2_R          // 输入信号21：1.0V待机电源良好信号
        }),             
   .dout({
@@ -1333,12 +1278,13 @@ PGM_DEBOUNCE_N #(
         db_i_pgd_p1_vdd_soc_0,       // 输出信号15：去抖动后的P1 SOC电压电源良好信号
         db_i_pgd_p0_vddio,           // 输出信号16：去抖动后的P0 IO电压电源良好信号
         db_i_pgd_p1_vddio,           // 输出信号17：去抖动后的P1 IO电压电源良好信号
-        db_i_pgd_p3v3_stby_b,        // 输出信号18：去抖动后的备用3.3V待机电源良好信号
-        db_i_pgd_p1v2_stby,          // 输出信号19：去抖动后的1.2V待机电源良好信号
-        db_i_pgd_p5v,                // 输出信号20：去抖动后的5V电源良好信号
+        // db_i_pgd_p3v3_stby_b,        // 输出信号18：去抖动后的备用3.3V待机电源良好信号
+        // db_i_pgd_p1v2_stby,          // 输出信号19：去抖动后的1.2V待机电源良好信号
+        // db_i_pgd_p5v,                // 输出信号20：去抖动后的5V电源良好信号
         db_i_pg_p1v0_stby_m2_r       // 输出信号21：去抖动后的1.0V待机电源良好信号
       }) 
 );
+*/
 
 // 设备存在信号和 SPD 主控信号信号去抖
 PGM_DEBOUNCE #(
@@ -1352,19 +1298,22 @@ PGM_DEBOUNCE #(
     .din({  
         (i_P0_PRSNT_N & w_cpu_module_p0_prsnt_n),  // 输入信号1：P0设备存在信号
         (i_P1_PRSNT_N & w_cpu_module_p1_prsnt_n),  // 输入信号2：P1设备存在信号
-        i_P0_SPD_HOST_CTRL_N                     // 输入信号3：P0 SPD主控信号
+        i_P0_SPD_HOST_CTRL_N                       // 输入信号3：P0 SPD主控信号
         }),  
     .dout({	  
         db_cpu_prsnt_n_db[0],                       // 输出信号1：去抖动后的P0设备存在信号
         db_cpu_prsnt_n_db[1],                       // 输出信号2：去抖动后的P1设备存在信号
-        db_i_p0_spd_host_ctrl_n                  // 输出信号3：去抖动后的P0 SPD主控信号
+        db_i_p0_spd_host_ctrl_n                     // 输出信号3：去抖动后的P0 SPD主控信号
         })
 );
 
 // 最终选择逻辑：若启用覆盖，则取 r_dip_cpu_prsnt_n；否则使用去抖结果 db_cpu_prsnt_n_db
 assign db_cpu_prsnt_n = r_dip_cpu_prsnt_override ? r_dip_cpu_prsnt_n : db_cpu_prsnt_n_db;
 
-// 12V电源和12V待机电源的电压下跌信号去抖
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+// for P12V_DROOP DEBOUNCE  2 Signal		F12V 掉电消抖模块 对 F12V 掉电相关信号进行消抖处理，确保 F12V 掉电状态的稳定识别
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+/*
 PGM_DEBOUNCE #(.SIGCNT(2), .NBITS(2'b10), .ENABLE(1'b1)) db_p12v_droop (
   .clk(clk_50m),                      // 时钟信号，频率为50MHz
   .rst(~pon_reset_n),                 // 复位信号，低电平有效
@@ -1378,6 +1327,10 @@ PGM_DEBOUNCE #(.SIGCNT(2), .NBITS(2'b10), .ENABLE(1'b1)) db_p12v_droop (
              db_i_pgd_p12v_stby_droop // 输出信号2：去抖动后的12V待机电源电压下跌信号
   })
 );
+
+wire    w_pgd_p12v_droop_neg      ;	//F12V 掉电信号的下降沿检测输出（低电平有效）。（i_PGD_P12V_DROOP）出现下降沿时，该信号会被置为有效（低电平）
+reg     r_p12v_discharge_r        ;	//用于锁存 F12V 掉电触发的放电控制状态。当检测到 F12V 掉电下降沿后，该寄存器会被置为高电平
+wire    w_p12v_discharge_r        ;	//放电控制信号（由寄存器 r_p12v_discharge_r 赋值得到），对外输出放电控制命令。当该信号为高电平时，指示系统执行与 F12V 掉电相关的放电操作
 
 // -------------------------------------------------------------------------------------------------------------
 // Edge_Detect边沿检测模块实例化
@@ -1400,6 +1353,87 @@ always@(posedge clk_50m or negedge pon_reset_n) begin
 	end
 end
 assign  w_p12v_discharge_r = r_p12v_discharge_r;
+*/
+
+//SN74LV165     PVT_DATA
+//U152_DATA
+wire    w_P0_MCIOP0C_CB_ID1_R;	// P0 MCIOP0C CB 的 ID0 信号（同步后），用于标识 P0 MCIOP0C CB 的 ID0 状态
+wire    w_P0_MCIOP0C_CB_ID0_R;	// P0 MCIOP0C CB 的 ID1 信号（同步后），用于标识 P0 MCIOP0C CB 的 ID1 状态
+wire    w_P0_MCIOP0A_CB_ID1_R;
+wire    w_P0_MCIOP0A_CB_ID0_R;
+wire    w_P0_MCIOP1C_CB_ID1_R;
+wire    w_P0_MCIOP1C_CB_ID0_R;
+wire    w_P0_MCIOP1A_CB_ID1_R;
+wire    w_P0_MCIOP1A_CB_ID0_R;
+//U153_DATA
+wire    w_P0_MCIOP2A_CB_ID0_R;
+wire    w_P0_MCIOP2A_CB_ID1_R;
+wire    w_P0_MCIOP2C_CB_ID0_R;
+wire    w_P0_MCIOP2C_CB_ID1_R;
+wire    w_P0_MCIOP3C_CB_ID1_R;
+wire    w_P0_MCIOP3C_CB_ID0_R;
+wire    w_P0_MCIOP3A_CB_ID1_R;
+wire    w_P0_MCIOP3A_CB_ID0_R;
+//U154_DATA
+wire    w_P1_MCIOG1A_CB_ID0_R;
+wire    w_P1_MCIOG1A_CB_ID1_R;
+wire    w_P1_MCIOG1C_CB_ID0_R;
+wire    w_P1_MCIOG1C_CB_ID1_R;
+wire    w_P0_MCIOG3A_CB_ID0_R;
+wire    w_P0_MCIOG3A_CB_ID1_R;
+wire    w_P0_MCIOG3C_CB_ID0_R;
+wire    w_P0_MCIOG3C_CB_ID1_R;
+//U155_DATA
+wire    w_SW_1;	 // 开关 1 信号，用于获取开关 1 的状态（如开启/关闭）
+wire    w_SW_2;
+wire    w_SW_3;
+wire    w_SW_4;
+wire    w_SW_5;
+wire    w_SW_6;
+wire    w_SW_7;
+wire    w_SW_8;
+//U156_DATA
+wire    w_PAL_BP4_AUX_PG            ;	// 平台级 BP4 辅助电源好信号，指示平台级 BP4 辅助电源轨稳定
+wire    w_PAL_STBY_FAN_SHTDN        ;	// 平台级待机风扇关断信号，控制平台级待机风扇的关断
+wire    w_PG_P12V_SLOT_9            ; // PG P12V 槽位 9 信号，与 P12V 槽位 9 的状态或监测相关
+wire    w_PG_P12V_SLOT_7            ;
+wire    w_PAL_BP6_PRSNT_N           ;	// 平台级 BP6 存在信号（低电平有效），检测平台级 BP6 是否存在
+wire    w_P1_MCIOP4A_CB_ID1_R       ;	
+wire    w_PG_P12V_SLOT_3            ;
+wire    w_PAL_OCP1_HP_BUTTON_N      ;	// 平台级 OCP1 热插拔按钮信号（低电平有效），用于平台级 OCP1 热插拔操作的按钮输
+//U157_DATA
+wire    w_PG_P12V_SLOT_6            ;
+wire    w_FAN_PRSNT_R               ;	// 风扇存在信号（同步后），检测风扇是否存在
+wire    w_PAL_SLIMSAS1_PRSNT_N      ;	// 平台级 SLIMSAS1 存在信号（低电平有效），检测平台级 SLIMSAS1 是否存在
+wire    w_NODE1_TYPE                ;	// 节点 1 类型信号，标识节点 1 的类型（如型号、配置等
+wire    w_PAL_MEN_CPU_SHTDN         ;	// 平台级 MEN CPU 关断信号，控制平台级 MEN CPU 的关断
+wire    w_PAL_S5_CPU_SHTDN          ;	// 平台级 S5 CPU 关断信号，控制平台级 S5 CPU 的关断
+wire    w_U157_NC_G                 ;	// U157 引脚 NC_G（未连接）信号，标识 U157 引脚 NC_G 的状态（实际未连接，用于占位或兼容）
+wire    w_U157_NC_H                 ;	// U157 引脚 NC_H（未连接）信号，标识 U157 引脚 NC_H 的状态（实际未连接，用于占位或兼容）
+//U158_DATA
+wire    w_P1_MCIOP3C_CB_ID1_R       ;
+wire    w_P1_MCIOP3C_CB_ID0_R       ;
+wire    w_P1_MCIOP3A_CB_ID1_R       ;
+wire    w_P1_MCIOP3A_CB_ID0_R       ;
+wire    w_OCP1_CABLE_PRSNT_R        ;	// OCP1 线缆存在信号（同步后），检测 OCP1 线缆是否存在
+wire    w_PAL_OCP1_PRSNT_B1_N       ;	// 平台级 OCP1 B1 位置存在信号（低电平有效），检测平台级 OCP1 在 B1 位置是否存在
+wire    w_PAL_OCP1_PRSNT_B2_N       ;
+wire    w_PAL_OCP1_PRSNT_B0_N       ;
+//U159_DATA
+wire    w_U159_NC_A                 ;			// U159 引脚 NC_A（未连接）信号，标识 U159 引脚 NC_A 的状态（实际未连接）
+wire    w_U159_NC_B                 ;
+wire    w_U159_NC_C                 ;
+wire    w_U159_NC_D                 ;
+wire    w_PAL_M2_0_PRSNT_N          ;		// 平台级 M2_0 存在信号（低电平有效），检测平台级 M2_0 是否存在
+wire    w_NCSI_PRSNT_N              ;			// NCSI 存在信号（低电平有效），检测 NCSI 是否存在
+wire    w_BMC_CARD_PRSNT_N          ;		// BMC 卡存在信号（低电平有效），检测 BMC 卡是否存在
+wire    w_PAL_M2_1_PRSNT_N          ;		// 平台级 M2_1 存在信号（低电平有效），检测平台级 M2_1 是否存在
+
+wire [6:0]pvti_ss_count             ;		// PVTI SS 计数（7 位），用于 PVTI SS 相关的计数
+
+
+//-------------------------------------------------------------------------------------------------//
+wire    w_ocp_prsnt_n;
 
 
 //-------------------------------------------------------------------------------------------------
@@ -1445,7 +1479,6 @@ pvt_gpi #(
                               })
 );
 
-
 // S CPLD ---> M CPLD
 // 说明：s2p_master 为“串行到并行（Serial-to-Parallel）”主设备，
 // master 产生串行时钟(sclk)和加载信号(sld_n)，从 S CPLD 的 MISO 读取 NBIT=200 位串行数据，
@@ -1472,23 +1505,25 @@ p2s_slave #(.NBIT(200)) inst_mcpld_to_scpld_p2s(//96
     .sld_n        (w_cpld_sgpio0_ld_n_r      ), // 串行装载/帧起止（由 master 驱动，为输入）
     .sclk         (w_cpld_sgpio0_clk_r       )  // 串行时钟（由 master 提供，为输入）
 );
+
+
 //-------------------------------------------------------------------------------------------------
-//M_CPLD TO S_CPLD SGPIO    START
+// M_CPLD TO S_CPLD SGPIO    START
 //-------------------------------------------------------------------------------------------------
-//DATA TO S_CPLD (U247)
+// DATA TO S_CPLD (U247)
 
 
 //-------------------------------------------------------------------------------------------------
 // CPLD_U247 SGPIO data
 // ------------------------------------------------------------------------------------------------
-wire [199:0] mcpld_to_scpld_p2s_data   ; //2024-8-2 chg 159 to 199
-wire [199:0] scpld_to_mcpld_s2p_data   ;
+wire [199:0]      mcpld_to_scpld_p2s_data   ; //2024-8-2 chg 159 to 199
+wire [199:0]      scpld_to_mcpld_s2p_data   ;
 
-reg [191:0]	scpld_to_mcpld_data_filter;
-reg 	      scpld_sgpio_fail          ;
+reg  [191:0]	    scpld_to_mcpld_data_filter; // 定义 scpld_to_mcpld_data_filter 为 191 位宽的寄存器，用于对 scpld_to_mcpld 数据进行滤波等处理
+reg 	            scpld_sgpio_fail          ; // 定义 scpld_sgpio_fail 寄存器，用于标识 SGPIO 故障
 
 
-//scpld ---> mcpld
+//scpld ---> mcpld scpld 到 mcpld 的信号赋值，从 scpld_to_mcpld_data_filter 中提取不同位，用于各类状态或控制
 assign  w_bf_type[1]                               = scpld_to_mcpld_data_filter[172]            ;
 assign  w_bf_type[0]                               = scpld_to_mcpld_data_filter[171]            ;
 assign  w_BREAK_DET_DO_N                       = scpld_to_mcpld_data_filter[170]            ;
@@ -4095,7 +4130,7 @@ bmc_cpld_i2c_ram #(
     .i_rst_i2c_n                    (1'b1                             ), // I2C 复位信号，始终为高电平
 
     // I2C 接口信号
-    .i_scl                          (i_I2C7_PAL_SCL                   ), // I2C 时钟信号
+    .i_scl                          (i_I2C7_PAL_SCL                   ), // I2C 时钟信号 100Khz
     .io_sda                         (io_I2C7_PAL_SDA                  ), // I2C 数据信号（双向）
 
     // 系统配置信号

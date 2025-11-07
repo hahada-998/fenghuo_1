@@ -489,30 +489,30 @@ wire    w_grp_d_p1_vddcore0_en			  ;	// D 组 P1 核心电压 0 使能信号，�
 wire    w_grp_d_p0_vddcore1_en			  ;
 wire    w_grp_d_p1_vddcore1_en			  ;
 wire    [5:0]   w_pwrseq_sm_fault_det	;	// 电源序列状态机故障检测（6位），检测电源序列状态机相关故障
-wire    w_p5v_stby_fault_det			;	// 5V 待机故障检测，检测 5V 待机电源故障
-wire    w_grp_c_p0_fault_det			;	 // C 组 P0 故障检测，检测 C 组 P0 电源故障
+wire    w_p5v_stby_fault_det			    ;	// 5V 待机故障检测，检测 5V 待机电源故障
+wire    w_grp_c_p0_fault_det			    ;	// C 组 P0 故障检测，检测 C 组 P0 电源故障
 wire    w_grp_d_vddio_p0_fault_det		;	// D 组 VDDIO P0 故障检测，检测 D 组 VDDIO P0 电源故障
-wire    w_grp_d_soc_p0_fault_det		;	// D 组 SOC P0 故障检测，检测 D 组 SOC P0 电源故障
+wire    w_grp_d_soc_p0_fault_det		  ;	// D 组 SOC P0 故障检测，检测 D 组 SOC P0 电源故障
 wire    w_grp_d_p0_vddcore0_fault_det	;	// D 组 P0 核心电压 0 故障检测，检测 D 组 P0 核心电压 0 电源故障
 wire    w_grp_d_p0_vddcore1_fault_det	;	// D 组 P0 核心电压 1 故障检测，检测 D 组 P0 核心电压 1 电源故障
-wire    w_grp_c_p1_fault_det			;	// C 组 P1 故障检测，检测 C 组 P1 电源故障
+wire    w_grp_c_p1_fault_det			    ;	// C 组 P1 故障检测，检测 C 组 P1 电源故障
 wire    w_grp_d_vddio_p1_fault_det		;	// D 组 VDDIO P1 故障检测，检测 D 组 VDDIO P1 电源故障
-wire    w_grp_d_soc_p1_fault_det		;	// D 组 SOC P1 故障检测，检测 D 组 SOC P1 电源故障
+wire    w_grp_d_soc_p1_fault_det		  ;	// D 组 SOC P1 故障检测，检测 D 组 SOC P1 电源故障
 wire    w_grp_d_p1_vddcore0_fault_det	;	// D 组 P1 核心电压 0 故障检测，检测 D 组 P1 核心电压 0 电源故障
 wire    w_grp_d_p1_vddcore1_fault_det	;
 wire    w_grp_b_p0_33_s5_fault_det		;	// B 组 P0 3.3V S5 故障检测，检测 B 组 P0 3.3V S5 电源故障 
 wire    w_grp_b_p1_33_s5_fault_det		;
 wire    w_grp_b_p0_18_s5_fault_det		;
 wire    w_grp_b_p1_18_s5_fault_det		;
-wire    w_p3v3_stby_fault_det			;	// 3.3V 待机故障检测，检测 3.3V 待机电源故障
-wire    w_p1v0_stby_m2_fault_det		;	// 1v 待机 M2 故障检测，检测 1v 待机 M2 电源故障
-wire    w_p5v_fault_det					;	// 5V 故障检测，检测 5V 电源故障
-wire    [1:0]   w_cpu_pwrok				;	// CPU 电源好信号（2位），指示 CPU 电源轨稳定
-wire    w_cpu_pwr_good					;	// CPU0 电源好信号，指示 CPU0 电源轨稳定
-wire    w_cpu1_pwr_good					;	// CPU1 电源好信号，指示 CPU1 电源轨稳定
-wire    [1:0]   o_cpu_pwrok				;	// CPU 电源好输出（2位），对外输出 CPU 电源好状态
-wire    w_rsmrst_n						;	// CPU 电源好输出（2位），对外输出 CPU 电源好状态
-wire    w_pal_rst_rtc  				;	// 平台复位 RTC（低电平有效，同步后），用于复位 RTC 模块
+wire    w_p3v3_stby_fault_det			    ;	// 3.3V 待机故障检测，检测 3.3V 待机电源故障
+wire    w_p1v0_stby_m2_fault_det		  ;	// 1v 待机 M2 故障检测，检测 1v 待机 M2 电源故障
+wire    w_p5v_fault_det					      ;	// 5V 故障检测，检测 5V 电源故障
+wire    [1:0]   w_cpu_pwrok				    ;	// CPU 电源好信号（2位），指示 CPU 电源轨稳定
+wire    w_cpu_pwr_good					      ;	// CPU0 电源好信号，指示 CPU0 电源轨稳定
+wire    w_cpu1_pwr_good					      ;	// CPU1 电源好信号，指示 CPU1 电源轨稳定
+wire    [1:0]   o_cpu_pwrok				    ;	// CPU 电源好输出（2位），对外输出 CPU 电源好状态
+wire    w_rsmrst_n						        ;	// CPU 电源好输出（2位），对外输出 CPU 电源好状态
+wire    w_pal_rst_rtc  				        ;	// 平台复位 RTC（低电平有效，同步后），用于复位 RTC 模块
  
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for bmc clear 
@@ -520,14 +520,14 @@ wire    w_pal_rst_rtc  				;	// 平台复位 RTC（低电平有效，同步后�
 //存储（掉电、超时错误码）和 BMC 待机故障检测，是系统管理与故障诊断的重要信号。
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 wire    w_clr_cmos_done_rst		;	// CMOS 清除完成复位信号，CMOS 清除完成后的复位控制
-wire    w_clr_cmos_flg			;	// CMOS 清除标志，标记 CMOS 清除操作的状态
-wire    w_clr_cmos_done		;		// CMOS 清除完成信号，指示 CMOS 清除操作完成
-wire    w_bmc_nmi_ctl			;	// BMC NMI 控制信号，BMC 不可屏蔽中断控制
+wire    w_clr_cmos_flg			;	  // CMOS 清除标志，标记 CMOS 清除操作的状态
+wire    w_clr_cmos_done		;		  // CMOS 清除完成信号，指示 CMOS 清除操作完成
+wire    w_bmc_nmi_ctl			;	    // BMC NMI 控制信号，BMC 不可屏蔽中断控制
 wire    w_bmc_nmi_ctl_done		;	// BMC NMI 控制完成信号，指示 BMC NMI 控制操作完成
-wire    w_bmc_nmi_ctl_rst		;	// BMC NMI 控制复位信号，复位 BMC NMI 控制状态
+wire    w_bmc_nmi_ctl_rst		;  	// BMC NMI 控制复位信号，复位 BMC NMI 控制状态
 wire    w_p0_nmi_sync_flood_n	;	// P0 NMI 同步泛洪（低电平有效），P0 NMI 同步相关信号
 wire    w_p1_nmi_sync_flood_n	;	// P1 NMI 同步泛洪（低电平有效），P1 NMI 同步相关信号
-wire    w_rtc_senor_sw			;	// RTC 传感器切换信号，控制 RTC 传感器的切换
+wire    w_rtc_senor_sw			;	  // RTC 传感器切换信号，控制 RTC 传感器的切换
 // wire    w_ctl_scaled_bat_test_en_r;	// 控制缩放电池测试使能（同步后），使能缩放后的电池测试
 wire    w_sys_debug_mode		;	// 系统调试模式信号，使能系统调试模式
 
@@ -536,7 +536,7 @@ wire    w_sys_debug_mode		;	// 系统调试模式信号，使能系统调试模�
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 wire    [7:0]   r_pwrdrop_code			;	// 掉电错误码（8位，寄存器型），存储掉电相关的错误码
 wire    [7:0]   r_timeout_code			;	// 超时错误码（8位，寄存器型），存储超时相关的错误码
-wire    w_bmc_stby_failure_detected		;	// BMC 待机故障检测到，检测到 BMC 待机阶段的故障
+wire    w_bmc_stby_failure_detected	;	// BMC 待机故障检测到，检测到 BMC 待机阶段的故障
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for PCIe Rst
@@ -547,21 +547,21 @@ wire    w_pcie_genz_rst_n_r			;	//PCIe Gen-Z 复位（低电平有效，同步�
 //for Moc Rst
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 wire    w_sm_steady_pwrok_state		;	// 稳定电源好状态机状态，状态机中稳定电源好的状态
-wire    w_p0_prochot_n				;	// P0 热节流（低电平有效），P0 温度过高时的节流控
-wire    w_p1_prochot_n				;	// P1 热节流（低电平有效），P1 温度过高时的节流控
+wire    w_p0_prochot_n				    ;	// P0 热节流（低电平有效），P0 温度过高时的节流控
+wire    w_p1_prochot_n				    ;	// P1 热节流（低电平有效），P1 温度过高时的节流控
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for sgpio
 //涵盖 PCIe、I2C/I3C 等接口的复位与使能控制，以及 EEPROM 写保护、热节流、USB/TPM 复位等功能
 //是各类外设接口正常工作与控制的信号保障。
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-wire    w_uid_btn_n				;		// UID 按钮（低电平有效），用户标识按钮输入
-wire    w_eeprom_wp					; //disable write-protect 1:enable write-protect 0:disable write-protect  EEPROM 写保护，控制 EEPROM 是否可写
-wire    w_ocp_aux_en					;	// 辅助过流保护使能，使能辅助过流保护功能
-wire    w_ocp_main_en				;	// 主过流保护使能，使能主过流保护功能
-wire    w_i3c_mux_en					; 	// I3C 多路复用使能，使能 I3C 多路复用器
-wire    w_i3c_remote_cs					; 	// I3C 远程片选，I3C 接口的远程片选信号
-wire    w_bmc_i2c5_9548_rst_n		;	// BMC I2C9（9548 芯片）复位（低电平有效），复位 BMC 的 I2C9 接口
+wire    w_uid_btn_n				        ;	// UID 按钮（低电平有效），用户标识按钮输入
+wire    w_eeprom_wp					      ; // disable write-protect 1:enable write-protect 0:disable write-protect  EEPROM 写保护，控制 EEPROM 是否可写
+wire    w_ocp_aux_en					    ;	// 辅助过流保护使能，使能辅助过流保护功能
+wire    w_ocp_main_en				      ;	// 主过流保护使能，使能主过流保护功能
+wire    w_i3c_mux_en					    ; // I3C 多路复用使能，使能 I3C 多路复用器
+wire    w_i3c_remote_cs					  ; // I3C 远程片选，I3C 接口的远程片选信号
+wire    w_bmc_i2c5_9548_rst_n		  ;	// BMC I2C9（9548 芯片）复位（低电平有效），复位 BMC 的 I2C9 接口
 
 wire    w_bmc_i2c4_9548_1_rst_n		;	// BMC I2C4 通道1复位（低电平有效）
 wire    w_bmc_i2c4_9548_2_rst_n		;
@@ -575,30 +575,30 @@ wire    w_p0_vpp_9545_4_rst_n		;
 wire    w_p0_vpp_9545_5_rst_n		;
 wire    w_p0_vpp_9545_6_rst_n		;
 
-wire    w_p12v_stby_fault_det		;	 // P12V 待机故障检测，检测 P12V 待机电源故障
-wire    w_usb_ponrst_r_n				;// USB 上电复位（低电平有效，同步后），USB 接口的上电复位
-wire    w_tpcm_reset_n_reg			;	// TPM 复位（低电平有效，寄存器同步后），TPM 模块的复位
+wire    w_p12v_stby_fault_det		;	   // P12V 待机故障检测，检测 P12V 待机电源故障
+wire    w_usb_ponrst_r_n				;    // USB 上电复位（低电平有效，同步后），USB 接口的上电复位
+wire    w_tpcm_reset_n_reg			;	   // TPM 复位（低电平有效，寄存器同步后），TPM 模块的复位
 wire    w_jtag_cpld_bmc_ntrst_reg	;	 // JTAG CPLD BMC 测试复位（寄存器同步后），JTAG 接口相关的测试复位
-wire    w_dimm_alarm_flag			;	 // DIMM 告警标志，DIMM（内存）的告警指示
+wire    w_dimm_alarm_flag			;	     // DIMM 告警标志，DIMM（内存）的告警指示
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 //for hitless  热插拔与板卡识别信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-reg      [5:0]  r_power_seq_sm_fb			;	// 电源序列状态机反馈（6位，寄存器型），电源序列状态机的反馈信号
-wire    w_mux_sel						;		// 多路复用选择，选择多路复用器的通道
-wire    w_p0_sys_reset_r_n				;		// P0 系统复位（低电平有效，同步后），P0 系统的复位
-wire    w_p0_kbrst_n						; 	// P0 键盘复位（低电平有效），P0 键盘接口的复位
-wire    w_p1_kbrst_n						; 	// P1 键盘复位（低电平有效），P1 键盘接口的复位
-wire    w_bmc_jtag_trst_r_n			;			// BMC JTAG 测试复位（低电平有效，同步后），BMC JTAG 接口的测试复位
-// wire    w_pal_i3c_mux_en_r_n			;		// 平台级 I3C 多路复用使能（低电平有效，同步后），平台级 I3C 多路复用使能
-wire    w_p0_pcie_wake_n_r			;			// P0 PCIe 唤醒（低电平有效，同步后），P0 PCIe 接口的唤醒
-wire    w_p1_pcie_wake_n_r			;			// P1 PCIe 唤醒（低电平有效，同步后），P1 PCIe 接口的唤醒
-wire    w_pal_p0_vdd_core_0_soc_rst_l_n	;		// 平台级 P0 核心电压 0 SOC 复位（低电平有效，同步后）
-wire    w_pal_p1_vdd_core_0_soc_rst_l_n	;		// 平台级 P1 核心电压 0 SOC 复位（低电平有效，同步后）
+reg      [5:0]  r_power_seq_sm_fb			      ;	// 电源序列状态机反馈（6位，寄存器型），电源序列状态机的反馈信号
+wire    w_mux_sel						                ;		// 多路复用选择，选择多路复用器的通道
+wire    w_p0_sys_reset_r_n				          ;		// P0 系统复位（低电平有效，同步后），P0 系统的复位
+wire    w_p0_kbrst_n						            ; 	// P0 键盘复位（低电平有效），P0 键盘接口的复位
+wire    w_p1_kbrst_n						            ; 	// P1 键盘复位（低电平有效），P1 键盘接口的复位
+wire    w_bmc_jtag_trst_r_n			            ;			// BMC JTAG 测试复位（低电平有效，同步后），BMC JTAG 接口的测试复位
+// wire    w_pal_i3c_mux_en_r_n			        ;		// 平台级 I3C 多路复用使能（低电平有效，同步后），平台级 I3C 多路复用使能
+wire    w_p0_pcie_wake_n_r			            ;			// P0 PCIe 唤醒（低电平有效，同步后），P0 PCIe 接口的唤醒
+wire    w_p1_pcie_wake_n_r			            ;			// P1 PCIe 唤醒（低电平有效，同步后），P1 PCIe 接口的唤醒
+wire    w_pal_p0_vdd_core_0_soc_rst_l_n	    ;		// 平台级 P0 核心电压 0 SOC 复位（低电平有效，同步后）
+wire    w_pal_p1_vdd_core_0_soc_rst_l_n	    ;		// 平台级 P1 核心电压 0 SOC 复位（低电平有效，同步后）
 wire    w_pal_p0_vdd_core_1_11_sus_rst_l_n	;	// 平台级 P0 核心电压 1/11V 待机复位（低电平有效，同步后）
-wire    w_p1_vdd_core_1_11_sus_rst_l_n;			
-wire    w_pal_p0_vddio_rst_n				;	// 平台级 P0 IO 电压复位（低电平有效），平台级 P0 IO 电压的复位
-wire    w_p1_vddio_rst_l_n;						// P1 IO 电压复位（低电平有效，同步后），P1 IO 电压的复位
+wire    w_p1_vdd_core_1_11_sus_rst_l_n      ;			
+wire    w_pal_p0_vddio_rst_n				        ;	// 平台级 P0 IO 电压复位（低电平有效），平台级 P0 IO 电压的复位
+wire    w_p1_vddio_rst_l_n;						        // P1 IO 电压复位（低电平有效，同步后），P1 IO 电压的复位
 
 wire    [7:0]   w_p0_mciop0a_slot_id;		// P0 MCIOP0A 槽位 ID（8位），标识 P0 MCIOP0A 槽位
 wire    [7:0]   w_p0_mciop0c_slot_id;		// P0 MCIOP0C 槽位 ID（8位），标识 P0 MCIOP0C 槽位
@@ -626,7 +626,7 @@ reg  db_i_fm_pwrbtn_out_n_r   ; //系统最终电源控制信号
 wire db_i_fm_rstbtn_out_n_r   ; //按钮输出复位信号
 wire w_bmc_sbtn_reset_ctl			;	// BMC 小按钮复位控制，BMC 小按钮的复位控制
 //DATA from S_CPLD (U247)
-wire    [3:0]   w_board_id;			// 板卡 ID（4位），标识板卡的型号或配置
+wire    [3:0]   w_board_id;			  // 板卡 ID（4位），标识板卡的型号或配置
 wire    [2:0]   w_pcb_version;		// PCB 版本（3位），标识 PCB 的版本
 wire    [2:0]   w_pca_version;		// PCA 版本（3位），标识 PCA 的版本
 // wire    w_P1_MCIOP0A_CB_ID0_R;		// P1 MCIOP0A CB ID0（同步后），P1 MCIOP0A CB 的 ID0 信号
@@ -655,9 +655,9 @@ wire    w_PAL_BP8_PRSNT_N;
 wire    w_uid_sw_in_n;			// UUID 开关输入信号（低电平有效），UUID 开关的输入状态
 wire    w_ps1_p12v_on_r;		// PS1 P12V 使能信号（同步后），控制 PS1 P12V 的使能
 wire    w_ps2_p12v_on_r;
-wire    w_FM_P12V_EN;			// FM F12V 使能信号，控制 FM F12V 的使能
+wire    w_FM_P12V_EN;			    // FM F12V 使能信号，控制 FM F12V 的使能
 wire    w_PWRGD_P12V_PS3_PS4;	// F12V PS3/PS4 电源好信号，指示 F12V PS3/PS4 电源轨稳定
-wire    w_PWRGD_P12V;			// F12V 电源好信号，指示 F12V 电源轨稳定
+wire    w_PWRGD_P12V;			    // F12V 电源好信号，指示 F12V 电源轨稳定
 //wire    w_PS3_PS4_ACFAIL;		// PS3/PS4 交流故障信号，指示 PS3/PS4 交流输入故障
 //wire    w_pal_ps_off_r;			// 平台级电源模块关闭信号（同步后），控制平台级电源模块关闭
 //wire    w_pal_dual_en_r;		// 平台级双路使能信号（同步后），控制平台级双路功能使能
@@ -684,12 +684,12 @@ wire    w_slot_2_on_dly_10ms;
 wire    w_p0_pcie_wake_n;		// P0 PCIE 唤醒信号（低电平有效），P0 PCIE 唤醒控制
 wire    w_p1_pcie_wake_n;
 wire    [7:0]   w_led_control;	// LED 控制信号（8 位），控制 8 个 LED 的状态
-//wire    w_p5v_vga2_en_n_r;		// 5V VGA2 使能信号（同步后，低电平有效），控制 5V VGA2 的使能
+//wire    w_p5v_vga2_en_n_r;	// 5V VGA2 使能信号（同步后，低电平有效），控制 5V VGA2 的使能
 //wire    w_pal_p5v_en_r;			// 5V VGA2 使能信号（同步后，低电平有效），控制 5V VGA2 的使能
 wire    w_pal_bmc_aux_pgd;		// 平台级 BMC 辅助电源好信号，指示平台级 BMC 辅助电源轨稳定
 wire    w_p1v0_stby_m2_en;		// P1V0 待机 M2 使能信号，控制 P1V0 待机 M2 的使能
 
-wire    w_cpld_sgpio0_clk_r;	 // CPLD SGPIO0 时钟信号（同步后），CPLD SGPIO0 的时钟
+wire    w_cpld_sgpio0_clk_r;	// CPLD SGPIO0 时钟信号（同步后），CPLD SGPIO0 的时钟
 wire    w_cpld_sgpio0_ld_n_r;	// CPLD SGPIO0 装载信号（同步后，低电平有效），CPLD SGPIO0 的装载控制
 wire    w_cpld_sgpio0_mosi_r;	// CPLD SGPIO0 MOSI 信号（同步后），CPLD SGPIO0 的 MOSI 数据
 wire    w_cpld_sgpio1_clk_r;	
@@ -830,7 +830,7 @@ wire w_mcio12_prsnt_n_zt       ;//u5
 wire w_mcio13_prsnt_n_zt       ;//u5    
 wire w_pcb_version2_zt         ;//u5     ZT 系列 PCB 版本 2 检测
 wire w_pcb_version1_zt         ;//u5     ZT 系列 PCB 版本 1 检测
-wire w_pcb_version0_zt         ;//u5 	 ZT 系列 PCB 版本 0 检测   
+wire w_pcb_version0_zt         ;//u5 	   ZT 系列 PCB 版本 0 检测   
 wire w_pca_version2_zt         ;//u5    
 wire w_pca_version1_zt         ;//u5    
 wire w_pca_version0_zt         ;//u5    
@@ -1095,7 +1095,7 @@ wire    [7:0]   w_zt2_board_id;			// ZT2 系列板卡 ID（8位），标识 ZT2 
 wire    [7:0]   w_sw2_board_id;			// SW2 系列板卡 ID（8位），标识 SW2 板卡的型号或配置
 reg      [7:0]   r_switch2_mode;		// 切换模式 2（8位，寄存器型），用于控制切换模式 2 的配置
 reg      r_zt2_board_prsnt_n      ;		// 锁存 ZT2 板卡存在状态（低电平有效）
-wire    w_zt2_board_prsnt_n;			// ZT2 板卡存在检测（低电平有效
+wire    w_zt2_board_prsnt_n;			    // ZT2 板卡存在检测（低电平有效
 
 wire    w_bmc_jtag_mux_s;				// BMC JTAG 多路复用选择信号，控制 BMC JTAG 多路复用器的通道
 //------------------------------------------------------------------------------------------------//
@@ -1490,7 +1490,7 @@ wire [199:0] mcpld_to_scpld_p2s_data   ; //2024-8-2 chg 159 to 199
 wire [199:0] scpld_to_mcpld_s2p_data   ;
 
 reg [191:0]	scpld_to_mcpld_data_filter;	// 定义 scpld_to_mcpld_data_filter 为 191 位宽的寄存器，用于对 scpld_to_mcpld 数据进行滤波等处理
-reg 	    scpld_sgpio_fail          ;	// 定义 scpld_sgpio_fail 寄存器，用于标识 SGPIO 故障
+reg 	    scpld_sgpio_fail            ;	// 定义 scpld_sgpio_fail 寄存器，用于标识 SGPIO 故障
 
 
 //scpld ---> mcpld  scpld 到 mcpld 的信号赋值，从 scpld_to_mcpld_data_filter 中提取不同位，用于各类状态或控制
