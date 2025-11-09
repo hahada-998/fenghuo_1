@@ -1778,7 +1778,7 @@ always@(posedge clk_50m or negedge pon_reset_n)
 		if(~pon_reset_n)
 			begin
 				scpld_to_mcpld_data_filter <= {192{1'b0}};// 将 scpld_to_mcpld_data_filter 初始化为 192 位全 0
-				scpld_sgpio_fail <=1'b0;// 将 scpld_sgpio_fail 初始化为 0，表示 SGPIO 无故障
+				scpld_sgpio_fail <=1'b0;                  // 将 scpld_sgpio_fail 初始化为 0，表示 SGPIO 无故障
 			end
      // 正常工作状态：校验SGPIO接收数据的帧头（判断数据是否有效）
 		else if // 当 scpld_to_mcpld_s2p_data 的低 4 位为 4'b0101 且高 4 位（199-196 位）为 4'b1010 时
@@ -1834,8 +1834,8 @@ wire [95:0] cmucpld_to_mcpld_s2p_data;
 reg [19:0]	cmu_to_mb_data_filter;//定义 cmu 到 mb 数据滤波器寄存器，位宽19位，用于对 cmu 到 mb 的数据进行滤波等处理
 reg 	cmucpld_sgpio_fail;// 定义 cmucpld_sgpio_fail 寄存器，用于标识 cmu CPLD 的 SGPIO 故障（1 = 故障，0 = 正常）
 
-wire    w_ss_pal_clk_r;// 平台级 SS 时钟信号（同步后），用于平台级 SS 相关逻辑的时钟
-wire    w_ss_pal_load_n_r;// 平台级 SS 装载信号（低电平有效，同步后），控制平台级 SS 数据装载
+wire    w_ss_pal_clk_r;     // 平台级 SS 时钟信号（同步后），用于平台级 SS 相关逻辑的时钟
+wire    w_ss_pal_load_n_r;  // 平台级 SS 装载信号（低电平有效，同步后），控制平台级 SS 数据装载
 wire    w_ss_pal_data_out_r;// MB CPLD 发送给 CMU CPLD 的串行数据（MOSI）
 
 wire    w_mb_type4                ;// 定义 mb 类型相关线网，用于标识不同的 mb 类型主板类型位4（GENOA 2P4U平台定义为4'b0110）
@@ -1859,14 +1859,14 @@ assign  w_rfu_bit2  =   1'b0    ;
 assign  w_rfu_bit3  =   1'b0    ;
 assign  w_leakage_int  =   1'b0    ;
 
-wire    w_bmc_active0_n                     ;	// BMC 活动 0 信号（低电平有效），指示 BMC 活动状态
-wire    w_pal_p12v_stby_drop           ;	// 平台级 P12V 待机跌落信号，指示 P12V 待机电压跌落
+wire    w_bmc_active0_n                     ;	  // BMC 活动 0 信号（低电平有效），指示 BMC 活动状态
+wire    w_pal_p12v_stby_drop           ;	      // 平台级 P12V 待机跌落信号，指示 P12V 待机电压跌落
 wire    w_ale_tmp1_n                           ;// ALE 温度 1 信号（低电平有效），指示 ALE 温度状态
-wire    w_pal_bmcuid_button_r         ;		// 平台级 BMCUID 按钮信号（同步后），获取 BMCUID 按钮状态
-wire    w_peci_master_sel                 ;	//PECI 主设备选择信号，选择 PECI 主设	
-wire    w_pcie_pal_bmc_wake_n         ;		// PCIE 平台级 BMC 唤醒信号（低电平有效），触发 PCIE 平台级 BMC 唤醒
-wire    w_password_clear                   ;// 密码清除信号，用于清除密码
-wire    w_fm_cpu1_disable_cod_n_r ;			// FM CPU 禁用编码信号（低电平有效，同步后），控制 FM CPU 禁用
+wire    w_pal_bmcuid_button_r         ;		      // 平台级 BMCUID 按钮信号（同步后），获取 BMCUID 按钮状态
+wire    w_peci_master_sel                 ;	    //PECI 主设备选择信号，选择 PECI 主设	
+wire    w_pcie_pal_bmc_wake_n         ;		      // PCIE 平台级 BMC 唤醒信号（低电平有效），触发 PCIE 平台级 BMC 唤醒
+wire    w_password_clear                   ;    // 密码清除信号，用于清除密码
+wire    w_fm_cpu1_disable_cod_n_r ;			        // FM CPU 禁用编码信号（低电平有效，同步后），控制 FM CPU 禁用
 // 定义与 cmu 电源好待机相关的线网
 wire    cmu_pg_p5v0_stby		       ; // cmu P5V0 待机电源好信号，指示 cmu P5V0 待机电源轨稳定
 wire    cmu_pg_p3v3_stby		       ; 
@@ -1921,18 +1921,18 @@ assign mbcpld_to_cmucpld_p2s_data[16]    = w_rfu_bit1                     ;
 assign mbcpld_to_cmucpld_p2s_data[15]    = w_leakage_int                  ;// 泄漏中断
 
 
-assign mbcpld_to_cmucpld_p2s_data[14]    = ~w_bmc_extrst_uid                     ;  // BMC外部复位/UID（取反适配电平）
-assign mbcpld_to_cmucpld_p2s_data[13]    = 1'b0            ; // i_FRONT_CABLE_PRSNT_N（前侧线缆存在信号，低电平有效）
-//assign mbcpld_to_cmucpld_p2s_data[12]    = i_PGD_P12V_STBY_DROOP               ; // i_PGD_P12V_STBY_DROOP（P12V 待机跌落检测信号）
-assign mbcpld_to_cmucpld_p2s_data[11]    = w_PWRGD_P12V                        ; // 
-//assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_pwr_btn_cpld_n_r               ;  db_i_fm_pwrbtn_out_n_r
-assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_fm_pwrbtn_out_n_r              ;// 前端电源按钮
-assign mbcpld_to_cmucpld_p2s_data[9]     = w_uid_sw_in_n                       ;// UID开关输入
-assign mbcpld_to_cmucpld_p2s_data[8]     = 1'b1         ;//db_i_fm_plt_bmc_thermtrip_n
-assign mbcpld_to_cmucpld_p2s_data[7]     = 1'b1                   ;//db_i_fm_pchhot_n
-assign mbcpld_to_cmucpld_p2s_data[6]     = 1'b1          ;//db_i_fm_pch_glb_rst_warn_n
-assign mbcpld_to_cmucpld_p2s_data[5]     = db_i_p0_slp_s5_n                     ;// CPU 0 S5休眠
-assign mbcpld_to_cmucpld_p2s_data[4]     = db_i_p0_slp_s3_n                     ;// CPU 0 S3休眠
+assign mbcpld_to_cmucpld_p2s_data[14]    = ~w_bmc_extrst_uid              ;  // BMC外部复位/UID（取反适配电平）
+assign mbcpld_to_cmucpld_p2s_data[13]    = 1'b0                           ; // i_FRONT_CABLE_PRSNT_N（前侧线缆存在信号，低电平有效）
+//assign mbcpld_to_cmucpld_p2s_data[12]    = i_PGD_P12V_STBY_DROOP        ; // i_PGD_P12V_STBY_DROOP（P12V 待机跌落检测信号）
+assign mbcpld_to_cmucpld_p2s_data[11]    = w_PWRGD_P12V                   ; // 
+//assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_pwr_btn_cpld_n_r        ;  db_i_fm_pwrbtn_out_n_r
+assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_fm_pwrbtn_out_n_r         ;// 前端电源按钮
+assign mbcpld_to_cmucpld_p2s_data[9]     = w_uid_sw_in_n                  ;// UID开关输入
+assign mbcpld_to_cmucpld_p2s_data[8]     = 1'b1                           ;//db_i_fm_plt_bmc_thermtrip_n
+assign mbcpld_to_cmucpld_p2s_data[7]     = 1'b1                           ;//db_i_fm_pchhot_n
+assign mbcpld_to_cmucpld_p2s_data[6]     = 1'b1                           ;//db_i_fm_pch_glb_rst_warn_n
+assign mbcpld_to_cmucpld_p2s_data[5]     = db_i_p0_slp_s5_n               ;// CPU 0 S5休眠
+assign mbcpld_to_cmucpld_p2s_data[4]     = db_i_p0_slp_s3_n               ;// CPU 0 S3休眠
 
 assign mbcpld_to_cmucpld_p2s_data[3]     = 1'b0                                ;
 assign mbcpld_to_cmucpld_p2s_data[2]     = 1'b1                                ;
@@ -1946,7 +1946,7 @@ always@(posedge clk_50m or negedge pon_reset_n)
 		if(~pon_reset_n)
 			begin
 				cmu_to_mb_data_filter <= {20{1'b0}};// 20位滤波寄存器置0
-				cmucpld_sgpio_fail <=1'b0;// 故障标志置0（无故障）
+				cmucpld_sgpio_fail <=1'b0;          // 故障标志置0（无故障）
 			end
 		else if// 当 cmucpld_to_mcpld_s2p_data 的低 4 位为 4'b0101 且 95-92 位为 4'b1010 时
 			((cmucpld_to_mcpld_s2p_data[3:0] == 4'b0101)&& (cmucpld_to_mcpld_s2p_data[95:92] == 4'b1010))
@@ -1992,7 +1992,7 @@ wire    [1:0]   w_pwr_btn_state    ;	// 电源按钮状态信号（2 位），�
 wire    w_pwr_btn_dly             ;		// 电源按钮延时信号（对物理按钮信号做延时防抖，避免机械抖动导致误判）
 
 //from IIC_bmc
-wire    w_bmc_pwrbtn_lock         ;  //bmc control,set 0 to disable physical btn BMC 电源按钮锁定信号，BMC 控制，置 0 禁用物理按钮，置 1 启用
+wire    w_bmc_pwrbtn_lock         ; //bmc control,set 0 to disable physical btn BMC 电源按钮锁定信号，BMC 控制，置 0 禁用物理按钮，置 1 启用
 wire    w_bmc_sbtn_poweron        ; //bmc control,generate 500ms pulse       set 1 enable ______------_____ BMC 控制的软按钮开机信号，生成 500ms 脉冲
 wire    w_bmc_lbtn_powerdown      ; //bmc control,generate 6s pulse BMC BMC 硬按钮关机信号（BMC 生成 6s 脉冲，触发强制关机）
 wire    w_bmc_sbtn_powerdown      ; //bmc control,generate 500ms pulse BMC 软按钮关机信号（BMC 生成 500ms 脉冲，触发正常关机）
@@ -2012,31 +2012,30 @@ wire    w_pal_pwrbtn_n_r_normal   ; //平台级电源按钮信号正常态（同
 
 // Pwr_But_Ctrl 模块实例化：电源按钮控制模块实例化，用于处理电源按钮的各种控制逻辑（电源按钮基础控制模块）
 Pwr_But_Ctrl #(
-.PWRBTN_LONG                  (4)	// 参数配置：长按键判断阈值（4个20ms时钟周期，即80ms，超过则判定为长按）
-)Pwr_But_Ctrl_U0
-(
-.i_clk                             (clk_50m),		//input Clk
-.i_rst_n                         (pon_reset_n),		//Global rst,Active Low
-.i_20mSEC                       (w20mSCE),  //w20mSCE 20ms 时钟使能信号，用于定时相关逻辑
+    .PWRBTN_LONG                  (4                            )	// 参数配置：长按键判断阈值（4个20ms时钟周期，即80ms，超过则判定为长按）
+)Pwr_But_Ctrl_U0 (
+    .i_clk                        (clk_50m                      ),		//input Clk
+    .i_rst_n                      (pon_reset_n                  ),		//Global rst,Active Low
+    .i_20mSEC                     (w20mSCE                      ),  //w20mSCE 20ms 时钟使能信号，用于定时相关逻辑
 
-.i_PWRBTN_OUT_disable               (1'b0),// 输入：电源按钮输出禁用（0=启用输出，1=禁用输出，此处启用）
-.i_disable_button                       (1'b0),	//按钮禁用信号 1'b1 is disable, 1'b0 is enable;  1'b1 for General items.  //w_bmc_pwrbtn_lock_n_ff from IIC_bmc        1'b0   2022-12-19 delete for debug  ~r_bmc_actived  || (~w_bmc_pwrbtn_lock)
-.i_BMC_active0_n                         (1'b1), // BMC 激活信号（低电平有效）1'b1: BMC die,  1'b0: BMC active, default low when AC in;  if no function of BMC controled power on, this signal should 1'b1.
-.i_FP_PWR_BTN_MUX_N                   (db_i_fm_pwrbtn_out_n_r),       //物理按钮输入
-//.i_FP_PWR_BTN_MUX_N                   (db_i_pwr_btn_cpld_n_r),			//按钮复用信号Power Button  //MB  PWR_BTN db_i_pal_pwr_btn_n
-.i_FM_BMC_PWRBTN_OUT_CPLD_N   (1'b1),	//Power on/off signal from BMC   BMC FM编码的电源按钮信号（1=无效，暂未使用）
-.i_DBP_POWER_BTN_N                     (1'b1),	//Power on/off signal from DBP   //from ERA BP DBP 电源按钮信号（低电平有效）
-.i_state_s0                                   (1'b1),// 输入：S0 状态信号，指示系统是否处于 S0 状态，此处设为 1（1=系统在S0，0=不在S0
-.i_state_s5                                   (1'b0),
-.i_bmc_clear_data                       (1'b1),        //high pulse for BMC clear latch data   BMC清除锁存数据（1=不清除，0=清除，此处不清除）
-.i_BMC_active1_n                         (1'b0),        // 1'b1: BMC die,  1'b0: BMC active, default high when AC in BMC   输入：BMC激活状态1（0=BMC激活，1=BMC未激活；此处BMC激活）
+    .i_PWRBTN_OUT_disable         (1'b0                         ),// 输入：电源按钮输出禁用（0=启用输出，1=禁用输出，此处启用）
+    .i_disable_button             (1'b0                         ),	//按钮禁用信号 1'b1 is disable, 1'b0 is enable;  1'b1 for General items.  //w_bmc_pwrbtn_lock_n_ff from IIC_bmc        1'b0   2022-12-19 delete for debug  ~r_bmc_actived  || (~w_bmc_pwrbtn_lock)
+    .i_BMC_active0_n              (1'b1                         ), // BMC 激活信号（低电平有效）1'b1: BMC die,  1'b0: BMC active, default low when AC in;  if no function of BMC controled power on, this signal should 1'b1.
+    .i_FP_PWR_BTN_MUX_N           (db_i_fm_pwrbtn_out_n_r       ),       //物理按钮输入
+    //.i_FP_PWR_BTN_MUX_N         (db_i_pwr_btn_cpld_n_r        ),			//按钮复用信号Power Button  //MB  PWR_BTN db_i_pal_pwr_btn_n
+    .i_FM_BMC_PWRBTN_OUT_CPLD_N   (1'b1                         ),	//Power on/off signal from BMC   BMC FM编码的电源按钮信号（1=无效，暂未使用）
+    .i_DBP_POWER_BTN_N            (1'b1                         ),	//Power on/off signal from DBP   //from ERA BP DBP 电源按钮信号（低电平有效）
+    .i_state_s0                   (1'b1                         ),// 输入：S0 状态信号，指示系统是否处于 S0 状态，此处设为 1（1=系统在S0，0=不在S0
+    .i_state_s5                   (1'b0                         ),
+    .i_bmc_clear_data             (1'b1                         ),        //high pulse for BMC clear latch data   BMC清除锁存数据（1=不清除，0=清除，此处不清除）
+    .i_BMC_active1_n              (1'b0                         ),        // 1'b1: BMC die,  1'b0: BMC active, default high when AC in BMC   输入：BMC激活状态1（0=BMC激活，1=BMC未激活；此处BMC激活）
 
-.o_pwrbtn_short                           (        ), //短按电源按钮信号，未连接
-.o_pwrbtn_long                             (        ),// 输出：长按信号（未连接，可用于调试）
-.o_PWRBTN_state                           (        ),// 输出：按钮状态（未连接，可用于调试）
-.o_pwr_btn_state                         (w_pwr_btn_state),// 输出：2位按钮状态（连接到全局信号）
-.o_pwr_btn_dly                             (w_pwr_btn_dly  ),// 输出：按钮延时信号（连接到全局信号）
-.o_FM_BMC_PWRBTN_OUT_B_N         (w_pwrbtn_to_pch_n)		//Power on/off signal to PCH 到 PCH 的 FM BMC FWRBTN 信号（低电平有效），连接到 w_pwrbtn_to_pch_n  到PCH的电源按钮信号（连接到全局信号）
+    .o_pwrbtn_short               (                             ), //短按电源按钮信号，未连接
+    .o_pwrbtn_long                (                             ),// 输出：长按信号（未连接，可用于调试）
+    .o_PWRBTN_state               (                             ),// 输出：按钮状态（未连接，可用于调试）
+    .o_pwr_btn_state              (w_pwr_btn_state              ),// 输出：2位按钮状态（连接到全局信号）
+    .o_pwr_btn_dly                (w_pwr_btn_dly                ),// 输出：按钮延时信号（连接到全局信号）
+    .o_FM_BMC_PWRBTN_OUT_B_N      (w_pwrbtn_to_pch_n            )		//Power on/off signal to PCH 到 PCH 的 FM BMC FWRBTN 信号（低电平有效），连接到 w_pwrbtn_to_pch_n  到PCH的电源按钮信号（连接到全局信号）
 );
 //参数化长按键判断：通过PWRBTN_LONG=4（对应 80ms）定义 “长按” 阈值，超过该时间判定为长按（用于强制关机 / 复位），否则为短按（用于正常开关机）；
 //多源按钮兼容：支持物理按钮（i_FP_PWR_BTN_MUX_N）、DBP 扩展按钮（i_DBP_POWER_BTN_N）、BMC FM 按钮（i_FM_BMC_PWRBTN_OUT_CPLD_N），可根据硬件配置选择启用；
@@ -2046,26 +2045,26 @@ Pwr_But_Ctrl #(
 // BMC 控制电源按钮模块实例化：处理 BMC 对电源按钮的控制逻辑 （BMC 软控制电源按钮模块）
 //该模块是BMC 与物理按钮的协同控制单元，处理 BMC 下发的软开关机 / 复位指令，生成事件标志并反馈给 BMC。
 bmc_ctl_pwrbtn bmc_ctl_pwrbtn_u0(
-.i_clk                                        (clk_50m),// 输入：50MHz工作时钟
-.i_rst_n                                    (pon_reset_n),// 输入：全局复位（低电平有效）
-.i_clk_20ms                              (w20mSCE), // 输入：20ms时钟使能（时间基准）
+.i_clk                                        (clk_50m),       // 输入：50MHz工作时钟
+.i_rst_n                                    (pon_reset_n),     // 输入：全局复位（低电平有效）
+.i_clk_20ms                              (w20mSCE),            // 输入：20ms时钟使能（时间基准）
 .i_pwrbtn_n                              (w_pwrbtn_to_pch_n),  // 输入：到PCH的基础按钮信号（来自Pwr_But_Ctrl）
 .i_slps4_n                                (db_i_p0_slp_s5_n),  // 输入：S5状态信号（低电平有效，判断是否允许开机）
 
 .i_bmc_sbtn_poweron               (w_bmc_sbtn_poweron  ),     // 输入：BMC软开机信号（500ms脉冲）
-.i_bmc_lbtn_powerdown           (w_bmc_lbtn_powerdown),   // 输入：BMC硬关机信号（6s脉冲）
-.i_bmc_sbtn_powerdown           (w_bmc_sbtn_powerdown),   // 输入：BMC软关机信号（500ms脉冲）
-.i_bmc_sbtn_wc                         (w_bmc_sbtn_wc    ),// 输入：BMC清除软开机事件（0=清除）
-.i_bmc_lbtn_wc                         (w_bmc_lbtn_wc    ),// 输入：BMC清除硬关机事件（0=清除）
-.i_bmc_sbtn_sys_wc                 (w_bmc_sbtn_sys_wc),// 输入：BMC清除软复位事件（0=清除）
+.i_bmc_lbtn_powerdown           (w_bmc_lbtn_powerdown),       // 输入：BMC硬关机信号（6s脉冲）
+.i_bmc_sbtn_powerdown           (w_bmc_sbtn_powerdown),       // 输入：BMC软关机信号（500ms脉冲）
+.i_bmc_sbtn_wc                         (w_bmc_sbtn_wc    ),   // 输入：BMC清除软开机事件（0=清除）
+.i_bmc_lbtn_wc                         (w_bmc_lbtn_wc    ),   // 输入：BMC清除硬关机事件（0=清除）
+.i_bmc_sbtn_sys_wc                 (w_bmc_sbtn_sys_wc),       // 输入：BMC清除软复位事件（0=清除）
 
 .o_bmc_sbtn_poweron_done     (w_bmc_sbtn_poweron_done  ),// 输出：软开机完成（反馈BMC）
-.o_bmc_lbtn_powerdown_done (w_bmc_lbtn_powerdown_done),// 输出：硬关机完成（反馈BMC）
-.o_bmc_sbtn_powerdown_done (w_bmc_sbtn_powerdown_done),// 输出：软关机完成（反馈BMC）
+.o_bmc_lbtn_powerdown_done (w_bmc_lbtn_powerdown_done),  // 输出：硬关机完成（反馈BMC）
+.o_bmc_sbtn_powerdown_done (w_bmc_sbtn_powerdown_done),  // 输出：软关机完成（反馈BMC）
 .o_sbtn_pwron_evt                   (w_sbtn_pwron_evt  ),// 输出：软开机事件（触发下游开机逻辑）
-.o_lbtn_pwrdown_evt               (w_lbtn_pwrdown_evt),// 输出：硬关机事件（触发下游关机逻辑）
-.o_sbtn_sysrst_evt                 (w_sbtn_sysrst_evt ),// 输出：软复位事件（触发下游复位逻辑）
-.o_bmc_ctl_pwrbtn_n               (w_bmc_ctl_pwrbtn_n)// 输出：BMC控制的按钮信号（与物理按钮叠加）
+.o_lbtn_pwrdown_evt               (w_lbtn_pwrdown_evt),  // 输出：硬关机事件（触发下游关机逻辑）
+.o_sbtn_sysrst_evt                 (w_sbtn_sysrst_evt ), // 输出：软复位事件（触发下游复位逻辑）
+.o_bmc_ctl_pwrbtn_n               (w_bmc_ctl_pwrbtn_n)   // 输出：BMC控制的按钮信号（与物理按钮叠加）
 );
 //核心设计逻辑
 //软指令处理：接收 BMC 的w_bmc_sbtn_poweron（软开机）等脉冲信号，按脉冲时长（500ms/6s）生成对应事件，避免指令丢失；
