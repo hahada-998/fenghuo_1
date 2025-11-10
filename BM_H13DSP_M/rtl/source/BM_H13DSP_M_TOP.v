@@ -1147,20 +1147,22 @@ wire                    w_bmc_jtag_mux_s                    ;	// BMC JTAG 多路
 // 按下按钮，服务器前面的蓝色指示灯（LED）会亮起或闪烁，使操作者在机架中能快速找到目标服务器
 // -------------------------------------------------------------------------------------------------------------
 PGM_DEBOUNCE #(
-    .SIGCNT(3), 
-    .NBITS(2'b10), 
-    .ENABLE(1'b1)
+    .SIGCNT(3     ), // 配置输入信号数量为 3 路（对应电源按钮、复位按钮、BMC ID 按钮）
+    .NBITS (2'b10 ), // 配置内部计数器位宽为 2 位（可计数范围 0~3，满足 3 路信号消抖的时序控制）
+    .ENABLE(1'b1  )  // 使能消抖功能（高电平有效）
 ) db_inst_pwr_btn(
     .clk(clk_50m),                      // 时钟信号，频率为50MHz
     .rst(~pon_reset_n),                 // 复位信号，低电平有效
     .timer_tick(t32ms_tick),            // 定时信号，32ms周期
     .din({
+          i_FM_PWRBTN_OUT_N_R,
           i_FM_RSTBTN_OUT_N_R
           //i_PAL_PWR_BTN_N,              // 输入信号1：电源按钮信号
           //i_PAL_BUTTOPN_RST_N,          // 输入信号2：外部复位按钮信号
           //i_PAL_BMCUID_BUTTON           // 输入信号3：BMC UID按钮信号
         }),
     .dout({
+           db_i_fm_pwrbtn_out_n_r,
           db_i_fm_rstbtn_out_n_r
           //db_i_pwr_btn_cpld_n_r,        // 输出信号1：去抖动后的电源按钮信号
           //db_i_pal_ext_rst_n,           // 输出信号2：去抖动后的外部复位按钮信号
@@ -2031,7 +2033,7 @@ assign mbcpld_to_cmucpld_p2s_data[13]    = 1'b0                                ;
 // assign mbcpld_to_cmucpld_p2s_data[12]    = i_PGD_P12V_STBY_DROOP              ; // i_PGD_P12V_STBY_DROOP（P12V 待机跌落检测信号）
 assign mbcpld_to_cmucpld_p2s_data[11]    = w_PWRGD_P12V                        ; //   
 // assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_pwr_btn_cpld_n_r              ;  
-assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_fm_rstbtn_out_n_r              ; // 前端电源按钮
+assign mbcpld_to_cmucpld_p2s_data[10]    = db_i_fm_pwrbtn_out_n_r              ; // 前端电源按钮
 assign mbcpld_to_cmucpld_p2s_data[9]     = w_uid_sw_in_n                       ; // UID开关输入 
 assign mbcpld_to_cmucpld_p2s_data[8]     = 1'b1                                ; //db_i_fm_plt_bmc_thermtrip_n
 assign mbcpld_to_cmucpld_p2s_data[7]     = 1'b1                                ; //db_i_fm_pchhot_n
@@ -2127,23 +2129,23 @@ Pwr_But_Ctrl #(
     .i_20mSEC                     (w20mSCE                      ), //w20mSCE 20ms 时钟使能信号，用于定时相关逻辑
 
     .i_PWRBTN_OUT_disable         (1'b0                         ), // 输入：电源按钮输出禁用（0=启用输出，1=禁用输出，此处启用）
-    .i_disable_button             (1'b0                         ), //按钮禁用信号 1'b1 is disable, 1'b0 is enable;  1'b1 for General items.  //w_bmc_pwrbtn_lock_n_ff from IIC_bmc        1'b0   2022-12-19 delete for debug  ~r_bmc_actived  || (~w_bmc_pwrbtn_lock)
+    .i_disable_button             (1'b0                         ), // 按钮禁用信号 1'b1 is disable, 1'b0 is enable;  1'b1 for General items.  //w_bmc_pwrbtn_lock_n_ff from IIC_bmc        1'b0   2022-12-19 delete for debug  ~r_bmc_actived  || (~w_bmc_pwrbtn_lock)
     .i_BMC_active0_n              (1'b1                         ), // BMC 激活信号（低电平有效）1'b1: BMC die,  1'b0: BMC active, default low when AC in;  if no function of BMC controled power on, this signal should 1'b1.
-    .i_FP_PWR_BTN_MUX_N           (db_i_fm_pwrbtn_out_n_r       ), //物理按钮输入
-    //.i_FP_PWR_BTN_MUX_N         (db_i_pwr_btn_cpld_n_r        ), //按钮复用信号Power Button  //MB  PWR_BTN db_i_pal_pwr_btn_n
-    .i_FM_BMC_PWRBTN_OUT_CPLD_N   (1'b1                         ), //Power on/off signal from BMC   BMC FM编码的电源按钮信号（1=无效，暂未使用）
-    .i_DBP_POWER_BTN_N            (1'b1                         ), //Power on/off signal from DBP   //from ERA BP DBP 电源按钮信号（低电平有效）
+    .i_FP_PWR_BTN_MUX_N           (db_i_fm_pwrbtn_out_n_r       ), // 物理按钮输入
+    //.i_FP_PWR_BTN_MUX_N         (db_i_pwr_btn_cpld_n_r        ), // 按钮复用信号Power Button  //MB  PWR_BTN db_i_pal_pwr_btn_n
+    .i_FM_BMC_PWRBTN_OUT_CPLD_N   (1'b1                         ), // Power on/off signal from BMC   BMC FM编码的电源按钮信号（1=无效，暂未使用）
+    .i_DBP_POWER_BTN_N            (1'b1                         ), // Power on/off signal from DBP   //from ERA BP DBP 电源按钮信号（低电平有效）
     .i_state_s0                   (1'b1                         ), // 输入：S0 状态信号，指示系统是否处于 S0 状态，此处设为 1（1=系统在S0，0=不在S0
     .i_state_s5                   (1'b0                         ),
-    .i_bmc_clear_data             (1'b1                         ), //high pulse for BMC clear latch data   BMC清除锁存数据（1=不清除，0=清除，此处不清除）
+    .i_bmc_clear_data             (1'b1                         ), // high pulse for BMC clear latch data   BMC清除锁存数据（1=不清除，0=清除，此处不清除）
     .i_BMC_active1_n              (1'b0                         ), // 1'b1: BMC die,  1'b0: BMC active, default high when AC in BMC   输入：BMC激活状态1（0=BMC激活，1=BMC未激活；此处BMC激活）
 
-    .o_pwrbtn_short               (                             ), //短按电源按钮信号，未连接
+    .o_pwrbtn_short               (                             ), // 短按电源按钮信号，未连接
     .o_pwrbtn_long                (                             ), // 输出：长按信号（未连接，可用于调试）
     .o_PWRBTN_state               (                             ), // 输出：按钮状态（未连接，可用于调试）
     .o_pwr_btn_state              (w_pwr_btn_state              ), // 输出：2位按钮状态（连接到全局信号）
     .o_pwr_btn_dly                (w_pwr_btn_dly                ), // 输出：按钮延时信号（连接到全局信号）
-    .o_FM_BMC_PWRBTN_OUT_B_N      (w_pwrbtn_to_pch_n            )	 //Power on/off signal to PCH 到 PCH 的 FM BMC FWRBTN 信号（低电平有效），连接到 w_pwrbtn_to_pch_n  到PCH的电源按钮信号（连接到全局信号）
+    .o_FM_BMC_PWRBTN_OUT_B_N      (w_pwrbtn_to_pch_n            )	 // Power on/off signal to PCH 到 PCH 的 FM BMC FWRBTN 信号（低电平有效），连接到 w_pwrbtn_to_pch_n  到PCH的电源按钮信号（连接到全局信号）
 );
 //参数化长按键判断：通过PWRBTN_LONG=4（对应 80ms）定义 “长按” 阈值，超过该时间判定为长按（用于强制关机 / 复位），否则为短按（用于正常开关机）；
 //多源按钮兼容：支持物理按钮（i_FP_PWR_BTN_MUX_N）、DBP 扩展按钮（i_DBP_POWER_BTN_N）、BMC FM 按钮（i_FM_BMC_PWRBTN_OUT_CPLD_N），可根据硬件配置选择启用；
@@ -2180,9 +2182,10 @@ bmc_ctl_pwrbtn bmc_ctl_pwrbtn_u0(
 //实现 “物理按钮与 BMC 软控制的与逻辑”（需两者均允许时，才能控制 PCH）。
 
 // 按钮按下标志赋值：当软按钮开机、硬按钮关机或软按钮系统复位事件发生时，标志置位  任意按钮事件触发时置1，简化下游逻辑判断
-assign  w_btn_press_flag       = w_sbtn_pwron_evt || w_lbtn_pwrdown_evt || w_sbtn_sysrst_evt;
+assign  w_btn_press_flag = w_sbtn_pwron_evt || w_lbtn_pwrdown_evt || w_sbtn_sysrst_evt;
 // 平台级电源按钮信号（同步后，低电平有效）赋值：是到 PCH 的电源按钮信号与 BMC 控制的电源按钮信号的与操作结果 物理按钮与BMC软控制的与操作，确保双重授权
-assign  w_pal_pwrbtn_n_r       = w_pwrbtn_to_pch_n & w_bmc_ctl_pwrbtn_n ;  //o_FM_CPLD_PWRBTN_OUT_N    cpld TO pch
+// assign  w_pal_pwrbtn_n_r       = w_pwrbtn_to_pch_n & w_bmc_ctl_pwrbtn_n ;  //o_FM_CPLD_PWRBTN_OUT_N    cpld TO pch
+assign  w_pal_pwrbtn_n_r = db_i_fm_pwrbtn_out_n_r;//测试版本暂无BMC
 // assign w_pal_pwrbtn_n_r    = r_dip_cpu_prsnt_override ? r_cpu_pwrbtn_force_n : w_pal_pwrbtn_n_r_normal ; // CPU存在覆盖开关打开时，使用强制信号，否则使用正常信号
 //--------------------------------------------------------------------------------------------------------------------------------------------------
 // power_button end （电源按钮相关逻辑结束）
@@ -2601,33 +2604,33 @@ pwrseq_master  pwrseq_master_inst (
     // ==============================================
     // 6. 输出控制信号接口（驱动下游硬件/模块）
     // ==============================================
-    .force_pwrbtn_n			(w_force_pwrbtn_n			),	// 输出：强制电源按钮信号（低电平有效，送至 PSU，当前未使用）
+    .force_pwrbtn_n			      (w_force_pwrbtn_n			      ),	// 输出：强制电源按钮信号（低电平有效，送至 PSU，当前未使用）
                                                                           // 备用功能：故障下电后，强制 PCH 切换到 S5 状态，确保彻底断电
-    .pgd_raw					(w_pgd_raw					),	// 输出：原始电源好信号（送至电源按钮指示灯，当前未使用）
+    .pgd_raw					        (w_pgd_raw					        ),	// 输出：原始电源好信号（送至电源按钮指示灯，当前未使用）
                                                                           // 备用功能：指示灯显示电源好状态，方便现场排查
-    .dc_on_wait_complete		(w_dc_on_wait_complete		),	// 输出：DC 电源上电等待完成信号（送至电源序列从模块 slave）
+    .dc_on_wait_complete		  (w_dc_on_wait_complete		  ),	// 输出：DC 电源上电等待完成信号（送至电源序列从模块 slave）
                                                                           // 功能：告知从模块“主模块已完成 DC 上电等待，可执行后续步骤”
-    .rt_critical_fail_store		(w_rt_critical_fail_store	),	// 输出：RT 关键故障存储信号（送至从模块/复位模块）
+    .rt_critical_fail_store		(w_rt_critical_fail_store	  ),	// 输出：RT 关键故障存储信号（送至从模块/复位模块）
                                                                           // 功能：存储关键故障信息，用于故障复位后追溯原因
-    .fault_clear				(w_fault_clear				),	// 输出：故障清除信号（送至从模块/PSU/热管理模块）
+    .fault_clear				      (w_fault_clear				      ),	// 输出：故障清除信号（送至从模块/PSU/热管理模块）
                                                                           // 功能：BMC 或人工清除故障后，该信号触发下游模块清除故障标志
-    .cmu_fault_clear			(w_cmu_fault_clear			),	// 输出：CMU 故障清除信号
+    .cmu_fault_clear			    (w_cmu_fault_clear			    ),	// 输出：CMU 故障清除信号
                                                                           // 功能：清除 CMU 电源管理芯片内的故障状态，恢复正常供电
-    .power_seq_sm				(w_power_seq_sm				),	// 输出：电源序列状态机信号（核心输出，告知所有模块当前电源阶段）
+    .power_seq_sm				      (w_power_seq_sm				      ),	// 输出：电源序列状态机信号（核心输出，告知所有模块当前电源阶段）
                                                                           // 常见状态：上电初始化、电源升压、电源稳定、下电等
-    .fault_power				(w_power_fault				),	// 输出：电源故障信号（送至故障处理模块/指示灯/网卡）
+    .fault_power				      (w_power_fault				      ),	// 输出：电源故障信号（送至故障处理模块/指示灯/网卡）
                                                                           // 功能：触发故障指示灯亮、网卡上报故障，告知外部系统电源异常
-    .stby_failure_detected	    (w_stby_failure_detected	),	// 输出：待机故障检测信号（送至故障处理模块）
+    .stby_failure_detected	  (w_stby_failure_detected	  ),	// 输出：待机故障检测信号（送至故障处理模块）
                                                                           // 功能：检测到待机电源（如 5V_STB）故障时输出 1
-    .po_failure_detected		(w_dc_failure_detected		),	// 输出：DC 电源故障检测信号（送至故障处理模块）
+    .po_failure_detected		  (w_dc_failure_detected		  ),	// 输出：DC 电源故障检测信号（送至故障处理模块）
                                                                           // 功能：检测到 DC 主电源（如 12V/5V）故障时输出 1
-    .rt_failure_detected		(w_rt_failure_detected		),	// 输出：RT 电源故障检测信号（送至故障处理模块）
+    .rt_failure_detected		  (w_rt_failure_detected		  ),	// 输出：RT 电源故障检测信号（送至故障处理模块）
                                                                           // 功能：检测到 RT 电源（如 CPU 核心供电）故障时输出 1
-    .cpld_latch_sys_off		(w_cpld_latch_sys_off		),	// 输出：CPLD 锁存系统关闭信号（送至扩展寄存器 XREG）
-                                                                          // 功能：锁存“系统关闭”状态，避免故障恢复时误上电
-    .turn_on_wait				(w_turn_on_wait				),	// 输出：开机等待信号（送至电源按钮指示灯）
-                                                                          // 功能：开机过程中点亮指示灯，告知用户“系统正在上电，请勿操作”
-    .po_failure_detected_set	(	)                         	// 输出：DC 电源故障检测设置信号（预留未连接，可扩展用于故障标志置位）
+    .cpld_latch_sys_off		    (w_cpld_latch_sys_off		    ),  // 输出：CPLD 锁存系统关闭信号（送至扩展寄存器 XREG）
+                                                              // 功能：锁存“系统关闭”状态，避免故障恢复时误上电
+    .turn_on_wait				      (w_turn_on_wait				      ),  // 输出：开机等待信号（送至电源按钮指示灯）
+                                                              // 功能：开机过程中点亮指示灯，告知用户“系统正在上电，请勿操作”
+    .po_failure_detected_set	(	                          )   // 输出：DC 电源故障检测设置信号（预留未连接，可扩展用于故障标志置位）
 );
 
 

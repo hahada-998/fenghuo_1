@@ -1,0 +1,159 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/CPLD/intel/fenghuo_xule/BM_H13DSP_M/BM_H13DSP_M/sim/testcase/test3
+T_opt
+!s110 1762781121
+VIcAL_bJfgOi7a1QaUI^E11
+04 19 4 work tb_bmc_cpld_i2c_ram fast 0
+=1-6805cabd4893-6911e7c1-2b-64bc
+R1
+!s12f OEM25U4 
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2024.2;79
+vbmc_cpld_i2c_ram
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v
+Z3 !s110 1762776841
+!i10b 1
+!s100 WUe>fMKioNKBG;d1AzNM`1
+IYaE6]U[=8oL6ZA86?TXo42
+Z4 dC:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim
+w1762767655
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v
+!i122 46
+L0 1 1966
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2024.2;79
+r1
+!s85 0
+31
+Z7 !s108 1762776841.000000
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vi2c_slave_basic0
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v
+R3
+!i10b 1
+!s100 T198>gM_QK>Gl`2Uamiio1
+ITSS`:dKY@j`lUio@eHcH?3
+R4
+w1762776344
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v
+!i122 47
+L0 8 645
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v|
+!i113 0
+R8
+R2
+vi2c_slave_bmc
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_bmc.v
+R3
+!i10b 1
+!s100 ;aTQ0i@>APPma2ZFXg[8a2
+I81L1dFXiT>agEo1`j>emV3
+R4
+w1735303812
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_bmc.v
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_bmc.v
+!i122 48
+L0 10 172
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_bmc.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_bmc.v|
+!i113 0
+R8
+R2
+vtb_bmc_cpld_i2c_ram
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1762781107
+!i10b 1
+!s100 T_a6n_E7IHLVh9G^kSAaa0
+I?Bz_PmmfbKk4MHEKaPjZD1
+S1
+R4
+w1762781099
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv
+!i122 53
+L0 3 351
+R5
+R6
+r1
+!s85 0
+31
+!s108 1762781107.000000
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
