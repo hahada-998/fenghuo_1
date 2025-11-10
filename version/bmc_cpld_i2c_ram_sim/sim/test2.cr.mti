@@ -1,0 +1,22 @@
+D:/yunjian/donghu/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v {1 {vlog -work work -vopt -stats=none D:/yunjian/donghu/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/bmc_cpld_i2c_ram.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module bmc_cpld_i2c_ram
+
+Top level modules:
+	bmc_cpld_i2c_ram
+
+} {} {}} D:/yunjian/donghu/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv {1 {vlog -work work -vopt -sv -stats=none D:/yunjian/donghu/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module tb_bmc_cpld_i2c_ram
+
+Top level modules:
+	tb_bmc_cpld_i2c_ram
+
+} {} {}} D:/yunjian/donghu/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v {1 {vlog -work work -vopt -stats=none D:/yunjian/donghu/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src/i2c_slave_basic0.v
+QuestaSim-64 vlog 10.6c Compiler 2017.07 Jul 26 2017
+-- Compiling module i2c_slave_basic0
+
+Top level modules:
+	i2c_slave_basic0
+
+} {} {}}

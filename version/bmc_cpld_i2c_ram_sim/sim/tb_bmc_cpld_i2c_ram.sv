@@ -239,8 +239,8 @@ module tb_bmc_cpld_i2c_ram;
         send_byte(8'h01);
 
         // 3. 读取从设备寄存器数据
-        read_byte(); // 读取第一个字节
-
+        // read_byte(); // 读取第一个字节
+        # 1600; // 等待一段时间以确保数据被正确读取
         // 4. 发送停止信号
         i_scl = 0;
         io_sda_driver = 0;

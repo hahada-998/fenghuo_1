@@ -8,24 +8,24 @@
 `timescale 1ns/1ps
 
 module i2c_slave_bmc #(
-    parameter DLY_LEN = 3 // 延迟长度，24.18MHz 时钟对应 330ns
+    parameter                   DLY_LEN = 3 // 延迟长度，24.18MHz 时钟对应 330ns
 )(
     // 输入信号
-    input wire i_rst_n,               // 全局复位信号，低电平有效
-    input wire i_clk,                 // 系统时钟信号
-    input wire i_1ms_clk,             // 1ms 时钟信号，用于超时逻辑
-    input wire i_rst_i2c_n,           // I2C 专用复位信号
-    input wire i_scl,                 // I2C 时钟信号
-    inout wire io_sda,                // I2C 数据线（双向）
-    input wire [6:0] i_i2c_address,   // 从设备地址
-    input wire [7:0] i_i2c_data_in,   // 主设备写入的并行数据
+    input   wire                  i_rst_n,       // 全局复位信号，低电平有效
+    input   wire                  i_clk,         // 系统时钟信号
+    input   wire                  i_1ms_clk,     // 1ms 时钟信号，用于超时逻辑
+    input   wire                  i_rst_i2c_n,   // I2C 专用复位信号
+    input   wire                  i_scl,         // I2C 时钟信号
+    inout   wire                  io_sda,        // I2C 数据线（双向）
+    input   wire [6:0]            i_i2c_address, // 从设备地址
+    input   wire [7:0]            i_i2c_data_in, // 主设备写入的并行数据
 
     // 输出信号
-    output wire o_i2c_start,          // I2C 起始条件信号
-    output wire o_WR,                 // 读写信号，高电平表示读操作
-    output wire o_data_vld_pos,       // 数据有效信号的上升沿
-    output wire [15:0] o_i2c_command, // I2C 命令
-    output wire [7:0] o_i2c_data_out  // 从设备输出的数据
+    output  wire                  o_i2c_start,    // I2C 起始条件信号
+    output  wire                  o_WR,           // 读写信号，高电平表示读操作
+    output  wire                  o_data_vld_pos, // 数据有效信号的上升沿
+    output  wire [15:0]           o_i2c_command,  // I2C 命令
+    output  wire [7:0]            o_i2c_data_out  // 从设备输出的数据
 );
       
 wire w_start;               		// I2C 起始条件信号
@@ -49,12 +49,12 @@ reg [15:0] r_write_byte_cnt;        // 写字节计数器
 // 从设备接收数据寄存器
 always@(posedge i_clk or negedge i_rst_n) begin
 	if(~i_rst_n)
-		 r_i2c_data_in	<= 8'h00;
+		r_i2c_data_in	<= 8'h00;
 	else if ( w_R_W) begin    
-		 r_i2c_data_in	<= i_i2c_data_in;
+		r_i2c_data_in	<= i_i2c_data_in;
 	end 
 	else begin
-		 r_i2c_data_in	<= 8'h00;
+		r_i2c_data_in	<= 8'h00;
 	end
 end
 
@@ -126,7 +126,7 @@ always@(posedge i_clk or negedge i_rst_n) begin
 		 r_i2c_command_temp[7:0]		<= w_i2c_data_out;	 
 end
 
-assign w_i2c_command = ((r_write_byte_cnt == 2) & (~w_R_W) & r_addr_hit) ? r_i2c_command_temp : w_i2c_command;
+assign w_i2c_command = ((r_write_byte_cnt == 2) & (~w_R_W) & r_addr_hit) ? r_i2c_command_temp : /*w_i2c_command*/16'hffff;
 
 
 // 输出读写命令; 写命令地址不便; 读命令输出当前读地址加读字节计数器

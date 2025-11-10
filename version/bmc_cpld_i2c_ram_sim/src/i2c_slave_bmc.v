@@ -130,7 +130,7 @@ always@(posedge i_clk or negedge i_rst_n) begin
 		 r_i2c_command_temp[7:0]		<= w_i2c_data_out;	 
 end
 
-assign w_i2c_command = ((r_write_byte_cnt == 2) & (~w_R_W) & r_addr_hit) ? r_i2c_command_temp : w_i2c_command;
+assign w_i2c_command = ((r_write_byte_cnt == 2) & (~w_R_W) & r_addr_hit) ? r_i2c_command_temp : /*w_i2c_command*/16'hffff;
 
 
 
