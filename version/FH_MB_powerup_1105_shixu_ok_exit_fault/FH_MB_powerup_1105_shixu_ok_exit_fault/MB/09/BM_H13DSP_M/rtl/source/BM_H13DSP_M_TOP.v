@@ -202,11 +202,11 @@ OSCH inst_osch(				// 实例化OSCH模块，模块名为inst_osc，用于生成�
 I2C_UPDATE inst_i2c_update_flash_config(
 .wb_clk_i	(wb_clk	),		// Wishbone总线时钟输入，来自inst_osc生成的wb_clk
 .wb_rst_i	(~pon_reset_n),		// Wishbone总线复位输入
-.wb_cyc_i	(	1'b0	),		// Wishbone总线周期输入
-.wb_stb_i	(	1'b0	),		// Wishbone总线选通输入
-.wb_we_i	(	1'b0	),		// Wishbone总线选通输入
-.wb_adr_i	(	8'h00	),		// Wishbone总线地址输入
-.wb_dat_i	(	8'h00	),		// Wishbone总线数据输入
+.wb_cyc_i	(	1'b0	      ),		// Wishbone总线周期输入
+.wb_stb_i	(	1'b0	      ),		// Wishbone总线选通输入
+.wb_we_i	(	1'b0	      ),		// Wishbone总线选通输入
+.wb_adr_i	(	8'h00	      ),		// Wishbone总线地址输入
+.wb_dat_i	(	8'h00	      ),		// Wishbone总线数据输入
 .wb_dat_o	(		),		// Wishbone总线数据输出，此处未连接
 .wb_ack_o	(		),		// Wishbone总线响应输出，此处未连接
 

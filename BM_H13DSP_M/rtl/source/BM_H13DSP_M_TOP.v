@@ -212,18 +212,18 @@ OSCH inst_osch(
 // -------------------------------------------------------------------------------------------------------------
 I2C_UPDATE inst_i2c_update_flash_config(
     .wb_clk_i    (wb_clk                ), // Wishbone 时钟信号，输入
-    .wb_rst_i    (                      ), // Wishbone 复位信号，未使用
-    .wb_cyc_i    (                      ), // Wishbone 总线周期信号，未使用
-    .wb_stb_i    (                      ), // Wishbone 选通信号，未使用
-    .wb_we_i     (                      ), // Wishbone 写使能信号，未使用
-    .wb_adr_i    (                      ), // Wishbone 地址信号，未使用
-    .wb_dat_i    (                      ), // Wishbone 数据输入信号，未使用
+    .wb_rst_i    (~pon_reset_n          ), // Wishbone 复位信号，未使用
+    .wb_cyc_i    (	1'b0	            ), // Wishbone 总线周期信号，未使用
+    .wb_stb_i    (	1'b0	            ), // Wishbone 选通信号，未使用
+    .wb_we_i     (	1'b0	            ), // Wishbone 写使能信号，未使用
+    .wb_adr_i    (	8'h00	            ), // Wishbone 地址信号，未使用
+    .wb_dat_i    (	8'h00	            ), // Wishbone 数据输入信号，未使用
     .wb_dat_o    (                      ), // Wishbone 数据输出信号，未使用
     .wb_ack_o    (                      ), // Wishbone 应答信号，未使用
     .i2c1_irqo   (                      ), // I2C 中断信号，未使用
     .wbc_ufm_irq (                      ), // 用户闪存中断信号，未使用
-    .i2c1_scl    (io_I2C7_UPDATE_SCL    ), // I2C 时钟信号，与外部设备连接
-    .i2c1_sda    (io_I2C7_UPDATE_SDA    )  // I2C 数据信号，与外部设备连接
+    .i2c1_scl    (io_I2C2_UPDATE_SCL    ), // I2C 时钟信号，与外部设备连接
+    .i2c1_sda    (io_I2C2_UPDATE_SDA    )  // I2C 数据信号，与外部设备连接
 );
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -2068,27 +2068,27 @@ end
 
 // CMU CPLD ---> M CPLD （从 CMU CPLD 到 M CPLD 的串行转并行模块实例化）
 s2p_master #(
-    .NBIT (96                             )
+    .NBIT (96                               )
 ) inst_cmucpld_to_mcpld_s2p(
-    .clk  (clk_50m					              ), //in
-    .rst  (~pon_reset_n				            ), //in
-    .tick (t1us_tick					            ), //in
-    .si   (i_SS_PAL_DATA_IN_R		          ), //in   //SGPIO_MISO  Serial Signal input
+    .clk  (clk_50m					        ), //in
+    .rst  (~pon_reset_n				        ), //in
+    .tick (t1us_tick					    ), //in
+    .si   (i_SS_PAL_DATA_IN_R		        ), //in   //SGPIO_MISO  Serial Signal input
     .po   (cmucpld_to_mcpld_s2p_data	    ), //out  //Parallel Signal output
-    .sld_n(w_ss_pal_load_n_r			        ), //out  //SGPIO_LOAD
-    .sclk (w_ss_pal_clk_r 			          )  //out  //SGPIO_CLK
+    .sld_n(w_ss_pal_load_n_r			    ), //out  //SGPIO_LOAD
+    .sclk (w_ss_pal_clk_r 			        )  //out  //SGPIO_CLK
 );
 
 //M CPLD  ---> CMU CPLD（从 M CPLD 到 CMU CPLD 的并行转串行模块实例化）
 p2s_slave #(
-    .NBIT(96                              )
+    .NBIT(96                                )
 ) inst_mcpld_to_cmucpld_p2s(
-	  .clk  (clk_50m					              ),//in
-	  .rst  (~pon_reset_n				            ),//in
+	  .clk  (clk_50m					    ),//in
+	  .rst  (~pon_reset_n				    ),//in
 	  .pi   (mbcpld_to_cmucpld_p2s_data	    ),//in   //Parallel Signal input
-	  .so   (w_ss_pal_data_out_r 		        ),//out  //SGPIO_MOSI Serial Signal output
-	  .sld_n(w_ss_pal_load_n_r		          ),//in   //SGPIO_LOAD
-	  .sclk (w_ss_pal_clk_r		              ) //in   //SGPIO_CLK
+	  .so   (w_ss_pal_data_out_r 		    ),//out  //SGPIO_MOSI Serial Signal output
+	  .sld_n(w_ss_pal_load_n_r		        ),//in   //SGPIO_LOAD
+	  .sclk (w_ss_pal_clk_r		            ) //in   //SGPIO_CLK
 );
 
 // -------------------------------------------------------------------------------------------------
@@ -2701,31 +2701,31 @@ pwrseq_slave #(
 //电源状态监测接口（接收各通道 “电源好” 信号）
 //from Power Controller PG signal：从电源控制器接收的“电源好（PG，Power Good）”信号
 // 注：PG信号为高电平有效，表示该电源通道电压/电流达到额定值，稳定可用；低电平表示异常
-  .p5v_stby_pg					(db_i_pg_p5v_stby			),  // 注释备用：P5V待机电源PG信号（当前设计未使用）
-  .grp_b_p0_33_s5_pg			        (db_i_pgd_p0_vddc			),  // 注释备用：P0 CPU 3.3V S5状态PG信号（当前设计未使用）
-  .grp_b_p1_33_s5_pg			        (db_i_pgd_p1_vddc		  ),  // 注释备用：P1 CPU 3.3V S5状态PG信号（当前设计未使用）					
-  .grp_b_p0_18_s5_pg			        (db_i_pgd_p0_vdd_18_stby	),  // 输入：P0 CPU 1.8V待机电源PG信号（去抖后，`db_`前缀表示去抖）
-  .grp_b_p1_18_s5_pg			        (db_i_pgd_p1_vdd_18_stby	),  // 输入：P1 CPU 1.8V待机电源PG信号（去抖后）
-  .p3v3_stby_pg					(db_i_pwrgd_p3v3_stby		),  // 输入：3.3V待机电源PG信号（去抖后，如BMC待机供电）
-  .p12v_stby_pg					(/* db_i_pg_p12v_stby_efuse */	),  // 注释备用：12V待机电源PG信号（带EFUSE过流保护，当前未使用）
-  .p12v_efuse_pg				        (/* db_i_pg_p12v_efuse */			),  // 注释备用：12V主电源EFUSE PG信号（当前未使用）
-  .p12v_ssd_efuse_pg			        (/* db_i_pg_p12v_ssd_efuse */		),  // 注释备用：SSD 12V EFUSE PG信号（当前未使用）
-  .p12v_p0_dimm_pg				(/* pg_cpu0_dimm_efuse */			),	// 注释备用：P0内存12V EFUSE PG信号（低电平有效，需取反，当前未使用）
-  .p12v_p1_dimm_pg			        (		),  					// 注释备用：P1内存12V EFUSE PG信号（当前未使用）
-  .p5v_pg						(db_i_pgd_p5v			),  // 注释备用：5V主电源PG信号（当前未使用）
+  .p5v_stby_pg					        (db_i_pg_p5v_stby			        ),  // 输入：P5V待机电源PG信号（当前设计未使用）
+  .grp_b_p0_33_s5_pg			        (db_i_pgd_p0_vddc			        ),  // 输入：P0 CPU 3.3V S5状态PG信号（当前设计未使用）
+  .grp_b_p1_33_s5_pg			        (db_i_pgd_p1_vddc		            ),  // 输入：P1 CPU 3.3V S5状态PG信号（当前设计未使用）					
+  .grp_b_p0_18_s5_pg			        (db_i_pgd_p0_vdd_18_stby	        ),  // 输入：P0 CPU 1.8V待机电源PG信号（去抖后，`db_`前缀表示去抖）
+  .grp_b_p1_18_s5_pg			        (db_i_pgd_p1_vdd_18_stby	        ),  // 输入：P1 CPU 1.8V待机电源PG信号（去抖后）
+  .p3v3_stby_pg					        (db_i_pwrgd_p3v3_stby		        ),  // 输入：3.3V待机电源PG信号（去抖后，如BMC待机供电）
+  .p12v_stby_pg					        (/* db_i_pg_p12v_stby_efuse */	    ),  // 输入：12V待机电源PG信号（带EFUSE过流保护，当前未使用）
+  .p12v_efuse_pg				        (/* db_i_pg_p12v_efuse */			),  // 输入：12V主电源EFUSE PG信号（当前未使用）
+  .p12v_ssd_efuse_pg			        (/* db_i_pg_p12v_ssd_efuse */		),  // 输入：SSD 12V EFUSE PG信号（当前未使用）
+  .p12v_p0_dimm_pg				        (/* pg_cpu0_dimm_efuse */			),	// 输入：P0内存12V EFUSE PG信号（低电平有效，需取反，当前未使用）
+  .p12v_p1_dimm_pg			            (		                            ),  // 输入：P1内存12V EFUSE PG信号（当前未使用）
+  .p5v_pg						        (db_i_pgd_p5v			            ),  // 输入：5V主电源PG信号（当前未使用）
 
-  .i_pwrgd_ocp0_nic_pwrgd		(/* db_i_pwrgd_ocp0_nic_pwrgd */	),  // 注释备用：OCP0网卡电源PG信号（当前未使用）
-  .grp_c_p0_pg					(db_i_pgd_p0_vdd_11_sus		),  // 输入：P0 CPU 1.1V休眠电源PG信号（去抖后，S3/S5状态供电）
-  .grp_c_p1_pg				        (db_i_pgd_p1_vdd_11_sus		),  // 输入：P1 CPU 1.1V休眠电源PG信号（去抖后）
-  .grp_d_vddio_p0_pg			        (db_i_pgd_p0_vddio			),  // 输入：P0 CPU IO（输入输出）电源PG信号（去抖后，如PCIe接口供电）
-  .grp_d_vddio_p1_pg			        (db_i_pgd_p1_vddio		        ),  // 输入：P1 CPU IO电源PG信号（去抖后）
-  .grp_d_soc_p0_pg				(db_i_pgd_p0_vdd_soc_0		),  // 输入：P0 CPU SOC（系统级芯片）电源PG信号（去抖后，核心控制单元供电）
-  .grp_d_soc_p1_pg			        (db_i_pgd_p1_vdd_soc_0		),  // 输入：P1 CPU SOC电源PG信号（去抖后）
+  .i_pwrgd_ocp0_nic_pwrgd		        (/* db_i_pwrgd_ocp0_nic_pwrgd */	),  // 输入：OCP0网卡电源PG信号（当前未使用）
+  .grp_c_p0_pg					        (db_i_pgd_p0_vdd_11_sus		        ),  // 输入：P0 CPU 1.1V休眠电源PG信号（去抖后，S3/S5状态供电）
+  .grp_c_p1_pg				            (db_i_pgd_p1_vdd_11_sus		        ),  // 输入：P1 CPU 1.1V休眠电源PG信号（去抖后）
+  .grp_d_vddio_p0_pg			        (db_i_pgd_p0_vddio			        ),  // 输入：P0 CPU IO（输入输出）电源PG信号（去抖后，如PCIe接口供电）
+  .grp_d_vddio_p1_pg			        (db_i_pgd_p1_vddio		            ),  // 输入：P1 CPU IO电源PG信号（去抖后）
+  .grp_d_soc_p0_pg				        (db_i_pgd_p0_vdd_soc_0		        ),  // 输入：P0 CPU SOC（系统级芯片）电源PG信号（去抖后，核心控制单元供电）
+  .grp_d_soc_p1_pg			            (db_i_pgd_p1_vdd_soc_0		        ),  // 输入：P1 CPU SOC电源PG信号（去抖后）
   
-  .grp_d_p0_vddcore0_pg			(db_i_pgd_p0_vdd_core_0		),  // 输入：P0 CPU核心0电源PG信号（去抖后，CPU运算核心供电）
-  .grp_d_p1_vddcore0_pg		        (db_i_pgd_p1_vdd_core_0		),  // 输入：P1 CPU核心0电源PG信号（去抖后）
-  .grp_d_p0_vddcore1_pg			(db_i_pgd_p0_vdd_core_1		),  // 输入：P0 CPU核心1电源PG信号（去抖后，多核CPU的第二核心供电）
-  .grp_d_p1_vddcore1_pg		        (db_i_pgd_p1_vdd_core_1		),  // 输入：P1 CPU核心1电源PG信号（去抖后）
+  .grp_d_p0_vddcore0_pg			        (db_i_pgd_p0_vdd_core_0		        ),  // 输入：P0 CPU核心0电源PG信号（去抖后，CPU运算核心供电）
+  .grp_d_p1_vddcore0_pg		            (db_i_pgd_p1_vdd_core_0		        ),  // 输入：P1 CPU核心0电源PG信号（去抖后）
+  .grp_d_p0_vddcore1_pg			        (db_i_pgd_p0_vdd_core_1		        ),  // 输入：P0 CPU核心1电源PG信号（去抖后，多核CPU的第二核心供电）
+  .grp_d_p1_vddcore1_pg		            (db_i_pgd_p1_vdd_core_1		        ),  // 输入：P1 CPU核心1电源PG信号（去抖后）
   
  //电源驱动接口（输出各通道使能信号） 
 //to Power Controller Enable Pin：向电源控制器输出的“电源使能信号”（高电平有效，1=使能供电，0=断开供电）
@@ -4504,8 +4504,8 @@ bmc_cpld_i2c_ram #(
     .i_rst_i2c_n                    (1'b1                             ), // I2C 复位信号，始终为高电平
 
     // I2C 接口信号
-    .i_scl                          (i_I2C7_PAL_SCL                   ), // I2C 时钟信号 100Khz
-    .io_sda                         (io_I2C7_PAL_SDA                  ), // I2C 数据信号（双向）
+    .i_scl                          (i_I2C2_PAL_SCL                   ), // I2C 时钟信号 100Khz
+    .io_sda                         (io_I2C2_PAL_SDA                  ), // I2C 数据信号（双向）
 
     // 系统配置信号
     .i_product_id                   (`PRODUCT_ID                      ), // 地址 0x0000, 产品 ID

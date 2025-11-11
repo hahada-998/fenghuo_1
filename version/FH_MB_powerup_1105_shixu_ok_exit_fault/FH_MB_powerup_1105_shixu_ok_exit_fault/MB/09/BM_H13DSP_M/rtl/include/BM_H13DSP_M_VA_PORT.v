@@ -73,12 +73,11 @@ inout   io_I2C2_UPDATE_SDA                                                      
 inout   io_I2C2_PAL_SDA                                                           /* synthesis LOC = "Y9  "*/,    //default 1 active 0           I
 input   i_I2C2_PAL_SCL                                                            /* synthesis LOC = "W9  "*/,    //default 1 active 0           I
 
-output o_SS_PAL_CLK_R                                                             /* synthesis LOC = "B12 "*/,    //default 0 pull up en         O
-output o_SS_PAL_DATA_OUT_R                                                        /* synthesis LOC = "B13 "*/,    //default 0 pull up en         O
 input   i_SS_PAL_DATA_IN_R                                                        /* synthesis LOC = "A14 "*/,    //default 1 active 0           I
-output o_SS_PAL_LOAD_N_R                                                          /* synthesis LOC = "A12 "*/,    //default 0 pull up en         O
-
-output o_PAL_BMC_PERST_N_R                                                        /* synthesis LOC = "C1  "*/,    //default 0 pull up en         O
+output  o_SS_PAL_CLK_R                                                            /* synthesis LOC = "B12 "*/,    //default 0 pull up en         O
+output  o_SS_PAL_LOAD_N_R                                                         /* synthesis LOC = "A12 "*/,    //default 0 pull up en         O
+output  o_SS_PAL_DATA_OUT_R                                                       /* synthesis LOC = "B13 "*/,    //default 0 pull up en         O
+output  o_PAL_BMC_PERST_N_R                                                       /* synthesis LOC = "C1  "*/,    //default 0 pull up en         O
 
 //ESPI
 input   i_CPLD_ESPI_D0                                                            /* synthesis LOC = "N14 "*/,    //default 1 active 0           I
@@ -95,30 +94,30 @@ input   i_SATA1_BACKPLANE_TYPE                                                  
 output o_PAL_SATA1_CONTROLLER0_R                                                  /* synthesis LOC = "F6  "*/,    //default 1 active 0           I
 
 //CPU0
-inout   o_P0_DIMM_GL_PCAMP_R                                                      /* synthesis LOC = "A8  "*/,    //default 1 active 0           I
-inout   o_P0_DIMM_AF_PCAMP_R                                                      /* synthesis LOC = "T14 "*/,    //default 1 active 0           I
-input   i_P0_SP5R_R_1                                                             /* synthesis LOC = "A7  "*/,    //default 1 active 0           I
-input   i_P0_SP5R_R_2                                                             /* synthesis LOC = "B15 "*/,    //default 1 active 0           I
-input   i_P0_SP5R_R_3                                                             /* synthesis LOC = "R15 "*/,    //default 1 active 0           I
-input   i_P0_SP5R_R_4                                                             /* synthesis LOC = "K6  "*/,    //default 1 active 0           I
-input   i_P0_PRSNT_N                                                              /* synthesis LOC = "B16 "*/,    //default 1 active 0           I
-input   i_P0_SGPIO_LD_R                                                           /* synthesis LOC = "K16 "*/,    //default 1 active 0           I
-input   i_P0_SGPIO_DATA_R                                                         /* synthesis LOC = "L17 "*/,    //default 1 active 0           I
-input   i_CPU0_SGPIO0_CLK                                                         /* synthesis LOC = "H17 "*/,    //default 1 active 0           I
-input   i_CPU0_SGPIO1_CLK                                                         /* synthesis LOC = "H18 "*/,    //default 1 active 0           I
-input   i_CPU0_SGPIO2_CLK                                                         /* synthesis LOC = "G20 "*/,    //default 1 active 0           I
-input   i_CPU0_SGPIO3_CLK                                                         /* synthesis LOC = "G15 "*/,    //default 1 active 0           I
-input   i_P0_CORETYPE_0                                                           /* synthesis LOC = "T16 "*/,    //default 1 active 0           I
-input   i_P0_CORETYPE_1                                                           /* synthesis LOC = "W20 "*/,    //default 1 active 0           I
-input   i_P0_CORETYPE_2                                                           /* synthesis LOC = "U15 "*/,    //default 1 active 0           I
-input   i_P0_XTRIG_N_4                                                            /* synthesis LOC = "J18 "*/,    //default 1 active 0           I
-input   i_P0_XTRIG_N_5                                                            /* synthesis LOC = "K20 "*/,    //default 1 active 0           I
-input   i_P0_XTRIG_N_6                                                            /* synthesis LOC = "J17 "*/,    //default 1 active 0           I
-input   i_P0_XTRIG_N_7                                                            /* synthesis LOC = "J20 "*/,    //default 1 active 0           I
-input   i_P0_UART_TXD_0                                                           /* synthesis LOC = "M16 "*/,    //default 1 active 0           I
-output o_P0_UART_RXD_0                                                            /* synthesis LOC = "F19 "*/,    //default 0 pull up en         O
-input   i_P0_UART_TXD_1                                                           /* synthesis LOC = "K15 "*/,    //default 1 active 0           I
-output o_P0_UART_RXD_1                                                            /* synthesis LOC = "M19 "*/,    //default 0 pull up en         O
+inout   o_P0_DIMM_GL_PCAMP_R      /* synthesis LOC = "A8  "*/,    //default 1 active 0      I    
+inout   o_P0_DIMM_AF_PCAMP_R      /* synthesis LOC = "T14 "*/,    //default 1 active 0      I    
+input   i_P0_SP5R_R_1             /* synthesis LOC = "A7  "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_SP5R_R_2             /* synthesis LOC = "B15 "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_SP5R_R_3             /* synthesis LOC = "R15 "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_SP5R_R_4             /* synthesis LOC = "K6  "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_PRSNT_N              /* synthesis LOC = "B16 "*/,    //default 1 active 0      I  P0存在
+input   i_P0_SGPIO_LD_R           /* synthesis LOC = "K16 "*/,    //default 1 active 0      I  未使用 
+input   i_P0_SGPIO_DATA_R         /* synthesis LOC = "L17 "*/,    //default 1 active 0      I  未使用 
+input   i_CPU0_SGPIO0_CLK         /* synthesis LOC = "H17 "*/,    //default 1 active 0      I  未使用 
+input   i_CPU0_SGPIO1_CLK         /* synthesis LOC = "H18 "*/,    //default 1 active 0      I  未使用 
+input   i_CPU0_SGPIO2_CLK         /* synthesis LOC = "G20 "*/,    //default 1 active 0      I  未使用 
+input   i_CPU0_SGPIO3_CLK         /* synthesis LOC = "G15 "*/,    //default 1 active 0      I  未使用
+input   i_P0_CORETYPE_0           /* synthesis LOC = "T16 "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_CORETYPE_1           /* synthesis LOC = "W20 "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_CORETYPE_2           /* synthesis LOC = "U15 "*/,    //default 1 active 0      I  P0状态信息
+input   i_P0_XTRIG_N_4            /* synthesis LOC = "J18 "*/,    //default 1 active 0      I  未使用
+input   i_P0_XTRIG_N_5            /* synthesis LOC = "K20 "*/,    //default 1 active 0      I  未使用
+input   i_P0_XTRIG_N_6            /* synthesis LOC = "J17 "*/,    //default 1 active 0      I  未使用
+input   i_P0_XTRIG_N_7            /* synthesis LOC = "J20 "*/,    //default 1 active 0      I  未使用
+input   i_P0_UART_TXD_0           /* synthesis LOC = "M16 "*/,    //default 1 active 0      I
+output  o_P0_UART_RXD_0           /* synthesis LOC = "F19 "*/,    //default 0 pull up en    O
+input   i_P0_UART_TXD_1           /* synthesis LOC = "K15 "*/,    //default 1 active 0      I
+output  o_P0_UART_RXD_1           /* synthesis LOC = "M19 "*/,    //default 0 pull up en    O
 
 input   i_P0_THERMTRIP_N                                                          /* synthesis LOC = "G17 "*/,    //default 1 active 0           I
 input   i_P0_PCIE_RST_N_0                                                         /* synthesis LOC = "H20 "*/,    //default 1 active 0           I
@@ -268,10 +267,10 @@ output o_PAL_P1_VDD_CORE_1_EN_R                                                 
 input   i_PGD_P1_VDD_SOC_0                                                        /* synthesis LOC = "R12 "*/,    //default 1 active 0           I
 output o_PAL_BMC_AUX_PGD                                                          /* synthesis LOC = "W17 "*/,    //default 0 pull up en         O
 
-//P2 o_PAL_SPI1_BMC_WP_N 改 PAL_TPM_EN
+//P2 o_PAL_SPI1_BMC_WP_N 攄1�7 PAL_TPM_EN
 output o_PAL_TPM_EN                                                               /* synthesis LOC = "P2  "*/,    //default 0 pull up en         O
 
-//R20 PAL_TPM_EN 改 SPI1_BMC_WP_N_1V8
+//R20 PAL_TPM_EN 攄1�7 SPI1_BMC_WP_N_1V8
 output o_SPI1_BMC_WP_N_1V8                                                        /* synthesis LOC = "R20 "*/,    //default 0 pull up en         O
 input   i_P1_VDDIO_OCP_N                                                          /* synthesis LOC = "W16 "*/,    //default 1 active 0           I
 output o_P1V0_STBY_M2_EN                                                          /* synthesis LOC = "D1  "*/,    //default 0 pull up en         O
@@ -279,7 +278,7 @@ input   i_PG_P1V0_STBY_M2_R                                                     
 
 //OTHER
 input  i_SCM_ROT_CPU_RST_N_R                                                      /* synthesis LOC = "A16 "*/,    //default 1 active 0           I
-//J4改悬空 output o_P0_VPP_9545_6_RST_N_R                                                    /* synthesis LOC = "J4  "*/,    //default 0 pull up en         O
+//J4改悬穄1�7 output o_P0_VPP_9545_6_RST_N_R                                                    /* synthesis LOC = "J4  "*/,    //default 0 pull up en         O
 output o_P0_VPP_9545_5_RST_N_R                                                    /* synthesis LOC = "C15 "*/,    //default 0 pull up en         O
 output o_P0_VPP_9545_4_RST_N_R                                                    /* synthesis LOC = "L6  "*/,    //default 0 pull up en         O
 output o_P0_VPP_9545_3_RST_N_R                                                    /* synthesis LOC = "M6  "*/,    //default 0 pull up en         O
@@ -289,7 +288,7 @@ output o_PAL_P0_I2C5_9548_RST_R                                                 
 output o_BIOS_POST_CMPLT_BMC_N_R                                                  /* synthesis LOC = "B14 "*/,    //default 0 pull up en         O
 output o_PAL_I3C_MUX_EN_R_N                                                       /* synthesis LOC = "G12 "*/,    //default 0 pull up en         O
 
-//直接赋值和使能其他配置
+//直接赋��和使能其他配置
 output o_I3C_MUX_SEL_R_0                                                          /* synthesis LOC = "M1  "*/,    //default 0 pull up en         O
 output o_I3C_MUX_OE_N_R_0                                                         /* synthesis LOC = "L1  "*/,    //default 0 pull up en         O
 output o_I3C_MUX_SEL_R_1                                                          /* synthesis LOC = "L2  "*/,    //default 0 pull up en         O
