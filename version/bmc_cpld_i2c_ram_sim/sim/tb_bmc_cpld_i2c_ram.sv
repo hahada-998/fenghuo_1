@@ -236,11 +236,13 @@ module tb_bmc_cpld_i2c_ram;
         send_byte(8'h21);
 
         // 2. 主机发送寄存器读地址(假设要读取的寄存器地址为0x00)
-        send_byte(8'h01);
+        send_byte(8'h03);
+
+        // 开始读取数据
 
         // 3. 读取从设备寄存器数据
-        read_byte(); // 读取第一个字节
-
+        // read_byte(); // 读取第一个字节
+        #1000;
         // 4. 发送停止信号
         i_scl = 0;
         io_sda_driver = 0;
