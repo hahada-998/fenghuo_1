@@ -379,11 +379,11 @@ wire                   db_i_p1_vddio_ocp_n			      ; // 全局 VDD 过流保护�
 /*
 wire                   db_i_ps1_prsnt                  ; // PSU1 存在检测
 wire                   db_i_ps1_dcok_n                 ; // PSU1 对接状态（低电平有效
-wire                   db_i_ps1_smb_alert              ;	// PSU1 SMBus 告警
+wire                   db_i_ps1_smb_alert              ; // PSU1 SMBus 告警
 wire                   db_i_ps1_acfail_n               ; // PSU1 交流故障（低电平有效）
 wire                   db_i_ps2_prsnt                  ; // PSU2 存在检测（低电平有效）
 wire                   db_i_ps2_dcok_n                 ; // PSU2 对接状态（低电平有效）
-wire                   db_i_ps2_smb_alert              ;	// PSU2 SMBus 告警
+wire                   db_i_ps2_smb_alert              ; // PSU2 SMBus 告警
 wire                   db_i_ps2_acfail_n               ; // PSU2 交流故障（低电平有效）
 wire                   db_i_ps3_prsnt                  ; // PSU3 存在检测
 wire                   db_i_ps4_prsnt                  ; // PSU4 存在检测
@@ -1303,10 +1303,10 @@ PGM_DEBOUNCE #(
     .rst(~pon_reset_n),
     .timer_tick(1'b1),
     .din({
-		    i_P0_VR_I2C_ALERT_N	           ,//01	P0 VR（电压调节模块）I2C7 告警信号（低电平有效），P0 VR 通过 I2C7 产生的告警
+		i_P0_VR_I2C_ALERT_N	           ,//01	P0 VR（电压调节模块）I2C7 告警信号（低电平有效），P0 VR 通过 I2C7 产生的告警
         i_P1_VR_I2C_ALERT_N	           ,//02	P1 VR I2C7 告警信号（低电平有效），P1 VR 通过 I2C7 产生的告警
-	      i_P0_THERMTRIP_N               ,//03	P0 热跳闸信号（低电平有效），P0 热保护跳闸指示
-	      i_P1_THERMTRIP_N                //04	P1 热跳闸信号（低电平有效），P1 热保护跳闸指示
+	    i_P0_THERMTRIP_N               ,//03	P0 热跳闸信号（低电平有效），P0 热保护跳闸指示
+	    i_P1_THERMTRIP_N                //04	P1 热跳闸信号（低电平有效），P1 热保护跳闸指示
         }),             
     .dout({
         db_i_p0_vr_i2c_alert_n         ,//01

@@ -7,24 +7,22 @@
 #### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
 
 1 non-gated/non-generated clock tree(s) driving 176 clock pin(s) of sequential element(s)
-6 gated/generated clock tree(s) driving 2199 clock pin(s) of sequential element(s)
-0 instances converted, 2199 sequential instances remain driven by gated/generated clocks
+4 gated/generated clock tree(s) driving 2167 clock pin(s) of sequential element(s)
+0 instances converted, 2167 sequential instances remain driven by gated/generated clocks
 
 ==================================== Non-Gated/Non-Generated Clocks ====================================
 Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance                 
 --------------------------------------------------------------------------------------------------------
-@KP:ckid0_8       i_CPLD_ESPI_CLK     port                   176        bios_espi_link.current_state[31]
+@KP:ckid0_6       i_CPLD_ESPI_CLK     port                   176        bios_espi_link.current_state[31]
 ========================================================================================================
-====================================================================================================== Gated/Generated Clocks ======================================================================================================
-Clock Tree ID     Driving Element                                               Drive Element Type     Unconverted Fanout     Sample Instance                                             Explanation                               
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-@KP:ckid0_1       pll_inst.PLLInst_0.CLKOS                                      EHXPLLJ                595                    bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0]                      Clock source is invalid for GCC           
-@KP:ckid0_3       bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT      and                    16                     bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]      Clock source is invalid for GCC           
-@KP:ckid0_5       pll_inst.PLLInst_0.CLKOP                                      EHXPLLJ                1569                   r_switch2_mode[2:0]                                         Clock source is invalid for GCC           
-@KP:ckid0_7       bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT     and                    16                     bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC           
-@KP:ckid0_9       pwrseq_master_inst.fault_clear_ns_0_uclk.OUT                  or                     1                      pwrseq_master_inst.cmu_fault_clear                          Clock source is invalid for GCC           
-@KP:ckid0_10      pwrseq_slave_inst.reg_pwr_btn_l.Q[0]                          dffe                   2                      cpu_module_u1.r_p0_slp_s5_n                                 Derived clock on input (not legal for GCC)
-====================================================================================================================================================================================================================================
+======================================================================================= Gated/Generated Clocks =======================================================================================
+Clock Tree ID     Driving Element                                  Drive Element Type     Unconverted Fanout     Sample Instance                            Explanation                               
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       pll_inst.PLLInst_0.CLKOS                         EHXPLLJ                595                    bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0]     Clock source is invalid for GCC           
+@KP:ckid0_4       pll_inst.PLLInst_0.CLKOP                         EHXPLLJ                1569                   r_switch2_mode[2:0]                        Clock source is invalid for GCC           
+@KP:ckid0_7       pwrseq_master_inst.fault_clear_ns_0_uclk.OUT     or                     1                      pwrseq_master_inst.cmu_fault_clear         Clock source is invalid for GCC           
+@KP:ckid0_8       pwrseq_slave_inst.reg_pwr_btn_l.Q[0]             dffe                   2                      cpu_module_u1.r_p0_slp_s5_n                Derived clock on input (not legal for GCC)
+======================================================================================================================================================================================================
 
 
 ##### END OF CLOCK OPTIMIZATION REPORT ######

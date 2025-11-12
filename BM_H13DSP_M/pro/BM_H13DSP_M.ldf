@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="BM_H13DSP_M" device="LCMXO3LF-6900C-5BG400C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="Power_Fault">
+        <Options def_top="s2p_164">
             <Option name="include path" value="../rtl/include"/>
             <Option name="top" value="BM_H13DSP_M"/>
         </Options>

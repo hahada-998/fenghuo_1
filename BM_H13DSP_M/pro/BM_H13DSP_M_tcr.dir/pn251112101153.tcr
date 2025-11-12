@@ -1,0 +1,6 @@
+#Start recording tcl command: 11/12/2025 10:10:09
+#Project Location: C:/CPLD/intel/fenghuo_init/fenghuo_1/BM_H13DSP_M/pro; Project name: BM_H13DSP_M
+prj_project open "C:/CPLD/intel/fenghuo_init/fenghuo_1/BM_H13DSP_M/pro/BM_H13DSP_M.ldf"
+prj_project save
+prj_project close
+#Stop recording: 11/12/2025 10:11:53

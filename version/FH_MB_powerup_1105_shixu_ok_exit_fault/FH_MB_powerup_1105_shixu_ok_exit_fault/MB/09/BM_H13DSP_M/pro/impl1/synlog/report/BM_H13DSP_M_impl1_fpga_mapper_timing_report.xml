@@ -5,7 +5,7 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 *******************************************************************************************-->
 <report_table display_priority="2" name="Timing Summary">
 <report_link name="Detailed report">
-<data>D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_fpga_mapper.srr</data>
+<data>C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_fpga_mapper.srr</data>
 <title>START OF TIMING REPORT</title>
 </report_link>
 <row>
@@ -17,20 +17,20 @@ Max Top 5 critical clocks will be reported. For rest user needs to refer to Deta
 <row>
 <data>BM_H13DSP_M|i_CPLD_ESPI_CLK</data>
 <data>100.0 MHz</data>
-<data>58.9 MHz</data>
-<data>-3.493</data>
+<data>54.2 MHz</data>
+<data>-4.229</data>
 </row>
 <row>
 <data>pll_i25M_o50M_o25M|CLKOP_inferred_clock</data>
 <data>100.0 MHz</data>
-<data>121.1 MHz</data>
-<data>1.744</data>
+<data>119.0 MHz</data>
+<data>1.600</data>
 </row>
 <row>
 <data>pll_i25M_o50M_o25M|CLKOS_inferred_clock</data>
 <data>100.0 MHz</data>
-<data>94.6 MHz</data>
-<data>-0.570</data>
+<data>93.3 MHz</data>
+<data>-0.718</data>
 </row>
 <row>
 <data>pwrseq_slave_Z3|reg_pwr_btn_l_derived_clock</data>

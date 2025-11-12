@@ -1,207 +1,207 @@
 @N|Running in 64-bit mode
 @N|Running in 64-bit mode
-@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
-@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v":11:7:11:24|Synthesizing module pll_i25M_o50M_o25M in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\pon_reset.v":17:7:17:15|Synthesizing module pon_reset in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":3:7:3:15|Synthesizing module timer_gen in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":82:54:82:61|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":83:54:83:60|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":144:41:144:47|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":145:41:145:47|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":146:41:146:49|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":147:41:147:48|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":241:68:241:77|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":242:63:242:71|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
-@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
-@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
-@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
-@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":105:7:105:17|Synthesizing module SYNC_DATA_N in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":39:32:39:37|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":38:32:38:37|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":61:21:61:26|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":75:26:75:35|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":5:7:5:18|Synthesizing module Pwr_But_Ctrl in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":150:18:150:28|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":199:68:199:80|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":202:71:202:83|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":220:24:220:37|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":221:24:221:36|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":259:20:259:32|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":295:23:295:35|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":301:23:301:35|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":358:20:358:28|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":359:20:359:32|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\edge_detect.v":9:7:9:17|Synthesizing module Edge_Detect in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":11:7:11:20|Synthesizing module bmc_ctl_pwrbtn in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":91:30:91:45|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":98:33:98:48|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":126:32:126:49|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":133:35:133:52|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":162:32:162:49|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":169:35:169:52|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":238:23:238:35|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":297:29:297:40|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":298:26:298:34|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":325:27:325:42|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":349:29:349:44|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":370:28:370:44|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":394:35:394:52|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v":2:7:2:16|Synthesizing module system_rst in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v":58:29:58:49|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v":64:38:64:58|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\cpu_thermtrip.v":1:7:1:19|Synthesizing module cpu_thermtrip in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectB_chklive.v":19:7:19:27|Synthesizing module fault_detectB_chklive in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Edge_Detect_SL.v":14:7:14:20|Synthesizing module Edge_Detect_SL in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":3:7:3:18|Synthesizing module Signal_Latch in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":70:25:70:37|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":1:7:1:16|Synthesizing module cpu_module in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":72:7:72:19|Synthesizing module pwrseq_master in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":853:20:853:31|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":63:7:63:18|Synthesizing module pwrseq_slave in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\dimm_fail_event.v":1:7:1:21|Synthesizing module dimm_fail_event in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":1:7:1:16|Synthesizing module error_code in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":70:32:70:37|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":27:7:27:17|Synthesizing module UART_MASTER in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":260:72:260:81|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":1:7:1:15|Synthesizing module espi_link in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v":2:7:2:21|Synthesizing module pcie_dync_alloc in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":2:7:2:23|Synthesizing module pch_cpld_espi_ram in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v":10:7:10:19|Synthesizing module i2c_slave_bmc in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bios_i2c\bios_cpld_i2c_ram.v":1:7:1:23|Synthesizing module bios_cpld_i2c_ram in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\cmos_clear.v":1:7:1:16|Synthesizing module clear_cmos in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\nmi_clear.v":1:7:1:15|Synthesizing module clear_nmi in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1:7:1:22|Synthesizing module bmc_cpld_i2c_ram in library work.
-@N: CG364 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":21:8:21:18|Synthesizing module BM_H13DSP_M in library work.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1793:34:1793:59|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1960:29:1960:49|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":2238:27:2238:37|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3744:38:3744:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3745:38:3745:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3746:38:3746:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3747:38:3747:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3748:38:3748:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3749:38:3749:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3750:38:3750:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3751:38:3751:51|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3752:38:3752:54|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3753:38:3753:54|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3754:38:3754:54|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3755:38:3755:54|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3756:38:3756:54|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3757:38:3757:54|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3758:38:3758:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3759:38:3759:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3760:38:3760:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3761:38:3761:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3762:38:3762:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3763:38:3763:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3764:38:3764:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3765:38:3765:55|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4108:39:4108:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4109:39:4109:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4110:39:4110:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4111:39:4111:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4112:39:4112:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4113:39:4113:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4114:39:4114:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4115:39:4115:53|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4116:39:4116:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4117:39:4117:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4118:39:4118:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4119:39:4119:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4120:39:4120:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4121:39:4121:56|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4122:39:4122:57|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4123:39:4123:57|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4124:39:4124:57|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4125:39:4125:57|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4126:39:4126:58|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4127:39:4127:57|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4128:39:4128:57|Removing redundant assignment.
-@N: CG179 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4129:39:4129:57|Removing redundant assignment.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":46:8:46:26|Input i_FM_PWRBTN_OUT_N_R is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":94:8:94:29|Input i_SATA1_BACKPLANE_TYPE is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":145:8:145:30|Input i_P0_PWRGD_VDD_3V3_STBY is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":181:8:181:30|Input i_P1_PWRGD_VDD_3V3_STBY is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":222:8:222:26|Input i_PGD_P0_VDD_CORE_0 is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":232:8:232:26|Input i_PGD_P0_VDD_CORE_1 is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":235:8:235:21|Input i_PGD_P0_VDDIO is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":238:8:238:25|Input i_PGD_P0_VDD_SOC_0 is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":244:8:244:26|Input i_PAL_P12V_CPU1_GOK is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":245:8:245:26|Input i_PAL_P12V_CPU0_GOK is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":246:8:246:25|Input i_PAL_P12V_CPU0_OC is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":247:8:247:25|Input i_PAL_P12V_CPU1_OC is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":249:8:249:27|Input i_PGD_P0_VDD_18_STBY is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":250:8:250:27|Input i_PGD_P1_VDD_18_STBY is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":252:8:252:26|Input i_PGD_P1_VDD_CORE_0 is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":257:8:257:26|Input i_PGD_P1_VDD_11_SUS is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":259:8:259:21|Input i_P1V8_STBY_PG is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":260:8:260:21|Input i_PGD_P1_VDDIO is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":266:8:266:26|Input i_PGD_P1_VDD_CORE_1 is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":268:8:268:25|Input i_PGD_P1_VDD_SOC_0 is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":339:8:339:26|Input i_PGD_P0_VDD_11_SUS is unused.
-@N: CL201 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":6:12:6:21|Input i_clk_10ms is unused.
-@N: CL201 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":80:0:80:5|Trying to extract state machine for register current_state.
-@N: CL201 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":108:0:108:5|Trying to extract state machine for register curr_state.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":6:6:6:28|Input i_stby_failure_detected is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":7:6:7:26|Input i_po_failure_detected is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":8:6:8:26|Input i_rt_failure_detected is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":9:6:9:24|Input i_any_pwr_fault_det is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":90:20:90:25|Input t512us is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":91:20:91:23|Input t1ms is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":92:20:92:23|Input t2ms is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":94:20:94:22|Input t1s is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":99:20:99:38|Input dc_on_wait_complete is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":100:20:100:41|Input rt_critical_fail_store is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":120:20:120:31|Input p12v_stby_pg is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":122:20:122:32|Input p12v_efuse_pg is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":123:20:123:36|Input p12v_ssd_efuse_pg is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":124:20:124:34|Input p12v_p0_dimm_pg is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":125:20:125:34|Input p12v_p1_dimm_pg is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":137:20:137:41|Input i_pwrgd_ocp0_nic_pwrgd is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":198:36:198:46|Input i_cpu_pwrok is unused.
-@N: CL201 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":841:0:841:5|Trying to extract state machine for register state.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":105:20:105:25|Input t512ms is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":106:20:106:27|Input t1s_tick is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":5:12:5:17|Input t512us is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":9:12:9:23|Input i_p0_rsmrset is unused.
-@N: CL159 :"D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":10:12:10:23|Input i_p1_rsmrset is unused.
+@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
+@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v":11:7:11:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\pon_reset.v":17:7:17:15|Synthesizing module pon_reset in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":3:7:3:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":82:54:82:61|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":83:54:83:60|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":144:41:144:47|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":145:41:145:47|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":146:41:146:49|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":147:41:147:48|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":241:68:241:77|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v":242:63:242:71|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
+@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
+@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
+@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
+@N: CG364 :"C:\studyware\lattice_diamond_3_14\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":382:44:382:52|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":384:49:384:55|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":105:7:105:17|Synthesizing module SYNC_DATA_N in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v":353:7:353:18|Synthesizing module PGM_DEBOUNCE in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":39:32:39:37|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v":18:7:18:16|Synthesizing module s2p_master in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":61:21:61:26|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":75:26:75:35|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":5:7:5:18|Synthesizing module Pwr_But_Ctrl in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":150:18:150:28|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":199:68:199:80|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":202:71:202:83|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":220:24:220:37|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":221:24:221:36|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":259:20:259:32|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":295:23:295:35|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":301:23:301:35|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":358:20:358:28|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v":359:20:359:32|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\edge_detect.v":9:7:9:17|Synthesizing module Edge_Detect in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":11:7:11:20|Synthesizing module bmc_ctl_pwrbtn in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":91:30:91:45|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":98:33:98:48|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":126:32:126:49|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":133:35:133:52|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":162:32:162:49|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":169:35:169:52|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":238:23:238:35|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":297:29:297:40|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":298:26:298:34|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":325:27:325:42|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":349:29:349:44|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":370:28:370:44|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v":394:35:394:52|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v":2:7:2:16|Synthesizing module system_rst in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v":58:29:58:49|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v":64:38:64:58|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\cpu_thermtrip.v":1:7:1:19|Synthesizing module cpu_thermtrip in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectB_chklive.v":19:7:19:27|Synthesizing module fault_detectB_chklive in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Edge_Detect_SL.v":14:7:14:20|Synthesizing module Edge_Detect_SL in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":3:7:3:18|Synthesizing module Signal_Latch in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v":70:25:70:37|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":1:7:1:16|Synthesizing module cpu_module in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":72:7:72:19|Synthesizing module pwrseq_master in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":853:20:853:31|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":63:7:63:18|Synthesizing module pwrseq_slave in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\dimm_fail_event.v":1:7:1:21|Synthesizing module dimm_fail_event in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":1:7:1:16|Synthesizing module error_code in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":70:32:70:37|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":27:7:27:17|Synthesizing module UART_MASTER in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":260:72:260:81|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":1:7:1:15|Synthesizing module espi_link in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v":2:7:2:21|Synthesizing module pcie_dync_alloc in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":2:7:2:23|Synthesizing module pch_cpld_espi_ram in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v":10:7:10:19|Synthesizing module i2c_slave_bmc in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bios_i2c\bios_cpld_i2c_ram.v":1:7:1:23|Synthesizing module bios_cpld_i2c_ram in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\cmos_clear.v":1:7:1:16|Synthesizing module clear_cmos in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\nmi_clear.v":1:7:1:15|Synthesizing module clear_nmi in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":32:21:32:28|Removing redundant assignment.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v":3:7:3:13|Synthesizing module pvt_gpi in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1:7:1:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+@N: CG364 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":21:8:21:18|Synthesizing module BM_H13DSP_M in library work.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1793:34:1793:59|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":1960:29:1960:49|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":2237:27:2237:37|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3743:38:3743:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3744:38:3744:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3745:38:3745:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3746:38:3746:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3747:38:3747:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3748:38:3748:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3749:38:3749:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3750:38:3750:51|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3751:38:3751:54|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3752:38:3752:54|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3753:38:3753:54|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3754:38:3754:54|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3755:38:3755:54|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3756:38:3756:54|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3757:38:3757:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3758:38:3758:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3759:38:3759:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3760:38:3760:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3761:38:3761:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3762:38:3762:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3763:38:3763:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":3764:38:3764:55|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4107:39:4107:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4108:39:4108:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4109:39:4109:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4110:39:4110:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4111:39:4111:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4112:39:4112:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4113:39:4113:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4114:39:4114:53|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4115:39:4115:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4116:39:4116:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4117:39:4117:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4118:39:4118:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4119:39:4119:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4120:39:4120:56|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4121:39:4121:57|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4122:39:4122:57|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4123:39:4123:57|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4124:39:4124:57|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4125:39:4125:58|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4126:39:4126:57|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4127:39:4127:57|Removing redundant assignment.
+@N: CG179 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v":4128:39:4128:57|Removing redundant assignment.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":46:8:46:26|Input i_FM_PWRBTN_OUT_N_R is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":93:8:93:29|Input i_SATA1_BACKPLANE_TYPE is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":146:8:146:30|Input i_P0_PWRGD_VDD_3V3_STBY is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":182:8:182:30|Input i_P1_PWRGD_VDD_3V3_STBY is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":223:8:223:26|Input i_PGD_P0_VDD_CORE_0 is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":233:8:233:26|Input i_PGD_P0_VDD_CORE_1 is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":236:8:236:21|Input i_PGD_P0_VDDIO is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":239:8:239:25|Input i_PGD_P0_VDD_SOC_0 is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":245:8:245:26|Input i_PAL_P12V_CPU1_GOK is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":246:8:246:26|Input i_PAL_P12V_CPU0_GOK is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":247:8:247:25|Input i_PAL_P12V_CPU0_OC is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":248:8:248:25|Input i_PAL_P12V_CPU1_OC is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":250:8:250:27|Input i_PGD_P0_VDD_18_STBY is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":251:8:251:27|Input i_PGD_P1_VDD_18_STBY is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":253:8:253:26|Input i_PGD_P1_VDD_CORE_0 is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":258:8:258:26|Input i_PGD_P1_VDD_11_SUS is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":260:8:260:21|Input i_P1V8_STBY_PG is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":261:8:261:21|Input i_PGD_P1_VDDIO is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":267:8:267:26|Input i_PGD_P1_VDD_CORE_1 is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":269:8:269:25|Input i_PGD_P1_VDD_SOC_0 is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v":339:8:339:26|Input i_PGD_P0_VDD_11_SUS is unused.
+@N: CL201 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v":6:12:6:21|Input i_clk_10ms is unused.
+@N: CL201 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v":80:0:80:5|Trying to extract state machine for register current_state.
+@N: CL201 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v":108:0:108:5|Trying to extract state machine for register curr_state.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":6:6:6:28|Input i_stby_failure_detected is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":7:6:7:26|Input i_po_failure_detected is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":8:6:8:26|Input i_rt_failure_detected is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v":9:6:9:24|Input i_any_pwr_fault_det is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":90:20:90:25|Input t512us is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":91:20:91:23|Input t1ms is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":92:20:92:23|Input t2ms is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":94:20:94:22|Input t1s is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":99:20:99:38|Input dc_on_wait_complete is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":100:20:100:41|Input rt_critical_fail_store is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":120:20:120:31|Input p12v_stby_pg is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":122:20:122:32|Input p12v_efuse_pg is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":123:20:123:36|Input p12v_ssd_efuse_pg is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":124:20:124:34|Input p12v_p0_dimm_pg is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":125:20:125:34|Input p12v_p1_dimm_pg is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":137:20:137:41|Input i_pwrgd_ocp0_nic_pwrgd is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v":198:36:198:46|Input i_cpu_pwrok is unused.
+@N: CL201 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":841:0:841:5|Trying to extract state machine for register state.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":105:20:105:25|Input t512ms is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":106:20:106:27|Input t1s_tick is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":5:12:5:17|Input t512us is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":9:12:9:23|Input i_p0_rsmrset is unused.
+@N: CL159 :"C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v":10:12:10:23|Input i_p1_rsmrset is unused.
 @N|Running in 64-bit mode
 

@@ -1,19 +1,19 @@
-@P:  Worst Slack : -3.493
-@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Frequency : 58.9 MHz
+@P:  Worst Slack : -4.229
+@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Frequency : 54.2 MHz
 @P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Requested Frequency : 100.0 MHz
-@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Period : 16.985
+@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Estimated Period : 18.459
 @P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Requested Period : 10.000
-@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Slack : -3.493
-@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Frequency : 121.1 MHz
+@P:  BM_H13DSP_M|i_CPLD_ESPI_CLK - Slack : -4.229
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Frequency : 119.0 MHz
 @P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Period : 8.256
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Estimated Period : 8.400
 @P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Requested Period : 10.000
-@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Slack : 1.744
-@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Frequency : 94.6 MHz
+@P:  pll_i25M_o50M_o25M|CLKOP_inferred_clock - Slack : 1.600
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Frequency : 93.3 MHz
 @P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Requested Frequency : 100.0 MHz
-@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Period : 10.570
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Estimated Period : 10.718
 @P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Requested Period : 10.000
-@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Slack : -0.570
+@P:  pll_i25M_o50M_o25M|CLKOS_inferred_clock - Slack : -0.718
 @P:  pwrseq_slave_Z3|reg_pwr_btn_l_derived_clock - Estimated Frequency : 601.6 MHz
 @P:  pwrseq_slave_Z3|reg_pwr_btn_l_derived_clock - Requested Frequency : 100.0 MHz
 @P:  pwrseq_slave_Z3|reg_pwr_btn_l_derived_clock - Estimated Period : 1.662
@@ -24,7 +24,7 @@
 @P:  System - Estimated Period : 2.676
 @P:  System - Requested Period : 10.000
 @P:  System - Slack : 7.324
-@P:  Total Area : 2448.0
+@P:  Total Area : 2540.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
@@ -78,4 +78,4 @@
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
-@P:  CPU Time : 0h:00m:23s
+@P:  CPU Time : 0h:00m:24s

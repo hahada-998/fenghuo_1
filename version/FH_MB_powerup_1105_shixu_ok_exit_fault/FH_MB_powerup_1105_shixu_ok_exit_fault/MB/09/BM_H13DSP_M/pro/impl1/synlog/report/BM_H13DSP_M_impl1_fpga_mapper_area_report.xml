@@ -5,11 +5,11 @@ The file contains the area information from mapper to be displayed as part of th
 *******************************************************************************************-->
 <report_table display_priority="1" name="Area Summary">
 <report_link name="Detailed report">
-<data>D:\FH_MB_powerup_force_1105_shixu_wrong_no_grpcdvcc\MB\09\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_fpga_mapper_resourceusage.rpt</data>
+<data>C:\CPLD\intel\fenghuo_init\fenghuo_1\version\FH_MB_powerup_1105_shixu_ok_exit_fault\FH_MB_powerup_1105_shixu_ok_exit_fault\MB\09\BM_H13DSP_M\pro\impl1\synlog\report\BM_H13DSP_M_impl1_fpga_mapper_resourceusage.rpt</data>
 <title>Resource Usage</title>
 </report_link>
 <parameter tooltip="Total Register bits used" name="Register bits">
-<data>1766</data>
+<data>1779</data>
 </parameter>
 <parameter tooltip="Total I/O cells used" name="I/O cells">
 <data>175</data>
@@ -21,6 +21,6 @@ The file contains the area information from mapper to be displayed as part of th
 <data>0</data>
 </parameter>
 <parameter tcl_name="total_luts" tooltip="Total ORCA LUTs used" name="ORCA LUTs">
-<data>2405</data>
+<data>2497</data>
 </parameter>
 </report_table>
