@@ -70,11 +70,11 @@ output o_SMB_PEHP_CPU1_OCP_ALERT                                  /* synthesis L
 
 //M<-->S SGPIO
 input   i_CPLD_SGPIO0_CLK                                         /* synthesis LOC = "L20 "*/,    //default 0 pull up en         O
-output o_CPLD_SGPIO0_MISO                                         /* synthesis LOC = "R20 "*/,    //default 1 active 0           I
+output  o_CPLD_SGPIO0_MISO                                        /* synthesis LOC = "R20 "*/,    //default 1 active 0           I
 input   i_CPLD_SGPIO0_LD_N                                        /* synthesis LOC = "M20 "*/,    //default 0 pull up en         O
 input   i_CPLD_SGPIO0_MOSI                                        /* synthesis LOC = "M19 "*/,    //default 0 pull up en         O
 input   i_CPLD_SGPIO1_CLK                                         /* synthesis LOC = "N20 "*/,    //default 0 pull up en         O
-output o_CPLD_SGPIO1_MISO                                         /* synthesis LOC = "T19 "*/,    //default 1 active 0           I
+output  o_CPLD_SGPIO1_MISO                                        /* synthesis LOC = "T19 "*/,    //default 1 active 0           I
 input   i_CPLD_SGPIO1_LD_N                                        /* synthesis LOC = "L19 "*/,    //default 0 pull up en         O
 input   i_CPLD_SGPIO1_MOSI                                        /* synthesis LOC = "P20 "*/,    //default 0 pull up en         O
 
@@ -294,20 +294,20 @@ input   i_P1_MCIOG1C_CB_ID1_R                                     /* synthesis L
 
 
 input   i_P0_MCIOP0A_DATAIN                                       /* synthesis LOC = "Y3  "*/,    //default 1 active 0           I
-output o_P0_MCIOP0A_CLK                                           /* synthesis LOC = "U17 "*/,    //default 0 pull up en         O
-output o_P0_MCIOP0A_LD                                            /* synthesis LOC = "U18 "*/,    //default 0 pull up en         O
+output  o_P0_MCIOP0A_CLK                                          /* synthesis LOC = "U17 "*/,    //default 0 pull up en         O
+output  o_P0_MCIOP0A_LD                                           /* synthesis LOC = "U18 "*/,    //default 0 pull up en         O
 
 //CLK
-output o_CLK_GEN_INTR_N_R                                        /* synthesis LOC = "A13  "*/,     //default 0 pull up en         O
-output o_CLK_GEN_LOL_N_R                                         /* synthesis LOC = "U20  "*/,     //default 0 pull up en         O
-input   i_CLK_PAL2_IN_25M                                         /* synthesis LOC = "U1   "*/,    //default 1 active 0           I
-output o_CLK_GEN_FINC_R                                           /* synthesis LOC = "T20  "*/,    //default 0 pull up en         O
-output o_CLK_GEN_RST_N_R                                          /* synthesis LOC = "A14  "*/,    //default 0 pull up en         O
-output o_CLK_GEN_OE_N_R                                           /* synthesis LOC = "A15  "*/,    //default 0 pull up en         O
-output o_CLK_GEN_FDEC_R                                           /* synthesis LOC = "A16  "*/,    //default 0 pull up en         O
-output o_CLK_GEN_I2C_SEL_R                                        /* synthesis LOC = "A17  "*/,    //default 0 pull up en         O
-output o_CLK_DB2000_2_1_OE_N                                      /* synthesis LOC = "P1   "*/,    //default 0 pull up en         O
-output o_CLK_DB2000_2_2_OE_N                                      /* synthesis LOC = "A1   "*/,    //default 0 pull up en         O
+output  o_CLK_GEN_INTR_N_R                                        /* synthesis LOC = "A13  "*/,     //default 0 pull up en       O
+output  o_CLK_GEN_LOL_N_R                                         /* synthesis LOC = "U20  "*/,     //default 0 pull up en       O
+input   i_CLK_PAL2_IN_25M                                         /* synthesis LOC = "U1   "*/,    //default 1 active 0          I
+output o_CLK_GEN_FINC_R                                           /* synthesis LOC = "T20  "*/,    //default 0 pull up en        O
+output o_CLK_GEN_RST_N_R                                          /* synthesis LOC = "A14  "*/,    //default 0 pull up en        O
+output o_CLK_GEN_OE_N_R                                           /* synthesis LOC = "A15  "*/,    //default 0 pull up en        O
+output o_CLK_GEN_FDEC_R                                           /* synthesis LOC = "A16  "*/,    //default 0 pull up en        O
+output o_CLK_GEN_I2C_SEL_R                                        /* synthesis LOC = "A17  "*/,    //default 0 pull up en        O
+output o_CLK_DB2000_2_1_OE_N                                      /* synthesis LOC = "P1   "*/,    //default 0 pull up en        O
+output o_CLK_DB2000_2_2_OE_N                                      /* synthesis LOC = "A1   "*/,    //default 0 pull up en        O
 
 //OTHER
 output o_RST_I2C1_MUX_N_R                                         /* synthesis LOC = "B1  "*/,    //default 0 pull up en         O

@@ -2,24 +2,24 @@
 <BuildStatus>
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
-            <Task name="IBIS" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="Jedecgen" build_result="0" update_result="2" update_time="1762913615"/>
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1762913625"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1762913625"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="1762913625"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1762913625"/>
+            <Task name="Jedecgen" build_result="0" update_result="2" update_time="1762913625"/>
             <Task name="Jedec4Xo3l" build_result="0" update_result="3" update_time="0"/>
             <Task name="Bitgen4Xo3l" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="1762913615">
-            <Task name="Map" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="MapTrace" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="MapVerilogSimFile" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="MapVHDLSimFile" build_result="0" update_result="2" update_time="1762913615"/>
+        <Milestone name="Map" build_result="0" build_time="1762913619">
+            <Task name="Map" build_result="0" update_result="2" update_time="1762913619"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1762941934"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="2" update_time="1762941934"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="2" update_time="1762941934"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="1762913615">
-            <Task name="PAR" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1762913615"/>
-            <Task name="IOTiming" build_result="0" update_result="2" update_time="1762913615"/>
+        <Milestone name="PAR" build_result="0" build_time="1762913626">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1762913626"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1762913626"/>
+            <Task name="IOTiming" build_result="0" update_result="2" update_time="1762913626"/>
         </Milestone>
         <Milestone name="Synthesis" build_result="2" build_time="1762913591">
             <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1762913591"/>
@@ -55,4 +55,3 @@
         <Report name="IBIS/BM_H13DSP_M_impl1.ibs" last_build_time="1762347654" last_build_size="254385"/>
     </Strategy>
 </BuildStatus>
-                                                                                
