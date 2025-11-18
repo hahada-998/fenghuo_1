@@ -1,0 +1,29 @@
+C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src_1/bmc_cpld_i2c_ram.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src_1/bmc_cpld_i2c_ram.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module bmc_cpld_i2c_ram
+
+Top level modules:
+	bmc_cpld_i2c_ram
+
+} {} {}} C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv {1 {vlog -work work -vopt -sv -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/sim/tb_bmc_cpld_i2c_ram.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module tb_bmc_cpld_i2c_ram
+
+Top level modules:
+	tb_bmc_cpld_i2c_ram
+
+} {} {}} C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src_1/i2c_slave_basic0.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src_1/i2c_slave_basic0.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module i2c_slave_basic0
+
+Top level modules:
+	i2c_slave_basic0
+
+} {} {}} C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src_1/i2c_slave_bmc.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/bmc_cpld_i2c_ram_sim/src_1/i2c_slave_bmc.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module i2c_slave_bmc
+
+Top level modules:
+	i2c_slave_bmc
+
+} {} {}}

@@ -126,14 +126,14 @@ module tb_bmc_cpld_i2c_ram;
         .o_bmc_sbtn_pwron_ctl(o_bmc_sbtn_pwron_ctl),
         .o_bmc_sbtn_sysrst_ctl(o_bmc_sbtn_sysrst_ctl),
         .o_aux_pcycle(o_aux_pcycle),
-        .o_usb_sw_s(o_usb_sw_s),
-        .o_p0_vpp_9545_4_rst_n(o_p0_vpp_9545_4_rst_n),
-        .o_p0_vpp_9545_5_rst_n(o_p0_vpp_9545_5_rst_n),
-        .o_p0_vpp_9545_6_rst_n(o_p0_vpp_9545_6_rst_n),
-        .o_bmc_i2c5_9548_rst_n(o_bmc_i2c5_9548_rst_n),
-        .o_bmc_i2c4_9548_1_rst_n(o_bmc_i2c4_9548_1_rst_n),
-        .o_bmc_i2c4_9548_2_rst_n(o_bmc_i2c4_9548_2_rst_n),
-        .o_bmc_i2c4_9548_3_rst_n(o_bmc_i2c4_9548_3_rst_n)
+        .o_usb_sw_s(o_usb_sw_s)
+        // .o_p0_vpp_9545_4_rst_n(o_p0_vpp_9545_4_rst_n),
+        // .o_p0_vpp_9545_5_rst_n(o_p0_vpp_9545_5_rst_n),
+        // .o_p0_vpp_9545_6_rst_n(o_p0_vpp_9545_6_rst_n),
+        // .o_bmc_i2c5_9548_rst_n(o_bmc_i2c5_9548_rst_n),
+        // .o_bmc_i2c4_9548_1_rst_n(o_bmc_i2c4_9548_1_rst_n),
+        // .o_bmc_i2c4_9548_2_rst_n(o_bmc_i2c4_9548_2_rst_n),
+        // .o_bmc_i2c4_9548_3_rst_n(o_bmc_i2c4_9548_3_rst_n)
     );
 
     // 系统时钟25Mhz
@@ -226,29 +226,23 @@ module tb_bmc_cpld_i2c_ram;
         io_sda_driver = 1; // SDA 空闲状态为高电平
         #400;
 
-        // 开始对I2C从设备进行读操作
+        // 开始对I2C从设备进行写操作
         i_scl  = 1; 
         io_sda_driver = 1; 
         #200;
         io_sda_driver = 0; 
         #200;
         i_scl  = 0;
-        send_byte(8'h21);
+        send_byte(8'h20);
 
-        // 2. 主机发送寄存器读地址(假设要读取的寄存器地址为0x00)
-        send_byte(8'h03);
+        // 2. 主机发送寄存器写地址(假设要读取的寄存器地址为0x00)
+        send_byte(8'h10);
+        send_byte(8'h51);
+        send_byte(8'h52);
 
-<<<<<<< HEAD
         // 3. 读取从设备寄存器数据
         // read_byte(); // 读取第一个字节
         # 1600; // 等待一段时间以确保数据被正确读取
-=======
-        // 开始读取数据
-
-        // 3. 读取从设备寄存器数据
-        // read_byte(); // 读取第一个字节
-        #1000;
->>>>>>> 37712bd72a43d0e96472f5f880aeb855cdd1a03c
         // 4. 发送停止信号
         i_scl = 0;
         io_sda_driver = 0;

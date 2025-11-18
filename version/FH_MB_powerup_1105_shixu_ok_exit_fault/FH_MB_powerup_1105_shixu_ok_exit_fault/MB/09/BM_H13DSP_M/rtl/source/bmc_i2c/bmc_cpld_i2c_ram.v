@@ -16,7 +16,7 @@ input   wire  [7:0] i_board_id                                ,//addr 0x0002
 input   wire  [7:0] i_pcb_version                          ,//addr 0x0003
 input   wire  [7:0] i_bom_id                                    ,//addr 0x0004
 input   wire  [7:0] i_cpld_version                        ,//addr 0x0005
-output wire  [7:0] o_test_reg                                ,//addr 0x0006
+output  wire  [7:0] o_test_reg                                ,//addr 0x0006
 input   wire  [7:0] i_year                                        ,//addr 0x0007
 input   wire  [7:0] i_month                                      ,//addr 0x0008
 input   wire  [7:0] i_day                                          ,//addr 0x0009

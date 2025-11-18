@@ -1,0 +1,1 @@
+C:/studyware/lattice_diamond_3_14/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 393216 work.tb_Pwr_But_Ctrl -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt -id 1-6805cabd4893-691acb22-ff-3b4c +__design_bin_path+C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim +__betafsm

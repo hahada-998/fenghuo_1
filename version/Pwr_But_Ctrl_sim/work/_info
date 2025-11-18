@@ -1,0 +1,100 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/CPLD/intel/OKN_M/sim/cpu_aux_test
+T_opt
+!s110 1763363619
+VGS2XPL76JK<7?6VO9>6<S2
+04 15 4 work tb_Pwr_But_Ctrl fast 0
+=1-6805cabd4893-691acb22-ff-3b4c
+R0
+!s12f OEM25U5 
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2024.2;79
+vlowpass_filter
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v
+!s110 1763363610
+!i10b 1
+!s100 =A;>421d4bHQ0>BC5@DC11
+IZngGk`f<PZTcBofWRjL5i0
+Z2 dC:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim
+w1669967036
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v
+!i122 0
+L0 20 63
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2024.2;79
+r1
+!s85 0
+31
+!s108 1763363610.000000
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v|
+!i113 0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vPwr_But_Ctrl
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v
+Z6 !s110 1763363611
+!i10b 1
+!s100 [2l]0I:[@ocYj<RhZOG::0
+In`Um3dF5kAW62lfH94iMA2
+R2
+w1700465344
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v
+!i122 1
+L0 4 275
+R3
+R4
+r1
+!s85 0
+31
+Z7 !s108 1763363611.000000
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v|
+!i113 0
+R5
+R1
+n@pwr_@but_@ctrl
+vtb_Pwr_But_Ctrl
+2C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R6
+!i10b 1
+!s100 D[[LfRo_CkdIAN^7LITfn2
+IAA^RPiKlk>PKYA?T1RDJW1
+S1
+R2
+w1763363588
+8C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv
+FC:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv
+!i122 2
+L0 3 123
+R3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+ntb_@pwr_@but_@ctrl

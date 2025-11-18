@@ -1,0 +1,22 @@
+C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv {1 {vlog -work work -vopt -sv -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/tb_Pwr_But_Ctrl.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module tb_Pwr_But_Ctrl
+
+Top level modules:
+	tb_Pwr_But_Ctrl
+
+} {} {}} C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/Pwr_But_Ctrl.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module Pwr_But_Ctrl
+
+Top level modules:
+	Pwr_But_Ctrl
+
+} {} {}} C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v {1 {vlog -work work -vopt -stats=none C:/CPLD/intel/fenghuo_init/fenghuo_1/version/Pwr_But_Ctrl_sim/lowpass_filter.v
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module lowpass_filter
+
+Top level modules:
+	lowpass_filter
+
+} {} {}}

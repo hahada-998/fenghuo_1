@@ -327,8 +327,8 @@ output o_PAL_SPI_BIOS_UPDATA_EN                                   /* synthesis L
 
 input   i_PAL_PE_WAKE_N                                           /* synthesis LOC = "B20 "*/,    //default 1 active 0           I
 input   i_PAL_NODE1_TYPE                                          /* synthesis LOC = "F16 "*/,    //default 1 active 0           I
-output o_PAL_SPI1_BMC_HOLD                                        /* synthesis LOC = "H19 "*/,    //default 0 pull up en         O
-input   i_PAL_S5_CPU_SHTDN_R                                       /* synthesis LOC = "V1  "*/,   //default 1 active 0           I
+output  o_PAL_SPI1_BMC_HOLD                                       /* synthesis LOC = "H19 "*/,    //default 0 pull up en         O
+input   i_PAL_S5_CPU_SHTDN_R                                      /* synthesis LOC = "V1  "*/,   //default 1 active 0            I
 
 
 input   i_BOARD_ID0                                               /* synthesis LOC = "N1  "*/,    //default 1 active 0           I
@@ -336,7 +336,7 @@ input   i_BOARD_ID1                                               /* synthesis L
 input   i_BOARD_ID2                                               /* synthesis LOC = "K1  "*/,    //default 1 active 0           I
 input   i_BOARD_ID3                                               /* synthesis LOC = "J1  "*/,    //default 1 active 0           I
 
-output o_SATA1_RSV                                                /* synthesis LOC = "F14 "*/,    //default 0 pull up en         O
+output  o_SATA1_RSV                                               /* synthesis LOC = "F14 "*/,    //default 0 pull up en         O
 input   i_PWRGD_SYS_PWROK_R                                       /* synthesis LOC = "G9  "*/,    //default 1 active 0           I
 
 input   i_PCA_REVISION_0                                          /* synthesis LOC = "E1  "*/,    //default 1 active 0           I
@@ -346,8 +346,8 @@ input   i_PCB_REVISION_0                                          /* synthesis L
 input   i_PCB_REVISION_1                                          /* synthesis LOC = "G1  "*/,    //default 1 active 0           I
 input   i_PCB_REVISION_2                                          /* synthesis LOC = "F1  "*/,    //default 1 active 0           I
 
-output o_M2_GPIO6_R                                               /* synthesis LOC = "M15  "*/,    //default 0 pull up en         O
-output o_M2_GPIO7_R                                               /* synthesis LOC = "M16  "*/,    //default 0 pull up en         O
+output o_M2_GPIO6_R                                               /* synthesis LOC = "M15  "*/,    //default 0 pull up en        O
+output o_M2_GPIO7_R                                               /* synthesis LOC = "M16  "*/,    //default 0 pull up en        O
 
 input   i_BREAK_DET_DO_N                                          /* synthesis LOC = "F17  "*/,    //default 1 active 0           I
 input   i_LEAKAGE_PRSNT_N                                         /* synthesis LOC = "D14  "*/,    //default 1 active 0           I

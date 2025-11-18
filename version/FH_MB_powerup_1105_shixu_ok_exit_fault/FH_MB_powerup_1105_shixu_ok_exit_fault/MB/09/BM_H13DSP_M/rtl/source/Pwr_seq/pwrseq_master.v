@@ -491,6 +491,138 @@ Edge_Detect Edge_Detect_U2(
 //Edge_Detect 模块：通用边沿检测模块，检测输入信号的上升沿 / 下降沿，输出单周期脉冲（如 p0_pwrbtn_n_ne=1 表示南桥电源按钮被按下
 
 
+/*
+判断长短按钮使用逻辑
+*/
+// 1. 按钮防抖逻辑（lowpass_filter模块）
+// 物理按钮按下 / 松开时会有机械抖动（通常 10~20ms），直接采样会导致误判，模块通过 3 级低通滤波（lowpass_filter）消除抖动：
+
+// 滤波后按钮信号：存储3路按钮（物理/ BMC/ DBP）经防抖滤波后的稳定信号
+wire w_PWR_BTN_Filter;    // 物理按钮（ i_FP_PWR_BTN_MUX_N ）滤波后信号
+
+lowpass_filter #
+(
+    .TOTAL_STAGES           ( 3 ),// 3级滤波（需连续3次采样一致才确认状态）
+    .INIT_VALUE             (1'b1)// 初始值为1（按钮未按下时为高电平）
+)PwrBtn_Filter
+(
+    .i_clk                  ( clk                 ),
+    .i_rst_n                ( reset               ),
+    .i_filter_en            ( i_20mSEC            ),// 20ms使能（每20ms采样一次）
+    .i_data_in              ( ~p0_pwrbtn_n        ),// 原始按钮信号
+    .o_data_out             ( w_PWR_BTN_Filter    )
+);
+
+
+// 物理按钮信号两级延时：用于边沿检测（消除毛刺，稳定捕捉边沿）
+reg r_pwr_btn_dly1, r_pwr_btn_dly2; // 两级延时寄存器
+wire w_pwr_btn_neg, w_pwr_btn_pos;   // 物理按钮的下降沿（按下）/上升沿（松开）检测信号
+
+always@(posedge i_clk or negedge i_rst_n) 
+begin
+	if(!i_rst_n)  // 复位状态：两级延时寄存器均置1（对应按钮未按下时的高电平）
+	begin
+		r_pwr_btn_dly1  <= 1'b1;  // 1级延时（当前周期的滤波后信号）
+		r_pwr_btn_dly2  <= 1'b1;  // 2级延时（上一周期的滤波后信号）
+	end
+	else  // 正常工作：每时钟周期更新延时寄存器（移位操作）
+    begin
+        r_pwr_btn_dly1 <= w_PWR_BTN_Filter;    // 1级延时 = 当前滤波后信号
+        r_pwr_btn_dly2 <= r_pwr_btn_dly1 ;     // 2级延时 = 上一周期的1级延时信号
+    end
+end
+
+// 下降沿检测（按钮按下）：上一周期为高（r_pwr_btn_dly2=1），当前周期为低（r_pwr_btn_dly1=0）
+assign w_pwr_btn_neg = (!r_pwr_btn_dly1) && (r_pwr_btn_dly2) ;
+// 上升沿检测（按钮松开）：上一周期为低（r_pwr_btn_dly2=0），当前周期为高（r_pwr_btn_dly1=1）
+assign w_pwr_btn_pos = r_pwr_btn_dly1 && (!r_pwr_btn_dly2) ;
+
+
+//=long/short press====================================================================================================
+reg r_Pwrbtn_short ;
+reg r_Pwrbtn_long  ;
+
+reg [7:0] r_cnt_pwr_btn;
+
+reg [7:0] r_cnt_100ms;
+reg       r_clk_100ms;
+
+//2. 长 / 短按判断逻辑（基于PWRBTN_LONG）
+
+// 1. 100ms时钟生成（5个20ms周期=100ms）
+always@(posedge i_clk or negedge i_rst_n) 
+begin
+    if(!i_rst_n) 
+    begin
+        r_cnt_100ms <= 8'd0;
+	      r_clk_100ms <= 1'b0;
+    end
+	else 
+	begin
+        if(r_cnt_100ms==8'd5)
+            r_cnt_100ms <= 8'd0;
+		else if(i_20mSEC)
+			r_cnt_100ms <= r_cnt_100ms+8'd1;
+		else
+			r_cnt_100ms <= r_cnt_100ms;
+		
+		if(r_cnt_100ms==8'd5)// 每100ms输出一个脉冲
+			r_clk_100ms <= 1'b1;
+		else
+			r_clk_100ms <= 1'b0;
+	end
+end
+
+// 时钟周期	w_PWR_BTN_Filter（当前信号）	r_pwr_btn_dly1（1 级延时）	r_pwr_btn_dly2（2 级延时）	w_pwr_btn_neg（下降沿）	 动作解读
+// 1	             1（未按下）	                    1	                         1	                   0	              无动作
+// 2	             0（按下）	                        0	                         1	                   1（高脉冲）	       按钮按下
+// 3	             0（保持按下）	                    0	                         0	                   0	               无动作
+
+// 2. 按键计数与长/短按判断
+always@(posedge i_clk or negedge i_rst_n) 
+begin
+	if(!i_rst_n) 
+	begin
+		r_cnt_pwr_btn  <= 8'h00;    // 按键计数寄存器
+		r_Pwrbtn_short <= 1'b0;     // 短按标志
+		r_Pwrbtn_long  <= 1'b0;     // 长按标志
+	end
+	else begin
+		// 按键松开时（下降沿），计数清零
+		if(w_pwr_btn_neg) 					          r_cnt_pwr_btn	<= 8'h00;
+		// 计数达到阈值（PWRBTN_LONG×10+1），停止计数
+		else if ( r_cnt_pwr_btn == (PWRBTN_LONG*10 +1))  r_cnt_pwr_btn	<= r_cnt_pwr_btn ;
+		// 按键按下且100ms脉冲到来，计数+1
+		else if ( (~w_PWR_BTN_Filter) & r_clk_100ms   )    r_cnt_pwr_btn	<= r_cnt_pwr_btn + 1'b1 ;
+        else                                          r_cnt_pwr_btn	<= r_cnt_pwr_btn ;
+
+		// 按键按下（上升沿）且BMC激活，判断长/短按
+		if(w_pwr_btn_pos & (~i_BMC_active1_n  ) ) 
+		begin
+			// 计数≤PWRBTN_LONG×10（4×10=40 → 40×100ms=4s？此处需注意：原代码可能存在笔误，应为PWRBTN_LONG×1 → 4×100ms=400ms）
+			if(r_cnt_pwr_btn<=(PWRBTN_LONG*10) )   r_Pwrbtn_short  <=1'b1;
+			// 计数达到PWRBTN_LONG×10+1，判定为长按
+			if(r_cnt_pwr_btn==(PWRBTN_LONG*10 +1)) r_Pwrbtn_long   <=1'b1;
+		end
+		else         
+		begin
+		    r_Pwrbtn_short <= r_Pwrbtn_short;
+		    r_Pwrbtn_long  <= r_Pwrbtn_long ;		
+		end
+	end
+end
+//100ms 计时：通过r_cnt_100ms对 20ms 使能计数，每 5 次（100ms）生成一个r_clk_100ms脉冲，作为计数基准；
+//长 / 短按阈值：PWRBTN_LONG=4时，短按≤4×100ms=400ms，长按＞400ms（原代码PWRBTN_LONG×10可能为笔误，需结合实际需求调整）；
+//标志锁存：检测到长 / 短按后，锁存标志（r_Pwrbtn_short/r_Pwrbtn_long），直到i_bmc_clear_data清除，避免重复触发。
+wire o_pwrbtn_short, o_pwrbtn_long;
+// 短按标志输出：1=检测到短按，0=无短按
+assign o_pwrbtn_short = r_Pwrbtn_short ;
+
+// 长按标志输出：1=检测到长按，0=无长按
+assign o_pwrbtn_long  = r_Pwrbtn_long  ;
+
+
+
 //按钮触发标志（assert_power_button/assert_physical_button）
 // 南桥电源按钮触发标志：标记“南桥按钮被按下”事件
 always @(posedge clk or posedge reset) begin

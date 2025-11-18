@@ -2019,8 +2019,8 @@ Pwr_But_Ctrl #(
     .i_20mSEC                     (w20mSCE                      ),  //w20mSCE 20ms 时钟使能信号，用于定时相关逻辑
 
     .i_PWRBTN_OUT_disable         (1'b0                         ),// 输入：电源按钮输出禁用（0=启用输出，1=禁用输出，此处启用）
-    .i_disable_button             (1'b0                         ),	//按钮禁用信号 1'b1 is disable, 1'b0 is enable;  1'b1 for General items.  //w_bmc_pwrbtn_lock_n_ff from IIC_bmc        1'b0   2022-12-19 delete for debug  ~r_bmc_actived  || (~w_bmc_pwrbtn_lock)
-    .i_BMC_active0_n              (1'b1                         ), // BMC 激活信号（低电平有效）1'b1: BMC die,  1'b0: BMC active, default low when AC in;  if no function of BMC controled power on, this signal should 1'b1.
+    .i_disable_button             (1'b0                         ),//按钮禁用信号 1'b1 is disable, 1'b0 is enable;  1'b1 for General items.  //w_bmc_pwrbtn_lock_n_ff from IIC_bmc        1'b0   2022-12-19 delete for debug  ~r_bmc_actived  || (~w_bmc_pwrbtn_lock)
+    .i_BMC_active0_n              (1'b1                         ),// BMC 激活信号（低电平有效）1'b1: BMC die,  1'b0: BMC active, default low when AC in;  if no function of BMC controled power on, this signal should 1'b1.
     .i_FP_PWR_BTN_MUX_N           (db_i_fm_pwrbtn_out_n_r       ),       //物理按钮输入
     //.i_FP_PWR_BTN_MUX_N         (db_i_pwr_btn_cpld_n_r        ),			//按钮复用信号Power Button  //MB  PWR_BTN db_i_pal_pwr_btn_n
     .i_FM_BMC_PWRBTN_OUT_CPLD_N   (1'b1                         ),	//Power on/off signal from BMC   BMC FM编码的电源按钮信号（1=无效，暂未使用）

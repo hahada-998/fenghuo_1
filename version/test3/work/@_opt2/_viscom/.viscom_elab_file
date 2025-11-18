@@ -1,0 +1,1 @@
+C:/studyware/lattice_diamond_3_14/questasim/win64/VisualizerRls/bin/viscom.exe -nolock -quiet -jmem_size 786432 work.pwrseq_tb -quiet -auto_acc_if_foreign -work work +acc -allow_unnamed -o _opt2 -id 1-6805cabd4893-691aebd6-288-9550 +__design_bin_path+C:/CPLD/intel/fenghuo_init/fenghuo_1/version/test3 +__betafsm

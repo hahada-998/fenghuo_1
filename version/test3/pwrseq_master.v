@@ -105,6 +105,7 @@ module pwrseq_master #(
   input     wire    t1s_tick           ,    // 10ns pulse every 1s 每 1 秒的脉冲信号，用于秒级超时或周期性任务（如电源健康轮询）
   input     wire    sequence_tick ,    // tick used for wdt timeout during power-up/down states 电源时序专用 Tick，用于上电 / 下电阶段的看门狗超时计数
   input     wire    psu_on_tick     ,    // tick used for wdt timeout during PS on state  电源模块（PSU）上电专用 Tick，用于 PSU 状态的超时检测
+  input     wire    i_20mSEC        ,
 // Physical power button and south bridge status/control
   input     wire    sys_sw_in_n                          ,    // system's power button switch 系统电源按钮（低有效），用户按下时触发上电 / 下电流程
   input     wire    pch_slp4_n                            ,    // SB (south bridge) system sleep state 南桥（PCH）睡眠状态信号（低有效），指示系统是否进入 S4 睡眠状态
@@ -446,6 +447,132 @@ end
 //pch_slp4_n	南桥非 S4 睡眠状态（pch_slp4_n=1 表示南桥处于 S0/S5 状态，支持上电）
 //~interlock_broken	无联锁故障（interlock_broken=0 表示硬件联锁正常，如柜门关闭、安全开关闭合）
 //~aux_video_holdoff	无辅助视频延迟（aux_video_holdoff=0 表示显示模块就绪，无需延迟上电）
+
+
+
+
+
+// 1. 按钮防抖逻辑（lowpass_filter模块）
+// 物理按钮按下 / 松开时会有机械抖动（通常 10~20ms），直接采样会导致误判，模块通过 3 级低通滤波（lowpass_filter）消除抖动：
+
+// 滤波后按钮信号：存储3路按钮（物理/ BMC/ DBP）经防抖滤波后的稳定信号
+wire w_PWR_BTN_Filter;    // 物理按钮（ i_FP_PWR_BTN_MUX_N ）滤波后信号
+
+lowpass_filter #
+(
+    .TOTAL_STAGES           ( 3 ),// 3级滤波（需连续3次采样一致才确认状态）
+    .INIT_VALUE             (1'b1)// 初始值为1（按钮未按下时为高电平）
+)PwrBtn_Filter
+(
+    .i_clk                  ( clk                 ),
+    .i_rst_n                ( reset               ),
+    .i_filter_en            ( i_20mSEC            ),// 20ms使能（每20ms采样一次）
+    .i_data_in              ( ~p0_pwrbtn_n        ),// 原始按钮信号
+    .o_data_out             ( w_PWR_BTN_Filter    )
+);
+
+
+// 物理按钮信号两级延时：用于边沿检测（消除毛刺，稳定捕捉边沿）
+reg r_pwr_btn_dly1, r_pwr_btn_dly2; // 两级延时寄存器
+wire w_pwr_btn_neg, w_pwr_btn_pos;   // 物理按钮的下降沿（按下）/上升沿（松开）检测信号
+
+always@(posedge clk or negedge reset) 
+begin
+	if(!reset)  // 复位状态：两级延时寄存器均置1（对应按钮未按下时的高电平）
+	begin
+		r_pwr_btn_dly1  <= 1'b1;  // 1级延时（当前周期的滤波后信号）
+		r_pwr_btn_dly2  <= 1'b1;  // 2级延时（上一周期的滤波后信号）
+	end
+	else  // 正常工作：每时钟周期更新延时寄存器（移位操作）
+    begin
+        r_pwr_btn_dly1 <= w_PWR_BTN_Filter;    // 1级延时 = 当前滤波后信号
+        r_pwr_btn_dly2 <= r_pwr_btn_dly1 ;     // 2级延时 = 上一周期的1级延时信号
+    end
+end
+
+// 下降沿检测（按钮按下）：上一周期为高（r_pwr_btn_dly2=1），当前周期为低（r_pwr_btn_dly1=0）
+assign w_pwr_btn_neg = (!r_pwr_btn_dly1) && (r_pwr_btn_dly2) ;
+// 上升沿检测（按钮松开）：上一周期为低（r_pwr_btn_dly2=0），当前周期为高（r_pwr_btn_dly1=1）
+assign w_pwr_btn_pos = r_pwr_btn_dly1 && (!r_pwr_btn_dly2) ;
+
+
+//=long/short press====================================================================================================
+reg r_Pwrbtn_short ;
+reg r_Pwrbtn_long  ;
+
+reg [7:0] r_cnt_pwr_btn;
+
+reg [7:0] r_cnt_100ms;
+reg       r_clk_100ms;
+
+//2. 长 / 短按判断逻辑（基于PWRBTN_LONG）
+
+// 1. 100ms时钟生成（5个20ms周期=100ms）
+always@(posedge clk or negedge reset) 
+begin
+    if(!reset) 
+    begin
+        r_cnt_100ms <= 8'd0;
+	      r_clk_100ms <= 1'b0;
+    end
+	else 
+	begin
+        if(r_cnt_100ms==8'd5)
+            r_cnt_100ms <= 8'd0;
+		else if(i_20mSEC)
+			r_cnt_100ms <= r_cnt_100ms+8'd1;
+		else
+			r_cnt_100ms <= r_cnt_100ms;
+		
+		if(r_cnt_100ms==8'd5)// 每100ms输出一个脉冲
+			r_clk_100ms <= 1'b1;
+		else
+			r_clk_100ms <= 1'b0;
+	end
+end
+
+// 时钟周期	w_PWR_BTN_Filter（当前信号）	r_pwr_btn_dly1（1 级延时）	r_pwr_btn_dly2（2 级延时）	w_pwr_btn_neg（下降沿）	 动作解读
+// 1	             1（未按下）	                    1	                         1	                   0	              无动作
+// 2	             0（按下）	                        0	                         1	                   1（高脉冲）	       按钮按下
+// 3	             0（保持按下）	                    0	                         0	                   0	               无动作
+
+// 2. 按键计数与长/短按判断
+always@(posedge clk or negedge reset) 
+begin
+	if(!reset) 
+	begin
+		r_cnt_pwr_btn  <= 8'h00;    // 按键计数寄存器
+		r_Pwrbtn_short <= 1'b0;     // 短按标志
+		r_Pwrbtn_long  <= 1'b0;     // 长按标志
+	end
+	else begin
+		// 按键松开时（下降沿），计数清零
+		if(w_pwr_btn_neg) 					          r_cnt_pwr_btn	<= 8'h00;
+		// 计数达到阈值（PWRBTN_LONG×10+1），停止计数
+		else if ( r_cnt_pwr_btn == (PWRBTN_LONG*10 +1))  r_cnt_pwr_btn	<= r_cnt_pwr_btn ;
+		// 按键按下且100ms脉冲到来，计数+1
+		else if ( (~w_PWR_BTN_Filter) & r_clk_100ms   )    r_cnt_pwr_btn	<= r_cnt_pwr_btn + 1'b1 ;
+        else                                          r_cnt_pwr_btn	<= r_cnt_pwr_btn ;
+
+		// 按键按下（上升沿）且BMC激活，判断长/短按
+		if(w_pwr_btn_pos & (~i_BMC_active1_n  ) ) 
+		begin
+			// 计数≤PWRBTN_LONG×10（4×10=40 → 40×100ms=4s？此处需注意：原代码可能存在笔误，应为PWRBTN_LONG×1 → 4×100ms=400ms）
+			if(r_cnt_pwr_btn<=(PWRBTN_LONG*10) )   r_Pwrbtn_short  <=1'b1;
+			// 计数达到PWRBTN_LONG×10+1，判定为长按
+			if(r_cnt_pwr_btn==(PWRBTN_LONG*10 +1)) r_Pwrbtn_long   <=1'b1;
+		end
+		else         
+		begin
+		    r_Pwrbtn_short <= r_Pwrbtn_short;
+		    r_Pwrbtn_long  <= r_Pwrbtn_long ;		
+		end
+	end
+end
+
+
+
+
 
 //------------------------------------------------------------------------------
 // assert_power_button, phys_power_button 电源按钮控制逻辑
@@ -1158,7 +1285,7 @@ always @(*) begin
           //		rt_failure_detected_set = 1'b1;
           end
           // 场景3：正常下电请求（如用户关机），跳转到电源就绪禁用
-          else if (rt_normal_pwr_down   ) begin //rt_normal_pwr_down：正常下电请求（如南桥 S4 状态触发，优先级次高）
+          else if (rt_normal_pwr_down || r_Pwrbtn_long) begin //rt_normal_pwr_down：正常下电请求（如南桥 S4 状态触发，优先级次高）
              state_ns = `SM_DISABLE_PWRGD;
           end
           // Clear retry counter on clean powerup 正常运行时，清零重试计数器（避免历史重试次数影响后续故障恢复）

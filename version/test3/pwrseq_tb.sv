@@ -277,6 +277,10 @@ initial begin
 
     // 等待足够时间让 master/slave 交互并产生各阶段
     #10000;
+    p0_pwrbtn_n             = 1'b0; // 确保按钮释放
+    #10000             
+    p0_pwrbtn_n             = 1'b1; 
+
 
     // 注入一个临时故障（模拟从 slave 到 master 上报）
     $display("%0t: inject fault from slave", $time);
@@ -313,7 +317,7 @@ end
     .sequence_tick              (t2ms_tick                    ),
     .psu_on_tick                (t32ms_tick                   ),
 
-    
+    .i_20mSEC                   (t512us_cnt                   ),
     
 
     .sys_sw_in_n                (sys_sw_in_n                  ),
