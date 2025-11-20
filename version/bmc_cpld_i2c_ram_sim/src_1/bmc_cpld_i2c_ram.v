@@ -2,404 +2,401 @@ module bmc_cpld_i2c_ram #(
 parameter DLY_LEN       = 3   //24.18MHz,330ns
 )
 (
-input  i_rst_n      , 
-input  i_clk        ,
-input  i_1ms_clk    ,	
-input  i_rst_i2c_n  ,
-input  i_scl        , 
-inout  io_sda       ,
+input  i_rst_n                                                  ,// 系统复位信号，低电平有效 
+input  i_clk                                                    ,// 系统时钟信号，频率 25MHz
+input  i_1ms_clk                                                ,// 1ms 时钟信号, I2C slave 超时复位使用	
+input  i_rst_i2c_n                                              ,// I2C 复位信号，始终为高电平
+input  i_scl                                                    ,// I2C 时钟信号
+inout  io_sda                                                   ,// I2C 数据线（双向）
 
 /*CPLD Common Register*/
-input   wire  [7:0] i_product_id                                ,//addr 0x0000
-input   wire  [7:0] i_vender_id                                 ,//addr 0x0001
-input   wire  [7:0] i_board_id                                  ,//addr 0x0002
-input   wire  [7:0] i_pcb_version                          ,//addr 0x0003
-input   wire  [7:0] i_bom_id                                    ,//addr 0x0004
-input   wire  [7:0] i_cpld_version                        ,//addr 0x0005
-output  wire  [7:0] o_test_reg                                ,//addr 0x0006
-input   wire  [7:0] i_year                                        ,//addr 0x0007
-input   wire  [7:0] i_month                                      ,//addr 0x0008
-input   wire  [7:0] i_day                                          ,//addr 0x0009
-input   wire  [7:0] i_nc_pin                                    ,//addr 0x000a bit0
-input   wire  [7:0] i_cpld_compa_version            ,//addr 0x000b
-input   wire  [7:0] i_cpld_debug_version            ,//addr 0x000c
-//PSU--0x000D
-input  wire        i_PS1_PRSNT                      , //addr 0x000D bit7
-input  wire        i_PS2_PRSNT                      , //addr 0x000D bit6
-input  wire        i_PS3_PRSNT                      , //addr 0x000D bit5
-input  wire        i_PS4_PRSNT                      , //addr 0x000D bit4
-input  wire        i_PS1_ACFAIL                    , //addr 0x000D bit3
-input  wire        i_PS2_ACFAIL                    , //addr 0x000D bit2
-input  wire        i_PS1_DCOK                        , //addr 0x000D bit1
-input  wire        i_PS2_DCOK                        , //addr 0x000D bit0
-//PSU--0x000E
-input  wire        i_PS1_ALERT                      , //addr 0x000E bit7
-input  wire        i_PS2_ALERT                      , //addr 0x000E bit6
-input  wire        i_PS1_P12V_ON                  , //addr 0x000E bit5
-input  wire        i_PS2_P12V_ON                  , //addr 0x000E bit4
-input  wire        i_PS_OFF                            , //addr 0x000E bit3
-input  wire        i_DUAL_EN                          , //addr 0x000E bit2
-input  wire        i_P12V_DROOP                    , //addr 0x000E bit1
-input  wire        i_P12V_STBY_DROOP          , //addr 0x000E bit0
-//P12V --0x000F
-input  wire        i_P12V_DISCHARGE            , //addr 0x000F bit7
+input   wire  [7:0] i_product_id                                ,//addr 0x0000,       产品 ID
+input   wire  [7:0] i_vender_id                                 ,//addr 0x0001,       厂商 ID
+input   wire  [7:0] i_board_id                                  ,//addr 0x0002,       板卡 ID
+input   wire  [7:0] i_pcb_version                               ,//addr 0x0003,       PCB 版本号
+input   wire  [7:0] i_bom_id                                    ,//addr 0x0004,       BOM ID，
+input   wire  [7:0] i_cpld_version                              ,//addr 0x0005,       CPLD 版本号
+output  wire  [7:0] o_test_reg                                  ,//addr 0x0006,       测试寄存器  
+input   wire  [7:0] i_year                                      ,//addr 0x0007,       年份
+input   wire  [7:0] i_month                                     ,//addr 0x0008,       月份
+input   wire  [7:0] i_day                                       ,//addr 0x0009,       日期
+input   wire  [7:0] i_nc_pin                                    ,//addr 0x000a, bit0  未连接引脚 
+input   wire  [7:0] i_cpld_compa_version                        ,//addr 0x000b,       CPLD 兼容版本
+input   wire  [7:0] i_cpld_debug_version                        ,//addr 0x000c,       CPLD 调试版本
 
+//PSU--0x000D
+input  wire        i_PS1_PRSNT                                  , //addr 0x000D bit7  PSU1 存在信号
+input  wire        i_PS2_PRSNT                                  , //addr 0x000D bit6  PSU2 存在信号
+input  wire        i_PS3_PRSNT                                  , //addr 0x000D bit5  PSU3 存在信号
+input  wire        i_PS4_PRSNT                                  , //addr 0x000D bit4  PSU4 存在信号
+input  wire        i_PS1_ACFAIL                                 , //addr 0x000D bit3  PSU1 交流电源故障信号
+input  wire        i_PS2_ACFAIL                                 , //addr 0x000D bit2  PSU2 交流电源故障信号
+input  wire        i_PS1_DCOK                                   , //addr 0x000D bit1  PSU1 直流电源正常信号
+input  wire        i_PS2_DCOK                                   , //addr 0x000D bit0  PSU2 直流电源正常信号
+//PSU--0x000E
+input  wire        i_PS1_ALERT                                  , //addr 0x000E bit7  PSU1 警告信号
+input  wire        i_PS2_ALERT                                  , //addr 0x000E bit6  PSU2 警告信号
+input  wire        i_PS1_P12V_ON                                , //addr 0x000E bit5  PSU1 12V 电源开启信号
+input  wire        i_PS2_P12V_ON                                , //addr 0x000E bit4  PSU2 12V 电源开启信号
+input  wire        i_PS_OFF                                     , //addr 0x000E bit3  电源关闭信号
+input  wire        i_DUAL_EN                                    , //addr 0x000E bit2  双电源使能信号
+input  wire        i_P12V_DROOP                                 , //addr 0x000E bit1  12V 电压下跌信号
+input  wire        i_P12V_STBY_DROOP                            , //addr 0x000E bit0  12V 待机电压下跌信号
+
+//P12V --0x000F
+input  wire        i_P12V_DISCHARGE                             , //addr 0x000F bit7  12v的放电控制信号
 
 //POL PGD --0x0010
-input  wire        i_PGD_P5V_MB                               , //addr 0x0010 bit7
-input  wire        i_PGD_P5V_STBY_MB                     , //addr 0x0010 bit6
-input  wire        i_PGD_P3V3_STBY_MB                   , //addr 0x0010 bit5
-input  wire        i_PGD_P3V3_STBY_B_MB               , //addr 0x0010 bit4
-input  wire        i_PGD_P1V8_PCH_STBY_MB           , //addr 0x0010 bit3
-input  wire        i_PGD_P1V2_STBY_MB                   , //addr 0x0010 bit2
-input  wire        i_PGD_P1V05_PCH_STBY_MB         , //addr 0x0010 bit1
-input  wire        i_PGD_PVNN_PCH_STBY_MB           , //addr 0x0010 bit0
+input  wire        i_PGD_P5V_MB                                 , //addr 0x0010 bit7  5V 电源良好信号
+input  wire        i_PGD_P5V_STBY_MB                            , //addr 0x0010 bit6  5V 待机电源良好信号
+input  wire        i_PGD_P3V3_STBY_MB                           , //addr 0x0010 bit5  3.3V 待机电源良好信号
+input  wire        i_PGD_P3V3_STBY_B_MB                         , //addr 0x0010 bit4  3.3V 待机备用电源良好信号
+input  wire        i_PGD_P1V8_PCH_STBY_MB                       , //addr 0x0010 bit3  1.8V PCH 待机电源良好信号
+input  wire        i_PGD_P1V2_STBY_MB                           , //addr 0x0010 bit2  1.2V 待机电源良好信号
+input  wire        i_PGD_P1V05_PCH_STBY_MB                      , //addr 0x0010 bit1  1.05V PCH 待机电源良好信号（未连接）
+input  wire        i_PGD_PVNN_PCH_STBY_MB                       , //addr 0x0010 bit0  PVNN PCH 待机电源良好信号（未连接）
+
 //POL OC --0x0011
-input  wire        i_USB_INNER_OVERCUR3               , //addr 0x0011 bit7
-input  wire        i_USB2_LCD_OC_N                         , //addr 0x0011 bit6
+input  wire        i_USB_INNER_OVERCUR3                         , //addr 0x0011 bit7  USB 内部过流信号
+input  wire        i_USB2_LCD_OC_N                              , //addr 0x0011 bit6  USB2 LCD 过流信号
 
 //POL PGD --0x0012
-input  wire        i_PAL_P5V_EN_R_MB               , //addr 0x0012 bit7
-input  wire        i_PAL_P5V_STBY_EN_R_MB          , //addr 0x0012 bit6
-input  wire        i_P5V_STBY_USB_EN        , //addr 0x0012 bit5
-input  wire        i_P5V_EN         , //addr 0x0012 bit4
-input  wire        i_ncsi_main_pwr_en             , //addr 0x0012 bit3
-input  wire        i_ncsi_aux_pwr_en        , //addr 0x0012 bit2
-input  wire        i_PAL_PVNN_STBY_EN_R_MB         , //addr 0x0012 bit1
-input  wire        i_PAL_EN_PWM_CTRL_VCC_R_MB      , //addr 0x0012 bit0
+input  wire        i_PAL_P5V_EN_R_MB                            , //addr 0x0012 bit7  5V 电源使能信号
+input  wire        i_PAL_P5V_STBY_EN_R_MB                       , //addr 0x0012 bit6  5V 待机电源使能信号
+input  wire        i_P5V_STBY_USB_EN                            , //addr 0x0012 bit5  5V 待机 USB 电源使能信号
+input  wire        i_P5V_EN                                     , //addr 0x0012 bit4  5V 电源使能信号
+input  wire        i_ncsi_main_pwr_en                           , //addr 0x0012 bit3  主电源使能信号
+input  wire        i_ncsi_aux_pwr_en                            , //addr 0x0012 bit2  辅助电源使能信号
+input  wire        i_PAL_PVNN_STBY_EN_R_MB                      , //addr 0x0012 bit1  PVNN 待机电源使能信号（未连接）
+input  wire        i_PAL_EN_PWM_CTRL_VCC_R_MB                   , //addr 0x0012 bit0  PWM 控制 VCC 使能信号（未连接）
 
 //0x0013
-output wire        o_BMC_JTAG_MUX_S                  , //addr 0x0013 bit7  //default 1
-
+output wire        o_BMC_JTAG_MUX_S                             , //addr 0x0013 bit7  BMC JTAG 多路复用选择信号
 
 //CPU0 PGD --0x0020
-input  wire        i_pwrgd_vdd_33_stby0	       , //addr 0x0020 bit7
-input  wire        i_pwrgd_vdd_18_stby0	       , //addr 0x0020 bit6
-input  wire        i_pal_pgd_p0_vdd_core_1     , //addr 0x0020 bit5
-input  wire        i_pal_pgd_p0_vdd_core_0     , //addr 0x0020 bit4
-input  wire        i_pal_pgd_p0_vdd_soc_0       , //addr 0x0020 bit3
-input  wire        i_pal_pgd_p0_vddio	       , //addr 0x0020 bit2
-input  wire        i_pal_pgd_p0_vdd_sus_0       , //addr 0x0020 bit1
-input  wire        i_pal_cpu_sys_pwrok             , //addr 0x0020 bit0
+input  wire        i_pwrgd_vdd_33_stby0	                        , //addr 0x0020 bit7  3.3V 待机电源良好信号
+input  wire        i_pwrgd_vdd_18_stby0	                        , //addr 0x0020 bit6  1.8V 待机电源良好信号
+input  wire        i_pal_pgd_p0_vdd_core_1                      , //addr 0x0020 bit5  核心电源良好信号 1
+input  wire        i_pal_pgd_p0_vdd_core_0                      , //addr 0x0020 bit4  核心电源良好信号 0
+input  wire        i_pal_pgd_p0_vdd_soc_0                       , //addr 0x0020 bit3  SoC 电源良好信号
+input  wire        i_pal_pgd_p0_vddio	                        , //addr 0x0020 bit2  IO 电源良好信号
+input  wire        i_pal_pgd_p0_vdd_sus_0                       , //addr 0x0020 bit1  SUS 电源良好信号
+input  wire        i_pal_cpu_sys_pwrok                          , //addr 0x0020 bit0  CPU 系统电源良好信号
 
 //CPU0 ALERT --0x0021
-input  wire        i_p0_pwrgd_out_r	           , //addr 0x0021 bit7
-input  wire        i_p0_pwrok_r		           , //addr 0x0021 bit6
-input  wire        i_p0_pwr_good_r	           , //addr 0x0021 bit5
+input  wire        i_p0_pwrgd_out_r	                            , //addr 0x0021 bit7
+input  wire        i_p0_pwrok_r		                            , //addr 0x0021 bit6
+input  wire        i_p0_pwr_good_r	                            , //addr 0x0021 bit5
 
 //CPU0 PWR EN --0x0022
-input  wire        i_p0_vddc_en			        , //addr 0x0022 bit7
-input  wire        i_p0_vdd_18_stby_en	        , //addr 0x0022 bit6
-input  wire        i_pal_p0_vdd_11_sus_en	, //addr 0x0022 bit5
-input  wire        i_pal_p0_vddio_en_r	        , //addr 0x0022 bit4
-input  wire        i_pal_p0_vdd_soc_en	        , //addr 0x0022 bit3
-input  wire        i_pal_p0_vdd_core_0_en_r    , //addr 0x0022 bit2
-input  wire        i_pal_p0_vdd_core_1_en_r    , //addr 0x0022 bit1
+input  wire        i_p0_vddc_en			                        , //addr 0x0022 bit7
+input  wire        i_p0_vdd_18_stby_en	                        , //addr 0x0022 bit6
+input  wire        i_pal_p0_vdd_11_sus_en	                    , //addr 0x0022 bit5
+input  wire        i_pal_p0_vddio_en_r	                        , //addr 0x0022 bit4
+input  wire        i_pal_p0_vdd_soc_en	                        , //addr 0x0022 bit3
+input  wire        i_pal_p0_vdd_core_0_en_r                     , //addr 0x0022 bit2
+input  wire        i_pal_p0_vdd_core_1_en_r                     , //addr 0x0022 bit1
 
 //CPU1 PGD --0x0023
-input  wire        i_pwrgd_vdd_18_stby1	       , //addr 0x0023 bit7
-input  wire        i_pwrgd_vdd_33_stby1	       , //addr 0x0023 bit6
-input  wire        i_pal_pgd_p1_vdd_core_1     , //addr 0x0023 bit5
-input  wire        i_pal_pgd_p1_vdd_core_0     , //addr 0x0023 bit4
-input  wire        i_pal_pgd_p1_vdd_soc_0       , //addr 0x0023 bit3
-input  wire        i_pal_pgd_p1_vddio	       , //addr 0x0023 bit2
-input  wire        i_pal_pgd_p1_vdd_sus_0       , //addr 0x0023 bit1
+input  wire        i_pwrgd_vdd_18_stby1	                        , //addr 0x0023 bit7
+input  wire        i_pwrgd_vdd_33_stby1	                        , //addr 0x0023 bit6
+input  wire        i_pal_pgd_p1_vdd_core_1                      , //addr 0x0023 bit5
+input  wire        i_pal_pgd_p1_vdd_core_0                      , //addr 0x0023 bit4
+input  wire        i_pal_pgd_p1_vdd_soc_0                       , //addr 0x0023 bit3
+input  wire        i_pal_pgd_p1_vddio	                        , //addr 0x0023 bit2
+input  wire        i_pal_pgd_p1_vdd_sus_0                       , //addr 0x0023 bit1
 
 //CPU1 ALERT --0x0024
-input  wire        i_p1_pwrgd_out_r	            , //addr 0x0024 bit7
-input  wire        i_p1_pwrok_r		            , //addr 0x0024 bit6
-input  wire        i_p1_pwr_good_r	            , //addr 0x0024 bit5
+input  wire        i_p1_pwrgd_out_r	                            , //addr 0x0024 bit7
+input  wire        i_p1_pwrok_r		                            , //addr 0x0024 bit6
+input  wire        i_p1_pwr_good_r	                            , //addr 0x0024 bit5
 
 //CPU0 PWR EN --0x0025
-input  wire        i_p1_vdd_18_stby_en	        , //addr 0x0025 bit7
-input  wire        i_p1_vddc_en			        , //addr 0x0025 bit6
-input  wire        i_pal_p1_vdd_11_sus_en	, //addr 0x0025 bit5
-input  wire        i_pal_p1_vddio_en_r	        , //addr 0x0025 bit4
-input  wire        i_pal_p1_vdd_soc_en	        , //addr 0x0025 bit3
-input  wire        i_pal_p1_vdd_core_0_en_r    , //addr 0x0025 bit2
-input  wire        i_pal_p1_vdd_core_1_en_r    , //addr 0x0025 bit1
+input  wire        i_p1_vdd_18_stby_en	                        , //addr 0x0025 bit7
+input  wire        i_p1_vddc_en			                        , //addr 0x0025 bit6
+input  wire        i_pal_p1_vdd_11_sus_en	                    , //addr 0x0025 bit5
+input  wire        i_pal_p1_vddio_en_r	                        , //addr 0x0025 bit4
+input  wire        i_pal_p1_vdd_soc_en	                        , //addr 0x0025 bit3
+input  wire        i_pal_p1_vdd_core_0_en_r                     , //addr 0x0025 bit2
+input  wire        i_pal_p1_vdd_core_1_en_r                     , //addr 0x0025 bit1
 
 //CPU PRSNT --0x0030
-input  wire        i_PAL_CPU0_PRSNT_N              , //addr 0x0030 bit7
-input  wire        i_PAL_CPU1_PRSNT_N              , //addr 0x0030 bit6
+input  wire        i_PAL_CPU0_PRSNT_N                           , //addr 0x0030 bit7
+input  wire        i_PAL_CPU1_PRSNT_N                           , //addr 0x0030 bit6
 
 //CPU PROC_ID --0x0031
 
 //CPU ERR --0x0032
-input  wire        i_P0_SMERR_N                , //addr 0x0032 bit7
-input  wire        i_P1_SMERR_N                , //addr 0x0032 bit6
+input  wire        i_P0_SMERR_N                                 , //addr 0x0032 bit7
+input  wire        i_P1_SMERR_N                                 , //addr 0x0032 bit6
 
 //CPU THERM --0x0033
-input  wire        i_PAL_CPU0_MEMHOT_OUT_N        , //addr 0x0033 bit7
-input  wire        i_PAL_CPU0_MEMTRIP_N              , //addr 0x0033 bit6
-input  wire        i_PAL_CPU0_THERMTRIP_N          , //addr 0x0033 bit5
-input  wire        i_PAL_CPU0_PROCHOT_N              , //addr 0x0033 bit4 
-input  wire        i_PAL_CPU1_MEMHOT_OUT_N        , //addr 0x0033 bit3 
-input  wire        i_PAL_CPU1_MEMTRIP_N              , //addr 0x0033 bit2
-input  wire        i_PAL_CPU1_THERMTRIP_N          , //addr 0x0033 bit1
-input  wire        i_PAL_CPU1_PROCHOT_N              , //addr 0x0033 bit0 
+input  wire        i_PAL_CPU0_MEMHOT_OUT_N                      , //addr 0x0033 bit7
+input  wire        i_PAL_CPU0_MEMTRIP_N                         , //addr 0x0033 bit6
+input  wire        i_PAL_CPU0_THERMTRIP_N                       , //addr 0x0033 bit5
+input  wire        i_PAL_CPU0_PROCHOT_N                         , //addr 0x0033 bit4 
+input  wire        i_PAL_CPU1_MEMHOT_OUT_N                      , //addr 0x0033 bit3 
+input  wire        i_PAL_CPU1_MEMTRIP_N                         , //addr 0x0033 bit2
+input  wire        i_PAL_CPU1_THERMTRIP_N                       , //addr 0x0033 bit1
+input  wire        i_PAL_CPU1_PROCHOT_N                         , //addr 0x0033 bit0 
 
 //pwr_flt_clr --0x0034
-output wire        o_bmc_clr_tmout_n                  , //addr 0x0034 bit7  //default 1
-output wire        o_pal_cpu0_forcepr_r            , //addr 0x0034 bit6  //default 0
-output wire        o_pal_cpu1_forcepr_r            , //addr 0x0034 bit5  //default 0
-output wire        o_clear_register                    , //addr 0x0034 bit4  //default 0
+output wire        o_bmc_clr_tmout_n                            , //addr 0x0034 bit7  //default 1
+output wire        o_pal_cpu0_forcepr_r                         , //addr 0x0034 bit6  //default 0
+output wire        o_pal_cpu1_forcepr_r                         , //addr 0x0034 bit5  //default 0
+output wire        o_clear_register                             , //addr 0x0034 bit4  //default 0
 
 //pwr_flt_code --0x0035
-input  wire  [7:0] i_pwr_flt_code                   , //addr 0x0035  //default 8'h00
+input  wire  [7:0] i_pwr_flt_code                               , //addr 0x0035  //default 8'h00
 
 /*CPLD System Register*/
 //btn_press_flag --0x0050
-input  wire        i_btn_press_flag          , //addr 0x0050 bit7
-input  wire        i_slps5_sts                    , //addr 0x0050 bit6
-input  wire        i_slps3_sts                    , //addr 0x0050 bit5
+input  wire        i_btn_press_flag                             , //addr 0x0050 bit7
+input  wire        i_slps5_sts                                  , //addr 0x0050 bit6
+input  wire        i_slps3_sts                                  , //addr 0x0050 bit5
 
 //btn_evt --0x0051
-input  wire        i_sbtn_pwron_evt                , //addr 0x0051 bit7
-input  wire        i_lbtn_pwrdown_evt            , //addr 0x0051 bit6
-input  wire        i_sbtn_sysrst_evt              , //addr 0x0051 bit5
+input  wire        i_sbtn_pwron_evt                             , //addr 0x0051 bit7
+input  wire        i_lbtn_pwrdown_evt                           , //addr 0x0051 bit6
+input  wire        i_sbtn_sysrst_evt                            , //addr 0x0051 bit5
 
 //bmc_clr_btn_evt --0x0052
-output wire        o_bmc_clr_sbtn_n                , //addr 0x0052 bit7
-output wire        o_bmc_clr_lbtn_n                , //addr 0x0052 bit6
-output wire        o_bmc_clr_sbtn_sys_n        , //addr 0x0052 bit5
+output wire        o_bmc_clr_sbtn_n                             , //addr 0x0052 bit7
+output wire        o_bmc_clr_lbtn_n                             , //addr 0x0052 bit6
+output wire        o_bmc_clr_sbtn_sys_n                         , //addr 0x0052 bit5
 
 //bmc_btn_ctl --0x0053
-output wire        o_pwr_btn_lock                        , //addr 0x0053 bit7
-output wire        o_bmc_power_soft_ctl            , //addr 0x0053 bit6
-output wire        o_bmc_lbtn_pwrdown_ctl        , //addr 0x0053 bit5
-output wire        o_bmc_sbtn_pwron_ctl            , //addr 0x0053 bit4
-output wire        o_bmc_sbtn_sysrst_ctl          , //addr 0x0053 bit3
+output wire        o_pwr_btn_lock                               , //addr 0x0053 bit7
+output wire        o_bmc_power_soft_ctl                         , //addr 0x0053 bit6
+output wire        o_bmc_lbtn_pwrdown_ctl                       , //addr 0x0053 bit5
+output wire        o_bmc_sbtn_pwron_ctl                         , //addr 0x0053 bit4
+output wire        o_bmc_sbtn_sysrst_ctl                        , //addr 0x0053 bit3
 
 //bmc_btn_done --0x0054
-input  wire        i_bmc_power_soft_done           , //addr 0x0054 bit7
-input  wire        i_bmc_lbtn_pwrdown_done       , //addr 0x0054 bit6
-input  wire        i_bmc_sbtn_pwron_done           , //addr 0x0054 bit5
-input  wire        i_bmc_sbtn_sysrst_done         , //addr 0x0054 bit4
+input  wire        i_bmc_power_soft_done                        , //addr 0x0054 bit7
+input  wire        i_bmc_lbtn_pwrdown_done                      , //addr 0x0054 bit6
+input  wire        i_bmc_sbtn_pwron_done                        , //addr 0x0054 bit5
+input  wire        i_bmc_sbtn_sysrst_done                       , //addr 0x0054 bit4
 
 //bmc_uid --0x0056
-input  wire        i_pal_bmcuid_button             , //addr 0x0056 bit7  //default 0
-
+input  wire        i_pal_bmcuid_button                          , //addr 0x0056 bit7  //default 0
 
 //pwr_fault    --0x0065
-input  wire        i_p1_vr_i2c7_alert_n        , //addr 0x0065 bit7
-input  wire        i_p0_vr_i2c7_alert_n      , //addr 0x0065 bit5
-// input  wire        i_cpu0_vr_fault_pvccd           , //addr 0x0065 bit4
-// input  wire        i_cpu0_vr_fault_pvccin          , //addr 0x0065 bit3
+input  wire        i_p1_vr_i2c7_alert_n                         , //addr 0x0065 bit7
+input  wire        i_p0_vr_i2c7_alert_n                         , //addr 0x0065 bit5
+// input  wire        i_cpu0_vr_fault_pvccd                     , //addr 0x0065 bit4
+// input  wire        i_cpu0_vr_fault_pvccin                    , //addr 0x0065 bit3
 //0x0066
-input  wire        i_P0_MCIOP0A_NVME0_PRSNT_N_R   ,//addr 0x0066 bit7
-input  wire        i_P0_MCIOP0C_NVME0_PRSNT_N_R   ,//addr 0x0066 bit6
-input  wire        i_P0_MCIOP0A_NVME1_PRSNT_N_R   ,//addr 0x0066 bit5
-input  wire        i_P0_MCIOP0C_NVME1_PRSNT_N_R   ,//addr 0x0066 bit4
+input  wire        i_P0_MCIOP0A_NVME0_PRSNT_N_R                 ,//addr 0x0066 bit7
+input  wire        i_P0_MCIOP0C_NVME0_PRSNT_N_R                 ,//addr 0x0066 bit6
+input  wire        i_P0_MCIOP0A_NVME1_PRSNT_N_R                 ,//addr 0x0066 bit5
+input  wire        i_P0_MCIOP0C_NVME1_PRSNT_N_R                 ,//addr 0x0066 bit4
 
-input  wire        i_pal_m2_0_prsnt_n             , //addr 0x006a bit7  
-input  wire        i_pal_m2_1_prsnt_n             , //addr 0x006a bit6  
-input  wire        i_pal_bp1_prsnt_n               , //addr 0x006a bit5
-input  wire        i_pal_bp2_prsnt_n               , //addr 0x006a bit4
-input  wire        i_pal_bp3_prsnt_n               , //addr 0x006a bit3
-input  wire        i_pal_bp4_prsnt_n               , //addr 0x006a bit2
-input  wire        i_pal_bp5_prsnt_n               , //addr 0x006a bit1
-input  wire        i_pal_bp6_prsnt_n               , //addr 0x006a bit0
+input  wire        i_pal_m2_0_prsnt_n                           , //addr 0x006a bit7  
+input  wire        i_pal_m2_1_prsnt_n                           , //addr 0x006a bit6  
+input  wire        i_pal_bp1_prsnt_n                            , //addr 0x006a bit5
+input  wire        i_pal_bp2_prsnt_n                            , //addr 0x006a bit4
+input  wire        i_pal_bp3_prsnt_n                            , //addr 0x006a bit3
+input  wire        i_pal_bp4_prsnt_n                            , //addr 0x006a bit2
+input  wire        i_pal_bp5_prsnt_n                            , //addr 0x006a bit1
+input  wire        i_pal_bp6_prsnt_n                            , //addr 0x006a bit0
 
 //u68_data5      --0x006b
-input  wire        i_pal_bp8_prsnt_n               , //addr 0x006b bit7
+input  wire        i_pal_bp8_prsnt_n                            , //addr 0x006b bit7
 
 //gpu_throttle_n--0x006c
-output wire        o_p0_mciop0a_gpu_throttle_n_r    , //addr 0x006c bit7     //default 0
-output wire        o_p0_mciop0c_gpu_throttle_n_r	   , //addr 0x006c bit6     //default 0
+output wire        o_p0_mciop0a_gpu_throttle_n_r                , //addr 0x006c bit7     //default 0
+output wire        o_p0_mciop0c_gpu_throttle_n_r	            , //addr 0x006c bit6     //default 0
 
 //scpld_data --0x0070
-input  wire        i_p1_pcie_wake_n_r              , //addr 0x0070 bit3
-input  wire        i_p0_pcie_wake_n_r              , //addr 0x0070 bit2
+input  wire        i_p1_pcie_wake_n_r                           , //addr 0x0070 bit3
+input  wire        i_p0_pcie_wake_n_r                           , //addr 0x0070 bit2
 
-output wire        o_i3c_mux_en                       , //addr 0x0073 bit7  //default 0
-output wire        o_i3c_remote_cs                 , //addr 0x0073 bit4  //default 0
+output wire        o_i3c_mux_en                                 , //addr 0x0073 bit7  //default 0
+output wire        o_i3c_remote_cs                              , //addr 0x0073 bit4  //default 0
 
 //EEP WR--0x0074	
-output wire        o_eeprom_wp                         , //addr 0x0074 bit7	//default 0 
-output wire        o_scaled_bat_test_en_r   , //addr 0x0074 bit6	//default 0 
-output wire        o_bmc_nmi_event                 , //addr 0x0074 bit5	//default 0
-output wire        o_rtc_senor_sw                   , //addr 0x0074 bit4	//default 0
+output wire        o_eeprom_wp                                  , //addr 0x0074 bit7	//default 0 
+output wire        o_scaled_bat_test_en_r                       , //addr 0x0074 bit6	//default 0 
+output wire        o_bmc_nmi_event                              , //addr 0x0074 bit5	//default 0
+output wire        o_rtc_senor_sw                               , //addr 0x0074 bit4	//default 0
 
 //pcycle--0x0076
-output wire        o_aux_pcycle                    , //addr 0x0076 bit7  //default 0
-output wire        o_usb_sw_s                      , //addr 0x0076 bit6  //default 0
+output wire        o_aux_pcycle                                 , //addr 0x0076 bit7  //default 0
+output wire        o_usb_sw_s                                   , //addr 0x0076 bit6  //default 0
 
-output wire        o_p12v_slot_0_on                , //addr 0x0077 bit7  //default 1
-output wire        o_p12v_slot_1_on                , //addr 0x0077 bit6  //default 1
-output wire        o_p12v_slot_2_on                , //addr 0x0077 bit5  //default 1
+output wire        o_p12v_slot_0_on                             , //addr 0x0077 bit7  //default 1
+output wire        o_p12v_slot_1_on                             , //addr 0x0077 bit6  //default 1
+output wire        o_p12v_slot_2_on                             , //addr 0x0077 bit5  //default 1
 
-output wire        o_bmc_i2c5_9548_rst_n	               , //addr 0x0078 bit7  //default 1
-output wire        o_bmc_i2c9_9548_1_rst_n            , //addr 0x0078 bit6  //default 1
-output wire        o_bmc_i2c9_9548_2_rst_n            , //addr 0x0078 bit5  //default 1
-output wire        o_bmc_i2c9_9548_3_rst_n            , //addr 0x0078 bit4  //default 1
-output wire        o_bmc_i2c9_9548_4_rst_n            , //addr 0x0078 bit3  //default 1
-output wire        o_p0_vpp_9545_1_rst_n	               , //addr 0x0078 bit2  //default 1
-output wire        o_p0_vpp_9545_2_rst_n	               , //addr 0x0078 bit1  //default 1
+output wire        o_bmc_i2c5_9548_rst_n	                    , //addr 0x0078 bit7  //default 1
+output wire        o_bmc_i2c9_9548_1_rst_n                      , //addr 0x0078 bit6  //default 1
+output wire        o_bmc_i2c9_9548_2_rst_n                      , //addr 0x0078 bit5  //default 1
+output wire        o_bmc_i2c9_9548_3_rst_n                      , //addr 0x0078 bit4  //default 1
+output wire        o_bmc_i2c9_9548_4_rst_n                      , //addr 0x0078 bit3  //default 1
+output wire        o_p0_vpp_9545_1_rst_n	                    , //addr 0x0078 bit2  //default 1
+output wire        o_p0_vpp_9545_2_rst_n	                    , //addr 0x0078 bit1  //default 1
 
-input  wire  [7:0] i_switch_mode                   , //addr 0x0089    //default 0xff
-output wire        o_164_mr_n                      ,  //addr 0x008a bit7 //2025-1-16 del
+input  wire  [7:0] i_switch_mode                                , //addr 0x0089    //default 0xff
+output wire        o_164_mr_n                                   , //addr 0x008a bit7 //2025-1-16 del
 
-input  wire        i_pch_bios_post_cmplt_n         , //addr 0x008b bit7
+input  wire        i_pch_bios_post_cmplt_n                      , //addr 0x008b bit7
 
-output wire  [7:0] o_164_test_data                 , //addr 0x008c
-input  wire  [7:0] i_switch2_mode                   , //addr 0x008d    //default 0xff
+output wire  [7:0] o_164_test_data                              , //addr 0x008c
+input  wire  [7:0] i_switch2_mode                               , //addr 0x008d    //default 0xff
 
 
-input  wire        i_LEAKAGE0_PRSNT_N               ,  //0x008e bit7
-input  wire        i_BREAK_DET_DO_N                   ,  //0x008e bit6
-input  wire        i_LEAKAGE_DET_DO_N               ,  //0x008e bit5
-input  wire        i_LEAKAGE_PRSNT1_N               ,  //0x008e bit4
-input  wire        i_BREAK_DET1_DO_N                 ,  //0x008e bit3
-input  wire        i_LEAKAGE_DET1_DO_N             ,  //0x008e bit2
+input  wire        i_LEAKAGE0_PRSNT_N                           , //0x008e bit7
+input  wire        i_BREAK_DET_DO_N                             , //0x008e bit6
+input  wire        i_LEAKAGE_DET_DO_N                           , //0x008e bit5
+input  wire        i_LEAKAGE_PRSNT1_N                           , //0x008e bit4
+input  wire        i_BREAK_DET1_DO_N                            , //0x008e bit3
+input  wire        i_LEAKAGE_DET1_DO_N                          , //0x008e bit2
 
-output wire        o_leakage_int_mask              ,  //0x008f bit7  //2024-5-25 add //default 1
+output wire        o_leakage_int_mask                           , //0x008f bit7  //2024-5-25 add //default 1
 
-input    wire  i_p0_spd_host_ctrl_n,			//addr 0x0090 bit6
-
-//////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
-input  wire  [7:0] i_PRODUCT_LINE_C2	           , //addr 0x00C2
-input  wire  [7:0] i_PRODUCT_GEN_ID_C3             , //addr 0x00C3
-input  wire  [7:0] i_SERVER_ID_C5                  , //addr 0x00C5
-input  wire  [7:0] i_BOARD_ID_C6                   , //addr 0x00C6
+input  wire        i_p0_spd_host_ctrl_n                         , //addr 0x0090 bit6
 
 //////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
-input   wire  i_power_alarm_flag,             //addr 0x0200 bit0
+input  wire  [7:0] i_PRODUCT_LINE_C2	                        , //addr 0x00C2
+input  wire  [7:0] i_PRODUCT_GEN_ID_C3                          , //addr 0x00C3
+input  wire  [7:0] i_SERVER_ID_C5                               , //addr 0x00C5
+input  wire  [7:0] i_BOARD_ID_C6                                , //addr 0x00C6
 
-input   wire  i_stb_pwron_tmout_fail,         //addr 0x0201 bit7 
-output wire  o_bmc_clr_stby_tmout_n,         //addr 0x0201 bit7
-input   wire  i_stb_pwrdown_ukwn_fail,       //addr 0x0201 bit6
-output wire  o_bmc_clr_stby_pwr_drop_n,   //addr 0x0201 bit6
-input   wire  i_poweron_tmout_fail,             //addr 0x0201 bit5
-output wire  o_bmc_clr_core_tmout_n,         //addr 0x0201 bit5
-input   wire  i_powerdown_ukwn_fail,           //addr 0x0201 bit4
-input   wire  i_st_aux_fail_recovery   ,      //addr 0x0201 bit3
-input   wire  i_system_pwr_sts,                     //addr 0x0201 bit0
+//////////////////////////////////0x00C0-0x00D0 for FIX REG/////////////////////////////////////////////////////////////////////////////
+input  wire       i_power_alarm_flag                                , //addr 0x0200 bit0
 
-input    wire  [7:0]i_power_on_fail_err_code,      //addr 0x0032 //202
-output  wire  o_power_on_fail_err_code_clr,        //addr 0x0032
-input    wire  [7:0]i_power_down_fail_err_code,  //addr 0x0033//203
-output  wire  o_power_down_fail_err_code_clr,    //addr 0x0033
-input   wire  [7:0] i_power_seq_state_machine,	//addr 0x0035 //205
-input   wire  [7:0] i_power_seq_fault_latch	,	//addr 0x0036   //206
+input  wire       i_stb_pwron_tmout_fail                            , //addr 0x0201 bit7 
+output wire       o_bmc_clr_stby_tmout_n                            , //addr 0x0201 bit7
+input  wire       i_stb_pwrdown_ukwn_fail                           , //addr 0x0201 bit6
+output wire       o_bmc_clr_stby_pwr_drop_n                         , //addr 0x0201 bit6
+input  wire       i_poweron_tmout_fail                              , //addr 0x0201 bit5
+output wire       o_bmc_clr_core_tmout_n                            , //addr 0x0201 bit5
+input  wire       i_powerdown_ukwn_fail                             , //addr 0x0201 bit4
+input  wire       i_st_aux_fail_recovery                            , //addr 0x0201 bit3
+input  wire       i_system_pwr_sts                                  , //addr 0x0201 bit0
 
-input   wire  i_p12v_stby_fault_det			,//addr 0x0091 bit7 //206
-input   wire  i_p5v_stby_fault_det				,//addr 0x0091 bit6
-input   wire  i_grp_b_p0_33_s5_fault_det		,//addr 0x0091 bit3
-input   wire  i_grp_b_p1_33_s5_fault_det		,//addr 0x0091 bit2
-input   wire  i_grp_b_p0_18_s5_fault_det		,//addr 0x0091 bit1
-input   wire  i_grp_b_p1_18_s5_fault_det		,//addr 0x0091 bit0
+input  wire [7:0] i_power_on_fail_err_code                          , //addr 0x0032 //202
+output wire       o_power_on_fail_err_code_clr                      , //addr 0x0032
+input  wire [7:0] i_power_down_fail_err_code                        , //addr 0x0033//203
+output wire       o_power_down_fail_err_code_clr                    , //addr 0x0033
+input  wire [7:0] i_power_seq_state_machine                         , //addr 0x0035 //205
+input  wire [7:0] i_power_seq_fault_latch	                        , //addr 0x0036   //206
 
-input   wire  i_p5v_fault_det					,//addr 0x0092 bit6 //207
-input   wire  i_p12v_efuse_fault_det			,//addr 0x0092 bit5
-input   wire  i_p12v_ssd_efuse_fault_det		,//addr 0x0092 bit4
-input   wire  i_p12v_p0_dimm_fault_det			,//addr 0x0092 bit3
-input   wire  i_p12v_p1_dimm_fault_det			,//addr 0x0092 bit2
-input   wire  i_grp_c_p0_fault_det				,//addr 0x0092 bit1
-input   wire  i_grp_c_p1_fault_det				,//addr 0x0092 bit0
+input  wire       i_p12v_stby_fault_det			                    , //addr 0x0091 bit7 //206
+input  wire       i_p5v_stby_fault_det				                , //addr 0x0091 bit6
+input  wire       i_grp_b_p0_33_s5_fault_det		                , //addr 0x0091 bit3
+input  wire       i_grp_b_p1_33_s5_fault_det		                , //addr 0x0091 bit2
+input  wire       i_grp_b_p0_18_s5_fault_det		                , //addr 0x0091 bit1
+input  wire       i_grp_b_p1_18_s5_fault_det		                , //addr 0x0091 bit0
+ 
+input  wire       i_p5v_fault_det					                , //addr 0x0092 bit6 //207
+input  wire       i_p12v_efuse_fault_det			                , //addr 0x0092 bit5
+input  wire       i_p12v_ssd_efuse_fault_det		                , //addr 0x0092 bit4
+input  wire       i_p12v_p0_dimm_fault_det			                , //addr 0x0092 bit3
+input  wire       i_p12v_p1_dimm_fault_det			                , //addr 0x0092 bit2
+input  wire       i_grp_c_p0_fault_det				                , //addr 0x0092 bit1
+input  wire       i_grp_c_p1_fault_det				                , //addr 0x0092 bit0
   
-input   wire  i_grp_d_vddio_p0_fault_det		,//addr 0x0093 bit7 //208
-input   wire  i_grp_d_vddio_p1_fault_det		,//addr 0x0093 bit6   
-input   wire  i_grp_d_soc_p0_fault_det			,//addr 0x0093 bit5 
-input   wire  i_grp_d_soc_p1_fault_det			,//addr 0x0093 bit4  
-input   wire  i_grp_d_p0_vddcore0_fault_det	,//addr 0x0093 bit3
-input   wire  i_grp_d_p1_vddcore0_fault_det	,//addr 0x0093 bit2 
-input   wire  i_grp_d_p0_vddcore1_fault_det	,//addr 0x0093 bit1
-input   wire  i_grp_d_p1_vddcore1_fault_det	,//addr 0x0093 bit0   
+input  wire       i_grp_d_vddio_p0_fault_det		                , //addr 0x0093 bit7 //208
+input  wire       i_grp_d_vddio_p1_fault_det		                , //addr 0x0093 bit6   
+input  wire       i_grp_d_soc_p0_fault_det			                , //addr 0x0093 bit5 
+input  wire       i_grp_d_soc_p1_fault_det			                , //addr 0x0093 bit4  
+input  wire       i_grp_d_p0_vddcore0_fault_det	                    , //addr 0x0093 bit3
+input  wire       i_grp_d_p1_vddcore0_fault_det	                    , //addr 0x0093 bit2 
+input  wire       i_grp_d_p0_vddcore1_fault_det	                    , //addr 0x0093 bit1
+input  wire       i_grp_d_p1_vddcore1_fault_det	                    , //addr 0x0093 bit0   
   
-input  wire  i_p1_vdd_core_1_ocp_n,           //addr 0x009D bit7    //209
-input  wire  i_p1_vdd_core_0_ocp_n,           //addr 0x009D bit6
-input  wire  i_p1_vddio_ocp_n,                //addr 0x009D bit5
-input  wire  i_p1_efuse_fault_n,              //addr 0x009D bit4
-input  wire  i_p0_vdd_core_1_ocp_n,           //addr 0x009D bit3
-input  wire  i_p0_vdd_core_0_ocp_n,           //addr 0x009D bit2
-input  wire  i_p0_vddio_ocp_n,                //addr 0x009D bit1
+input  wire       i_p1_vdd_core_1_ocp_n                             , //addr 0x009D bit7    //209
+input  wire       i_p1_vdd_core_0_ocp_n                             , //addr 0x009D bit6
+input  wire       i_p1_vddio_ocp_n                                  , //addr 0x009D bit5
+input  wire       i_p1_efuse_fault_n                                , //addr 0x009D bit4
+input  wire       i_p0_vdd_core_1_ocp_n                             , //addr 0x009D bit3
+input  wire       i_p0_vdd_core_0_ocp_n                             , //addr 0x009D bit2
+input  wire       i_p0_vddio_ocp_n                                  , //addr 0x009D bit1
 // input  wire  i_p0_efuse_fault_n,              //addr 0x009D bit0
 
-input  wire  i_rtc_sqw,                       //addr 0x009E bit7               
-input  wire  i_rtc_inta_n,                    //addr 0x009E bit6
-// input  wire  i_p0_u112_alert_od_r_n,          //addr 0x009E bit5
-input  wire  i_p1_i3c_apml_alert_n,           //addr 0x009E bit4
-input  wire  i_p0_i3c_apml_alert_n,           //addr 0x009E bit3
-input  wire  i_clk_gen_en_r_n,                //addr 0x009E bit2
-input  wire  i_clk_gen_alert_r_n,             //addr 0x009E bit1
+input  wire       i_rtc_sqw                                         , //addr 0x009E bit7               
+input  wire       i_rtc_inta_n                                      , //addr 0x009E bit6
+// input  wire  i_p0_u112_alert_od_r_n,            //addr 0x009E bit5
+input  wire       i_p1_i3c_apml_alert_n                             , //addr 0x009E bit4
+input  wire       i_p0_i3c_apml_alert_n                             , //addr 0x009E bit3
+input  wire       i_clk_gen_en_r_n                                  , //addr 0x009E bit2
+input  wire       i_clk_gen_alert_r_n                               , //addr 0x009E bit1
 // input  wire  i_thermsensor_alert1_n,          //addr 0x009E bit0
 
-output  wire  o_force_allpwron_ctl,           //addr 0x00A0 bit0
-output  wire  o_fm_pld_db800_3_clks_dev_en,   //addr 0x00D1 bit6
-output  wire  o_jtag_cpld_bmc_ntrst_r,        //addr 0x0105 bit4
-output  wire  o_bmc_warm_reset_ctl,           //addr 0x0130 bit5
-output  wire  o_sys_debug_mode,               //addr 0x02C0 bit0 ;20220106 c00268;idms:202201040006
+output wire       o_force_allpwron_ctl                              , //addr 0x00A0 bit0
+output wire       o_fm_pld_db800_3_clks_dev_en                      , //addr 0x00D1 bit6
+output wire       o_jtag_cpld_bmc_ntrst_r                           , //addr 0x0105 bit4
+output wire       o_bmc_warm_reset_ctl                              , //addr 0x0130 bit5
+output wire       o_sys_debug_mode                                  , //addr 0x02C0 bit0 ;20220106 c00268;idms:202201040006
 
 
-input   wire  i_p1_vdd_core_0_soc_rst_l_n,    //addr 0x0103 bit7
-input   wire  i_p1_vdd_core_1_11_sus_rst_l_n, //addr 0x0103 bit6
-input   wire  i_p1_vddio_rst_l_n,             //addr 0x0103 bit5
-input   wire  i_p0_vddio_rst_l_n,             //addr 0x0103 bit4
-input   wire  i_p0_vdd_core_0_soc_rst_l_n,    //addr 0x0103 bit3
-input   wire  i_p0_vdd_core_1_11_sus_rst_l_n, //addr 0x0103 bit2
-input   wire  i_cpu_sys_reset_r_n,            //addr 0x0103 bit1
-input   wire  i_cpu_rsmrst_r_n,               //addr 0x0103 bit0
+input  wire       i_p1_vdd_core_0_soc_rst_l_n                       , //addr 0x0103 bit7
+input  wire       i_p1_vdd_core_1_11_sus_rst_l_n                    , //addr 0x0103 bit6
+input  wire       i_p1_vddio_rst_l_n                                , //addr 0x0103 bit5
+input  wire       i_p0_vddio_rst_l_n                                , //addr 0x0103 bit4
+input  wire       i_p0_vdd_core_0_soc_rst_l_n                       , //addr 0x0103 bit3
+input  wire       i_p0_vdd_core_1_11_sus_rst_l_n                    , //addr 0x0103 bit2
+input  wire       i_cpu_sys_reset_r_n                               , //addr 0x0103 bit1
+input  wire       i_cpu_rsmrst_r_n                                  , //addr 0x0103 bit0
 
-input    wire  i_cpu0_thermtrip ,              //addr 0x02A1 bit7 ;20220106 c00268;idms:202201040006
-output  wire  o_cpu0_thermtrip_clr ,          //addr 0x02A1 bit7 ;20220106 c00268;idms:202201040006
-input    wire  i_cpu1_thermtrip,               //addr 0x02A8 bit7
-output  wire  o_cpu1_thermtrip_clr,           //addr 0x02A8 bit7 ;20220106 c00268;idms:202201040006
+input  wire       i_cpu0_thermtrip                                  , //addr 0x02A1 bit7 ;20220106 c00268;idms:202201040006
+output wire       o_cpu0_thermtrip_clr                              , //addr 0x02A1 bit7 ;20220106 c00268;idms:202201040006
+input  wire       i_cpu1_thermtrip                                  , //addr 0x02A8 bit7
+output wire       o_cpu1_thermtrip_clr                              , //addr 0x02A8 bit7 ;20220106 c00268;idms:202201040006
 
 // output  wire  o_cpu0_prochot,                 //addr 0x02A2 bit2 c00268 rdc:3706081
 // output  wire  o_cpu1_prochot,                 //addr 0x02A2 bit2 c00268 rdc:3706081
 
-input   wire  i_dimm_alarm_flag,              //addr 0x0300 bit0
+input  wire       i_dimm_alarm_flag                                 , //addr 0x0300 bit0
 
-input   wire  i_cpu1_reset_n,					//addr 0x00F4 bit1
-input   wire  i_cpu0_reset_n,					//addr 0x00F4 bit0
+input  wire       i_cpu1_reset_n                                    , //addr 0x00F4 bit1
+input  wire       i_cpu0_reset_n                                    , //addr 0x00F4 bit0
 
 /*CPU ID Record Register*/
-input   wire  i_p0_coretype2,                 //addr 0x02E0 bit6
-input   wire  i_p0_coretype1,                 //addr 0x02E0 bit5
-input   wire  i_p0_coretype0,                 //addr 0x02E0 bit4
-input   wire  i_p0_sp5r4,                     //addr 0x02E0 bit3
-input   wire  i_p0_sp5r3,                     //addr 0x02E0 bit2
-input   wire  i_p0_sp5r2,                     //addr 0x02E0 bit1
-input   wire  i_p0_sp5r1,                     //addr 0x02E0 bit0
+input  wire       i_p0_coretype2                                    , //addr 0x02E0 bit6
+input  wire       i_p0_coretype1                                    , //addr 0x02E0 bit5
+input  wire       i_p0_coretype0                                    , //addr 0x02E0 bit4
+input  wire       i_p0_sp5r4                                        , //addr 0x02E0 bit3
+input  wire       i_p0_sp5r3                                        , //addr 0x02E0 bit2
+input  wire       i_p0_sp5r2                                        , //addr 0x02E0 bit1
+input  wire       i_p0_sp5r1                                        , //addr 0x02E0 bit0
 
-input   wire  i_p1_coretype2,                 //addr 0x02E8 bit6
-input   wire  i_p1_coretype1,                 //addr 0x02E8 bit5
-input   wire  i_p1_coretype0,                 //addr 0x02E8 bit4
-input   wire  i_p1_sp5r4,                     //addr 0x02E8 bit3
-input   wire  i_p1_sp5r3,                     //addr 0x02E8 bit2
-input   wire  i_p1_sp5r2,                     //addr 0x02E8 bit1
-input   wire  i_p1_sp5r1,                     //addr 0x02E8 bit0
-
-
-input    wire  i_p1_dimm_gl_pwrgd_fail_event		, //addr 0x0312 bit3
-output  wire  o_p1_dimm_gl_pwrgd_fail_event_clr	, //addr 0x0312 bit3
-input    wire  i_p1_dimm_af_pwrgd_fail_event		, //addr 0x0312 bit2
-output  wire  o_p1_dimm_af_pwrgd_fail_event_clr	, //addr 0x0312 bit2
-input    wire  i_p0_dimm_gl_pwrgd_fail_event		, //addr 0x0312 bit1
-output  wire  o_p0_dimm_gl_pwrgd_fail_event_clr	, //addr 0x0312 bit1
-input    wire  i_p0_dimm_af_pwrgd_fail_event		, //addr 0x0312 bit0
-output  wire  o_p0_dimm_af_pwrgd_fail_event_clr	, //addr 0x0312 bit0
-
-output wire  o_bmc_nmi_ctl                        , //addr 0x03A0 bit6 
-input   wire  i_bmc_nmi_ctl                        , //addr 0x03A0 bit6 
-output wire  o_clr_cmos_ctl                       , //addr 0x03A0 bit4 
-input   wire  i_bmc_clr_cmos                       , //addr 0x03A0 bit4 
+input  wire       i_p1_coretype2                                    , //addr 0x02E8 bit6
+input  wire       i_p1_coretype1                                    , //addr 0x02E8 bit5
+input  wire       i_p1_coretype0                                    , //addr 0x02E8 bit4
+input  wire       i_p1_sp5r4                                        , //addr 0x02E8 bit3
+input  wire       i_p1_sp5r3                                        , //addr 0x02E8 bit2
+input  wire       i_p1_sp5r2                                        , //addr 0x02E8 bit1
+input  wire       i_p1_sp5r1                                        , //addr 0x02E8 bit0
 
 
+input  wire       i_p1_dimm_gl_pwrgd_fail_event		                , //addr 0x0312 bit3
+output wire       o_p1_dimm_gl_pwrgd_fail_event_clr	                , //addr 0x0312 bit3
+input  wire       i_p1_dimm_af_pwrgd_fail_event		                , //addr 0x0312 bit2
+output wire       o_p1_dimm_af_pwrgd_fail_event_clr	                , //addr 0x0312 bit2
+input  wire       i_p0_dimm_gl_pwrgd_fail_event		                , //addr 0x0312 bit1
+output wire       o_p0_dimm_gl_pwrgd_fail_event_clr	                , //addr 0x0312 bit1
+input  wire       i_p0_dimm_af_pwrgd_fail_event		                , //addr 0x0312 bit0
+output wire       o_p0_dimm_af_pwrgd_fail_event_clr	                , //addr 0x0312 bit0
 
-output wire  [7:0] o_espi_ram_1050                 , //addr 0x1050 //default 0xff  //2023-9-6 add 
-output wire  [7:0] o_espi_ram_1051                 , //addr 0x1051 //default 0xff
-output wire  [7:0] o_espi_ram_1052                 , //addr 0x1052 //default 0xff
-output wire  [7:0] o_espi_ram_1053                 , //addr 0x1053 //default 0xff //2023-11-8 add 
-output wire  [7:0] o_espi_ram_1054                 , //addr 0x1054 //default 0xff //2023-11-8 add 
-input   wire  [7:0] i_espi_ram_1055                 , //addr 0x1055 //default 0xff
-input   wire  [7:0] i_espi_ram_1056                 , //addr 0x1056 //default 0xff
-input   wire  [7:0] i_espi_ram_1057                 , //addr 0x1057 //default 0xff //2023-11-8 add 
-input   wire  [7:0] i_espi_ram_1058                    //addr 0x1058 //default 0xff //2023-11-8 add 
+output wire       o_bmc_nmi_ctl                                     , //addr 0x03A0 bit6 
+input  wire       i_bmc_nmi_ctl                                     , //addr 0x03A0 bit6 
+output wire       o_clr_cmos_ctl                                    , //addr 0x03A0 bit4 
+input  wire       i_bmc_clr_cmos                                    , //addr 0x03A0 bit4 
+
+output wire  [7:0] o_espi_ram_1050                                  , //addr 0x1050 //default 0xff  //2023-9-6 add 
+output wire  [7:0] o_espi_ram_1051                                  , //addr 0x1051 //default 0xff
+output wire  [7:0] o_espi_ram_1052                                  , //addr 0x1052 //default 0xff
+output wire  [7:0] o_espi_ram_1053                                  , //addr 0x1053 //default 0xff //2023-11-8 add 
+output wire  [7:0] o_espi_ram_1054                                  , //addr 0x1054 //default 0xff //2023-11-8 add 
+input  wire  [7:0] i_espi_ram_1055                                  , //addr 0x1055 //default 0xff
+input  wire  [7:0] i_espi_ram_1056                                  , //addr 0x1056 //default 0xff
+input  wire  [7:0] i_espi_ram_1057                                  , //addr 0x1057 //default 0xff //2023-11-8 add 
+input  wire  [7:0] i_espi_ram_1058                                    //addr 0x1058 //default 0xff //2023-11-8 add 
 
 /*YRS36M2C4S RAM END */
-
 
 );
 ////////////////////////////////////////////////////////////////////////

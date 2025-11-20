@@ -45,7 +45,8 @@ parameter START_COUNT_NUM = 24 // Generally, START_COUNT_NUM = BPS_COUNT_NUM/2
 
 	output reg  error_flag
 );
-reg	 read_flag;
+
+reg	 read_flag;
 reg	 ser_data_out; 
 
 wire ser_data_in ;

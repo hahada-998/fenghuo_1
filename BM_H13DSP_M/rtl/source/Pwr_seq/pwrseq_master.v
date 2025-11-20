@@ -258,6 +258,7 @@ reg                                          pwrup_state_trans_en               
 reg                                          pwron_critical_fail_en             ;
 reg                                          psu_critical_fail_en               ;
 reg                                          efuse_critical_fail_en             ;
+
 //reg  vcore_critical_fail_en;
 reg                                          wait_steady_pwrok_fail_en          ;
 reg                                          rt_critical_fail_check             ; // 运行时关键故障检测使能
@@ -285,7 +286,7 @@ assign st_critical_fail      = (power_seq_sm == SM_CRITICAL_FAIL          );
 assign st_halt_power_cycle   = (power_seq_sm == SM_HALT_POWER_CYCLE       );
 assign st_disable_main_efuse = (power_seq_sm == SM_DISABLE_MAIN_EFUSE     );
 
-// wdt_tick信号可选不同触发时间间隔
+// wdt_tick信号可选不同触发时间间隔, psu_on_tick32ms用于PSU开启状态, sequence_tick2ms用于其他状态
 assign wdt_tick = (off_state) ? t256ms : (st_ps_on ? psu_on_tick : sequence_tick);
 
 // 监测状态机状态变化, 清零看门狗计数器, 时间间隔1us
@@ -441,6 +442,54 @@ always @(posedge clk or posedge reset) begin
 end
 
 /* ------------------------------------------------------------------------------------------------------------
+add by x02345 - 2024.11.18
+增加短按开机, 长按4s以上关机功能
+---------------------------------------------------------------------------------------------------------------*/
+reg  [2:0] r_pwrbtn_1s_cnt   ; // 计数到 4 秒 （0..4）
+reg        r_Pwrbtn_long     ; // 长按指示 按下 >=4s 时置1（保留直到被清除）
+reg        r_Pwrbtn_long_flag; // 指示长按大于4s后, 用该信号维持住SM_OFF_STANDBY状态
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        r_pwrbtn_1s_cnt <= 3'd0;
+        r_Pwrbtn_long   <= 1'b0;
+    end
+    else begin
+        // 每秒采样一次按键状态
+        if (t1s_tick) begin
+            if ((p0_pwrbtn_n) && st_steady_pwrok) begin
+                // 按下且处于运行稳定态，计数递增直到 4
+                if (r_pwrbtn_1s_cnt < 3'd4)
+                    r_pwrbtn_1s_cnt <= r_pwrbtn_1s_cnt + 3'd1;
+                else
+                    r_pwrbtn_1s_cnt <= r_pwrbtn_1s_cnt;
+                    // 当计数达到4时置长按标志
+
+                if (r_pwrbtn_1s_cnt == 3'd4)
+                    r_Pwrbtn_long <= 1'b1;
+            end
+            else begin
+                // 非按下或离开运行稳定态时清计数（释放需重新计数）
+                r_pwrbtn_1s_cnt <= 3'd0;
+                // 长按标志由外部清除（assert_button_clr）或复位清除，避免按一下误触后立即复位
+                if (assert_button_clr)
+                    r_Pwrbtn_long <= 1'b0;
+            end
+        end
+        // 非 t1s_tick 周期内保持当前值
+        else begin
+            // 允许外部清除在任意时钟周期生效
+            if (assert_button_clr)
+                r_Pwrbtn_long <= 1'b0;
+        end
+    end
+end
+
+always @(posedge clk or posedge reset) begin
+    r_Pwrbtn_long_flag <= p0_pwrbtn_n & r_Pwrbtn_long;
+end 
+
+
+/* ------------------------------------------------------------------------------------------------------------
 主板上下电状态机
 ---------------------------------------------------------------------------------------------------------------*/
 always @(posedge clk) begin
@@ -535,12 +584,17 @@ always @(*) begin
                 else if (s5dev_pwren_request && s5_devices_on_wait_complete)
                     // S5 device enable request
                     state_ns = SM_ENABLE_S5_DEVICES ;
-                else if (turn_system_on && dc_on_wait_complete) 
+                else if (turn_system_on && r_Pwrbtn_long_flag && dc_on_wait_complete) // 长按下电后维持再SM_OFF_STANDBY状态
+                    state_ns = SM_OFF_STANDBY       ;
+                else if (turn_system_on && p0_pwrbtn_n && dc_on_wait_complete) // 短按上电
+                    state_ns = SM_PS_ON             ;
+                // else if (turn_system_on && dc_on_wait_complete) 
+                // else if ((turn_system_on && p0_pwrbtn_n ) && dc_on_wait_complete ) begin
                     //add bmc_ready_out_n
                     // Let's power on. Note that if miss_turn_on_window is asserted, there's
                     // no need to wait for dc_on_wait_complete since we just went through
                     // SM_MISS_TURNON which is long enough wait time for the next power up.
-                    state_ns = SM_PS_ON             ;
+                    // state_ns = SM_PS_ON             ;
             end
 
             // 0x09: 电源模块使能; 触发电源供应单元（PSU）的主电源使能，进入上电流程
@@ -593,7 +647,6 @@ always @(*) begin
                 if (pwron_critical_fail_en) begin
                     // Skipped if no_vppen is set
                     state_ns = SM_CRITICAL_FAIL;
-                    po_failure_detected_set = 1'b1;
                 end
                 else if (pwrup_state_trans_en) begin
                     state_ns = SM_EN_GRP_D_SOC;
@@ -604,7 +657,6 @@ always @(*) begin
             SM_EN_GRP_D_SOC: begin
                 if (pwron_critical_fail_en) begin
                     state_ns = SM_CRITICAL_FAIL;
-                    po_failure_detected_set = 1'b1;
                 end
                 else if (pwrup_state_trans_en) begin
                     state_ns = SM_EN_GRP_D_VDDCORE0;
@@ -615,7 +667,6 @@ always @(*) begin
             SM_EN_GRP_D_VDDCORE0: begin
                 if (pwron_critical_fail_en) begin
                     state_ns = SM_CRITICAL_FAIL;
-                    po_failure_detected_set = 1'b1;
                 end
                 else if (pwrup_state_trans_en) begin
                     state_ns = SM_EN_GRP_D_VDDCORE1;
@@ -626,7 +677,6 @@ always @(*) begin
             SM_EN_GRP_D_VDDCORE1: begin
                 if (pwron_critical_fail_en) begin
                     state_ns = SM_CRITICAL_FAIL;
-                    po_failure_detected_set = 1'b1;
                 end
                 else if (pwrup_state_trans_en) begin
                     state_ns = SM_EN_PGOOD_RELEASE;
@@ -637,7 +687,6 @@ always @(*) begin
             SM_EN_PGOOD_RELEASE: begin
                 if (pwron_critical_fail_en) begin
                     state_ns = SM_CRITICAL_FAIL;
-                    po_failure_detected_set = 1'b1;
                 end
                 else if (pwrup_state_trans_en) begin
                     state_ns = SM_WAIT_POWEROK;
@@ -648,7 +697,6 @@ always @(*) begin
             SM_WAIT_POWEROK: begin
                 if (wait_steady_pwrok_fail_en) begin
                     state_ns = SM_CRITICAL_FAIL;
-                    po_failure_detected_set = 1'b1;
                 end
                 else if (pwrup_state_trans_en && pgd_so_far) begin
                     state_ns = SM_STEADY_PWROK;
@@ -661,7 +709,8 @@ always @(*) begin
                     state_ns = SM_CRITICAL_FAIL;
                 else if(rt_thermtrip_pwr_down) 
                     state_ns = SM_CRITICAL_FAIL;
-                else if(rt_normal_pwr_down)
+                // else if(rt_normal_pwr_down)
+                else if(rt_normal_pwr_down || r_Pwrbtn_long)
                     state_ns = SM_DISABLE_PWRGD; 
             end
 
@@ -1163,12 +1212,13 @@ Shutdown events 下电事件触发
 下电事件按 “触发原因” 分类，分为 “正常下电” 和 “热跳变紧急下电”，确保不同场景下的下电流程有序执行
 当前正常下电逻辑：电源就绪复位掩码解除 + 南桥S4延迟信号（确认进入S4状态）
 热跳变紧急下电逻辑：电源就绪复位掩码解除 + 南桥热跳变信号 + 运行状态
-pgood_rst_mask ：电源就绪复位掩码（ pgood_rst_mask=1 时屏蔽下电，用于上电初期电源未稳定阶段）；
+
+pgood_rst_mask   ：电源就绪复位掩码（ pgood_rst_mask=1 时屏蔽下电，用于上电初期电源未稳定阶段）；
 pch_slp4_n_delay ：南桥 S4 睡眠信号延迟（防抖后的值，确保南桥确实进入 S4 状态，避免误触发下电）；
-pch_thermtrip_n ：南桥热跳变信号（低有效，表示 CPU / 南桥过温，需紧急下电
+pch_thermtrip_n  ：南桥热跳变信号（低有效，表示 CPU / 南桥过温，需紧急下电
 ---------------------------------------------------------------------------------------------------------------*/
 // Shutdown events
-//assign rt_normal_pwr_down    = ~pgood_rst_mask &(~turn_system_on | ( pch_thermtrip_n_delay & pch_slp4_n));
+//assign rt_normal_pwr_down    = ~pgood_rst_mask & (~turn_system_on | ( pch_thermtrip_n_delay & pch_slp4_n));
 assign rt_normal_pwr_down    = ~pgood_rst_mask &  pch_slp4_n_delay	 ;
 assign rt_thermtrip_pwr_down = ~pgood_rst_mask &  pch_thermtrip_n & st_steady_pwrok	 ;
 //assign rt_thermtrip_pwr_down = ~pgood_rst_mask &(~turn_system_on | (pch_thermtrip_n & pch_slp4_n_delay)); 

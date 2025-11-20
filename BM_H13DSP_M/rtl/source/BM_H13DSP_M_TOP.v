@@ -4533,7 +4533,7 @@ bmc_cpld_i2c_ram #(
     .i_PS2_ACFAIL                   (db_i_ps2_acfail_n                ), // PSU2 交流电源故障信号
     .i_PS1_DCOK                     (db_i_ps1_dcok_n                  ), // PSU1 直流电源正常信号
     .i_PS2_DCOK                     (db_i_ps2_dcok_n                  ), // PSU2 直流电源正常信号
-v
+
     // PSU（电源）状态信号，--0x000E
     .i_PS1_ALERT                    (db_i_ps1_smb_alert               ), // PSU1 警告信号
     .i_PS2_ALERT                    (db_i_ps2_smb_alert               ), // PSU2 警告信号

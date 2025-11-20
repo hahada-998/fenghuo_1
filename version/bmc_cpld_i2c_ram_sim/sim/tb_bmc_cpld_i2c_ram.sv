@@ -226,7 +226,7 @@ module tb_bmc_cpld_i2c_ram;
         io_sda_driver = 1; // SDA 空闲状态为高电平
         #400;
 
-        // 开始对I2C从设备进行写操作
+        // 1. 主机开始对I2C从设备进行写操作
         i_scl  = 1; 
         io_sda_driver = 1; 
         #200;
@@ -240,18 +240,39 @@ module tb_bmc_cpld_i2c_ram;
         send_byte(8'h51);
         send_byte(8'h52);
 
-        // 3. 读取从设备寄存器数据
-        // read_byte(); // 读取第一个字节
-        # 1600; // 等待一段时间以确保数据被正确读取
-        // 4. 发送停止信号
+        // 3. 主机发送停止信号
         i_scl = 0;
         io_sda_driver = 0;
         #200;
         i_scl = 1;
         #200;
         io_sda_driver = 1; // SDA 拉高表示停止信号
-        #1000;
 
+        # 1600; // 等待一段时间后进行读操作
+
+        // 1. 主机开始对I2C从设备进行写操作
+        i_scl  = 1; 
+        io_sda_driver = 1; 
+        #200;
+        io_sda_driver = 0; 
+        #200;
+        i_scl  = 0;
+        send_byte(8'h21);
+
+        // 2. 主机发送寄存器读地址(假设要读取的寄存器地址为0x00)
+        send_byte(8'h00);
+        send_byte(8'h01);
+        read_byte(     ); // 主机开始接受数据
+
+        // 3. 主机发送停止信号
+        i_scl = 0;
+        io_sda_driver = 0;
+        #200;
+        i_scl = 1;
+        #200;
+        io_sda_driver = 1; // SDA 拉高表示停止信号
+
+        # 1600; // 等待一段时间后进行读操作
 
         /*
         // 等待一段时间后，进行下一次读操作

@@ -419,27 +419,27 @@ always @(posedge clk or posedge reset) begin
             // 0x20: 电源稳定运行状态。系统进入正常运行状态，所有电源轨均已稳定
             SM_STEADY_PWROK :begin
 	              //no action execution
-                reg_power_supply_on    	 <= 1'b1;
-                reg_ocp_main_en		       <= 1'b1;	  
-                reg_p5v_en               <= 1'b1;
-                reg_grp_c_en			       <= 1'b1;
-                reg_grp_d_vddio_en	     <= 1'b1;
-                reg_grp_d_soc_en		     <= 1'b1; 		
-                reg_grp_d_vddcore0_en	   <= 1'b1;
-                reg_grp_d_vddcore1_en	   <= 1'b1;
-                reg_cpu_pwrgood          <= 1'b1;
-                reached_sm_wait_powerok  <= 1'b1;  
+                reg_power_supply_on    	 <= 1'b1 ;
+                reg_ocp_main_en		       <= 1'b1 ;	  
+                reg_p5v_en               <= 1'b1 ;
+                reg_grp_c_en			       <= 1'b1 ;
+                reg_grp_d_vddio_en	     <= 1'b1 ;
+                reg_grp_d_soc_en		     <= 1'b1 ; 		
+                reg_grp_d_vddcore0_en	   <= 1'b1 ;
+                reg_grp_d_vddcore1_en	   <= 1'b1 ;
+                reg_cpu_pwrgood          <= 1'b1 ;
+                reached_sm_wait_powerok  <= 1'b1 ;  
                 reg_pwrok 				       <= 2'b11;
-                reg_p5v_stby_en          <= 1'b1;
-                reg_p5v_stby_usb_en      <= 1'b1;
-                reg_grp_b_33_s5_en	     <= 1'b1;		
-                reg_grp_b_18_s5_en	     <= 1'b1;
-                reg_rsmrst_l             <= 1'b1;
-                reg_s5dev_pwren_request  <= 1'b0;
-                // reg_usb_ponrst_r_n		 <= 1'b1;
-                // reg_tpcm_reset_n		   <= 1'b1;
-                reg_ocp_aux_en		       <= 1'b1;
-                // reg_p12_en_dimm       <= 1'b1; 
+                reg_p5v_stby_en          <= 1'b1 ;
+                reg_p5v_stby_usb_en      <= 1'b1 ;
+                reg_grp_b_33_s5_en	     <= 1'b1 ;		
+                reg_grp_b_18_s5_en	     <= 1'b1 ;
+                reg_rsmrst_l             <= 1'b1 ;
+                reg_s5dev_pwren_request  <= 1'b0 ;
+                // reg_usb_ponrst_r_n		 <= 1'b1 ;
+                // reg_tpcm_reset_n		   <= 1'b1 ;
+                reg_ocp_aux_en		       <= 1'b1 ;
+                // reg_p12_en_dimm       <= 1'b1 ; 
 	          end
       
             // 0x34: 关键故障状态。检测到致命故障（如 CPU 热跳变），触发紧急下电并锁存故障状态
