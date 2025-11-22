@@ -1,0 +1,256 @@
+#OPTIONS:"|-layerid|0|-orig_srs|D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\pro\\impl1\\synwork\\BM_H13DSP_M_impl1_comp.srs|-top|BM_H13DSP_M|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-lattice|-I|D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\include|-I|D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\pro|-I|D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\pro\\impl1\\|-I|C:\\lscc\\diamond\\3_14\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\diamond\\3_14\\synpbase\\lib\\lucent\\machxo3lf.v|-devicelib|C:\\lscc\\diamond\\3_14\\synpbase\\lib\\lucent\\pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001|-lib|work|-fv2001"
+#CUR:"C:\\lscc\\diamond\\3_14\\synpbase\\bin64\\c_ver.exe":1727134360
+#CUR:"C:\\lscc\\diamond\\3_14\\synpbase\\lib\\lucent\\machxo3lf.v":1726552933
+#CUR:"C:\\lscc\\diamond\\3_14\\synpbase\\lib\\lucent\\pmi_def.v":1727134390
+#CUR:"C:\\lscc\\diamond\\3_14\\synpbase\\lib\\vlog\\hypermods.v":1727134415
+#CUR:"C:\\lscc\\diamond\\3_14\\synpbase\\lib\\vlog\\scemi_objects.v":1727134415
+#CUR:"C:\\lscc\\diamond\\3_14\\synpbase\\lib\\vlog\\scemi_pipes.svh":1727134415
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\BM_H13DSP_M_TOP.v":1763447200
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\include\\BM_H13DSP_M_VA_PORT.v":1761377091
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\include\\pwrseq_define.vh":1760148474
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\PLL\\pll_i25M_o50M_o25M.v":1757486274
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\IIC_Update\\I2C_UPDATE.v":1760063554
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\74LV165\\pvt_gpi.v":1669903272
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\bmc_i2c\\bmc_cpld_i2c_ram.v":1762741551
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\bmc_i2c\\i2c_slave_basic0.v":1762758393
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\bmc_i2c\\i2c_slave_bmc.v":1762744720
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\ESPI_LINK\\espi_link.v":1675842967
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\ESPI_LINK\\pch_cpld_espi_ram.v":1737460876
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\ESPI_LINK\\pcie_dync_alloc.v":1740550136
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\SGPIO_MASTER\\s2p_master.v":1757557248
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\SGPIO_MASTER\\p2s_slave.v":1740643200
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\ClkDiv.v":1655381815
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\delay.v":1670334753
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\ClkDivTree.v":1683958557
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\edge_delay.v":1669777000
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\edge_detect.v":1669967036
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\lowpass_filter.v":1669967036
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\pon_reset.v":1757487977
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\synclib.v":1669774846
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\timer_gen_50mhz.v":1757489244
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\system_rst.v":1739187906
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Signal_Latch\\Edge_Detect_SL.v":1695176528
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Signal_Latch\\Signal_Latch.v":1695176529
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\uart\\mcio_uart_master.v":1760410621
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Pwr_But_Ctrl\\bmc_ctl_pwrbtn.v":1760334990
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Pwr_But_Ctrl\\Pwr_But_Ctrl.v":1762393129
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\bios_i2c\\bios_cpld_i2c_ram.v":1741339876
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\nmi_clear.v":1650609976
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\cpu_module.v":1762412543
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\cpu_thermtrip.v":1739245926
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Pwr_seq\\pwrseq_master.v":1763452825
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\include\\pwrseq_define.vh":1760148474
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Pwr_seq\\pwrseq_slave.v":1763447516
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\include\\pwrseq_define.vh":1760148474
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\cmos_clear.v":1739245950
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\extrst_evt_count.v":1735302358
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\genCntr.v":1669967036
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\MESSAGE_CONTROL.v":1643181304
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Power_Fault\\dimm_fail_event.v":1737707207
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Power_Fault\\ERROR_CODE.v":1761361159
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Power_Fault\\fault_detectA_chklive.v":1739170601
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Power_Fault\\fault_detectB_chklive.v":1669776856
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Power_Fault\\Power_Fault.v":1669775816
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\Power_Fault\\Pwr_Error_Latch.v":1669775044
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\74HC164\\s2p_164.v":1708584683
+#CUR:"D:\\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\\MB\\09\\BM_H13DSP_M\\rtl\\source\\common\\power_button.v":1504323874
+0			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v" verilog
+1		*	"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v" verilog
+2		*	"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\include\pwrseq_define.vh" verilog
+3			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v" verilog
+4			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v" verilog
+5			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v" verilog
+6			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v" verilog
+7			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v" verilog
+8			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v" verilog
+9			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v" verilog
+10			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v" verilog
+11			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v" verilog
+12			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v" verilog
+13			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v" verilog
+14			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v" verilog
+15			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\delay.v" verilog
+16			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\ClkDivTree.v" verilog
+17			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v" verilog
+18			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\edge_detect.v" verilog
+19			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v" verilog
+20			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\pon_reset.v" verilog
+21			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v" verilog
+22			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v" verilog
+23			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v" verilog
+24			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Edge_Detect_SL.v" verilog
+25			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v" verilog
+26			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v" verilog
+27			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v" verilog
+28			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v" verilog
+29			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bios_i2c\bios_cpld_i2c_ram.v" verilog
+30			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\nmi_clear.v" verilog
+31			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v" verilog
+32			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\cpu_thermtrip.v" verilog
+33			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v" verilog
+34			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v" verilog
+35			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\cmos_clear.v" verilog
+36			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\extrst_evt_count.v" verilog
+37			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\genCntr.v" verilog
+38			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\MESSAGE_CONTROL.v" verilog
+39			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\dimm_fail_event.v" verilog
+40			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v" verilog
+41			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectA_chklive.v" verilog
+42			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectB_chklive.v" verilog
+43			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\Power_Fault.v" verilog
+44			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\Pwr_Error_Latch.v" verilog
+45			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v" verilog
+46			"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\power_button.v" verilog
+#Dependency Lists(Uses List)
+0 16 6 5 30 35 29 10 9 26 40 42 39 34 33 31 25 32 17 18 23 27 46 13 12 21 4 22 20 3 2 1
+1 16 6 5 30 35 29 10 9 26 40 42 39 34 33 31 25 32 17 18 23 27 46 13 12 21 4 22 20 3 2 0
+2 16 6 5 30 35 29 10 9 26 40 42 39 34 2 33 31 25 32 17 18 23 27 46 13 12 21 4 22 20 3 1
+3 -1
+4 -1
+5 -1
+6 8
+7 -1
+8 7
+9 -1
+10 11
+11 -1
+12 -1
+13 -1
+14 -1
+15 -1
+16 14
+17 -1
+18 -1
+19 -1
+20 -1
+21 -1
+22 -1
+23 19
+24 -1
+25 24
+26 -1
+27 18
+28 19
+29 8 11
+30 17
+31 -1
+32 42
+33 17 18 2
+34 42 17 2
+35 17
+36 -1
+37 -1
+38 -1
+39 -1
+40 -1
+41 42 17
+42 -1
+43 18 44
+44 18
+45 -1
+46 -1
+#Dependency Lists(Users Of)
+0 1
+1 2 0
+2 34 33 2 1 0
+3 2 1 0
+4 2 1 0
+5 2 1 0
+6 2 1 0
+7 8
+8 29 6
+9 2 1 0
+10 2 1 0
+11 29 10
+12 2 1 0
+13 2 1 0
+14 16
+15 -1
+16 2 1 0
+17 41 35 34 33 30 2 1 0
+18 44 43 33 27 2 1 0
+19 28 23
+20 2 1 0
+21 2 1 0
+22 2 1 0
+23 2 1 0
+24 25
+25 2 1 0
+26 2 1 0
+27 2 1 0
+28 -1
+29 2 1 0
+30 2 1 0
+31 2 1 0
+32 2 1 0
+33 2 1 0
+34 2 1 0
+35 2 1 0
+36 -1
+37 -1
+38 -1
+39 2 1 0
+40 2 1 0
+41 -1
+42 41 34 32 2 1 0
+43 -1
+44 43
+45 -1
+46 2 1 0
+#Design Unit to File Association
+module work s2p_164 45
+module work Pwr_Error_Latch 44
+module work Power_Fault 43
+module work fault_detectA_chklive 41
+module work MESSAGE_CONTROL 38
+module work genCntr 37
+module work extrst_evt_count 36
+module work Pwr_But_Ctrl 28
+module work Edge_Detect_SL 24
+module work PGM_DEBOUNCE_GPO_N 21
+module work PGM_DEBOUNCE_N 21
+module work ISOLATE_COMBI 21
+module work BREAK_COMBI 21
+module work BREAK_COMBI_N 21
+module work STABLE 21
+module work SYNC_DATA 21
+module work SYNC_RESET_SASD 21
+module work SYNC_RESET_AASD 21
+module work SYNC_RESET_N_AASD 21
+module work lowpass_filter 19
+module work delay 15
+module work ClkDiv 14
+module work pcie_dync_alloc 11
+module work i2c_slave_basic0 7
+module work i2c_slave_bmc 8
+module work bmc_cpld_i2c_ram 6
+module work pvt_gpi 5
+module work clear_nmi 30
+module work clear_cmos 35
+module work bios_cpld_i2c_ram 29
+module work pch_cpld_espi_ram 10
+module work espi_link 9
+module work UART_MASTER 26
+module work error_code 40
+module work fault_detectB_chklive 42
+module work dimm_fail_event 39
+module work pwrseq_slave 34
+module work pwrseq_master 33
+module work cpu_module 31
+module work Signal_Latch 25
+module work cpu_thermtrip 32
+module work edge_delay 17
+module work Edge_Detect 18
+module work system_rst 23
+module work bmc_ctl_pwrbtn 27
+module work power_button 46
+module work p2s_slave 13
+module work s2p_master 12
+module work SYNC_DATA_N 21
+module work PGM_DEBOUNCE 21
+module work I2C_UPDATE 4
+module work ClkDivTree 16
+module work timer_gen 22
+module work pon_reset 20
+module work pll_i25M_o50M_o25M 3
+module work BM_H13DSP_M 1

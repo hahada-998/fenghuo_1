@@ -1,0 +1,184 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3_14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp202309synp1, Build 349R, Built Sep 17 2024 08:16:26, @
+
+Modified Files: 1
+FID:  path (prevtimestamp, timestamp)
+391      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 47
+MID:  lib.cell.view
+0        work.BM_H13DSP_M.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+1        work.BREAK_COMBI.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+2        work.BREAK_COMBI_N.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+3        work.ClkDiv.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+4        work.ClkDivTree.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+5        work.Edge_Detect.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+6        work.Edge_Detect_SL.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+7        work.I2C_UPDATE.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+8        work.ISOLATE_COMBI.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+10       work.PGM_DEBOUNCE.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+11       work.PGM_DEBOUNCE_GPO_N.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+12       work.PGM_DEBOUNCE_N.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+16       work.STABLE.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+17       work.SYNC_DATA.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+18       work.SYNC_DATA_N.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+19       work.SYNC_RESET_AASD.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+20       work.SYNC_RESET_N_AASD.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+21       work.SYNC_RESET_SASD.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+22       work.Signal_Latch.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+23       work.UART_MASTER.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+24       work.bios_cpld_i2c_ram.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+25       work.bmc_cpld_i2c_ram.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+26       work.bmc_ctl_pwrbtn.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+27       work.clear_cmos.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+28       work.clear_nmi.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+29       work.cpu_module.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+30       work.cpu_thermtrip.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+32       work.dimm_fail_event.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+33       work.edge_delay.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+34       work.error_code.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+35       work.espi_link.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+38       work.fault_detectB_chklive.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+40       work.i2c_slave_basic0.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+41       work.i2c_slave_bmc.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+42       work.lowpass_filter.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+43       work.p2s_slave.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+44       work.pch_cpld_espi_ram.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+45       work.pcie_dync_alloc.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+46       work.pll_i25M_o50M_o25M.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+47       work.pon_reset.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+55       work.power_button.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+48       work.pvt_gpi.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+49       work.pwrseq_master.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (module definition)
+50       work.pwrseq_slave.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+52       work.s2p_master.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+53       work.system_rst.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+54       work.timer_gen.verilog may have changed because the following files changed:
+                        D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v (2025-11-18 15:58:14, 2025-11-18 16:00:25) <-- (may instantiate this module)
+
+*******************************************************************
+Unmodified files: 51
+FID:  path (timestamp)
+0        C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v (2024-09-17 14:02:13)
+1        C:\lscc\diamond\3_14\synpbase\lib\lucent\pmi_def.v (2024-09-24 07:33:10)
+2        C:\lscc\diamond\3_14\synpbase\lib\vlog\hypermods.v (2024-09-24 07:33:35)
+3        C:\lscc\diamond\3_14\synpbase\lib\vlog\scemi_objects.v (2024-09-24 07:33:35)
+4        C:\lscc\diamond\3_14\synpbase\lib\vlog\scemi_pipes.svh (2024-09-24 07:33:35)
+373      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\include\BM_H13DSP_M_VA_PORT.v (2025-10-25 15:24:51)
+374      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\include\pwrseq_define.vh (2025-10-11 10:07:54)
+375      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\74HC164\s2p_164.v (2024-02-22 14:51:23)
+376      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\74LV165\pvt_gpi.v (2022-12-01 22:01:12)
+377      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\BM_H13DSP_M_TOP.v (2025-11-18 14:26:40)
+378      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\espi_link.v (2023-02-08 15:56:07)
+379      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pch_cpld_espi_ram.v (2025-01-21 20:01:16)
+380      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\ESPI_LINK\pcie_dync_alloc.v (2025-02-26 14:08:56)
+381      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\IIC_Update\I2C_UPDATE.v (2025-10-10 10:32:34)
+382      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\PLL\pll_i25M_o50M_o25M.v (2025-09-10 14:37:54)
+383      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\ERROR_CODE.v (2025-10-25 10:59:19)
+384      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\Power_Fault.v (2022-11-30 10:36:56)
+385      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\Pwr_Error_Latch.v (2022-11-30 10:24:04)
+386      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\dimm_fail_event.v (2025-01-24 16:26:47)
+387      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectA_chklive.v (2025-02-10 14:56:41)
+388      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Power_Fault\fault_detectB_chklive.v (2022-11-30 10:54:16)
+389      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\Pwr_But_Ctrl.v (2025-11-06 09:38:49)
+390      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_But_Ctrl\bmc_ctl_pwrbtn.v (2025-10-13 13:56:30)
+392      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_slave.v (2025-11-18 14:31:56)
+393      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\p2s_slave.v (2025-02-27 16:00:00)
+394      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\SGPIO_MASTER\s2p_master.v (2025-09-11 10:20:48)
+395      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Edge_Detect_SL.v (2023-09-20 10:22:08)
+396      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Signal_Latch\Signal_Latch.v (2023-09-20 10:22:09)
+397      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bios_i2c\bios_cpld_i2c_ram.v (2025-03-07 17:31:16)
+398      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v (2025-11-10 10:25:51)
+399      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_basic0.v (2025-11-10 15:06:33)
+400      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\bmc_i2c\i2c_slave_bmc.v (2025-11-10 11:18:40)
+401      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\ClkDiv.v (2022-06-16 20:16:55)
+402      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\ClkDivTree.v (2023-05-13 14:15:57)
+403      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\MESSAGE_CONTROL.v (2022-01-26 15:15:04)
+404      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\cmos_clear.v (2025-02-11 11:52:30)
+405      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\cpu_module.v (2025-11-06 15:02:23)
+406      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\cpu_thermtrip.v (2025-02-11 11:52:06)
+407      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\delay.v (2022-12-06 21:52:33)
+408      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\edge_delay.v (2022-11-30 10:56:40)
+409      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\edge_detect.v (2022-12-02 15:43:56)
+410      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\extrst_evt_count.v (2024-12-27 20:25:58)
+411      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\genCntr.v (2022-12-02 15:43:56)
+412      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\lowpass_filter.v (2022-12-02 15:43:56)
+413      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\nmi_clear.v (2022-04-22 14:46:16)
+414      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\pon_reset.v (2025-09-10 15:06:17)
+419      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\power_button.v (2017-09-02 11:44:34)
+415      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\synclib.v (2022-11-30 10:20:46)
+416      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\system_rst.v (2025-02-10 19:45:06)
+417      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\common\timer_gen_50mhz.v (2025-09-10 15:27:24)
+418      D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\uart\mcio_uart_master.v (2025-10-14 10:57:01)
+
+*******************************************************************
+Unchanged modules: 9
+MID:  lib.cell.view
+9        work.MESSAGE_CONTROL.verilog
+13       work.Power_Fault.verilog
+14       work.Pwr_But_Ctrl.verilog
+15       work.Pwr_Error_Latch.verilog
+31       work.delay.verilog
+36       work.extrst_evt_count.verilog
+37       work.fault_detectA_chklive.verilog
+39       work.genCntr.verilog
+51       work.s2p_164.verilog

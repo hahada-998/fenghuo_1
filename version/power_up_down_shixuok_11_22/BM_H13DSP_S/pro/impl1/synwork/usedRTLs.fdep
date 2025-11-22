@@ -1,0 +1,23 @@
+#List of actual used RTLs.
+
+File                                                                                                                                                                 Type     IN_PROJECT/INCLUDED/LIBRARY
+
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v"         verilog                        INCLUDED
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\edge_delay.v"            verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDivTree.v"            verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v"                verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v"     verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_bmc.v"        verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v"     verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v"          verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\edge_detect.v"           verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\lowpass_filter.v"        verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\delay.v"                 verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v"        verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v"        verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\s2p_slave.v"        verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\IIC_Update\I2C_UPDATE.v"        verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v"       verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\pon_reset.v"             verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\PLL\pll_i25M_o50M_o25M.v"       verilog                      IN PROJECT
+"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v"              verilog                      IN PROJECT

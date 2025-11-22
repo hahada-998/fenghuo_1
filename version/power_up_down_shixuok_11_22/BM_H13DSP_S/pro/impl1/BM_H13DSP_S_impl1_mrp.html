@@ -1,0 +1,2085 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+         Lattice Mapping Report File for Design Module 'BM_H13DSP_S'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO3LF -p LCMXO3LF-6900C -t CABGA400 -s 5 -oc
+     Commercial BM_H13DSP_S_impl1.ngd -o BM_H13DSP_S_impl1_map.ncd -pr
+     BM_H13DSP_S_impl1.prf -mp BM_H13DSP_S_impl1.mrp -lpf D:/FH_MB_powerup_1106_
+     shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ct
+     rl/MB/09/BM_H13DSP_S/pro/impl1/BM_H13DSP_S_impl1_synplify.lpf -lpf D:/FH_MB
+     _powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down
+     _add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/BM_H13DSP_S.lpf -c 0 -gui -msgset D:
+     /FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pul
+     l_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3LF-6900CCABGA400
+Target Performance:   5
+Mapper:  xo3c00f,  version:  Diamond (64-bit) 3.14.0.75.2
+Mapped on:  11/18/25  14:50:03
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:   1362 out of  7872 (17%)
+      PFU registers:         1328 out of  6864 (19%)
+      PIO registers:           34 out of  1008 (3%)
+   Number of SLICEs:      1167 out of  3432 (34%)
+      SLICEs as Logic/ROM:   1167 out of  3432 (34%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:        218 out of  3432 (6%)
+   Number of LUT4s:        2325 out of  6864 (34%)
+      Number used as logic LUTs:        1889
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      436
+      Number used as shift registers:     0
+   Number of PIO sites used: 285 + 4(JTAG) out of 336 (86%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+   Number of clocks:  8
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: inst_osch )
+     Net clk_50m: 769 loads, 769 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     
+     Net clk_25m: 151 loads, 151 rising, 0 falling (Driver: pll_inst/PLLInst_0 )
+     
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_i: 8 loads, 8
+     rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_i2c_command_1_0_a2 )
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1 )
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 rising, 0 falling (Driver:
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2 )
+     Net inst_i2c_update_flash_config/i2c1_scli: 1 loads, 1 rising, 0 falling
+     (Driver: PIO io_I2C2_2_UPDATE_SCL )
+     Net i_CLK_PAL2_IN_25M_c: 1 loads, 1 rising, 0 falling (Driver: PIO
+     i_CLK_PAL2_IN_25M )
+   Number of Clock Enables:  403
+     Net mcpld_to_scpld_data_filter4: 13 loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [7]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/o_data_out_RNO
+     [0]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2C_RW_1_sqm
+     uxa: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[0]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[1]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[2]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[3]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[4]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[5]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_I2c_address_
+     RNO[6]: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_211_i: 4
+     loads, 4 LSLICEs
+     Net
+
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnte: 4
+     loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSi
+     gnal_sda_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_glitchlessSi
+     gnal_scl_d_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock: 4
+     loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_250_i: 4
+     loads, 4 LSLICEs
+     Net pon_reset_n: 1 loads, 1 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnte: 9 loads, 9
+     LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00725: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_000e5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00255: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00104: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_002c5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/w_data_vld_pos: 9 loads, 9 LSLICEs
+     
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_command_tempce[0]: 4 loads,
+     4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_i2c_command_tempce[8]: 4 loads,
+     4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00284: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00275: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00265: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_002b5: 4 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/N_32: 2 loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/r_reg_00064: 4 loads, 4 LSLICEs
+     Net t32ms_tick: 2 loads, 2 LSLICEs
+     Net UID_Function_u0/lowpass_filter_U0/un1_r_data_out8: 1 loads, 1 LSLICEs
+     Net UID_Function_u0/un1_i_clr_flag_short_1_0: 1 loads, 1 LSLICEs
+     Net UID_Function_u0/un1_i_clr_flag_long_1: 1 loads, 1 LSLICEs
+     Net UID_Function_u0/un1_r_BMC_EXTRST_CPLD_OUT_N8_1_0: 1 loads, 1 LSLICEs
+     Net uart_master_u18/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/reg_par_data_outce_16[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u18/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u18/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u18/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u18/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_16[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u17/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[0]: 1 loads, 1 LSLICEs
+
+     Net uart_master_u17/reg_par_data_outce_15[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/reg_par_data_outce_15[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u17/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u17/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u17/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u17/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_15[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u16/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/reg_par_data_outce_14[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u16/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u16/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u16/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u16/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_14[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u15/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/reg_par_data_outce_13[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u15/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u15/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u15/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u15/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_13[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u14/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[2]: 1 loads, 1 LSLICEs
+
+     Net uart_master_u14/reg_par_data_outce_12[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/reg_par_data_outce_12[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u14/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u14/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u14/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u14/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_12[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u13/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/reg_par_data_outce_11[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u13/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u13/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u13/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u13/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_11[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u12/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/reg_par_data_outce_10[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u12/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u12/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u12/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u12/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_10[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u11/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[5]: 1 loads, 1 LSLICEs
+
+     Net uart_master_u11/reg_par_data_outce_9[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/reg_par_data_outce_9[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u11/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u11/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u11/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u11/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_9[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u10/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/reg_par_data_outce_8[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u10/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u10/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u10/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u10/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_8[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u9/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/reg_par_data_outce_7[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u9/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u9/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u9/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u9/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_7[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u8/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[7]: 1 loads, 1 LSLICEs
+
+     Net uart_master_u8/reg_par_data_outce_6[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/reg_par_data_outce_6[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u8/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u8/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u8/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u8/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_6[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u7/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/reg_par_data_outce_5[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u7/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u7/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u7/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u7/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_5[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u6/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/reg_par_data_outce_4[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u6/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u6/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u6/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u6/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_4[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u5/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[9]: 1 loads, 1 LSLICEs
+
+     Net uart_master_u5/reg_par_data_outce_3[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/reg_par_data_outce_3[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u5/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u5/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u5/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u5/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_3[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u4/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/reg_par_data_outce_2[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u4/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u4/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u4/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u4/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_2[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u3/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/reg_par_data_outce_1[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u3/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u3/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u3/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u3/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_1[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u2/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/reg_par_data_outce_0[19]: 1 loads, 1 LSLICEs
+
+     Net uart_master_u2/reg_par_data_outce_0[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u2/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u2/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u2/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u2/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce_0[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u1/N_62_i: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[0]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[1]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[2]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[4]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[5]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[6]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[7]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[8]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[9]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[10]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[19]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/reg_par_data_outce[20]: 1 loads, 1 LSLICEs
+     Net uart_master_u1/N_97_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u1/error_flag_0_sqmuxa: 4 loads, 4 LSLICEs
+     Net uart_master_u1/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u1/bps_count_bite: 4 loads, 4 LSLICEs
+     Net reg_par_data_outce[21]: 1 loads, 0 LSLICEs
+     Net uart_master_u0/N_545_i: 1 loads, 1 LSLICEs
+     Net uart_master_u0/N_135_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u0/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u0/bps_count_bite: 4 loads, 4 LSLICEs
+     Net uart_master_u00/N_606_i: 1 loads, 1 LSLICEs
+     Net uart_master_u00/N_135_i_0: 1 loads, 1 LSLICEs
+     Net uart_master_u00/data_counte: 3 loads, 3 LSLICEs
+     Net uart_master_u00/bps_count_bite: 4 loads, 4 LSLICEs
+     Net inst_slv_to_mb_p2s/cnte: 5 loads, 5 LSLICEs
+     Net inst_mb_to_slv_s2p/po_r_RNO[2]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_r_RNO[5]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_r_RNO[10]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_r_RNO[25]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_r_RNO[196]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[0]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po5: 11 loads, 11 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[1]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[3]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[16]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[20]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[23]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[24]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[26]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[27]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[28]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[29]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[30]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[31]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[32]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[197]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[198]: 1 loads, 1 LSLICEs
+     Net inst_mb_to_slv_s2p/po_rce[199]: 1 loads, 1 LSLICEs
+
+     Net inst_mb_to_slv_s2p/cnte: 5 loads, 5 LSLICEs
+     Net timer_gen_inst/t1us_2: 3 loads, 3 LSLICEs
+     Net timer_gen_inst/t32us_e: 7 loads, 7 LSLICEs
+   Number of local set/reset loads for net pon_reset_n merged into GSR:  978
+   Number of LSRs:  8
+     Net un2_w_rst: 5 loads, 4 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_1: 2
+     loads, 2 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un2_w_rst_2: 2
+     loads, 2 LSLICEs
+     Net un2_w_rst_3: 4 loads, 3 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/o_i2c_start: 18 loads, 18 LSLICEs
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i:
+     44 loads, 44 LSLICEs
+     Net pon_reset_inst/master_reset_n_i: 2 loads, 2 LSLICEs
+     Net pll_inst/i_CPLD2_PROGRAM_N_c_i: 1 loads, 0 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net t128ms_tick: 80 loads
+     Net bmc_cpld_i2c_ram_u0/w_WR: 73 loads
+     Net inst_slv_to_mb_p2s/cnt[2]: 73 loads
+     Net inst_slv_to_mb_p2s/cnt[7]: 50 loads
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/un1_w_rst_i:
+     44 loads
+     Net inst_slv_to_mb_p2s/cnt[1]: 44 loads
+     Net bmc_cpld_i2c_ram_u0/w_i2c_command[0]: 41 loads
+     Net w_pal_p0_mciop0a_pwr_en: 40 loads
+     Net bmc_cpld_i2c_ram_u0/w_i2c_command[5]: 39 loads
+     Net bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_211: 28
+     loads
+
+
+
+
+   Number of warnings:  15
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsn
+     t_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/BM_H13DSP_S.lpf(10
+     ): Semantic error in "IOBUF PORT "io_I2C7_2_UPDATE_SCL" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "io_I2C7_2_UPDATE_SCL" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsn
+     t_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/BM_H13DSP_S.lpf(11
+     ): Semantic error in "IOBUF PORT "io_I2C7_2_UPDATE_SDA" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "io_I2C7_2_UPDATE_SDA" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsn
+     t_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/BM_H13DSP_S.lpf(12
+     ): Semantic error in "IOBUF PORT "io_I2C7_PAL2_SDA" OPENDRAIN=ON
+     IO_TYPE=LVCMOS33 ;": Port "io_I2C7_PAL2_SDA" does not exist in the design.
+     This preference has been disabled.
+
+WARNING - map: Using local reset signal 'pon_reset_n' to infer global GSR net.
+WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
+     temporarily disable certain features of the device including Power
+     Controller, GSR, Hardened User SPI Port, Hardened Primary User I2C Port.
+     Functionality is restored after the Flash Memory (UFM/Configuration)
+     Interface is disabled using Disable Configuration Interface command 0x26
+     followed by Bypass command 0xFF. 
+WARNING - map: A new DEV_DENSITY property is auto created with value '6900L' by
+     software from the device 'LCMXO3LF-6900C' used.
+WARNING - map: IO buffer missing for top level port i_SW_2...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port
+     i_PAL_TPM_MODULE_PRSNT_N...logic will be discarded.
+WARNING - map: IO buffer missing for top level port
+     i_P0_MCIOP4A_CB_ID1_R...logic will be discarded.
+WARNING - map: IO buffer missing for top level port
+     i_P1_MCIOP4A_CB_ID1_R...logic will be discarded.
+WARNING - map: IO buffer missing for top level port i_PAL_S5_CPU_SHTDN_R...logic
+     will be discarded.
+WARNING - map: IO buffer missing for top level port
+     i_PAL_MEN_CPU_SHTDN_R...logic will be discarded.
+WARNING - map: IO buffer missing for top level port i_CPLD1_CPLD2_RSV2_R...logic
+     will be discarded.
+WARNING - map: In "LOCATE COMP "io_I2C2_2_UPDATE_SDA" SITE "D11" ;": Current
+     SYS_CONFIG setting prohibits pin "D11" to be used as user IO. This
+     preference has been disabled.
+WARNING - map: In "LOCATE COMP "io_I2C2_2_UPDATE_SCL" SITE "C11" ;": Current
+     SYS_CONFIG setting prohibits pin "C11" to be used as user IO. This
+     preference has been disabled.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| io_I2C2_PAL2_SDA    | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_CPLD_SGPIO1_MISO  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD2_JTAGEN      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_HDR_PAL2_N        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_I2C2_2_UPDATE_SDA| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_I2C2_2_UPDATE_SCL| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CPLD1_CPLD2_RSV1_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P12V_DISCHARGE_R  | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_PCH_INTRUDER_CABLE_INST_R_N| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_PCH_INTRUDER  | INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_P0_I2C5_9617_EN   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_SPI_TPM_CS_N_3V3| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SMB_CPU0_ALERT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_P12V_CPU0_DIMM_ON| OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_CPU0_DIMM_OC| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_CPU0_DIMM_GOK| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_P12V_CPU1_DIMM_ON| OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_CPU1_DIMM_OC| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_P12V_CPU1_DIMM_GOK| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_LEAKAGE_DET1_DO_N | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_LEAKAGE_PRSNT1_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BREAK_DET1_DO_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_LEAKAGE_DET_DO_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_LEAKAGE_PRSNT_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BREAK_DET_DO_N    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_M2_GPIO7_R        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_M2_GPIO6_R        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PCB_REVISION_2    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PCB_REVISION_1    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PCB_REVISION_0    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PCA_REVISION_2    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PCA_REVISION_1    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PCA_REVISION_0    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PWRGD_SYS_PWROK_R | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SATA1_RSV         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BOARD_ID3         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BOARD_ID2         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_BOARD_ID1         | INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_BOARD_ID0         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SPI1_BMC_HOLD | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_NODE1_TYPE    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_PE_WAKE_N     | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PAL_SPI_BIOS_UPDATA_EN| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW_QSPI_OE_R      | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW_BIOS_QSPI_S_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_BIOS_FLASH_RESET_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW_BIOS_SPI_OE    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SW_BIOS_FLASH_SPI_S_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PCIE_SATA_WAKE_R_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_PCIE_SATA_RST_N   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_RST_I2C3_MUX_N_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_RST_I2C2_MUX_N_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_RST_I2C1_MUX_N_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_DB2000_2_2_OE_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_DB2000_2_1_OE_N| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_I2C_SEL_R | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_FDEC_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_OE_N_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_RST_N_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_FINC_R    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CLK_PAL2_IN_25M   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_LOL_N_R   | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_CLK_GEN_INTR_N_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0A_LD     | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0A_CLK    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0A_DATAIN | INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3A_CB_ID0_R| INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0C_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0C_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0A_CB_ID1_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0A_CB_ID0_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2A_WAKE_N_R| INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0C_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0A_WAKE_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOG1C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOG1A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP3C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP3A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP2C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP2A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP1C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP1A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP0C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP0A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOG3C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOG3A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP3C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP3A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP2C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP2A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP1C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP1A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0C_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0A_RSV_R  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP4A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOG1A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP3A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP2A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP1A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P1_MCIOP0A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOG3A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP3A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP2A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP1A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0C_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0C_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0A_NVME1_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_P0_MCIOP0A_NVME0_PRSNT_N_R| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOG1C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOG1A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP3C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP3A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP2C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP2A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP1C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP1A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP0C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP0A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOG3C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOG3A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP3C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP3A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP2C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP2A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP1C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP1A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0C_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
+
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0A_GPU_THROTTLE_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP4A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOG1C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOG1A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP3C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP3A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP2C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP2A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP1C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP1A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP0C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P1_MCIOP0A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP4A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOG3C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOG3A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP3C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP3A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP2C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP2A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP1C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP1A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0C_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_P0_MCIOP0A_PERST_N_R| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOG1C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOG1A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP3C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP3A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP2C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
+
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP2A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP1C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP1A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP0C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P1_MCIOP0A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOG3C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOG3A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP3C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP3A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP2C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP2A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP1C_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP1A_PWR_EN_R| BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP0C_PWR_EN_R| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_P0_MCIOP0A_PWR_EN_R| BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_LED8_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED7_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED6_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED5_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED4_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED3_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED2_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| o_LED1_N            | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SGPIO1_MOSI  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SGPIO1_LD_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SGPIO1_CLK   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SGPIO0_MOSI  | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SGPIO0_LD_N  | INPUT     | LVCMOS33  | IN         |
+
++---------------------+-----------+-----------+------------+
+| o_CPLD_SGPIO0_MISO  | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD_SGPIO0_CLK   | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| o_SMB_PEHP_CPU1_OCP_ALERT| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| o_SMB_PEHP_CPU0_OCP_ALERT| OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_TMP4_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_TMP3_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_TMP2_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_TMP1_ALERT_N  | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_PAL_SLIMSAS1_PRSNT_N| INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_JTAG_BMC_TRST_R   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_I2C2_PAL2_SCL     | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| i_SW_8              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW_6              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW_4              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW_7              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW_5              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW_3              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_SW_1              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD2_SN          | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD2_HOLD_N_R    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD2_PROGRAM_N   | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD2_INIT_N      | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| i_CPLD2_DONE        | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block pll_inst/VCC undriven or does not drive anything - clipped.
+Block pon_reset_inst/GND undriven or does not drive anything - clipped.
+Block inst_mb_to_slv_s2p/VCC undriven or does not drive anything - clipped.
+Block inst_slv_to_mb_p2s/VCC undriven or does not drive anything - clipped.
+Block uart_master_u00/VCC undriven or does not drive anything - clipped.
+
+Block uart_master_u0/VCC undriven or does not drive anything - clipped.
+Block uart_master_u1/VCC undriven or does not drive anything - clipped.
+Block uart_master_u2/VCC undriven or does not drive anything - clipped.
+Block uart_master_u3/VCC undriven or does not drive anything - clipped.
+Block uart_master_u4/VCC undriven or does not drive anything - clipped.
+Block uart_master_u5/VCC undriven or does not drive anything - clipped.
+Block uart_master_u6/VCC undriven or does not drive anything - clipped.
+Block uart_master_u7/VCC undriven or does not drive anything - clipped.
+Block uart_master_u8/VCC undriven or does not drive anything - clipped.
+Block uart_master_u9/VCC undriven or does not drive anything - clipped.
+Block uart_master_u10/VCC undriven or does not drive anything - clipped.
+Block uart_master_u11/VCC undriven or does not drive anything - clipped.
+Block uart_master_u12/VCC undriven or does not drive anything - clipped.
+Block uart_master_u13/VCC undriven or does not drive anything - clipped.
+Block uart_master_u14/VCC undriven or does not drive anything - clipped.
+Block uart_master_u15/VCC undriven or does not drive anything - clipped.
+Block uart_master_u16/VCC undriven or does not drive anything - clipped.
+Block uart_master_u17/VCC undriven or does not drive anything - clipped.
+Block uart_master_u18/VCC undriven or does not drive anything - clipped.
+Block UID_Function_u0/VCC undriven or does not drive anything - clipped.
+Block UID_Function_u0/lowpass_filter_U0/VCC undriven or does not drive anything
+     - clipped.
+Block UID_Function_u0/lowpass_filter_U0/GND undriven or does not drive anything
+     - clipped.
+Block UID_Function_u0/Edge_Detect_U0/GND undriven or does not drive anything -
+     clipped.
+Block UID_Function_u0/Edge_Detect_U0/VCC undriven or does not drive anything -
+     clipped.
+Block UID_Function_u0/Edge_Detect_U2/GND undriven or does not drive anything -
+     clipped.
+Block UID_Function_u0/Edge_Detect_U2/VCC undriven or does not drive anything -
+     clipped.
+Block bmc_cpld_i2c_ram_u0/VCC undriven or does not drive anything - clipped.
+Block bmc_cpld_i2c_ram_u0/GND undriven or does not drive anything - clipped.
+Signal pon_reset_n_i was merged into signal pon_reset_n
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i
+     was merged into signal
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
+Signal r_sda_en_i was merged into signal
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en
+Signal pll_inst/GND undriven or does not drive anything - clipped.
+Signal timer_gen_inst/GND undriven or does not drive anything - clipped.
+Signal inst_i2c_update_flash_config/VCC undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/GND undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/GND undriven or does not drive anything - clipped.
+Signal inst_slv_to_mb_p2s/GND undriven or does not drive anything - clipped.
+Signal uart_master_u00/GND undriven or does not drive anything - clipped.
+Signal uart_master_u0/GND undriven or does not drive anything - clipped.
+Signal uart_master_u1/GND undriven or does not drive anything - clipped.
+Signal uart_master_u2/GND undriven or does not drive anything - clipped.
+Signal uart_master_u3/GND undriven or does not drive anything - clipped.
+Signal uart_master_u4/GND undriven or does not drive anything - clipped.
+Signal uart_master_u5/GND undriven or does not drive anything - clipped.
+Signal uart_master_u6/GND undriven or does not drive anything - clipped.
+
+Signal uart_master_u7/GND undriven or does not drive anything - clipped.
+Signal uart_master_u8/GND undriven or does not drive anything - clipped.
+Signal uart_master_u9/GND undriven or does not drive anything - clipped.
+Signal uart_master_u10/GND undriven or does not drive anything - clipped.
+Signal uart_master_u11/GND undriven or does not drive anything - clipped.
+Signal uart_master_u12/GND undriven or does not drive anything - clipped.
+Signal uart_master_u13/GND undriven or does not drive anything - clipped.
+Signal uart_master_u14/GND undriven or does not drive anything - clipped.
+Signal uart_master_u15/GND undriven or does not drive anything - clipped.
+Signal uart_master_u16/GND undriven or does not drive anything - clipped.
+Signal uart_master_u17/GND undriven or does not drive anything - clipped.
+Signal uart_master_u18/GND undriven or does not drive anything - clipped.
+Signal UID_Function_u0/GND undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/GND undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND undriven or
+     does not drive anything - clipped.
+Signal pll_inst/CLKINTFB undriven or does not drive anything - clipped.
+Signal pll_inst/DPHSRC undriven or does not drive anything - clipped.
+Signal pll_inst/PLLACK undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO0 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO1 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO2 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO3 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO4 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO5 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO6 undriven or does not drive anything - clipped.
+Signal pll_inst/PLLDATO7 undriven or does not drive anything - clipped.
+Signal pll_inst/REFCLK undriven or does not drive anything - clipped.
+Signal pll_inst/INTLOCK undriven or does not drive anything - clipped.
+Signal pll_inst/CLKOS3 undriven or does not drive anything - clipped.
+Signal pll_inst/CLKOS2 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/sec_tmr_s_0_S1[11] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/sec_tmr_s_0_COUT[11] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/usec_tmr_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/N_34 undriven or does not drive anything - clipped.
+Signal timer_gen_inst/usec_tmr_cry_0_COUT[3] undriven or does not drive anything
+     - clipped.
+Signal timer_gen_inst/sec_tmr_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal timer_gen_inst/N_33 undriven or does not drive anything - clipped.
+Signal inst_i2c_update_flash_config/CFGSTDBY undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/CFGWAKE undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wbc_ufm_irq undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/TCOC undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/TCINT undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/SPIIRQO undriven or does not drive anything
+     - clipped.
+
+Signal inst_i2c_update_flash_config/SPICSNEN undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN7 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN6 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN5 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN4 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN3 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN2 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN1 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMCSN0 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMOSIEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/SPIMOSIO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPIMISOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/SPIMISOO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPISCKEN undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/SPISCKO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/I2C2IRQO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/i2c1_irqo undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SDAOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SDAO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/I2C2SCLOEN undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/I2C2SCLO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO0_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO1_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO2_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO3_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO4_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO5_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLDATO6_0 undriven or does not drive
+     anything - clipped.
+
+Signal inst_i2c_update_flash_config/PLLDATO7_0 undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO0 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO1 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO2 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO3 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLADRO4 undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLWEO undriven or does not drive anything -
+     clipped.
+Signal inst_i2c_update_flash_config/PLL1STBO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLL0STBO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLRSTO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/PLLCLKO undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wb_ack_o undriven or does not drive anything
+     - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[0] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[1] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[2] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[3] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[4] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[5] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[6] undriven or does not drive
+     anything - clipped.
+Signal inst_i2c_update_flash_config/wb_dat_o_1[7] undriven or does not drive
+     anything - clipped.
+Signal inst_mb_to_slv_s2p/cnt_cry_0_S0[0] undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/N_357 undriven or does not drive anything - clipped.
+Signal inst_mb_to_slv_s2p/cnt_s_0_S1[7] undriven or does not drive anything -
+     clipped.
+Signal inst_mb_to_slv_s2p/cnt_s_0_COUT[7] undriven or does not drive anything -
+     clipped.
+Signal inst_slv_to_mb_p2s/cnt_cry_0_S0_0[0] undriven or does not drive anything
+     - clipped.
+Signal inst_slv_to_mb_p2s/N_1 undriven or does not drive anything - clipped.
+Signal inst_slv_to_mb_p2s/cnt_s_0_S1_0[7] undriven or does not drive anything -
+     clipped.
+Signal inst_slv_to_mb_p2s/cnt_s_0_COUT_0[7] undriven or does not drive anything
+     - clipped.
+Signal uart_master_u00/bps_count_bit_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+
+Signal uart_master_u00/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u00/bps_count_bit_s_0_S1[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u00/bps_count_bit_s_0_COUT[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u00/data_count_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u00/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u00/data_count_cry_0_COUT[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u0/bps_count_bit_cry_0_S0_0[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u0/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u0/bps_count_bit_s_0_S1_0[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u0/bps_count_bit_s_0_COUT_0[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u0/data_count_cry_0_S0_0[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u0/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u0/data_count_cry_0_COUT_0[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u1/bps_count_bit_cry_0_S0_1[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u1/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u1/bps_count_bit_s_0_S1_1[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u1/bps_count_bit_s_0_COUT_1[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u1/data_count_cry_0_S0_1[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u1/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u1/data_count_cry_0_COUT_1[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u2/bps_count_bit_cry_0_S0_2[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u2/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u2/bps_count_bit_s_0_S1_2[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u2/bps_count_bit_s_0_COUT_2[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u2/data_count_cry_0_S0_2[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u2/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u2/data_count_cry_0_COUT_2[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u3/bps_count_bit_cry_0_S0_3[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u3/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u3/bps_count_bit_s_0_S1_3[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u3/bps_count_bit_s_0_COUT_3[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u3/data_count_cry_0_S0_3[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u3/N_2 undriven or does not drive anything - clipped.
+
+Signal uart_master_u3/data_count_cry_0_COUT_3[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u4/bps_count_bit_cry_0_S0_4[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u4/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u4/bps_count_bit_s_0_S1_4[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u4/bps_count_bit_s_0_COUT_4[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u4/data_count_cry_0_S0_4[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u4/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u4/data_count_cry_0_COUT_4[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u5/bps_count_bit_cry_0_S0_5[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u5/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u5/bps_count_bit_s_0_S1_5[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u5/bps_count_bit_s_0_COUT_5[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u5/data_count_cry_0_S0_5[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u5/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u5/data_count_cry_0_COUT_5[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u6/bps_count_bit_cry_0_S0_6[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u6/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u6/bps_count_bit_s_0_S1_6[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u6/bps_count_bit_s_0_COUT_6[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u6/data_count_cry_0_S0_6[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u6/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u6/data_count_cry_0_COUT_6[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u7/bps_count_bit_cry_0_S0_7[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u7/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u7/bps_count_bit_s_0_S1_7[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u7/bps_count_bit_s_0_COUT_7[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u7/data_count_cry_0_S0_7[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u7/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u7/data_count_cry_0_COUT_7[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u8/bps_count_bit_cry_0_S0_8[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u8/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u8/bps_count_bit_s_0_S1_8[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u8/bps_count_bit_s_0_COUT_8[5] undriven or does not drive
+
+     anything - clipped.
+Signal uart_master_u8/data_count_cry_0_S0_8[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u8/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u8/data_count_cry_0_COUT_8[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u9/bps_count_bit_cry_0_S0_9[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u9/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u9/bps_count_bit_s_0_S1_9[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u9/bps_count_bit_s_0_COUT_9[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u9/data_count_cry_0_S0_9[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u9/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u9/data_count_cry_0_COUT_9[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u10/bps_count_bit_cry_0_S0_10[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u10/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u10/bps_count_bit_s_0_S1_10[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u10/bps_count_bit_s_0_COUT_10[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u10/data_count_cry_0_S0_10[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u10/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u10/data_count_cry_0_COUT_10[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u11/bps_count_bit_cry_0_S0_11[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u11/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u11/bps_count_bit_s_0_S1_11[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u11/bps_count_bit_s_0_COUT_11[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u11/data_count_cry_0_S0_11[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u11/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u11/data_count_cry_0_COUT_11[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u12/bps_count_bit_cry_0_S0_12[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u12/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u12/bps_count_bit_s_0_S1_12[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u12/bps_count_bit_s_0_COUT_12[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u12/data_count_cry_0_S0_12[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u12/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u12/data_count_cry_0_COUT_12[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u13/bps_count_bit_cry_0_S0_13[0] undriven or does not drive
+     anything - clipped.
+
+Signal uart_master_u13/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u13/bps_count_bit_s_0_S1_13[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u13/bps_count_bit_s_0_COUT_13[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u13/data_count_cry_0_S0_13[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u13/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u13/data_count_cry_0_COUT_13[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u14/bps_count_bit_cry_0_S0_14[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u14/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u14/bps_count_bit_s_0_S1_14[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u14/bps_count_bit_s_0_COUT_14[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u14/data_count_cry_0_S0_14[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u14/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u14/data_count_cry_0_COUT_14[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u15/bps_count_bit_cry_0_S0_15[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u15/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u15/bps_count_bit_s_0_S1_15[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u15/bps_count_bit_s_0_COUT_15[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u15/data_count_cry_0_S0_15[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u15/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u15/data_count_cry_0_COUT_15[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u16/bps_count_bit_cry_0_S0_16[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u16/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u16/bps_count_bit_s_0_S1_16[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u16/bps_count_bit_s_0_COUT_16[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u16/data_count_cry_0_S0_16[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u16/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u16/data_count_cry_0_COUT_16[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u17/bps_count_bit_cry_0_S0_17[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u17/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u17/bps_count_bit_s_0_S1_17[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u17/bps_count_bit_s_0_COUT_17[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u17/data_count_cry_0_S0_17[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u17/N_2 undriven or does not drive anything - clipped.
+
+Signal uart_master_u17/data_count_cry_0_COUT_17[3] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u18/bps_count_bit_cry_0_S0_18[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u18/N_1 undriven or does not drive anything - clipped.
+Signal uart_master_u18/bps_count_bit_s_0_S1_18[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u18/bps_count_bit_s_0_COUT_18[5] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u18/data_count_cry_0_S0_18[0] undriven or does not drive
+     anything - clipped.
+Signal uart_master_u18/N_2 undriven or does not drive anything - clipped.
+Signal uart_master_u18/data_count_cry_0_COUT_18[3] undriven or does not drive
+     anything - clipped.
+Signal UID_Function_u0/un1_r_cnt_time_4_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal UID_Function_u0/N_1 undriven or does not drive anything - clipped.
+Signal UID_Function_u0/un1_r_cnt_time_4_s_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal UID_Function_u0/un1_r_cnt_time_4_s_7_0_COUT undriven or does not drive
+     anything - clipped.
+Signal UID_Function_u0/un1_r_cnt_100ms_1_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal UID_Function_u0/N_2 undriven or does not drive anything - clipped.
+Signal UID_Function_u0/un1_r_cnt_100ms_1_s_7_0_S1 undriven or does not drive
+     anything - clipped.
+Signal UID_Function_u0/un1_r_cnt_100ms_1_s_7_0_COUT undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0
+     _S1 undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0
+     _S0 undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3 undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_
+     S1 undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_
+     COUT undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4 undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15]
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0]
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_5 undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15] undriven
+     or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15]
+     undriven or does not drive anything - clipped.
+Signal
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S1
+
+     undriven or does not drive anything - clipped.
+Signal
+     bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S0
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_6 undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_14_0_
+     COUT undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S1
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S0
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_7 undriven or does not drive
+     anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_S1
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_COUT
+     undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cr
+     y_0_S0[0] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21 undriven or
+     does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_
+     0_S1[5] undriven or does not drive anything - clipped.
+Signal bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_
+     0_COUT[5] undriven or does not drive anything - clipped.
+Signal inst_osch_SEDSTDBY undriven or does not drive anything - clipped.
+Block pon_reset_inst/reset1_reg_RNILMDB6[2] was optimized away.
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_RN
+     I1ISM5 was optimized away.
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en_RNIJLQ95
+     was optimized away.
+Block pll_inst/GND was optimized away.
+Block timer_gen_inst/GND was optimized away.
+Block inst_i2c_update_flash_config/VCC was optimized away.
+Block inst_i2c_update_flash_config/GND was optimized away.
+Block inst_mb_to_slv_s2p/GND was optimized away.
+Block inst_slv_to_mb_p2s/GND was optimized away.
+Block uart_master_u00/GND was optimized away.
+Block uart_master_u0/GND was optimized away.
+Block uart_master_u1/GND was optimized away.
+Block uart_master_u2/GND was optimized away.
+Block uart_master_u3/GND was optimized away.
+Block uart_master_u4/GND was optimized away.
+Block uart_master_u5/GND was optimized away.
+Block uart_master_u6/GND was optimized away.
+Block uart_master_u7/GND was optimized away.
+Block uart_master_u8/GND was optimized away.
+Block uart_master_u9/GND was optimized away.
+Block uart_master_u10/GND was optimized away.
+Block uart_master_u11/GND was optimized away.
+Block uart_master_u12/GND was optimized away.
+Block uart_master_u13/GND was optimized away.
+Block uart_master_u14/GND was optimized away.
+Block uart_master_u15/GND was optimized away.
+Block uart_master_u16/GND was optimized away.
+
+Block uart_master_u17/GND was optimized away.
+Block uart_master_u18/GND was optimized away.
+Block UID_Function_u0/GND was optimized away.
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/GND was optimized away.
+Block bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND was optimized
+     away.
+
+     
+
+
+
+<A name="mrp_pll"></A><B><U><big>PLL/DLL Summary</big></U></B>
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                pll_inst/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      i_CLK_PAL2_IN_25M_c
+  Output Clock(P):                         NODE     clk_50m
+  Output Clock(S):                         NODE     clk_25m
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk_50m
+  Reset Signal:                            NODE
+       pll_inst/i_CPLD2_PROGRAM_N_c_i
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                         NODE     pll_lock
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      25.0000
+  Output Clock(P) Frequency (MHz):                  50.0000
+
+  Output Clock(S) Frequency (MHz):                  25.0000
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    2
+  CLKOP Divider:                                    10
+  CLKOS Divider:                                    20
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 RISING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                inst_osch
+  OSC Type:                                         OSCH
+  STDBY Input:                                      NONE
+  OSC Output:                              NODE     wb_clk
+  OSC Nominal Frequency (MHz):                      4.29
+
+
+
+<A name="mrp_efb"></A><B><U><big>Embedded Functional Block Connection Summary</big></U></B>
+
+   Desired WISHBONE clock frequency: 4.3 MHz
+   Clock source:                     wb_clk
+   Reset source:                     NONE
+   Functions mode:
+      I2C #1 (Primary) Function:     ENABLED
+      I2C #2 (Secondary) Function:   DISABLED
+      SPI Function:                  DISABLED
+      Timer/Counter Function:        DISABLED
+      Timer/Counter Mode:            WB
+      UFM Connection:                ENABLED
+      PLL0 Connection:               DISABLED
+
+      PLL1 Connection:               DISABLED
+   I2C Function Summary:
+   --------------------
+      I2C Component:          PRIMARY
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000001
+      General Call:           DISABLED
+      I2C Wake Up:            DISABLED
+      I2C Component:          UFM/Configuration
+      I2C Addressing:         7BIT
+      I2C Performance:        100kHz
+      Slave Address:          0b1000000
+   SPI Function Summary:
+   --------------------
+      None
+   Timer/Counter Function Summary:
+   ------------------------------
+      None
+   UFM Function Summary:
+   --------------------
+      UFM Utilization:        General Purpose Flash Memory
+      Initialized UFM Pages:  1 Pages (1*128 Bits)
+      Available General
+      Purpose Flash Memory:   2046 Pages (2046*128 Bits)
+
+           EBR Blocks with Unique
+      Initialization Data:    0
+
+           WID		EBR Instance
+      ---		------------
+
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: inst_osch
+         Type: OSCH
+Instance Name: inst_i2c_update_flash_config/EFBInst_0
+         Type: EFB
+Instance Name: pll_inst/PLLInst_0
+         Type: EHXPLLJ
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The local reset signal 'pon_reset_n' of the design has been inferred as
+        Global Set Reset (GSR). The reset signal used for GSR control is
+        'pon_reset_n'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+
+        
+
+     Components on inferred reset domain with GSR Property disabled
+--------------------------------------------------------------
+
+     These components have the GSR property set to DISABLED and are on the
+     inferred reset domain. The components will respond to the reset signal
+     'pon_reset_n' via the local reset on the component and not the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 1 
+
+     Type and instance name of component: 
+   Register : inst_slv_to_mb_p2s/so
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 83 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

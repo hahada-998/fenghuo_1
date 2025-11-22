@@ -1,0 +1,5 @@
+#Start recording tcl command: 11/13/2025 11:00:29
+#Project Location: D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down/MB/09/BM_H13DSP_S/pro; Project name: BM_H13DSP_S
+prj_project open "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down/MB/09/BM_H13DSP_S/pro/BM_H13DSP_S.ldf"
+prj_run Export -impl impl1 -forceAll
+#Stop recording: 11/13/2025 15:06:37

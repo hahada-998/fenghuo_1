@@ -1,0 +1,2 @@
+@E: CL123 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\rtl\source\Pwr_seq\pwrseq_master.v":306:0:306:5|Logic for r_Pwrbtn_long_flag does not match a standard flip-flop
+

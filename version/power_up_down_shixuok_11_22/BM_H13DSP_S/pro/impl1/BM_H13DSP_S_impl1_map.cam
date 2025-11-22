@@ -1,0 +1,594 @@
+[ START MERGED ]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock_i bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_data_in_lock
+r_sda_en_i bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_sda_en
+pon_reset_n_i pon_reset_n
+[ END MERGED ]
+[ START CLIPPED ]
+pll_inst/GND
+timer_gen_inst/GND
+inst_i2c_update_flash_config/VCC
+inst_i2c_update_flash_config/GND
+inst_mb_to_slv_s2p/GND
+inst_slv_to_mb_p2s/GND
+uart_master_u00/GND
+uart_master_u0/GND
+uart_master_u1/GND
+uart_master_u2/GND
+uart_master_u3/GND
+uart_master_u4/GND
+uart_master_u5/GND
+uart_master_u6/GND
+uart_master_u7/GND
+uart_master_u8/GND
+uart_master_u9/GND
+uart_master_u10/GND
+uart_master_u11/GND
+uart_master_u12/GND
+uart_master_u13/GND
+uart_master_u14/GND
+uart_master_u15/GND
+uart_master_u16/GND
+uart_master_u17/GND
+uart_master_u18/GND
+UID_Function_u0/GND
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/GND
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/GND
+pll_inst/CLKINTFB
+pll_inst/DPHSRC
+pll_inst/PLLACK
+pll_inst/PLLDATO0
+pll_inst/PLLDATO1
+pll_inst/PLLDATO2
+pll_inst/PLLDATO3
+pll_inst/PLLDATO4
+pll_inst/PLLDATO5
+pll_inst/PLLDATO6
+pll_inst/PLLDATO7
+pll_inst/REFCLK
+pll_inst/INTLOCK
+pll_inst/CLKOS3
+pll_inst/CLKOS2
+timer_gen_inst/sec_tmr_s_0_S1[11]
+timer_gen_inst/sec_tmr_s_0_COUT[11]
+timer_gen_inst/usec_tmr_cry_0_S0[0]
+timer_gen_inst/N_34
+timer_gen_inst/usec_tmr_cry_0_COUT[3]
+timer_gen_inst/sec_tmr_cry_0_S0[0]
+timer_gen_inst/N_33
+inst_i2c_update_flash_config/CFGSTDBY
+inst_i2c_update_flash_config/CFGWAKE
+inst_i2c_update_flash_config/wbc_ufm_irq
+inst_i2c_update_flash_config/TCOC
+inst_i2c_update_flash_config/TCINT
+inst_i2c_update_flash_config/SPIIRQO
+inst_i2c_update_flash_config/SPICSNEN
+inst_i2c_update_flash_config/SPIMCSN7
+inst_i2c_update_flash_config/SPIMCSN6
+inst_i2c_update_flash_config/SPIMCSN5
+inst_i2c_update_flash_config/SPIMCSN4
+inst_i2c_update_flash_config/SPIMCSN3
+inst_i2c_update_flash_config/SPIMCSN2
+inst_i2c_update_flash_config/SPIMCSN1
+inst_i2c_update_flash_config/SPIMCSN0
+inst_i2c_update_flash_config/SPIMOSIEN
+inst_i2c_update_flash_config/SPIMOSIO
+inst_i2c_update_flash_config/SPIMISOEN
+inst_i2c_update_flash_config/SPIMISOO
+inst_i2c_update_flash_config/SPISCKEN
+inst_i2c_update_flash_config/SPISCKO
+inst_i2c_update_flash_config/I2C2IRQO
+inst_i2c_update_flash_config/i2c1_irqo
+inst_i2c_update_flash_config/I2C2SDAOEN
+inst_i2c_update_flash_config/I2C2SDAO
+inst_i2c_update_flash_config/I2C2SCLOEN
+inst_i2c_update_flash_config/I2C2SCLO
+inst_i2c_update_flash_config/PLLDATO0_0
+inst_i2c_update_flash_config/PLLDATO1_0
+inst_i2c_update_flash_config/PLLDATO2_0
+inst_i2c_update_flash_config/PLLDATO3_0
+inst_i2c_update_flash_config/PLLDATO4_0
+inst_i2c_update_flash_config/PLLDATO5_0
+inst_i2c_update_flash_config/PLLDATO6_0
+inst_i2c_update_flash_config/PLLDATO7_0
+inst_i2c_update_flash_config/PLLADRO0
+inst_i2c_update_flash_config/PLLADRO1
+inst_i2c_update_flash_config/PLLADRO2
+inst_i2c_update_flash_config/PLLADRO3
+inst_i2c_update_flash_config/PLLADRO4
+inst_i2c_update_flash_config/PLLWEO
+inst_i2c_update_flash_config/PLL1STBO
+inst_i2c_update_flash_config/PLL0STBO
+inst_i2c_update_flash_config/PLLRSTO
+inst_i2c_update_flash_config/PLLCLKO
+inst_i2c_update_flash_config/wb_ack_o
+inst_i2c_update_flash_config/wb_dat_o_1[0]
+inst_i2c_update_flash_config/wb_dat_o_1[1]
+inst_i2c_update_flash_config/wb_dat_o_1[2]
+inst_i2c_update_flash_config/wb_dat_o_1[3]
+inst_i2c_update_flash_config/wb_dat_o_1[4]
+inst_i2c_update_flash_config/wb_dat_o_1[5]
+inst_i2c_update_flash_config/wb_dat_o_1[6]
+inst_i2c_update_flash_config/wb_dat_o_1[7]
+inst_mb_to_slv_s2p/cnt_cry_0_S0[0]
+inst_mb_to_slv_s2p/N_357
+inst_mb_to_slv_s2p/cnt_s_0_S1[7]
+inst_mb_to_slv_s2p/cnt_s_0_COUT[7]
+inst_slv_to_mb_p2s/cnt_cry_0_S0_0[0]
+inst_slv_to_mb_p2s/N_1
+inst_slv_to_mb_p2s/cnt_s_0_S1_0[7]
+inst_slv_to_mb_p2s/cnt_s_0_COUT_0[7]
+uart_master_u00/bps_count_bit_cry_0_S0[0]
+uart_master_u00/N_1
+uart_master_u00/bps_count_bit_s_0_S1[5]
+uart_master_u00/bps_count_bit_s_0_COUT[5]
+uart_master_u00/data_count_cry_0_S0[0]
+uart_master_u00/N_2
+uart_master_u00/data_count_cry_0_COUT[3]
+uart_master_u0/bps_count_bit_cry_0_S0_0[0]
+uart_master_u0/N_1
+uart_master_u0/bps_count_bit_s_0_S1_0[5]
+uart_master_u0/bps_count_bit_s_0_COUT_0[5]
+uart_master_u0/data_count_cry_0_S0_0[0]
+uart_master_u0/N_2
+uart_master_u0/data_count_cry_0_COUT_0[3]
+uart_master_u1/bps_count_bit_cry_0_S0_1[0]
+uart_master_u1/N_1
+uart_master_u1/bps_count_bit_s_0_S1_1[5]
+uart_master_u1/bps_count_bit_s_0_COUT_1[5]
+uart_master_u1/data_count_cry_0_S0_1[0]
+uart_master_u1/N_2
+uart_master_u1/data_count_cry_0_COUT_1[3]
+uart_master_u2/bps_count_bit_cry_0_S0_2[0]
+uart_master_u2/N_1
+uart_master_u2/bps_count_bit_s_0_S1_2[5]
+uart_master_u2/bps_count_bit_s_0_COUT_2[5]
+uart_master_u2/data_count_cry_0_S0_2[0]
+uart_master_u2/N_2
+uart_master_u2/data_count_cry_0_COUT_2[3]
+uart_master_u3/bps_count_bit_cry_0_S0_3[0]
+uart_master_u3/N_1
+uart_master_u3/bps_count_bit_s_0_S1_3[5]
+uart_master_u3/bps_count_bit_s_0_COUT_3[5]
+uart_master_u3/data_count_cry_0_S0_3[0]
+uart_master_u3/N_2
+uart_master_u3/data_count_cry_0_COUT_3[3]
+uart_master_u4/bps_count_bit_cry_0_S0_4[0]
+uart_master_u4/N_1
+uart_master_u4/bps_count_bit_s_0_S1_4[5]
+uart_master_u4/bps_count_bit_s_0_COUT_4[5]
+uart_master_u4/data_count_cry_0_S0_4[0]
+uart_master_u4/N_2
+uart_master_u4/data_count_cry_0_COUT_4[3]
+uart_master_u5/bps_count_bit_cry_0_S0_5[0]
+uart_master_u5/N_1
+uart_master_u5/bps_count_bit_s_0_S1_5[5]
+uart_master_u5/bps_count_bit_s_0_COUT_5[5]
+uart_master_u5/data_count_cry_0_S0_5[0]
+uart_master_u5/N_2
+uart_master_u5/data_count_cry_0_COUT_5[3]
+uart_master_u6/bps_count_bit_cry_0_S0_6[0]
+uart_master_u6/N_1
+uart_master_u6/bps_count_bit_s_0_S1_6[5]
+uart_master_u6/bps_count_bit_s_0_COUT_6[5]
+uart_master_u6/data_count_cry_0_S0_6[0]
+uart_master_u6/N_2
+uart_master_u6/data_count_cry_0_COUT_6[3]
+uart_master_u7/bps_count_bit_cry_0_S0_7[0]
+uart_master_u7/N_1
+uart_master_u7/bps_count_bit_s_0_S1_7[5]
+uart_master_u7/bps_count_bit_s_0_COUT_7[5]
+uart_master_u7/data_count_cry_0_S0_7[0]
+uart_master_u7/N_2
+uart_master_u7/data_count_cry_0_COUT_7[3]
+uart_master_u8/bps_count_bit_cry_0_S0_8[0]
+uart_master_u8/N_1
+uart_master_u8/bps_count_bit_s_0_S1_8[5]
+uart_master_u8/bps_count_bit_s_0_COUT_8[5]
+uart_master_u8/data_count_cry_0_S0_8[0]
+uart_master_u8/N_2
+uart_master_u8/data_count_cry_0_COUT_8[3]
+uart_master_u9/bps_count_bit_cry_0_S0_9[0]
+uart_master_u9/N_1
+uart_master_u9/bps_count_bit_s_0_S1_9[5]
+uart_master_u9/bps_count_bit_s_0_COUT_9[5]
+uart_master_u9/data_count_cry_0_S0_9[0]
+uart_master_u9/N_2
+uart_master_u9/data_count_cry_0_COUT_9[3]
+uart_master_u10/bps_count_bit_cry_0_S0_10[0]
+uart_master_u10/N_1
+uart_master_u10/bps_count_bit_s_0_S1_10[5]
+uart_master_u10/bps_count_bit_s_0_COUT_10[5]
+uart_master_u10/data_count_cry_0_S0_10[0]
+uart_master_u10/N_2
+uart_master_u10/data_count_cry_0_COUT_10[3]
+uart_master_u11/bps_count_bit_cry_0_S0_11[0]
+uart_master_u11/N_1
+uart_master_u11/bps_count_bit_s_0_S1_11[5]
+uart_master_u11/bps_count_bit_s_0_COUT_11[5]
+uart_master_u11/data_count_cry_0_S0_11[0]
+uart_master_u11/N_2
+uart_master_u11/data_count_cry_0_COUT_11[3]
+uart_master_u12/bps_count_bit_cry_0_S0_12[0]
+uart_master_u12/N_1
+uart_master_u12/bps_count_bit_s_0_S1_12[5]
+uart_master_u12/bps_count_bit_s_0_COUT_12[5]
+uart_master_u12/data_count_cry_0_S0_12[0]
+uart_master_u12/N_2
+uart_master_u12/data_count_cry_0_COUT_12[3]
+uart_master_u13/bps_count_bit_cry_0_S0_13[0]
+uart_master_u13/N_1
+uart_master_u13/bps_count_bit_s_0_S1_13[5]
+uart_master_u13/bps_count_bit_s_0_COUT_13[5]
+uart_master_u13/data_count_cry_0_S0_13[0]
+uart_master_u13/N_2
+uart_master_u13/data_count_cry_0_COUT_13[3]
+uart_master_u14/bps_count_bit_cry_0_S0_14[0]
+uart_master_u14/N_1
+uart_master_u14/bps_count_bit_s_0_S1_14[5]
+uart_master_u14/bps_count_bit_s_0_COUT_14[5]
+uart_master_u14/data_count_cry_0_S0_14[0]
+uart_master_u14/N_2
+uart_master_u14/data_count_cry_0_COUT_14[3]
+uart_master_u15/bps_count_bit_cry_0_S0_15[0]
+uart_master_u15/N_1
+uart_master_u15/bps_count_bit_s_0_S1_15[5]
+uart_master_u15/bps_count_bit_s_0_COUT_15[5]
+uart_master_u15/data_count_cry_0_S0_15[0]
+uart_master_u15/N_2
+uart_master_u15/data_count_cry_0_COUT_15[3]
+uart_master_u16/bps_count_bit_cry_0_S0_16[0]
+uart_master_u16/N_1
+uart_master_u16/bps_count_bit_s_0_S1_16[5]
+uart_master_u16/bps_count_bit_s_0_COUT_16[5]
+uart_master_u16/data_count_cry_0_S0_16[0]
+uart_master_u16/N_2
+uart_master_u16/data_count_cry_0_COUT_16[3]
+uart_master_u17/bps_count_bit_cry_0_S0_17[0]
+uart_master_u17/N_1
+uart_master_u17/bps_count_bit_s_0_S1_17[5]
+uart_master_u17/bps_count_bit_s_0_COUT_17[5]
+uart_master_u17/data_count_cry_0_S0_17[0]
+uart_master_u17/N_2
+uart_master_u17/data_count_cry_0_COUT_17[3]
+uart_master_u18/bps_count_bit_cry_0_S0_18[0]
+uart_master_u18/N_1
+uart_master_u18/bps_count_bit_s_0_S1_18[5]
+uart_master_u18/bps_count_bit_s_0_COUT_18[5]
+uart_master_u18/data_count_cry_0_S0_18[0]
+uart_master_u18/N_2
+uart_master_u18/data_count_cry_0_COUT_18[3]
+UID_Function_u0/un1_r_cnt_time_4_cry_0_0_S0
+UID_Function_u0/N_1
+UID_Function_u0/un1_r_cnt_time_4_s_7_0_S1
+UID_Function_u0/un1_r_cnt_time_4_s_7_0_COUT
+UID_Function_u0/un1_r_cnt_100ms_1_cry_0_0_S0
+UID_Function_u0/N_2
+UID_Function_u0/un1_r_cnt_100ms_1_s_7_0_S1
+UID_Function_u0/un1_r_cnt_100ms_1_s_7_0_COUT
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_cry_0_0_S0
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_3
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_1_m_0_s_15_0_COUT
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_cry_0_S0[0]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_4
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_S1[15]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_read_byte_cnt_s_0_COUT[15]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_cry_0_S0[0]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_5
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_S1[15]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/r_write_byte_cnt_s_0_COUT[15]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_1_0_S0
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_6
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_4_cry_14_0_COUT
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_cry_0_0_S0
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/N_7
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_S1
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/un1_r_i2c_command_temp_0_s_15_0_COUT
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_cry_0_S0[0]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/N_21
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_S1[5]
+bmc_cpld_i2c_ram_u0/i2c_slave_bmc_u0/i2c_slave_basic0_u0/r_timeout_cnt_s_0_COUT[5]
+inst_osch_SEDSTDBY
+[ END CLIPPED ]
+[ START OSC ]
+wb_clk 4.29
+[ END OSC ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.14.0.75.2 -- WARNING: Map write only section -- Tue Nov 18 14:50:04 2025
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=ENABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "io_I2C2_PAL2_SDA" SITE "B18" ;
+LOCATE COMP "o_CPLD_SGPIO1_MISO" SITE "T19" ;
+LOCATE COMP "o_CPLD2_JTAGEN" SITE "C13" ;
+LOCATE COMP "i_HDR_PAL2_N" SITE "B9" ;
+LOCATE COMP "io_I2C2_2_UPDATE_SDA" SITE "D11" ;
+LOCATE COMP "io_I2C2_2_UPDATE_SCL" SITE "C11" ;
+LOCATE COMP "o_CPLD1_CPLD2_RSV1_R" SITE "W20" ;
+LOCATE COMP "o_P12V_DISCHARGE_R" SITE "L16" ;
+LOCATE COMP "i_PCH_INTRUDER_CABLE_INST_R_N" SITE "D16" ;
+LOCATE COMP "i_PAL_PCH_INTRUDER" SITE "F12" ;
+LOCATE COMP "o_P0_I2C5_9617_EN" SITE "A6" ;
+LOCATE COMP "o_P0_SPI_TPM_CS_N_3V3" SITE "C15" ;
+LOCATE COMP "i_SMB_CPU0_ALERT_N_R" SITE "B12" ;
+LOCATE COMP "o_PAL_P12V_CPU0_DIMM_ON" SITE "V12" ;
+LOCATE COMP "i_PAL_P12V_CPU0_DIMM_OC" SITE "V13" ;
+LOCATE COMP "i_PAL_P12V_CPU0_DIMM_GOK" SITE "U12" ;
+LOCATE COMP "o_PAL_P12V_CPU1_DIMM_ON" SITE "M17" ;
+LOCATE COMP "i_PAL_P12V_CPU1_DIMM_OC" SITE "K16" ;
+LOCATE COMP "i_PAL_P12V_CPU1_DIMM_GOK" SITE "J19" ;
+LOCATE COMP "i_LEAKAGE_DET1_DO_N" SITE "K7" ;
+LOCATE COMP "i_LEAKAGE_PRSNT1_N" SITE "J5" ;
+LOCATE COMP "i_BREAK_DET1_DO_N" SITE "J6" ;
+LOCATE COMP "i_LEAKAGE_DET_DO_N" SITE "C16" ;
+LOCATE COMP "i_LEAKAGE_PRSNT_N" SITE "D14" ;
+LOCATE COMP "i_BREAK_DET_DO_N" SITE "F17" ;
+LOCATE COMP "o_M2_GPIO7_R" SITE "M16" ;
+LOCATE COMP "o_M2_GPIO6_R" SITE "M15" ;
+LOCATE COMP "i_PCB_REVISION_2" SITE "F1" ;
+LOCATE COMP "i_PCB_REVISION_1" SITE "G1" ;
+LOCATE COMP "i_PCB_REVISION_0" SITE "H1" ;
+LOCATE COMP "i_PCA_REVISION_2" SITE "C1" ;
+LOCATE COMP "i_PCA_REVISION_1" SITE "D1" ;
+LOCATE COMP "i_PCA_REVISION_0" SITE "E1" ;
+LOCATE COMP "i_PWRGD_SYS_PWROK_R" SITE "G9" ;
+LOCATE COMP "o_SATA1_RSV" SITE "F14" ;
+LOCATE COMP "i_BOARD_ID3" SITE "J1" ;
+LOCATE COMP "i_BOARD_ID2" SITE "K1" ;
+LOCATE COMP "i_BOARD_ID1" SITE "L1" ;
+LOCATE COMP "i_BOARD_ID0" SITE "N1" ;
+LOCATE COMP "o_PAL_SPI1_BMC_HOLD" SITE "H19" ;
+LOCATE COMP "i_PAL_NODE1_TYPE" SITE "F16" ;
+LOCATE COMP "i_PAL_PE_WAKE_N" SITE "B20" ;
+LOCATE COMP "o_PAL_SPI_BIOS_UPDATA_EN" SITE "J16" ;
+LOCATE COMP "o_SW_QSPI_OE_R" SITE "B16" ;
+LOCATE COMP "o_SW_BIOS_QSPI_S_R" SITE "A12" ;
+LOCATE COMP "o_BIOS_FLASH_RESET_R_N" SITE "A11" ;
+LOCATE COMP "o_SW_BIOS_SPI_OE" SITE "A9" ;
+LOCATE COMP "o_SW_BIOS_FLASH_SPI_S_R" SITE "A10" ;
+LOCATE COMP "o_PCIE_SATA_WAKE_R_N" SITE "L15" ;
+LOCATE COMP "o_PCIE_SATA_RST_N" SITE "V19" ;
+LOCATE COMP "o_RST_I2C3_MUX_N_R" SITE "A20" ;
+LOCATE COMP "o_RST_I2C2_MUX_N_R" SITE "B17" ;
+LOCATE COMP "o_RST_I2C1_MUX_N_R" SITE "B1" ;
+LOCATE COMP "o_CLK_DB2000_2_2_OE_N" SITE "A1" ;
+LOCATE COMP "o_CLK_DB2000_2_1_OE_N" SITE "P1" ;
+LOCATE COMP "o_CLK_GEN_I2C_SEL_R" SITE "A17" ;
+LOCATE COMP "o_CLK_GEN_FDEC_R" SITE "A16" ;
+LOCATE COMP "o_CLK_GEN_OE_N_R" SITE "A15" ;
+LOCATE COMP "o_CLK_GEN_RST_N_R" SITE "A14" ;
+LOCATE COMP "o_CLK_GEN_FINC_R" SITE "T20" ;
+LOCATE COMP "i_CLK_PAL2_IN_25M" SITE "U1" ;
+LOCATE COMP "o_CLK_GEN_LOL_N_R" SITE "U20" ;
+LOCATE COMP "o_CLK_GEN_INTR_N_R" SITE "A13" ;
+LOCATE COMP "o_P0_MCIOP0A_LD" SITE "U18" ;
+LOCATE COMP "o_P0_MCIOP0A_CLK" SITE "U17" ;
+LOCATE COMP "i_P0_MCIOP0A_DATAIN" SITE "Y3" ;
+LOCATE COMP "i_P1_MCIOG1C_CB_ID1_R" SITE "R14" ;
+LOCATE COMP "i_P1_MCIOG1C_CB_ID0_R" SITE "R15" ;
+LOCATE COMP "i_P1_MCIOG1A_CB_ID1_R" SITE "P9" ;
+LOCATE COMP "i_P1_MCIOG1A_CB_ID0_R" SITE "N15" ;
+LOCATE COMP "i_P1_MCIOP3C_CB_ID1_R" SITE "V10" ;
+LOCATE COMP "i_P1_MCIOP3C_CB_ID0_R" SITE "R1" ;
+LOCATE COMP "i_P1_MCIOP3A_CB_ID1_R" SITE "T8" ;
+LOCATE COMP "i_P1_MCIOP3A_CB_ID0_R" SITE "N2" ;
+LOCATE COMP "i_P1_MCIOP2C_CB_ID1_R" SITE "L2" ;
+LOCATE COMP "i_P1_MCIOP2C_CB_ID0_R" SITE "U6" ;
+LOCATE COMP "i_P1_MCIOP2A_CB_ID1_R" SITE "J3" ;
+LOCATE COMP "i_P1_MCIOP2A_CB_ID0_R" SITE "V3" ;
+LOCATE COMP "i_P1_MCIOP1C_CB_ID1_R" SITE "L6" ;
+LOCATE COMP "i_P1_MCIOP1C_CB_ID0_R" SITE "L7" ;
+LOCATE COMP "i_P1_MCIOP1A_CB_ID1_R" SITE "N4" ;
+LOCATE COMP "i_P1_MCIOP1A_CB_ID0_R" SITE "M4" ;
+LOCATE COMP "i_P1_MCIOP0C_CB_ID1_R" SITE "M6" ;
+LOCATE COMP "i_P1_MCIOP0C_CB_ID0_R" SITE "P4" ;
+LOCATE COMP "i_P1_MCIOP0A_CB_ID1_R" SITE "C6" ;
+LOCATE COMP "i_P1_MCIOP0A_CB_ID0_R" SITE "H6" ;
+LOCATE COMP "i_P0_MCIOG3C_CB_ID1_R" SITE "C14" ;
+LOCATE COMP "i_P0_MCIOG3C_CB_ID0_R" SITE "C19" ;
+LOCATE COMP "i_P0_MCIOG3A_CB_ID1_R" SITE "G17" ;
+LOCATE COMP "i_P0_MCIOG3A_CB_ID0_R" SITE "F18" ;
+LOCATE COMP "i_P0_MCIOP3C_CB_ID1_R" SITE "T9" ;
+LOCATE COMP "i_P0_MCIOP3C_CB_ID0_R" SITE "R10" ;
+LOCATE COMP "i_P0_MCIOP3A_CB_ID1_R" SITE "P11" ;
+LOCATE COMP "i_P0_MCIOP3A_CB_ID0_R" SITE "P10" ;
+LOCATE COMP "i_P0_MCIOP2C_CB_ID1_R" SITE "C10" ;
+LOCATE COMP "i_P0_MCIOP2C_CB_ID0_R" SITE "D10" ;
+LOCATE COMP "i_P0_MCIOP2A_CB_ID1_R" SITE "P16" ;
+LOCATE COMP "i_P0_MCIOP2A_CB_ID0_R" SITE "R16" ;
+LOCATE COMP "i_P0_MCIOP1C_CB_ID1_R" SITE "Y17" ;
+LOCATE COMP "i_P0_MCIOP1C_CB_ID0_R" SITE "W15" ;
+LOCATE COMP "i_P0_MCIOP1A_CB_ID1_R" SITE "W13" ;
+LOCATE COMP "i_P0_MCIOP1A_CB_ID0_R" SITE "Y10" ;
+LOCATE COMP "i_P0_MCIOP0C_CB_ID1_R" SITE "Y8" ;
+LOCATE COMP "i_P0_MCIOP0C_CB_ID0_R" SITE "Y6" ;
+LOCATE COMP "i_P0_MCIOP0A_CB_ID1_R" SITE "W4" ;
+LOCATE COMP "i_P0_MCIOP0A_CB_ID0_R" SITE "W2" ;
+LOCATE COMP "i_P1_MCIOG1C_WAKE_N_R" SITE "R6" ;
+LOCATE COMP "i_P1_MCIOG1A_WAKE_N_R" SITE "M7" ;
+LOCATE COMP "i_P1_MCIOP3C_WAKE_N_R" SITE "P2" ;
+LOCATE COMP "i_P1_MCIOP3A_WAKE_N_R" SITE "M3" ;
+LOCATE COMP "i_P1_MCIOP2C_WAKE_N_R" SITE "U5" ;
+LOCATE COMP "i_P1_MCIOP2A_WAKE_N_R" SITE "V2" ;
+LOCATE COMP "i_P1_MCIOP1C_WAKE_N_R" SITE "F4" ;
+LOCATE COMP "i_P1_MCIOP1A_WAKE_N_R" SITE "C3" ;
+LOCATE COMP "i_P1_MCIOP0C_WAKE_N_R" SITE "E4" ;
+LOCATE COMP "i_P1_MCIOP0A_WAKE_N_R" SITE "R3" ;
+LOCATE COMP "i_P0_MCIOG3C_WAKE_N_R" SITE "D19" ;
+LOCATE COMP "i_P0_MCIOG3A_WAKE_N_R" SITE "G19" ;
+LOCATE COMP "i_P0_MCIOP3C_WAKE_N_R" SITE "N18" ;
+LOCATE COMP "i_P0_MCIOP3A_WAKE_N_R" SITE "L17" ;
+LOCATE COMP "i_P0_MCIOP2C_WAKE_N_R" SITE "D8" ;
+LOCATE COMP "i_P0_MCIOP2A_WAKE_N_R" SITE "R8" ;
+LOCATE COMP "i_P0_MCIOP1C_WAKE_N_R" SITE "Y15" ;
+LOCATE COMP "i_P0_MCIOP1A_WAKE_N_R" SITE "W11" ;
+LOCATE COMP "i_P0_MCIOP0C_WAKE_N_R" SITE "W7" ;
+LOCATE COMP "i_P0_MCIOP0A_WAKE_N_R" SITE "Y2" ;
+LOCATE COMP "o_P1_MCIOG1C_RSV_R" SITE "N6" ;
+LOCATE COMP "o_P1_MCIOG1A_RSV_R" SITE "R12" ;
+LOCATE COMP "o_P1_MCIOP3C_RSV_R" SITE "P3" ;
+LOCATE COMP "o_P1_MCIOP3A_RSV_R" SITE "M2" ;
+LOCATE COMP "o_P1_MCIOP2C_RSV_R" SITE "V6" ;
+LOCATE COMP "o_P1_MCIOP2A_RSV_R" SITE "V4" ;
+LOCATE COMP "o_P1_MCIOP1C_RSV_R" SITE "G2" ;
+LOCATE COMP "o_P1_MCIOP1A_RSV_R" SITE "F3" ;
+LOCATE COMP "o_P1_MCIOP0C_RSV_R" SITE "P14" ;
+LOCATE COMP "o_P1_MCIOP0A_RSV_R" SITE "T3" ;
+LOCATE COMP "o_P0_MCIOG3C_RSV_R" SITE "C18" ;
+LOCATE COMP "o_P0_MCIOG3A_RSV_R" SITE "H18" ;
+LOCATE COMP "o_P0_MCIOP3C_RSV_R" SITE "P18" ;
+LOCATE COMP "o_P0_MCIOP3A_RSV_R" SITE "M18" ;
+LOCATE COMP "o_P0_MCIOP2C_RSV_R" SITE "F9" ;
+LOCATE COMP "o_P0_MCIOP2A_RSV_R" SITE "R11" ;
+LOCATE COMP "o_P0_MCIOP1C_RSV_R" SITE "W16" ;
+LOCATE COMP "o_P0_MCIOP1A_RSV_R" SITE "Y11" ;
+LOCATE COMP "o_P0_MCIOP0C_RSV_R" SITE "Y7" ;
+LOCATE COMP "o_P0_MCIOP0A_RSV_R" SITE "W3" ;
+LOCATE COMP "i_P1_MCIOP4A_NVME0_PRSNT_N_R" SITE "L5" ;
+LOCATE COMP "i_P1_MCIOG1C_NVME1_PRSNT_N_R" SITE "P5" ;
+LOCATE COMP "i_P1_MCIOG1C_NVME0_PRSNT_N_R" SITE "R5" ;
+LOCATE COMP "i_P1_MCIOG1A_NVME1_PRSNT_N_R" SITE "T10" ;
+LOCATE COMP "i_P1_MCIOG1A_NVME0_PRSNT_N_R" SITE "P15" ;
+LOCATE COMP "i_P1_MCIOP3C_NVME1_PRSNT_N_R" SITE "N3" ;
+LOCATE COMP "i_P1_MCIOP3C_NVME0_PRSNT_N_R" SITE "E7" ;
+LOCATE COMP "i_P1_MCIOP3A_NVME1_PRSNT_N_R" SITE "L3" ;
+LOCATE COMP "i_P1_MCIOP3A_NVME0_PRSNT_N_R" SITE "F8" ;
+LOCATE COMP "i_P1_MCIOP2C_NVME1_PRSNT_N_R" SITE "U4" ;
+LOCATE COMP "i_P1_MCIOP2C_NVME0_PRSNT_N_R" SITE "K4" ;
+LOCATE COMP "i_P1_MCIOP2A_NVME1_PRSNT_N_R" SITE "R2" ;
+LOCATE COMP "i_P1_MCIOP2A_NVME0_PRSNT_N_R" SITE "H2" ;
+LOCATE COMP "i_P1_MCIOP1C_NVME1_PRSNT_N_R" SITE "G4" ;
+LOCATE COMP "i_P1_MCIOP1C_NVME0_PRSNT_N_R" SITE "M5" ;
+LOCATE COMP "i_P1_MCIOP1A_NVME1_PRSNT_N_R" SITE "C2" ;
+LOCATE COMP "i_P1_MCIOP1A_NVME0_PRSNT_N_R" SITE "D2" ;
+LOCATE COMP "i_P1_MCIOP0C_NVME1_PRSNT_N_R" SITE "C4" ;
+LOCATE COMP "i_P1_MCIOP0C_NVME0_PRSNT_N_R" SITE "K6" ;
+LOCATE COMP "i_P1_MCIOP0A_NVME1_PRSNT_N_R" SITE "R4" ;
+LOCATE COMP "i_P1_MCIOP0A_NVME0_PRSNT_N_R" SITE "T6" ;
+LOCATE COMP "i_P0_MCIOG3C_NVME1_PRSNT_N_R" SITE "E19" ;
+LOCATE COMP "i_P0_MCIOG3C_NVME0_PRSNT_N_R" SITE "D6" ;
+LOCATE COMP "i_P0_MCIOG3A_NVME1_PRSNT_N_R" SITE "E17" ;
+LOCATE COMP "i_P0_MCIOG3A_NVME0_PRSNT_N_R" SITE "C12" ;
+LOCATE COMP "i_P0_MCIOP3C_NVME1_PRSNT_N_R" SITE "T17" ;
+LOCATE COMP "i_P0_MCIOP3C_NVME0_PRSNT_N_R" SITE "N17" ;
+LOCATE COMP "i_P0_MCIOP3A_NVME1_PRSNT_N_R" SITE "K19" ;
+LOCATE COMP "i_P0_MCIOP3A_NVME0_PRSNT_N_R" SITE "J18" ;
+LOCATE COMP "i_P0_MCIOP2C_NVME1_PRSNT_N_R" SITE "D7" ;
+LOCATE COMP "i_P0_MCIOP2C_NVME0_PRSNT_N_R" SITE "E6" ;
+LOCATE COMP "i_P0_MCIOP2A_NVME1_PRSNT_N_R" SITE "P12" ;
+LOCATE COMP "i_P0_MCIOP2A_NVME0_PRSNT_N_R" SITE "R13" ;
+LOCATE COMP "i_P0_MCIOP1C_NVME1_PRSNT_N_R" SITE "Y19" ;
+LOCATE COMP "i_P0_MCIOP1C_NVME0_PRSNT_N_R" SITE "Y18" ;
+LOCATE COMP "i_P0_MCIOP1A_NVME1_PRSNT_N_R" SITE "Y12" ;
+LOCATE COMP "i_P0_MCIOP1A_NVME0_PRSNT_N_R" SITE "Y13" ;
+LOCATE COMP "i_P0_MCIOP0C_NVME1_PRSNT_N_R" SITE "V17" ;
+LOCATE COMP "i_P0_MCIOP0C_NVME0_PRSNT_N_R" SITE "W9" ;
+LOCATE COMP "i_P0_MCIOP0A_NVME1_PRSNT_N_R" SITE "W5" ;
+LOCATE COMP "i_P0_MCIOP0A_NVME0_PRSNT_N_R" SITE "Y4" ;
+LOCATE COMP "o_P1_MCIOG1C_GPU_THROTTLE_N_R" SITE "P6" ;
+LOCATE COMP "o_P1_MCIOG1A_GPU_THROTTLE_N_R" SITE "T12" ;
+LOCATE COMP "o_P1_MCIOP3C_GPU_THROTTLE_N_R" SITE "U11" ;
+LOCATE COMP "o_P1_MCIOP3A_GPU_THROTTLE_N_R" SITE "U9" ;
+LOCATE COMP "o_P1_MCIOP2C_GPU_THROTTLE_N_R" SITE "K2" ;
+LOCATE COMP "o_P1_MCIOP2A_GPU_THROTTLE_N_R" SITE "G3" ;
+LOCATE COMP "o_P1_MCIOP1C_GPU_THROTTLE_N_R" SITE "F2" ;
+LOCATE COMP "o_P1_MCIOP1A_GPU_THROTTLE_N_R" SITE "E3" ;
+LOCATE COMP "o_P1_MCIOP0C_GPU_THROTTLE_N_R" SITE "N14" ;
+LOCATE COMP "o_P1_MCIOP0A_GPU_THROTTLE_N_R" SITE "T4" ;
+LOCATE COMP "o_P0_MCIOG3C_GPU_THROTTLE_N_R" SITE "D17" ;
+LOCATE COMP "o_P0_MCIOG3A_GPU_THROTTLE_N_R" SITE "D18" ;
+LOCATE COMP "o_P0_MCIOP3C_GPU_THROTTLE_N_R" SITE "U15" ;
+LOCATE COMP "o_P0_MCIOP3A_GPU_THROTTLE_N_R" SITE "T18" ;
+LOCATE COMP "o_P0_MCIOP2C_GPU_THROTTLE_N_R" SITE "A8" ;
+LOCATE COMP "o_P0_MCIOP2A_GPU_THROTTLE_N_R" SITE "N16" ;
+LOCATE COMP "o_P0_MCIOP1C_GPU_THROTTLE_N_R" SITE "Y14" ;
+LOCATE COMP "o_P0_MCIOP1A_GPU_THROTTLE_N_R" SITE "W10" ;
+LOCATE COMP "o_P0_MCIOP0C_GPU_THROTTLE_N_R" SITE "W6" ;
+LOCATE COMP "o_P0_MCIOP0A_GPU_THROTTLE_N_R" SITE "Y1" ;
+LOCATE COMP "o_P1_MCIOP4A_PERST_N_R" SITE "G5" ;
+LOCATE COMP "o_P1_MCIOG1C_PERST_N_R" SITE "N5" ;
+LOCATE COMP "o_P1_MCIOG1A_PERST_N_R" SITE "P8" ;
+LOCATE COMP "o_P1_MCIOP3C_PERST_N_R" SITE "T11" ;
+LOCATE COMP "o_P1_MCIOP3A_PERST_N_R" SITE "V9" ;
+LOCATE COMP "o_P1_MCIOP2C_PERST_N_R" SITE "L4" ;
+LOCATE COMP "o_P1_MCIOP2A_PERST_N_R" SITE "J2" ;
+LOCATE COMP "o_P1_MCIOP1C_PERST_N_R" SITE "H4" ;
+LOCATE COMP "o_P1_MCIOP1A_PERST_N_R" SITE "B2" ;
+LOCATE COMP "o_P1_MCIOP0C_PERST_N_R" SITE "P13" ;
+LOCATE COMP "o_P1_MCIOP0A_PERST_N_R" SITE "R7" ;
+LOCATE COMP "o_P0_MCIOP4A_PERST_N_R" SITE "H7" ;
+LOCATE COMP "o_P0_MCIOG3C_PERST_N_R" SITE "F11" ;
+LOCATE COMP "o_P0_MCIOG3A_PERST_N_R" SITE "D12" ;
+LOCATE COMP "o_P0_MCIOP3C_PERST_N_R" SITE "U14" ;
+LOCATE COMP "o_P0_MCIOP3A_PERST_N_R" SITE "R17" ;
+LOCATE COMP "o_P0_MCIOP2C_PERST_N_R" SITE "F6" ;
+LOCATE COMP "o_P0_MCIOP2A_PERST_N_R" SITE "K17" ;
+LOCATE COMP "o_P0_MCIOP1C_PERST_N_R" SITE "Y16" ;
+LOCATE COMP "o_P0_MCIOP1A_PERST_N_R" SITE "W12" ;
+LOCATE COMP "o_P0_MCIOP0C_PERST_N_R" SITE "W8" ;
+LOCATE COMP "o_P0_MCIOP0A_PERST_N_R" SITE "T7" ;
+LOCATE COMP "io_P1_MCIOG1C_PWR_EN_R" SITE "R9" ;
+LOCATE COMP "io_P1_MCIOG1A_PWR_EN_R" SITE "T13" ;
+LOCATE COMP "io_P1_MCIOP3C_PWR_EN_R" SITE "U10" ;
+LOCATE COMP "io_P1_MCIOP3A_PWR_EN_R" SITE "V8" ;
+LOCATE COMP "io_P1_MCIOP2C_PWR_EN_R" SITE "K5" ;
+LOCATE COMP "io_P1_MCIOP2A_PWR_EN_R" SITE "H3" ;
+LOCATE COMP "io_P1_MCIOP1C_PWR_EN_R" SITE "E2" ;
+LOCATE COMP "io_P1_MCIOP1A_PWR_EN_R" SITE "J4" ;
+LOCATE COMP "io_P1_MCIOP0C_PWR_EN_R" SITE "D5" ;
+LOCATE COMP "io_P1_MCIOP0A_PWR_EN_R" SITE "T5" ;
+LOCATE COMP "io_P0_MCIOG3C_PWR_EN_R" SITE "B19" ;
+LOCATE COMP "io_P0_MCIOG3A_PWR_EN_R" SITE "F19" ;
+LOCATE COMP "io_P0_MCIOP3C_PWR_EN_R" SITE "T16" ;
+LOCATE COMP "io_P0_MCIOP3A_PWR_EN_R" SITE "P17" ;
+LOCATE COMP "io_P0_MCIOP2C_PWR_EN_R" SITE "B8" ;
+LOCATE COMP "io_P0_MCIOP2A_PWR_EN_R" SITE "L14" ;
+LOCATE COMP "io_P0_MCIOP1C_PWR_EN_R" SITE "W14" ;
+LOCATE COMP "io_P0_MCIOP1A_PWR_EN_R" SITE "Y9" ;
+LOCATE COMP "io_P0_MCIOP0C_PWR_EN_R" SITE "Y5" ;
+LOCATE COMP "io_P0_MCIOP0A_PWR_EN_R" SITE "W1" ;
+LOCATE COMP "o_LED8_N" SITE "F20" ;
+LOCATE COMP "o_LED7_N" SITE "G20" ;
+LOCATE COMP "o_LED6_N" SITE "H20" ;
+LOCATE COMP "o_LED5_N" SITE "J20" ;
+LOCATE COMP "o_LED4_N" SITE "E20" ;
+LOCATE COMP "o_LED3_N" SITE "D20" ;
+LOCATE COMP "o_LED2_N" SITE "C20" ;
+LOCATE COMP "o_LED1_N" SITE "K20" ;
+LOCATE COMP "i_CPLD_SGPIO1_MOSI" SITE "P20" ;
+LOCATE COMP "i_CPLD_SGPIO1_LD_N" SITE "L19" ;
+LOCATE COMP "i_CPLD_SGPIO1_CLK" SITE "N20" ;
+LOCATE COMP "i_CPLD_SGPIO0_MOSI" SITE "M19" ;
+LOCATE COMP "i_CPLD_SGPIO0_LD_N" SITE "M20" ;
+LOCATE COMP "o_CPLD_SGPIO0_MISO" SITE "R20" ;
+LOCATE COMP "i_CPLD_SGPIO0_CLK" SITE "L20" ;
+LOCATE COMP "o_SMB_PEHP_CPU1_OCP_ALERT" SITE "M1" ;
+LOCATE COMP "o_SMB_PEHP_CPU0_OCP_ALERT" SITE "V16" ;
+LOCATE COMP "i_PAL_TMP4_ALERT_N" SITE "F7" ;
+LOCATE COMP "i_PAL_TMP3_ALERT_N" SITE "F10" ;
+LOCATE COMP "i_PAL_TMP2_ALERT_N" SITE "F5" ;
+LOCATE COMP "i_PAL_TMP1_ALERT_N" SITE "G11" ;
+LOCATE COMP "i_PAL_SLIMSAS1_PRSNT_N" SITE "E14" ;
+LOCATE COMP "i_JTAG_BMC_TRST_R" SITE "G10" ;
+LOCATE COMP "i_I2C2_PAL2_SCL" SITE "A18" ;
+LOCATE COMP "i_SW_8" SITE "B6" ;
+LOCATE COMP "i_SW_6" SITE "B5" ;
+LOCATE COMP "i_SW_4" SITE "B4" ;
+LOCATE COMP "i_SW_7" SITE "A5" ;
+LOCATE COMP "i_SW_5" SITE "A4" ;
+LOCATE COMP "i_SW_3" SITE "A3" ;
+LOCATE COMP "i_SW_1" SITE "A2" ;
+LOCATE COMP "i_CPLD2_SN" SITE "Y20" ;
+LOCATE COMP "i_CPLD2_HOLD_N_R" SITE "K18" ;
+LOCATE COMP "i_CPLD2_PROGRAM_N" SITE "D13" ;
+LOCATE COMP "i_CPLD2_INIT_N" SITE "C17" ;
+LOCATE COMP "i_CPLD2_DONE" SITE "A19" ;
+FREQUENCY NET "i_CLK_PAL2_IN_25M_c" 25.000000 MHz ;
+FREQUENCY NET "wb_clk" 4.290000 MHz ;
+FREQUENCY NET "clk_50m" 50.000000 MHz ;
+FREQUENCY NET "clk_25m" 25.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

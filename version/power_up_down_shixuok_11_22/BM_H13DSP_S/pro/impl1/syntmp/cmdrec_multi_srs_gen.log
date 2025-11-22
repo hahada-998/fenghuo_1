@@ -1,0 +1,7 @@
+C:\lscc\diamond\3_14\synpbase\bin64\syn_nfilter.exe  -link  -top  BM_H13DSP_S  -multisrs  D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\pro\impl1\synwork\BM_H13DSP_S_impl1_comp.srs  -osyn  D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\pro\impl1\synwork\BM_H13DSP_S_impl1_mult.srs  -log  D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\pro\impl1\synlog\BM_H13DSP_S_impl1_multi_srs_gen.srr 
+relcom:C:\lscc\diamond\3_14\synpbase\bin64\syn_nfilter.exe -link -top BM_H13DSP_S -multisrs ..\synwork\BM_H13DSP_S_impl1_comp.srs -osyn ..\synwork\BM_H13DSP_S_impl1_mult.srs -log ..\synlog\BM_H13DSP_S_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\bm_h13dsp_s_impl1_comp.srs|io:i|time:1763448587|size:85572|exec:0|csum:23651BD8636E014CDA35B86B22A529E7
+file:..\synwork\bm_h13dsp_s_impl1_mult.srs|io:o|time:1763448589|size:26854|exec:0|csum:
+file:..\synlog\bm_h13dsp_s_impl1_multi_srs_gen.srr|io:o|time:1763448589|size:1229|exec:0|csum:
+file:c:\lscc\diamond\3_14\synpbase\bin64\syn_nfilter.exe|io:i|time:1727134362|size:10549248|exec:1|csum:D91EA53737F6BC51A484A15DD0EB29F5

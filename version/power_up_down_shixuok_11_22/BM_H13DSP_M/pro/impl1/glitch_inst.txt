@@ -1,0 +1,6 @@
+Potential Glitch can occur at the output of instance i:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1 
+Potential Glitch can occur at the output of instance i:bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1 
+Potential Glitch can occur at the output of instance i:pwrseq_master_inst.state_ns_o2[9] 
+Potential Glitch can occur at the output of instance i:o_P1_PWR_BTN_N 
+Potential Glitch can occur at the output of instance i:pwrseq_master_inst.state_ns_a4_0[9] 
+Potential Glitch can occur at the output of instance i:pwrseq_master_inst.fault_clear_ns_0 

@@ -1,0 +1,136 @@
+#--  Synopsys, Inc.
+#--  Version V-2023.09L-2
+#--  Project file D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\pro\impl1\run_options.txt
+#--  Written on Tue Nov 18 16:00:44 2025
+
+
+#project files
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/BM_H13DSP_M_TOP.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/PLL/pll_i25M_o50M_o25M.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/IIC_Update/I2C_UPDATE.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/74LV165/pvt_gpi.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/bmc_i2c/bmc_cpld_i2c_ram.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/bmc_i2c/i2c_slave_basic0.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/bmc_i2c/i2c_slave_bmc.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/ESPI_LINK/espi_link.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/ESPI_LINK/pch_cpld_espi_ram.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/ESPI_LINK/pcie_dync_alloc.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/SGPIO_MASTER/s2p_master.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/SGPIO_MASTER/p2s_slave.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/ClkDiv.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/delay.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/ClkDivTree.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/edge_delay.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/edge_detect.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/lowpass_filter.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/pon_reset.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/synclib.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/timer_gen_50mhz.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/system_rst.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Signal_Latch/Edge_Detect_SL.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Signal_Latch/Signal_Latch.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/uart/mcio_uart_master.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Pwr_But_Ctrl/bmc_ctl_pwrbtn.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Pwr_But_Ctrl/Pwr_But_Ctrl.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/bios_i2c/bios_cpld_i2c_ram.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/nmi_clear.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/cpu_module.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/cpu_thermtrip.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Pwr_seq/pwrseq_master.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Pwr_seq/pwrseq_slave.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/cmos_clear.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/extrst_evt_count.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/genCntr.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/MESSAGE_CONTROL.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/dimm_fail_event.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/ERROR_CODE.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectA_chklive.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/fault_detectB_chklive.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/Power_Fault.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/Power_Fault/Pwr_Error_Latch.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/74HC164/s2p_164.v"
+add_file -verilog -vlog_std v2001 "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/source/common/power_button.v"
+
+
+#implementation: "impl1"
+impl -add impl1 -type fpga
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+set_option -project_relative_includes 1
+set_option -include_path {D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/rtl/include;D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/pro}
+
+#device options
+set_option -technology MACHXO3LF
+set_option -part LCMXO3LF_6900C
+set_option -package BG400C
+set_option -speed_grade -5
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -top_module "BM_H13DSP_M"
+
+# hdl_compiler_options
+set_option -distributed_compile 0
+set_option -scm2hydra 0
+set_option -scm2hydra_preserve_rtl_sig 1
+set_option -hdl_strict_syntax 0
+
+# mapper_without_write_options
+set_option -frequency 100
+set_option -srs_instrumentation 1
+
+# mapper_options
+set_option -write_verilog 0
+set_option -write_structural_verilog 0
+set_option -write_vhdl 0
+
+# Lattice XP
+set_option -maxfan 1000
+set_option -disable_io_insertion 0
+set_option -retiming 0
+set_option -pipe 1
+set_option -infer_seqShift 1
+set_option -forcegsr false
+set_option -fix_gated_and_generated_clocks 1
+set_option -rw_check_on_ram 1
+set_option -update_models_cp 0
+set_option -syn_edif_array_rename 1
+set_option -Write_declared_clocks_only 1
+set_option -seqshift_no_replicate 0
+set_option -run_design_rule_checker 0
+set_option -design_rule_fanout_limit 0
+set_option -acp_debug_info 0
+
+# NFilter
+set_option -no_sequential_opt 0
+
+# common_options
+set_option -add_dut_hierarchy 0
+set_option -prepare_readback 0
+
+# flow_options
+set_option -slr_aware_debug 0
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+set_option -multi_file_compilation_unit 1
+
+# Compiler Options
+set_option -auto_infer_blackbox 0
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "./BM_H13DSP_M_impl1.edi"
+
+#set log file 
+set_option log_file "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_M/pro/impl1/BM_H13DSP_M_impl1.srf" 
+impl -active "impl1"

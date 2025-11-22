@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1763448651"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1763448654"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1763448658"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1763448660"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1763448663"/>
+            <Task name="Jedec4Xo3l" build_result="0" update_result="2" update_time="1763448645"/>
+            <Task name="Bitgen4Xo3l" build_result="0" update_result="2" update_time="1763448645"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1763448605">
+            <Task name="Map" build_result="2" update_result="0" update_time="1763448605"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1763448606"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1763448645">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1763448645"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1763448646"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1763448650"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1763448602">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1763448602"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1741863874"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1741863874"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Translate" build_result="2" build_time="1763448603">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1763448603"/>
+        </Milestone>
+        <Report name="BM_H13DSP_S_impl1.bgn" last_build_time="1763448663" last_build_size="4898"/>
+        <Report name="BM_H13DSP_S_impl1.bit" last_build_time="1763448660" last_build_size="53558"/>
+        <Report name="BM_H13DSP_S_impl1.edi" last_build_time="1763448600" last_build_size="2341939"/>
+        <Report name="BM_H13DSP_S_impl1.ior" last_build_time="1763448650" last_build_size="23794"/>
+        <Report name="BM_H13DSP_S_impl1.jed" last_build_time="1763448663" last_build_size="1477238"/>
+        <Report name="BM_H13DSP_S_impl1.ncd" last_build_time="1763448645" last_build_size="2655067"/>
+        <Report name="BM_H13DSP_S_impl1.ngd" last_build_time="1763448603" last_build_size="1990171"/>
+        <Report name="BM_H13DSP_S_impl1.tw1" last_build_time="1763448606" last_build_size="22199"/>
+        <Report name="BM_H13DSP_S_impl1.twr" last_build_time="1763448646" last_build_size="112625"/>
+        <Report name="BM_H13DSP_S_impl1_XO3L.bgn" last_build_time="1761731766" last_build_size="1413"/>
+        <Report name="BM_H13DSP_S_impl1_XO3L.bit" last_build_time="0" last_build_size="0"/>
+        <Report name="BM_H13DSP_S_impl1_XO3L.jed" last_build_time="0" last_build_size="0"/>
+        <Report name="BM_H13DSP_S_impl1_map.ncd" last_build_time="1763448605" last_build_size="1837150"/>
+        <Report name="BM_H13DSP_S_impl1_vho.sdf" last_build_time="1763448658" last_build_size="2536411"/>
+        <Report name="BM_H13DSP_S_impl1_vho.vho" last_build_time="1763448658" last_build_size="14219490"/>
+        <Report name="BM_H13DSP_S_impl1_vo.sdf" last_build_time="1763448654" last_build_size="2540216"/>
+        <Report name="BM_H13DSP_S_impl1_vo.vo" last_build_time="1763448654" last_build_size="2552072"/>
+        <Report name="IBIS/BM_H13DSP_S_impl1.ibs" last_build_time="1763448651" last_build_size="131929"/>
+    </Strategy>
+</BuildStatus>

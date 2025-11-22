@@ -1,4 +1,0 @@
-Potential Glitch can occur at the output of instance i:pwrseq_master_inst.state_ns_o2_0[8] 
-Potential Glitch can occur at the output of instance i:pwrseq_master_inst.state_ns_o2[8] 
-Potential Glitch can occur at the output of instance i:pwrseq_master_inst.state_ns_a3_0[9] 
-Potential Glitch can occur at the output of instance i:pwrseq_master_inst.fault_clear_ns_0 

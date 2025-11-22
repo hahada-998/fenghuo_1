@@ -1,0 +1,448 @@
+# Tue Nov 18 16:01:11 2025
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: V-2023.09L-2
+Install: C:\lscc\diamond\3_14\synpbase
+OS: Windows 10 or later
+Hostname: X02567XL
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202309lat, Build 191R, Built Sep 17 2024 10:38:50, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 181MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 197MB)
+
+@A: MF827 |No constraint file specified.
+@L: D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1_scck.rpt 
+See clock summary report "D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\pro\impl1\BM_H13DSP_M_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 202MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 202MB peak: 202MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 212MB peak: 212MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 213MB peak: 214MB)
+
+NConnInternalConnection caching is on
+@W: BN132 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":466:0:466:5|Removing sequential instance pwrseq_master_inst.pon_watchdog_timeout because it is equivalent to instance pwrseq_master_inst.grp_b_pwrok_timeout. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":466:0:466:5|Removing sequential instance pwrseq_master_inst.rsmrst_release_timeout because it is equivalent to instance pwrseq_master_inst.grp_a_pwrok_timeout. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":899:0:899:5|Removing sequential instance pwrseq_master_inst.rsmrst_release_fail_en because it is equivalent to instance pwrseq_master_inst.grp_a_critical_fail_en. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":899:0:899:5|Removing sequential instance pwrseq_master_inst.pwron_critical_fail_en because it is equivalent to instance pwrseq_master_inst.grp_b_critical_fail_en. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Starting HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 268MB)
+
+
+Finished HSTDM IP insertion (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 269MB)
+
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[7] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[7] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[6] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[6] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[5] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[5] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[4] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[4] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[3] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[3] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[2] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[2] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[1] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[1] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":549:16:549:29|Tristate driver r_pwrdrop_code[0] (in view: work.BM_H13DSP_M(verilog)) on net r_pwrdrop_code[0] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":550:16:550:29|Tristate driver r_timeout_code[7] (in view: work.BM_H13DSP_M(verilog)) on net r_timeout_code[7] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+@N: MO111 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":550:16:550:29|Tristate driver r_timeout_code[6] (in view: work.BM_H13DSP_M(verilog)) on net r_timeout_code[6] (in view: work.BM_H13DSP_M(verilog)) has its enable tied to GND.
+
+Started DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 269MB)
+
+
+Finished DisTri Cleanup (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 268MB peak: 269MB)
+
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":657:0:657:5|Removing sequential instance assert_physical_button (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":834:2:834:23|Removing instance sb_pch_slp4_delay_inst (in view: work.pwrseq_master(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bm_h13dsp_m_top.v":2066:31:2066:53|Removing instance power_button_inst_local (in view: work.BM_H13DSP_M(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_19(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_18(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_17(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_16(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_14(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_13(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_12(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_11(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_10(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_9(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_8(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_7(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_6(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_5(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":46:4:46:9|Removing sequential instance _fault_detect_\[0\]\.chklive_en[0] (in view: work.fault_detectB_chklive_1s_2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\pon_reset.v":86:0:86:5|Removing sequential instance pon_reset_db_n (in view: work.pon_reset(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\pon_reset.v":71:0:71:5|Removing sequential instance pgd_aux_system_sasd (in view: work.pon_reset(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\timer_gen_50mhz.v":46:2:46:7|Removing sequential instance t40ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\timer_gen_50mhz.v":46:2:46:7|Removing sequential instance t160ns (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\timer_gen_50mhz.v":87:0:87:5|Removing sequential instance t2us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\timer_gen_50mhz.v":87:0:87:5|Removing sequential instance t128us (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\timer_gen_50mhz.v":87:0:87:5|Removing sequential instance t16ms (in view: work.timer_gen(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\synclib.v":369:4:369:9|Removing sequential instance mInst\[2\]\.out_i[2] (in view: work.PGM_DEBOUNCE_3s_2_4s_1(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\signal_latch\signal_latch.v":51:0:51:5|Removing sequential instance rAlert (in view: work.Signal_Latch_0_1_0_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\signal_latch\signal_latch.v":51:0:51:5|Removing sequential instance rAlert (in view: work.Signal_Latch_0_1_0_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":726:0:726:5|Removing sequential instance cpld_latch_sys_off (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reg_pwrok[0] (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reg_pwr_btn_l (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffe(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\uart\mcio_uart_master.v":291:0:291:5|Removing sequential instance error_flag (in view: work.UART_MASTER_Z3_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\uart\mcio_uart_master.v":291:0:291:5|Removing sequential instance error_flag (in view: work.UART_MASTER_Z3_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1754:0:1754:5|Removing sequential instance r_reg_0201[7:5] (in view: work.bmc_cpld_i2c_ram_16s(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1766:0:1766:5|Removing sequential instance r_reg_0202[0] (in view: work.bmc_cpld_i2c_ram_16s(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":1775:0:1775:5|Removing sequential instance r_reg_0203[0] (in view: work.bmc_cpld_i2c_ram_16s(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\power_button.v":61:0:61:5|Removing sequential instance pch_pwrbtn (in view: work.power_button_0(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\power_button.v":126:0:126:5|Removing sequential instance pch_thrmtrip (in view: work.power_button_0(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\cpu_module.v":68:0:68:5|Removing sequential instance r_p1_pwrok (in view: work.cpu_module(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\cpu_module.v":122:0:122:5|Removing sequential instance r_p1_prsnt_n (in view: work.cpu_module(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_18(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_17(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_16(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_15(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_14(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_13(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_12(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_11(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_10(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_9(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_8(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_7(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_6(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_5(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_4(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_2(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\pon_reset.v":71:0:71:5|Removing sequential instance pgd_aux_system_reg (in view: work.pon_reset(verilog)) of type view:PrimLib.sdffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\power_fault\fault_detectb_chklive.v":71:0:71:5|Removing sequential instance any_vrm_fault (in view: work.fault_detectB_chklive_1s_19(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":632:12:632:25|Removing instance Edge_Detect_U2 (in view: work.pwrseq_master(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_detect.v":59:0:59:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_detect.v":45:0:45:5|Removing sequential instance r_signal_b (in view: work.Edge_Detect_2(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_detect.v":59:0:59:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_3(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_detect.v":45:0:45:5|Removing sequential instance r_signal_a (in view: work.Edge_Detect_2(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_detect.v":59:0:59:5|Removing sequential instance r_signal_d (in view: work.Edge_Detect_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":656:29:656:50|Removing instance p5v_stby_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":687:29:687:45|Removing instance p5v_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":813:29:813:56|Removing instance grp_b_p0_18_s5_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":838:29:838:56|Removing instance grp_b_p1_18_s5_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":866:29:866:56|Removing instance grp_b_p0_33_s5_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":891:29:891:56|Removing instance grp_b_p1_33_s5_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":918:29:918:62|Removing instance grp_b_pal_pvcc_hpmos_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":946:29:946:56|Removing instance grp_c_p0_vdd11_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":971:29:971:56|Removing instance grp_c_p1_vdd11_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":999:29:999:56|Removing instance grp_d_p0_vddio_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1024:29:1024:56|Removing instance grp_d_p1_vddio_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1052:29:1052:54|Removing instance grp_d_p0_soc_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1077:29:1077:54|Removing instance grp_d_p1_soc_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1105:29:1105:59|Removing instance grp_d_p0_vddcore0_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1130:29:1130:59|Removing instance grp_d_p1_vddcore0_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1158:29:1158:59|Removing instance grp_d_p0_vddcore1_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1183:29:1183:59|Removing instance grp_d_p1_vddcore1_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":1213:29:1213:51|Removing instance p3v3_stby_en_check_inst (in view: work.pwrseq_slave_Z2(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_detect.v":59:0:59:5|Removing sequential instance r_signal_c (in view: work.Edge_Detect_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_18(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_17(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_16(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_15(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_14(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_13(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_12(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_11(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_10(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_9(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_8(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_7(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_6(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_5(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_4(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_3(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\edge_delay.v":52:0:52:5|Removing sequential instance delay_output (in view: work.edge_delay_2s_0_0_1(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\espi_link\espi_link.v":71:0:71:5|Removing sequential instance state_save[63:8] (in view: work.espi_link(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\espi_link\espi_link.v":71:0:71:5|Removing sequential instance state_save[4:0] (in view: work.espi_link(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reg_power_supply_on (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reg_p5v_stby_usb_en (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reg_p5v_stby_en (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reg_p5v_en (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_slave.v":337:0:337:5|Removing sequential instance reached_sm_wait_powerok (in view: work.pwrseq_slave_Z2(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":541:0:541:5|Removing sequential instance po_on_wait_complete (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":646:0:646:5|Removing sequential instance assert_power_button (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":707:0:707:5|Removing sequential instance turn_on_wait (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":974:0:974:5|Removing sequential instance pgd_raw (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":672:0:672:5|Removing sequential instance force_pwrbtn_n (in view: work.pwrseq_master(verilog)) of type view:PrimLib.dffse(prim) because it does not drive other instances.
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pwr_seq\pwrseq_master.v":622:12:622:25|Removing instance Edge_Detect_U1 (in view: work.pwrseq_master(verilog)) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\synclib.v":369:4:369:9|Removing sequential instance mInst\[2\]\.cnt\[2\][1:0] (in view: work.PGM_DEBOUNCE_3s_2_4s_1(verilog)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\synclib.v":369:4:369:9|Removing sequential instance mInst\[2\]\.nxt_s1[2] (in view: work.PGM_DEBOUNCE_3s_2_4s_1(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\synclib.v":369:4:369:9|Removing sequential instance mInst\[2\]\.nxt[2] (in view: work.PGM_DEBOUNCE_3s_2_4s_1(verilog)) of type view:PrimLib.dffs(prim) because it does not drive other instances.
+@N: BN362 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\timer_gen_50mhz.v":133:0:133:5|Removing sequential instance clk_4hz (in view: work.timer_gen(verilog)) of type view:PrimLib.dffre(prim) because it does not drive other instances.
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_M\pro\impl1\synlog\BM_H13DSP_M_impl1_premap.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+Encoding state machine state[34:0] (in view: work.pwrseq_master(verilog))
+original code -> new code
+   000000 -> 00000000000000000000000000000000001
+   000001 -> 00000000000000000000000000000000010
+   000010 -> 00000000000000000000000000000000100
+   000011 -> 00000000000000000000000000000001000
+   000100 -> 00000000000000000000000000000010000
+   000101 -> 00000000000000000000000000000100000
+   000110 -> 00000000000000000000000000001000000
+   000111 -> 00000000000000000000000000010000000
+   001000 -> 00000000000000000000000000100000000
+   001001 -> 00000000000000000000000001000000000
+   010000 -> 00000000000000000000000010000000000
+   010001 -> 00000000000000000000000100000000000
+   010010 -> 00000000000000000000001000000000000
+   010011 -> 00000000000000000000010000000000000
+   010100 -> 00000000000000000000100000000000000
+   010101 -> 00000000000000000001000000000000000
+   010110 -> 00000000000000000010000000000000000
+   010111 -> 00000000000000000100000000000000000
+   011000 -> 00000000000000001000000000000000000
+   011001 -> 00000000000000010000000000000000000
+   100000 -> 00000000000000100000000000000000000
+   100001 -> 00000000000001000000000000000000000
+   100010 -> 00000000000010000000000000000000000
+   100011 -> 00000000000100000000000000000000000
+   100100 -> 00000000001000000000000000000000000
+   100101 -> 00000000010000000000000000000000000
+   100110 -> 00000000100000000000000000000000000
+   100111 -> 00000001000000000000000000000000000
+   101000 -> 00000010000000000000000000000000000
+   101001 -> 00000100000000000000000000000000000
+   110000 -> 00001000000000000000000000000000000
+   110001 -> 00010000000000000000000000000000000
+   110010 -> 00100000000000000000000000000000000
+   110011 -> 01000000000000000000000000000000000
+   110100 -> 10000000000000000000000000000000000
+Encoding state machine curr_state[5:0] (in view: work.UART_MASTER_Z3_1(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   100 -> 010000
+   101 -> 100000
+Encoding state machine curr_state[5:0] (in view: work.UART_MASTER_Z3_0(verilog))
+original code -> new code
+   000 -> 000001
+   001 -> 000010
+   010 -> 000100
+   011 -> 001000
+   100 -> 010000
+   101 -> 100000
+Encoding state machine current_state[31:0] (in view: work.espi_link(verilog))
+original code -> new code
+   00000000 -> 00000000000000000000000000000001
+   00000001 -> 00000000000000000000000000000010
+   00000010 -> 00000000000000000000000000000100
+   00000011 -> 00000000000000000000000000001000
+   00000100 -> 00000000000000000000000000010000
+   00000101 -> 00000000000000000000000000100000
+   00000110 -> 00000000000000000000000001000000
+   00000111 -> 00000000000000000000000010000000
+   00001000 -> 00000000000000000000000100000000
+   00001001 -> 00000000000000000000001000000000
+   00001010 -> 00000000000000000000010000000000
+   00001011 -> 00000000000000000000100000000000
+   00001100 -> 00000000000000000001000000000000
+   00001101 -> 00000000000000000010000000000000
+   00001110 -> 00000000000000000100000000000000
+   00001111 -> 00000000000000001000000000000000
+   00010000 -> 00000000000000010000000000000000
+   00010001 -> 00000000000000100000000000000000
+   00010010 -> 00000000000001000000000000000000
+   00010011 -> 00000000000010000000000000000000
+   00010100 -> 00000000000100000000000000000000
+   00010101 -> 00000000001000000000000000000000
+   00010110 -> 00000000010000000000000000000000
+   00010111 -> 00000000100000000000000000000000
+   00011000 -> 00000001000000000000000000000000
+   00011001 -> 00000010000000000000000000000000
+   00011010 -> 00000100000000000000000000000000
+   00011011 -> 00001000000000000000000000000000
+   00011100 -> 00010000000000000000000000000000
+   00011101 -> 00100000000000000000000000000000
+   00011110 -> 01000000000000000000000000000000
+   00011111 -> 10000000000000000000000000000000
+Encoding state machine r_I2C_state[19:0] (in view: work.i2c_slave_basic0_3s_16s_0(verilog))
+original code -> new code
+   00000 -> 00000000000000000001
+   00001 -> 00000000000000000010
+   00010 -> 00000000000000000100
+   00011 -> 00000000000000001000
+   00100 -> 00000000000000010000
+   00101 -> 00000000000000100000
+   00110 -> 00000000000001000000
+   00111 -> 00000000000010000000
+   01000 -> 00000000000100000000
+   01001 -> 00000000001000000000
+   01010 -> 00000000010000000000
+   01011 -> 00000000100000000000
+   01100 -> 00000001000000000000
+   01101 -> 00000010000000000000
+   01110 -> 00000100000000000000
+   01111 -> 00001000000000000000
+   10000 -> 00010000000000000000
+   10001 -> 00100000000000000000
+   10010 -> 01000000000000000000
+   10011 -> 10000000000000000000
+Encoding state machine r_I2C_state[19:0] (in view: work.i2c_slave_basic0_3s_16s_1(verilog))
+original code -> new code
+   00000 -> 00000000000000000001
+   00001 -> 00000000000000000010
+   00010 -> 00000000000000000100
+   00011 -> 00000000000000001000
+   00100 -> 00000000000000010000
+   00101 -> 00000000000000100000
+   00110 -> 00000000000001000000
+   00111 -> 00000000000010000000
+   01000 -> 00000000000100000000
+   01001 -> 00000000001000000000
+   01010 -> 00000000010000000000
+   01011 -> 00000000100000000000
+   01100 -> 00000001000000000000
+   01101 -> 00000010000000000000
+   01110 -> 00000100000000000000
+   01111 -> 00001000000000000000
+   10000 -> 00010000000000000000
+   10001 -> 00100000000000000000
+   10010 -> 01000000000000000000
+   10011 -> 10000000000000000000
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 321MB peak: 321MB)
+
+
+mixed edge conversion for GCC is OFF
+@N: BN115 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\system_rst.v":72:1:72:17|Removing instance lowpass_filter_U0 (in view: work.system_rst(verilog)) because it does not drive other instances.
+@W: BZ204 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\pll\pll_i25m_o50m_o25m.v":80:12:80:20|GCC unable to propagate clocks through gate pll_inst.PLLInst_0; all outputs will be treated as enables regardless of whether any inputs are clocks
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data pll_inst.CLKOP; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data pll_inst.CLKOS; this will likely lead to failure to convert
+@N: MF578 |Incompatible asynchronous control logic preventing generated clock conversion.
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1; this will likely lead to failure to convert
+@W: BZ240 :|GCC encountered Inferred Clock constraint on net GCC considers to be data o_P1_PWR_BTN_N; this will likely lead to failure to convert
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 322MB peak: 322MB)
+
+@W: BZ101 |Potential glitch can occur at the output of 6 instances  
+@N: MT611 :|Automatically generated clock i2c_slave_bmc_16s_1|w_i2c_command_1_inferred_clock is not used and is being removed
+@N: MT611 :|Automatically generated clock i2c_slave_bmc_16s_0|w_i2c_command_1_inferred_clock is not used and is being removed
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 322MB peak: 322MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 322MB peak: 323MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=240 on top level netlist BM_H13DSP_M 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 322MB peak: 323MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                         Requested     Requested     Clock        Clock          Clock
+Level     Clock                                         Frequency     Period        Type         Group          Load 
+---------------------------------------------------------------------------------------------------------------------
+0 -       pll_i25M_o50M_o25M|CLKOP_inferred_clock       100.0 MHz     10.000        inferred     (multiple)     1607 
+                                                                                                                     
+0 -       pll_i25M_o50M_o25M|CLKOS_inferred_clock       100.0 MHz     10.000        inferred     (multiple)     595  
+                                                                                                                     
+0 -       BM_H13DSP_M|i_CPLD_ESPI_CLK                   100.0 MHz     10.000        inferred     (multiple)     176  
+                                                                                                                     
+0 -       BM_H13DSP_M|o_P1_PWR_BTN_N_inferred_clock     100.0 MHz     10.000        inferred     (multiple)     0    
+=====================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                              Clock     Source                                Clock Pin                                 Non-clock Pin                                  Non-clock Pin                        
+Clock                                         Load      Pin                                   Seq Example                               Seq Example                                    Comb Example                         
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pll_i25M_o50M_o25M|CLKOP_inferred_clock       1607      pll_inst.PLLInst_0.CLKOP(EHXPLLJ)     r_board_id0_zt.C                          -                                              -                                    
+                                                                                                                                                                                                                            
+pll_i25M_o50M_o25M|CLKOS_inferred_clock       595       pll_inst.PLLInst_0.CLKOS(EHXPLLJ)     bmc_cpld_i2c_ram_u0.r_reg_0006[7:0].C     -                                              -                                    
+                                                                                                                                                                                                                            
+BM_H13DSP_M|i_CPLD_ESPI_CLK                   176       i_CPLD_ESPI_CLK(port)                 bios_espi_link.data_byte_in[7:0].C        -                                              bios_espi_link.un1_ESPI_CLK.I[0](inv)
+                                                                                                                                                                                                                            
+BM_H13DSP_M|o_P1_PWR_BTN_N_inferred_clock     0         o_P1_PWR_BTN_N.OUT(and)               -                                         pwrseq_master_inst.r_Pwrbtn_long_flag.D[0]     un1_o_P1_PWR_BTN_N.I[0](inv)         
+============================================================================================================================================================================================================================
+
+@W: MT531 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\cpu_module.v":103:0:103:5|Found signal identified as System clock which controls 34 sequential elements including cpu_module_u1.r_p0_slp_s5_n.  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT529 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\common\pon_reset.v":50:0:50:5|Found inferred clock pll_i25M_o50M_o25M|CLKOP_inferred_clock which controls 1607 sequential elements including pon_reset_inst.reset2_reg[2:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\espi_link\pcie_dync_alloc.v":16:0:16:5|Found inferred clock pll_i25M_o50M_o25M|CLKOS_inferred_clock which controls 595 sequential elements including bios_cpld_i2c_ram_u0.cpu0_ge3_alloc.o_pcie_date[3:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\fh_mb_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\mb\09\bm_h13dsp_m\rtl\source\espi_link\espi_link.v":80:0:80:5|Found inferred clock BM_H13DSP_M|i_CPLD_ESPI_CLK which controls 176 sequential elements including bios_espi_link.current_state[31]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 176 clock pin(s) of sequential element(s)
+6 gated/generated clock tree(s) driving 2237 clock pin(s) of sequential element(s)
+0 instances converted, 2237 sequential instances remain driven by gated/generated clocks
+
+==================================== Non-Gated/Non-Generated Clocks ====================================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance                 
+--------------------------------------------------------------------------------------------------------
+@KP:ckid0_8       i_CPLD_ESPI_CLK     port                   176        bios_espi_link.current_state[31]
+========================================================================================================
+================================================================================================ Gated/Generated Clocks =================================================================================================
+Clock Tree ID     Driving Element                                               Drive Element Type     Unconverted Fanout     Sample Instance                                             Explanation                    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_1       pll_inst.PLLInst_0.CLKOS                                      EHXPLLJ                595                    bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0]                      Clock source is invalid for GCC
+@KP:ckid0_3       bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT      and                    16                     bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]      Clock source is invalid for GCC
+@KP:ckid0_5       pll_inst.PLLInst_0.CLKOP                                      EHXPLLJ                1607                   r_switch2_mode[2:0]                                         Clock source is invalid for GCC
+@KP:ckid0_7       bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT     and                    16                     bios_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]     Clock source is invalid for GCC
+@KP:ckid0_9       pwrseq_master_inst.fault_clear_ns_0_uclk.OUT                  or                     1                      pwrseq_master_inst.cmu_fault_clear                          Clock source is invalid for GCC
+@KP:ckid0_10      o_P1_PWR_BTN_N.OUT                                            and                    2                      cpu_module_u1.r_p0_slp_s5_n                                 Clock source is invalid for GCC
+=========================================================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+
+Summary of user generated gated clocks:
+0 user generated gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 322MB peak: 323MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 322MB peak: 323MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:07s; Memory used current: 324MB peak: 324MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 191MB peak: 325MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:07s cputime
+# Tue Nov 18 16:01:18 2025
+
+###########################################################]

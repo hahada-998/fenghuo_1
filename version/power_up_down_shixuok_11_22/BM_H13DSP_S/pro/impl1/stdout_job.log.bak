@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "14:45:00    18-Nov-2025",
+	"Working Directory" : "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/impl1",
+	"Install" : "C:/lscc/diamond/3_14/synpbase"
+},
+"impl1" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "14:44:58",
+   "Runtime" : "02s",
+   "Executable Run Time" : "00s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "14:44:58",
+      "Runtime" : "02s",
+      "Executable Run Time" : "00s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "14:44:58",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "14:44:58",
+            "Runtime" : "00s",
+            "Executable Run Time" : "00s",
+            "compiler" : {
+               "executable" : "bin64/c_hdl.exe",
+               "Run Directory" : "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "14:44:58",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin64/syn_nfilter.exe",
+               "Run Directory" : "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/impl1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Has Errors" : "no",
+               "Run Start Time" : "14:44:58",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "yes"
+            }
+         },
+         "premap" : {
+            "executable" : "bin64/m_gen_lattice.exe",
+            "Run Directory" : "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/impl1",
+            "Run State" : "Complete",
+            "Return Code" : "0",
+            "Has Errors" : "no",
+            "Run Start Time" : "14:44:58",
+            "Run Time" : "00s",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "yes"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "14:44:59",
+         "Runtime" : "01s",
+         "Executable Run Time" : "00s",
+         "fpga_mapper" : {
+            "executable" : "bin64/m_gen_lattice.exe",
+            "Run Directory" : "D:/FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl/MB/09/BM_H13DSP_S/pro/impl1",
+            "Run State" : "Complete",
+            "Return Code" : "2",
+            "Has Errors" : "yes",
+            "Run Start Time" : "14:44:59",
+            "Run Time" : "01s",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

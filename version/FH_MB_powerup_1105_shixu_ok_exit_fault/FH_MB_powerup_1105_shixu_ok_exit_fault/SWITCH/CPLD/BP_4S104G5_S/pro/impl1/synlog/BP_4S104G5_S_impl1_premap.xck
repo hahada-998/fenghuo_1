@@ -1,3 +1,0 @@
-ckid0_1:@|S:pll_inst.PLLInst_0.CLKOS@|E:bmc_cpld_i2c_ram_u0.r_i2c_data_in[7:0]@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
-ckid0_3:@|S:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command_1.OUT@|E:bmc_cpld_i2c_ram_u0.i2c_slave_bmc_u0.w_i2c_command[15]@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3
-ckid0_4:@|S:pll_inst.PLLInst_0.CLKOP@|E:uart_master_u15.curr_state[5]@|F:@syn_dgcc_clockid0_4==1@|M:ClockId_0_4

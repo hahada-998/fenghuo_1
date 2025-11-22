@@ -1,7 +1,0 @@
-C:\lscc\diamond\3_14\synpbase\bin64\syn_nfilter.exe  -link  -top  BP_4S104G5  -multisrs  "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_comp.srs"  -osyn  "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_mult.srs"  -log  "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synlog\BP_4S104G5_impl1_multi_srs_gen.srr" 
-relcom:C:\lscc\diamond\3_14\synpbase\bin64\syn_nfilter.exe -link -top BP_4S104G5 -multisrs "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_comp.srs" -osyn "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synwork\BP_4S104G5_impl1_mult.srs" -log "D:\ODM MB SWITCH\SWITCH\CPLD\BP_4S104G5\pro\impl1\synlog\BP_4S104G5_impl1_multi_srs_gen.srr"
-rc:0 success:1 runtime:0
-file:..\synwork\bp_4s104g5_impl1_comp.srs|io:i|time:1761900309|size:88603|exec:0|csum:50A1764BC006721D8D78B9441B746DF5
-file:..\synwork\bp_4s104g5_impl1_mult.srs|io:o|time:1761900311|size:29092|exec:0|csum:
-file:..\synlog\bp_4s104g5_impl1_multi_srs_gen.srr|io:o|time:1761900311|size:1230|exec:0|csum:
-file:c:\lscc\diamond\3_14\synpbase\bin64\syn_nfilter.exe|io:i|time:1727134362|size:10549248|exec:1|csum:D91EA53737F6BC51A484A15DD0EB29F5

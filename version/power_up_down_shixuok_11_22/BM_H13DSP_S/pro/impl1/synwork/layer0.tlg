@@ -1,0 +1,465 @@
+Selecting top level module BM_H13DSP_S
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":38:32:38:37|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":66:32:66:37|Removing redundant assignment.
+@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1124:7:1124:9|Synthesizing module VLO in library work.
+Running optimization stage 1 on VLO .......
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1696:7:1696:13|Synthesizing module EHXPLLJ in library work.
+Running optimization stage 1 on EHXPLLJ .......
+Finished optimization stage 1 on EHXPLLJ (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\PLL\pll_i25M_o50M_o25M.v":8:7:8:24|Synthesizing module pll_i25M_o50M_o25M in library work.
+Running optimization stage 1 on pll_i25M_o50M_o25M .......
+Finished optimization stage 1 on pll_i25M_o50M_o25M (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\pon_reset.v":15:7:15:15|Synthesizing module pon_reset in library work.
+Running optimization stage 1 on pon_reset .......
+Finished optimization stage 1 on pon_reset (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 95MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":3:7:3:15|Synthesizing module timer_gen in library work.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":82:54:82:61|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":83:54:83:60|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":145:39:145:47|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":146:41:146:47|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":147:41:147:47|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":148:41:148:49|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":149:41:149:48|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":239:68:239:77|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\timer_gen_50mhz.v":240:63:240:71|Removing redundant assignment.
+Running optimization stage 1 on timer_gen .......
+Finished optimization stage 1 on timer_gen (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000110
+	MAX_DIV_CNT=32'b00000000000000000000000000110001
+   Generated name = ClkDiv_6s_49s
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":98:28:98:37|Removing redundant assignment.
+Running optimization stage 1 on ClkDiv_6s_49s .......
+Finished optimization stage 1 on ClkDiv_6s_49s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000001001
+   Generated name = ClkDiv_5s_9s
+Running optimization stage 1 on ClkDiv_5s_9s .......
+Finished optimization stage 1 on ClkDiv_5s_9s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000011
+	MAX_DIV_CNT=32'b00000000000000000000000000000100
+   Generated name = ClkDiv_3s_4s
+Running optimization stage 1 on ClkDiv_3s_4s .......
+Finished optimization stage 1 on ClkDiv_3s_4s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000100
+	MAX_DIV_CNT=32'b00000000000000000000000000001001
+   Generated name = ClkDiv_4s_9s
+Running optimization stage 1 on ClkDiv_4s_9s .......
+Finished optimization stage 1 on ClkDiv_4s_9s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000001
+	MAX_DIV_CNT=32'b00000000000000000000000000000001
+   Generated name = ClkDiv_1s_1s
+Running optimization stage 1 on ClkDiv_1s_1s .......
+Finished optimization stage 1 on ClkDiv_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000011000
+   Generated name = ClkDiv_5s_24s
+Running optimization stage 1 on ClkDiv_5s_24s .......
+Finished optimization stage 1 on ClkDiv_5s_24s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDiv.v":38:7:38:12|Synthesizing module ClkDiv in library work.
+
+	MAX_DIV_BITS=32'b00000000000000000000000000000101
+	MAX_DIV_CNT=32'b00000000000000000000000000010011
+   Generated name = ClkDiv_5s_19s
+Running optimization stage 1 on ClkDiv_5s_19s .......
+Finished optimization stage 1 on ClkDiv_5s_19s (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\ClkDivTree.v":34:7:34:16|Synthesizing module ClkDivTree in library work.
+Running optimization stage 1 on ClkDivTree .......
+Finished optimization stage 1 on ClkDivTree (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1759:7:1759:10|Synthesizing module OSCH in library work.
+Running optimization stage 1 on OSCH .......
+Finished optimization stage 1 on OSCH (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1120:7:1120:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":82:7:82:8|Synthesizing module BB in library work.
+Running optimization stage 1 on BB .......
+Finished optimization stage 1 on BB (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"C:\lscc\diamond\3_14\synpbase\lib\lucent\machxo3lf.v":1766:7:1766:9|Synthesizing module EFB in library work.
+Running optimization stage 1 on EFB .......
+Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\IIC_Update\I2C_UPDATE.v":8:7:8:16|Synthesizing module I2C_UPDATE in library work.
+Running optimization stage 1 on I2C_UPDATE .......
+Finished optimization stage 1 on I2C_UPDATE (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\s2p_slave.v":18:7:18:15|Synthesizing module s2p_slave in library work.
+
+	NBIT=32'b00000000000000000000000011001000
+	DEFAULT_STATE=64'b0000000000000000000000000000000000000000000000000000000000000000
+	WCNT=32'b00000000000000000000000000001000
+   Generated name = s2p_slave_200s_8s_Z1
+Running optimization stage 1 on s2p_slave_200s_8s_Z1 .......
+Finished optimization stage 1 on s2p_slave_200s_8s_Z1 (CPU Time 0h:00m:00s, Memory Used current: 96MB peak: 97MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":19:7:19:15|Synthesizing module p2s_slave in library work.
+
+	NBIT=32'b00000000000000000000000011001000
+	WCNT=32'b00000000000000000000000000001000
+   Generated name = p2s_slave_200s_8s
+Running optimization stage 1 on p2s_slave_200s_8s .......
+@W: CL265 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":51:2:51:7|Removing unused bit 2 of sld_n_r[2:0]. Either assign all bits or reduce the width of the signal.
+@A: CL282 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\SGPIO_SLAVE\p2s_slave.v":66:0:66:5|Feedback mux created for signal so. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on p2s_slave_200s_8s (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 98MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":25:7:25:17|Synthesizing module UART_MASTER in library work.
+
+	NBIT_IN=32'b00000000000000000000000000010000
+	NBIT_OUT=32'b00000000000000000000000000010000
+	BPS_COUNT_NUM=32'b00000000000000000000000000110000
+	START_COUNT_NUM=32'b00000000000000000000000000011000
+	NBIT_IN6=32'b00000000000000000000000000010110
+	NBIT_OUT6=32'b00000000000000000000000000010110
+	WCNT=32'b00000000000000000000000000000101
+	BPS_CNT=32'b00000000000000000000000000000110
+	WAIT_T=5'b00011
+	IDLE=3'b000
+	START=3'b001
+	DATA_OUT=3'b010
+	WAIT=3'b011
+	RESTART=3'b100
+	DATA_IN=3'b101
+   Generated name = UART_MASTER_Z2
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":227:71:227:80|Removing redundant assignment.
+Running optimization stage 1 on UART_MASTER_Z2 .......
+@A: CL282 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":201:0:201:5|Feedback mux created for signal reg_par_data_out[21:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on UART_MASTER_Z2 (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\delay.v":8:7:8:11|Synthesizing module delay in library work.
+
+	COUNT=32'b00000000010011000100101101000000
+	TOTAL_BITS=32'b00000000000000000000000000010111
+   Generated name = delay_5000000s_23s
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\delay.v":49:13:49:18|Removing redundant assignment.
+Running optimization stage 1 on delay_5000000s_23s .......
+Finished optimization stage 1 on delay_5000000s_23s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\lowpass_filter.v":20:7:20:20|Synthesizing module lowpass_filter in library work.
+
+	TOTAL_STAGES=32'b00000000000000000000000000000011
+	INIT_VALUE=1'b1
+	LOW=1'b0
+	HIGH=1'b1
+	Z=1'bz
+	STAGES=32'b00000000000000000000000000000100
+   Generated name = lowpass_filter_3_1_0_1_4_Z3
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\lowpass_filter.v":61:21:61:26|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\lowpass_filter.v":75:26:75:35|Removing redundant assignment.
+Running optimization stage 1 on lowpass_filter_3_1_0_1_4_Z3 .......
+Finished optimization stage 1 on lowpass_filter_3_1_0_1_4_Z3 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\edge_detect.v":9:7:9:17|Synthesizing module Edge_Detect in library work.
+Running optimization stage 1 on Edge_Detect .......
+Finished optimization stage 1 on Edge_Detect (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":27:7:27:18|Synthesizing module UID_Function in library work.
+
+	LONG_PRESS=4'b0101
+	LOW=1'b0
+	HIGH=1'b1
+	Z=1'bz
+	CNT_1S=32'b00000000000000000000000000011111
+	CNT_6S=32'b00000000000000000000000010011010
+	CNT_9S=32'b00000000000000000000000011110111
+	UID_OFF=8'b00000000
+	UID_ON=8'b11111111
+	UID_BLK_NHZ=8'b00000001
+   Generated name = UID_Function_5_0_1_31s_154_247_0_255_1_Z4
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":122:24:122:35|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":134:23:134:33|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":157:27:157:41|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":167:23:167:33|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":264:35:264:57|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":295:22:295:31|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":318:27:318:42|Removing redundant assignment.
+Running optimization stage 1 on UID_Function_5_0_1_31s_154_247_0_255_1_Z4 .......
+Finished optimization stage 1 on UID_Function_5_0_1_31s_154_247_0_255_1_Z4 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\edge_delay.v":23:7:23:16|Synthesizing module edge_delay in library work.
+
+	CNTR_NBITS=32'b00000000000000000000000000000110
+	DEF_OUTPUT=1'b0
+	DELAY_MODE=1'b0
+   Generated name = edge_delay_6s_0_0
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\edge_delay.v":62:67:62:75|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\edge_delay.v":63:67:63:78|Removing redundant assignment.
+Running optimization stage 1 on edge_delay_6s_0_0 .......
+Finished optimization stage 1 on edge_delay_6s_0_0 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":8:7:8:22|Synthesizing module i2c_slave_basic0 in library work.
+
+	TOTAL_STAGES=32'b00000000000000000000000000000011
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_basic0_3s_16s
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":264:21:264:29|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":587:36:587:45|Removing redundant assignment.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":637:25:637:37|Removing redundant assignment.
+Running optimization stage 1 on i2c_slave_basic0_3s_16s .......
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":229:0:229:5|Pruning unused register r_scl_1. Make sure that there are no unused intermediate registers.
+@A: CL291 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":120:0:120:5|Register r_sampledData_scl_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL291 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":149:0:149:5|Register r_sampledData_sda_q with asynchronous load is being synthesized in compatability mode. A synthesis/simulation mismatch is possible.
+@A: CL282 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Feedback mux created for signal r_I2c_address[6:0]. It is possible a set/reset assignment for this is signal missing. To improve timing and area, specify a set/reset value.
+Finished optimization stage 1 on i2c_slave_basic0_3s_16s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":10:7:10:19|Synthesizing module i2c_slave_bmc in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = i2c_slave_bmc_16s
+Running optimization stage 1 on i2c_slave_bmc_16s .......
+@W: CL118 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_bmc.v":133:25:133:109|Latch generated from always block for signal w_i2c_command[15:0]; possible missing assignment in an if or case statement.
+Finished optimization stage 1 on i2c_slave_bmc_16s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":2:7:2:22|Synthesizing module bmc_cpld_i2c_ram in library work.
+
+	DLY_LEN=32'b00000000000000000000000000010000
+   Generated name = bmc_cpld_i2c_ram_16s
+@W: CG133 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":326:10:326:19|Object r_reg_0011 is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on bmc_cpld_i2c_ram_16s .......
+@W: CL271 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":701:0:701:5|Pruning unused bits 7 to 2 of r_reg_000d[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on bmc_cpld_i2c_ram_16s (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 102MB)
+@N: CG364 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":23:8:23:18|Synthesizing module BM_H13DSP_S in library work.
+@N: CG179 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":937:34:937:59|Removing redundant assignment.
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":187:10:187:10|Input wb_rst_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":188:10:188:10|Input wb_cyc_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":189:10:189:10|Input wb_stb_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":190:9:190:9|Input wb_we_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":191:10:191:10|Input wb_adr_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":192:10:192:10|Input wb_dat_i on instance inst_i2c_update_flash_config is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_ocp1_prsnt_n on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_CPU1_PGD_PVCCD on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_PGD_PVNN_MAIN_CPU1 on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2195:1:2195:19|Input i_PGD_PVPP_HBM_CPU1 on instance bmc_cpld_i2c_ram_u0 is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":317:7:317:23|Removing wire o_PCIE_SATA_RST_N, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":378:7:378:26|Removing wire o_CPLD1_CPLD2_RSV1_R, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":43:5:43:12|Removing wire clk_2p5m, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":57:5:57:14|Removing wire t16ms_tick, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":241:8:241:21|Removing wire db_i_ps1_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":242:8:242:22|Removing wire db_i_ps1_dcok_n, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":243:8:243:25|Removing wire db_i_ps1_smb_alert, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":244:8:244:24|Removing wire db_i_ps1_acfail_n, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":245:8:245:21|Removing wire db_i_ps2_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":246:8:246:22|Removing wire db_i_ps2_dcok_n, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":247:8:247:25|Removing wire db_i_ps2_smb_alert, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":248:8:248:24|Removing wire db_i_ps2_acfail_n, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":249:8:249:21|Removing wire db_i_ps3_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":250:8:250:21|Removing wire db_i_ps4_prsnt, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":251:8:251:26|Removing wire db_i_pal_ocp1_pwrgd, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":252:8:252:24|Removing wire db_i_pal_ocp1_pgd, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":253:8:253:23|Removing wire db_i_uid_sw_in_n, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":256:8:256:27|Removing wire w_PWRGD_P12V_PS3_PS4, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":258:8:258:23|Removing wire w_PS3_PS4_ACFAIL, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":325:8:325:23|Removing wire w_p12v_slot_3_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":326:8:326:23|Removing wire w_p12v_slot_4_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":327:8:327:23|Removing wire w_p12v_slot_5_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":328:8:328:23|Removing wire w_p12v_slot_6_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":329:8:329:23|Removing wire w_p12v_slot_7_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":330:8:330:23|Removing wire w_p12v_slot_8_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":331:8:331:23|Removing wire w_p12v_slot_9_on, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":332:8:332:25|Removing wire w_p12v_slot_3_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":333:8:333:25|Removing wire w_p12v_slot_4_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":334:8:334:25|Removing wire w_p12v_slot_5_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":335:8:335:25|Removing wire w_p12v_slot_6_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":336:8:336:25|Removing wire w_p12v_slot_7_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":337:8:337:25|Removing wire w_p12v_slot_8_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":338:8:338:25|Removing wire w_p12v_slot_9_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":346:8:346:30|Removing wire w_pal_ocp1_mainpwr_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":347:8:347:29|Removing wire w_pal_ocp1_auxpwr_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":348:8:348:22|Removing wire w_ps3_p12v_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":349:8:349:22|Removing wire w_ps4_p12v_on_r, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":517:10:517:22|Removing wire pvti_ss_count, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":627:15:627:23|Removing wire w_bf_type, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":842:8:842:13|Removing wire w_SW_1, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":844:8:844:13|Removing wire w_SW_3, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":845:8:845:13|Removing wire w_SW_4, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":846:8:846:13|Removing wire w_SW_5, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":847:8:847:13|Removing wire w_SW_6, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":848:8:848:13|Removing wire w_SW_7, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":849:8:849:13|Removing wire w_SW_8, as there is no assignment to it.
+@W: CG360 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|Removing wire w_ocp1_prsnt_invert, as there is no assignment to it.
+Running optimization stage 1 on BM_H13DSP_S .......
+@W: CL318 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":317:7:317:23|*Output o_PCIE_SATA_RST_N has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL318 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":378:7:378:26|*Output o_CPLD1_CPLD2_RSV1_R has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1904:48:1904:76|Removing instance edge_delay_slot_9_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1896:48:1896:76|Removing instance edge_delay_slot_8_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1888:48:1888:76|Removing instance edge_delay_slot_7_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1880:48:1880:76|Removing instance edge_delay_slot_6_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1871:48:1871:76|Removing instance edge_delay_slot_5_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1862:48:1862:76|Removing instance edge_delay_slot_4_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1853:48:1853:76|Removing instance edge_delay_slot_3_on_dly_10ms because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL168 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":159:11:159:21|Removing instance mClkDivTree because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1765:0:1765:5|Pruning unused register r_pal_mb_switch_en_n_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1765:0:1765:5|Pruning unused register r_pal_biosrom_io11. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1706:0:1706:5|Pruning unused register r_led_pwrbtn_gr. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1706:0:1706:5|Pruning unused register r_led_pwrbtn_amb. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1664:0:1664:5|Pruning unused register r_pal_led_hel_red_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1664:0:1664:5|Pruning unused register r_pal_led_hel_gr_r. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1608:0:1608:5|Pruning unused register r_BMC_UID_CPLD_N. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1608:0:1608:5|Pruning unused register r_uid_led_ctl[7:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused register mb_sgpio_fail. Make sure that there are no unused intermediate registers.
+@W: CL271 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 191 to 29 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 18 to 17 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 15 to 13 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 11 to 7 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL271 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Pruning unused bits 5 to 2 of mcpld_to_scpld_data_filter[191:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL265 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":921:0:921:5|Removing unused bit 0 of mcpld_to_scpld_data_filter[191:0]. Either assign all bits or reduce the width of the signal.
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":94:21:94:24|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":124:41:124:41|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":124:41:124:41|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":630:44:630:47|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":630:44:630:47|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":630:44:630:47|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":94:21:94:24|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+@W: CL259 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":2011:30:2011:33|Duplicate LOC attributes found on net
+Finished optimization stage 1 on BM_H13DSP_S (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Running optimization stage 2 on BM_H13DSP_S .......
+@W: CL156 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":622:13:622:35|*Input scpld_to_mcpld_p2s_data[199:0] to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":253:8:253:23|*Input db_i_uid_sw_in_n to expression [instance] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|*Input w_ocp1_prsnt_invert to expression [or] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|*Input w_ocp1_prsnt_invert to expression [mux] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@W: CL156 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\BM_H13DSP_S_TOP.v":1525:8:1525:26|*Input w_ocp1_prsnt_invert to expression [mux] has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the input.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":45:8:45:13|Input i_SW_2 is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":59:8:59:31|Input i_PAL_TPM_MODULE_PRSNT_N is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":271:8:271:28|Input i_P0_MCIOP4A_CB_ID1_R is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":289:8:289:28|Input i_P1_MCIOP4A_CB_ID1_R is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":331:8:331:27|Input i_PAL_S5_CPU_SHTDN_R is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":359:8:359:28|Input i_PAL_MEN_CPU_SHTDN_R is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\include\BM_H13DSP_S_VA_PORT.v":379:8:379:27|Input i_CPLD1_CPLD2_RSV2_R is unused.
+Finished optimization stage 2 on BM_H13DSP_S (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
+Running optimization stage 2 on bmc_cpld_i2c_ram_16s .......
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":117:19:117:32|Input i_ocp1_prsnt_n is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":124:19:124:34|Input i_CPU1_PGD_PVCCD is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":125:19:125:38|Input i_PGD_PVNN_MAIN_CPU1 is unused.
+@N: CL159 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\bmc_cpld_i2c_ram.v":126:19:126:37|Input i_PGD_PVPP_HBM_CPU1 is unused.
+Finished optimization stage 2 on bmc_cpld_i2c_ram_16s (CPU Time 0h:00m:00s, Memory Used current: 105MB peak: 105MB)
+Running optimization stage 2 on i2c_slave_bmc_16s .......
+Finished optimization stage 2 on i2c_slave_bmc_16s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 105MB)
+Running optimization stage 2 on i2c_slave_basic0_3s_16s .......
+@W: CL190 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[6] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL190 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Optimizing register bit r_timeout_cnt[7] to a constant 0. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: CL279 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":628:0:628:5|Pruning register bits 7 to 6 of r_timeout_cnt[7:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@N: CL201 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\bmc_i2c\i2c_slave_basic0.v":279:0:279:5|Trying to extract state machine for register r_I2C_state.
+Extracted state machine for register r_I2C_state
+State machine has 20 reachable states with original encodings of:
+   00000
+   00001
+   00010
+   00011
+   00100
+   00101
+   00110
+   00111
+   01000
+   01001
+   01010
+   01011
+   01100
+   01101
+   01110
+   01111
+   10000
+   10001
+   10010
+   10011
+Finished optimization stage 2 on i2c_slave_basic0_3s_16s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Running optimization stage 2 on edge_delay_6s_0_0 .......
+Finished optimization stage 2 on edge_delay_6s_0_0 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 105MB)
+Running optimization stage 2 on UID_Function_5_0_1_31s_154_247_0_255_1_Z4 .......
+@N: CL201 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\common\UID_Function.v":171:0:171:5|Trying to extract state machine for register r_flag_uid.
+Extracted state machine for register r_flag_uid
+State machine has 3 reachable states with original encodings of:
+   00000000
+   00000001
+   11111111
+Finished optimization stage 2 on UID_Function_5_0_1_31s_154_247_0_255_1_Z4 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on Edge_Detect .......
+Finished optimization stage 2 on Edge_Detect (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on lowpass_filter_3_1_0_1_4_Z3 .......
+Finished optimization stage 2 on lowpass_filter_3_1_0_1_4_Z3 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on delay_5000000s_23s .......
+Finished optimization stage 2 on delay_5000000s_23s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on UART_MASTER_Z2 .......
+@N: CL201 :"D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\rtl\source\uart\mcio_uart_master.v":95:0:95:5|Trying to extract state machine for register curr_state.
+Extracted state machine for register curr_state
+State machine has 6 reachable states with original encodings of:
+   000
+   001
+   010
+   011
+   100
+   101
+Finished optimization stage 2 on UART_MASTER_Z2 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on p2s_slave_200s_8s .......
+Finished optimization stage 2 on p2s_slave_200s_8s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on s2p_slave_200s_8s_Z1 .......
+Finished optimization stage 2 on s2p_slave_200s_8s_Z1 (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on I2C_UPDATE .......
+Finished optimization stage 2 on I2C_UPDATE (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on EFB .......
+Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on BB .......
+Finished optimization stage 2 on BB (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on OSCH .......
+Finished optimization stage 2 on OSCH (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDivTree .......
+Finished optimization stage 2 on ClkDivTree (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_5s_19s .......
+Finished optimization stage 2 on ClkDiv_5s_19s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_5s_24s .......
+Finished optimization stage 2 on ClkDiv_5s_24s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_1s_1s .......
+Finished optimization stage 2 on ClkDiv_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_4s_9s .......
+Finished optimization stage 2 on ClkDiv_4s_9s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_3s_4s .......
+Finished optimization stage 2 on ClkDiv_3s_4s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_5s_9s .......
+Finished optimization stage 2 on ClkDiv_5s_9s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on ClkDiv_6s_49s .......
+Finished optimization stage 2 on ClkDiv_6s_49s (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on timer_gen .......
+Finished optimization stage 2 on timer_gen (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on pon_reset .......
+Finished optimization stage 2 on pon_reset (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on pll_i25M_o50M_o25M .......
+Finished optimization stage 2 on pll_i25M_o50M_o25M (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on EHXPLLJ .......
+Finished optimization stage 2 on EHXPLLJ (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+Running optimization stage 2 on VLO .......
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 104MB peak: 109MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\pro\impl1\synwork\layer0.duruntime
+
+

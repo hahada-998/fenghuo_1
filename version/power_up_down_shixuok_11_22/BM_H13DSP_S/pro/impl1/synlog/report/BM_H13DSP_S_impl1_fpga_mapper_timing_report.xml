@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- *************************************************************************************
+FILE DESCRIPTION
+Max Top 5 critical clocks will be reported. For rest user needs to refer to Detailed report
+*******************************************************************************************-->
+<report_table display_priority="2" name="Timing Summary">
+<report_link name="Detailed report">
+<data>D:\FH_MB_powerup_1106_shixu_ok_exit_fault_change_right_addcpuprsnt_ok_add_pull_down_add_pwrbmc_ctrl\MB\09\BM_H13DSP_S\pro\impl1\synlog\BM_H13DSP_S_impl1_fpga_mapper.srr</data>
+<title>START OF TIMING REPORT</title>
+</report_link>
+<row>
+<data tcl_name="clock_name">Clock Name</data>
+<data tcl_name="req_freq">Req Freq</data>
+<data tcl_name="est_freq">Est Freq</data>
+<data tcl_name="slack">Slack</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOP_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>117.1 MHz</data>
+<data>1.463</data>
+</row>
+<row>
+<data>pll_i25M_o50M_o25M|CLKOS_inferred_clock</data>
+<data>100.0 MHz</data>
+<data>102.3 MHz</data>
+<data>0.223</data>
+</row>
+<row>
+<data>System</data>
+<data>100.0 MHz</data>
+<data>373.6 MHz</data>
+<data>7.324</data>
+</row>
+</report_table>

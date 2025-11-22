@@ -1,5 +1,0 @@
-#Start recording tcl command: 10/29/2025 15:00:54
-#Project Location: D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro; Project name: BP_4S104G5_S
-prj_project open "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/pro/BP_4S104G5_S.ldf"
-prj_src add "D:/ODM MB SWITCH/SWITCH/CPLD/BP_4S104G5_S/rtl/include/BP_4S104G5_VA_S_port.v"
-#Stop recording: 10/29/2025 15:05:17
